@@ -1,0 +1,54 @@
+name: Update Sitemap
+
+on:
+  push:
+    paths:
+      - '**.html'
+  workflow_dispatch:
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Generate sitemap
+        run: |
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
+          
+          TODAY=$(date +%Y-%m-%d)
+          
+          # Add index.html
+          echo "  <url>" >> sitemap.xml
+          echo "    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/</loc>" >> sitemap.xml
+          echo "    <lastmod>$TODAY</lastmod>" >> sitemap.xml
+          echo "    <changefreq>weekly</changefreq>" >> sitemap.xml
+          echo "    <priority>1.0</priority>" >> sitemap.xml
+          echo "  </url>" >> sitemap.xml
+          
+          # Add all other HTML files
+          for file in $(find . -name "*.html" -not -name "index.html" -not -path "./.git/*" | sort); do
+            filename=$(basename "$file" .html)
+            echo "  <url>" >> sitemap.xml
+            echo "    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/${filename}.html</loc>" >> sitemap.xml
+            echo "    <lastmod>$TODAY</lastmod>" >> sitemap.xml
+            echo "    <changefreq>weekly</changefreq>" >> sitemap.xml
+            echo "    <priority>0.8</priority>" >> sitemap.xml
+            echo "  </url>" >> sitemap.xml
+          done
+          
+          echo '</urlset>' >> sitemap.xml
+          
+          echo "Generated sitemap with $(grep -c '<url>' sitemap.xml) URLs"
+      
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git diff --staged --quiet || git commit -m "Auto-update sitemap [skip ci]"
+          git push
