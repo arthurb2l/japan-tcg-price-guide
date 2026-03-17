@@ -4,19 +4,328 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>One Piece TCG Price Guide | Japan Flea Market Deals</title>
+<meta name="description" content="Find underpriced One Piece cards at Japanese flea markets, Hard-Off & recycle shops. Japanese prices, flip potential, chase cards.">
 <style>
+/* One Piece Theme: Red #D70000, Gold #FFCD00, Sky Blue #62C3F8, Black */
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center}
-h1{color:#F4A020;font-size:2em;margin-bottom:10px}
-p{color:#666;max-width:400px;line-height:1.6}
-a{color:#F4A020}
-.emoji{font-size:4em;margin-bottom:20px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',sans-serif;background:#f5f5f5;color:#222;padding:10px}
+h1{text-align:center;color:#222;font-size:1.6em;margin:15px 0}
+h2{color:#fff;font-size:1.3em;margin:20px 0 10px;padding:8px 12px;background:#D70000;border-radius:4px}
+h3{color:#D70000;font-size:1.1em;margin:15px 0 8px}
+a{color:#D70000}
+.nav{display:flex;gap:6px;justify-content:flex-start;margin:10px 0 20px;position:sticky;top:0;background:#f5f5f5;padding:8px 0;z-index:100;border-bottom:3px solid #222;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.nav a{background:#fff;color:#222;padding:6px 12px;border-radius:20px;text-decoration:none;font-size:.85em;border:1px solid #ddd;white-space:nowrap}
+.nav a:hover{background:#D70000;color:#fff;border-color:#D70000}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin:10px 0}
+.card{background:#fff;border-radius:8px;overflow:hidden;border:1px solid #222;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:scale(1.02);border-color:#D70000;box-shadow:0 4px 12px rgba(215,0,0,0.2)}
+.card img{width:100%;height:220px;object-fit:contain;background:#fafafa;padding:8px}
+.card-info{padding:10px}
+.card-info h4{color:#222;font-size:.95em;margin-bottom:4px}
+.card-info .jp{color:#D70000;font-size:.85em;font-weight:bold;margin-bottom:3px}
+.card-info .set{color:#666;font-size:.8em}
+.card-info .price{color:#D70000;font-weight:bold;font-size:1em;margin:4px 0}
+.card-info .tip{color:#666;font-size:.78em;line-height:1.3}
+.tag{display:inline-block;padding:2px 6px;border-radius:10px;font-size:.7em;margin:2px}
+.tag-buy{background:#dcfce7;color:#166534;border:1px solid #166534}
+.tag-chase{background:#fef3c7;color:#92400e;border:1px solid #FFCD00}
+.tag-flip{background:#fee2e2;color:#D70000;border:1px solid #D70000}
+.legend{background:#fff;padding:12px;border-radius:8px;margin:10px 0;font-size:.85em;border:1px solid #ddd}
+.tip-box{background:#e0f2fe;border:1px solid #62C3F8;border-radius:8px;padding:10px;margin:10px 0;font-size:.85em;color:#0369a1}
+.section-divider{height:4px;background:#222;margin:25px 0;border-radius:2px;position:relative}
+.section-divider::after{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:20px;height:20px;background:#FFCD00;border:4px solid #222;border-radius:50%}
+.placeholder{width:100%;height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fafafa;border-bottom:1px solid #ddd}
+.placeholder .name{color:#D70000;font-size:14px;font-weight:bold;text-align:center;padding:0 10px}
+.placeholder .sub{color:#666;font-size:11px;margin-top:5px}
+@media(max-width:600px){.grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}.card img,.placeholder{height:160px}.placeholder .name{font-size:12px}}
 </style>
 </head>
 <body>
-<div class="emoji">🏴‍☠️</div>
-<h1>One Piece TCG</h1>
-<p>Coming soon! We're building the One Piece card price guide.</p>
-<p style="margin-top:20px"><a href="../">← Back to Home</a></p>
+<h1>🏴‍☠️ One Piece TCG — Japan Flea Market Price Guide</h1>
+<p style="text-align:center;color:#666;font-size:.85em">日本のフリマ・ハードオフ・リサイクルショップで使うガイド<br>Find underpriced One Piece cards at Japanese flea markets | Prices in ¥ (JPY)</p>
+
+<div class="nav">
+<a href="../" style="background:#222;color:#fff;border-color:#222">🏠 Home</a>
+<a href="#chase">💎 Chase Cards</a>
+<a href="#findable">🔍 Findable</a>
+<a href="#leaders">👑 Leaders</a>
+<a href="#promos">🎁 Promos</a>
+<a href="#packs">🎰 Packs</a>
+<a href="#boxes">📦 Boxes</a>
+<a href="../guides/flea-market-tips.html">🏪 Hunting Tips</a>
+</div>
+
+<div class="legend">
+<strong>🏷️ Tag Guide:</strong>
+<span class="tag tag-buy">💰 Buy under ¥X</span> = Target price at flea markets
+<span class="tag tag-flip">🔥 Nx flip</span> = Resale multiplier potential
+<span class="tag tag-chase">⭐ Chase</span> = High demand card
+</div>
+
+<div class="section-divider"></div>
+
+<h2 id="chase">💎 CHASE CARDS — Most Valuable</h2>
+<p style="color:#666;font-size:.85em;margin-bottom:10px">Holy grails of One Piece TCG. Know these so you recognize value.</p>
+<div class="grid">
+
+<div class="card">
+<div class="placeholder"><div class="name">Shanks (Manga Rare)</div><div class="sub">OP-01</div></div>
+<div class="card-info">
+<h4>Shanks — Manga Parallel</h4>
+<div class="jp">シャンクス（漫画パラレル）</div>
+<div class="set">OP-01 Romance Dawn | Manga Rare</div>
+<div class="price">Market: ¥300,000+</div>
+<span class="tag tag-chase">⭐ Chase</span> <span class="tag tag-flip">🔥 Grail</span>
+<div class="tip">The most iconic One Piece card. Manga art style parallel. Extremely rare pull.</div>
+</div>
+</div>
+
+<div class="card">
+<div class="placeholder"><div class="name">Gol D. Roger (Manga Rare)</div><div class="sub">OP-04</div></div>
+<div class="card-info">
+<h4>Gol D. Roger — Manga Parallel</h4>
+<div class="jp">ゴール・D・ロジャー（漫画パラレル）</div>
+<div class="set">OP-04 Kingdoms of Intrigue | Manga Rare</div>
+<div class="price">Market: ¥400,000+</div>
+<span class="tag tag-chase">⭐ Chase</span> <span class="tag tag-flip">🔥 Grail</span>
+<div class="tip">The Pirate King himself. One of the most valuable OPTCG cards.</div>
+</div>
+</div>
+
+<div class="card">
+<div class="placeholder"><div class="name">Portgas D. Ace (Manga Rare)</div><div class="sub">OP-02</div></div>
+<div class="card-info">
+<h4>Portgas D. Ace — Manga Parallel</h4>
+<div class="jp">ポートガス・D・エース（漫画パラレル）</div>
+<div class="set">OP-02 Paramount War | Manga Rare</div>
+<div class="price">Market: ¥250,000+</div>
+<span class="tag tag-chase">⭐ Chase</span> <span class="tag tag-flip">🔥 Fan favorite</span>
+<div class="tip">Beloved character. Manga parallels from early sets command premium.</div>
+</div>
+</div>
+
+<div class="card">
+<div class="placeholder"><div class="name">Monkey D. Luffy (Alt Art)</div><div class="sub">OP-01</div></div>
+<div class="card-info">
+<h4>Monkey D. Luffy — Alt Art Leader</h4>
+<div class="jp">モンキー・D・ルフィ（リーダーパラレル）</div>
+<div class="set">OP-01 Romance Dawn | Alt Art</div>
+<div class="price">Market: ¥80,000-150,000</div>
+<span class="tag tag-buy">💰 Buy under ¥30,000</span> <span class="tag tag-flip">🔥 3x flip</span>
+<div class="tip">Alt art leaders from OP-01 are undervalued at flea markets.</div>
+</div>
+</div>
+
+</div>
+
+<div class="section-divider"></div>
+
+<h2 id="findable">🔍 FINDABLE AT FLEA MARKETS</h2>
+<p style="color:#666;font-size:.85em;margin-bottom:10px">Cards you might actually find. Know the Japanese names!</p>
+<div class="grid">
+
+<div class="card">
+<div class="placeholder"><div class="name">Nami (SP)</div><div class="sub">OP-01</div></div>
+<div class="card-info">
+<h4>Nami — Special Art</h4>
+<div class="jp">ナミ（スペシャルアート）</div>
+<div class="set">OP-01 Romance Dawn | SP</div>
+<div class="price">Market: ¥15,000-25,000</div>
+<span class="tag tag-buy">💰 Buy under ¥5,000</span> <span class="tag tag-flip">🔥 3x flip</span>
+<div class="tip">Popular character SPs often underpriced in junk bins.</div>
+</div>
+</div>
+
+<div class="card">
+<div class="placeholder"><div class="name">Roronoa Zoro (Alt Art)</div><div class="sub">OP-01</div></div>
+<div class="card-info">
+<h4>Roronoa Zoro — Alt Art</h4>
+<div class="jp">ロロノア・ゾロ（パラレル）</div>
+<div class="set">OP-01 Romance Dawn | Alt Art</div>
+<div class="price">Market: ¥20,000-40,000</div>
+<span class="tag tag-buy">💰 Buy under ¥8,000</span> <span class="tag tag-flip">🔥 3x flip</span>
+<div class="tip">Zoro cards always in demand. Check OP-01 bulk carefully.</div>
+</div>
+</div>
+
+<div class="card">
+<div class="placeholder"><div class="name">Boa Hancock (SP)</div><div class="sub">OP-01</div></div>
+<div class="card-info">
+<h4>Boa Hancock — Special Art</h4>
+<div class="jp">ボア・ハンコック（スペシャルアート）</div>
+<div class="set">OP-01 Romance Dawn | SP</div>
+<div class="price">Market: ¥30,000-50,000</div>
+<span class="tag tag-buy">💰 Buy under ¥10,000</span> <span class="tag tag-flip">🔥 3x flip</span>
+<div class="tip">Waifu tax is real. Female character SPs hold value well.</div>
+</div>
+</div>
+
+<div class="card">
+<div class="placeholder"><div class="name">Yamato (Alt Art)</div><div class="sub">OP-02</div></div>
+<div class="card-info">
+<h4>Yamato — Alt Art</h4>
+<div class="jp">ヤマト（パラレル）</div>
+<div class="set">OP-02 Paramount War | Alt Art</div>
+<div class="price">Market: ¥25,000-45,000</div>
+<span class="tag tag-buy">💰 Buy under ¥10,000</span> <span class="tag tag-flip">🔥 3x flip</span>
+<div class="tip">Fan favorite character. Alt arts from early sets appreciating.</div>
+</div>
+</div>
+
+</div>
+
+<div class="section-divider"></div>
+
+<h2 id="leaders">👑 LEADER CARDS</h2>
+<p style="color:#666;font-size:.85em;margin-bottom:10px">Alt art leaders are the chase for competitive players.</p>
+<div class="grid">
+
+<div class="card">
+<div class="placeholder"><div class="name">Trafalgar Law (Alt Art Leader)</div><div class="sub">OP-01</div></div>
+<div class="card-info">
+<h4>Trafalgar Law — Alt Art Leader</h4>
+<div class="jp">トラファルガー・ロー（リーダーパラレル）</div>
+<div class="set">OP-01 Romance Dawn | Leader Alt Art</div>
+<div class="price">Market: ¥40,000-70,000</div>
+<span class="tag tag-buy">💰 Buy under ¥15,000</span> <span class="tag tag-flip">🔥 3x flip</span>
+<div class="tip">Meta leader + cool art = high demand.</div>
+</div>
+</div>
+
+<div class="card">
+<div class="placeholder"><div class="name">Kaido (Alt Art Leader)</div><div class="sub">OP-03</div></div>
+<div class="card-info">
+<h4>Kaido — Alt Art Leader</h4>
+<div class="jp">カイドウ（リーダーパラレル）</div>
+<div class="set">OP-03 Pillars of Strength | Leader Alt Art</div>
+<div class="price">Market: ¥30,000-50,000</div>
+<span class="tag tag-buy">💰 Buy under ¥12,000</span> <span class="tag tag-flip">🔥 3x flip</span>
+<div class="tip">Yonko leaders always desirable.</div>
+</div>
+</div>
+
+</div>
+
+<div class="section-divider"></div>
+
+<h2 id="promos">🎁 PROMO CARDS</h2>
+<p style="color:#666;font-size:.85em;margin-bottom:10px">Tournament prizes and event exclusives.</p>
+<div class="grid">
+
+<div class="card">
+<div class="placeholder"><div class="name">Luffy (Winner Card)</div><div class="sub">Promo</div></div>
+<div class="card-info">
+<h4>Monkey D. Luffy — Super Pre-Release Winner</h4>
+<div class="jp">モンキー・D・ルフィ（勝者プロモ）</div>
+<div class="set">P-001 | Tournament Promo</div>
+<div class="price">Market: ¥500,000+</div>
+<span class="tag tag-chase">⭐ Ultra Rare</span>
+<div class="tip">Tournament winner exclusive. You won't find this at flea markets.</div>
+</div>
+</div>
+
+<div class="card">
+<div class="placeholder"><div class="name">Treasure Cup Promos</div><div class="sub">Various</div></div>
+<div class="card-info">
+<h4>Treasure Cup Participation Promos</h4>
+<div class="jp">トレジャーカップ参加賞</div>
+<div class="set">Various | Event Promo</div>
+<div class="price">Market: ¥3,000-15,000</div>
+<span class="tag tag-buy">💰 Buy under ¥1,000</span> <span class="tag tag-flip">🔥 5x flip</span>
+<div class="tip">Event promos often dumped cheap. Check for Treasure Cup cards!</div>
+</div>
+</div>
+
+</div>
+
+<div class="section-divider"></div>
+
+<h2 id="packs">🎰 BOOSTER PACKS — EV Guide</h2>
+<p style="color:#666;font-size:.85em;margin-bottom:10px">Which packs to rip vs flip.</p>
+<div class="grid">
+
+<div class="card">
+<div class="placeholder"><div class="name">OP-01 Romance Dawn</div><div class="sub">Best EV</div></div>
+<div class="card-info">
+<h4>OP-01 Romance Dawn</h4>
+<div class="jp">ロマンスドーン</div>
+<div class="set">First set | 2022</div>
+<div class="price">Pack: ¥800-1,500 | Box: ¥15,000-25,000</div>
+<span class="tag tag-chase">⭐ Best set</span>
+<div class="tip">First set = most valuable chase cards. Shanks manga parallel is here.</div>
+</div>
+</div>
+
+<div class="card">
+<div class="placeholder"><div class="name">OP-02 Paramount War</div><div class="sub">High EV</div></div>
+<div class="card-info">
+<h4>OP-02 Paramount War</h4>
+<div class="jp">頂上決戦</div>
+<div class="set">Second set | 2022</div>
+<div class="price">Pack: ¥500-800 | Box: ¥10,000-18,000</div>
+<span class="tag tag-flip">🔥 Ace set</span>
+<div class="tip">Ace manga parallel. Marineford arc fan favorites.</div>
+</div>
+</div>
+
+<div class="card">
+<div class="placeholder"><div class="name">OP-04 Kingdoms of Intrigue</div><div class="sub">Roger Set</div></div>
+<div class="card-info">
+<h4>OP-04 Kingdoms of Intrigue</h4>
+<div class="jp">謀略の王国</div>
+<div class="set">Fourth set | 2023</div>
+<div class="price">Pack: ¥400-600 | Box: ¥8,000-12,000</div>
+<span class="tag tag-chase">⭐ Roger manga</span>
+<div class="tip">Gol D. Roger manga parallel. One of the most valuable cards in OPTCG.</div>
+</div>
+</div>
+
+</div>
+
+<div class="section-divider"></div>
+
+<h2 id="boxes">📦 SEALED BOXES</h2>
+<p style="color:#666;font-size:.85em;margin-bottom:10px">Box prices for reference. Early sets appreciating fast.</p>
+<div class="grid">
+
+<div class="card">
+<div class="placeholder"><div class="name">OP-01 Box</div><div class="sub">Sealed</div></div>
+<div class="card-info">
+<h4>OP-01 Romance Dawn Box</h4>
+<div class="jp">ロマンスドーン ボックス</div>
+<div class="set">24 packs | 2022</div>
+<div class="price">Market: ¥25,000-40,000</div>
+<span class="tag tag-buy">💰 Buy under ¥15,000</span> <span class="tag tag-flip">🔥 2x flip</span>
+<div class="tip">Sealed OP-01 boxes are investment grade. First print especially.</div>
+</div>
+</div>
+
+<div class="card">
+<div class="placeholder"><div class="name">OP-02 Box</div><div class="sub">Sealed</div></div>
+<div class="card-info">
+<h4>OP-02 Paramount War Box</h4>
+<div class="jp">頂上決戦 ボックス</div>
+<div class="set">24 packs | 2022</div>
+<div class="price">Market: ¥15,000-25,000</div>
+<span class="tag tag-buy">💰 Buy under ¥10,000</span> <span class="tag tag-flip">🔥 2x flip</span>
+<div class="tip">Second set boxes still findable at retail-ish prices sometimes.</div>
+</div>
+</div>
+
+</div>
+
+<div class="tip-box">
+<strong>🏴‍☠️ One Piece TCG Hunting Tips:</strong><br>
+• Early sets (OP-01 to OP-04) have the most valuable manga parallels<br>
+• Japanese names: パラレル (parallel), スペシャルアート (special art), リーダー (leader)<br>
+• Check for "SEC" (Secret Rare) and "SP" (Special) markings<br>
+• Manga parallels have distinctive black & white manga art style<br>
+• Alt art leaders are competitive staples with collector appeal
+</div>
+
+<p style="text-align:center;margin-top:30px;color:#666;font-size:.8em">
+<a href="../">← Back to TCG Selection</a> | Built for flea market hunters 🏴‍☠️
+</p>
+
 </body>
 </html>
