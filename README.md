@@ -2,7 +2,9 @@
 
 **Free price guide for hunting Pokemon & One Piece card deals at Japanese flea markets.**
 
-[![Live Site](https://img.shields.io/badge/🔗_Live_Site-GitHub_Pages-blue)](https://arthurb2l.github.io/japan-tcg-price-guide/)
+[![Live Site](https://img.shields.io/badge/🔗_Live-GitHub_Pages-blue)](https://arthurb2l.github.io/japan-tcg-price-guide/)
+[![Pages](https://img.shields.io/badge/📄_Pages-25+-green)](https://arthurb2l.github.io/japan-tcg-price-guide/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## 🔥 What's Inside
 
@@ -10,10 +12,7 @@
 - Vintage Cards (1996-2002) — No Rarity, Gold Stars, e-Card holos
 - Modern Chase — Iono SAR, Umbreon VMAX Alt Art, Charizard ex SAR
 - Japan-Exclusive Promos — Pokemon Center, Poncho Pikachus, Yu Nagaba
-
-### Pokemon Set Guides
-- 12 detailed set pages with box art, prices, chase cards
-- Pokemon 151, Eevee Heroes, VSTAR Universe, Shiny Treasure ex, and more
+- **12 Set Guides** — Pokemon 151, Eevee Heroes, VSTAR Universe, Shiny Treasure ex, and more
 
 ### One Piece
 - Manga Parallels — Shanks, Roger, Ace (¥100k+ chase cards)
@@ -52,6 +51,17 @@
 ├── sw.js (service worker for offline)
 └── manifest.json (PWA config)
 ```
+
+## 🤝 Contributing
+
+PRs welcome! Areas that need help:
+- Price updates (market changes fast)
+- Image accuracy fixes
+- New set guides
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE)
 
 ---
 
