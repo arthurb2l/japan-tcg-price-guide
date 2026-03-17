@@ -51,7 +51,18 @@ h3{color:#4ecdc4;font-size:1.1em;margin:15px 0 8px}
 </head>
 <body>
 <h1>Japanese Pokemon Card Price Guide — Flea Market Cheat Sheet 2026</h1>
-<p style="text-align:center;color:#888;font-size:.85em">日本のフリマ・ハードオフ・リサイクルショップで使うガイド<br>Find underpriced Pokemon cards at Japanese flea markets, Hard-Off & recycle shops | Last updated: March 2026 | Prices in ¥ (JPY)</p>
+<p style="text-align:center;color:#888;font-size:.85em">日本のフリマ・ハードオフ・リサイクルショップで使うガイド<br><span class="en">Find underpriced Pokemon cards at Japanese flea markets, Hard-Off & recycle shops | </span>Last updated: March 2026 | Prices in ¥ (JPY)</p>
+<div style="text-align:center;margin:10px 0"><button onclick="toggleLang()" id="langBtn" style="background:#a855f7;color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.85em">🇯🇵 日本語モード</button></div>
+<script>
+let jpMode=false;
+function toggleLang(){
+  jpMode=!jpMode;
+  document.querySelectorAll('.en').forEach(e=>e.style.display=jpMode?'none':'');
+  document.querySelectorAll('h4').forEach(e=>e.style.display=jpMode?'none':'');
+  document.querySelectorAll('.jp').forEach(e=>e.style.fontSize=jpMode?'1.1em':'');
+  document.getElementById('langBtn').textContent=jpMode?'🌐 English Mode':'🇯🇵 日本語モード';
+}
+</script>
 <div class="tip-box">⚠️ Cards at Japanese flea markets are in <strong>Japanese</strong>. Artwork is identical to English — use pictures to visually match. Japanese names shown in <span style="color:#a855f7">purple</span>.</div>
 <div class="legend"><strong>Tags:</strong> <span class="tag tag-buy">💰 Buy under ¥X</span> = max price for a good deal &nbsp; <span class="tag tag-flip">🔥 Xx flip</span> = profit potential &nbsp; <span class="tag tag-promo">JP Exclusive</span> = Japan-only card</div>
 <div class="nav">
