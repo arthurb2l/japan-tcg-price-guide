@@ -1,0 +1,138 @@
+name: Generate Set Pages
+
+on:
+  push:
+    paths:
+      - 'data/sets.json'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Generate set pages from JSON
+        run: |
+          mkdir -p sets
+          
+          # Read sets.json and generate pages
+          cat data/sets.json | jq -c '.sets[]' | while read -r set; do
+            id=$(echo "$set" | jq -r '.id')
+            name_en=$(echo "$set" | jq -r '.name_en')
+            name_jp=$(echo "$set" | jq -r '.name_jp')
+            code=$(echo "$set" | jq -r '.code')
+            release=$(echo "$set" | jq -r '.release_date')
+            type=$(echo "$set" | jq -r '.type')
+            msrp_pack=$(echo "$set" | jq -r '.msrp_pack // "N/A"')
+            msrp_box=$(echo "$set" | jq -r '.msrp_box')
+            market_pack=$(echo "$set" | jq -r '.market_pack // "N/A"')
+            market_box=$(echo "$set" | jq -r '.market_box')
+            chase=$(echo "$set" | jq -r '.chase_cards | join(", ")')
+            ev=$(echo "$set" | jq -r '.ev_rating')
+            in_print=$(echo "$set" | jq -r '.in_print')
+            
+            # Status badge
+            if [ "$in_print" = "true" ]; then
+              status='<span style="color:#4ecdc4">✅ In Print</span>'
+            else
+              status='<span style="color:#ff6b6b">🔥 Out of Print</span>'
+            fi
+            
+            # EV bar width
+            ev_width=$((ev * 20))
+            
+            cat > "sets/${id}.html" << SETPAGE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${name_en} (${name_jp}) | Japanese Pokemon Card Set Guide</title>
+<meta name="description" content="${name_en} (${name_jp}) Pokemon card set guide. Chase cards, pack prices, box values, and expected value for ${code}.">
+<link rel="canonical" href="https://arthurb2l.github.io/japan-pokemon-card-price-guide/sets/${id}.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#1a1a2e;color:#e0e0e0;padding:20px;max-width:800px;margin:0 auto}
+a{color:#4ecdc4}
+h1{color:#ffd700;margin-bottom:5px}
+.jp{color:#a855f7;font-size:1.2em;margin-bottom:20px}
+.breadcrumb{margin-bottom:20px;font-size:.9em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;margin:20px 0}
+.stat{background:#16213e;padding:15px;border-radius:8px;text-align:center}
+.stat-label{color:#888;font-size:.8em}
+.stat-value{color:#4ecdc4;font-size:1.4em;font-weight:bold}
+.section{background:#16213e;padding:15px;border-radius:8px;margin:15px 0}
+.section h2{color:#ff6b6b;margin-bottom:10px;font-size:1.1em}
+.ev-bar{background:#2a2a4a;border-radius:4px;height:12px;width:100%}
+.ev-fill{background:linear-gradient(90deg,#ff6b6b,#ffd700);height:100%;border-radius:4px}
+footer{text-align:center;margin-top:30px;padding-top:20px;border-top:1px solid #2a2a4a;color:#666;font-size:.8em}
+</style>
+</head>
+<body>
+<div class="breadcrumb"><a href="../">← Price Guide</a> / <a href="../guides/best-packs.html">Best Packs</a></div>
+<h1>${name_en}</h1>
+<div class="jp">${name_jp} (${code})</div>
+<p>Release: ${release} | Status: ${status}</p>
+
+<div class="stats">
+<div class="stat"><div class="stat-label">Pack MSRP</div><div class="stat-value">¥${msrp_pack}</div></div>
+<div class="stat"><div class="stat-label">Pack Market</div><div class="stat-value">¥${market_pack}</div></div>
+<div class="stat"><div class="stat-label">Box MSRP</div><div class="stat-value">¥${msrp_box}</div></div>
+<div class="stat"><div class="stat-label">Box Market</div><div class="stat-value">¥${market_box}</div></div>
+</div>
+
+<div class="section">
+<h2>🎯 Chase Cards</h2>
+<p>${chase}</p>
+</div>
+
+<div class="section">
+<h2>📊 Expected Value Rating</h2>
+<div class="ev-bar"><div class="ev-fill" style="width:${ev_width}%"></div></div>
+<p style="margin-top:8px">${ev}/5 — ${type} set</p>
+</div>
+
+<footer>
+<p><a href="../guides/best-packs.html">← Compare All Packs</a></p>
+<p>Auto-generated from <a href="../data/sets.json">sets.json</a></p>
+</footer>
+</body>
+</html>
+SETPAGE
+            echo "Generated sets/${id}.html"
+          done
+          
+      - name: Update sitemap
+        run: |
+          # Start sitemap
+          cat > sitemap.xml << 'SITEMAP'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+          SITEMAP
+          
+          # Add main pages
+          for page in index.html guides/best-packs.html guides/most-valuable-cards.html; do
+            echo "  <url><loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/${page}</loc><lastmod>$(date +%Y-%m-%d)</lastmod><priority>0.9</priority></url>" >> sitemap.xml
+          done
+          
+          # Add set pages
+          for file in sets/*.html; do
+            name=$(basename "$file")
+            echo "  <url><loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/sets/${name}</loc><lastmod>$(date +%Y-%m-%d)</lastmod><priority>0.7</priority></url>" >> sitemap.xml
+          done
+          
+          # Add data files
+          for file in data/sets.json data/prices.json; do
+            echo "  <url><loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/${file}</loc><lastmod>$(date +%Y-%m-%d)</lastmod><priority>0.6</priority></url>" >> sitemap.xml
+          done
+          
+          echo "</urlset>" >> sitemap.xml
+          
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sets/ sitemap.xml
+          git diff --staged --quiet || git commit -m "Auto-generate set pages from sets.json 🤖"
+          git push
