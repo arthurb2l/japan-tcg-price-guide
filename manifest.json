@@ -1,0 +1,13 @@
+{
+  "name": "Japan TCG Price Guide",
+  "short_name": "TCG Prices",
+  "description": "Pokemon and One Piece card prices for flea markets",
+  "start_url": "/japan-tcg-price-guide/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#EE1515",
+  "icons": [
+    {"src": "favicon.svg", "sizes": "any", "type": "image/svg+xml"},
+    {"src": "favicon.ico", "sizes": "48x48", "type": "image/x-icon"}
+  ]
+}
