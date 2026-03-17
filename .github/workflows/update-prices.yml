@@ -22,24 +22,35 @@ jobs:
           const fs = require('fs');
           const https = require('https');
           
-          // Cards to track (tcgPlayerId from PokemonPriceTracker - English versions)
+          // === CONFIGURATION ===
+          const MAX_CARDS = 100;  // Hard cap - never exceed this (100/day * 30 days = 3000/month buffer)
           const CARDS = [
+            // Top chase cards only - add more as needed but stay under MAX_CARDS
             { id: '246723', name: 'Umbreon VMAX Alt Art' },
             { id: '246733', name: 'Rayquaza VMAX Alt Art' },
             { id: '42479', name: 'Charizard Base Set Holo' },
             { id: '264206', name: 'Umbreon VMAX Trainer Gallery' },
           ];
           
+          // === SAFEGUARDS ===
           const API_KEY = process.env.POKEMON_API_KEY;
           if (!API_KEY) {
-            console.log('No API key set - skipping price update');
-            console.log('Set POKEMON_API_KEY secret to enable auto-updates');
+            console.log('⚠️ No API key - skipping');
             process.exit(0);
           }
           
+          if (CARDS.length > MAX_CARDS) {
+            console.log(`🛑 CARD LIMIT EXCEEDED: ${CARDS.length} > ${MAX_CARDS}`);
+            console.log('Edit workflow to increase MAX_CARDS or reduce card list');
+            process.exit(1);
+          }
+          
+          console.log(`📊 Fetching ${CARDS.length}/${MAX_CARDS} cards (${Math.round(CARDS.length/MAX_CARDS*100)}% of limit)`);
+          
+          // === API FETCH ===
           async function fetchPrice(tcgPlayerId) {
-            return new Promise((resolve, reject) => {
-              const url = `https://www.pokemonpricetracker.com/api/v2/cards?tcgPlayerId=${tcgPlayerId}&language=japanese`;
+            return new Promise((resolve) => {
+              const url = `https://www.pokemonpricetracker.com/api/v2/cards?tcgPlayerId=${tcgPlayerId}`;
               const options = { headers: { 'Authorization': `Bearer ${API_KEY}` } };
               
               https.get(url, options, (res) => {
@@ -48,46 +59,51 @@ jobs:
                 res.on('end', () => {
                   try {
                     const json = JSON.parse(data);
-                    resolve(json.data?.[0]?.prices?.market || null);
+                    if (json.error) {
+                      console.log(`⚠️ API error: ${json.error}`);
+                      resolve(null);
+                    } else {
+                      resolve(json.data?.[0]?.prices?.market || null);
+                    }
                   } catch (e) { resolve(null); }
                 });
-              }).on('error', reject);
+              }).on('error', () => resolve(null));
             });
           }
           
           async function main() {
-            const prices = JSON.parse(fs.readFileSync('data/prices.json', 'utf8'));
-            let updated = false;
+            let results = [];
             
             for (const card of CARDS) {
               const price = await fetchPrice(card.id);
               if (price) {
-                console.log(`${card.name}: $${price}`);
-                // Update prices.json with new US market price
-                const existing = prices.cards.find(c => c.tcgPlayerId === card.id);
-                if (existing && Math.abs(existing.market_usd - price) / price > 0.1) {
-                  existing.market_usd = price;
-                  existing.last_updated = new Date().toISOString().split('T')[0];
-                  updated = true;
-                }
+                console.log(`✅ ${card.name}: $${price}`);
+                results.push({ ...card, market_usd: price, updated: new Date().toISOString().split('T')[0] });
+              } else {
+                console.log(`❌ ${card.name}: failed`);
               }
             }
             
-            if (updated) {
-              fs.writeFileSync('data/prices.json', JSON.stringify(prices, null, 2));
-              console.log('Prices updated');
-            } else {
-              console.log('No significant price changes');
+            // Write results
+            if (results.length > 0) {
+              const output = { 
+                last_updated: new Date().toISOString().split('T')[0],
+                source: 'PokemonPriceTracker API (auto)',
+                card_limit: MAX_CARDS,
+                cards: results 
+              };
+              fs.writeFileSync('data/api-prices.json', JSON.stringify(output, null, 2));
+              console.log(`\n✅ Updated ${results.length} prices`);
             }
           }
           
-          main().catch(console.error);
+          main().catch(e => { console.log('Error:', e.message); process.exit(1); });
           SCRIPT
           
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/prices.json
+          git add data/api-prices.json
           git diff --staged --quiet || git commit -m "Auto-update prices from API 🤖"
           git push
