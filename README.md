@@ -11,10 +11,14 @@
 - Modern Chase — Iono SAR, Umbreon VMAX Alt Art, Charizard ex SAR
 - Japan-Exclusive Promos — Pokemon Center, Poncho Pikachus, Yu Nagaba
 
+### Pokemon Set Guides
+- 12 detailed set pages with box art, prices, chase cards
+- Pokemon 151, Eevee Heroes, VSTAR Universe, Shiny Treasure ex, and more
+
 ### One Piece
 - Manga Parallels — Shanks, Roger, Ace (¥100k+ chase cards)
 - Alt Art Leaders — Law, Kaido, Luffy
-- 2026 Pack Tier Guide — PRB-01, OP-04, OP-11 meta rankings
+- Pack Tier Guide — PRB-01, OP-04, OP-11 rankings
 
 ### Tools
 - [EV Calculator](https://arthurb2l.github.io/japan-tcg-price-guide/tools/ev-calculator.html) — Is this pack worth buying?
@@ -33,14 +37,6 @@
 - Hard-Off / Book-Off
 - Mandarake, Surugaya
 - Recycle shops (リサイクルショップ)
-
-## 🤖 Automation
-
-| Agent | Trigger | Function |
-|-------|---------|----------|
-| Sitemap | On push | Updates sitemap.xml |
-| Health Check | Weekly | Verifies all pages |
-| Price Updater | Monthly | Fetches latest prices |
 
 ---
 
