@@ -1,4 +1,4 @@
-const CACHE = 'tcg-v2';
+const CACHE = 'tcg-v3';
 
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil(
@@ -6,6 +6,10 @@ self.addEventListener('activate', e => e.waitUntil(
 ));
 
 self.addEventListener('fetch', e => {
+  const url = e.request.url;
+  // Only cache HTML pages, not images
+  if (!url.endsWith('.html') && !url.endsWith('/')) return;
+  
   e.respondWith(
     fetch(e.request)
       .then(res => {
