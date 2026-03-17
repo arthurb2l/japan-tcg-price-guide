@@ -1,0 +1,56 @@
+name: Rank Best Packs
+
+on:
+  schedule:
+    - cron: '0 16 * * 0'  # Sunday 16:00 UTC = Monday 01:00 JST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rank:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Sort packs by EV and update guide
+        run: |
+          node << 'SCRIPT'
+          const fs = require('fs');
+          const data = JSON.parse(fs.readFileSync('data/sets.json', 'utf8'));
+          
+          // Sort by EV rating descending
+          const ranked = data.sets
+            .filter(s => s.ev_rating)
+            .sort((a, b) => b.ev_rating - a.ev_rating);
+          
+          // Read current best-packs.html
+          let html = fs.readFileSync('guides/best-packs.html', 'utf8');
+          
+          // Update the ranking list
+          const rankingHtml = ranked.map((s, i) => 
+            `<tr><td>${i+1}</td><td><a href="../sets/${s.id}.html">${s.name_en}</a></td><td>${s.name_jp}</td><td>${s.ev_rating}/5</td><td>¥${s.market_pack || s.market_box}</td></tr>`
+          ).join('\n');
+          
+          // Replace between markers
+          html = html.replace(
+            /<!-- RANKING_START -->[\s\S]*<!-- RANKING_END -->/,
+            `<!-- RANKING_START -->\n${rankingHtml}\n<!-- RANKING_END -->`
+          );
+          
+          // Update timestamp
+          const now = new Date().toISOString().split('T')[0];
+          html = html.replace(/Last ranked: [\d-]+/, `Last ranked: ${now}`);
+          
+          fs.writeFileSync('guides/best-packs.html', html);
+          console.log('Updated rankings:', ranked.map(s => s.name_en).join(', '));
+          SCRIPT
+          
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add guides/best-packs.html
+          git diff --staged --quiet || git commit -m "Auto-rank best packs by EV 🤖"
+          git push
