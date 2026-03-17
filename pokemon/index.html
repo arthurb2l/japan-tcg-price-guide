@@ -26,10 +26,10 @@ h1{text-align:center;color:#222;font-size:1.6em;margin:15px 0}
 h2{color:#fff;font-size:1.3em;margin:20px 0 10px;padding:8px 12px;background:#EE1515;border-radius:4px}
 h3{color:#EE1515;font-size:1.1em;margin:15px 0 8px}
 a{color:#EE1515}
-.nav{display:flex;gap:6px;justify-content:flex-start;margin:10px 0 20px;position:sticky;top:0;background:#f5f5f5;padding:8px 0;z-index:100;border-bottom:3px solid #222;overflow-x:auto;-webkit-overflow-scrolling:touch}
-.nav::-webkit-scrollbar{height:4px}.nav::-webkit-scrollbar-thumb{background:#ddd;border-radius:2px}
-.nav a{background:#fff;color:#222;padding:6px 12px;border-radius:20px;text-decoration:none;font-size:.85em;border:1px solid #ddd;white-space:nowrap}
+.nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:10px 0 20px;position:sticky;top:0;background:#f5f5f5;padding:8px 0;z-index:100;border-bottom:3px solid #222}
+.nav a{background:#fff;color:#222;padding:8px 4px;border-radius:8px;text-decoration:none;font-size:.7em;border:1px solid #ddd;text-align:center;line-height:1.2}
 .nav a:hover{background:#EE1515;color:#fff;border-color:#EE1515}
+.nav .emoji{font-size:1.3em;display:block;margin-bottom:2px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin:10px 0}
 .card{background:#fff;border-radius:8px;overflow:hidden;border:1px solid #222;transition:transform .2s,box-shadow .2s}
 .card:hover{transform:scale(1.02);border-color:#EE1515;box-shadow:0 4px 12px rgba(238,21,21,0.2)}
@@ -73,7 +73,18 @@ function toggleLang(){
 <div class="tip-box">⚠️ Cards at Japanese flea markets are in <strong>Japanese</strong>. Artwork is identical to English — use pictures to visually match. Japanese names shown in <span style="color:#a855f7">purple</span>.</div>
 <div class="legend"><strong>Tags:</strong> <span class="tag tag-buy">💰 Buy under ¥X</span> = max price for a good deal &nbsp; <span class="tag tag-flip">🔥 Xx flip</span> = profit potential &nbsp; <span class="tag tag-promo">JP Exclusive</span> = Japan-only card</div>
 <div class="nav">
-<a href="../" style="background:#222;color:#fff;border-color:#222">🏠 Home</a><a href="#v-valuable">💎 Vintage Valuable</a><a href="#v-findable">🔍 Vintage Findable</a><a href="#m-valuable">💎 Modern Valuable</a><a href="#m-findable">🔍 Modern Findable</a><a href="#promos">🇯🇵 JP Promos</a><a href="#packs">🎰 Packs</a><a href="#sealed">📦 Boxes</a><a href="#sets">📚 Sets</a><a href="#tips">💡 Tips</a><a href="../guides/best-packs.html" style="background:#ff6b6b;border-color:#ff6b6b">🏆 Best Packs</a><a href="../guides/most-valuable-cards.html" style="background:#ffd700;color:#1a1a2e;border-color:#ffd700">💎 Top Cards</a><a href="../guides/flea-market-tips.html">🏪 Hunting Tips</a><a href="../guides/beginners-guide.html">📚 Beginner</a><a href="../tools/ev-calculator.html">🧮 EV Calc</a><a href="../guides/pricing-methodology.html">📊 How We Price</a>
+<a href="../" style="background:#222;color:#fff;border-color:#222"><span class="emoji">🏠</span>Home</a>
+<a href="#v-valuable"><span class="emoji">💎</span>Vintage</a>
+<a href="#v-findable"><span class="emoji">🔍</span>V-Find</a>
+<a href="#m-valuable"><span class="emoji">💎</span>Modern</a>
+<a href="#m-findable"><span class="emoji">🔍</span>M-Find</a>
+<a href="#promos"><span class="emoji">🇯🇵</span>Promos</a>
+<a href="#packs"><span class="emoji">🎰</span>Packs</a>
+<a href="#sealed"><span class="emoji">📦</span>Boxes</a>
+<a href="#sets"><span class="emoji">📚</span>Sets</a>
+<a href="#tips"><span class="emoji">💡</span>Tips</a>
+<a href="../guides/best-packs.html" style="background:#ff6b6b;border-color:#ff6b6b;color:#fff"><span class="emoji">🏆</span>Best</a>
+<a href="../tools/ev-calculator.html"><span class="emoji">🧮</span>EV Calc</a>
 </div>
 <div class="section-divider"></div>
 <h2 id="v-valuable">💎 VINTAGE ERA (1996-2002) — Most Valuable Cards</h2>
