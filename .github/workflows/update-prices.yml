@@ -22,11 +22,12 @@ jobs:
           const fs = require('fs');
           const https = require('https');
           
-          // Cards to track (tcgPlayerId from PokemonPriceTracker)
+          // Cards to track (tcgPlayerId from PokemonPriceTracker - English versions)
           const CARDS = [
-            { id: '490294', name: 'Umbreon VMAX Alt Art' },
-            { id: '265813', name: 'Charizard Base Set' },
-            // Add more card IDs as needed
+            { id: '246723', name: 'Umbreon VMAX Alt Art' },
+            { id: '246733', name: 'Rayquaza VMAX Alt Art' },
+            { id: '42479', name: 'Charizard Base Set Holo' },
+            { id: '264206', name: 'Umbreon VMAX Trainer Gallery' },
           ];
           
           const API_KEY = process.env.POKEMON_API_KEY;
