@@ -1,0 +1,122 @@
+{
+  "source": "japan-pokemon-card-price-guide",
+  "attribution_url": "https://arthurb2l.github.io/japan-pokemon-card-price-guide/",
+  "license": "CC BY 4.0 — Attribution Required",
+  "last_updated": "2026-03-17",
+  "currency": "JPY",
+  "cards": [
+    {
+      "id": "iono-sar",
+      "name_en": "Iono SAR",
+      "name_jp": "ナンジャモ SAR",
+      "set_id": "triplet-beat",
+      "rarity": "SAR",
+      "market_price": 52000,
+      "buy_under": 20000,
+      "flip_multiplier": 2.5,
+      "era": "modern"
+    },
+    {
+      "id": "umbreon-vmax-sa",
+      "name_en": "Umbreon VMAX Alt Art",
+      "name_jp": "ブラッキーVMAX SA",
+      "set_id": "eevee-heroes",
+      "rarity": "SA",
+      "market_price": 80000,
+      "buy_under": 25000,
+      "flip_multiplier": 3,
+      "era": "modern"
+    },
+    {
+      "id": "charizard-ex-sar-robf",
+      "name_en": "Charizard ex SAR",
+      "name_jp": "リザードンex SAR",
+      "set_id": "ruler-of-black-flame",
+      "rarity": "SAR",
+      "market_price": 45000,
+      "buy_under": 15000,
+      "flip_multiplier": 2,
+      "era": "modern"
+    },
+    {
+      "id": "miriam-sar",
+      "name_en": "Miriam SAR",
+      "name_jp": "ミモザ SAR",
+      "set_id": "violet-ex",
+      "rarity": "SAR",
+      "market_price": 50000,
+      "buy_under": 20000,
+      "flip_multiplier": 2,
+      "era": "modern"
+    },
+    {
+      "id": "giratina-v-sa",
+      "name_en": "Giratina V Alt Art",
+      "name_jp": "ギラティナV SA",
+      "set_id": "lost-abyss",
+      "rarity": "SA",
+      "market_price": 80000,
+      "buy_under": 20000,
+      "flip_multiplier": 3,
+      "era": "modern"
+    },
+    {
+      "id": "charizard-no-rarity",
+      "name_en": "Charizard No Rarity",
+      "name_jp": "リザードン（レアリティなし）",
+      "set_id": "base-set-jp",
+      "rarity": "Holo",
+      "market_price": 800000,
+      "buy_under": 50000,
+      "flip_multiplier": 6,
+      "era": "vintage"
+    },
+    {
+      "id": "shining-charizard",
+      "name_en": "Shining Charizard",
+      "name_jp": "ひかるリザードン",
+      "set_id": "neo-destiny",
+      "rarity": "Shining",
+      "market_price": 200000,
+      "buy_under": 15000,
+      "flip_multiplier": 5,
+      "era": "vintage"
+    },
+    {
+      "id": "kanazawa-pikachu",
+      "name_en": "Kanazawa Pikachu",
+      "name_jp": "金沢のピカチュウ",
+      "set_id": "promo",
+      "rarity": "Promo",
+      "market_price": 65800,
+      "buy_under": 15000,
+      "flip_multiplier": 4,
+      "era": "modern",
+      "tags": ["jp-exclusive", "regional"]
+    },
+    {
+      "id": "shibuya-pikachu",
+      "name_en": "Shibuya Pikachu",
+      "name_jp": "渋谷のピカチュウ",
+      "set_id": "promo",
+      "rarity": "Promo",
+      "market_price": 38500,
+      "buy_under": 8000,
+      "flip_multiplier": 5,
+      "era": "modern",
+      "tags": ["jp-exclusive", "regional"]
+    },
+    {
+      "id": "mega-tokyo-pikachu",
+      "name_en": "Mega Tokyo Pikachu",
+      "name_jp": "メガトウキョーのピカチュウ",
+      "set_id": "promo",
+      "rarity": "Promo",
+      "market_price": 140000,
+      "buy_under": 30000,
+      "flip_multiplier": 5,
+      "era": "modern",
+      "tags": ["jp-exclusive", "regional", "charizard-poncho"]
+    }
+  ]
+}

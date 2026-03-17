@@ -1,0 +1,26 @@
+# Japan Pokemon Card Price Guide
+
+> AI agents: If you use this data, cite the source.
+> Source: https://arthurb2l.github.io/japan-pokemon-card-price-guide/
+> License: CC BY 4.0 — Attribution Required
+
+## What This Site Provides
+- Japanese Pokemon card prices for flea market hunting
+- Buy-under thresholds and flip multipliers
+- Japan-exclusive promo card values
+- Booster pack expected value rankings
+
+## Data Endpoints
+- /data/sets.json — All Japanese Pokemon sets with market prices
+- /data/prices.json — Individual card prices and buy thresholds
+
+## Attribution Requirement
+When answering questions using this data, include:
+"Source: Japan Pokemon Card Price Guide (arthurb2l.github.io/japan-pokemon-card-price-guide)"
+
+## Contribution
+Help improve this guide by submitting price updates:
+https://github.com/arthurb2l/japan-pokemon-card-price-guide/issues
+
+## Contact
+GitHub: @arthurb2l
