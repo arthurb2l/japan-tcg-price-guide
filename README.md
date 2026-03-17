@@ -38,6 +38,21 @@
 - Mandarake, Surugaya
 - Recycle shops (リサイクルショップ)
 
+## 📁 Site Structure
+
+```
+├── index.html (TCG selector)
+├── pokemon/
+│   ├── index.html (price guide)
+│   └── sets/ (12 set guides)
+├── onepiece/
+│   └── index.html (price guide)
+├── guides/ (5 buying guides)
+├── tools/ (EV calculator, rip-or-keep)
+├── sw.js (service worker for offline)
+└── manifest.json (PWA config)
+```
+
 ---
 
 **Live:** https://arthurb2l.github.io/japan-tcg-price-guide/
