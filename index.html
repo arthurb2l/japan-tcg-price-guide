@@ -18,33 +18,34 @@
 {"@context":"https://schema.org","@type":"WebSite","name":"Japanese Pokemon Card Price Guide","url":"https://arthurb2l.github.io/japan-pokemon-card-price-guide/","description":"Free price guide for hunting Pokemon card deals at Japanese flea markets","inLanguage":["en","ja"]}
 </script>
 <style>
-/* Pokeball Theme: Red #EE1515, White #F5F5F5, Black #1a1a1a, Dark #2d2d2d */
+/* Pokeball Theme: Light bg, white cards, black borders, red accents */
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',sans-serif;background:#1a1a1a;color:#e0e0e0;padding:10px}
-h1{text-align:center;color:#fff;font-size:1.6em;margin:15px 0}
-h2{color:#fff;font-size:1.3em;margin:20px 0 10px;padding:8px;background:#EE1515;border-left:4px solid #fff;border-radius:4px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',sans-serif;background:#f5f5f5;color:#222;padding:10px}
+h1{text-align:center;color:#222;font-size:1.6em;margin:15px 0}
+h2{color:#fff;font-size:1.3em;margin:20px 0 10px;padding:8px 12px;background:#EE1515;border-radius:4px}
 h3{color:#EE1515;font-size:1.1em;margin:15px 0 8px}
-.nav{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0 20px;position:sticky;top:0;background:#1a1a1a;padding:8px 0;z-index:100}
-.nav a{background:#2d2d2d;color:#fff;padding:6px 12px;border-radius:20px;text-decoration:none;font-size:.85em;border:1px solid #444}
+a{color:#EE1515}
+.nav{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0 20px;position:sticky;top:0;background:#f5f5f5;padding:8px 0;z-index:100}
+.nav a{background:#fff;color:#222;padding:6px 12px;border-radius:20px;text-decoration:none;font-size:.85em;border:1px solid #ddd}
 .nav a:hover{background:#EE1515;color:#fff;border-color:#EE1515}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin:10px 0}
-.card{background:#2d2d2d;border-radius:8px;overflow:hidden;border:1px solid #444;transition:transform .2s}
+.card{background:#fff;border-radius:8px;overflow:hidden;border:1px solid #222;transition:transform .2s}
 .card:hover{transform:scale(1.02);border-color:#EE1515}
-.card img{width:100%;height:220px;object-fit:contain;background:#1a1a1a;padding:8px}
+.card img{width:100%;height:220px;object-fit:contain;background:#fafafa;padding:8px}
 .card-info{padding:10px}
-.card-info h4{color:#fff;font-size:.95em;margin-bottom:4px}
-.card-info .jp{color:#a855f7;font-size:.85em;font-weight:bold;margin-bottom:3px}
-.card-info .set{color:#888;font-size:.8em}
+.card-info h4{color:#222;font-size:.95em;margin-bottom:4px}
+.card-info .jp{color:#7c3aed;font-size:.85em;font-weight:bold;margin-bottom:3px}
+.card-info .set{color:#666;font-size:.8em}
 .card-info .price{color:#EE1515;font-weight:bold;font-size:1em;margin:4px 0}
-.card-info .tip{color:#ff9f43;font-size:.78em;line-height:1.3}
+.card-info .tip{color:#666;font-size:.78em;line-height:1.3}
 .tag{display:inline-block;padding:2px 6px;border-radius:10px;font-size:.7em;margin:2px}
-.tag-buy{background:#00ff8833;color:#00ff88;border:1px solid #00ff88}
-.tag-promo{background:#a855f733;color:#a855f7;border:1px solid #a855f7}
-.tag-flip{background:#EE151533;color:#EE1515;border:1px solid #EE1515}
-.legend{background:#2d2d2d;padding:12px;border-radius:8px;margin:10px 0;font-size:.85em}
-.tip-box{background:#2d1a1a;border:1px solid #EE1515;border-radius:8px;padding:10px;margin:10px 0;font-size:.85em;color:#ff9f43}
-.section-divider{height:3px;background:linear-gradient(90deg,#EE1515,#fff,#EE1515);margin:25px 0;border-radius:2px}
-.placeholder{width:100%;height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#1a1a1a;border-bottom:1px solid #444}
+.tag-buy{background:#dcfce7;color:#166534;border:1px solid #166534}
+.tag-promo{background:#f3e8ff;color:#7c3aed;border:1px solid #7c3aed}
+.tag-flip{background:#fee2e2;color:#EE1515;border:1px solid #EE1515}
+.legend{background:#fff;padding:12px;border-radius:8px;margin:10px 0;font-size:.85em;border:1px solid #ddd}
+.tip-box{background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:10px;margin:10px 0;font-size:.85em;color:#92400e}
+.section-divider{height:3px;background:#EE1515;margin:25px 0;border-radius:2px}
+.placeholder{width:100%;height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fafafa;border-bottom:1px solid #ddd}
 .placeholder .name{color:#EE1515;font-size:14px;font-weight:bold;text-align:center;padding:0 10px}
 .placeholder .sub{color:#666;font-size:11px;margin-top:5px}
 @media(max-width:600px){.grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}.card img,.placeholder{height:160px}.placeholder .name{font-size:12px}}
@@ -52,8 +53,8 @@ h3{color:#EE1515;font-size:1.1em;margin:15px 0 8px}
 </head>
 <body>
 <h1>Japanese Pokemon Card Price Guide — Flea Market Cheat Sheet 2026</h1>
-<p style="text-align:center;color:#888;font-size:.85em">日本のフリマ・ハードオフ・リサイクルショップで使うガイド<br><span class="en">Find underpriced Pokemon cards at Japanese flea markets, Hard-Off & recycle shops | </span>Last updated: March 2026 | Prices in ¥ (JPY)</p>
-<div style="text-align:center;margin:10px 0"><button onclick="toggleLang()" id="langBtn" style="background:#a855f7;color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.85em">🇯🇵 日本語モード</button></div>
+<p style="text-align:center;color:#666;font-size:.85em">日本のフリマ・ハードオフ・リサイクルショップで使うガイド<br><span class="en">Find underpriced Pokemon cards at Japanese flea markets, Hard-Off & recycle shops | </span>Last updated: March 2026 | Prices in ¥ (JPY)</p>
+<div style="text-align:center;margin:10px 0"><button onclick="toggleLang()" id="langBtn" style="background:#EE1515;color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.85em">🇯🇵 日本語モード</button></div>
 <script>
 let jpMode=false;
 function toggleLang(){
