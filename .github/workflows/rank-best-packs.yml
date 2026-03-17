@@ -20,31 +20,30 @@ jobs:
           const fs = require('fs');
           const data = JSON.parse(fs.readFileSync('data/sets.json', 'utf8'));
           
-          // Sort by EV rating descending
+          // Sort by EV rating descending, take top 5
           const ranked = data.sets
             .filter(s => s.ev_rating)
-            .sort((a, b) => b.ev_rating - a.ev_rating);
+            .sort((a, b) => b.ev_rating - a.ev_rating)
+            .slice(0, 5);
           
-          // Read current best-packs.html
+          // Build quick ranking string
+          const ranking = ranked.map((s, i) => 
+            `${i+1}. ${s.name_en} (${s.ev_rating}/5)`
+          ).join(' • ');
+          
+          // Read and update best-packs.html
           let html = fs.readFileSync('guides/best-packs.html', 'utf8');
           
-          // Update the ranking list
-          const rankingHtml = ranked.map((s, i) => 
-            `<tr><td>${i+1}</td><td><a href="../sets/${s.id}.html">${s.name_en}</a></td><td>${s.name_jp}</td><td>${s.ev_rating}/5</td><td>¥${s.market_pack || s.market_box}</td></tr>`
-          ).join('\n');
-          
-          // Replace between markers
           html = html.replace(
-            /<!-- RANKING_START -->[\s\S]*<!-- RANKING_END -->/,
-            `<!-- RANKING_START -->\n${rankingHtml}\n<!-- RANKING_END -->`
+            /<!-- RANKING_START -->[\s\S]*?<!-- RANKING_END -->/,
+            `<!-- RANKING_START -->\n<p style="color:#4ecdc4;font-size:.9em;margin-bottom:15px"><strong>Quick Ranking:</strong> ${ranking}</p>\n<!-- RANKING_END -->`
           );
           
-          // Update timestamp
           const now = new Date().toISOString().split('T')[0];
           html = html.replace(/Last ranked: [\d-]+/, `Last ranked: ${now}`);
           
           fs.writeFileSync('guides/best-packs.html', html);
-          console.log('Updated rankings:', ranked.map(s => s.name_en).join(', '));
+          console.log('Updated:', ranking);
           SCRIPT
           
       - name: Commit if changed
