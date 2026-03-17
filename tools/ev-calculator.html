@@ -70,6 +70,24 @@ function calculate() {
   resultEl.classList.add('show');
 }
 </script>
+<h2 style="color:#ffd700;margin:30px 0 15px;font-size:1.2em">📊 Try Real Examples</h2>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px">
+<button onclick="preset(180,80000,288,15)" style="width:auto;padding:10px 14px;font-size:.9em">Pokemon 151</button>
+<button onclick="preset(180,120000,324,20)" style="width:auto;padding:10px 14px;font-size:.9em">Eevee Heroes</button>
+<button onclick="preset(180,45000,180,25)" style="width:auto;padding:10px 14px;font-size:.9em">Terastal Fest</button>
+<button onclick="preset(220,300000,432,10)" style="width:auto;padding:10px 14px;font-size:.9em">OP-01 (Shanks)</button>
+<button onclick="preset(220,150000,288,15)" style="width:auto;padding:10px 14px;font-size:.9em">PRB-01</button>
+<button onclick="preset(220,80000,216,20)" style="width:auto;padding:10px 14px;font-size:.9em">OP-04 (Roger)</button>
+</div>
+<script>
+function preset(pack,chase,rate,bulk){
+document.getElementById('packPrice').value=pack;
+document.getElementById('chaseValue').value=chase;
+document.getElementById('pullRate').value=rate;
+document.getElementById('bulkValue').value=bulk;
+calculate();
+}
+</script>
 <footer><a href="../">← Price Guide</a> | <a href="../guides/best-packs.html">Best Packs</a></footer>
 </body>
 </html>
