@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokemon Pack EV Calculator | Is This Pack Worth It?</title>
+<meta name="description" content="Calculate expected value of Japanese Pokemon booster packs. Enter pack price and chase card values to see if it's worth buying.">
+<link rel="canonical" href="https://arthurb2l.github.io/japan-pokemon-card-price-guide/tools/ev-calculator.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',sans-serif;background:#1a1a2e;color:#e0e0e0;padding:10px;max-width:600px;margin:0 auto}
+a{color:#4ecdc4}
+h1{text-align:center;color:#ffd700;font-size:1.5em;margin:20px 0}
+.breadcrumb{font-size:.85em;margin-bottom:15px}
+.calc{background:#16213e;border-radius:12px;padding:20px;margin:20px 0}
+label{display:block;margin:15px 0 5px;color:#4ecdc4}
+input{width:100%;padding:12px;border:1px solid #2a2a4a;border-radius:6px;background:#0a0a1a;color:#e0e0e0;font-size:1em}
+input:focus{outline:none;border-color:#4ecdc4}
+button{width:100%;padding:14px;background:#4ecdc4;color:#1a1a2e;border:none;border-radius:6px;font-size:1.1em;font-weight:bold;cursor:pointer;margin-top:20px}
+button:hover{background:#3dbdb4}
+.result{background:#0a0a1a;border-radius:8px;padding:20px;margin-top:20px;text-align:center;display:none}
+.result.show{display:block}
+.ev{font-size:2em;font-weight:bold}
+.ev.good{color:#00ff88}
+.ev.bad{color:#ff6b6b}
+.ev.neutral{color:#ffd700}
+.verdict{margin-top:10px;font-size:1.1em}
+.formula{color:#888;font-size:.8em;margin-top:15px}
+footer{text-align:center;padding:20px;color:#666;font-size:.8em}
+</style>
+</head>
+<body>
+<div class="breadcrumb"><a href="../">← Back to Price Guide</a></div>
+<h1>🎰 Pack EV Calculator</h1>
+<div class="calc">
+<label>Pack Price (¥)</label>
+<input type="number" id="packPrice" placeholder="180" value="180">
+<label>Chase Card Value (¥)</label>
+<input type="number" id="chaseValue" placeholder="50000">
+<label>Chase Card Pull Rate (1 in X packs)</label>
+<input type="number" id="pullRate" placeholder="300" value="300">
+<label>Average Bulk Value per Pack (¥)</label>
+<input type="number" id="bulkValue" placeholder="20" value="20">
+<button onclick="calculate()">Calculate EV</button>
+<div class="result" id="result">
+<div class="ev" id="evValue">¥0</div>
+<div class="verdict" id="verdict"></div>
+<div class="formula" id="formula"></div>
+</div>
+</div>
+<script>
+function calculate() {
+  const pack = parseFloat(document.getElementById('packPrice').value) || 0;
+  const chase = parseFloat(document.getElementById('chaseValue').value) || 0;
+  const rate = parseFloat(document.getElementById('pullRate').value) || 1;
+  const bulk = parseFloat(document.getElementById('bulkValue').value) || 0;
+  const ev = (chase / rate) + bulk;
+  const roi = ((ev - pack) / pack * 100).toFixed(0);
+  const evEl = document.getElementById('evValue');
+  const verdictEl = document.getElementById('verdict');
+  const formulaEl = document.getElementById('formula');
+  const resultEl = document.getElementById('result');
+  evEl.textContent = '¥' + ev.toFixed(0);
+  evEl.className = 'ev ' + (ev > pack * 1.2 ? 'good' : ev < pack * 0.8 ? 'bad' : 'neutral');
+  if (ev > pack * 1.5) verdictEl.textContent = '🔥 Great value! Buy these packs.';
+  else if (ev > pack) verdictEl.textContent = '✅ Positive EV. Worth buying.';
+  else if (ev > pack * 0.8) verdictEl.textContent = '😐 Break-even. Only if you enjoy opening.';
+  else verdictEl.textContent = '❌ Negative EV. Skip or buy singles.';
+  formulaEl.textContent = `EV = (¥${chase} ÷ ${rate}) + ¥${bulk} = ¥${ev.toFixed(0)} | ROI: ${roi}%`;
+  resultEl.classList.add('show');
+}
+</script>
+<footer><a href="../">← Price Guide</a> | <a href="../guides/best-packs.html">Best Packs</a></footer>
+</body>
+</html>
