@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "updated": "2026-03-18",
+  "tasks": {
+    "translate": [
+      {"id": "t001", "jp": "ナンジャモ", "context": "Trainer card from Violet ex", "status": "open"},
+      {"id": "t002", "jp": "リザードンex SAR", "context": "Scarlet ex chase card", "status": "open"},
+      {"id": "t003", "jp": "オモダカ", "context": "Trainer from Ruler of Black Flame", "status": "open"},
+      {"id": "t004", "jp": "ブラッキーVMAX", "context": "Eevee Heroes alt art", "status": "open"},
+      {"id": "t005", "jp": "ギラティナVSTAR", "context": "Lost Abyss chase card", "status": "open"}
+    ],
+    "verify_translation": [
+      {"id": "v001", "jp": "ミモザ", "claimed_en": "Miriam", "status": "pending", "confirms": 0, "rejects": 0},
+      {"id": "v002", "jp": "カイ", "claimed_en": "Irida", "status": "pending", "confirms": 0, "rejects": 0}
+    ],
+    "price_check": [
+      {"id": "p001", "card": "Iono SAR (Violet ex)", "last_price": 45000, "last_checked": "2026-02-01", "status": "open"},
+      {"id": "p002", "card": "Umbreon VMAX Alt Art", "last_price": 85000, "last_checked": "2026-02-01", "status": "open"},
+      {"id": "p003", "card": "Pikachu ex SAR (Terastal Fest)", "last_price": 45000, "last_checked": "2026-02-01", "status": "open"}
+    ],
+    "verify_price": [
+      {"id": "vp001", "card": "Charizard ex SAR", "claimed_price": 35000, "source": "mercari.com", "status": "pending", "confirms": 0, "rejects": 0}
+    ],
+    "image_check": [
+      {"id": "i001", "card": "Miriam SAR", "image_url": "pokemon/images/miriam-sar.jpg", "status": "open"}
+    ]
+  },
+  "contributions": [],
+  "stats": {
+    "total_contributions": 0,
+    "accepted": 0,
+    "rejected": 0,
+    "pending": 0
+  }
+}
