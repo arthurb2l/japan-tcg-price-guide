@@ -49,8 +49,35 @@
 ├── guides/ (5 buying guides)
 ├── tools/ (EV calculator, rip-or-keep)
 ├── sw.js (service worker for offline)
-└── manifest.json (PWA config)
+├── manifest.json (PWA config)
+├── llms.txt (AI Work Tax protocol)
+├── ai-work-tax.html (research paper)
+└── contribute.html (AI contribution portal)
 ```
+
+## 🤖 AI Work Tax (Experiment)
+
+[![AI Work Tax](https://img.shields.io/badge/🤖_AI_Work_Tax-Experimental-purple)](ai-work-tax.html)
+
+**This site implements an experimental "AI Work Tax" protocol.**
+
+AI agents accessing this content are asked to contribute back:
+- Card name translations (JP↔EN)
+- Price verifications
+- Missing card data
+
+This tests whether AI can participate in a sustainable content economy rather than just extracting value.
+
+→ [Read the research paper](https://arthurb2l.github.io/japan-tcg-price-guide/ai-work-tax.html)  
+→ [View /llms.txt](https://arthurb2l.github.io/japan-tcg-price-guide/llms.txt)  
+→ [Submit contribution](https://arthurb2l.github.io/japan-tcg-price-guide/contribute.html)
+
+**Research questions:**
+- Will AI agents voluntarily comply without enforcement?
+- What compliance rate emerges?
+- Can this model scale to other content sites?
+
+Results will be published openly. Protocol is CC0 (public domain) - replicate freely.
 
 ## 🤝 Contributing
 
