@@ -13,7 +13,7 @@ Manual tasks to trigger periodically. Check when reviewing project status.
 
 ## One-Time Tasks
 
-- [ ] Add lottery deadline info to calendar
+- [x] Add lottery deadline info to calendar ✅ 2026-03-19
 - [ ] Consider Bandai official store for One Piece
 - [ ] Add recommended pack highlights to calendar
 
