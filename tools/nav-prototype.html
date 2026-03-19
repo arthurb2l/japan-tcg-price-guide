@@ -14,24 +14,24 @@
 <title>Nav Prototype</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,sans-serif;background:#1a1a2e;color:#fff;padding:20px;max-width:500px;margin:0 auto}
-h2{color:#ffd700;margin:30px 0 15px;font-size:1.2em}
-p{color:#888;margin-bottom:20px}
+body{font-family:-apple-system,sans-serif;background:#f5f5f5;color:#222;padding:20px;max-width:500px;margin:0 auto}
+h2{color:#222;margin:30px 0 15px;font-size:1.2em}
+p{color:#666;margin-bottom:20px}
 
 /* OPTION B: 2-row grid */
 .grid-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.grid-nav a{background:#2a2a4a;padding:10px 5px;border-radius:8px;text-align:center;text-decoration:none;font-size:.75em;color:#fff}
-.grid-nav a:hover{background:#3a3a5a}
+.grid-nav a{background:#fff;padding:10px 5px;border-radius:8px;text-align:center;text-decoration:none;font-size:.75em;color:#222;border:1px solid #ddd}
+.grid-nav a:hover{background:#f9f9f9;border-color:#EE1515}
 .grid-nav .emoji{font-size:1.4em;display:block;margin-bottom:4px}
 
 /* OPTION E: Floating TOC */
-.float-btn{position:fixed;bottom:20px;right:20px;width:56px;height:56px;background:#EE1515;border-radius:50%;border:none;font-size:1.5em;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.4);z-index:100}
-.float-menu{position:fixed;bottom:90px;right:20px;background:#16213e;border-radius:12px;padding:10px;display:none;flex-direction:column;gap:6px;max-height:70vh;overflow-y:auto;z-index:100;box-shadow:0 4px 20px rgba(0,0,0,.5)}
+.float-btn{position:fixed;bottom:20px;right:20px;width:56px;height:56px;background:#EE1515;border-radius:50%;border:none;font-size:1.5em;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.2);z-index:100;color:#fff}
+.float-menu{position:fixed;bottom:90px;right:20px;background:#fff;border-radius:12px;padding:10px;display:none;flex-direction:column;gap:6px;max-height:70vh;overflow-y:auto;z-index:100;box-shadow:0 4px 20px rgba(0,0,0,.15);border:1px solid #ddd}
 .float-menu.show{display:flex}
-.float-menu a{color:#fff;text-decoration:none;padding:10px 15px;border-radius:6px;white-space:nowrap}
-.float-menu a:hover{background:#2a2a4a}
+.float-menu a{color:#222;text-decoration:none;padding:10px 15px;border-radius:6px;white-space:nowrap}
+.float-menu a:hover{background:#f5f5f5}
 
-.section{height:200px;background:#16213e;margin:20px 0;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#666}
+.section{height:200px;background:#fff;margin:20px 0;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#666;border:1px solid #ddd}
 </style>
 </head>
 <body>
