@@ -73,6 +73,8 @@ h1 { text-align: center; color: #222; font-size: 1.6em; margin: 15px 0 5px; }
 .detail-tag.special { background: #dcfce7; color: #166534; border-color: #166534; }
 .detail-tag.lottery { background: #fce7f3; color: #be185d; border-color: #be185d; }
 .release-dot.lottery { background: #fce7f3; color: #be185d; border-color: #be185d; font-style: italic; }
+.release-dot.event { background: #dcfce7; color: #166534; border-color: #166534; font-weight: bold; }
+.detail-tag.event { background: #dcfce7; color: #166534; border-color: #166534; }
 
 /* Upcoming list */
 .upcoming { margin-top: 20px; }
@@ -164,6 +166,10 @@ Last updated: <span id="lastUpdated">2026-03-19</span> ·
 
 <script>
 const releases = [
+  // EVENTS 2026
+  { date: '2026-03-20', name: '🎪 BCG Fest Tokyo Day 1', jp: 'BANDAI CARD GAMES Fest 25-26 in Tokyo', tcg: 'onepiece', type: 'event', price: 'Free entry', desc: '有明GYM-EX · Championships, 3on3, merch at MSRP', link: 'https://onepiece-cardgame.com/events/2025/officialevents/bcgfest25-26/tokyo.php' },
+  { date: '2026-03-21', name: '🎪 BCG Fest Tokyo Day 2', jp: 'BANDAI CARD GAMES Fest 25-26 in Tokyo', tcg: 'onepiece', type: 'event', price: 'Free entry', desc: '有明GYM-EX · Championships, 3on3, merch at MSRP', link: 'https://onepiece-cardgame.com/events/2025/officialevents/bcgfest25-26/tokyo.php' },
+  { date: '2026-03-22', name: '🎪 BCG Fest Tokyo Day 3', jp: 'BANDAI CARD GAMES Fest 25-26 in Tokyo', tcg: 'onepiece', type: 'event', price: 'Free entry', desc: '有明GYM-EX · Championships, 3on3, merch at MSRP', link: 'https://onepiece-cardgame.com/events/2025/officialevents/bcgfest25-26/tokyo.php' },
   // ONE PIECE 2026
   { date: '2026-01-31', name: 'EGGHEAD CRISIS', jp: 'エクストラブースター EGGHEAD CRISIS【EB-04】', tcg: 'onepiece', type: 'booster', price: '¥220/pack' },
   { date: '2026-02-28', name: 'Skypiea Adventure', jp: 'ブースターパック 神の島の冒険【OP-15】', tcg: 'onepiece', type: 'booster', price: '¥220/pack' },
