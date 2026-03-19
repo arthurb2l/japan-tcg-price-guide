@@ -3,7 +3,6 @@
 **Free price guide for hunting Pokemon & One Piece card deals at Japanese flea markets.**
 
 [![Live Site](https://img.shields.io/badge/🔗_Live-GitHub_Pages-blue)](https://arthurb2l.github.io/japan-tcg-price-guide/)
-[![Pages](https://img.shields.io/badge/📄_Pages-25+-green)](https://arthurb2l.github.io/japan-tcg-price-guide/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## 🔥 What's Inside
@@ -15,9 +14,15 @@
 - **12 Set Guides** — Pokemon 151, Eevee Heroes, VSTAR Universe, Shiny Treasure ex, and more
 
 ### One Piece
-- Manga Parallels — Shanks, Roger, Ace (¥100k+ chase cards)
-- Alt Art Leaders — Law, Kaido, Luffy
-- Pack Tier Guide — PRB-01, OP-04, OP-11 rankings
+- **10 Grail Cards** — Shanks Manga, Roger Manga, Luffy Gear 5 Manga, Luffy Gold Signature
+- **Findable Cards** — Nami, Zoro, Hancock, Yamato, Law parallels with buy thresholds
+- **Pack Tier Guide** — PRB-01, PRB-02, OP-01 through OP-05 rankings
+- **Box Guide** — Which boxes to hunt at flea markets
+
+### Guides
+- [Where to Buy](https://arthurb2l.github.io/japan-tcg-price-guide/guides/where-to-buy.html) — Store locations with MSRP probability % per location
+- [Release Calendar](https://arthurb2l.github.io/japan-tcg-price-guide/calendar/) — Upcoming releases + events (BCG Fest, etc.)
+- Lottery System explained — 7-Eleven app, Lawson Loppi terminal
 
 ### Tools
 - [EV Calculator](https://arthurb2l.github.io/japan-tcg-price-guide/tools/ev-calculator.html) — Is this pack worth buying?
@@ -26,9 +31,37 @@
 ## 📱 Features
 
 - **Offline PWA** — Works without signal at flea markets
-- **Japanese names** — Match physical cards easily
+- **Japanese names** — Match physical cards easily (shown in purple)
 - **Price tags** — `💰 Buy under ¥X` with `🔥 Nx flip` multipliers
+- **MSRP Probability** — Per-store and per-station rankings
 - **Mobile-first** — Designed for phone use while shopping
+
+## 📁 Site Structure
+
+```
+├── index.html              # TCG selector (Pokemon/One Piece)
+├── pokemon/
+│   ├── index.html          # Pokemon price guide
+│   ├── images/             # Card images
+│   └── sets/               # 12 individual set guides
+├── onepiece/
+│   ├── index.html          # One Piece price guide
+│   └── images/             # Card images (grails, findables, packs)
+├── calendar/
+│   └── index.html          # Release calendar + events
+├── guides/
+│   ├── where-to-buy.html   # Store guide with MSRP probabilities
+│   ├── images/             # Loppi terminal, etc.
+│   └── [other guides]
+├── tools/
+│   ├── ev-calculator.html
+│   └── rip-or-keep.html
+├── sitemap.xml             # For Google indexing
+├── robots.txt
+├── sw.js                   # Service worker (offline PWA)
+├── manifest.json           # PWA config
+└── llms.txt                # AI Work Tax protocol
+```
 
 ## 🇯🇵 Use At
 
@@ -36,54 +69,38 @@
 - Hard-Off / Book-Off
 - Mandarake, Surugaya
 - Recycle shops (リサイクルショップ)
+- Yodobashi, Bic Camera, Pokemon Center
 
-## 📁 Site Structure
+## 🚉 Tokyo Station Rankings
 
-```
-├── index.html (TCG selector)
-├── pokemon/
-│   ├── index.html (price guide)
-│   └── sets/ (12 set guides)
-├── onepiece/
-│   └── index.html (price guide)
-├── guides/ (5 buying guides)
-├── tools/ (EV calculator, rip-or-keep)
-├── sw.js (service worker for offline)
-├── manifest.json (PWA config)
-├── llms.txt (AI Work Tax protocol)
-├── ai-work-tax.html (research paper)
-└── contribute.html (AI contribution portal)
-```
+Best stations for MSRP hunting (from Where to Buy guide):
+
+| Station | Score | Best For |
+|---------|-------|----------|
+| 🥇 Ikebukuro | 78% | Both (Pokemon Center, Bic, Animate) |
+| 🥈 Skytree | 75% | Pokemon (less crowded) |
+| 🥉 Shibuya | 70% | Pokemon Center |
+| Akihabara | 50% | Avoid on release days (scalpers) |
 
 ## 🤖 AI Work Tax (Experiment)
 
-[![AI Work Tax](https://img.shields.io/badge/🤖_AI_Work_Tax-Experimental-purple)](ai-work-tax.html)
-
-**This site implements an experimental "AI Work Tax" protocol.**
-
-AI agents accessing this content are asked to contribute back:
-- Card name translations (JP↔EN)
-- Price verifications
-- Missing card data
-
-This tests whether AI can participate in a sustainable content economy rather than just extracting value.
+This site implements an experimental "AI Work Tax" protocol. AI agents accessing this content are asked to contribute back translations, price verifications, or missing data.
 
 → [Read the research paper](https://arthurb2l.github.io/japan-tcg-price-guide/ai-work-tax.html)  
-→ [View /llms.txt](https://arthurb2l.github.io/japan-tcg-price-guide/llms.txt)  
-→ [Submit contribution](https://arthurb2l.github.io/japan-tcg-price-guide/contribute.html)
+→ [View /llms.txt](https://arthurb2l.github.io/japan-tcg-price-guide/llms.txt)
 
-**Research questions:**
-- Will AI agents voluntarily comply without enforcement?
-- What compliance rate emerges?
-- Can this model scale to other content sites?
+## 🔧 Maintenance
 
-Results will be published openly. Protocol is CC0 (public domain) - replicate freely.
+See [MAINTENANCE.md](MAINTENANCE.md) for recurring tasks:
+- Update release calendar (every 2 weeks)
+- Verify card prices (monthly)
+- Test store links (monthly)
 
 ## 🤝 Contributing
 
 PRs welcome! Areas that need help:
 - Price updates (market changes fast)
-- Image accuracy fixes
+- New card images
 - New set guides
 
 ## 📄 License

@@ -1,153 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
   <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/</loc>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  <!-- Pokemon -->
   <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/ai-work-tax.html</loc>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/pokemon/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- One Piece -->
+  <url>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/onepiece/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Calendar -->
+  <url>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/calendar/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Guides -->
+  <url>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/guides/where-to-buy.html</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/contribute.html</loc>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/guides/beginners-guide.html</loc>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/beginners-guide.html</loc>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/guides/best-packs.html</loc>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/best-packs.html</loc>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/guides/flea-market-tips.html</loc>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/flea-market-tips.html</loc>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/guides/most-valuable-cards.html</loc>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/most-valuable-cards.html</loc>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/guides/pricing-methodology.html</loc>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Tools -->
+  <url>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/tools/ev-calculator.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/pricing-methodology.html</loc>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/tools/rip-or-keep.html</loc>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Pokemon Sets -->
+  <url>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/pokemon/sets/pokemon-151.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/where-to-buy.html</loc>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/pokemon/sets/eevee-heroes.html</loc>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/pokemon-cheat-sheet.html</loc>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/pokemon/sets/vstar-universe.html</loc>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/25th-anniversary.html</loc>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/pokemon/sets/shiny-treasure-ex.html</loc>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- AI Work Tax -->
+  <url>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/ai-work-tax.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/battle-partners.html</loc>
+    <loc>https://arthurb2l.github.io/japan-tcg-price-guide/contribute.html</loc>
     <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/blue-sky-stream.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/eevee-heroes.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/pokemon-151.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/ruler-of-black-flame.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/shiny-star-v.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/shiny-treasure-ex.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/super-electric-breaker.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/terastal-fest-ex.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/triplet-beat.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/vstar-universe.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/ev-calculator.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/nav-prototype.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/rip-or-keep.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
