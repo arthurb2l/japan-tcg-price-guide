@@ -63,6 +63,8 @@ h1 { text-align: center; color: #222; font-size: 1.6em; margin: 15px 0 5px; }
 .detail-tag.booster { background: #dbeafe; color: #1d4ed8; border-color: #1d4ed8; }
 .detail-tag.deck { background: #f3e8ff; color: #7c3aed; border-color: #7c3aed; }
 .detail-tag.special { background: #dcfce7; color: #166534; border-color: #166534; }
+.detail-tag.lottery { background: #fce7f3; color: #be185d; border-color: #be185d; }
+.release-dot.lottery { background: #fce7f3; color: #be185d; border-color: #be185d; font-style: italic; }
 
 /* Upcoming list */
 .upcoming { margin-top: 20px; }
@@ -154,8 +156,14 @@ const releases = [
   // POKEMON 2026
   { date: '2026-01-31', name: 'Munikus Zero', jp: 'ムニキスゼロ', tcg: 'pokemon', type: 'booster', price: '¥180/pack' },
   { date: '2026-03-14', name: 'Ninja Spinner', jp: 'ニンジャスピナー', tcg: 'pokemon', type: 'booster', price: '¥180/pack' },
-  { date: '2026-04-18', name: 'Abyss Eye', jp: 'アビスアイ', tcg: 'pokemon', type: 'booster', price: '¥180/pack', desc: 'Expected release' },
-  { date: '2026-06-13', name: 'Storm Emeralda', jp: 'ストームエメラルダ', tcg: 'pokemon', type: 'booster', price: '¥180/pack', desc: 'Expected release' },
+  // Abyss Eye lottery period
+  { date: '2026-03-27', name: '🎟️ Abyss Eye Lottery Opens', jp: 'アビスアイ 抽選受付開始', tcg: 'pokemon', type: 'lottery', price: '-', desc: 'Pokemon Center Online lottery application opens' },
+  { date: '2026-04-03', name: '🎟️ Abyss Eye Lottery Closes', jp: 'アビスアイ 抽選受付終了', tcg: 'pokemon', type: 'lottery', price: '-', desc: 'Last day to apply for Pokemon Center lottery' },
+  { date: '2026-04-18', name: 'Abyss Eye', jp: 'アビスアイ', tcg: 'pokemon', type: 'booster', price: '¥180/pack', desc: 'Release day' },
+  // Storm Emeralda lottery period
+  { date: '2026-05-29', name: '🎟️ Storm Emeralda Lottery Opens', jp: 'ストームエメラルダ 抽選受付開始', tcg: 'pokemon', type: 'lottery', price: '-', desc: 'Pokemon Center Online lottery application opens' },
+  { date: '2026-06-05', name: '🎟️ Storm Emeralda Lottery Closes', jp: 'ストームエメラルダ 抽選受付終了', tcg: 'pokemon', type: 'lottery', price: '-', desc: 'Last day to apply for Pokemon Center lottery' },
+  { date: '2026-06-13', name: 'Storm Emeralda', jp: 'ストームエメラルダ', tcg: 'pokemon', type: 'booster', price: '¥180/pack', desc: 'Release day' },
   { date: '2026-10-01', name: 'Celebration Collection', jp: 'セレブレーションコレクション', tcg: 'pokemon', type: 'special', price: 'TBA', desc: '30th Anniversary special set' },
 ];
 
