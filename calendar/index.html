@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Release Calendar | Japan TCG Price Guide</title>
+<link rel="icon" href="../favicon.ico">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #1a1a2e; color: #eee; min-height: 100vh; }
+.container { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+h1 { text-align: center; margin-bottom: 0.5rem; font-size: 1.5rem; }
+.subtitle { text-align: center; color: #888; margin-bottom: 1rem; font-size: 0.9rem; }
+.nav { display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 1rem; flex-wrap: wrap; }
+.nav a { color: #4ecdc4; text-decoration: none; padding: 0.3rem 0.8rem; border: 1px solid #4ecdc4; border-radius: 4px; font-size: 0.85rem; }
+.nav a:hover { background: #4ecdc4; color: #1a1a2e; }
+
+/* Filters */
+.filters { display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 1rem; flex-wrap: wrap; }
+.filter-btn { padding: 0.4rem 1rem; border: none; border-radius: 20px; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
+.filter-btn.active { transform: scale(1.05); }
+.filter-all { background: #444; color: #fff; }
+.filter-all.active { background: #666; }
+.filter-pokemon { background: #ffcb05; color: #1a1a2e; }
+.filter-pokemon.active { background: #ffd633; }
+.filter-onepiece { background: #e63946; color: #fff; }
+.filter-onepiece.active { background: #ff4d5a; }
+
+/* Calendar Grid */
+.calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+.month-nav { display: flex; gap: 0.5rem; align-items: center; }
+.month-nav button { background: #333; border: none; color: #fff; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; }
+.month-nav button:hover { background: #444; }
+.month-title { font-size: 1.2rem; font-weight: bold; min-width: 150px; text-align: center; }
+
+.calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; background: #333; border-radius: 8px; overflow: hidden; }
+.day-header { background: #2a2a4a; padding: 0.5rem; text-align: center; font-size: 0.75rem; color: #888; }
+.day { background: #252540; min-height: 80px; padding: 0.3rem; position: relative; }
+.day.other-month { background: #1e1e35; }
+.day.today { border: 2px solid #4ecdc4; }
+.day-number { font-size: 0.75rem; color: #666; margin-bottom: 0.2rem; }
+.day.today .day-number { color: #4ecdc4; font-weight: bold; }
+
+/* Release items in calendar */
+.release-dot { padding: 0.15rem 0.3rem; border-radius: 3px; font-size: 0.65rem; margin-bottom: 2px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.release-dot.pokemon { background: #ffcb05; color: #1a1a2e; }
+.release-dot.onepiece { background: #e63946; color: #fff; }
+.release-dot:hover { opacity: 0.8; }
+
+/* Detail panel */
+.detail-panel { background: #252540; border-radius: 8px; padding: 1rem; margin-top: 1rem; display: none; }
+.detail-panel.active { display: block; }
+.detail-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
+.detail-title { font-size: 1.1rem; font-weight: bold; }
+.detail-close { background: none; border: none; color: #888; font-size: 1.5rem; cursor: pointer; line-height: 1; }
+.detail-close:hover { color: #fff; }
+.detail-jp { color: #b388ff; margin-bottom: 0.5rem; }
+.detail-meta { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem; font-size: 0.85rem; color: #888; }
+.detail-price { color: #4ecdc4; font-weight: bold; }
+.detail-tag { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; }
+.detail-tag.pokemon { background: #ffcb05; color: #1a1a2e; }
+.detail-tag.onepiece { background: #e63946; color: #fff; }
+.detail-tag.booster { background: #4ecdc4; color: #1a1a2e; }
+.detail-tag.deck { background: #9b59b6; color: #fff; }
+.detail-tag.special { background: #f39c12; color: #1a1a2e; }
+
+/* Upcoming list */
+.upcoming { margin-top: 1.5rem; }
+.upcoming h2 { font-size: 1rem; margin-bottom: 0.5rem; color: #888; }
+.upcoming-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.upcoming-item { background: #252540; padding: 0.6rem; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+.upcoming-item:hover { background: #2a2a5a; }
+.upcoming-item.hidden { display: none; }
+.upcoming-left { display: flex; align-items: center; gap: 0.5rem; }
+.upcoming-date { font-size: 0.75rem; color: #888; min-width: 70px; }
+.upcoming-name { font-size: 0.85rem; }
+.upcoming-right { display: flex; align-items: center; gap: 0.5rem; }
+
+/* Data freshness */
+.freshness { text-align: center; margin-top: 1rem; font-size: 0.75rem; color: #666; }
+.freshness a { color: #4ecdc4; }
+
+@media (max-width: 600px) {
+  .day { min-height: 60px; }
+  .release-dot { font-size: 0.55rem; padding: 0.1rem 0.2rem; }
+  .day-number { font-size: 0.65rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📅 Release Calendar</h1>
+<p class="subtitle">TCG JP発売スケジュール</p>
+
+<nav class="nav">
+<a href="../">🏠 Home</a>
+<a href="../pokemon/">Pokemon</a>
+<a href="../onepiece/">One Piece</a>
+<a href="../guides/where-to-buy.html">Where to Buy</a>
+</nav>
+
+<div class="filters">
+<button class="filter-btn filter-all active" onclick="filterReleases('all')">All</button>
+<button class="filter-btn filter-pokemon" onclick="filterReleases('pokemon')">Pokemon</button>
+<button class="filter-btn filter-onepiece" onclick="filterReleases('onepiece')">One Piece</button>
+</div>
+
+<div class="calendar-header">
+<div class="month-nav">
+<button onclick="changeMonth(-1)">◀</button>
+<div class="month-title" id="monthTitle">March 2026</div>
+<button onclick="changeMonth(1)">▶</button>
+</div>
+</div>
+
+<div class="calendar" id="calendar">
+<!-- Generated by JS -->
+</div>
+
+<div class="detail-panel" id="detailPanel">
+<div class="detail-header">
+<div>
+<div class="detail-title" id="detailTitle"></div>
+<div class="detail-jp" id="detailJp"></div>
+</div>
+<button class="detail-close" onclick="closeDetail()">×</button>
+</div>
+<div class="detail-meta">
+<span id="detailDate"></span>
+<span class="detail-price" id="detailPrice"></span>
+</div>
+<div id="detailTags"></div>
+<p id="detailDesc" style="margin-top:0.5rem;font-size:0.9rem;color:#aaa;"></p>
+</div>
+
+<div class="upcoming">
+<h2>📋 Upcoming Releases</h2>
+<div class="upcoming-list" id="upcomingList">
+<!-- Generated by JS -->
+</div>
+</div>
+
+<div class="freshness">
+Last updated: <span id="lastUpdated">2026-03-19</span> · 
+<a href="https://www.pokemon-card.com/products/" target="_blank">Pokemon Official</a> · 
+<a href="https://onepiece-cardgame.com/products/" target="_blank">One Piece Official</a>
+</div>
+</div>
+
+<script>
+// Release data - manually updated
+const releases = [
+  // ONE PIECE 2026
+  { date: '2026-01-31', name: 'EGGHEAD CRISIS', jp: 'エクストラブースター EGGHEAD CRISIS【EB-04】', tcg: 'onepiece', type: 'booster', price: '¥220/pack' },
+  { date: '2026-02-28', name: 'Skypiea Adventure', jp: 'ブースターパック 神の島の冒険【OP-15】', tcg: 'onepiece', type: 'booster', price: '¥220/pack' },
+  { date: '2026-04-11', name: 'Luffy & Ace Starter EX', jp: 'スタートデッキEX ルフィ&エース【ST-30】', tcg: 'onepiece', type: 'deck', price: '¥1,980' },
+  { date: '2026-05-30', name: 'Decisive Battle', jp: 'ブースターパック 決戦の刻【OP-16】', tcg: 'onepiece', type: 'booster', price: '¥220/pack' },
+  { date: '2026-07-11', name: 'New Starter Decks (6 types)', jp: 'スタートデッキ ST-31〜ST-36', tcg: 'onepiece', type: 'deck', price: '¥550 each', desc: 'Luffy, Zoro, Kuzan, Katakuri, Sabo, Kid' },
+  
+  // POKEMON 2026
+  { date: '2026-01-31', name: 'Munikus Zero', jp: 'ムニキスゼロ', tcg: 'pokemon', type: 'booster', price: '¥180/pack' },
+  { date: '2026-03-14', name: 'Ninja Spinner', jp: 'ニンジャスピナー', tcg: 'pokemon', type: 'booster', price: '¥180/pack' },
+  { date: '2026-04-18', name: 'Abyss Eye', jp: 'アビスアイ', tcg: 'pokemon', type: 'booster', price: '¥180/pack', desc: 'Expected release' },
+  { date: '2026-06-13', name: 'Storm Emeralda', jp: 'ストームエメラルダ', tcg: 'pokemon', type: 'booster', price: '¥180/pack', desc: 'Expected release' },
+  { date: '2026-10-01', name: 'Celebration Collection', jp: 'セレブレーションコレクション', tcg: 'pokemon', type: 'special', price: 'TBA', desc: '30th Anniversary special set' },
+];
+
+let currentDate = new Date();
+let currentFilter = 'all';
+
+const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+function renderCalendar() {
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+  
+  document.getElementById('monthTitle').textContent = `${months[month]} ${year}`;
+  
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const daysInPrevMonth = new Date(year, month, 0).getDate();
+  
+  const today = new Date();
+  const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
+  
+  let html = days.map(d => `<div class="day-header">${d}</div>`).join('');
+  
+  // Previous month days
+  for (let i = firstDay - 1; i >= 0; i--) {
+    const day = daysInPrevMonth - i;
+    html += `<div class="day other-month"><div class="day-number">${day}</div></div>`;
+  }
+  
+  // Current month days
+  for (let day = 1; day <= daysInMonth; day++) {
+    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+    const isToday = dateStr === todayStr;
+    const dayReleases = releases.filter(r => r.date === dateStr && (currentFilter === 'all' || r.tcg === currentFilter));
+    
+    let releasesHtml = dayReleases.map(r => 
+      `<div class="release-dot ${r.tcg}" onclick="showDetail('${r.date}','${r.name}')">${r.name.substring(0,12)}</div>`
+    ).join('');
+    
+    html += `<div class="day${isToday ? ' today' : ''}"><div class="day-number">${day}</div>${releasesHtml}</div>`;
+  }
+  
+  // Next month days
+  const totalCells = Math.ceil((firstDay + daysInMonth) / 7) * 7;
+  const remaining = totalCells - (firstDay + daysInMonth);
+  for (let day = 1; day <= remaining; day++) {
+    html += `<div class="day other-month"><div class="day-number">${day}</div></div>`;
+  }
+  
+  document.getElementById('calendar').innerHTML = html;
+  renderUpcoming();
+}
+
+function renderUpcoming() {
+  const today = new Date().toISOString().split('T')[0];
+  const upcoming = releases
+    .filter(r => r.date >= today && (currentFilter === 'all' || r.tcg === currentFilter))
+    .sort((a,b) => a.date.localeCompare(b.date));
+  
+  const html = upcoming.map(r => {
+    const d = new Date(r.date);
+    const dateStr = `${d.getMonth()+1}/${d.getDate()}`;
+    return `
+      <div class="upcoming-item" onclick="showDetail('${r.date}','${r.name}')">
+        <div class="upcoming-left">
+          <span class="upcoming-date">${dateStr}</span>
+          <span class="upcoming-name">${r.name}</span>
+        </div>
+        <div class="upcoming-right">
+          <span class="detail-tag ${r.tcg}">${r.tcg === 'pokemon' ? 'PKM' : 'OP'}</span>
+          <span class="detail-tag ${r.type}">${r.type}</span>
+        </div>
+      </div>
+    `;
+  }).join('');
+  
+  document.getElementById('upcomingList').innerHTML = html || '<p style="color:#666;font-size:0.85rem;">No upcoming releases</p>';
+}
+
+function changeMonth(delta) {
+  currentDate.setMonth(currentDate.getMonth() + delta);
+  renderCalendar();
+}
+
+function filterReleases(filter) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.filter-${filter}`).classList.add('active');
+  renderCalendar();
+}
+
+function showDetail(date, name) {
+  const r = releases.find(x => x.date === date && x.name === name);
+  if (!r) return;
+  
+  const d = new Date(r.date);
+  document.getElementById('detailTitle').textContent = r.name;
+  document.getElementById('detailJp').textContent = r.jp;
+  document.getElementById('detailDate').textContent = `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+  document.getElementById('detailPrice').textContent = r.price;
+  document.getElementById('detailTags').innerHTML = `
+    <span class="detail-tag ${r.tcg}">${r.tcg === 'pokemon' ? 'Pokemon' : 'One Piece'}</span>
+    <span class="detail-tag ${r.type}">${r.type}</span>
+  `;
+  document.getElementById('detailDesc').textContent = r.desc || '';
+  document.getElementById('detailPanel').classList.add('active');
+}
+
+function closeDetail() {
+  document.getElementById('detailPanel').classList.remove('active');
+}
+
+// Init
+renderCalendar();
+</script>
+</body>
+</html>
