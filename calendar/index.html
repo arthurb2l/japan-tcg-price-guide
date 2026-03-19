@@ -26,7 +26,8 @@ h1 { text-align: center; color: #222; font-size: 1.6em; margin: 15px 0 5px; }
 .filter-onepiece.active { background: #FFD700; border-color: #FFD700; color: #222; }
 
 /* Calendar Header */
-.calendar-header { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 10px; }
+.calendar-header { display: flex; justify-content: center; align-items: center; margin-bottom: 10px; }
+.month-nav { display: flex; align-items: center; gap: 10px; }
 .month-nav button { background: #fff; border: 2px solid #222; color: #222; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-weight: bold; }
 .month-nav button:hover { background: #222; color: #fff; }
 .month-title { font-size: 1.3em; font-weight: bold; min-width: 160px; text-align: center; }
@@ -223,7 +224,9 @@ function showDetail(date, name) {
   document.getElementById('detailPrice').textContent = r.price;
   document.getElementById('detailTags').innerHTML = `<span class="detail-tag ${r.tcg}">${r.tcg === 'pokemon' ? 'Pokemon' : 'One Piece'}</span> <span class="detail-tag ${r.type}">${r.type}</span>`;
   document.getElementById('detailDesc').textContent = r.desc || '';
-  document.getElementById('detailPanel').classList.add('active');
+  const panel = document.getElementById('detailPanel');
+  panel.classList.add('active');
+  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 function closeDetail() { document.getElementById('detailPanel').classList.remove('active'); }
 renderCalendar();
