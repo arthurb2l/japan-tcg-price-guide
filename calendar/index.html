@@ -89,6 +89,13 @@ h1 { text-align: center; color: #222; font-size: 1.6em; margin: 15px 0 5px; }
 .freshness { text-align: center; margin-top: 20px; font-size: 0.8em; color: #666; }
 .freshness a { color: #EE1515; }
 
+/* Countdown */
+.countdown { background: #fff; border: 2px solid #222; border-radius: 8px; padding: 12px; margin-bottom: 15px; text-align: center; }
+.countdown-label { font-size: 0.8em; color: #666; }
+.countdown-name { font-weight: bold; margin: 4px 0; }
+.countdown-timer { font-size: 1.3em; color: #EE1515; font-weight: bold; }
+.countdown-jp { color: #7c3aed; font-size: 0.85em; }
+
 @media (max-width: 600px) {
   .day { min-height: 60px; }
   .release-dot { font-size: 0.55em; padding: 1px 3px; }
@@ -114,6 +121,8 @@ h1 { text-align: center; color: #222; font-size: 1.6em; margin: 15px 0 5px; }
 <button class="filter-btn filter-pokemon" onclick="filterReleases('pokemon')">Pokemon</button>
 <button class="filter-btn filter-onepiece" onclick="filterReleases('onepiece')">One Piece</button>
 </div>
+
+<div class="countdown" id="countdown"></div>
 
 <div class="calendar-header">
 <div class="month-nav">
@@ -229,6 +238,7 @@ function filterReleases(filter) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   document.querySelector(`.filter-${filter}`).classList.add('active');
   renderCalendar();
+  updateCountdown();
 }
 function showDetail(date, name) {
   const r = releases.find(x => x.date === date && x.name === name);
@@ -245,7 +255,31 @@ function showDetail(date, name) {
   panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 function closeDetail() { document.getElementById('detailPanel').classList.remove('active'); }
+
+function updateCountdown() {
+  const today = new Date().toISOString().split('T')[0];
+  const next = releases.filter(r => r.date >= today && r.type !== 'lottery' && (currentFilter === 'all' || r.tcg === currentFilter))
+    .sort((a,b) => a.date.localeCompare(b.date))[0];
+  if (!next) { document.getElementById('countdown').style.display = 'none'; return; }
+  
+  const releaseDate = new Date(next.date + 'T00:00:00');
+  const now = new Date();
+  const diff = releaseDate - now;
+  const days = Math.floor(diff / (1000*60*60*24));
+  const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+  
+  document.getElementById('countdown').innerHTML = `
+    <div class="countdown-label">⏱️ Next Release</div>
+    <div class="countdown-name">${next.name}</div>
+    <div class="countdown-jp">${next.jp}</div>
+    <div class="countdown-timer">${days}d ${hours}h</div>
+  `;
+  document.getElementById('countdown').style.display = 'block';
+}
+
 renderCalendar();
+updateCountdown();
+setInterval(updateCountdown, 60000);
 </script>
 </body>
 </html>
