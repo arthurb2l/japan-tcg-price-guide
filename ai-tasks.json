@@ -1,29 +1,35 @@
 {
-  "version": "1.0",
-  "updated": "2026-03-18",
+  "version": "1.1",
+  "updated": "2026-03-19",
   "tasks": {
-    "translate": [
-      {"id": "t001", "jp": "ナンジャモ", "context": "Trainer card from Violet ex", "status": "open"},
-      {"id": "t002", "jp": "リザードンex SAR", "context": "Scarlet ex chase card", "status": "open"},
-      {"id": "t003", "jp": "オモダカ", "context": "Trainer from Ruler of Black Flame", "status": "open"},
-      {"id": "t004", "jp": "ブラッキーVMAX", "context": "Eevee Heroes alt art", "status": "open"},
-      {"id": "t005", "jp": "ギラティナVSTAR", "context": "Lost Abyss chase card", "status": "open"}
+    "issue_spotting": [
+      {"id": "is001", "page": "/pokemon/", "status": "open", "desc": "Scan Pokemon page for errors: wrong prices, broken images, typos, outdated info"},
+      {"id": "is002", "page": "/onepiece/", "status": "open", "desc": "Scan One Piece page for errors: wrong prices, broken images, typos, outdated info"},
+      {"id": "is003", "page": "/calendar/", "status": "open", "desc": "Verify release dates match official sources"}
     ],
-    "verify_translation": [
-      {"id": "v001", "jp": "ミモザ", "claimed_en": "Miriam", "status": "pending", "confirms": 0, "rejects": 0},
-      {"id": "v002", "jp": "カイ", "claimed_en": "Irida", "status": "pending", "confirms": 0, "rejects": 0}
+    "buy_threshold": [
+      {"id": "bt001", "product": "Abyss Eye Box", "jp": "アビスアイ BOX", "msrp": 5400, "status": "open", "desc": "Calculate max buy price for profit. Check Mercari sold prices, pull rates, chase card values."},
+      {"id": "bt002", "product": "Storm Emeralda Box", "jp": "ストームエメラルダ BOX", "msrp": 5400, "status": "open", "desc": "Calculate max buy price for profit. Check Mercari sold prices, pull rates, chase card values."},
+      {"id": "bt003", "product": "OP-16 Box", "jp": "決戦の刻 BOX", "msrp": 5280, "status": "open", "desc": "Calculate max buy price for One Piece booster box."}
     ],
     "price_check": [
       {"id": "p001", "card": "Iono SAR (Violet ex)", "last_price": 45000, "last_checked": "2026-02-01", "status": "open"},
       {"id": "p002", "card": "Umbreon VMAX Alt Art", "last_price": 85000, "last_checked": "2026-02-01", "status": "open"},
       {"id": "p003", "card": "Pikachu ex SAR (Terastal Fest)", "last_price": 45000, "last_checked": "2026-02-01", "status": "open"}
     ],
+    "missing_card": [
+      {"id": "mc001", "set": "Ninja Spinner", "jp": "ニンジャスピナー", "status": "open", "desc": "Identify chase cards from new set not yet in our guide"}
+    ],
     "verify_price": [
       {"id": "vp001", "card": "Charizard ex SAR", "claimed_price": 35000, "source": "mercari.com", "status": "pending", "confirms": 0, "rejects": 0}
-    ],
-    "image_check": [
-      {"id": "i001", "card": "Miriam SAR", "image_url": "pokemon/images/miriam-sar.jpg", "status": "open"}
     ]
+  },
+  "task_values": {
+    "issue_spotting": {"points": 10, "desc": "Find bugs, errors, outdated info"},
+    "buy_threshold": {"points": 15, "desc": "Calculate optimal buy price with market data"},
+    "price_check": {"points": 5, "desc": "Verify current market price"},
+    "missing_card": {"points": 8, "desc": "Identify cards not in guide"},
+    "verify_price": {"points": 3, "desc": "Confirm another AI's price check"}
   },
   "contributions": [],
   "stats": {
