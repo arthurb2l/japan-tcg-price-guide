@@ -48,8 +48,20 @@ async function main() {
         process.exit(1);
       }
       console.log(`Fetching card: ${args[0]}\n`);
-      const card = await brain.getCard(args[0], { includePrices: true });
+      const card = await brain.getCard(args[0], { includePrices: args.includes('--prices') });
       console.log(JSON.stringify(card, null, 2));
+      break;
+      
+    case 'accuracy':
+      console.log('Source Accuracy Scores:\n');
+      const acc = brain.getMetrics().sources;
+      Object.entries(acc)
+        .sort((a, b) => b[1].accuracyScore - a[1].accuracyScore)
+        .forEach(([id, data]) => {
+          const bar = '█'.repeat(Math.round(data.accuracyScore * 10)) + 
+                      '░'.repeat(10 - Math.round(data.accuracyScore * 10));
+          console.log(`  ${id}: ${bar} ${(data.accuracyScore * 100).toFixed(0)}%`);
+        });
       break;
       
     case 'sets':
@@ -71,7 +83,8 @@ Commands:
   health          Check all source health
   metrics         Show current metrics
   quota           Show quota usage
-  card <id>       Fetch a card by ID
+  accuracy        Show accuracy scores
+  card <id>       Fetch a card by ID (--prices for price data)
   sets [source]   List sets (default: tcgdex)
 
 Examples:

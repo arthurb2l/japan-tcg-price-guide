@@ -129,6 +129,35 @@ function getQuotaStatus() {
 }
 
 /**
+ * Cross-validate data from multiple sources
+ * Adjusts accuracy scores based on agreement
+ */
+function crossValidate(results) {
+  if (results.length < 2) return;
+  
+  // Compare common fields
+  const fields = ['name', 'hp', 'rarity'];
+  
+  for (const field of fields) {
+    const values = results
+      .filter(r => r.data[field] !== undefined)
+      .map(r => ({ source: r.source, value: String(r.data[field]).toLowerCase() }));
+    
+    if (values.length < 2) continue;
+    
+    // Find consensus (most common value)
+    const counts = {};
+    values.forEach(v => counts[v.value] = (counts[v.value] || 0) + 1);
+    const consensus = Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0];
+    
+    // Update accuracy for each source
+    values.forEach(v => {
+      updateAccuracy(v.source, v.value === consensus);
+    });
+  }
+}
+
+/**
  * Fetch card data with intelligent routing
  */
 async function getCard(cardId, options = {}) {
