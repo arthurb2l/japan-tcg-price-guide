@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   sync:
@@ -23,6 +24,8 @@ jobs:
         run: node scripts/data-brain/cli.js health
       
       - name: Sync Popular Sets
+        id: sync
+        continue-on-error: true
         run: |
           node << 'SCRIPT'
           const fs = require('fs');
@@ -67,3 +70,27 @@ jobs:
           git add data/
           git diff --staged --quiet || git commit -m "🧠 Data Brain sync $(date +%Y-%m-%d)"
           git push
+
+      - name: Self-heal on failure
+        if: steps.sync.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Check for existing open issue
+          EXISTING=$(gh issue list --label "self-healing" --state open --json number -q 'length')
+          if [ "$EXISTING" -gt 0 ]; then
+            echo "Self-healing issue already open"
+            exit 0
+          fi
+          
+          gh issue create \
+            --title "🔴 Data Brain sync failed - $(date +%Y-%m-%d)" \
+            --body "## Sync Failure
+
+          **Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          **Time:** $(date -u)
+
+          Please investigate and manually trigger sync when fixed.
+
+          /cc @arthurb2l" \
+            --label "bug,automated,self-healing"

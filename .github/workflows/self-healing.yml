@@ -1,0 +1,101 @@
+name: Self-Healing Monitor
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Monday 6am UTC (3pm JST)
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Check data freshness
+        id: freshness
+        run: |
+          if [ ! -f data/brain-cache.json ]; then
+            echo "status=missing" >> $GITHUB_OUTPUT
+            echo "message=brain-cache.json not found" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          # Check last sync date
+          LAST_SYNC=$(jq -r '.lastSync // empty' data/brain-cache.json)
+          if [ -z "$LAST_SYNC" ]; then
+            echo "status=unknown" >> $GITHUB_OUTPUT
+            echo "message=No lastSync timestamp in cache" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          # Calculate days since sync
+          SYNC_EPOCH=$(date -d "$LAST_SYNC" +%s 2>/dev/null || echo 0)
+          NOW_EPOCH=$(date +%s)
+          DAYS_OLD=$(( (NOW_EPOCH - SYNC_EPOCH) / 86400 ))
+          
+          if [ "$DAYS_OLD" -gt 7 ]; then
+            echo "status=stale" >> $GITHUB_OUTPUT
+            echo "message=Data is $DAYS_OLD days old (last sync: $LAST_SYNC)" >> $GITHUB_OUTPUT
+          else
+            echo "status=fresh" >> $GITHUB_OUTPUT
+            echo "message=Data is $DAYS_OLD days old" >> $GITHUB_OUTPUT
+          fi
+          
+          # Count cards
+          CARD_COUNT=$(jq '.cards | length' data/brain-cache.json)
+          echo "card_count=$CARD_COUNT" >> $GITHUB_OUTPUT
+      
+      - name: Check API health
+        id: api
+        run: |
+          # Test TCGdex API
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "https://api.tcgdex.net/v2/en/sets/sv01")
+          if [ "$HTTP_CODE" = "200" ]; then
+            echo "tcgdex=up" >> $GITHUB_OUTPUT
+          else
+            echo "tcgdex=down" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Check for existing issue
+        id: existing
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COUNT=$(gh issue list --label "self-healing" --state open --json number -q 'length')
+          echo "open_issues=$COUNT" >> $GITHUB_OUTPUT
+      
+      - name: Create issue if problems found
+        if: steps.freshness.outputs.status == 'stale' || steps.api.outputs.tcgdex == 'down'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Skip if issue already exists
+          if [ "${{ steps.existing.outputs.open_issues }}" -gt 0 ]; then
+            echo "Self-healing issue already open, skipping"
+            exit 0
+          fi
+          
+          TITLE="⚠️ Health check alert - $(date +%Y-%m-%d)"
+          BODY="## Automated Health Check Results
+
+          | Check | Status |
+          |-------|--------|
+          | Data Freshness | ${{ steps.freshness.outputs.status }} |
+          | TCGdex API | ${{ steps.api.outputs.tcgdex }} |
+          | Card Count | ${{ steps.freshness.outputs.card_count }} |
+
+          ### Details
+          ${{ steps.freshness.outputs.message }}
+
+          ### Actions
+          - [ ] Investigate root cause
+          - [ ] Manually trigger Data Brain sync if needed
+          - [ ] Close this issue when resolved
+
+          **Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          
+          gh issue create --title "$TITLE" --body "$BODY" --label "automated,self-healing"
