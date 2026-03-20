@@ -1,4 +1,1015 @@
 {
-  "updated": "2026-03-20T12:05:48.911Z",
-  "sets": {}
+  "updated": "2026-03-20T12:07:52.208Z",
+  "sets": {
+    "sv01": [
+      {
+        "id": "sv01-001",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.210Z"
+        },
+        "name": "Pineco",
+        "localId": "001",
+        "image": "https://assets.tcgdex.net/en/sv/sv01/001",
+        "rarity": "Common",
+        "set": "Scarlet & Violet",
+        "setId": "sv01",
+        "types": [
+          "Grass"
+        ],
+        "hp": 60,
+        "artist": "Shigenori Negishi"
+      },
+      {
+        "id": "sv01-002",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.349Z"
+        },
+        "name": "Heracross",
+        "localId": "002",
+        "image": "https://assets.tcgdex.net/en/sv/sv01/002",
+        "rarity": "Uncommon",
+        "set": "Scarlet & Violet",
+        "setId": "sv01",
+        "types": [
+          "Grass"
+        ],
+        "hp": 120,
+        "artist": "Taira Akitsu"
+      },
+      {
+        "id": "sv01-003",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.377Z"
+        },
+        "name": "Shroomish",
+        "localId": "003",
+        "image": "https://assets.tcgdex.net/en/sv/sv01/003",
+        "rarity": "Common",
+        "set": "Scarlet & Violet",
+        "setId": "sv01",
+        "types": [
+          "Grass"
+        ],
+        "hp": 60,
+        "artist": "kurumitsu"
+      },
+      {
+        "id": "sv01-004",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.404Z"
+        },
+        "name": "Breloom",
+        "localId": "004",
+        "image": "https://assets.tcgdex.net/en/sv/sv01/004",
+        "rarity": "Uncommon",
+        "set": "Scarlet & Violet",
+        "setId": "sv01",
+        "types": [
+          "Grass"
+        ],
+        "hp": 110,
+        "artist": "Ryuta Fuse"
+      },
+      {
+        "id": "sv01-005",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.432Z"
+        },
+        "name": "Cacnea",
+        "localId": "005",
+        "image": "https://assets.tcgdex.net/en/sv/sv01/005",
+        "rarity": "Common",
+        "set": "Scarlet & Violet",
+        "setId": "sv01",
+        "types": [
+          "Grass"
+        ],
+        "hp": 60,
+        "artist": "Tika Matsuno"
+      },
+      {
+        "id": "sv01-006",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.460Z"
+        },
+        "name": "Cacturne",
+        "localId": "006",
+        "image": "https://assets.tcgdex.net/en/sv/sv01/006",
+        "rarity": "Uncommon",
+        "set": "Scarlet & Violet",
+        "setId": "sv01",
+        "types": [
+          "Grass"
+        ],
+        "hp": 130,
+        "artist": "DOM"
+      },
+      {
+        "id": "sv01-007",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.489Z"
+        },
+        "name": "Tropius",
+        "localId": "007",
+        "image": "https://assets.tcgdex.net/en/sv/sv01/007",
+        "rarity": "Common",
+        "set": "Scarlet & Violet",
+        "setId": "sv01",
+        "types": [
+          "Grass"
+        ],
+        "hp": 100,
+        "artist": "aoki"
+      },
+      {
+        "id": "sv01-008",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.517Z"
+        },
+        "name": "Scatterbug",
+        "localId": "008",
+        "image": "https://assets.tcgdex.net/en/sv/sv01/008",
+        "rarity": "Common",
+        "set": "Scarlet & Violet",
+        "setId": "sv01",
+        "types": [
+          "Grass"
+        ],
+        "hp": 30,
+        "artist": "sowsow"
+      },
+      {
+        "id": "sv01-009",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.545Z"
+        },
+        "name": "Spewpa",
+        "localId": "009",
+        "image": "https://assets.tcgdex.net/en/sv/sv01/009",
+        "rarity": "Common",
+        "set": "Scarlet & Violet",
+        "setId": "sv01",
+        "types": [
+          "Grass"
+        ],
+        "hp": 70,
+        "artist": "Kagemaru Himeno"
+      },
+      {
+        "id": "sv01-010",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.573Z"
+        },
+        "name": "Vivillon",
+        "localId": "010",
+        "image": "https://assets.tcgdex.net/en/sv/sv01/010",
+        "rarity": "Uncommon",
+        "set": "Scarlet & Violet",
+        "setId": "sv01",
+        "types": [
+          "Grass"
+        ],
+        "hp": 120,
+        "artist": "Atsuko Nishida"
+      }
+    ],
+    "sv02": [
+      {
+        "id": "sv02-001",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.600Z"
+        },
+        "name": "Hoppip",
+        "localId": "001",
+        "image": "https://assets.tcgdex.net/en/sv/sv02/001",
+        "rarity": "Common",
+        "set": "Paldea Evolved",
+        "setId": "sv02",
+        "types": [
+          "Grass"
+        ],
+        "hp": 50,
+        "artist": "Yukiko Baba"
+      },
+      {
+        "id": "sv02-002",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.628Z"
+        },
+        "name": "Skiploom",
+        "localId": "002",
+        "image": "https://assets.tcgdex.net/en/sv/sv02/002",
+        "rarity": "Uncommon",
+        "set": "Paldea Evolved",
+        "setId": "sv02",
+        "types": [
+          "Grass"
+        ],
+        "hp": 70,
+        "artist": "Yoriyuki Ikegami"
+      },
+      {
+        "id": "sv02-003",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.655Z"
+        },
+        "name": "Jumpluff",
+        "localId": "003",
+        "image": "https://assets.tcgdex.net/en/sv/sv02/003",
+        "rarity": "Rare",
+        "set": "Paldea Evolved",
+        "setId": "sv02",
+        "types": [
+          "Grass"
+        ],
+        "hp": 90,
+        "artist": "Naoyo Kimura"
+      },
+      {
+        "id": "sv02-004",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.682Z"
+        },
+        "name": "Pineco",
+        "localId": "004",
+        "image": "https://assets.tcgdex.net/en/sv/sv02/004",
+        "rarity": "Common",
+        "set": "Paldea Evolved",
+        "setId": "sv02",
+        "types": [
+          "Grass"
+        ],
+        "hp": 70,
+        "artist": "Kouki Saitou"
+      },
+      {
+        "id": "sv02-005",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.709Z"
+        },
+        "name": "Forretress ex",
+        "localId": "005",
+        "image": "https://assets.tcgdex.net/en/sv/sv02/005",
+        "rarity": "Double rare",
+        "set": "Paldea Evolved",
+        "setId": "sv02",
+        "types": [
+          "Grass"
+        ],
+        "hp": 270,
+        "artist": "5ban Graphics"
+      },
+      {
+        "id": "sv02-006",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.737Z"
+        },
+        "name": "Heracross",
+        "localId": "006",
+        "image": "https://assets.tcgdex.net/en/sv/sv02/006",
+        "rarity": "Uncommon",
+        "set": "Paldea Evolved",
+        "setId": "sv02",
+        "types": [
+          "Grass"
+        ],
+        "hp": 130,
+        "artist": "GOSSAN"
+      },
+      {
+        "id": "sv02-007",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.765Z"
+        },
+        "name": "Tropius",
+        "localId": "007",
+        "image": "https://assets.tcgdex.net/en/sv/sv02/007",
+        "rarity": "Common",
+        "set": "Paldea Evolved",
+        "setId": "sv02",
+        "types": [
+          "Grass"
+        ],
+        "hp": 110,
+        "artist": "Taira Akitsu"
+      },
+      {
+        "id": "sv02-008",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.792Z"
+        },
+        "name": "Combee",
+        "localId": "008",
+        "image": "https://assets.tcgdex.net/en/sv/sv02/008",
+        "rarity": "Common",
+        "set": "Paldea Evolved",
+        "setId": "sv02",
+        "types": [
+          "Grass"
+        ],
+        "hp": 50,
+        "artist": "Yoriyuki Ikegami"
+      },
+      {
+        "id": "sv02-009",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.819Z"
+        },
+        "name": "Vespiquen",
+        "localId": "009",
+        "image": "https://assets.tcgdex.net/en/sv/sv02/009",
+        "rarity": "Uncommon",
+        "set": "Paldea Evolved",
+        "setId": "sv02",
+        "types": [
+          "Grass"
+        ],
+        "hp": 120,
+        "artist": "Megumi Higuchi"
+      },
+      {
+        "id": "sv02-010",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.847Z"
+        },
+        "name": "Snover",
+        "localId": "010",
+        "image": "https://assets.tcgdex.net/en/sv/sv02/010",
+        "rarity": "Common",
+        "set": "Paldea Evolved",
+        "setId": "sv02",
+        "types": [
+          "Grass"
+        ],
+        "hp": 90,
+        "artist": "Taira Akitsu"
+      }
+    ],
+    "sv03": [
+      {
+        "id": "sv03-001",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.874Z"
+        },
+        "name": "Oddish",
+        "localId": "001",
+        "image": "https://assets.tcgdex.net/en/sv/sv03/001",
+        "rarity": "Common",
+        "set": "Obsidian Flames",
+        "setId": "sv03",
+        "types": [
+          "Grass"
+        ],
+        "hp": 50,
+        "artist": "Midori Harada"
+      },
+      {
+        "id": "sv03-002",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.901Z"
+        },
+        "name": "Gloom",
+        "localId": "002",
+        "image": "https://assets.tcgdex.net/en/sv/sv03/002",
+        "rarity": "Common",
+        "set": "Obsidian Flames",
+        "setId": "sv03",
+        "types": [
+          "Grass"
+        ],
+        "hp": 80,
+        "artist": "Haru Akasaka"
+      },
+      {
+        "id": "sv03-003",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.929Z"
+        },
+        "name": "Bellossom",
+        "localId": "003",
+        "image": "https://assets.tcgdex.net/en/sv/sv03/003",
+        "rarity": "Uncommon",
+        "set": "Obsidian Flames",
+        "setId": "sv03",
+        "types": [
+          "Grass"
+        ],
+        "hp": 130,
+        "artist": "sui"
+      },
+      {
+        "id": "sv03-004",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.956Z"
+        },
+        "name": "Scyther",
+        "localId": "004",
+        "image": "https://assets.tcgdex.net/en/sv/sv03/004",
+        "rarity": "Common",
+        "set": "Obsidian Flames",
+        "setId": "sv03",
+        "types": [
+          "Grass"
+        ],
+        "hp": 80,
+        "artist": "Shin Nagasawa"
+      },
+      {
+        "id": "sv03-005",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:52.983Z"
+        },
+        "name": "Shuckle",
+        "localId": "005",
+        "image": "https://assets.tcgdex.net/en/sv/sv03/005",
+        "rarity": "Common",
+        "set": "Obsidian Flames",
+        "setId": "sv03",
+        "types": [
+          "Grass"
+        ],
+        "hp": 80,
+        "artist": "Kurata So"
+      },
+      {
+        "id": "sv03-006",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.010Z"
+        },
+        "name": "Surskit",
+        "localId": "006",
+        "image": "https://assets.tcgdex.net/en/sv/sv03/006",
+        "rarity": "Common",
+        "set": "Obsidian Flames",
+        "setId": "sv03",
+        "types": [
+          "Grass"
+        ],
+        "hp": 60,
+        "artist": "Saya Tsuruta"
+      },
+      {
+        "id": "sv03-007",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.037Z"
+        },
+        "name": "Masquerain",
+        "localId": "007",
+        "image": "https://assets.tcgdex.net/en/sv/sv03/007",
+        "rarity": "Uncommon",
+        "set": "Obsidian Flames",
+        "setId": "sv03",
+        "types": [
+          "Grass"
+        ],
+        "hp": 100,
+        "artist": "Haru Akasaka"
+      },
+      {
+        "id": "sv03-008",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.064Z"
+        },
+        "name": "Combee",
+        "localId": "008",
+        "image": "https://assets.tcgdex.net/en/sv/sv03/008",
+        "rarity": "Common",
+        "set": "Obsidian Flames",
+        "setId": "sv03",
+        "types": [
+          "Grass"
+        ],
+        "hp": 50,
+        "artist": "HYOGONOSUKE"
+      },
+      {
+        "id": "sv03-009",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.092Z"
+        },
+        "name": "Foongus",
+        "localId": "009",
+        "image": "https://assets.tcgdex.net/en/sv/sv03/009",
+        "rarity": "Common",
+        "set": "Obsidian Flames",
+        "setId": "sv03",
+        "types": [
+          "Grass"
+        ],
+        "hp": 50,
+        "artist": "You Iribi"
+      },
+      {
+        "id": "sv03-010",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.120Z"
+        },
+        "name": "Amoonguss",
+        "localId": "010",
+        "image": "https://assets.tcgdex.net/en/sv/sv03/010",
+        "rarity": "Uncommon",
+        "set": "Obsidian Flames",
+        "setId": "sv03",
+        "types": [
+          "Grass"
+        ],
+        "hp": 110,
+        "artist": "Nobuhiro Imagawa"
+      }
+    ],
+    "sv04": [
+      {
+        "id": "sv04-001",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.148Z"
+        },
+        "name": "Surskit",
+        "localId": "001",
+        "image": "https://assets.tcgdex.net/en/sv/sv04/001",
+        "rarity": "Common",
+        "set": "Paradox Rift",
+        "setId": "sv04",
+        "types": [
+          "Grass"
+        ],
+        "hp": 50,
+        "artist": "Yoriyuki Ikegami"
+      },
+      {
+        "id": "sv04-002",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.175Z"
+        },
+        "name": "Masquerain",
+        "localId": "002",
+        "image": "https://assets.tcgdex.net/en/sv/sv04/002",
+        "rarity": "Uncommon",
+        "set": "Paradox Rift",
+        "setId": "sv04",
+        "types": [
+          "Grass"
+        ],
+        "hp": 100,
+        "artist": "kantaro"
+      },
+      {
+        "id": "sv04-003",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.202Z"
+        },
+        "name": "Froslass ex",
+        "localId": "003",
+        "image": "https://assets.tcgdex.net/en/sv/sv04/003",
+        "rarity": "Double rare",
+        "set": "Paradox Rift",
+        "setId": "sv04",
+        "types": [
+          "Grass"
+        ],
+        "hp": 250,
+        "artist": "5ban Graphics"
+      },
+      {
+        "id": "sv04-004",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.229Z"
+        },
+        "name": "Pansage",
+        "localId": "004",
+        "image": "https://assets.tcgdex.net/en/sv/sv04/004",
+        "rarity": "Common",
+        "set": "Paradox Rift",
+        "setId": "sv04",
+        "types": [
+          "Grass"
+        ],
+        "hp": 70,
+        "artist": "Jerky"
+      },
+      {
+        "id": "sv04-005",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.257Z"
+        },
+        "name": "Simisage",
+        "localId": "005",
+        "image": "https://assets.tcgdex.net/en/sv/sv04/005",
+        "rarity": "Uncommon",
+        "set": "Paradox Rift",
+        "setId": "sv04",
+        "types": [
+          "Grass"
+        ],
+        "hp": 100,
+        "artist": "Kurata So"
+      },
+      {
+        "id": "sv04-006",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.284Z"
+        },
+        "name": "Dwebble",
+        "localId": "006",
+        "image": "https://assets.tcgdex.net/en/sv/sv04/006",
+        "rarity": "Common",
+        "set": "Paradox Rift",
+        "setId": "sv04",
+        "types": [
+          "Grass"
+        ],
+        "hp": 60,
+        "artist": "Scav"
+      },
+      {
+        "id": "sv04-007",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.312Z"
+        },
+        "name": "Crustle",
+        "localId": "007",
+        "image": "https://assets.tcgdex.net/en/sv/sv04/007",
+        "rarity": "Common",
+        "set": "Paradox Rift",
+        "setId": "sv04",
+        "types": [
+          "Grass"
+        ],
+        "hp": 130,
+        "artist": "Shin Nagasawa"
+      },
+      {
+        "id": "sv04-008",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.340Z"
+        },
+        "name": "Bounsweet",
+        "localId": "008",
+        "image": "https://assets.tcgdex.net/en/sv/sv04/008",
+        "rarity": "Common",
+        "set": "Paradox Rift",
+        "setId": "sv04",
+        "types": [
+          "Grass"
+        ],
+        "hp": 60,
+        "artist": "Kouki Saitou"
+      },
+      {
+        "id": "sv04-009",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.367Z"
+        },
+        "name": "Steenee",
+        "localId": "009",
+        "image": "https://assets.tcgdex.net/en/sv/sv04/009",
+        "rarity": "Uncommon",
+        "set": "Paradox Rift",
+        "setId": "sv04",
+        "types": [
+          "Grass"
+        ],
+        "hp": 90,
+        "artist": "Kariya"
+      },
+      {
+        "id": "sv04-010",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.393Z"
+        },
+        "name": "Blipbug",
+        "localId": "010",
+        "image": "https://assets.tcgdex.net/en/sv/sv04/010",
+        "rarity": "Common",
+        "set": "Paradox Rift",
+        "setId": "sv04",
+        "types": [
+          "Grass"
+        ],
+        "hp": 50,
+        "artist": "OKUBO"
+      }
+    ],
+    "sv05": [
+      {
+        "id": "sv05-001",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.422Z"
+        },
+        "name": "Scyther",
+        "localId": "001",
+        "image": "https://assets.tcgdex.net/en/sv/sv05/001",
+        "rarity": "Common",
+        "set": "Temporal Forces",
+        "setId": "sv05",
+        "types": [
+          "Grass"
+        ],
+        "hp": 90,
+        "artist": "Dsuke"
+      },
+      {
+        "id": "sv05-002",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.449Z"
+        },
+        "name": "Pineco",
+        "localId": "002",
+        "image": "https://assets.tcgdex.net/en/sv/sv05/002",
+        "rarity": "Common",
+        "set": "Temporal Forces",
+        "setId": "sv05",
+        "types": [
+          "Grass"
+        ],
+        "hp": 70,
+        "artist": "Midori Harada"
+      },
+      {
+        "id": "sv05-003",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.476Z"
+        },
+        "name": "Seedot",
+        "localId": "003",
+        "image": "https://assets.tcgdex.net/en/sv/sv05/003",
+        "rarity": "Common",
+        "set": "Temporal Forces",
+        "setId": "sv05",
+        "types": [
+          "Grass"
+        ],
+        "hp": 60,
+        "artist": "Asako Ito"
+      },
+      {
+        "id": "sv05-004",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.503Z"
+        },
+        "name": "Nuzleaf",
+        "localId": "004",
+        "image": "https://assets.tcgdex.net/en/sv/sv05/004",
+        "rarity": "Common",
+        "set": "Temporal Forces",
+        "setId": "sv05",
+        "types": [
+          "Grass"
+        ],
+        "hp": 90,
+        "artist": "Lee HyunJung"
+      },
+      {
+        "id": "sv05-005",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.530Z"
+        },
+        "name": "Shiftry",
+        "localId": "005",
+        "image": "https://assets.tcgdex.net/en/sv/sv05/005",
+        "rarity": "Uncommon",
+        "set": "Temporal Forces",
+        "setId": "sv05",
+        "types": [
+          "Grass"
+        ],
+        "hp": 150,
+        "artist": "Souichirou Gunjima"
+      },
+      {
+        "id": "sv05-006",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.557Z"
+        },
+        "name": "Shroomish",
+        "localId": "006",
+        "image": "https://assets.tcgdex.net/en/sv/sv05/006",
+        "rarity": "Common",
+        "set": "Temporal Forces",
+        "setId": "sv05",
+        "types": [
+          "Grass"
+        ],
+        "hp": 60,
+        "artist": "Yoriyuki Ikegami"
+      },
+      {
+        "id": "sv05-007",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.584Z"
+        },
+        "name": "Breloom",
+        "localId": "007",
+        "image": "https://assets.tcgdex.net/en/sv/sv05/007",
+        "rarity": "Common",
+        "set": "Temporal Forces",
+        "setId": "sv05",
+        "types": [
+          "Grass"
+        ],
+        "hp": 120,
+        "artist": "Taiga Kasai"
+      },
+      {
+        "id": "sv05-008",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.611Z"
+        },
+        "name": "Roselia",
+        "localId": "008",
+        "image": "https://assets.tcgdex.net/en/sv/sv05/008",
+        "rarity": "Common",
+        "set": "Temporal Forces",
+        "setId": "sv05",
+        "types": [
+          "Grass"
+        ],
+        "hp": 60,
+        "artist": "Tomomi Ozaki"
+      },
+      {
+        "id": "sv05-009",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.639Z"
+        },
+        "name": "Roserade",
+        "localId": "009",
+        "image": "https://assets.tcgdex.net/en/sv/sv05/009",
+        "rarity": "Uncommon",
+        "set": "Temporal Forces",
+        "setId": "sv05",
+        "types": [
+          "Grass"
+        ],
+        "hp": 130,
+        "artist": "Gapao"
+      },
+      {
+        "id": "sv05-010",
+        "_meta": {
+          "sources": [
+            "tcgdex"
+          ],
+          "fetchedAt": "2026-03-20T12:07:53.666Z"
+        },
+        "name": "Turtwig",
+        "localId": "010",
+        "image": "https://assets.tcgdex.net/en/sv/sv05/010",
+        "rarity": "Common",
+        "set": "Temporal Forces",
+        "setId": "sv05",
+        "types": [
+          "Grass"
+        ],
+        "hp": 80,
+        "artist": "OKACHEKE"
+      }
+    ]
+  }
 }
