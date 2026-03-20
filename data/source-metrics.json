@@ -1,0 +1,23 @@
+{
+  "sources": {
+    "tcgdex": {
+      "accuracyScore": 0.7,
+      "requestsToday": 1,
+      "health": "up",
+      "lastCheck": "2026-03-20T11:46:33.322Z"
+    },
+    "pokemonPriceTracker": {
+      "accuracyScore": 0.85,
+      "requestsToday": 0,
+      "health": "down",
+      "lastCheck": "2026-03-20T11:46:34.102Z"
+    },
+    "jpnCards": {
+      "accuracyScore": 0.9,
+      "requestsToday": 0,
+      "health": "down",
+      "lastCheck": "2026-03-20T11:46:34.603Z"
+    }
+  },
+  "lastReset": "2026-03-20"
+}
