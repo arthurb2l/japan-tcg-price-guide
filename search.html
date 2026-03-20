@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Search - Japan TCG Price Guide</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .search-box { 
+      padding: 12px; 
+      font-size: 18px; 
+      width: 100%; 
+      max-width: 400px;
+      border: 2px solid var(--pokemon-blue);
+      border-radius: 8px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .card-item {
+      background: white;
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .card-item:hover { transform: scale(1.05); }
+    .card-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .card-item .name { 
+      font-weight: bold; 
+      margin-top: 8px;
+      font-size: 14px;
+    }
+    .card-item .set { 
+      color: #666; 
+      font-size: 12px; 
+    }
+    .stats { 
+      color: #666; 
+      margin: 10px 0; 
+    }
+    .no-results { 
+      text-align: center; 
+      padding: 40px; 
+      color: #666; 
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 1000;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .modal.active { display: flex; justify-content: center; align-items: flex-start; }
+    .modal-content {
+      background: white;
+      border-radius: 12px;
+      max-width: 400px;
+      width: 100%;
+      margin-top: 40px;
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px;
+      border-bottom: 1px solid #eee;
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .modal-body { padding: 16px; }
+    .modal-body img { width: 100%; border-radius: 8px; }
+    .card-details { margin-top: 16px; }
+    .card-details dt { font-weight: bold; color: #666; font-size: 12px; }
+    .card-details dd { margin: 0 0 12px 0; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">🏠 Home</a>
+      <a href="search.html" class="active">🔍 Search</a>
+      <a href="guides/">📖 Guides</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>🔍 Card Search</h1>
+    
+    <input type="text" class="search-box" id="search" placeholder="Search by name or ID (e.g. Charizard, sv01-001)">
+    <p class="stats" id="stats">Loading cards...</p>
+    
+    <div class="card-grid" id="results"></div>
+    <div class="no-results" id="no-results" style="display:none">No cards found</div>
+  </main>
+
+  <!-- Card Detail Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="modal-title">Card Details</span>
+        <button class="modal-close" onclick="closeModal()">×</button>
+      </div>
+      <div class="modal-body">
+        <img id="modal-img" src="" alt="">
+        <dl class="card-details">
+          <dt>Name</dt><dd id="modal-name"></dd>
+          <dt>Set</dt><dd id="modal-set"></dd>
+          <dt>ID</dt><dd id="modal-id"></dd>
+          <dt>Rarity</dt><dd id="modal-rarity"></dd>
+          <dt>Type</dt><dd id="modal-type"></dd>
+          <dt>HP</dt><dd id="modal-hp"></dd>
+          <dt>Artist</dt><dd id="modal-artist"></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let allCards = [];
+    
+    async function loadCards() {
+      try {
+        const res = await fetch('data/brain-cache.json');
+        const data = await res.json();
+        
+        // Flatten all sets into single array
+        allCards = Object.values(data.sets).flat();
+        
+        document.getElementById('stats').textContent = 
+          `${allCards.length} cards from ${Object.keys(data.sets).length} sets`;
+        
+        renderCards(allCards);
+      } catch (e) {
+        document.getElementById('stats').textContent = 'Error loading cards';
+      }
+    }
+    
+    function renderCards(cards) {
+      const grid = document.getElementById('results');
+      const noResults = document.getElementById('no-results');
+      
+      if (cards.length === 0) {
+        grid.innerHTML = '';
+        noResults.style.display = 'block';
+        return;
+      }
+      
+      noResults.style.display = 'none';
+      grid.innerHTML = cards.slice(0, 50).map(card => `
+        <div class="card-item" onclick="showCard('${card.id}')">
+          <img src="${card.image}/low.webp" alt="${card.name}" loading="lazy">
+          <div class="name">${card.name}</div>
+          <div class="set">${card.set || card.setId}</div>
+        </div>
+      `).join('');
+    }
+    
+    function search(query) {
+      query = query.toLowerCase().trim();
+      if (!query) {
+        renderCards(allCards);
+        return;
+      }
+      
+      const results = allCards.filter(c => 
+        c.name?.toLowerCase().includes(query) ||
+        c.id?.toLowerCase().includes(query) ||
+        c.setId?.toLowerCase().includes(query)
+      );
+      
+      renderCards(results);
+    }
+    
+    function showCard(id) {
+      const card = allCards.find(c => c.id === id);
+      if (!card) return;
+      
+      document.getElementById('modal-title').textContent = card.name;
+      document.getElementById('modal-img').src = card.image + '/high.webp';
+      document.getElementById('modal-name').textContent = card.name;
+      document.getElementById('modal-set').textContent = card.set || card.setId;
+      document.getElementById('modal-id').textContent = card.id;
+      document.getElementById('modal-rarity').textContent = card.rarity || '-';
+      document.getElementById('modal-type').textContent = card.types?.join(', ') || '-';
+      document.getElementById('modal-hp').textContent = card.hp || '-';
+      document.getElementById('modal-artist').textContent = card.artist || '-';
+      
+      document.getElementById('modal').classList.add('active');
+    }
+    
+    function closeModal() {
+      document.getElementById('modal').classList.remove('active');
+    }
+    
+    // Event listeners
+    document.getElementById('search').addEventListener('input', e => search(e.target.value));
+    document.getElementById('modal').addEventListener('click', e => {
+      if (e.target.id === 'modal') closeModal();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+    
+    // Init
+    loadCards();
+  </script>
+</body>
+</html>
