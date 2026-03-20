@@ -139,6 +139,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/search.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://arthurb2l.github.io/japan-pokemon-card-price-guide/ev-calculator.html</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
