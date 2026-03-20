@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metrics | Japan TCG Price Guide</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,sans-serif;background:#1a1a2e;color:#eee;padding:20px;max-width:800px;margin:0 auto}
+h1{color:#00d4ff;margin-bottom:5px}
+.subtitle{color:#888;margin-bottom:20px}
+.card{background:#16213e;border:1px solid #0f3460;border-radius:8px;padding:20px;margin:15px 0}
+h2{color:#00d4ff;font-size:1.1em;margin-bottom:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:15px}
+.stat{background:#0f3460;padding:15px;border-radius:6px;text-align:center}
+.stat-num{font-size:1.8em;color:#00d4ff;font-weight:bold}
+.stat-label{font-size:.75em;color:#888;margin-top:5px}
+table{width:100%;border-collapse:collapse;font-size:.9em}
+th,td{padding:8px;text-align:left;border-bottom:1px solid #0f3460}
+th{color:#00d4ff}
+.bar{background:#0f3460;height:20px;border-radius:3px;overflow:hidden}
+.bar-fill{background:#00d4ff;height:100%}
+a{color:#00d4ff}
+footer{margin-top:30px;color:#666;font-size:.85em}
+#loading{text-align:center;padding:40px;color:#888}
+</style>
+</head>
+<body>
+
+<h1>📊 Site Metrics</h1>
+<p class="subtitle">Autonomous growth tracking</p>
+
+<div id="loading">Loading metrics...</div>
+<div id="content" style="display:none">
+
+<div class="card">
+<h2>📦 Content</h2>
+<div class="grid">
+<div class="stat"><div class="stat-num" id="total-cards">-</div><div class="stat-label">Cards</div></div>
+<div class="stat"><div class="stat-num" id="total-sets">-</div><div class="stat-label">Sets</div></div>
+<div class="stat"><div class="stat-num" id="contributions">-</div><div class="stat-label">Contributions</div></div>
+</div>
+</div>
+
+<div class="card">
+<h2>🤖 Contributions by Source</h2>
+<div id="contrib-chart"></div>
+</div>
+
+<div class="card">
+<h2>🔌 Data Sources</h2>
+<table id="sources-table">
+<tr><th>Source</th><th>Accuracy</th><th>Last Success</th></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>📅 Last Updated</h2>
+<p id="last-updated">-</p>
+</div>
+
+</div>
+
+<footer>
+<a href="index.html">← Home</a> | <a href="contribute.html">Contribute</a>
+</footer>
+
+<script>
+async function loadMetrics() {
+  try {
+    const res = await fetch('data/metrics.json?' + Date.now());
+    const m = await res.json();
+    
+    document.getElementById('total-cards').textContent = m.content?.totalCards || 0;
+    document.getElementById('total-sets').textContent = m.content?.setsCount || 0;
+    document.getElementById('contributions').textContent = m.contributions?.total || 0;
+    document.getElementById('last-updated').textContent = m.generated ? new Date(m.generated).toLocaleString() : '-';
+    
+    // Contribution chart
+    const byType = m.contributions?.byType || {};
+    const types = Object.keys(byType);
+    if (types.length > 0) {
+      const max = Math.max(...Object.values(byType));
+      document.getElementById('contrib-chart').innerHTML = types.map(t => 
+        `<div style="margin:8px 0"><span style="display:inline-block;width:80px">${t}</span>
+        <div class="bar" style="display:inline-block;width:calc(100% - 120px);vertical-align:middle">
+          <div class="bar-fill" style="width:${(byType[t]/max)*100}%"></div>
+        </div>
+        <span style="margin-left:8px">${byType[t]}</span></div>`
+      ).join('');
+    } else {
+      document.getElementById('contrib-chart').innerHTML = '<p style="color:#888">No contributions yet</p>';
+    }
+    
+    // Sources table
+    const sources = m.sources || {};
+    const tbody = Object.keys(sources).map(s => 
+      `<tr><td>${s}</td><td>${(sources[s].accuracy * 100).toFixed(0)}%</td><td>${sources[s].lastSuccess || '-'}</td></tr>`
+    ).join('');
+    if (tbody) document.getElementById('sources-table').innerHTML += tbody;
+    
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+  } catch (e) {
+    document.getElementById('loading').textContent = 'Error loading metrics: ' + e.message;
+  }
+}
+loadMetrics();
+</script>
+</body>
+</html>

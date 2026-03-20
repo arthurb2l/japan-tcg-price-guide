@@ -1,0 +1,25 @@
+{
+  "generated": "2026-03-20T12:31:29.892Z",
+  "content": {
+    "totalCards": 50,
+    "setsCount": 5,
+    "sets": [
+      "sv01",
+      "sv02",
+      "sv03",
+      "sv04",
+      "sv05"
+    ],
+    "lastSync": "2026-03-20T12:07:52.208Z"
+  },
+  "health": {},
+  "contributions": {
+    "total": 0,
+    "byType": {},
+    "byContributor": {}
+  },
+  "sources": {
+    "sources": {},
+    "lastReset": {}
+  }
+}
