@@ -13,7 +13,7 @@
 | Fix map section (remove empty iframe) | Usable store links | 2026-03-20 |
 | Create `docs/REFACTORING.md` | Track changes | 2026-03-20 |
 | Update `llms.txt` with architecture links | AI discoverability | 2026-03-20 |
-| Create `base.css` + test on 1 page | CSS extraction started | 2026-03-20 |
+| Create `base.css` + rollout to all guides | CSS extraction complete | 2026-03-20 |
 
 ## 🔲 Still Needed
 
