@@ -57,77 +57,43 @@ footer{text-align:center;padding:20px;color:#666;font-size:.8em;border-top:1px s
 📊 <strong>MSRP Probability:</strong> Chance of finding current Pokemon/One Piece products at retail price on any random visit. Higher % = more reliable stock.
 </div>
 
-<h2 id="map">🗺️ Store Map</h2>
-<div id="map" style="height:350px;border-radius:8px;border:1px solid #ddd;margin-bottom:15px"></div>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-const map = L.map('map').setView([35.69,139.70],12);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap'}).addTo(map);
-const stores = [
-  // Pokemon Centers (yellow)
-  {lat:35.7295,lng:139.7109,name:'Pokemon Center Mega Tokyo',area:'Ikebukuro',type:'pokemon'},
-  {lat:35.6595,lng:139.7005,name:'Pokemon Center Shibuya',area:'Shibuya',type:'pokemon'},
-  {lat:35.7100,lng:139.8107,name:'Pokemon Center Skytree',area:'Skytree',type:'pokemon'},
-  // Retail (blue)
-  {lat:35.6984,lng:139.7731,name:'Yodobashi Camera',area:'Akihabara',type:'retail'},
-  {lat:35.7301,lng:139.7112,name:'Bic Camera',area:'Ikebukuro',type:'retail'},
-  {lat:35.6896,lng:139.7006,name:'Yodobashi Camera',area:'Shinjuku',type:'retail'},
-  // Card shops (red)
-  {lat:35.7022,lng:139.7704,name:'Mandarake Complex',area:'Akihabara',type:'card'},
-  {lat:35.6989,lng:139.7710,name:'Yellow Submarine',area:'Akihabara',type:'card'},
-  {lat:35.7074,lng:139.6659,name:'Nakano Broadway',area:'Nakano',type:'card'},
-  {lat:35.6973,lng:139.7033,name:'Hareruya',area:'Shinjuku',type:'card'},
-];
-const icons = {
-  pokemon: L.divIcon({className:'',html:'<div style="background:#FFD700;width:12px;height:12px;border-radius:50%;border:2px solid #222"></div>'}),
-  retail: L.divIcon({className:'',html:'<div style="background:#1d4ed8;width:12px;height:12px;border-radius:50%;border:2px solid #222"></div>'}),
-  card: L.divIcon({className:'',html:'<div style="background:#EE1515;width:12px;height:12px;border-radius:50%;border:2px solid #222"></div>'})
-};
-stores.forEach(s => L.marker([s.lat,s.lng],{icon:icons[s.type]}).addTo(map).bindPopup(`<b>${s.name}</b><br>${s.area}`));
-</script>
-<p style="font-size:.8em;color:#666;margin-bottom:20px">
-<span style="display:inline-block;width:10px;height:10px;background:#FFD700;border-radius:50%;border:1px solid #222"></span> Pokemon Center
-<span style="display:inline-block;width:10px;height:10px;background:#1d4ed8;border-radius:50%;border:1px solid #222;margin-left:10px"></span> Retail
-<span style="display:inline-block;width:10px;height:10px;background:#EE1515;border-radius:50%;border:1px solid #222;margin-left:10px"></span> Card Shop
-</p>
-
-<details style="margin-bottom:20px">
-<summary style="cursor:pointer;font-weight:bold;color:#EE1515">📍 Full Store List</summary>
-<div style="padding:10px;background:#fff;border:1px solid #ddd;border-radius:0 0 8px 8px;font-size:.85em;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+<h2 id="map">🗺️ Store Locations</h2>
+<div style="background:#fff;border:1px solid #ddd;border-radius:8px;padding:15px;margin-bottom:20px">
+<p style="color:#666;font-size:.85em;margin-bottom:12px">Click any location to open in Google Maps:</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;font-size:.9em">
 <div>
-<strong style="color:#EE1515">Akihabara</strong><br>
+<strong style="color:#EE1515">📍 Akihabara</strong><br>
 <a href="https://maps.google.com/?q=35.6984,139.7731">Yodobashi Camera</a><br>
 <a href="https://maps.google.com/?q=35.7022,139.7704">Mandarake Complex</a><br>
 <a href="https://maps.google.com/?q=35.6989,139.7710">Yellow Submarine</a><br>
 <a href="https://maps.google.com/?q=35.6995,139.7720">Surugaya</a>
 </div>
 <div>
-<strong style="color:#EE1515">Ikebukuro</strong><br>
+<strong style="color:#EE1515">📍 Ikebukuro</strong><br>
 <a href="https://maps.google.com/?q=35.7295,139.7109">Pokemon Center Mega</a><br>
 <a href="https://maps.google.com/?q=35.7301,139.7112">Bic Camera</a><br>
 <a href="https://maps.google.com/?q=35.7289,139.7193">Animate</a><br>
 <a href="https://maps.google.com/?q=35.7283,139.7105">Mandarake</a>
 </div>
 <div>
-<strong style="color:#EE1515">Shibuya</strong><br>
+<strong style="color:#EE1515">📍 Shibuya</strong><br>
 <a href="https://maps.google.com/?q=35.6595,139.7005">Pokemon Center</a><br>
 <a href="https://maps.google.com/?q=35.6614,139.6983">Mandarake</a><br>
 <a href="https://maps.google.com/?q=35.6580,139.7016">Tower Records</a>
 </div>
 <div>
-<strong style="color:#EE1515">Shinjuku</strong><br>
+<strong style="color:#EE1515">📍 Shinjuku</strong><br>
 <a href="https://maps.google.com/?q=35.6896,139.7006">Yodobashi Camera</a><br>
 <a href="https://maps.google.com/?q=35.6973,139.7033">Hareruya</a><br>
 <a href="https://maps.google.com/?q=35.6917,139.7003">Bic Camera</a>
 </div>
 <div>
-<strong style="color:#EE1515">Nakano</strong><br>
+<strong style="color:#EE1515">📍 Nakano</strong><br>
 <a href="https://maps.google.com/?q=35.7074,139.6659">Nakano Broadway</a><br>
 <span style="color:#888;font-size:.85em">(Mandarake + 10+ card shops)</span>
 </div>
 <div>
-<strong style="color:#EE1515">Other</strong><br>
+<strong style="color:#EE1515">📍 Other</strong><br>
 <a href="https://maps.google.com/?q=35.7100,139.8107">Pokemon Center Skytree</a><br>
 <a href="https://maps.google.com/?q=34.7025,135.4959">Pokemon Center Osaka</a><br>
 <a href="https://maps.google.com/?q=35.1706,136.8816">Pokemon Center Nagoya</a>
