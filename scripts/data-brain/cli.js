@@ -30,6 +30,18 @@ async function main() {
       console.log(JSON.stringify(metrics, null, 2));
       break;
       
+    case 'quota':
+      console.log('Quota Status:\n');
+      const quotas = brain.getQuotaStatus();
+      for (const q of quotas) {
+        const bar = q.quota === Infinity 
+          ? '∞ unlimited' 
+          : `${q.used}/${q.quota} (${q.percentUsed}%)`;
+        const warn = q.percentUsed > 80 ? ' ⚠️' : '';
+        console.log(`  ${q.id}: ${bar}${warn}`);
+      }
+      break;
+      
     case 'card':
       if (!args[0]) {
         console.log('Usage: node cli.js card <cardId>');
@@ -57,7 +69,8 @@ Data Brain CLI
 
 Commands:
   health          Check all source health
-  metrics         Show current metrics  
+  metrics         Show current metrics
+  quota           Show quota usage
   card <id>       Fetch a card by ID
   sets [source]   List sets (default: tcgdex)
 

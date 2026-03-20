@@ -79,24 +79,53 @@ function saveMetrics() {
 
 /**
  * Select best source for a data type
+ * Priority: free unlimited > free limited > paid (reserve for prices)
  */
-function selectSource(dataType) {
+function selectSource(dataType, options = {}) {
   if (!metrics) loadMetrics();
   
   const candidates = Object.entries(sources)
     .filter(([id, s]) => s.provides.includes(dataType))
     .filter(([id]) => metrics.sources[id]?.health !== 'down')
-    .filter(([id, s]) => {
+    .map(([id, s]) => {
       const m = metrics.sources[id];
-      return !s.quota || m.requestsToday < s.quota;
+      const quotaRemaining = s.quota === Infinity ? Infinity : s.quota - (m.requestsToday || 0);
+      return { id, source: s, quotaRemaining, accuracy: m.accuracyScore || 0 };
     })
-    .sort(([aId], [bId]) => {
-      const aScore = metrics.sources[aId]?.accuracyScore || 0;
-      const bScore = metrics.sources[bId]?.accuracyScore || 0;
-      return bScore - aScore;
-    });
+    .filter(c => c.quotaRemaining > 0);
   
-  return candidates[0]?.[1] || null;
+  // Sort: unlimited first, then by accuracy
+  candidates.sort((a, b) => {
+    // Unlimited sources first (unless explicitly requesting paid)
+    if (!options.preferPaid) {
+      if (a.quotaRemaining === Infinity && b.quotaRemaining !== Infinity) return -1;
+      if (b.quotaRemaining === Infinity && a.quotaRemaining !== Infinity) return 1;
+    }
+    // Then by accuracy
+    return b.accuracy - a.accuracy;
+  });
+  
+  return candidates[0]?.source || null;
+}
+
+/**
+ * Get quota status for all sources
+ */
+function getQuotaStatus() {
+  if (!metrics) loadMetrics();
+  
+  return Object.entries(sources).map(([id, s]) => {
+    const m = metrics.sources[id];
+    const used = m.requestsToday || 0;
+    const remaining = s.quota === Infinity ? Infinity : s.quota - used;
+    return {
+      id,
+      quota: s.quota,
+      used,
+      remaining,
+      percentUsed: s.quota === Infinity ? 0 : Math.round(used / s.quota * 100)
+    };
+  });
 }
 
 /**
@@ -107,7 +136,7 @@ async function getCard(cardId, options = {}) {
   
   const result = { id: cardId, _meta: { sources: [], fetchedAt: new Date().toISOString() } };
   
-  // Get metadata (prefer unlimited sources)
+  // Get metadata from free source first
   const metaSource = selectSource('metadata');
   if (metaSource) {
     try {
@@ -120,10 +149,10 @@ async function getCard(cardId, options = {}) {
     }
   }
   
-  // Get prices (use quota-limited source sparingly)
-  if (options.includePrices !== false) {
-    const priceSource = selectSource('prices');
-    if (priceSource) {
+  // Get prices only if explicitly requested (conserve paid quota)
+  if (options.includePrices) {
+    const priceSource = selectSource('prices', { preferPaid: true });
+    if (priceSource && priceSource.adapter.getPrice) {
       try {
         const priceData = await priceSource.adapter.getPrice(cardId, options);
         result.prices = priceData;
@@ -193,5 +222,6 @@ module.exports = {
   healthCheck,
   updateAccuracy,
   getMetrics,
+  getQuotaStatus,
   selectSource
 };
