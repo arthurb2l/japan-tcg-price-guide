@@ -27,7 +27,7 @@
 ### Priority 2: Features
 | Task | Why | Effort |
 |------|-----|--------|
-| Leaflet map with store pins | User requested | 15 min |
+| ~~Leaflet map with store pins~~ | ✅ Done | - |
 
 ### Priority 3: Documentation
 | Task | Why | Effort |
