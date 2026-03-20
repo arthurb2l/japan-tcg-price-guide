@@ -1,224 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Card Search - Japan TCG Price Guide</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .search-box { 
-      padding: 12px; 
-      font-size: 18px; 
-      width: 100%; 
-      max-width: 400px;
-      border: 2px solid var(--pokemon-blue);
-      border-radius: 8px;
-    }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
-    .card-item {
-      background: white;
-      border-radius: 8px;
-      padding: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    .card-item:hover { transform: scale(1.05); }
-    .card-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-    }
-    .card-item .name { 
-      font-weight: bold; 
-      margin-top: 8px;
-      font-size: 14px;
-    }
-    .card-item .set { 
-      color: #666; 
-      font-size: 12px; 
-    }
-    .stats { 
-      color: #666; 
-      margin: 10px 0; 
-    }
-    .no-results { 
-      text-align: center; 
-      padding: 40px; 
-      color: #666; 
-    }
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.8);
-      z-index: 1000;
-      padding: 20px;
-      overflow-y: auto;
-    }
-    .modal.active { display: flex; justify-content: center; align-items: flex-start; }
-    .modal-content {
-      background: white;
-      border-radius: 12px;
-      max-width: 400px;
-      width: 100%;
-      margin-top: 40px;
-    }
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      padding: 16px;
-      border-bottom: 1px solid #eee;
-    }
-    .modal-close {
-      background: none;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-    .modal-body { padding: 16px; }
-    .modal-body img { width: 100%; border-radius: 8px; }
-    .card-details { margin-top: 16px; }
-    .card-details dt { font-weight: bold; color: #666; font-size: 12px; }
-    .card-details dd { margin: 0 0 12px 0; font-size: 16px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Search - Japan TCG Price Guide</title>
+<link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
+<style>
+/* Search header */
+.search-header{background:#fff;border-bottom:1px solid #ddd;padding:15px;margin:-10px -10px 15px;position:sticky;top:0;z-index:100}
+.search-row{display:flex;gap:10px;max-width:800px;margin:0 auto}
+.search-box{flex:1;padding:14px 18px;font-size:16px;border:3px solid #222;border-radius:10px;outline:none;transition:border-color .2s,box-shadow .2s}
+.search-box:focus{border-color:#EE1515;box-shadow:0 0 0 3px rgba(238,21,21,0.15)}
+.search-btn{background:#EE1515;color:#fff;border:none;padding:14px 24px;border-radius:10px;font-weight:bold;cursor:pointer}
+.search-btn:hover{background:#cc1010}
+/* Filters bar */
+.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:15px;padding:10px 0;border-bottom:1px solid #eee}
+.filter-label{color:#666;font-size:.85em}
+.filter-btn{background:#fff;border:1px solid #ddd;padding:6px 12px;border-radius:6px;font-size:.8em;cursor:pointer;transition:all .15s}
+.filter-btn:hover{border-color:#EE1515;color:#EE1515}
+.filter-btn.active{background:#EE1515;color:#fff;border-color:#EE1515}
+select.filter{padding:6px 10px;border:1px solid #ddd;border-radius:6px;font-size:.8em;background:#fff}
+/* Stats & display */
+.toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;flex-wrap:wrap;gap:10px}
+.stats{color:#666;font-size:.9em}
+.display-opts{display:flex;gap:5px}
+.display-btn{background:#fff;border:1px solid #ddd;padding:6px 10px;border-radius:4px;cursor:pointer;font-size:.85em}
+.display-btn.active{background:#222;color:#fff;border-color:#222}
+/* Card grid */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+.card-grid.list{grid-template-columns:1fr;gap:8px}
+.card-item{background:#fff;border-radius:8px;padding:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);text-align:center;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.card-item:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+.card-item img{width:100%;height:auto;border-radius:4px}
+.card-item .name{font-weight:600;margin-top:6px;font-size:.85em;line-height:1.2}
+.card-item .set{color:#666;font-size:.75em}
+/* List view */
+.card-grid.list .card-item{display:flex;align-items:center;gap:12px;text-align:left;padding:10px}
+.card-grid.list .card-item img{width:60px;border-radius:4px}
+.card-grid.list .card-item .info{flex:1}
+.card-grid.list .card-item .name{margin:0;font-size:.9em}
+.card-grid.list .card-item .set{font-size:.8em}
+.no-results{text-align:center;padding:60px 20px;color:#666}
+/* Modal */
+.modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.85);z-index:1000;padding:20px;overflow-y:auto}
+.modal.active{display:flex;justify-content:center;align-items:flex-start}
+.modal-content{background:#fff;border-radius:12px;max-width:400px;width:100%;margin-top:40px}
+.modal-header{display:flex;justify-content:space-between;align-items:center;padding:15px;border-bottom:1px solid #eee}
+.modal-close{background:none;border:none;font-size:24px;cursor:pointer;color:#666}
+.modal-body{padding:15px}
+.modal-body img{width:100%;border-radius:8px}
+.card-details{margin-top:15px}
+.card-details dt{font-weight:600;color:#666;font-size:.75em;text-transform:uppercase}
+.card-details dd{margin:0 0 12px;font-size:.95em}
+</style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">🏠 Home</a>
-      <a href="search.html" class="active">🔍 Search</a>
-      <a href="guides/">📖 Guides</a>
-    </nav>
-  </header>
+<div class="search-header">
+  <div class="search-row">
+    <input type="text" class="search-box" id="search" placeholder="Search cards by name, set, or ID...">
+    <button class="search-btn" onclick="search(document.getElementById('search').value)">Search</button>
+  </div>
+</div>
 
-  <main class="container">
-    <h1>🔍 Card Search</h1>
-    
-    <input type="text" class="search-box" id="search" placeholder="Search by name or ID (e.g. Charizard, sv01-001)">
-    <p class="stats" id="stats">Loading cards...</p>
-    
-    <div class="card-grid" id="results"></div>
-    <div class="no-results" id="no-results" style="display:none">No cards found</div>
-  </main>
+<div class="filters">
+  <span class="filter-label">Display:</span>
+  <button class="filter-btn active" data-view="grid" onclick="setView('grid')">Grid</button>
+  <button class="filter-btn" data-view="list" onclick="setView('list')">List</button>
+  <span class="filter-label" style="margin-left:15px">Set:</span>
+  <select class="filter" id="set-filter" onchange="filterBySet(this.value)">
+    <option value="">All Sets</option>
+  </select>
+  <span class="filter-label" style="margin-left:15px">Sort:</span>
+  <select class="filter" id="sort" onchange="sortCards(this.value)">
+    <option value="name">Name</option>
+    <option value="id">Card #</option>
+    <option value="set">Set</option>
+  </select>
+</div>
 
-  <!-- Card Detail Modal -->
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span id="modal-title">Card Details</span>
-        <button class="modal-close" onclick="closeModal()">×</button>
-      </div>
-      <div class="modal-body">
-        <img id="modal-img" src="" alt="">
-        <dl class="card-details">
-          <dt>Name</dt><dd id="modal-name"></dd>
-          <dt>Set</dt><dd id="modal-set"></dd>
-          <dt>ID</dt><dd id="modal-id"></dd>
-          <dt>Rarity</dt><dd id="modal-rarity"></dd>
-          <dt>Type</dt><dd id="modal-type"></dd>
-          <dt>HP</dt><dd id="modal-hp"></dd>
-          <dt>Artist</dt><dd id="modal-artist"></dd>
-        </dl>
-      </div>
+<div class="toolbar">
+  <p class="stats" id="stats">Loading cards...</p>
+  <a href="index.html" style="color:#EE1515;font-size:.85em">← Back to Home</a>
+</div>
+
+<div class="card-grid" id="results"></div>
+<div class="no-results" id="no-results" style="display:none">
+  <p style="font-size:1.2em;margin-bottom:10px">No cards found</p>
+  <p>Try a different search term or clear filters</p>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span id="modal-title">Card Details</span>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <img id="modal-img" src="" alt="">
+      <dl class="card-details">
+        <dt>Name</dt><dd id="modal-name"></dd>
+        <dt>Set</dt><dd id="modal-set"></dd>
+        <dt>Card ID</dt><dd id="modal-id"></dd>
+      </dl>
     </div>
   </div>
+</div>
 
-  <script>
-    let allCards = [];
+<script>
+let allCards = [], filteredCards = [], currentView = 'grid';
+
+async function loadCards() {
+  try {
+    const res = await fetch('data/brain-cache.json');
+    const data = await res.json();
+    allCards = Object.values(data.sets).flat();
     
-    async function loadCards() {
-      try {
-        const res = await fetch('data/brain-cache.json');
-        const data = await res.json();
-        
-        // Flatten all sets into single array
-        allCards = Object.values(data.sets).flat();
-        
-        document.getElementById('stats').textContent = 
-          `${allCards.length} cards from ${Object.keys(data.sets).length} sets`;
-        
-        renderCards(allCards);
-      } catch (e) {
-        document.getElementById('stats').textContent = 'Error loading cards';
-      }
+    // Populate set filter
+    const sets = [...new Set(allCards.map(c => c.setId))].sort();
+    const setFilter = document.getElementById('set-filter');
+    sets.forEach(s => {
+      const opt = document.createElement('option');
+      opt.value = s;
+      opt.textContent = allCards.find(c => c.setId === s)?.set || s;
+      setFilter.appendChild(opt);
+    });
+    
+    // Check URL params
+    const params = new URLSearchParams(location.search);
+    if (params.get('q')) {
+      document.getElementById('search').value = params.get('q');
+      search(params.get('q'));
+    } else if (params.get('set')) {
+      document.getElementById('set-filter').value = params.get('set');
+      filterBySet(params.get('set'));
+    } else if (params.get('random')) {
+      const card = allCards[Math.floor(Math.random() * allCards.length)];
+      showCard(card.id);
+      filteredCards = allCards;
+      renderCards(allCards);
+    } else {
+      filteredCards = allCards;
+      renderCards(allCards);
     }
     
-    function renderCards(cards) {
-      const grid = document.getElementById('results');
-      const noResults = document.getElementById('no-results');
-      
-      if (cards.length === 0) {
-        grid.innerHTML = '';
-        noResults.style.display = 'block';
-        return;
-      }
-      
-      noResults.style.display = 'none';
-      grid.innerHTML = cards.slice(0, 50).map(card => `
-        <div class="card-item" onclick="showCard('${card.id}')">
-          <img src="${card.image}/low.webp" alt="${card.name}" loading="lazy">
-          <div class="name">${card.name}</div>
-          <div class="set">${card.set || card.setId}</div>
+    updateStats();
+  } catch (e) {
+    document.getElementById('stats').textContent = 'Error loading cards';
+  }
+}
+
+function updateStats() {
+  const showing = Math.min(filteredCards.length, 60);
+  document.getElementById('stats').textContent = 
+    `${filteredCards.length} cards` + (filteredCards.length > 60 ? ` (showing ${showing})` : '');
+}
+
+function renderCards(cards) {
+  const grid = document.getElementById('results');
+  const noResults = document.getElementById('no-results');
+  
+  if (!cards.length) {
+    grid.innerHTML = '';
+    noResults.style.display = 'block';
+    return;
+  }
+  
+  noResults.style.display = 'none';
+  
+  if (currentView === 'list') {
+    grid.innerHTML = cards.slice(0, 60).map(c => `
+      <div class="card-item" onclick="showCard('${c.id}')">
+        <img src="${c.image}/low.webp" alt="${c.name}" loading="lazy">
+        <div class="info">
+          <div class="name">${c.name}</div>
+          <div class="set">${c.set || c.setId} · ${c.id}</div>
         </div>
-      `).join('');
-    }
-    
-    function search(query) {
-      query = query.toLowerCase().trim();
-      if (!query) {
-        renderCards(allCards);
-        return;
-      }
-      
-      const results = allCards.filter(c => 
-        c.name?.toLowerCase().includes(query) ||
-        c.id?.toLowerCase().includes(query) ||
-        c.setId?.toLowerCase().includes(query)
-      );
-      
-      renderCards(results);
-    }
-    
-    function showCard(id) {
-      const card = allCards.find(c => c.id === id);
-      if (!card) return;
-      
-      document.getElementById('modal-title').textContent = card.name;
-      document.getElementById('modal-img').src = card.image + '/high.webp';
-      document.getElementById('modal-name').textContent = card.name;
-      document.getElementById('modal-set').textContent = card.set || card.setId;
-      document.getElementById('modal-id').textContent = card.id;
-      document.getElementById('modal-rarity').textContent = card.rarity || '-';
-      document.getElementById('modal-type').textContent = card.types?.join(', ') || '-';
-      document.getElementById('modal-hp').textContent = card.hp || '-';
-      document.getElementById('modal-artist').textContent = card.artist || '-';
-      
-      document.getElementById('modal').classList.add('active');
-    }
-    
-    function closeModal() {
-      document.getElementById('modal').classList.remove('active');
-    }
-    
-    // Event listeners
-    document.getElementById('search').addEventListener('input', e => search(e.target.value));
-    document.getElementById('modal').addEventListener('click', e => {
-      if (e.target.id === 'modal') closeModal();
-    });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeModal();
-    });
-    
-    // Init
-    loadCards();
-  </script>
+      </div>
+    `).join('');
+  } else {
+    grid.innerHTML = cards.slice(0, 60).map(c => `
+      <div class="card-item" onclick="showCard('${c.id}')">
+        <img src="${c.image}/low.webp" alt="${c.name}" loading="lazy">
+        <div class="name">${c.name}</div>
+        <div class="set">${c.setId}</div>
+      </div>
+    `).join('');
+  }
+}
+
+function search(query) {
+  query = query.toLowerCase().trim();
+  filteredCards = query ? allCards.filter(c => 
+    c.name?.toLowerCase().includes(query) ||
+    c.id?.toLowerCase().includes(query) ||
+    c.set?.toLowerCase().includes(query) ||
+    c.setId?.toLowerCase().includes(query)
+  ) : allCards;
+  
+  document.getElementById('set-filter').value = '';
+  renderCards(filteredCards);
+  updateStats();
+}
+
+function filterBySet(setId) {
+  document.getElementById('search').value = '';
+  filteredCards = setId ? allCards.filter(c => c.setId === setId) : allCards;
+  renderCards(filteredCards);
+  updateStats();
+}
+
+function sortCards(by) {
+  filteredCards.sort((a, b) => {
+    if (by === 'name') return (a.name || '').localeCompare(b.name || '');
+    if (by === 'id') return (a.localId || '').localeCompare(b.localId || '', undefined, {numeric: true});
+    if (by === 'set') return (a.setId || '').localeCompare(b.setId || '');
+    return 0;
+  });
+  renderCards(filteredCards);
+}
+
+function setView(view) {
+  currentView = view;
+  document.querySelectorAll('[data-view]').forEach(b => b.classList.toggle('active', b.dataset.view === view));
+  document.getElementById('results').className = 'card-grid' + (view === 'list' ? ' list' : '');
+  renderCards(filteredCards);
+}
+
+function showCard(id) {
+  const card = allCards.find(c => c.id === id);
+  if (!card) return;
+  document.getElementById('modal-title').textContent = card.name;
+  document.getElementById('modal-img').src = card.image + '/high.webp';
+  document.getElementById('modal-name').textContent = card.name;
+  document.getElementById('modal-set').textContent = card.set || card.setId;
+  document.getElementById('modal-id').textContent = card.id;
+  document.getElementById('modal').classList.add('active');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('active');
+}
+
+// Events
+document.getElementById('search').addEventListener('input', e => search(e.target.value));
+document.getElementById('search').addEventListener('keydown', e => { if (e.key === 'Enter') e.preventDefault(); });
+document.getElementById('modal').addEventListener('click', e => { if (e.target.id === 'modal') closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+loadCards();
+</script>
 </body>
 </html>
