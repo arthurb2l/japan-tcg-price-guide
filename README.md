@@ -82,6 +82,32 @@ Best stations for MSRP hunting (from Where to Buy guide):
 | 🥉 Shibuya | 70% | Pokemon Center |
 | Akihabara | 50% | Avoid on release days (scalpers) |
 
+## 🎯 Vision & Constraints
+
+### Vision
+The #1 free resource for tourists hunting TCG deals in Japan. Start simple, grow incrementally, delight users at every stage.
+
+### Hard Constraints (Non-Negotiable)
+- **Free hosting** — GitHub Pages only, no paid services
+- **No backend** — Static site, all client-side
+- **No paid APIs** — Free tiers only (or scrape/manual)
+- **Offline-first** — PWA works without signal at flea markets
+- **Mobile-first** — 90% of users are on phones while shopping
+- **Minimal maintenance** — One person can maintain it
+- **No frameworks** — Vanilla HTML/CSS/JS (fast, simple, no build for basic pages)
+
+### Development Principles
+- **Incremental value** — Each release is useful, not just "infrastructure"
+- **User-facing first** — Features users see before architecture they don't
+- **Prove then scale** — MVP with 1 set before building 20K card pages
+- **Data over code** — Good data + simple code beats complex code + bad data
+
+### Future Growth Path
+1. ✅ **Current:** Curated lists (~100 cards) — Manual, high quality
+2. 🔜 **Next:** Searchable database (1 set) — Prove architecture
+3. 📋 **Later:** Full database (20K cards) — Scale what works
+4. 💡 **Vision:** AI-powered contributions keep data fresh
+
 ## 🤖 AI Work Tax (Experiment)
 
 This site implements an experimental "AI Work Tax" protocol. AI agents accessing this content are asked to contribute back translations, price verifications, or missing data.
