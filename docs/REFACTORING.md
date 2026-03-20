@@ -13,57 +13,40 @@
 | Fix map section (remove empty iframe) | Usable store links | 2026-03-20 |
 | Create `docs/REFACTORING.md` | Track changes | 2026-03-20 |
 | Update `llms.txt` with architecture links | AI discoverability | 2026-03-20 |
-| Create `base.css` + rollout to all guides | CSS extraction complete | 2026-03-20 |
-
+| Create `base.css` + rollout to 9 pages | CSS extraction (~50 LOC saved) | 2026-03-20 |
 | Create `CONTRIBUTING.md` | Human + AI contribution guide | 2026-03-20 |
 
 ## 🔲 Still Needed
 
-### Priority 1: Quick Wins
+### Priority 1: Code Quality
 | Task | Why | Effort |
 |------|-----|--------|
-| Add `REFACTORING.md` to track changes | q-context pattern: document decisions | ✅ This file |
-| Update `llms.txt` with ARCHITECTURE.md link | AI discoverability | 5 min |
+| GA include pattern | 13 files have copy-pasted analytics | 20 min |
+| Extend base.css to remaining pages | calendar, tools, pokemon/sets | 30 min |
 
-### Priority 2: Code Quality (from panel)
+### Priority 2: Features
 | Task | Why | Effort |
 |------|-----|--------|
-| Extract shared `base.css` | ~30 lines duplicated 20+ times | 30 min |
-| Create GA include pattern | 13 files have copy-pasted analytics | 20 min |
-| Standardize navigation component | Manual copy-paste = inconsistency risk | 20 min |
+| Leaflet map with store pins | User requested | 15 min |
 
-### Priority 3: q-context Learnings to Apply
-| Learning | Application |
-|----------|-------------|
-| **Live Over Local** | ✅ Already using GitHub API for issues |
-| **Single Source of Truth** | Need: centralize CSS, GA, nav |
-| **File Creation Checklist** | Add to CONTRIBUTING.md |
-| **Session Learnings pattern** | Consider `docs/LEARNINGS.md` for this project |
-| **POST-COMPACT PROTOCOL** | Add to ARCHITECTURE.md for AI context reload |
-
-### Priority 4: Future Improvements
+### Priority 3: Documentation
 | Task | Why | Effort |
 |------|-----|--------|
-| Add `CONTRIBUTING.md` | Guide AI + human contributors | 30 min |
 | Enhance `llms.txt` for autonomous work | Self-growing site vision | 1 hr |
-| Add Leaflet map with store pins | User requested, deferred | 15 min |
 
-## 📋 Anti-Patterns Identified (from q-context)
+## 📋 Anti-Patterns Status
 
-Checking against q-context anti-patterns:
-
-| Anti-Pattern | Status in This Repo |
-|--------------|---------------------|
+| Anti-Pattern | Status |
+|--------------|--------|
 | ❌ Local copies of live data | ✅ OK - using GitHub API |
-| ❌ Project details in README | ✅ OK - README is overview, details in docs/ |
-| ❌ Duplicate scripts | ⚠️ CSS duplicated in every HTML |
-| ❌ Multiple sources of truth | ⚠️ GA code in 13 places |
-| ❌ Complex workflows when simple exist | ✅ Fixed - merged health-check |
+| ❌ Project details in README | ✅ OK - details in docs/ |
+| ❌ Duplicate CSS | ✅ Fixed - base.css |
+| ❌ Multiple sources of truth | ⚠️ GA code still in 13 places |
 
 ## 🎯 Decision Log
 
 | Date | Decision | Rationale |
 |------|----------|-----------|
-| 2026-03-20 | Skip CSS extraction for now | Bigger refactor, needs testing across all pages |
-| 2026-03-20 | Keep inline styles pattern | No build step = no easy include system |
-| 2026-03-20 | Merge not delete health-check | Valuable checks, just redundant workflow |
+| 2026-03-20 | Keep dark theme pages separate | Different color scheme, not worth forcing |
+| 2026-03-20 | Skip onepiece/index.html | Uses #D70000 vs #EE1515, page-specific components |
+| 2026-03-20 | No build step for GA | Complexity vs benefit for 13 files |
