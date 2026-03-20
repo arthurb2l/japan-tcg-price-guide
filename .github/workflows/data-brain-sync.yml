@@ -28,9 +28,9 @@ jobs:
           const fs = require('fs');
           const brain = require('./scripts/data-brain');
           
-          // Priority sets for Japanese market
-          const SETS = ['sv2a', 'sv3', 'sv4', 'sv5', 'sv6'];
-          const MAX_CARDS_PER_SET = 20;
+          // Priority sets (TCGdex format)
+          const SETS = ['sv01', 'sv02', 'sv03', 'sv04', 'sv05'];
+          const MAX_CARDS_PER_SET = 10;
           
           async function main() {
             const results = { updated: new Date().toISOString(), sets: {} };
@@ -39,15 +39,12 @@ jobs:
               console.log(`\n📦 Processing ${setId}...`);
               const cards = [];
               
-              // Fetch top cards from set (chase cards, holos)
               for (let i = 1; i <= MAX_CARDS_PER_SET; i++) {
-                const cardId = `${setId}-${i}`;
+                const cardId = `${setId}-${String(i).padStart(3, '0')}`;
                 try {
                   const card = await brain.getCard(cardId);
                   if (card.name) cards.push(card);
-                } catch (e) {
-                  // Card doesn't exist, skip
-                }
+                } catch (e) {}
               }
               
               if (cards.length > 0) {
@@ -56,17 +53,8 @@ jobs:
               }
             }
             
-            // Save results
             fs.writeFileSync('data/brain-cache.json', JSON.stringify(results, null, 2));
             console.log('\n✅ Sync complete');
-            
-            // Show quota status
-            const quota = brain.getQuotaStatus();
-            quota.forEach(q => {
-              if (q.quota !== Infinity) {
-                console.log(`📊 ${q.id}: ${q.used}/${q.quota} (${q.percentUsed}%)`);
-              }
-            });
           }
           
           main().catch(e => { console.error(e); process.exit(1); });
