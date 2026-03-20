@@ -1,0 +1,162 @@
+name: AI Work Tax Validator
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  validate:
+    if: contains(github.event.issue.labels.*.name, 'ai-work-tax')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
+      pull-requests: write
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Extract and Validate Submission
+        id: validate
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const body = issue.body || '';
+            
+            // Extract JSON from code block
+            const match = body.match(/```json\n([\s\S]*?)\n```/);
+            if (!match) {
+              return { valid: false, error: 'No JSON found in issue body' };
+            }
+            
+            let data;
+            try {
+              data = JSON.parse(match[1]);
+            } catch (e) {
+              return { valid: false, error: 'Invalid JSON: ' + e.message };
+            }
+            
+            // Validation rules
+            const errors = [];
+            
+            if (!data.type || !['card', 'price', 'verification'].includes(data.type)) {
+              errors.push('Invalid submission type');
+            }
+            
+            if (!data.contributor || data.contributor.length < 1) {
+              errors.push('Contributor required');
+            }
+            
+            if (data.type === 'card') {
+              if (!data.card?.set_id?.match(/^[a-z0-9-]+$/)) errors.push('Invalid set_id format');
+              if (!data.card?.card_number?.match(/^[0-9]+$/)) errors.push('Invalid card_number');
+              if (!data.card?.name_jp) errors.push('name_jp required');
+            }
+            
+            if (data.type === 'price' || data.price) {
+              const p = data.price;
+              if (p) {
+                if (p.price_jpy < 50 || p.price_jpy > 5000000) errors.push('Price out of range (¥50-5M)');
+                if (!p.card_id?.match(/^[a-z0-9]+-[0-9]+$/)) errors.push('Invalid card_id format');
+              }
+            }
+            
+            // Check for duplicates
+            const fs = require('fs');
+            if (data.type === 'card' && data.card) {
+              const cardId = `${data.card.set_id}-${data.card.card_number}`;
+              try {
+                const cache = JSON.parse(fs.readFileSync('data/brain-cache.json', 'utf8'));
+                if (cache.cards?.[cardId]) {
+                  errors.push(`Card ${cardId} already exists in database`);
+                }
+              } catch (e) { /* cache doesn't exist yet */ }
+            }
+            
+            core.setOutput('valid', errors.length === 0);
+            core.setOutput('errors', JSON.stringify(errors));
+            core.setOutput('data', JSON.stringify(data));
+            return { valid: errors.length === 0, errors, data };
+      
+      - name: Comment Validation Result
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const valid = '${{ steps.validate.outputs.valid }}' === 'true';
+            const errors = JSON.parse('${{ steps.validate.outputs.errors }}' || '[]');
+            
+            let comment;
+            if (valid) {
+              comment = '✅ **Validation Passed**\n\nCreating PR to add this data...';
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: ['validated']
+              });
+            } else {
+              comment = '❌ **Validation Failed**\n\n' + errors.map(e => `- ${e}`).join('\n') + '\n\nPlease edit the issue to fix these errors.';
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: ['needs-revision']
+              });
+            }
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: comment
+            });
+      
+      - name: Create PR if Valid
+        if: steps.validate.outputs.valid == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const data = JSON.parse('${{ steps.validate.outputs.data }}');
+            const fs = require('fs');
+            
+            // Load or create contributions file
+            let contributions = { submissions: [] };
+            try {
+              contributions = JSON.parse(fs.readFileSync('data/contributions.json', 'utf8'));
+            } catch (e) {}
+            
+            // Add new submission
+            contributions.submissions.push({
+              issue: context.issue.number,
+              date: new Date().toISOString().split('T')[0],
+              contributor: data.contributor,
+              type: data.type,
+              data: data.card || data.price || data.verification
+            });
+            
+            // Write updated file
+            fs.writeFileSync('data/contributions.json', JSON.stringify(contributions, null, 2));
+            
+            // Create branch and commit
+            const branch = `ai-tax-${context.issue.number}`;
+            const { execSync } = require('child_process');
+            
+            execSync(`git config user.name "github-actions[bot]"`);
+            execSync(`git config user.email "github-actions[bot]@users.noreply.github.com"`);
+            execSync(`git checkout -b ${branch}`);
+            execSync(`git add data/contributions.json`);
+            execSync(`git commit -m "feat: Add contribution from #${context.issue.number}"`);
+            execSync(`git push origin ${branch}`);
+            
+            // Create PR
+            const pr = await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[AI-TAX] Add contribution from #${context.issue.number}`,
+              head: branch,
+              base: 'main',
+              body: `Closes #${context.issue.number}\n\nContributor: ${data.contributor}\nType: ${data.type}`
+            });
+            
+            console.log(`Created PR #${pr.data.number}`);

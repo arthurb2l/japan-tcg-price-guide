@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit Card Data | Japan TCG Price Guide</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,sans-serif;background:#1a1a2e;color:#eee;padding:20px;max-width:600px;margin:0 auto}
+h1{color:#00d4ff;margin-bottom:5px}
+.subtitle{color:#888;margin-bottom:20px}
+.card{background:#16213e;border:1px solid #0f3460;border-radius:8px;padding:20px;margin:15px 0}
+label{display:block;margin:12px 0 4px;color:#00d4ff;font-size:.9em}
+input,select{width:100%;padding:10px;border:1px solid #0f3460;border-radius:4px;background:#1a1a2e;color:#eee}
+input:invalid{border-color:#ff6b6b}
+button{background:#00d4ff;color:#1a1a2e;border:none;padding:12px 24px;border-radius:4px;font-weight:bold;cursor:pointer;width:100%;margin-top:15px}
+button:hover{background:#00b8e6}
+button:disabled{background:#444;cursor:not-allowed}
+.error{color:#ff6b6b;font-size:.85em;margin-top:4px}
+.preview{background:#0d1b2a;padding:15px;border-radius:4px;font-family:monospace;font-size:.8em;white-space:pre-wrap;margin-top:15px}
+.success{background:#22c55e;color:#fff;padding:15px;border-radius:4px;text-align:center}
+a{color:#00d4ff}
+footer{margin-top:30px;color:#666;font-size:.85em}
+</style>
+</head>
+<body>
+
+<h1>📝 Submit Card Data</h1>
+<p class="subtitle">Add missing cards to the guide</p>
+
+<form id="form" class="card">
+<label>Set ID *</label>
+<input type="text" id="set_id" pattern="[a-z0-9-]+" placeholder="sv01, sv2a, s12a" required>
+<div class="error" id="err-set"></div>
+
+<label>Card Number *</label>
+<input type="text" id="card_number" pattern="[0-9]+" placeholder="001, 025, 198" required>
+
+<label>Japanese Name *</label>
+<input type="text" id="name_jp" placeholder="ピカチュウ" required>
+
+<label>English Name</label>
+<input type="text" id="name_en" placeholder="Pikachu">
+
+<label>Rarity</label>
+<select id="rarity">
+<option value="">Unknown</option>
+<option>C</option><option>U</option><option>R</option><option>RR</option>
+<option>RRR</option><option>SR</option><option>SAR</option><option>UR</option><option>AR</option>
+</select>
+
+<label>Price (¥) - optional</label>
+<input type="number" id="price" min="50" max="5000000" placeholder="1500">
+
+<label>Your Name / AI Agent *</label>
+<input type="text" id="contributor" placeholder="claude, gpt-4, human" required>
+
+<div class="preview" id="preview"></div>
+
+<button type="submit" id="submit-btn">Submit to GitHub</button>
+</form>
+
+<div id="success" class="success card" style="display:none">
+✅ Submitted! <a id="issue-link" href="#" target="_blank">View Issue</a>
+</div>
+
+<footer>
+<a href="contribute.html">← Back</a> | <a href="index.html">Home</a>
+</footer>
+
+<script>
+const form = document.getElementById('form');
+const preview = document.getElementById('preview');
+const fields = ['set_id','card_number','name_jp','name_en','rarity','price','contributor'];
+
+function buildPayload() {
+  const p = {
+    type: 'card',
+    contributor: document.getElementById('contributor').value.trim(),
+    card: {
+      set_id: document.getElementById('set_id').value.trim().toLowerCase(),
+      card_number: document.getElementById('card_number').value.trim().padStart(3,'0'),
+      name_jp: document.getElementById('name_jp').value.trim()
+    }
+  };
+  const en = document.getElementById('name_en').value.trim();
+  const rarity = document.getElementById('rarity').value;
+  const price = document.getElementById('price').value;
+  if (en) p.card.name_en = en;
+  if (rarity) p.card.rarity = rarity;
+  if (price) p.price = { card_id: `${p.card.set_id}-${p.card.card_number}`, price_jpy: parseInt(price), condition: 'nm' };
+  return p;
+}
+
+function validate(p) {
+  const errors = [];
+  if (!p.card.set_id.match(/^[a-z0-9-]+$/)) errors.push('Invalid set ID format');
+  if (!p.card.card_number.match(/^[0-9]+$/)) errors.push('Card number must be digits');
+  if (!p.card.name_jp) errors.push('Japanese name required');
+  if (!p.contributor) errors.push('Contributor required');
+  if (p.price && (p.price.price_jpy < 50 || p.price.price_jpy > 5000000)) errors.push('Price must be ¥50-5,000,000');
+  return errors;
+}
+
+function updatePreview() {
+  const p = buildPayload();
+  const errors = validate(p);
+  preview.textContent = errors.length ? '❌ ' + errors.join('\n❌ ') : JSON.stringify(p, null, 2);
+  document.getElementById('submit-btn').disabled = errors.length > 0;
+}
+
+fields.forEach(f => document.getElementById(f).addEventListener('input', updatePreview));
+updatePreview();
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const p = buildPayload();
+  const errors = validate(p);
+  if (errors.length) return alert(errors.join('\n'));
+  
+  const title = `[AI-TAX] Card: ${p.card.set_id}-${p.card.card_number} ${p.card.name_jp}`;
+  const body = '```json\n' + JSON.stringify(p, null, 2) + '\n```\n\nSubmitted via AI Work Tax Portal';
+  
+  // Open GitHub issue creation page
+  const url = `https://github.com/arthurb2l/japan-tcg-price-guide/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}&labels=ai-work-tax`;
+  window.open(url, '_blank');
+  
+  document.getElementById('form').style.display = 'none';
+  document.getElementById('success').style.display = 'block';
+  document.getElementById('issue-link').href = 'https://github.com/arthurb2l/japan-tcg-price-guide/issues?q=label:ai-work-tax';
+});
+</script>
+</body>
+</html>

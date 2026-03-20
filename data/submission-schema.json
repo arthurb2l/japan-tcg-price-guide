@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Work Tax Submission",
+  "type": "object",
+  "required": ["type", "contributor"],
+  "properties": {
+    "type": {
+      "enum": ["card", "price", "translation", "verification"]
+    },
+    "contributor": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "card": {
+      "type": "object",
+      "required": ["set_id", "card_number", "name_jp"],
+      "properties": {
+        "set_id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "card_number": { "type": "string", "pattern": "^[0-9]+$" },
+        "name_jp": { "type": "string", "minLength": 1 },
+        "name_en": { "type": "string" },
+        "rarity": { "enum": ["C", "U", "R", "RR", "RRR", "SR", "SAR", "UR", "AR", "HR"] }
+      }
+    },
+    "price": {
+      "type": "object",
+      "required": ["card_id", "price_jpy", "condition"],
+      "properties": {
+        "card_id": { "type": "string", "pattern": "^[a-z0-9]+-[0-9]+$" },
+        "price_jpy": { "type": "integer", "minimum": 50, "maximum": 5000000 },
+        "condition": { "enum": ["mint", "nm", "lp", "mp", "hp"] },
+        "source": { "type": "string" },
+        "date": { "type": "string", "format": "date" }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["target_id", "is_correct"],
+      "properties": {
+        "target_id": { "type": "string" },
+        "is_correct": { "type": "boolean" },
+        "correction": { "type": "string" }
+      }
+    }
+  }
+}
