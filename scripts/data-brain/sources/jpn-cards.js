@@ -4,26 +4,13 @@
  * Good for: JP card metadata, JP names
  */
 
-const { execSync } = require('child_process');
+const { fetchJson } = require('../http');
 
 const BASE_URL = 'https://www.jpn-cards.com/v2';
 
-function fetchJson(url) {
-  try {
-    const result = execSync(`curl -sk "${url}"`, { 
-      encoding: 'utf8',
-      timeout: 10000 
-    });
-    return JSON.parse(result);
-  } catch (e) {
-    throw new Error(`Fetch failed: ${e.message}`);
-  }
-}
-
 async function healthCheck() {
   try {
-    const data = fetchJson(`${BASE_URL}/set/`);
-    // Check for the specific error they return when down
+    const data = await fetchJson(`${BASE_URL}/set/`);
     return data && data.status !== 'error';
   } catch {
     return false;
@@ -31,7 +18,7 @@ async function healthCheck() {
 }
 
 async function getCard(cardId, options = {}) {
-  const data = fetchJson(`${BASE_URL}/card/id=${cardId}`);
+  const data = await fetchJson(`${BASE_URL}/card/id=${cardId}`);
   const card = data.data?.[0];
   
   if (!card) return null;

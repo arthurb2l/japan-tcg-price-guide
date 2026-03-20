@@ -4,35 +4,15 @@
  * Good for: prices, price history, JP cards
  */
 
-const { execSync } = require('child_process');
+const { fetchJson } = require('../http');
 
 const BASE_URL = 'https://www.pokemonpricetracker.com/api/v2';
-
-// API key from environment
 const API_KEY = process.env.POKEMON_PRICE_TRACKER_KEY || '';
-
-function fetchJson(endpoint, params = {}) {
-  const url = new URL(`${BASE_URL}${endpoint}`);
-  Object.entries(params).forEach(([k, v]) => {
-    if (v !== undefined) url.searchParams.set(k, String(v));
-  });
-  
-  let cmd = `curl -s "${url.toString()}"`;
-  if (API_KEY) {
-    cmd = `curl -s -H "Authorization: Bearer ${API_KEY}" "${url.toString()}"`;
-  }
-  
-  try {
-    const result = execSync(cmd, { encoding: 'utf8', timeout: 15000 });
-    return JSON.parse(result);
-  } catch (e) {
-    throw new Error(`Fetch failed: ${e.message}`);
-  }
-}
 
 async function healthCheck() {
   try {
-    const data = fetchJson('/sets', { limit: 1 });
+    const headers = API_KEY ? { Authorization: `Bearer ${API_KEY}` } : {};
+    const data = await fetchJson(`${BASE_URL}/sets?limit=1`, { headers });
     return data && !data.error;
   } catch {
     return false;
@@ -40,13 +20,10 @@ async function healthCheck() {
 }
 
 async function getCard(cardId, options = {}) {
-  const params = {
-    search: cardId,
-    limit: 1,
-    language: options.language || 'english'
-  };
+  const url = `${BASE_URL}/cards?search=${encodeURIComponent(cardId)}&limit=1`;
+  const headers = API_KEY ? { Authorization: `Bearer ${API_KEY}` } : {};
   
-  const data = await fetchJson('/cards', params);
+  const data = await fetchJson(url, { headers });
   const card = data.data?.[0];
   
   if (!card) return null;
@@ -61,14 +38,11 @@ async function getCard(cardId, options = {}) {
 }
 
 async function getPrice(cardId, options = {}) {
-  const params = {
-    search: cardId,
-    limit: 1,
-    language: options.language === 'ja' ? 'japanese' : 'english',
-    includeHistory: options.includeHistory || false
-  };
+  const lang = options.language === 'ja' ? 'japanese' : 'english';
+  const url = `${BASE_URL}/cards?search=${encodeURIComponent(cardId)}&limit=1&language=${lang}`;
+  const headers = API_KEY ? { Authorization: `Bearer ${API_KEY}` } : {};
   
-  const data = await fetchJson('/cards', params);
+  const data = await fetchJson(url, { headers });
   const card = data.data?.[0];
   
   if (!card?.prices) return null;
@@ -78,17 +52,16 @@ async function getPrice(cardId, options = {}) {
     low: card.prices.low,
     mid: card.prices.mid,
     high: card.prices.high,
-    history: card.priceHistory || null,
     currency: 'USD',
     source: 'pokemonPriceTracker'
   };
 }
 
 async function getSets(options = {}) {
-  const params = {
-    language: options.language === 'ja' ? 'japanese' : 'english'
-  };
-  return fetchJson('/sets', params);
+  const lang = options.language === 'ja' ? 'japanese' : 'english';
+  const url = `${BASE_URL}/sets?language=${lang}`;
+  const headers = API_KEY ? { Authorization: `Bearer ${API_KEY}` } : {};
+  return fetchJson(url, { headers });
 }
 
 module.exports = {

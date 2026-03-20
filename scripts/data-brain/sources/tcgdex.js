@@ -4,21 +4,9 @@
  * Good for: metadata, images, some JP names
  */
 
-const { execSync } = require('child_process');
+const { fetchJson } = require('../http');
 
 const BASE_URL = 'https://api.tcgdex.net/v2';
-
-function fetchJson(url) {
-  try {
-    const result = execSync(`curl -s "${url}"`, { 
-      encoding: 'utf8',
-      timeout: 15000 
-    });
-    return JSON.parse(result);
-  } catch (e) {
-    throw new Error(`Fetch failed: ${e.message}`);
-  }
-}
 
 async function healthCheck() {
   try {
