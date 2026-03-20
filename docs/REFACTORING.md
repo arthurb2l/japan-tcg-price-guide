@@ -15,6 +15,8 @@
 | Update `llms.txt` with architecture links | AI discoverability | 2026-03-20 |
 | Create `base.css` + rollout to all guides | CSS extraction complete | 2026-03-20 |
 
+| Create `CONTRIBUTING.md` | Human + AI contribution guide | 2026-03-20 |
+
 ## 🔲 Still Needed
 
 ### Priority 1: Quick Wins
