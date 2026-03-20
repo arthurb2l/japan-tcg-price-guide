@@ -1,0 +1,81 @@
+name: Data Brain Sync
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 6 AM UTC (3 PM JST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Health Check
+        run: node scripts/data-brain/cli.js health
+      
+      - name: Sync Popular Sets
+        run: |
+          node << 'SCRIPT'
+          const fs = require('fs');
+          const brain = require('./scripts/data-brain');
+          
+          // Priority sets for Japanese market
+          const SETS = ['sv2a', 'sv3', 'sv4', 'sv5', 'sv6'];
+          const MAX_CARDS_PER_SET = 20;
+          
+          async function main() {
+            const results = { updated: new Date().toISOString(), sets: {} };
+            
+            for (const setId of SETS) {
+              console.log(`\n📦 Processing ${setId}...`);
+              const cards = [];
+              
+              // Fetch top cards from set (chase cards, holos)
+              for (let i = 1; i <= MAX_CARDS_PER_SET; i++) {
+                const cardId = `${setId}-${i}`;
+                try {
+                  const card = await brain.getCard(cardId);
+                  if (card.name) cards.push(card);
+                } catch (e) {
+                  // Card doesn't exist, skip
+                }
+              }
+              
+              if (cards.length > 0) {
+                results.sets[setId] = cards;
+                console.log(`  ✅ Got ${cards.length} cards`);
+              }
+            }
+            
+            // Save results
+            fs.writeFileSync('data/brain-cache.json', JSON.stringify(results, null, 2));
+            console.log('\n✅ Sync complete');
+            
+            // Show quota status
+            const quota = brain.getQuotaStatus();
+            quota.forEach(q => {
+              if (q.quota !== Infinity) {
+                console.log(`📊 ${q.id}: ${q.used}/${q.quota} (${q.percentUsed}%)`);
+              }
+            });
+          }
+          
+          main().catch(e => { console.error(e); process.exit(1); });
+          SCRIPT
+      
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "🧠 Data Brain sync $(date +%Y-%m-%d)"
+          git push
