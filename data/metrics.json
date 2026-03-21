@@ -1,8 +1,8 @@
 {
-  "generated": "2026-03-21T07:51:16.145Z",
+  "generated": "2026-03-21T07:59:41.204Z",
   "content": {
-    "totalCards": 15946,
-    "setsCount": 105,
+    "totalCards": 18663,
+    "setsCount": 134,
     "sets": [
       "sv01",
       "sv02",
@@ -108,9 +108,38 @@
       "ex13",
       "ex14",
       "ex15",
-      "ex16"
+      "ex16",
+      "swshp",
+      "smp",
+      "xyp",
+      "bwp",
+      "dpp",
+      "pl1",
+      "pl2",
+      "pl3",
+      "pl4",
+      "hgss1",
+      "hgss2",
+      "hgss3",
+      "hgss4",
+      "col1",
+      "ecard1",
+      "ecard2",
+      "ecard3",
+      "cel25",
+      "det1",
+      "dv1",
+      "pop1",
+      "pop2",
+      "pop3",
+      "pop4",
+      "pop5",
+      "pop6",
+      "pop7",
+      "pop8",
+      "pop9"
     ],
-    "lastSync": "2026-03-21T07:49:38.757Z"
+    "lastSync": "2026-03-21T07:58:47.130Z"
   },
   "health": {},
   "contributions": {
