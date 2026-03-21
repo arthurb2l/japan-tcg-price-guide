@@ -95,8 +95,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 <div class="nav">
   <a href="index.html">← Home</a>
   <div class="game-tabs">
-    <button class="game-tab active" data-game="all" onclick="filterByGame('all')">All</button>
-    <button class="game-tab pokemon" data-game="pokemon" onclick="filterByGame('pokemon')">Pokemon</button>
+    <button class="game-tab pokemon active" data-game="pokemon" onclick="filterByGame('pokemon')">Pokemon</button>
     <button class="game-tab onepiece" data-game="onepiece" onclick="filterByGame('onepiece')">One Piece</button>
   </div>
   <span style="margin-left:auto">
@@ -170,7 +169,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 </div>
 
 <script>
-let allCards = [], filteredCards = [], currentView = 'grid', currency = 'JPY', currentGame = 'all';
+let allCards = [], filteredCards = [], currentView = 'grid', currency = 'JPY', currentGame = 'pokemon';
 const rarityOrder = ['Common','Uncommon','Rare','Double Rare','Ultra Rare','Illustration Rare','Special Art Rare','Hyper Rare','Shiny Rare','ACE SPEC Rare'];
 // Static rates - JPY base (primary currency for Japan tourists)
 const rates = { JPY: 1, USD: 0.0067, EUR: 0.0062 };
