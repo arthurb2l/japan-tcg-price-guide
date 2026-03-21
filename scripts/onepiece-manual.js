@@ -95,8 +95,23 @@ const COMMON_PLAYABLES = [
   { id: "OP05-091", name: "Gecko Moria", nameJp: "ゲッコー・モリア", set: "OP-05", setName: "Awakening of the New Era", rarity: "SR", variant: null, price: { jpy: 3000, eur: 18 }, img: null },
 ];
 
+// Leader cards (deck centerpieces, always in demand)
+const LEADER_CARDS = [
+  { id: "OP01-001", name: "Monkey D. Luffy", nameJp: "モンキー・D・ルフィ", set: "OP-01", setName: "Romance Dawn", rarity: "L", variant: null, price: { jpy: 800, eur: 5 }, img: null },
+  { id: "OP01-002", name: "Roronoa Zoro", nameJp: "ロロノア・ゾロ", set: "OP-01", setName: "Romance Dawn", rarity: "L", variant: null, price: { jpy: 600, eur: 4 }, img: null },
+  { id: "OP02-001", name: "Edward Newgate", nameJp: "エドワード・ニューゲート", set: "OP-02", setName: "Paramount War", rarity: "L", variant: null, price: { jpy: 1200, eur: 7 }, img: null },
+  { id: "OP03-001", name: "Charlotte Katakuri", nameJp: "シャーロット・カタクリ", set: "OP-03", setName: "Pillars of Strength", rarity: "L", variant: null, price: { jpy: 1500, eur: 9 }, img: null },
+  { id: "OP04-001", name: "Donquixote Doflamingo", nameJp: "ドンキホーテ・ドフラミンゴ", set: "OP-04", setName: "Kingdoms of Intrigue", rarity: "L", variant: null, price: { jpy: 1000, eur: 6 }, img: null },
+  { id: "OP05-001", name: "Trafalgar Law", nameJp: "トラファルガー・ロー", set: "OP-05", setName: "Awakening of the New Era", rarity: "L", variant: null, price: { jpy: 2000, eur: 12 }, img: null },
+  { id: "OP05-002", name: "Monkey D. Luffy", nameJp: "モンキー・D・ルフィ", set: "OP-05", setName: "Awakening of the New Era", rarity: "L", variant: "Gear 5", price: { jpy: 3500, eur: 22 }, img: null },
+  { id: "OP06-001", name: "Sakazuki", nameJp: "サカズキ", set: "OP-06", setName: "Wings of the Captain", rarity: "L", variant: null, price: { jpy: 2500, eur: 15 }, img: null },
+  { id: "OP07-001", name: "Jewelry Bonney", nameJp: "ジュエリー・ボニー", set: "OP-07", setName: "500 Years in the Future", rarity: "L", variant: null, price: { jpy: 1800, eur: 11 }, img: null },
+  { id: "OP08-001", name: "Monkey D. Garp", nameJp: "モンキー・D・ガープ", set: "OP-08", setName: "Two Legends", rarity: "L", variant: null, price: { jpy: 2200, eur: 14 }, img: null },
+  { id: "OP09-001", name: "Kaido", nameJp: "カイドウ", set: "OP-09", setName: "Four Emperors", rarity: "L", variant: null, price: { jpy: 3000, eur: 18 }, img: null },
+];
+
 function buildCache() {
-  const allCards = [...GRAIL_CARDS, ...FINDABLE_CARDS, ...COMMON_PLAYABLES];
+  const allCards = [...GRAIL_CARDS, ...FINDABLE_CARDS, ...COMMON_PLAYABLES, ...LEADER_CARDS];
   const sets = {};
   
   allCards.forEach(card => {
@@ -128,7 +143,6 @@ function buildCache() {
   };
   
   fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
-
   console.log(`Saved ${allCards.length} One Piece cards to cache`);
   console.log(`Sets: ${Object.keys(sets).join(', ')}`);
 }

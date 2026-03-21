@@ -2,7 +2,7 @@
   "meta": {
     "lastUpdated": "2026-03-21",
     "source": "Manual from pricecharting.com + onepiece-cardgame.dev",
-    "totalCards": 40
+    "totalCards": 51
   },
   "sets": {
     "OP-09": [
@@ -48,6 +48,21 @@
         "price": {
           "jpy": 28000,
           "eur": 173,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP09-001",
+        "name": "Kaido",
+        "nameJp": "カイドウ",
+        "setId": "OP-09",
+        "set": "Four Emperors",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 3000,
+          "eur": 18,
           "updated": "2026-03-21"
         }
       }
@@ -110,6 +125,36 @@
         "price": {
           "jpy": 3000,
           "eur": 18,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP05-001",
+        "name": "Trafalgar Law",
+        "nameJp": "トラファルガー・ロー",
+        "setId": "OP-05",
+        "set": "Awakening of the New Era",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 2000,
+          "eur": 12,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP05-002",
+        "name": "Monkey D. Luffy",
+        "nameJp": "モンキー・D・ルフィ",
+        "setId": "OP-05",
+        "set": "Awakening of the New Era",
+        "rarity": "L",
+        "variant": "Gear 5",
+        "img": null,
+        "price": {
+          "jpy": 3500,
+          "eur": 22,
           "updated": "2026-03-21"
         }
       }
@@ -187,6 +232,21 @@
         "price": {
           "jpy": 1500,
           "eur": 9,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP02-001",
+        "name": "Edward Newgate",
+        "nameJp": "エドワード・ニューゲート",
+        "setId": "OP-02",
+        "set": "Paramount War",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 1200,
+          "eur": 7,
           "updated": "2026-03-21"
         }
       }
@@ -296,6 +356,36 @@
           "eur": 2,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP01-001",
+        "name": "Monkey D. Luffy",
+        "nameJp": "モンキー・D・ルフィ",
+        "setId": "OP-01",
+        "set": "Romance Dawn",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 800,
+          "eur": 5,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP01-002",
+        "name": "Roronoa Zoro",
+        "nameJp": "ロロノア・ゾロ",
+        "setId": "OP-01",
+        "set": "Romance Dawn",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 600,
+          "eur": 4,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "ST-01": [
@@ -392,6 +482,21 @@
           "eur": 11,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP03-001",
+        "name": "Charlotte Katakuri",
+        "nameJp": "シャーロット・カタクリ",
+        "setId": "OP-03",
+        "set": "Pillars of Strength",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 1500,
+          "eur": 9,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-04": [
@@ -439,6 +544,21 @@
           "eur": 15,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP04-001",
+        "name": "Donquixote Doflamingo",
+        "nameJp": "ドンキホーテ・ドフラミンゴ",
+        "setId": "OP-04",
+        "set": "Kingdoms of Intrigue",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 1000,
+          "eur": 6,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-06": [
@@ -469,6 +589,21 @@
         "price": {
           "jpy": 18000,
           "eur": 111,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP06-001",
+        "name": "Sakazuki",
+        "nameJp": "サカズキ",
+        "setId": "OP-06",
+        "set": "Wings of the Captain",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 2500,
+          "eur": 15,
           "updated": "2026-03-21"
         }
       }
@@ -518,6 +653,21 @@
           "eur": 49,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP07-001",
+        "name": "Jewelry Bonney",
+        "nameJp": "ジュエリー・ボニー",
+        "setId": "OP-07",
+        "set": "500 Years in the Future",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 1800,
+          "eur": 11,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-08": [
@@ -563,6 +713,21 @@
         "price": {
           "jpy": 12000,
           "eur": 74,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP08-001",
+        "name": "Monkey D. Garp",
+        "nameJp": "モンキー・D・ガープ",
+        "setId": "OP-08",
+        "set": "Two Legends",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 2200,
+          "eur": 14,
           "updated": "2026-03-21"
         }
       }
