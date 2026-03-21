@@ -146,7 +146,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 <div class="card-grid" id="results"></div>
 <div class="no-results" id="no-results" style="display:none">
   <p style="font-size:1.1em;margin-bottom:8px">No cards found</p>
-  <p style="font-size:.9em">Try a different search or clear filters</p>
+  <p style="font-size:.9em">Try a different search or <a href="#" onclick="clearSearch();return false">clear filters</a></p>
 </div>
 
 <!-- Modal -->
@@ -448,6 +448,14 @@ function showCard(id) {
 }
 
 function closeModal() { document.getElementById('modal').classList.remove('active'); }
+
+function clearSearch() {
+  document.getElementById('search').value = '';
+  document.getElementById('set-filter').value = '';
+  filteredCards = getGameCards();
+  renderCards();
+  updateStats();
+}
 
 // Events
 document.getElementById('search').addEventListener('input', doSearch);
