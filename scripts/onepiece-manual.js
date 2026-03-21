@@ -10,44 +10,46 @@ const CACHE_FILE = path.join(__dirname, '../data/onepiece-cache.json');
 // Auto-generate image URL from card ID
 const getImg = (id) => `https://en.onepiece-cardgame.com/images/cardlist/card/${id}.png`;
 
+// Card types: Leader, Character, Event, Stage
+// Colors: Red, Green, Blue, Purple, Black, Yellow
 // Cards from our onepiece/index.html guide, ordered by value
 const GRAIL_CARDS = [
   // OP-09 Four Emperors
-  { id: "OP09-118", name: "Gol D. Roger", nameJp: "ゴール・D・ロジャー", set: "OP-09", setName: "Four Emperors", rarity: "SEC", variant: "Manga", price: { jpy: 550000, eur: 3400 } },
+  { id: "OP09-118", name: "Gol D. Roger", nameJp: "ゴール・D・ロジャー", set: "OP-09", setName: "Four Emperors", rarity: "SEC", variant: "Manga", type: "Character", color: "Purple", cost: 10, power: 12000, counter: null, price: { jpy: 550000, eur: 3400 } },
   
   // OP-05 Awakening of the New Era  
-  { id: "OP05-119", name: "Monkey D. Luffy", nameJp: "モンキー・D・ルフィ", set: "OP-05", setName: "Awakening of the New Era", rarity: "SEC", variant: "Manga Gear 5", price: { jpy: 250000, eur: 1540 } },
+  { id: "OP05-119", name: "Monkey D. Luffy", nameJp: "モンキー・D・ルフィ", set: "OP-05", setName: "Awakening of the New Era", rarity: "SEC", variant: "Manga Gear 5", type: "Character", color: "Purple", cost: 5, power: 6000, counter: null, price: { jpy: 250000, eur: 1540 } },
   
   // OP-02 Paramount War
-  { id: "OP02-013", name: "Portgas D. Ace", nameJp: "ポートガス・D・エース", set: "OP-02", setName: "Paramount War", rarity: "SR", variant: "Manga", price: { jpy: 175000, eur: 1080 } },
+  { id: "OP02-013", name: "Portgas D. Ace", nameJp: "ポートガス・D・エース", set: "OP-02", setName: "Paramount War", rarity: "SR", variant: "Manga", type: "Character", color: "Red", cost: 7, power: 7000, counter: null, price: { jpy: 175000, eur: 1080 } },
   
   // OP-01 Romance Dawn
-  { id: "OP01-120", name: "Shanks", nameJp: "シャンクス", set: "OP-01", setName: "Romance Dawn", rarity: "SEC", variant: "Manga", price: { jpy: 85000, eur: 525 } },
-  { id: "OP01-003", name: "Monkey D. Luffy", nameJp: "モンキー・D・ルフィ", set: "OP-01", setName: "Romance Dawn", rarity: "L", variant: "Alt Art", price: { jpy: 60000, eur: 370 } },
+  { id: "OP01-120", name: "Shanks", nameJp: "シャンクス", set: "OP-01", setName: "Romance Dawn", rarity: "SEC", variant: "Manga", type: "Character", color: "Red", cost: 9, power: 10000, counter: null, price: { jpy: 85000, eur: 525 } },
+  { id: "OP01-003", name: "Monkey D. Luffy", nameJp: "モンキー・D・ルフィ", set: "OP-01", setName: "Romance Dawn", rarity: "L", variant: "Alt Art", type: "Leader", color: "Red", cost: null, power: 5000, counter: null, price: { jpy: 60000, eur: 370 } },
   
   // ST-01 Straw Hat Crew
-  { id: "ST01-012", name: "Monkey D. Luffy", nameJp: "モンキー・D・ルフィ", set: "ST-01", setName: "Straw Hat Crew", rarity: "L", variant: "Gold Signature", price: { jpy: 400000, eur: 2470 } },
+  { id: "ST01-012", name: "Monkey D. Luffy", nameJp: "モンキー・D・ルフィ", set: "ST-01", setName: "Straw Hat Crew", rarity: "L", variant: "Gold Signature", type: "Leader", color: "Red", cost: null, power: 5000, counter: null, price: { jpy: 400000, eur: 2470 } },
 ];
 
 const FINDABLE_CARDS = [
   // PRB-01 Premium Booster (uses OP01 card IDs with manga variant)
-  { id: "OP01-016", name: "Nami", nameJp: "ナミ", set: "PRB-01", setName: "Premium Booster", rarity: "SEC", variant: "Manga", price: { jpy: 35000, eur: 216 } },
-  { id: "OP01-017", name: "Nico Robin", nameJp: "ニコ・ロビン", set: "PRB-01", setName: "Premium Booster", rarity: "SEC", variant: "Manga", price: { jpy: 28000, eur: 173 } },
+  { id: "OP01-016", name: "Nami", nameJp: "ナミ", set: "PRB-01", setName: "Premium Booster", rarity: "SEC", variant: "Manga", type: "Character", color: "Red", cost: 1, power: 1000, counter: 1000, price: { jpy: 35000, eur: 216 } },
+  { id: "OP01-017", name: "Nico Robin", nameJp: "ニコ・ロビン", set: "PRB-01", setName: "Premium Booster", rarity: "SEC", variant: "Manga", type: "Character", color: "Red", cost: 3, power: 5000, counter: 1000, price: { jpy: 28000, eur: 173 } },
   
   // OP-03 Pillars of Strength
-  { id: "OP03-112", name: "Boa Hancock", nameJp: "ボア・ハンコック", set: "OP-03", setName: "Pillars of Strength", rarity: "SR", variant: "Alt Art", price: { jpy: 18000, eur: 111 } },
-  { id: "OP03-099", name: "Charlotte Katakuri", nameJp: "シャーロット・カタクリ", set: "OP-03", setName: "Pillars of Strength", rarity: "SEC", variant: "Manga", price: { jpy: 15000, eur: 93 } },
+  { id: "OP03-112", name: "Boa Hancock", nameJp: "ボア・ハンコック", set: "OP-03", setName: "Pillars of Strength", rarity: "SR", variant: "Alt Art", type: "Character", color: "Green", cost: 5, power: 6000, counter: 1000, price: { jpy: 18000, eur: 111 } },
+  { id: "OP03-099", name: "Charlotte Katakuri", nameJp: "シャーロット・カタクリ", set: "OP-03", setName: "Pillars of Strength", rarity: "SEC", variant: "Manga", type: "Character", color: "Yellow", cost: 10, power: 12000, counter: null, price: { jpy: 15000, eur: 93 } },
   
   // OP-04 Kingdoms of Intrigue
-  { id: "OP04-024", name: "Yamato", nameJp: "ヤマト", set: "OP-04", setName: "Kingdoms of Intrigue", rarity: "SR", variant: "Alt Art", price: { jpy: 12000, eur: 74 } },
-  { id: "OP04-112", name: "Sabo", nameJp: "サボ", set: "OP-04", setName: "Kingdoms of Intrigue", rarity: "SEC", variant: "Manga", price: { jpy: 20000, eur: 123 } },
+  { id: "OP04-024", name: "Yamato", nameJp: "ヤマト", set: "OP-04", setName: "Kingdoms of Intrigue", rarity: "SR", variant: "Alt Art", type: "Character", color: "Green", cost: 5, power: 6000, counter: 1000, price: { jpy: 12000, eur: 74 } },
+  { id: "OP04-112", name: "Sabo", nameJp: "サボ", set: "OP-04", setName: "Kingdoms of Intrigue", rarity: "SEC", variant: "Manga", type: "Character", color: "Blue", cost: 5, power: 6000, counter: null, price: { jpy: 20000, eur: 123 } },
   
   // OP-06 Wings of the Captain
-  { id: "OP06-086", name: "Roronoa Zoro", nameJp: "ロロノア・ゾロ", set: "OP-06", setName: "Wings of the Captain", rarity: "SEC", variant: "Manga", price: { jpy: 45000, eur: 278 } },
-  { id: "OP06-118", name: "Sanji", nameJp: "サンジ", set: "OP-06", setName: "Wings of the Captain", rarity: "SEC", variant: "Manga", price: { jpy: 18000, eur: 111 } },
+  { id: "OP06-086", name: "Roronoa Zoro", nameJp: "ロロノア・ゾロ", set: "OP-06", setName: "Wings of the Captain", rarity: "SEC", variant: "Manga", type: "Character", color: "Green", cost: 5, power: 7000, counter: null, price: { jpy: 45000, eur: 278 } },
+  { id: "OP06-118", name: "Sanji", nameJp: "サンジ", set: "OP-06", setName: "Wings of the Captain", rarity: "SEC", variant: "Manga", type: "Character", color: "Blue", cost: 4, power: 5000, counter: 1000, price: { jpy: 18000, eur: 111 } },
   
   // OP-07 500 Years in the Future
-  { id: "OP07-109", name: "Eustass Kid", nameJp: "ユースタス・キッド", set: "OP-07", setName: "500 Years in the Future", rarity: "SEC", variant: "Manga", price: { jpy: 25000, eur: 154 } },
+  { id: "OP07-109", name: "Eustass Kid", nameJp: "ユースタス・キッド", set: "OP-07", setName: "500 Years in the Future", rarity: "SEC", variant: "Manga", type: "Character", color: "Red", cost: 8, power: 9000, counter: null, price: { jpy: 25000, eur: 154 } },
   { id: "OP07-118", name: "Jewelry Bonney", nameJp: "ジュエリー・ボニー", set: "OP-07", setName: "500 Years in the Future", rarity: "SEC", variant: "Alt Art", price: { jpy: 15000, eur: 93 } },
   { id: "OP07-015", name: "Vegapunk", nameJp: "ベガパンク", set: "OP-07", setName: "500 Years in the Future", rarity: "SR", variant: "Alt Art", price: { jpy: 8000, eur: 49 } },
   
@@ -170,6 +172,11 @@ function buildCache() {
       set: card.setName,
       rarity: card.rarity,
       variant: card.variant,
+      type: card.type || null,
+      color: card.color || null,
+      cost: card.cost ?? null,
+      power: card.power || null,
+      counter: card.counter || null,
       img: getImg(card.id),
       price: {
         jpy: card.price.jpy,
