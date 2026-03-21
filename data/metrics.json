@@ -1,8 +1,8 @@
 {
-  "generated": "2026-03-21T02:05:34.564Z",
+  "generated": "2026-03-21T02:34:05.413Z",
   "content": {
-    "totalCards": 4437,
-    "setsCount": 23,
+    "totalCards": 4912,
+    "setsCount": 25,
     "sets": [
       "sv01",
       "sv02",
@@ -26,9 +26,11 @@
       "neo1",
       "gym1",
       "gym2",
-      "swsh9"
+      "swsh9",
+      "swsh12",
+      "swsh12.5"
     ],
-    "lastSync": "2026-03-21T02:04:34.769Z"
+    "lastSync": "2026-03-21T02:33:24.123Z"
   },
   "health": {},
   "contributions": {
