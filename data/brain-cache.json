@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-21T05:10:47.863Z",
+  "updated": "2026-03-21T05:37:11.650Z",
   "sets": {
     "sv01": [
       {
@@ -164671,6 +164671,2859 @@
           "eur": 0.24,
           "low": 0.02,
           "trend": 0.26
+        }
+      }
+    ],
+    "xy12": [
+      {
+        "id": "xy12-1",
+        "name": "Venusaur EX",
+        "localId": "1",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/1",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "Eske Yoshinob",
+        "hp": 180,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 5.2,
+          "low": 1.39,
+          "trend": 6.02
+        }
+      },
+      {
+        "id": "xy12-2",
+        "name": "M Venusaur EX",
+        "localId": "2",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/2",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "5ban Graphics",
+        "hp": 230,
+        "types": [
+          "Grass"
+        ],
+        "stage": "MEGA",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": null
+      },
+      {
+        "id": "xy12-3",
+        "name": "Caterpie",
+        "localId": "3",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/3",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 40,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "xy12-4",
+        "name": "Metapod",
+        "localId": "4",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/4",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Ken Sugimori",
+        "hp": 70,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.14
+        }
+      },
+      {
+        "id": "xy12-5",
+        "name": "Weedle",
+        "localId": "5",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/5",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 40,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "xy12-6",
+        "name": "Kakuna",
+        "localId": "6",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/6",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "xy12-7",
+        "name": "Beedrill",
+        "localId": "7",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/7",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 120,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.23,
+          "low": 0.02,
+          "trend": 0.22
+        }
+      },
+      {
+        "id": "xy12-8",
+        "name": "Tangela",
+        "localId": "8",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/8",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "xy12-9",
+        "name": "Charmander",
+        "localId": "9",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/9",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 60,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.15,
+          "low": 0.02,
+          "trend": 0.1
+        }
+      },
+      {
+        "id": "xy12-10",
+        "name": "Charmeleon",
+        "localId": "10",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/10",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 80,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.23,
+          "low": 0.02,
+          "trend": 0.21
+        }
+      },
+      {
+        "id": "xy12-11",
+        "name": "Charizard",
+        "localId": "11",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/11",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 150,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 182.13,
+          "low": 29,
+          "trend": 118.81
+        }
+      },
+      {
+        "id": "xy12-12",
+        "name": "Charizard EX",
+        "localId": "12",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/12",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "PLANETA",
+        "hp": 180,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 15.6,
+          "low": 4,
+          "trend": 17.14
+        }
+      },
+      {
+        "id": "xy12-13",
+        "name": "M Charizard EX",
+        "localId": "13",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/13",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "5ban Graphics",
+        "hp": 220,
+        "types": [
+          "Fire"
+        ],
+        "stage": "MEGA",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": null
+      },
+      {
+        "id": "xy12-14",
+        "name": "Vulpix",
+        "localId": "14",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/14",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 60,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.13
+        }
+      },
+      {
+        "id": "xy12-15",
+        "name": "Ninetales",
+        "localId": "15",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/15",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 100,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.87,
+          "low": 1.45,
+          "trend": 5.64
+        }
+      },
+      {
+        "id": "xy12-16",
+        "name": "Ninetales BREAK",
+        "localId": "16",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/16",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "5ban Graphics",
+        "hp": 140,
+        "types": [
+          "Fire"
+        ],
+        "stage": "BREAK",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.42,
+          "low": 0.75,
+          "trend": 3.5
+        }
+      },
+      {
+        "id": "xy12-17",
+        "name": "Growlithe",
+        "localId": "17",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/17",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 70,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.11,
+          "low": 0.02,
+          "trend": 0.14
+        }
+      },
+      {
+        "id": "xy12-18",
+        "name": "Arcanine",
+        "localId": "18",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/18",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 130,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.41,
+          "low": 0.02,
+          "trend": 0.2
+        }
+      },
+      {
+        "id": "xy12-19",
+        "name": "Ponyta",
+        "localId": "19",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/19",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 60,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "xy12-20",
+        "name": "Magmar",
+        "localId": "20",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/20",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Ken Sugimori",
+        "hp": 80,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.14
+        }
+      },
+      {
+        "id": "xy12-21",
+        "name": "Blastoise EX",
+        "localId": "21",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/21",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "Eske Yoshinob",
+        "hp": 180,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 6.08,
+          "low": 1,
+          "trend": 6.56
+        }
+      },
+      {
+        "id": "xy12-22",
+        "name": "M Blastoise EX",
+        "localId": "22",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/22",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "5ban Graphics",
+        "hp": 220,
+        "types": [
+          "Water"
+        ],
+        "stage": "MEGA",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": null
+      },
+      {
+        "id": "xy12-23",
+        "name": "Poliwag",
+        "localId": "23",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/23",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "xy12-24",
+        "name": "Poliwhirl",
+        "localId": "24",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/24",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Ken Sugimori",
+        "hp": 80,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.13,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "xy12-25",
+        "name": "Poliwrath",
+        "localId": "25",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/25",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 140,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.13,
+          "low": 0.06,
+          "trend": 2.58
+        }
+      },
+      {
+        "id": "xy12-26",
+        "name": "Slowbro EX",
+        "localId": "26",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/26",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "Ayaka Yoshida",
+        "hp": 180,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.58,
+          "low": 0.75,
+          "trend": 2.85
+        }
+      },
+      {
+        "id": "xy12-27",
+        "name": "M Slowbro EX",
+        "localId": "27",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/27",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "5ban Graphics",
+        "hp": 220,
+        "types": [
+          "Water"
+        ],
+        "stage": "MEGA",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": null
+      },
+      {
+        "id": "xy12-28",
+        "name": "Seel",
+        "localId": "28",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/28",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 80,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "xy12-29",
+        "name": "Dewgong",
+        "localId": "29",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/29",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 120,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.23,
+          "low": 0.02,
+          "trend": 0.17
+        }
+      },
+      {
+        "id": "xy12-30",
+        "name": "Staryu",
+        "localId": "30",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/30",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Keiji Kinebuchi",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "xy12-31",
+        "name": "Starmie",
+        "localId": "31",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/31",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Keiji Kinebuchi",
+        "hp": 90,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.19,
+          "low": 0.02,
+          "trend": 0.24
+        }
+      },
+      {
+        "id": "xy12-32",
+        "name": "Starmie BREAK",
+        "localId": "32",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/32",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "5ban Graphics",
+        "hp": 130,
+        "types": [
+          "Water"
+        ],
+        "stage": "BREAK",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.53,
+          "low": 0.45,
+          "trend": 2.7
+        }
+      },
+      {
+        "id": "xy12-33",
+        "name": "Magikarp",
+        "localId": "33",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/33",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 30,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.11,
+          "low": 0.02,
+          "trend": 0.16
+        }
+      },
+      {
+        "id": "xy12-34",
+        "name": "Gyarados",
+        "localId": "34",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/34",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 130,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 5.27,
+          "low": 1,
+          "trend": 7.19
+        }
+      },
+      {
+        "id": "xy12-35",
+        "name": "Pikachu",
+        "localId": "35",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/35",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 60,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.68,
+          "low": 0.02,
+          "trend": 1.02
+        }
+      },
+      {
+        "id": "xy12-36",
+        "name": "Raichu",
+        "localId": "36",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/36",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 100,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.94,
+          "low": 0.8,
+          "trend": 3.43
+        }
+      },
+      {
+        "id": "xy12-37",
+        "name": "Magnemite",
+        "localId": "37",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/37",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Keiji Kinebuchi",
+        "hp": 50,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "xy12-38",
+        "name": "Magneton",
+        "localId": "38",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/38",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Keiji Kinebuchi",
+        "hp": 80,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.93,
+          "low": 0.5,
+          "trend": 2
+        }
+      },
+      {
+        "id": "xy12-39",
+        "name": "Voltorb",
+        "localId": "39",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/39",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Keiji Kinebuchi",
+        "hp": 60,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "xy12-40",
+        "name": "Electrode",
+        "localId": "40",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/40",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Keiji Kinebuchi",
+        "hp": 80,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.23,
+          "low": 0.02,
+          "trend": 0.14
+        }
+      },
+      {
+        "id": "xy12-41",
+        "name": "Electabuzz",
+        "localId": "41",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/41",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 70,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.54,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "xy12-42",
+        "name": "Zapdos",
+        "localId": "42",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/42",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 110,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 11.73,
+          "low": 1,
+          "trend": 10.76
+        }
+      },
+      {
+        "id": "xy12-43",
+        "name": "Nidoran♂",
+        "localId": "43",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/43",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 60,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": null
+      },
+      {
+        "id": "xy12-44",
+        "name": "Nidorino",
+        "localId": "44",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/44",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 90,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.13,
+          "low": 0.02,
+          "trend": 0.1
+        }
+      },
+      {
+        "id": "xy12-45",
+        "name": "Nidoking",
+        "localId": "45",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/45",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 150,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.92,
+          "low": 0.5,
+          "trend": 5.96
+        }
+      },
+      {
+        "id": "xy12-46",
+        "name": "Nidoking BREAK",
+        "localId": "46",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/46",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "5ban Graphics",
+        "hp": 180,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "BREAK",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.91,
+          "low": 0.5,
+          "trend": 2.84
+        }
+      },
+      {
+        "id": "xy12-47",
+        "name": "Gastly",
+        "localId": "47",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/47",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Keiji Kinebuchi",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "xy12-48",
+        "name": "Haunter",
+        "localId": "48",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/48",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "hp": 70,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.14,
+          "low": 0.02,
+          "trend": 0.24
+        }
+      },
+      {
+        "id": "xy12-49",
+        "name": "Drowzee",
+        "localId": "49",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/49",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 60,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "xy12-50",
+        "name": "Koffing",
+        "localId": "50",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/50",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 60,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.11,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "xy12-51",
+        "name": "Mewtwo",
+        "localId": "51",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/51",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 130,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.94,
+          "low": 0.15,
+          "trend": 2.85
+        }
+      },
+      {
+        "id": "xy12-52",
+        "name": "Mewtwo EX",
+        "localId": "52",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/52",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "Eske Yoshinob",
+        "hp": 180,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.28,
+          "low": 2,
+          "trend": 8.33
+        }
+      },
+      {
+        "id": "xy12-53",
+        "name": "Mew",
+        "localId": "53",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/53",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.94,
+          "low": 0.15,
+          "trend": 2.85
+        }
+      },
+      {
+        "id": "xy12-54",
+        "name": "Sandshrew",
+        "localId": "54",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/54",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 60,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "xy12-55",
+        "name": "Diglett",
+        "localId": "55",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/55",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Keiji Kinebuchi",
+        "hp": 40,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "xy12-56",
+        "name": "Dugtrio",
+        "localId": "56",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/56",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Keiji Kinebuchi",
+        "hp": 90,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.18,
+          "low": 0.02,
+          "trend": 0.12
+        }
+      },
+      {
+        "id": "xy12-57",
+        "name": "Machop",
+        "localId": "57",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/57",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 70,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "xy12-58",
+        "name": "Machoke",
+        "localId": "58",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/58",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Ken Sugimori",
+        "hp": 90,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.13,
+          "low": 0.02,
+          "trend": 0.1
+        }
+      },
+      {
+        "id": "xy12-59",
+        "name": "Machamp",
+        "localId": "59",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/59",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 160,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.67,
+          "low": 0.48,
+          "trend": 2.05
+        }
+      },
+      {
+        "id": "xy12-60",
+        "name": "Machamp BREAK",
+        "localId": "60",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/60",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "5ban Graphics",
+        "hp": 190,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "BREAK",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.67,
+          "low": 0.48,
+          "trend": 2.05
+        }
+      },
+      {
+        "id": "xy12-61",
+        "name": "Onix",
+        "localId": "61",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/61",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 100,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.1
+        }
+      },
+      {
+        "id": "xy12-62",
+        "name": "Hitmonchan",
+        "localId": "62",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/62",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 90,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.17,
+          "low": 0.5,
+          "trend": 1.49
+        }
+      },
+      {
+        "id": "xy12-63",
+        "name": "Clefairy",
+        "localId": "63",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/63",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 40,
+        "types": [
+          "Fairy"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.38,
+          "low": 0.89,
+          "trend": 4
+        }
+      },
+      {
+        "id": "xy12-64",
+        "name": "Pidgeot EX",
+        "localId": "64",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/64",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "Eske Yoshinob",
+        "hp": 170,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.41,
+          "low": 0.49,
+          "trend": 2.17
+        }
+      },
+      {
+        "id": "xy12-65",
+        "name": "M Pidgeot EX",
+        "localId": "65",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/65",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "5ban Graphics",
+        "hp": 220,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "MEGA",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": null
+      },
+      {
+        "id": "xy12-66",
+        "name": "Rattata",
+        "localId": "66",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/66",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 40,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "xy12-67",
+        "name": "Raticate",
+        "localId": "67",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/67",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.13,
+          "low": 0.02,
+          "trend": 0.16
+        }
+      },
+      {
+        "id": "xy12-68",
+        "name": "Farfetch'd",
+        "localId": "68",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/68",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 70,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.21,
+          "low": 0.02,
+          "trend": 0.2
+        }
+      },
+      {
+        "id": "xy12-69",
+        "name": "Doduo",
+        "localId": "69",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/69",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "xy12-70",
+        "name": "Chansey",
+        "localId": "70",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/70",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 120,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.52,
+          "low": 1,
+          "trend": 4.04
+        }
+      },
+      {
+        "id": "xy12-71",
+        "name": "Porygon",
+        "localId": "71",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/71",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Tomoaki Imakuni",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.11
+        }
+      },
+      {
+        "id": "xy12-72",
+        "name": "Dragonite EX",
+        "localId": "72",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/72",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "Ayaka Yoshida",
+        "hp": 180,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.08,
+          "low": 1,
+          "trend": 7.07
+        }
+      },
+      {
+        "id": "xy12-73",
+        "name": "Blastoise Spirit Link",
+        "localId": "73",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/73",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "5ban Graphics",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.22
+        }
+      },
+      {
+        "id": "xy12-74",
+        "name": "Brock's Grit",
+        "localId": "74",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/74",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Ken Sugimori",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.11,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "xy12-75",
+        "name": "Charizard Spirit Link",
+        "localId": "75",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/75",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "5ban Graphics",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.28,
+          "low": 0.02,
+          "trend": 0.52
+        }
+      },
+      {
+        "id": "xy12-76",
+        "name": "Devolution Spray",
+        "localId": "76",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/76",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.13
+        }
+      },
+      {
+        "id": "xy12-77",
+        "name": "Energy Retrieval",
+        "localId": "77",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/77",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.13,
+          "low": 0.02,
+          "trend": 0.1
+        }
+      },
+      {
+        "id": "xy12-78",
+        "name": "Full Heal",
+        "localId": "78",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/78",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "xy12-79",
+        "name": "Maintenance",
+        "localId": "79",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/79",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "xy12-80",
+        "name": "Misty's Determination",
+        "localId": "80",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/80",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Ken Sugimori",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "xy12-81",
+        "name": "Pidgeot Spirit Link",
+        "localId": "81",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/81",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "5ban Graphics",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.13,
+          "low": 0.02,
+          "trend": 0.11
+        }
+      },
+      {
+        "id": "xy12-82",
+        "name": "Pokédex",
+        "localId": "82",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/82",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.12,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "xy12-83",
+        "name": "Potion",
+        "localId": "83",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/83",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "xy12-84",
+        "name": "Professor Oak's Hint",
+        "localId": "84",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/84",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Ken Sugimori",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.11,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "xy12-85",
+        "name": "Revive",
+        "localId": "85",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/85",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "xy12-86",
+        "name": "Slowbro Spirit Link",
+        "localId": "86",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/86",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "5ban Graphics",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.13,
+          "low": 0.02,
+          "trend": 0.12
+        }
+      },
+      {
+        "id": "xy12-87",
+        "name": "Super Potion",
+        "localId": "87",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/87",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "xy12-88",
+        "name": "Switch",
+        "localId": "88",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/88",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.15,
+          "low": 0.02,
+          "trend": 0.1
+        }
+      },
+      {
+        "id": "xy12-89",
+        "name": "Venusaur Spirit Link",
+        "localId": "89",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/89",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "5ban Graphics",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.22,
+          "low": 0.02,
+          "trend": 0.26
+        }
+      },
+      {
+        "id": "xy12-90",
+        "name": "Double Colorless Energy",
+        "localId": "90",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/90",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.31,
+          "low": 0.02,
+          "trend": 0.24
+        }
+      },
+      {
+        "id": "xy12-91",
+        "name": "Grass Energy",
+        "localId": "91",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/91",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.19
+        }
+      },
+      {
+        "id": "xy12-92",
+        "name": "Fire Energy",
+        "localId": "92",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/92",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.32,
+          "low": 0.02,
+          "trend": 0.65
+        }
+      },
+      {
+        "id": "xy12-93",
+        "name": "Water Energy",
+        "localId": "93",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/93",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.41,
+          "low": 0.02,
+          "trend": 0.45
+        }
+      },
+      {
+        "id": "xy12-94",
+        "name": "Lightning Energy",
+        "localId": "94",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/94",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.21,
+          "low": 0.02,
+          "trend": 0.22
+        }
+      },
+      {
+        "id": "xy12-95",
+        "name": "Psychic Energy",
+        "localId": "95",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/95",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.14,
+          "low": 0.02,
+          "trend": 0.83
+        }
+      },
+      {
+        "id": "xy12-96",
+        "name": "Fighting Energy",
+        "localId": "96",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/96",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.14,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "xy12-97",
+        "name": "Darkness Energy",
+        "localId": "97",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/97",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.79,
+          "low": 0.3,
+          "trend": 2.96
+        }
+      },
+      {
+        "id": "xy12-98",
+        "name": "Metal Energy",
+        "localId": "98",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/98",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.57,
+          "low": 0.02,
+          "trend": 0.61
+        }
+      },
+      {
+        "id": "xy12-99",
+        "name": "Fairy Energy",
+        "localId": "99",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/99",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Common",
+        "types": [
+          "Fairy"
+        ],
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.69,
+          "low": 0.05,
+          "trend": 0.39
+        }
+      },
+      {
+        "id": "xy12-100",
+        "name": "M Venusaur EX",
+        "localId": "100",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/100",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "5ban Graphics",
+        "hp": 230,
+        "types": [
+          "Grass"
+        ],
+        "stage": "MEGA",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": null
+      },
+      {
+        "id": "xy12-101",
+        "name": "M Charizard EX",
+        "localId": "101",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/101",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "5ban Graphics",
+        "hp": 220,
+        "types": [
+          "Fire"
+        ],
+        "stage": "MEGA",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": null
+      },
+      {
+        "id": "xy12-102",
+        "name": "M Blastoise EX",
+        "localId": "102",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/102",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "5ban Graphics",
+        "hp": 220,
+        "types": [
+          "Water"
+        ],
+        "stage": "MEGA",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": null
+      },
+      {
+        "id": "xy12-103",
+        "name": "Mewtwo EX",
+        "localId": "103",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/103",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "Ryo Ueda",
+        "hp": 180,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.28,
+          "low": 2,
+          "trend": 8.33
+        }
+      },
+      {
+        "id": "xy12-104",
+        "name": "Pidgeot EX",
+        "localId": "104",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/104",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "Ryo Ueda",
+        "hp": 170,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.41,
+          "low": 0.49,
+          "trend": 2.17
+        }
+      },
+      {
+        "id": "xy12-105",
+        "name": "M Pidgeot EX",
+        "localId": "105",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/105",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "5ban Graphics",
+        "hp": 220,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "MEGA",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": null
+      },
+      {
+        "id": "xy12-106",
+        "name": "Dragonite EX",
+        "localId": "106",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/106",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "Ryo Ueda",
+        "hp": 180,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.08,
+          "low": 1,
+          "trend": 7.07
+        }
+      },
+      {
+        "id": "xy12-107",
+        "name": "Brock's Grit",
+        "localId": "107",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/107",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "Hitoshi Ariga",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.11,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "xy12-108",
+        "name": "Misty's Determination",
+        "localId": "108",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/108",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Ultra Rare",
+        "illustrator": "Megumi Mizutani",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "xy12-109",
+        "name": "ナッシー[Exeggutor]",
+        "localId": "109",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/109",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Secret Rare",
+        "illustrator": "Dr.Ooyama",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": null
+      },
+      {
+        "id": "xy12-110",
+        "name": "Flying Pikachu",
+        "localId": "110",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/110",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Secret Rare",
+        "illustrator": "Toshinao Aoki",
+        "hp": 40,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.43,
+          "low": 0.5,
+          "trend": 7.55
+        }
+      },
+      {
+        "id": "xy12-111",
+        "name": "Surfing Pikachu",
+        "localId": "111",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/111",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Secret Rare",
+        "illustrator": "Toshinao Aoki",
+        "hp": 50,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.72,
+          "low": 2.5,
+          "trend": 18.23
+        }
+      },
+      {
+        "id": "xy12-112",
+        "name": "Imakuni?'s Doduo",
+        "localId": "112",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/112",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Secret Rare",
+        "illustrator": "Imakuni?",
+        "hp": 50,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.83,
+          "low": 1,
+          "trend": 3.9
+        }
+      },
+      {
+        "id": "xy12-113",
+        "name": "Here Comes Team Rocket!",
+        "localId": "113",
+        "image": "https://assets.tcgdex.net/en/xy/xy12/113",
+        "set": "Evolutions",
+        "setId": "xy12",
+        "rarity": "Secret Rare",
+        "illustrator": "Ken Sugimori",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.59,
+          "low": 0.2,
+          "trend": 1.99
         }
       }
     ]
