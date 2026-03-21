@@ -1,47 +1,47 @@
 {
-  "lastUpdated": "2026-03-21T07:49:44.755Z",
+  "lastUpdated": "2026-03-21T07:58:52.701Z",
   "shards": {
     "sv": {
       "file": "sv.json",
       "cards": 3633,
       "sets": 17,
-      "size": 1170101
+      "size": 1128215
     },
     "vintage": {
       "file": "vintage.json",
-      "cards": 1070,
-      "sets": 11,
-      "size": 384154
+      "cards": 2883,
+      "sets": 35,
+      "size": 633116
     },
     "swsh": {
       "file": "swsh.json",
-      "cards": 3313,
-      "sets": 16,
-      "size": 673189
+      "cards": 3600,
+      "sets": 17,
+      "size": 721463
     },
     "sm": {
       "file": "sm.json",
-      "cards": 2557,
-      "sets": 15,
-      "size": 676313
+      "cards": 2801,
+      "sets": 16,
+      "size": 709912
     },
     "xy": {
       "file": "xy.json",
-      "cards": 1520,
-      "sets": 12,
-      "size": 316374
+      "cards": 1736,
+      "sets": 13,
+      "size": 348625
     },
     "bw": {
       "file": "bw.json",
-      "cards": 1315,
-      "sets": 11,
-      "size": 179994
+      "cards": 1416,
+      "sets": 12,
+      "size": 194697
     },
     "dp": {
       "file": "dp.json",
-      "cards": 844,
-      "sets": 7,
-      "size": 115381
+      "cards": 900,
+      "sets": 8,
+      "size": 123631
     },
     "ex": {
       "file": "ex.json",

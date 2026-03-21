@@ -2,7 +2,7 @@
   "meta": {
     "lastUpdated": "2026-03-21",
     "source": "Manual from pricecharting.com + onepiece-cardgame.dev",
-    "totalCards": 51
+    "totalCards": 61
   },
   "sets": {
     "OP-09": [
@@ -157,6 +157,21 @@
           "eur": 22,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP05-030",
+        "name": "I Will Surpass You",
+        "nameJp": "お前を超えていく",
+        "setId": "OP-05",
+        "set": "Awakening of the New Era",
+        "rarity": "R",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 600,
+          "eur": 4,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-02": [
@@ -242,6 +257,36 @@
         "setId": "OP-02",
         "set": "Paramount War",
         "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 1200,
+          "eur": 7,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP02-119",
+        "name": "Radical Beam",
+        "nameJp": "ラジカルビーム",
+        "setId": "OP-02",
+        "set": "Paramount War",
+        "rarity": "UC",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 200,
+          "eur": 1.2,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP02-018",
+        "name": "Jinbe",
+        "nameJp": "ジンベエ",
+        "setId": "OP-02",
+        "set": "Paramount War",
+        "rarity": "SR",
         "variant": null,
         "img": null,
         "price": {
@@ -386,6 +431,51 @@
           "eur": 4,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP01-029",
+        "name": "Gum-Gum Red Roc",
+        "nameJp": "ゴムゴムの火拳銃",
+        "setId": "OP-01",
+        "set": "Romance Dawn",
+        "rarity": "R",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 400,
+          "eur": 2.5,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP01-006",
+        "name": "Usopp",
+        "nameJp": "ウソップ",
+        "setId": "OP-01",
+        "set": "Romance Dawn",
+        "rarity": "C",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 100,
+          "eur": 0.6,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP01-017",
+        "name": "Nico Robin",
+        "nameJp": "ニコ・ロビン",
+        "setId": "OP-01",
+        "set": "Romance Dawn",
+        "rarity": "R",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 500,
+          "eur": 3,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "ST-01": [
@@ -497,6 +587,36 @@
           "eur": 9,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP03-089",
+        "name": "Overheat",
+        "nameJp": "大噴火",
+        "setId": "OP-03",
+        "set": "Pillars of Strength",
+        "rarity": "R",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 350,
+          "eur": 2,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP03-013",
+        "name": "Boa Hancock",
+        "nameJp": "ボア・ハンコック",
+        "setId": "OP-03",
+        "set": "Pillars of Strength",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 2000,
+          "eur": 12,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-04": [
@@ -557,6 +677,36 @@
         "price": {
           "jpy": 1000,
           "eur": 6,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP04-056",
+        "name": "Gravity Blade",
+        "nameJp": "重力刀",
+        "setId": "OP-04",
+        "set": "Kingdoms of Intrigue",
+        "rarity": "R",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 500,
+          "eur": 3,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP04-044",
+        "name": "Perona",
+        "nameJp": "ペローナ",
+        "setId": "OP-04",
+        "set": "Kingdoms of Intrigue",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 1500,
+          "eur": 9,
           "updated": "2026-03-21"
         }
       }

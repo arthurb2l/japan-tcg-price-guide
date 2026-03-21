@@ -110,8 +110,22 @@ const LEADER_CARDS = [
   { id: "OP09-001", name: "Kaido", nameJp: "カイドウ", set: "OP-09", setName: "Four Emperors", rarity: "L", variant: null, price: { jpy: 3000, eur: 18 }, img: null },
 ];
 
+// Event cards and popular characters
+const EVENT_CARDS = [
+  { id: "OP01-029", name: "Gum-Gum Red Roc", nameJp: "ゴムゴムの火拳銃", set: "OP-01", setName: "Romance Dawn", rarity: "R", variant: null, price: { jpy: 400, eur: 2.5 }, img: null },
+  { id: "OP02-119", name: "Radical Beam", nameJp: "ラジカルビーム", set: "OP-02", setName: "Paramount War", rarity: "UC", variant: null, price: { jpy: 200, eur: 1.2 }, img: null },
+  { id: "OP03-089", name: "Overheat", nameJp: "大噴火", set: "OP-03", setName: "Pillars of Strength", rarity: "R", variant: null, price: { jpy: 350, eur: 2 }, img: null },
+  { id: "OP04-056", name: "Gravity Blade", nameJp: "重力刀", set: "OP-04", setName: "Kingdoms of Intrigue", rarity: "R", variant: null, price: { jpy: 500, eur: 3 }, img: null },
+  { id: "OP05-030", name: "I Will Surpass You", nameJp: "お前を超えていく", set: "OP-05", setName: "Awakening of the New Era", rarity: "R", variant: null, price: { jpy: 600, eur: 4 }, img: null },
+  { id: "OP01-006", name: "Usopp", nameJp: "ウソップ", set: "OP-01", setName: "Romance Dawn", rarity: "C", variant: null, price: { jpy: 100, eur: 0.6 }, img: null },
+  { id: "OP01-017", name: "Nico Robin", nameJp: "ニコ・ロビン", set: "OP-01", setName: "Romance Dawn", rarity: "R", variant: null, price: { jpy: 500, eur: 3 }, img: null },
+  { id: "OP02-018", name: "Jinbe", nameJp: "ジンベエ", set: "OP-02", setName: "Paramount War", rarity: "SR", variant: null, price: { jpy: 1200, eur: 7 }, img: null },
+  { id: "OP03-013", name: "Boa Hancock", nameJp: "ボア・ハンコック", set: "OP-03", setName: "Pillars of Strength", rarity: "SR", variant: null, price: { jpy: 2000, eur: 12 }, img: null },
+  { id: "OP04-044", name: "Perona", nameJp: "ペローナ", set: "OP-04", setName: "Kingdoms of Intrigue", rarity: "SR", variant: null, price: { jpy: 1500, eur: 9 }, img: null },
+];
+
 function buildCache() {
-  const allCards = [...GRAIL_CARDS, ...FINDABLE_CARDS, ...COMMON_PLAYABLES, ...LEADER_CARDS];
+  const allCards = [...GRAIL_CARDS, ...FINDABLE_CARDS, ...COMMON_PLAYABLES, ...LEADER_CARDS, ...EVENT_CARDS];
   const sets = {};
   
   allCards.forEach(card => {
