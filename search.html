@@ -55,6 +55,17 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 .card-grid.text .card-item .name{font-size:1.1em;margin:0 0 5px}
 .card-grid.text .card-item .set{font-size:.9em}
 .card-grid.text .card-item .details{margin-top:8px;font-size:.85em;color:#444;line-height:1.5}
+/* Full view */
+.card-grid.full{display:flex;flex-direction:column;gap:20px}
+.card-grid.full .card-item{display:grid;grid-template-columns:180px 1fr;gap:15px;text-align:left;padding:15px;align-items:start}
+.card-grid.full .card-item img{width:100%;border-radius:6px}
+.card-grid.full .card-item .info{display:flex;flex-direction:column;gap:4px}
+.card-grid.full .card-item .name{font-size:1.2em;font-weight:700;margin:0}
+.card-grid.full .card-item .meta{font-size:.85em;color:#666}
+.card-grid.full .card-item .price{font-size:1em;color:#2a7;font-weight:600;margin-top:8px}
+.card-grid.full .card-item .types{display:flex;gap:5px;margin-top:5px}
+.card-grid.full .card-item .type-badge{background:#eee;padding:2px 8px;border-radius:10px;font-size:.75em}
+@media(max-width:500px){.card-grid.full .card-item{grid-template-columns:120px 1fr}}
 .no-results{text-align:center;padding:50px 20px;color:#666}
 /* Modal */
 .modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.85);z-index:1000;padding:20px;overflow-y:auto}
@@ -97,6 +108,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
   <div class="filter-group">
     <span class="filter-label">View:</span>
     <button class="filter-btn active" data-view="grid" onclick="setView('grid')">Images</button>
+    <button class="filter-btn" data-view="full" onclick="setView('full')">Full</button>
     <button class="filter-btn" data-view="checklist" onclick="setView('checklist')">Checklist</button>
     <button class="filter-btn" data-view="text" onclick="setView('text')">Text</button>
   </div>
@@ -243,6 +255,19 @@ function renderCards() {
         <div class="name">${c.name}${c.price ? ' · ' + formatPrice(c.price.eur) : ''}</div>
         <div class="set">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown rarity'}</div>
         <div class="details">${c.types ? 'Type: ' + c.types.join(', ') : ''} ${c.hp ? '· HP: ' + c.hp : ''}</div>
+      </div>
+    `).join('');
+  } else if (currentView === 'full') {
+    grid.innerHTML = cards.map(c => `
+      <div class="card-item" onclick="showCard('${c.id}')">
+        <img src="${c.image}/high.webp" alt="${c.name}" loading="lazy">
+        <div class="info">
+          <div class="name">${c.name}</div>
+          <div class="meta">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown'}</div>
+          ${c.types ? '<div class="types">' + c.types.map(t => '<span class="type-badge">' + t + '</span>').join('') + '</div>' : ''}
+          ${c.hp ? '<div class="meta">HP: ' + c.hp + '</div>' : ''}
+          ${c.price ? '<div class="price">' + formatPrice(c.price.eur) + (c.price.low ? ' <span style="color:#888;font-weight:400">(low: ' + formatPrice(c.price.low) + ')</span>' : '') + '</div>' : ''}
+        </div>
       </div>
     `).join('');
   } else {
