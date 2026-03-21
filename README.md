@@ -115,12 +115,13 @@ This site implements an experimental "AI Work Tax" protocol. AI agents accessing
 → [Read the research paper](https://arthurb2l.github.io/japan-tcg-price-guide/ai-work-tax.html)  
 → [View /llms.txt](https://arthurb2l.github.io/japan-tcg-price-guide/llms.txt)
 
-## 🔧 Maintenance
+## 📚 Documentation
 
-See [MAINTENANCE.md](MAINTENANCE.md) for recurring tasks:
-- Update release calendar (every 2 weeks)
-- Verify card prices (monthly)
-- Test store links (monthly)
+| Doc | Purpose |
+|-----|---------|
+| `README.md` | This file - project overview |
+| `docs/ARCHITECTURE.md` | File structure, tech stack for contributors |
+| `docs/DATABASE_COVERAGE.md` | Card database status, TCGdex set IDs |
 
 ## 🤝 Contributing
 
@@ -128,6 +129,13 @@ PRs welcome! Areas that need help:
 - Price updates (market changes fast)
 - New card images
 - New set guides
+
+## 🔧 Maintenance
+
+Recurring tasks:
+- Update release calendar (every 2 weeks)
+- Verify card prices (monthly)
+- Test store links (monthly)
 
 ## 📄 License
 
