@@ -1,41 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-91JR7LD30P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-91JR7LD30P');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Guides | Japan TCG Price Guide</title>
 <link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
 <style>
 body{max-width:600px;padding:20px}
-h1{margin-bottom:20px}
-a:hover{text-decoration:underline}
+h1{margin-bottom:10px}
+.filters{display:flex;gap:8px;margin-bottom:20px}
+.filter-btn{padding:8px 16px;border:2px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:.85em}
+.filter-btn:hover{border-color:#222}
+.filter-btn.active{background:#222;color:#fff;border-color:#222}
 ul{list-style:none}
 li{background:#fff;padding:15px;margin:10px 0;border-radius:8px;border:1px solid #ddd}
 li:hover{border-color:#EE1515}
+li.pokemon{border-left:4px solid #EE1515}
+li.onepiece{border-left:4px solid #D70000}
+li.both{border-left:4px solid #222}
+li.hidden{display:none}
 .desc{color:#666;font-size:.85em;margin-top:5px}
+.tag{font-size:.7em;padding:2px 6px;border-radius:10px;margin-left:8px}
+.tag.pokemon{background:#fee;color:#EE1515}
+.tag.onepiece{background:#fee;color:#D70000}
+.tag.both{background:#eee;color:#666}
+a{text-decoration:none;color:#222}
+a:hover{text-decoration:underline}
 </style>
 <link rel="icon" href="/japan-tcg-price-guide/favicon.ico">
 </head>
 <body>
 <p><a href="../">← Home</a></p>
 <h1>📚 Guides</h1>
+<div class="filters">
+  <button class="filter-btn active" onclick="filter('all')">All</button>
+  <button class="filter-btn" onclick="filter('pokemon')">⚡ Pokemon</button>
+  <button class="filter-btn" onclick="filter('onepiece')">🏴‍☠️ One Piece</button>
+</div>
 <ul>
-<li><a href="useful-phrases.html">🗣️ Useful Japanese Phrases</a><div class="desc">Essential phrases for buying cards at flea markets</div></li>
-<li><a href="flea-market-tips.html">🏪 Flea Market Hunting Tips</a><div class="desc">How to find deals at Japanese flea markets, Hard-Off, recycle shops</div></li>
-<li><a href="beginners-guide.html">📖 Pokemon Beginner's Guide</a><div class="desc">Getting started with Japanese Pokemon card collecting</div></li>
-<li><a href="onepiece-guide.html">🏴‍☠️ One Piece TCG Guide</a><div class="desc">Collecting One Piece cards in Japan - rarity, prices, where to buy</div></li>
-<li><a href="best-packs.html">🏆 Best Packs to Buy</a><div class="desc">EV rankings for Pokemon booster packs</div></li>
-<li><a href="most-valuable-cards.html">💎 Most Valuable Cards</a><div class="desc">Top chase cards and their market values</div></li>
-<li><a href="pricing-methodology.html">📊 Pricing Methodology</a><div class="desc">How we calculate prices and recommendations</div></li>
+<li class="both" data-game="both"><a href="useful-phrases.html">🗣️ Useful Japanese Phrases</a><span class="tag both">Both</span><div class="desc">Essential phrases for buying cards at flea markets</div></li>
+<li class="both" data-game="both"><a href="flea-market-tips.html">🏪 Flea Market Hunting Tips</a><span class="tag both">Both</span><div class="desc">How to find deals at Japanese flea markets, Hard-Off, recycle shops</div></li>
+<li class="both" data-game="both"><a href="where-to-buy.html">🛒 Where to Buy</a><span class="tag both">Both</span><div class="desc">Card shops, convenience stores, and online options in Japan</div></li>
+<li class="pokemon" data-game="pokemon"><a href="beginners-guide.html">📖 Pokemon Beginner's Guide</a><span class="tag pokemon">Pokemon</span><div class="desc">Getting started with Japanese Pokemon card collecting</div></li>
+<li class="pokemon" data-game="pokemon"><a href="best-packs.html">🏆 Best Packs to Buy</a><span class="tag pokemon">Pokemon</span><div class="desc">EV rankings for Pokemon booster packs</div></li>
+<li class="pokemon" data-game="pokemon"><a href="most-valuable-cards.html">💎 Most Valuable Pokemon Cards</a><span class="tag pokemon">Pokemon</span><div class="desc">Top chase cards and their market values</div></li>
+<li class="onepiece" data-game="onepiece"><a href="onepiece-guide.html">🏴‍☠️ One Piece TCG Guide</a><span class="tag onepiece">One Piece</span><div class="desc">Collecting One Piece cards in Japan - rarity, prices, where to buy</div></li>
+<li class="both" data-game="both"><a href="pricing-methodology.html">📊 Pricing Methodology</a><span class="tag both">Both</span><div class="desc">How we calculate prices and recommendations</div></li>
 </ul>
+<script>
+function filter(game) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('li[data-game]').forEach(li => {
+    const show = game === 'all' || li.dataset.game === game || li.dataset.game === 'both';
+    li.classList.toggle('hidden', !show);
+  });
+  history.replaceState(null, '', game === 'all' ? location.pathname : `?game=${game}`);
+}
+// Check URL param on load
+const gameParam = new URLSearchParams(location.search).get('game');
+if (gameParam) {
+  document.querySelectorAll('li[data-game]').forEach(li => {
+    const show = li.dataset.game === gameParam || li.dataset.game === 'both';
+    li.classList.toggle('hidden', !show);
+  });
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.toggle('active', b.textContent.toLowerCase().includes(gameParam));
+  });
+  document.querySelector('.filter-btn.active') || document.querySelector('.filter-btn').classList.add('active');
+}
+</script>
 <footer id="site-footer"></footer>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
 </body>

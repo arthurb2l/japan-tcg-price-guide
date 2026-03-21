@@ -1,606 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-91JR7LD30P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-91JR7LD30P');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>One Piece TCG Price Guide | Japan Flea Market Deals</title>
-<meta name="description" content="Find underpriced One Piece cards at Japanese flea markets, Hard-Off & recycle shops. Japanese prices, flip potential, chase cards.">
+<title>One Piece Card Price Guide Japan | Flea Market Deals</title>
+<meta name="description" content="Search One Piece TCG cards with Japanese prices. Free offline guide for finding deals at flea markets, Hard-Off & recycle shops.">
+<link rel="manifest" href="/japan-tcg-price-guide/manifest.json">
+<meta name="theme-color" content="#D70000">
 <link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
 <style>
-/* One Piece Theme overrides */
-a{color:#D70000}
-h1{text-align:center;font-size:1.6em;margin:15px 0}
-h2{color:#fff;font-size:1.3em;margin:20px 0 10px;padding:8px 12px;background:#D70000;border-radius:4px;scroll-margin-top:60px}
-h3{color:#D70000;font-size:1.1em;margin:15px 0 8px}
-.nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:10px 0 20px;position:sticky;top:0;background:#f5f5f5;padding:8px 0;z-index:100;border-bottom:3px solid #222}
-.nav a{background:#fff;color:#222;padding:8px 4px;border-radius:8px;text-decoration:none;font-size:.7em;border:1px solid #ddd;text-align:center;line-height:1.2}
-.nav a:hover{background:#D70000;color:#fff;border-color:#D70000}
-.nav .emoji{font-size:1.3em;display:block;margin-bottom:2px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin:10px 0}
-.card{background:#fff;border-radius:8px;overflow:hidden;border:1px solid #222;transition:transform .2s,box-shadow .2s}
-.card:hover{transform:scale(1.02);border-color:#D70000;box-shadow:0 4px 12px rgba(215,0,0,0.2)}
-.card img{width:100%;height:220px;object-fit:contain;background:#fafafa;padding:8px;cursor:zoom-in}
-.card-info{padding:10px}
-.card-info h4{color:#222;font-size:.95em;margin-bottom:4px}
-.card-info .jp{color:#D70000;font-size:.85em;font-weight:bold;margin-bottom:3px}
-.card-info .set{color:#666;font-size:.8em}
-.card-info .price{color:#D70000;font-weight:bold;font-size:1em;margin:4px 0}
-.card-info .tip{color:#666;font-size:.78em;line-height:1.3}
-.tag-buy{background:#dcfce7;color:#166534;border:1px solid #166534}
-.tag-flip{background:#fee2e2;color:#D70000;border:1px solid #D70000}
-.legend{background:#fff;padding:12px;border-radius:8px;margin:10px 0;font-size:.85em;border:1px solid #ddd}
-.tip-box{background:#e0f2fe;border:1px solid #62C3F8;border-radius:8px;padding:10px;margin:10px 0;font-size:.85em;color:#0369a1}
-.section-divider{height:4px;background:#222;margin:25px 0;border-radius:2px;position:relative}
-.section-divider::after{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:20px;height:20px;background:#FFCD00;border:4px solid #222;border-radius:50%}
-.placeholder{width:100%;height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fafafa;border-bottom:1px solid #ddd}
-.placeholder .name{color:#D70000;font-size:14px;font-weight:bold;text-align:center;padding:0 10px}
-.placeholder .sub{color:#666;font-size:11px;margin-top:5px}
-@media(max-width:600px){.grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}.card img,.placeholder{height:160px}.placeholder .name{font-size:12px}}
-.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:1000;cursor:pointer;justify-content:center;align-items:center}
-.lightbox.active{display:flex}
-.lightbox img{max-width:95%;max-height:95%;object-fit:contain;border-radius:8px}
-.lightbox-close{position:absolute;top:15px;right:20px;color:#fff;font-size:2em;cursor:pointer}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;padding:15px}
+.header{display:flex;align-items:center;gap:15px;margin-bottom:20px}
+.header img{width:50px;height:50px}
+.header h1{font-size:1.4em;color:#D70000}
+.game-switch{margin-left:auto;background:#222;color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-size:.85em}
+.game-switch:hover{background:#EE1515}
+.search-wrap{margin-bottom:20px}
+.search-box{width:100%;padding:14px 18px;font-size:16px;border:3px solid #D70000;border-radius:10px;outline:none}
+.search-box:focus{box-shadow:0 0 0 3px rgba(215,0,0,0.2)}
+.stats{text-align:center;color:#666;font-size:.85em;margin:-10px 0 15px}
+.section{margin-bottom:25px}
+.section h2{font-size:1.1em;margin-bottom:12px;color:#222;display:flex;align-items:center;gap:8px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.tile{background:#fff;border:2px solid #ddd;border-radius:10px;padding:15px 12px;text-decoration:none;color:#222;text-align:center;transition:all .15s}
+.tile:hover{border-color:#D70000;transform:translateY(-2px)}
+.tile .emoji{font-size:1.8em;display:block;margin-bottom:8px}
+.tile .label{font-weight:600;font-size:.85em}
+.tile .sub{color:#666;font-size:.75em;margin-top:4px}
+.sets-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px}
+.set-tile{background:#fff;border:1px solid #ddd;border-radius:6px;padding:10px 8px;text-decoration:none;color:#222;text-align:center;font-size:.8em;transition:all .15s}
+.set-tile:hover{border-color:#D70000}
+.set-tile.hot{border-color:#D70000;border-width:2px}
+.set-tile .name{font-weight:600;line-height:1.2}
+footer{text-align:center;padding:20px 0;color:#666;font-size:.8em;border-top:1px solid #ddd;margin-top:30px}
 </style>
-<link rel="icon" href="favicon.svg">
-<meta property="og:title" content="One Piece Card Price Guide Japan">
-<meta property="og:description" content="Manga parallels, leaders, and chase cards for Japanese One Piece TCG">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://arthurb2l.github.io/japan-tcg-price-guide/favicon.svg">
-<meta name="twitter:card" content="summary">
-<link rel="manifest" href="/japan-tcg-price-guide/manifest.json">
+<script>if('serviceWorker' in navigator) navigator.serviceWorker.register('/japan-tcg-price-guide/sw.js');</script>
 </head>
 <body>
-<h1>🏴‍☠️ One Piece TCG — Japan Flea Market Price Guide</h1>
-<p style="text-align:center;color:#666;font-size:.85em">日本のフリマ・ハードオフ・リサイクルショップで使うガイド<br>Find underpriced One Piece cards at Japanese flea markets | Prices in ¥ (JPY)</p>
 
-<div class="nav">
-<a href="../" style="background:#222;color:#fff;border-color:#222"><span class="emoji">🏠</span>Home</a>
-<a href="../calendar/"><span class="emoji">📅</span>Calendar</a>
-<a href="#chase"><span class="emoji">💎</span>Chase</a>
-<a href="#findable"><span class="emoji">🔍</span>Findable</a>
-<a href="#leaders"><span class="emoji">👑</span>Leaders</a>
-<a href="#promos"><span class="emoji">🎁</span>Promos</a>
-<a href="#packs"><span class="emoji">🎰</span>Packs</a>
-<a href="#boxes"><span class="emoji">📦</span>Boxes</a>
-<a href="../tools/ev-calculator.html"><span class="emoji">🧮</span>EV Calc</a>
+<div class="header">
+  <img src="images/onepiece-logo.png" alt="One Piece" onerror="this.outerHTML='<div style=font-size:2.5em>🏴‍☠️</div>'">
+  <h1>One Piece TCG Japan</h1>
+  <a href="../pokemon/" class="game-switch">⚡ Pokemon</a>
 </div>
 
-<div class="legend">
-<strong>🏷️ Tag Guide:</strong>
-<span class="tag tag-buy">💰 Buy under ¥X</span> = Max price for NM condition
-<span class="tag tag-flip">🔥 Nx flip</span> = Resale multiplier potential
-<span class="tag tag-flip">🔥 Grail</span> = Holy grail, any deal is good
+<div class="search-wrap">
+  <input type="text" id="search" class="search-box" placeholder="Search One Piece cards (e.g. Luffy, Shanks, OP01-120)" onkeyup="if(event.key==='Enter')doSearch()">
 </div>
+<div class="stats" id="stats">Loading cards...</div>
 
-<div class="section-divider"></div>
-
-<h2 id="chase">💎 GRAIL CARDS — Most Valuable</h2>
-<p style="color:#666;font-size:.85em;margin-bottom:10px">Holy grails of One Piece TCG. Know these so you recognize value.</p>
-<div class="grid">
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-shanks-alt-art.jpg" alt="Shanks Manga Rare OP01-120">
-<div class="card-info">
-<h4>Shanks — Manga Parallel</h4>
-<div class="jp">シャンクス（漫画パラレル）</div>
-<div class="set">OP01-120 SEC | OP-01 Romance Dawn</div>
-<div class="price">Market: ¥75,000-100,000 (NM)</div>
-<span class="tag tag-buy">💰 Buy under ¥40,000</span> <span class="tag tag-flip">🔥 Grail</span>
-<div class="tip">Iconic OPTCG card. JP version cheaper than EN. <a href="https://www.pricecharting.com/game/one-piece-japanese-romance-dawn/shanks-manga-alternate-art-op01-120" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-roger-alt-art.jpg" alt="Gol D. Roger Manga Rare OP09-118">
-<div class="card-info">
-<h4>Gol D. Roger — Manga Parallel</h4>
-<div class="jp">ゴール・D・ロジャー（漫画パラレル）</div>
-<div class="set">OP09-118 SEC | OP-09 Four Emperors</div>
-<div class="price">Market: ¥500,000-650,000 (NM)</div>
-<span class="tag tag-buy">💰 Buy under ¥300,000</span> <span class="tag tag-flip">🔥 Grail</span>
-<div class="tip">The Pirate King. Most valuable OPTCG card. <a href="https://www.pricecharting.com/game/one-piece-emperors-in-the-new-world/goldroger-manga-op09-118" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-ace-alt-art.jpg" alt="Portgas D. Ace Manga Rare OP02-013">
-<div class="card-info">
-<h4>Portgas D. Ace — Manga Parallel</h4>
-<div class="jp">ポートガス・D・エース（漫画パラレル）</div>
-<div class="set">OP02-013 SR | OP-02 Paramount War</div>
-<div class="price">Market: ¥150,000-200,000 (NM)</div>
-<span class="tag tag-buy">💰 Buy under ¥80,000</span> <span class="tag tag-flip">🔥 Grail</span>
-<div class="tip">Beloved character. Manga parallels = premium. <a href="https://www.pricecharting.com/game/one-piece-paramount-war/portgasdace-manga-op02-013" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-luffy-leader-alt-art.jpg" alt="Monkey D. Luffy Alt Art Leader OP01-003">
-<div class="card-info">
-<h4>Monkey D. Luffy — Alt Art Leader</h4>
-<div class="jp">モンキー・D・ルフィ（リーダーパラレル）</div>
-<div class="set">OP01-003 L | OP-01 Romance Dawn</div>
-<div class="price">Market: ¥50,000-75,000 (NM)</div>
-<span class="tag tag-buy">💰 Buy under ¥20,000</span> <span class="tag tag-flip">🔥 3x flip</span>
-<div class="tip">Alt art leaders from OP-01 undervalued at flea markets. <a href="https://www.pricecharting.com/game/one-piece-japanese-romance-dawn/monkeydluffy-alt-art-op01-003" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-luffy-gear5-manga-op05-119.jpg" alt="Monkey D. Luffy Gear 5 Manga OP05-119">
-<div class="card-info">
-<h4>Monkey D. Luffy — Gear 5 Manga</h4>
-<div class="jp">モンキー・D・ルフィ（ギア5 漫画）</div>
-<div class="set">OP05-119 SEC | OP-05 Awakening of the New Era</div>
-<div class="price">Market: ¥200,000-300,000 (NM)</div>
-<span class="tag tag-buy">💰 Buy under ¥100,000</span> <span class="tag tag-flip">🔥 Grail</span>
-<div class="tip">THE iconic OPTCG card. Gear 5 reveal moment. <a href="https://www.pricecharting.com/game/one-piece-awakening-of-the-new-era/monkeydluffy-manga-op05-119" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-luffy-gold-signature-st01-012.jpg" alt="Monkey D. Luffy Oda Gold Signature ST01-012">
-<div class="card-info">
-<h4>Monkey D. Luffy — Oda Gold Signature</h4>
-<div class="jp">モンキー・D・ルフィ（尾田サイン金箔）</div>
-<div class="set">ST01-012 | Starter Deck</div>
-<div class="price">Market: ¥400,000-500,000 (NM)</div>
-<span class="tag tag-buy">💰 Buy under ¥250,000</span> <span class="tag tag-flip">🔥 Grail</span>
-<div class="tip">Eiichiro Oda gold-stamped signature. Ultra rare. <a href="https://www.pricecharting.com/game/one-piece-straw-hat-crew/monkeydluffy-alternate-art-gold-stamped-signature-st01-012" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-nami-manga-prb01.jpg" alt="Nami Manga Parallel PRB-01">
-<div class="card-info">
-<h4>Nami — Manga Parallel (PRB-01)</h4>
-<div class="jp">ナミ（漫画パラレル）</div>
-<div class="set">OP01-016 | PRB-01 The Best</div>
-<div class="price">Market: ¥60,000-80,000 (NM)</div>
-<span class="tag tag-buy">💰 Buy under ¥35,000</span> <span class="tag tag-flip">🔥 Grail</span>
-<div class="tip">PRB-01 exclusive manga version. OOP set. <a href="https://www.pricecharting.com/game/one-piece-romance-dawn/nami-manga-prb01-op01-016" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-chopper-manga-eb01-006.jpg" alt="Tony Tony Chopper Manga EB01-006">
-<div class="card-info">
-<h4>Tony Tony Chopper — Manga</h4>
-<div class="jp">トニートニー・チョッパー（漫画）</div>
-<div class="set">EB01-006 SEC | EB-01 Memorial Collection</div>
-<div class="price">Market: ¥150,000-200,000 (NM)</div>
-<span class="tag tag-buy">💰 Buy under ¥80,000</span> <span class="tag tag-flip">🔥 Grail</span>
-<div class="tip">Fan favorite. Manga Chopper extremely rare. <a href="https://www.pricecharting.com/game/one-piece-memorial-collection/tony-tonychopper-manga-eb01-006" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-zoro-manga-op06-118.jpg" alt="Roronoa Zoro Manga OP06-118">
-<div class="card-info">
-<h4>Roronoa Zoro — Manga</h4>
-<div class="jp">ロロノア・ゾロ（漫画）</div>
-<div class="set">OP06-118 SEC | OP-06 Wings of the Captain</div>
-<div class="price">Market: ¥100,000-130,000 (NM)</div>
-<span class="tag tag-buy">💰 Buy under ¥55,000</span> <span class="tag tag-flip">🔥 Grail</span>
-<div class="tip">Zoro's manga debut. Always in demand. <a href="https://www.pricecharting.com/game/one-piece-wings-of-the-captain/roronoa-zoro-manga-op06-118" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-</div>
-
-<div class="section-divider"></div>
-
-<h2 id="findable">🔍 FINDABLE AT FLEA MARKETS</h2>
-<p style="color:#666;font-size:.85em;margin-bottom:10px">Cards you might actually find. Know the Japanese names!</p>
-<div class="grid">
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-nami-parallel-op01-016.jpg" alt="Nami Parallel OP01-016">
-<div class="card-info">
-<h4>Nami — Alt Art</h4>
-<div class="jp">ナミ（パラレル）</div>
-<div class="set">OP01-016 R | OP-01 Romance Dawn</div>
-<div class="price">Market: ¥10,000-15,000 (NM)</div>
-<span class="tag tag-buy">💰 Buy under ¥4,000</span> <span class="tag tag-flip">🔥 3x flip</span>
-<div class="tip">Popular character. Check junk bins. <a href="https://www.pricecharting.com/game/one-piece-japanese-romance-dawn/nami-alternate-art-op01-016" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-zoro-parallel-op01-025.png" alt="Roronoa Zoro Parallel OP01-025">
-<div class="card-info">
-<h4>Roronoa Zoro — Parallel</h4>
-<div class="jp">ロロノア・ゾロ（パラレル）</div>
-<div class="set">OP01-025 SR [P] | OP-01 Romance Dawn</div>
-<div class="price">Market: ¥7,000-10,000 (NM JP)</div>
-<span class="tag tag-buy">💰 Buy under ¥4,000</span> <span class="tag tag-flip">🔥 2x flip</span>
-<div class="tip">Parallel version. Alt Art version is ¥25,000+. <a href="https://www.pricecharting.com/game/one-piece-romance-dawn/roronoa-zoro-parallel-op01-025" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-hancock-parallel-op01-078.png" alt="Boa Hancock Parallel OP01-078">
-<div class="card-info">
-<h4>Boa Hancock — Alt Art</h4>
-<div class="jp">ボア・ハンコック（パラレル）</div>
-<div class="set">OP01-078 SR | OP-01 Romance Dawn</div>
-<div class="price">Market: ¥3,000-4,000 (NM JP)</div>
-<span class="tag tag-buy">💰 Buy under ¥1,500</span> <span class="tag tag-flip">🔥 2x flip</span>
-<div class="tip">Waifu tax. <a href="https://www.pricecharting.com/game/one-piece-japanese-romance-dawn/boa-hancock-alternate-art-op01-078" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-yamato-parallel-op01-121.jpg" alt="Yamato Parallel OP01-121">
-<div class="card-info">
-<h4>Yamato — Alt Art</h4>
-<div class="jp">ヤマト（パラレル）</div>
-<div class="set">OP01-121 SEC | OP-01 Romance Dawn</div>
-<div class="price">Market: ¥5,000-8,000 (NM)</div>
-<span class="tag tag-buy">💰 Buy under ¥3,000</span> <span class="tag tag-flip">🔥 2x flip</span>
-<div class="tip">Fan favorite. <a href="https://www.pricecharting.com/game/one-piece-romance-dawn/yamato-alternate-art-op01-121" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-</div>
-
-<div class="section-divider"></div>
-
-<h2 id="leaders">👑 LEADER CARDS</h2>
-<p style="color:#666;font-size:.85em;margin-bottom:10px">Alt art leaders are the chase for competitive players.</p>
-<div class="grid">
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-law-leader-parallel-op01-002.jpg" alt="Law Leader Parallel OP01-002">
-<div class="card-info">
-<h4>Trafalgar Law — Alt Art Leader</h4>
-<div class="jp">トラファルガー・ロー（リーダーパラレル）</div>
-<div class="set">OP01-002 L | OP-01 Romance Dawn</div>
-<div class="price">Market: ¥18,000-27,000 (NM)</div>
-<span class="tag tag-buy">💰 Buy under ¥10,000</span> <span class="tag tag-flip">🔥 2x flip</span>
-<div class="tip">Meta leader. <a href="https://www.pricecharting.com/game/one-piece-romance-dawn/trafalgar-law-alternate-art-op01-002" target="_blank" style="color:#D70000">Source</a></div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-kaido-leader-parallel-op03-099.jpg" alt="Kaido Leader Parallel OP03-099">
-<div class="card-info">
-<h4>Kaido — Alt Art Leader</h4>
-<div class="jp">カイドウ（リーダーパラレル）</div>
-<div class="set">OP03-099 L | OP-03 Pillars of Strength</div>
-<div class="price">Market: ¥15,000-25,000 (NM)</div>
-<span class="tag tag-buy">💰 Buy under ¥8,000</span> <span class="tag tag-flip">🔥 2x flip</span>
-<div class="tip">Yonko leaders desirable.</div>
-</div>
-</div>
-
-</div>
-
-<div class="section-divider"></div>
-
-<h2 id="promos">🎁 PROMO CARDS</h2>
-<p style="color:#666;font-size:.85em;margin-bottom:10px">Tournament prizes and event exclusives.</p>
-<div class="grid">
-
-<div class="card">
-<div class="placeholder"><div class="name">Luffy Winner Promo</div></div>
-<div class="card-info">
-<h4>Monkey D. Luffy — Super Pre-Release Winner</h4>
-<div class="jp">モンキー・D・ルフィ（勝者プロモ）</div>
-<div class="set">P-001 | Tournament Promo</div>
-<div class="price">Market: ¥500,000+ (NM)</div>
-<span class="tag tag-flip">🔥 Grail</span>
-<div class="tip">Tournament winner exclusive. You won't find this at flea markets.</div>
-</div>
-</div>
-
-<div class="card">
-<div class="placeholder"><div class="name">Treasure Cup Promos</div><div class="sub">Various</div></div>
-<div class="card-info">
-<h4>Treasure Cup Participation Promos</h4>
-<div class="jp">トレジャーカップ参加賞</div>
-<div class="set">Various | Event Promo</div>
-<div class="price">Market: ¥3,000-15,000</div>
-<span class="tag tag-buy">💰 Buy under ¥1,000</span> <span class="tag tag-flip">🔥 5x flip</span>
-<div class="tip">Event promos often dumped cheap. Check for Treasure Cup cards!</div>
-</div>
-</div>
-
-</div>
-
-<div class="section-divider"></div>
-
-<h2 id="packs">🎰 BOOSTER PACKS — 2026 Japan Meta</h2>
-<p style="color:#666;font-size:.85em;margin-bottom:10px">Pack MSRP: ¥220. Loose packs rare at flea markets but check recycle shops.</p>
-
-<h3>🔥 TIER 1 — Premium Packs</h3>
-<div class="grid">
-
-<div class="card">
-<img src="images/onepiece-prb01-the-best-pack.jpg" alt="One Piece Card Game PRB-01 THE BEST Premium Booster Pack" loading="lazy">
-<div class="card-info">
-<h4>PRB-01 — ONE PIECE CARD THE BEST</h4>
-<div class="jp">ワンピースカード ザ・ベスト</div>
-<div class="set">Premium Booster | Pack MSRP ¥990</div>
-<div class="price">Manga rares: ¥300,000+ | Gold DON!!: ¥10,000-75,000</div>
-<span class="tag tag-buy">💰 Buy under ¥1,500/pack</span> <span class="tag tag-flip">🔥 God pack exists</span>
-<div class="tip">Market ¥1,800+/pack. OOP, only going up.</div>
-</div>
+<div class="section">
+  <h2>📚 Guides</h2>
+  <div class="tiles">
+    <a href="cheat-sheet.html" class="tile"><span class="emoji">📋</span><span class="label">Cheat Sheet</span><span class="sub">Flea market guide</span></a>
+    <a href="../guides/onepiece-guide.html" class="tile"><span class="emoji">🏴‍☠️</span><span class="label">OP Guide</span><span class="sub">Collecting tips</span></a>
+    <a href="../guides/where-to-buy.html" class="tile"><span class="emoji">🏪</span><span class="label">Where to Buy</span><span class="sub">Shops & markets</span></a>
+    <a href="../guides/useful-phrases.html" class="tile"><span class="emoji">🗣️</span><span class="label">Japanese</span><span class="sub">Useful phrases</span></a>
+  </div>
 </div>
 
-<div class="card">
-<img src="images/onepiece-prb02-the-best-vol2-pack.webp" alt="One Piece Card Game PRB-02 THE BEST Vol.2 Premium Booster Pack" loading="lazy">
-<div class="card-info">
-<h4>PRB-02 — ONE PIECE CARD THE BEST Vol.2</h4>
-<div class="jp">ワンピースカード ザ・ベスト vol.2</div>
-<div class="set">Premium Booster | Pack MSRP ¥550</div>
-<div class="price">Sanji Manga: ¥70,000 | Gold DON!!: ¥10,000-13,000</div>
-<span class="tag tag-buy">💰 Buy under ¥600/pack</span>
-<div class="tip">Amazon ~¥640/pack. In print, lower ceiling than PRB-01.</div>
+<div class="section">
+  <h2>🔥 Hot Sets</h2>
+  <div class="sets-grid">
+    <a href="../search.html?game=onepiece&set=OP-09" class="set-tile hot"><div class="name">OP-09 Emperors</div></a>
+    <a href="../search.html?game=onepiece&set=OP-08" class="set-tile hot"><div class="name">OP-08 Two Legends</div></a>
+    <a href="../search.html?game=onepiece&set=OP-01" class="set-tile"><div class="name">OP-01 Romance Dawn</div></a>
+    <a href="../search.html?game=onepiece&set=OP-02" class="set-tile"><div class="name">OP-02 Paramount War</div></a>
+    <a href="../search.html?game=onepiece&set=ST-13" class="set-tile"><div class="name">ST-13 Starter</div></a>
+    <a href="../search.html?game=onepiece&set=ST-12" class="set-tile"><div class="name">ST-12 Starter</div></a>
+  </div>
+  <p style="text-align:center;margin-top:12px"><a href="sets/" style="color:#D70000">View all sets →</a></p>
 </div>
-</div>
-
-</div>
-
-<h3>⚖️ TIER 2 — Standard Packs (MSRP ¥220)</h3>
-<div class="grid">
-
-<div class="card">
-<img src="images/onepiece-op04-kingdoms-of-intrigue-box.jpg" alt="One Piece Card Game OP-04 Kingdoms of Intrigue Pack" loading="lazy">
-<div class="card-info">
-<h4>OP-04 — Kingdoms of Intrigue</h4>
-<div class="jp">謀略の王国</div>
-<div class="set">2023 | Pack MSRP ¥220</div>
-<div class="price">Sabo Manga: ¥50,000+ | Hancock SP</div>
-<span class="tag tag-buy">💰 Buy under ¥350/pack</span>
-<div class="tip">OOP. Best manga rare odds of older sets.</div>
-</div>
-</div>
-
-<div class="card">
-<img src="images/onepiece-op11-fist-of-divine-speed-box.jpg" alt="One Piece Card Game OP-11 Pack" loading="lazy">
-<div class="card-info">
-<h4>OP-11 — A Fist of Divine Speed</h4>
-<div class="jp">神速の拳</div>
-<div class="set">2024 | Pack MSRP ¥220</div>
-<div class="price">SP/SEC upside | Good liquidity</div>
-<span class="tag tag-buy">💰 Buy at MSRP ¥220</span>
-<div class="tip">Best safe pick. Still findable at retail.</div>
-</div>
-</div>
-
-<div class="card">
-<img src="images/onepiece-op12-wings-of-captain-box.jpg" alt="One Piece Card Game OP-12 Pack" loading="lazy">
-<div class="card-info">
-<h4>OP-12 — Wings of the Captain</h4>
-<div class="jp">翼の船長</div>
-<div class="set">2025 | Pack MSRP ¥220</div>
-<div class="price">Newest release | Best availability</div>
-<span class="tag tag-buy">💰 Buy at MSRP ¥220</span>
-<div class="tip">In print. Buy at retail, prices only go up.</div>
-</div>
-</div>
-
-</div>
-
-<h3>💎 TIER 3 — OOP Packs (Rare Find)</h3>
-<div class="grid">
-
-<div class="card">
-<img src="images/onepiece-op01-romance-dawn-pack.jpg" alt="One Piece Card Game OP-01 Romance Dawn Pack" loading="lazy">
-<div class="card-info">
-<h4>OP-01 — Romance Dawn</h4>
-<div class="jp">ロマンスドーン</div>
-<div class="set">First set 2022 | Pack MSRP ¥220</div>
-<div class="price">Shanks Manga: ¥300,000+</div>
-<span class="tag tag-buy">💰 Buy under ¥500/pack</span> <span class="tag tag-flip">🔥 Founder set</span>
-<div class="tip">Market ¥600+/pack. Like Base Set Pokémon.</div>
-</div>
-</div>
-
-<div class="card">
-<img src="images/onepiece-op02-paramount-war-pack.jpg" alt="One Piece Card Game OP-02 Paramount War Pack" loading="lazy">
-<div class="card-info">
-<h4>OP-02 — Paramount War</h4>
-<div class="jp">頂上決戦</div>
-<div class="set">2022 | Pack MSRP ¥220</div>
-<div class="price">Ace Manga: ¥250,000+</div>
-<span class="tag tag-buy">💰 Buy under ¥300/pack</span>
-<div class="tip">Reprinted. Don't overpay.</div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-op03-pillars-of-strength-pack.jpg" alt="OP-03 Pillars of Strength Pack">
-<div class="card-info">
-<h4>OP-03 — Pillars of Strength</h4>
-<div class="jp">強大な敵</div>
-<div class="set">2023 | Pack MSRP ¥220</div>
-<div class="price">Kaido/Big Mom focus</div>
-<span class="tag tag-buy">💰 Buy under ¥300/pack</span>
-<div class="tip">Reprinted. Skip if above ¥300.</div>
-</div>
-</div>
-
-<div class="card">
-<img loading="lazy" src="images/onepiece-op05-awakening-new-era-pack.jpg" alt="OP-05 Awakening of the New Era Pack">
-<div class="card-info">
-<h4>OP-05 — Awakening of the New Era</h4>
-<div class="jp">新時代の主役</div>
-<div class="set">2023 | Pack MSRP ¥220</div>
-<div class="price">Luffy Gear 5 focus</div>
-<span class="tag tag-buy">💰 Buy under ¥300/pack</span>
-<div class="tip">Heavily reprinted. MSRP only.</div>
-</div>
-</div>
-
-</div>
-
-<div class="tip-box">
-<strong>🎯 Pack Strategy:</strong><br>
-Loose packs are rare at flea markets. Check recycle shop bargain bins.<br>
-If you find MSRP packs anywhere, buy them all.
-</div>
-
-<div class="section-divider"></div>
-
-<h2 id="boxes">📦 BOOSTER BOXES — 2026 Japan Meta</h2>
-<p style="color:#666;font-size:.85em;margin-bottom:10px">Box MSRP: ¥5,500 (24 packs). This is where the real deals are.</p>
-
-<h3>🔥 TIER 1 — MUST BUY</h3>
-<div class="grid">
 
-<div class="card">
-<img src="images/onepiece-prb01-the-best-pack.jpg" alt="One Piece Card Game PRB-01 THE BEST Box" loading="lazy">
-<div class="card-info">
-<h4>PRB-01 — ONE PIECE CARD THE BEST</h4>
-<div class="jp">ワンピースカード ザ・ベスト</div>
-<div class="set">Premium Booster | Box MSRP ¥9,900</div>
-<div class="price">Manga rares: ¥300,000+ | Gold DON!!: ¥10,000-75,000</div>
-<span class="tag tag-buy">💰 Buy under ¥12,000</span> <span class="tag tag-flip">🔥 God pack exists</span>
-<div class="tip">Market ¥15,000+. OOP, only going up.</div>
-</div>
-</div>
-
-<div class="card">
-<img src="images/onepiece-op04-kingdoms-of-intrigue-box.jpg" alt="One Piece Card Game OP-04 Kingdoms of Intrigue Booster Box" loading="lazy">
-<div class="card-info">
-<h4>OP-04 — Kingdoms of Intrigue</h4>
-<div class="jp">謀略の王国</div>
-<div class="set">2023 | Box MSRP ¥5,500</div>
-<div class="price">Sabo Manga: ¥50,000+ | Hancock SP, Rebecca Alt</div>
-<span class="tag tag-buy">💰 Buy under ¥8,000</span> <span class="tag tag-flip">🔥 Manga rare = jackpot</span>
-<div class="tip">Market ¥10,000+. Best OOP set for value.</div>
-</div>
-</div>
-
-</div>
-
-<h3>⚖️ TIER 2 — Best "Safe EV"</h3>
-<div class="grid">
-
-<div class="card">
-<img src="images/onepiece-op11-fist-of-divine-speed-box.jpg" alt="One Piece Card Game OP-11 A Fist of Divine Speed Booster Box" loading="lazy">
-<div class="card-info">
-<h4>OP-11 — A Fist of Divine Speed</h4>
-<div class="jp">神速の拳</div>
-<div class="set">2024 | Box MSRP ¥5,500</div>
-<div class="price">Floor: ¥2,000-5,500/box | SP/SEC upside</div>
-<span class="tag tag-buy">💰 Buy under ¥6,500</span>
-<div class="tip">Market ¥7,000. Low risk, good liquidity.</div>
-</div>
-</div>
-
-<div class="card">
-<img src="images/onepiece-op09-four-emperors-box.jpg" alt="One Piece Card Game OP-09 Four Emperors Booster Box" loading="lazy">
-<div class="card-info">
-<h4>OP-09 — Four Emperors</h4>
-<div class="jp">四皇</div>
-<div class="set">2024 | Box MSRP ¥5,500</div>
-<div class="price">Luffy/Buggy Leader parallels chase</div>
-<span class="tag tag-buy">💰 Buy under ¥6,000</span>
-<div class="tip">Market ¥6,500. Yonko hype.</div>
-</div>
-</div>
-
-<div class="card">
-<img src="images/onepiece-op10-royal-bloodlines-box.jpg" alt="One Piece Card Game OP-10 Royal Bloodlines Booster Box" loading="lazy">
-<div class="card-info">
-<h4>OP-10 — Royal Bloodlines</h4>
-<div class="jp">ロイヤルブラッド</div>
-<div class="set">2024 | Box MSRP ¥5,500</div>
-<div class="price">Doflamingo focus | Dressrosa return</div>
-<span class="tag tag-buy">💰 Buy under ¥6,000</span>
-<div class="tip">Market ¥6,000. Still available.</div>
-</div>
-</div>
-
-<div class="card">
-<img src="images/onepiece-op12-wings-of-captain-box.jpg" alt="One Piece Card Game OP-12 Wings of the Captain Booster Box" loading="lazy">
-<div class="card-info">
-<h4>OP-12 — Wings of the Captain</h4>
-<div class="jp">翼の船長</div>
-<div class="set">2025 | Box MSRP ¥5,500</div>
-<div class="price">Newest release | Best time to buy</div>
-<span class="tag tag-buy">💰 Buy at MSRP ¥5,500</span>
-<div class="tip">In print. Prices only go up from here.</div>
-</div>
-</div>
-
-</div>
-
-<h3>💎 TIER 3 — OOP Boxes (Rare Find = Huge Win)</h3>
-<div class="grid">
-
-<div class="card">
-<div class="placeholder"><div class="name">OP-01 Romance Dawn Box</div></div>
-<div class="card-info">
-<h4>OP-01 — Romance Dawn</h4>
-<div class="jp">ロマンスドーン</div>
-<div class="set">First set 2022 | Box MSRP ¥5,500</div>
-<div class="price">Shanks Manga: ¥300,000+</div>
-<span class="tag tag-buy">💰 Buy under ¥12,000</span> <span class="tag tag-flip">🔥 Founder set</span>
-<div class="tip">Market ¥15,000+. Like Base Set Pokémon.</div>
-</div>
-</div>
-
-<div class="card">
-<div class="placeholder"><div class="name">OP-02 Paramount War Box</div></div>
-<div class="card-info">
-<h4>OP-02 — Paramount War</h4>
-<div class="jp">頂上決戦</div>
-<div class="set">2022 | Box MSRP ¥5,500</div>
-<div class="price">Ace Manga: ¥250,000+</div>
-<span class="tag tag-buy">💰 Buy under ¥7,000</span>
-<div class="tip">Reprinted but still good value.</div>
-</div>
-</div>
-
-<div class="card">
-<div class="placeholder"><div class="name">OP-03 Pillars of Strength Box</div></div>
-<div class="card-info">
-<h4>OP-03 — Pillars of Strength</h4>
-<div class="jp">強大な敵</div>
-<div class="set">2023 | Box MSRP ¥5,500</div>
-<div class="price">Kaido/Big Mom focus</div>
-<span class="tag tag-buy">💰 Buy under ¥6,500</span>
-<div class="tip">Reprinted. Skip if above ¥6,500.</div>
-</div>
-</div>
-
-<div class="card">
-<div class="placeholder"><div class="name">OP-05 Awakening of New Era Box</div></div>
-<div class="card-info">
-<h4>OP-05 — Awakening of the New Era</h4>
-<div class="jp">新時代の主役</div>
-<div class="set">2023 | Box MSRP ¥5,500</div>
-<div class="price">Luffy Gear 5 focus</div>
-<span class="tag tag-buy">💰 Buy under ¥6,500</span>
-<div class="tip">Heavily reprinted. Near MSRP only.</div>
-</div>
-</div>
+<div id="results"></div>
 
-</div>
-<a href="../">← Back to TCG Selection</a> | Built for flea market hunters 🏴‍☠️
-</p>
+<footer>
+  <a href="../">← Back to Home</a> · <a href="../guides/">All Guides</a> · <a href="../donate.html">Support</a>
+</footer>
 
-<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/japan-tcg-price-guide/sw.js")</script>
-<div class="lightbox" id="lightbox" onclick="this.classList.remove('active')"><span class="lightbox-close">&times;</span><img id="lightbox-img" src="" alt=""></div>
 <script>
-document.querySelectorAll('.card img').forEach(img=>{
-  img.onclick=e=>{e.stopPropagation();document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('active');}
-});
-document.onkeydown=e=>{if(e.key==='Escape')document.getElementById('lightbox').classList.remove('active');};
+let allCards = [];
+const BASE = '/japan-tcg-price-guide';
+
+async function loadCards() {
+  try {
+    const data = await fetch(`${BASE}/data/onepiece-cache.json`).then(r => r.json());
+    allCards = Object.values(data.sets).flat();
+    document.getElementById('stats').textContent = `${allCards.length.toLocaleString()} One Piece cards loaded`;
+    
+    const params = new URLSearchParams(location.search);
+    if (params.get('q')) {
+      document.getElementById('search').value = params.get('q');
+      doSearch();
+    }
+  } catch (e) {
+    document.getElementById('stats').textContent = 'Error loading cards';
+  }
+}
+
+function doSearch() {
+  const q = document.getElementById('search').value.toLowerCase().trim();
+  if (!q) { document.getElementById('results').innerHTML = ''; return; }
+  
+  const results = allCards.filter(c => 
+    c.name?.toLowerCase().includes(q) || c.id?.toLowerCase().includes(q)
+  ).slice(0, 50);
+  
+  if (!results.length) {
+    document.getElementById('results').innerHTML = '<p style="text-align:center;color:#666;padding:30px">No cards found</p>';
+    return;
+  }
+  
+  document.getElementById('results').innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-top:20px">
+      ${results.map(c => `
+        <a href="../search.html?game=onepiece&q=${encodeURIComponent(c.id)}" style="background:#fff;border-radius:8px;padding:8px;text-decoration:none;color:#222;text-align:center">
+          <img src="${c.image || ''}" alt="${c.name}" style="width:100%;border-radius:4px" onerror="this.style.display='none'">
+          <div style="font-weight:600;font-size:.8em;margin-top:5px">${c.name || 'Unknown'}</div>
+          <div style="color:#666;font-size:.7em">${c.setName || c.setId || ''}</div>
+          ${c.price?.jpy ? `<div style="color:#2a7;font-size:.75em;font-weight:600">¥${c.price.jpy.toLocaleString()}</div>` : ''}
+        </a>
+      `).join('')}
+    </div>
+  `;
+  
+  history.replaceState(null, '', `?q=${encodeURIComponent(q)}`);
+}
+
+loadCards();
 </script>
-<footer id="site-footer"></footer>
-<script src="/japan-tcg-price-guide/components/footer.js"></script>
 </body>
 </html>

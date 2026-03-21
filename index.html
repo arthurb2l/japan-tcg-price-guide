@@ -1,150 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-91JR7LD30P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-91JR7LD30P');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Japan TCG Price Guide | Pokemon & One Piece Cards</title>
-<meta name="description" content="Find underpriced Pokemon and One Piece cards at Japanese flea markets, Hard-Off & recycle shops">
+<meta name="description" content="Find underpriced Pokemon and One Piece cards at Japanese flea markets, Hard-Off & recycle shops. Free offline price guide.">
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#EE1515">
-<script>if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');</script>
+<meta name="theme-color" content="#222">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',sans-serif;background:#f5f5f5;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px}
 h1{text-align:center;color:#222;font-size:1.8em;margin-bottom:8px}
-.subtitle{text-align:center;color:#666;font-size:.9em;margin-bottom:30px}
-/* TCG Cards */
-.cards{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;max-width:700px;margin-bottom:25px}
-.card{background:#fff;border-radius:16px;padding:30px 40px;text-align:center;text-decoration:none;border:3px solid #222;transition:transform .2s,box-shadow .2s;min-width:280px}
+.subtitle{text-align:center;color:#666;font-size:.9em;margin-bottom:40px;max-width:400px;line-height:1.5}
+.cards{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;max-width:700px;margin-bottom:40px}
+.card{background:#fff;border-radius:16px;padding:40px 50px;text-align:center;text-decoration:none;border:3px solid #222;transition:transform .2s,box-shadow .2s;min-width:280px}
 .card:hover{transform:scale(1.03)}
 .card.pokemon{border-color:#EE1515}.card.pokemon:hover{box-shadow:0 8px 24px rgba(238,21,21,0.3)}
 .card.onepiece{border-color:#D70000}.card.onepiece:hover{box-shadow:0 8px 24px rgba(215,0,0,0.3)}
-.card img{width:180px;height:auto;margin-bottom:15px}
-.card h2{font-size:1.3em;margin-bottom:5px}
+.card .icon{font-size:4em;margin-bottom:15px}
+.card h2{font-size:1.4em;margin-bottom:8px}
 .card.pokemon h2{color:#EE1515}
 .card.onepiece h2{color:#D70000}
-.card p{color:#666;font-size:.85em}
-/* Guides row */
-.guides{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
-.guides a{background:#fff;color:#222;padding:12px 20px;border-radius:8px;text-decoration:none;border:2px solid #222;font-size:.9em;transition:all .2s}
-.guides a:hover{background:#222;color:#fff}
-/* Search */
-.search-wrap{width:100%;max-width:500px;margin-bottom:15px}
-.search-box{width:100%;padding:14px 18px;font-size:16px;border:3px solid #222;border-radius:10px;outline:none;transition:border-color .2s,box-shadow .2s}
-.search-box:focus{border-color:#EE1515;box-shadow:0 0 0 3px rgba(238,21,21,0.15)}
-/* Links */
-.links{display:flex;gap:15px;flex-wrap:wrap;justify-content:center;margin-bottom:25px;font-size:.85em}
-.links a{color:#EE1515;text-decoration:none}
-.links a:hover{text-decoration:underline}
-/* New sets */
-.sets{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;width:100%;max-width:500px;margin-bottom:25px}
-.set-link{background:#fff;border:1px solid #ddd;border-radius:8px;padding:10px;text-decoration:none;color:#222;text-align:center;font-size:.8em;transition:all .15s}
-.set-link:hover{border-color:#EE1515}
-.set-link.new::before{content:'New';display:block;font-size:.6em;color:#fff;background:#EE1515;padding:1px 6px;border-radius:3px;margin-bottom:4px;width:fit-content;margin-left:auto;margin-right:auto}
-.set-link .name{font-weight:600;line-height:1.2}
-/* Footer */
-#site-footer{background:#222;color:#aaa;padding:30px 15px;margin:40px -20px -20px;font-size:.85em;width:calc(100% + 40px)}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:25px;max-width:800px;margin:0 auto 25px}
-.footer-col h4{color:#fff;font-size:.9em;margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px}
-.footer-col a{display:block;color:#aaa;text-decoration:none;padding:4px 0}
-.footer-col a:hover{color:#fff}
-.footer-legal{text-align:center;padding-top:20px;border-top:1px solid #444;font-size:.8em;line-height:1.8}
-.footer-legal a{color:#aaa}
-.footer-legal a:hover{color:#fff}
-@media(max-width:500px){
-  .footer-grid{grid-template-columns:1fr 1fr;gap:20px 15px}
-  .footer-col h4{font-size:.8em;margin-bottom:8px}
-  .footer-col a{font-size:.85em;padding:3px 0}
-  .footer-legal{font-size:.75em;line-height:1.6}
-  .footer-legal p{margin:5px 0}
-}
+.card p{color:#666;font-size:.9em}
+.links{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;font-size:.9em;margin-bottom:30px}
+.links a{color:#666;text-decoration:none}
+.links a:hover{color:#222;text-decoration:underline}
+.install-prompt{display:none;background:#222;color:#fff;padding:12px 20px;border-radius:8px;margin-top:20px;font-size:.85em;cursor:pointer}
+.install-prompt:hover{background:#333}
+footer{text-align:center;color:#999;font-size:.75em;margin-top:auto;padding-top:30px}
 </style>
-<link rel="icon" href="/japan-tcg-price-guide/favicon.ico">
-<meta property="og:title" content="Japan TCG Price Guide">
-<meta property="og:description" content="Pokemon and One Piece card prices for hunting deals at Japanese flea markets">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://arthurb2l.github.io/japan-tcg-price-guide/favicon.svg">
-<meta name="twitter:card" content="summary">
-<link rel="manifest" href="/japan-tcg-price-guide/manifest.json">
+<script>if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');</script>
 </head>
 <body>
+
 <h1>🇯🇵 Japan TCG Price Guide</h1>
-<p class="subtitle">日本のフリマ・ハードオフで掘り出し物を見つけよう<br>Find deals at Japanese flea markets & recycle shops</p>
+<p class="subtitle">Find underpriced cards at Japanese flea markets, Hard-Off & recycle shops. Works offline.</p>
 
 <div class="cards">
   <a href="pokemon/" class="card pokemon">
-    <img src="pokemon/images/pokemon-logo.png" alt="Pokemon TCG" onerror="this.outerHTML='<div style=font-size:4em>⚡</div>'">
+    <div class="icon">⚡</div>
     <h2>Pokemon TCG</h2>
-    <p>22,700+ cards</p>
+    <p>22,700+ cards with prices</p>
   </a>
   
   <a href="onepiece/" class="card onepiece">
-    <img src="onepiece/images/onepiece-logo.png" alt="One Piece TCG" onerror="this.outerHTML='<div style=font-size:4em>🏴‍☠️</div>'">
+    <div class="icon">🏴‍☠️</div>
     <h2>One Piece TCG</h2>
     <p>80+ high-value cards</p>
   </a>
 </div>
 
-<div class="guides">
-  <a href="guides/best-packs.html">🏆 Best Packs</a>
-  <a href="guides/where-to-buy.html">🏪 Where to Buy</a>
-  <a href="calendar/">📅 Releases</a>
-</div>
-
-<div class="search-wrap">
-  <form action="search.html" method="get">
-    <input type="text" name="q" class="search-box" placeholder="Search cards (e.g. Charizard, Pikachu, sv03.5-001)">
-  </form>
-</div>
-
 <div class="links">
-  <a href="search.html">Advanced Search</a>
-  <a href="guides/">All Guides</a>
-  <a href="search.html?random=1">Random Card</a>
+  <a href="guides/">📚 All Guides</a>
+  <a href="calendar/">📅 Release Calendar</a>
+  <a href="donate.html">❤️ Support</a>
 </div>
 
-<div class="sets">
-  <a href="search.html?set=sv08.5" class="set-link new">
-    <div class="name">Prismatic Evolutions</div>
-  </a>
-  <a href="search.html?set=sv08" class="set-link new">
-    <div class="name">Surging Sparks</div>
-  </a>
-  <a href="search.html?game=onepiece&set=OP-09" class="set-link new">
-    <div class="name">OP-09 Emperors</div>
-  </a>
-  <a href="search.html?game=onepiece&set=OP-08" class="set-link new">
-    <div class="name">OP-08 Two Legends</div>
-  </a>
+<div class="install-prompt" id="install" onclick="installPWA()">
+  📱 Install App for Offline Use
 </div>
 
-<!-- Onboarding overlay -->
-<div id="onboard" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:1000;padding:20px;overflow-y:auto">
-  <div style="background:#fff;max-width:360px;margin:50px auto;border-radius:12px;padding:25px;text-align:center">
-    <h2 style="margin:0 0 20px;font-size:1.3em">🛒 Flea Market Mode</h2>
-    <div style="text-align:left;margin-bottom:20px">
-      <p style="margin:12px 0;display:flex;gap:10px"><span style="font-size:1.3em">1️⃣</span><span>Search any card name or set</span></p>
-      <p style="margin:12px 0;display:flex;gap:10px"><span style="font-size:1.3em">2️⃣</span><span>Compare price to what you see</span></p>
-      <p style="margin:12px 0;display:flex;gap:10px"><span style="font-size:1.3em">3️⃣</span><span>Works offline at markets!</span></p>
-    </div>
-    <button onclick="dismissOnboard()" style="background:#EE1515;color:#fff;border:none;padding:12px 30px;border-radius:8px;font-size:1em;cursor:pointer;font-weight:600">Got it!</button>
-  </div>
-</div>
+<footer>
+  <p>Free & open source · <a href="https://github.com/arthurb2l/japan-tcg-price-guide" style="color:#999">GitHub</a></p>
+</footer>
+
 <script>
-if(!localStorage.getItem('tcg-onboarded')){document.getElementById('onboard').style.display='block'}
-function dismissOnboard(){localStorage.setItem('tcg-onboarded','1');document.getElementById('onboard').style.display='none'}
-</script>
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById('install').style.display = 'block';
+});
 
-<footer id="site-footer"></footer>
-<script src="components/footer.js"></script>
-<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/japan-tcg-price-guide/sw.js")</script>
+function installPWA() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(() => {
+      document.getElementById('install').style.display = 'none';
+      deferredPrompt = null;
+    });
+  }
+}
+</script>
 </body>
 </html>
