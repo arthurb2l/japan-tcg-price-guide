@@ -1,8 +1,8 @@
 {
-  "generated": "2026-03-21T07:59:41.204Z",
+  "generated": "2026-03-21T08:04:19.055Z",
   "content": {
-    "totalCards": 18663,
-    "setsCount": 134,
+    "totalCards": 21457,
+    "setsCount": 157,
     "sets": [
       "sv01",
       "sv02",
@@ -137,9 +137,32 @@
       "pop6",
       "pop7",
       "pop8",
-      "pop9"
+      "pop9",
+      "basep",
+      "lc",
+      "si1",
+      "np",
+      "g1",
+      "A1",
+      "A1a",
+      "A2",
+      "A2a",
+      "A2b",
+      "A3",
+      "A3a",
+      "A3b",
+      "A4",
+      "A4a",
+      "B1",
+      "B1a",
+      "B2",
+      "P-A",
+      "hgssp",
+      "xy0",
+      "bog",
+      "dc1"
     ],
-    "lastSync": "2026-03-21T07:58:47.130Z"
+    "lastSync": "2026-03-21T08:02:47.413Z"
   },
   "health": {},
   "contributions": {
