@@ -166,6 +166,23 @@ footer{text-align:center;padding:20px;color:#666;font-size:.8em;border-top:1px s
 </table>
 
 <div class="summary">
+<h3>📊 Live Top 20 from Database</h3>
+<p style="font-size:.85em;color:#666;margin-bottom:10px">Real-time prices from our card database (EUR from Cardmarket)</p>
+<div id="live-top"></div>
+</div>
+<script>
+fetch('../data/brain-cache.json').then(r=>r.json()).then(data=>{
+  const cards = Object.values(data.sets).flat()
+    .filter(c=>c.price?.eur)
+    .sort((a,b)=>b.price.eur-a.price.eur)
+    .slice(0,20);
+  document.getElementById('live-top').innerHTML = '<table class="card-table"><tr><th>#</th><th>Card</th><th>Set</th><th>Price</th></tr>' +
+    cards.map((c,i)=>`<tr><td>${i+1}</td><td>${c.name}</td><td>${c.set||c.setId}</td><td class="price">€${c.price.eur.toFixed(2)}</td></tr>`).join('') +
+    '</table>';
+});
+</script>
+
+<div class="summary">
 <h3>🎯 Quick Reference: What to Look For</h3>
 <ul style="margin-left:20px;line-height:1.8">
 <li><strong>No ★ symbol</strong> (bottom right) = 1996-97 first print = 💰💰💰</li>
