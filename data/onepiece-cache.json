@@ -2,7 +2,7 @@
   "meta": {
     "lastUpdated": "2026-03-21",
     "source": "Manual from pricecharting.com + onepiece-cardgame.dev",
-    "totalCards": 32
+    "totalCards": 40
   },
   "sets": {
     "OP-09": [
@@ -97,6 +97,21 @@
           "eur": 111,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP05-091",
+        "name": "Gecko Moria",
+        "nameJp": "ゲッコー・モリア",
+        "setId": "OP-05",
+        "set": "Awakening of the New Era",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 3000,
+          "eur": 18,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-02": [
@@ -142,6 +157,36 @@
         "price": {
           "jpy": 7000,
           "eur": 43,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP02-004",
+        "name": "Marco",
+        "nameJp": "マルコ",
+        "setId": "OP-02",
+        "set": "Paramount War",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 2000,
+          "eur": 12,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP02-062",
+        "name": "Doflamingo",
+        "nameJp": "ドンキホーテ・ドフラミンゴ",
+        "setId": "OP-02",
+        "set": "Paramount War",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 1500,
+          "eur": 9,
           "updated": "2026-03-21"
         }
       }
@@ -204,6 +249,51 @@
         "price": {
           "jpy": 10000,
           "eur": 62,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP01-016",
+        "name": "Nami",
+        "nameJp": "ナミ",
+        "setId": "OP-01",
+        "set": "Romance Dawn",
+        "rarity": "R",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 500,
+          "eur": 3,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP01-051",
+        "name": "Sanji",
+        "nameJp": "サンジ",
+        "setId": "OP-01",
+        "set": "Romance Dawn",
+        "rarity": "R",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 400,
+          "eur": 2.5,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP01-060",
+        "name": "Tony Tony Chopper",
+        "nameJp": "トニートニー・チョッパー",
+        "setId": "OP-01",
+        "set": "Romance Dawn",
+        "rarity": "R",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 300,
+          "eur": 2,
           "updated": "2026-03-21"
         }
       }
@@ -287,6 +377,21 @@
           "eur": 93,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP03-040",
+        "name": "Enel",
+        "nameJp": "エネル",
+        "setId": "OP-03",
+        "set": "Pillars of Strength",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 1800,
+          "eur": 11,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-04": [
@@ -317,6 +422,21 @@
         "price": {
           "jpy": 20000,
           "eur": 123,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP04-031",
+        "name": "Rebecca",
+        "nameJp": "レベッカ",
+        "setId": "OP-04",
+        "set": "Kingdoms of Intrigue",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 2500,
+          "eur": 15,
           "updated": "2026-03-21"
         }
       }

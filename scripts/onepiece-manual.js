@@ -78,8 +78,25 @@ const FINDABLE_CARDS = [
   { id: "OP05-118", name: "Sabo", nameJp: "サボ", set: "OP-05", setName: "Awakening of the New Era", rarity: "SEC", variant: "Alt Art", price: { jpy: 18000, eur: 111 }, img: null },
 ];
 
+// Common playable cards (lower value but frequently found at flea markets)
+const COMMON_PLAYABLES = [
+  // OP-01 staples
+  { id: "OP01-016", name: "Nami", nameJp: "ナミ", set: "OP-01", setName: "Romance Dawn", rarity: "R", variant: null, price: { jpy: 500, eur: 3 }, img: null },
+  { id: "OP01-051", name: "Sanji", nameJp: "サンジ", set: "OP-01", setName: "Romance Dawn", rarity: "R", variant: null, price: { jpy: 400, eur: 2.5 }, img: null },
+  { id: "OP01-060", name: "Tony Tony Chopper", nameJp: "トニートニー・チョッパー", set: "OP-01", setName: "Romance Dawn", rarity: "R", variant: null, price: { jpy: 300, eur: 2 }, img: null },
+  // OP-02 staples
+  { id: "OP02-004", name: "Marco", nameJp: "マルコ", set: "OP-02", setName: "Paramount War", rarity: "SR", variant: null, price: { jpy: 2000, eur: 12 }, img: null },
+  { id: "OP02-062", name: "Doflamingo", nameJp: "ドンキホーテ・ドフラミンゴ", set: "OP-02", setName: "Paramount War", rarity: "SR", variant: null, price: { jpy: 1500, eur: 9 }, img: null },
+  // OP-03 staples
+  { id: "OP03-040", name: "Enel", nameJp: "エネル", set: "OP-03", setName: "Pillars of Strength", rarity: "SR", variant: null, price: { jpy: 1800, eur: 11 }, img: null },
+  // OP-04 staples
+  { id: "OP04-031", name: "Rebecca", nameJp: "レベッカ", set: "OP-04", setName: "Kingdoms of Intrigue", rarity: "SR", variant: null, price: { jpy: 2500, eur: 15 }, img: null },
+  // OP-05 staples
+  { id: "OP05-091", name: "Gecko Moria", nameJp: "ゲッコー・モリア", set: "OP-05", setName: "Awakening of the New Era", rarity: "SR", variant: null, price: { jpy: 3000, eur: 18 }, img: null },
+];
+
 function buildCache() {
-  const allCards = [...GRAIL_CARDS, ...FINDABLE_CARDS];
+  const allCards = [...GRAIL_CARDS, ...FINDABLE_CARDS, ...COMMON_PLAYABLES];
   const sets = {};
   
   allCards.forEach(card => {
@@ -111,6 +128,7 @@ function buildCache() {
   };
   
   fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
+
   console.log(`Saved ${allCards.length} One Piece cards to cache`);
   console.log(`Sets: ${Object.keys(sets).join(', ')}`);
 }

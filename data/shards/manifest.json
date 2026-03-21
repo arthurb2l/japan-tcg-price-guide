@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-21T07:29:56.373Z",
+  "lastUpdated": "2026-03-21T07:31:26.118Z",
   "shards": {
     "sv": {
       "file": "sv.json",
@@ -21,9 +21,9 @@
     },
     "sm": {
       "file": "sm.json",
-      "cards": 1536,
-      "sets": 7,
-      "size": 542745
+      "cards": 2557,
+      "sets": 15,
+      "size": 676313
     },
     "xy": {
       "file": "xy.json",
