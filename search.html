@@ -225,10 +225,11 @@ async function loadCards() {
     allCards = [...pokemonCards, ...opCards];
     
     // Populate set filter (respects game filter)
-    filterByGame(currentGame);
-    
     // Check URL params
     const params = new URLSearchParams(location.search);
+    if (params.get('game')) filterByGame(params.get('game'));
+    else filterByGame(currentGame);
+    
     if (params.get('q')) {
       document.getElementById('search').value = params.get('q');
       doSearch();
@@ -325,7 +326,7 @@ function getGameCards() {
 
 function doSearch() {
   const query = document.getElementById('search').value.toLowerCase().trim();
-  if (!query) { filteredCards = getGameCards(); sortCards(document.getElementById('sort').value); return; }
+  if (!query) { filteredCards = getGameCards(); sortCards(document.getElementById('sort').value); updateURL(); return; }
   
   const gameCards = getGameCards();
   filteredCards = gameCards.filter(c => 
@@ -351,6 +352,18 @@ function doSearch() {
   
   document.getElementById('set-filter').value = '';
   sortCards(document.getElementById('sort').value);
+  updateURL();
+}
+
+function updateURL() {
+  const q = document.getElementById('search').value.trim();
+  const set = document.getElementById('set-filter').value;
+  const params = new URLSearchParams();
+  if (q) params.set('q', q);
+  if (set) params.set('set', set);
+  if (currentGame !== 'pokemon') params.set('game', currentGame);
+  const url = params.toString() ? '?' + params.toString() : location.pathname;
+  history.replaceState(null, '', url);
 }
 
 function filterBySet(setId) {
@@ -358,6 +371,7 @@ function filterBySet(setId) {
   const gameCards = getGameCards();
   filteredCards = setId ? gameCards.filter(c => c.setId === setId) : gameCards;
   sortCards(document.getElementById('sort').value);
+  updateURL();
 }
 
 function sortCards(by) {
