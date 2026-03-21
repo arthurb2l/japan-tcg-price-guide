@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-21T01:50:28.674Z",
+  "updated": "2026-03-21T02:04:34.769Z",
   "sets": {
     "sv01": [
       {
@@ -97177,6 +97177,5424 @@
           "eur": 1.87,
           "low": 0.05,
           "trend": 2.05
+        }
+      }
+    ],
+    "swsh9": [
+      {
+        "id": "swsh9-001",
+        "name": "Exeggcute",
+        "localId": "001",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/001",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-002",
+        "name": "Exeggutor",
+        "localId": "002",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/002",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 140,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-003",
+        "name": "Shroomish",
+        "localId": "003",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/003",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-004",
+        "name": "Breloom",
+        "localId": "004",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/004",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 110,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh9-005",
+        "name": "Tropius",
+        "localId": "005",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/005",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 110,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh9-006",
+        "name": "Turtwig",
+        "localId": "006",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/006",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-007",
+        "name": "Grotle",
+        "localId": "007",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/007",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 100,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh9-008",
+        "name": "Torterra",
+        "localId": "008",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/008",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare",
+        "hp": 190,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.19,
+          "low": 0.02,
+          "trend": 0.18
+        }
+      },
+      {
+        "id": "swsh9-009",
+        "name": "Burmy",
+        "localId": "009",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/009",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-010",
+        "name": "Wormadam",
+        "localId": "010",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/010",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 110,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh9-011",
+        "name": "Mothim",
+        "localId": "011",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/011",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 110,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-012",
+        "name": "Cherubi",
+        "localId": "012",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/012",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 40,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-013",
+        "name": "Shaymin V",
+        "localId": "013",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/013",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 190,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.84,
+          "low": 0.05,
+          "trend": 0.78
+        }
+      },
+      {
+        "id": "swsh9-014",
+        "name": "Shaymin VSTAR",
+        "localId": "014",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/014",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare VSTAR",
+        "hp": 250,
+        "types": [
+          "Grass"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.22,
+          "low": 0.25,
+          "trend": 1.22
+        }
+      },
+      {
+        "id": "swsh9-015",
+        "name": "Karrablast",
+        "localId": "015",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/015",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.02,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-016",
+        "name": "Zarude V",
+        "localId": "016",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/016",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 220,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.7,
+          "low": 0.1,
+          "trend": 0.76
+        }
+      },
+      {
+        "id": "swsh9-017",
+        "name": "Charizard V",
+        "localId": "017",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/017",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 220,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.51,
+          "low": 1.8,
+          "trend": 4.49
+        }
+      },
+      {
+        "id": "swsh9-018",
+        "name": "Charizard VSTAR",
+        "localId": "018",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/018",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare VSTAR",
+        "hp": 280,
+        "types": [
+          "Fire"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 6.79,
+          "low": 2.99,
+          "trend": 6.3
+        }
+      },
+      {
+        "id": "swsh9-019",
+        "name": "Magmar",
+        "localId": "019",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/019",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 90,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-020",
+        "name": "Magmortar",
+        "localId": "020",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/020",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 140,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.12
+        }
+      },
+      {
+        "id": "swsh9-021",
+        "name": "Moltres",
+        "localId": "021",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/021",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare",
+        "hp": 120,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.22,
+          "low": 0.02,
+          "trend": 0.29
+        }
+      },
+      {
+        "id": "swsh9-022",
+        "name": "Entei V",
+        "localId": "022",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/022",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 230,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.23,
+          "low": 0.2,
+          "trend": 1.22
+        }
+      },
+      {
+        "id": "swsh9-023",
+        "name": "Torkoal",
+        "localId": "023",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/023",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 120,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-024",
+        "name": "Chimchar",
+        "localId": "024",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/024",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "swsh9-025",
+        "name": "Monferno",
+        "localId": "025",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/025",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 80,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh9-026",
+        "name": "Infernape",
+        "localId": "026",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/026",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare",
+        "hp": 150,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.19,
+          "low": 0.02,
+          "trend": 0.31
+        }
+      },
+      {
+        "id": "swsh9-027",
+        "name": "Simisear V",
+        "localId": "027",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/027",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 210,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.61,
+          "low": 0.1,
+          "trend": 0.54
+        }
+      },
+      {
+        "id": "swsh9-028",
+        "name": "Kingler V",
+        "localId": "028",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/028",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 220,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.9,
+          "low": 0.2,
+          "trend": 1.05
+        }
+      },
+      {
+        "id": "swsh9-029",
+        "name": "Kingler VMAX",
+        "localId": "029",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/029",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare VMAX",
+        "hp": 330,
+        "types": [
+          "Water"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.52,
+          "low": 0.4,
+          "trend": 1.75
+        }
+      },
+      {
+        "id": "swsh9-030",
+        "name": "Staryu",
+        "localId": "030",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/030",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-031",
+        "name": "Lapras",
+        "localId": "031",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/031",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 130,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.13,
+          "low": 0.02,
+          "trend": 0.13
+        }
+      },
+      {
+        "id": "swsh9-032",
+        "name": "Corphish",
+        "localId": "032",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/032",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-033",
+        "name": "Crawdaunt",
+        "localId": "033",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/033",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 130,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-034",
+        "name": "Snorunt",
+        "localId": "034",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/034",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-035",
+        "name": "Piplup",
+        "localId": "035",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/035",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-036",
+        "name": "Prinplup",
+        "localId": "036",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/036",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-037",
+        "name": "Empoleon",
+        "localId": "037",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/037",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare",
+        "hp": 160,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.17
+        }
+      },
+      {
+        "id": "swsh9-038",
+        "name": "Buizel",
+        "localId": "038",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/038",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-039",
+        "name": "Floatzel",
+        "localId": "039",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/039",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 110,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-040",
+        "name": "Lumineon V",
+        "localId": "040",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/040",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 170,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.7,
+          "low": 0.1,
+          "trend": 0.65
+        }
+      },
+      {
+        "id": "swsh9-041",
+        "name": "Manaphy",
+        "localId": "041",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/041",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 70,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.23,
+          "low": 0.02,
+          "trend": 0.23
+        }
+      },
+      {
+        "id": "swsh9-042",
+        "name": "Cubchoo",
+        "localId": "042",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/042",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-043",
+        "name": "Beartic",
+        "localId": "043",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/043",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 140,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-044",
+        "name": "Eiscue",
+        "localId": "044",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/044",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 110,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "swsh9-045",
+        "name": "Raichu V",
+        "localId": "045",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/045",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 200,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.44,
+          "low": 0.15,
+          "trend": 1.3
+        }
+      },
+      {
+        "id": "swsh9-046",
+        "name": "Electabuzz",
+        "localId": "046",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/046",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 80,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-047",
+        "name": "Electivire",
+        "localId": "047",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/047",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 140,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.14,
+          "low": 0.02,
+          "trend": 0.21
+        }
+      },
+      {
+        "id": "swsh9-048",
+        "name": "Raikou V",
+        "localId": "048",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/048",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 200,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.3,
+          "low": 0.18,
+          "trend": 1.23
+        }
+      },
+      {
+        "id": "swsh9-049",
+        "name": "Shinx",
+        "localId": "049",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/049",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 40,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-050",
+        "name": "Luxio",
+        "localId": "050",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/050",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-051",
+        "name": "Luxray",
+        "localId": "051",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/051",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 150,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.1
+        }
+      },
+      {
+        "id": "swsh9-052",
+        "name": "Pachirisu",
+        "localId": "052",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/052",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 70,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-053",
+        "name": "Clefairy",
+        "localId": "053",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/053",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-054",
+        "name": "Clefable",
+        "localId": "054",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/054",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 100,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-055",
+        "name": "Starmie",
+        "localId": "055",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/055",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-056",
+        "name": "Mewtwo",
+        "localId": "056",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/056",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 130,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.26,
+          "low": 0.02,
+          "trend": 0.43
+        }
+      },
+      {
+        "id": "swsh9-057",
+        "name": "Granbull V",
+        "localId": "057",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/057",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 210,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.67,
+          "low": 0.02,
+          "trend": 0.67
+        }
+      },
+      {
+        "id": "swsh9-058",
+        "name": "Baltoy",
+        "localId": "058",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/058",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-059",
+        "name": "Claydol",
+        "localId": "059",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/059",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 110,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-060",
+        "name": "Duskull",
+        "localId": "060",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/060",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-061",
+        "name": "Dusclops",
+        "localId": "061",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/061",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-062",
+        "name": "Dusknoir",
+        "localId": "062",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/062",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare",
+        "hp": 160,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.14,
+          "low": 0.02,
+          "trend": 0.17
+        }
+      },
+      {
+        "id": "swsh9-063",
+        "name": "Chimecho",
+        "localId": "063",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/063",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-064",
+        "name": "Whimsicott V",
+        "localId": "064",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/064",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 190,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.63,
+          "low": 0.1,
+          "trend": 0.71
+        }
+      },
+      {
+        "id": "swsh9-065",
+        "name": "Whimsicott VSTAR",
+        "localId": "065",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/065",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare VSTAR",
+        "hp": 250,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.87,
+          "low": 0.2,
+          "trend": 0.88
+        }
+      },
+      {
+        "id": "swsh9-066",
+        "name": "Sigilyph",
+        "localId": "066",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/066",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 110,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-067",
+        "name": "Dedenne",
+        "localId": "067",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/067",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-068",
+        "name": "Mimikyu V",
+        "localId": "068",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/068",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 160,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.05,
+          "low": 0.15,
+          "trend": 1.03
+        }
+      },
+      {
+        "id": "swsh9-069",
+        "name": "Mimikyu VMAX",
+        "localId": "069",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/069",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare VMAX",
+        "hp": 300,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.16,
+          "low": 1,
+          "trend": 2.12
+        }
+      },
+      {
+        "id": "swsh9-070",
+        "name": "Milcery",
+        "localId": "070",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/070",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-071",
+        "name": "Alcremie",
+        "localId": "071",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/071",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 90,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-072",
+        "name": "Hitmontop",
+        "localId": "072",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/072",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 100,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-073",
+        "name": "Nosepass",
+        "localId": "073",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/073",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 90,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-074",
+        "name": "Trapinch",
+        "localId": "074",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/074",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-075",
+        "name": "Vibrava",
+        "localId": "075",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/075",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-076",
+        "name": "Flygon",
+        "localId": "076",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/076",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 150,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-077",
+        "name": "Wormadam",
+        "localId": "077",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/077",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 110,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh9-078",
+        "name": "Riolu",
+        "localId": "078",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/078",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh9-079",
+        "name": "Lucario",
+        "localId": "079",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/079",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare",
+        "hp": 120,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.25,
+          "low": 0.02,
+          "trend": 0.22
+        }
+      },
+      {
+        "id": "swsh9-080",
+        "name": "Throh",
+        "localId": "080",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/080",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 120,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-081",
+        "name": "Sawk",
+        "localId": "081",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/081",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 90,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-082",
+        "name": "Golett",
+        "localId": "082",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/082",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 100,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.02,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-083",
+        "name": "Golurk",
+        "localId": "083",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/083",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 150,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.1
+        }
+      },
+      {
+        "id": "swsh9-084",
+        "name": "Grimer",
+        "localId": "084",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/084",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 80,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-085",
+        "name": "Muk",
+        "localId": "085",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/085",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 130,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-086",
+        "name": "Sneasel",
+        "localId": "086",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/086",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-087",
+        "name": "Weavile",
+        "localId": "087",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/087",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-088",
+        "name": "Honchkrow V",
+        "localId": "088",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/088",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 200,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.69,
+          "low": 0.02,
+          "trend": 0.66
+        }
+      },
+      {
+        "id": "swsh9-089",
+        "name": "Spiritomb",
+        "localId": "089",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/089",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-090",
+        "name": "Purrloin",
+        "localId": "090",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/090",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-091",
+        "name": "Liepard",
+        "localId": "091",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/091",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 100,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.19
+        }
+      },
+      {
+        "id": "swsh9-092",
+        "name": "Impidimp",
+        "localId": "092",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/092",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-093",
+        "name": "Morgrem",
+        "localId": "093",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/093",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-094",
+        "name": "Grimmsnarl",
+        "localId": "094",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/094",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 160,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-095",
+        "name": "Morpeko V",
+        "localId": "095",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/095",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 190,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.86,
+          "low": 0.2,
+          "trend": 0.82
+        }
+      },
+      {
+        "id": "swsh9-096",
+        "name": "Aggron V",
+        "localId": "096",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/096",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 230,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.82,
+          "low": 0.15,
+          "trend": 0.83
+        }
+      },
+      {
+        "id": "swsh9-097",
+        "name": "Aggron VMAX",
+        "localId": "097",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/097",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare VMAX",
+        "hp": 330,
+        "types": [
+          "Metal"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.54,
+          "low": 0.5,
+          "trend": 1.5
+        }
+      },
+      {
+        "id": "swsh9-098",
+        "name": "Wormadam",
+        "localId": "098",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/098",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 110,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh9-099",
+        "name": "Probopass",
+        "localId": "099",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/099",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 140,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-100",
+        "name": "Heatran",
+        "localId": "100",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/100",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 140,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.11
+        }
+      },
+      {
+        "id": "swsh9-101",
+        "name": "Escavalier",
+        "localId": "101",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/101",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh9-102",
+        "name": "Klink",
+        "localId": "102",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/102",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-103",
+        "name": "Klang",
+        "localId": "103",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/103",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-104",
+        "name": "Klinklang",
+        "localId": "104",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/104",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 150,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "swsh9-105",
+        "name": "Zamazenta V",
+        "localId": "105",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/105",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 220,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.72,
+          "low": 0.3,
+          "trend": 0.74
+        }
+      },
+      {
+        "id": "swsh9-106",
+        "name": "Flygon V",
+        "localId": "106",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/106",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 220,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.67,
+          "low": 0.1,
+          "trend": 0.79
+        }
+      },
+      {
+        "id": "swsh9-107",
+        "name": "Gible",
+        "localId": "107",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/107",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-108",
+        "name": "Gabite",
+        "localId": "108",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/108",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh9-109",
+        "name": "Garchomp",
+        "localId": "109",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/109",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare",
+        "hp": 160,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.23,
+          "low": 0.02,
+          "trend": 0.32
+        }
+      },
+      {
+        "id": "swsh9-110",
+        "name": "Axew",
+        "localId": "110",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/110",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-111",
+        "name": "Fraxure",
+        "localId": "111",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/111",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 100,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-112",
+        "name": "Haxorus",
+        "localId": "112",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/112",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 170,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.11
+        }
+      },
+      {
+        "id": "swsh9-113",
+        "name": "Druddigon",
+        "localId": "113",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/113",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.11
+        }
+      },
+      {
+        "id": "swsh9-114",
+        "name": "Dracovish V",
+        "localId": "114",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/114",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 220,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.89,
+          "low": 0.15,
+          "trend": 1.07
+        }
+      },
+      {
+        "id": "swsh9-115",
+        "name": "Farfetch'd",
+        "localId": "115",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/115",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 80,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-116",
+        "name": "Castform",
+        "localId": "116",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/116",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "swsh9-117",
+        "name": "Starly",
+        "localId": "117",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/117",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.02,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-118",
+        "name": "Staravia",
+        "localId": "118",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/118",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh9-119",
+        "name": "Staraptor",
+        "localId": "119",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/119",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 150,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.11
+        }
+      },
+      {
+        "id": "swsh9-120",
+        "name": "Bidoof",
+        "localId": "120",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/120",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-121",
+        "name": "Bibarel",
+        "localId": "121",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/121",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare",
+        "hp": 120,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.21,
+          "low": 0.02,
+          "trend": 0.19
+        }
+      },
+      {
+        "id": "swsh9-122",
+        "name": "Arceus V",
+        "localId": "122",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/122",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 220,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.25,
+          "low": 0.39,
+          "trend": 1.2
+        }
+      },
+      {
+        "id": "swsh9-123",
+        "name": "Arceus VSTAR",
+        "localId": "123",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/123",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare VSTAR",
+        "hp": 280,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.25,
+          "low": 0.7,
+          "trend": 2.48
+        }
+      },
+      {
+        "id": "swsh9-124",
+        "name": "Minccino",
+        "localId": "124",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/124",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-125",
+        "name": "Cinccino",
+        "localId": "125",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/125",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-126",
+        "name": "Tornadus",
+        "localId": "126",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/126",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh9-127",
+        "name": "Hawlucha",
+        "localId": "127",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/127",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-128",
+        "name": "Drampa V",
+        "localId": "128",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/128",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare V",
+        "hp": 210,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.68,
+          "low": 0.1,
+          "trend": 0.76
+        }
+      },
+      {
+        "id": "swsh9-129",
+        "name": "Acerola's Premonition",
+        "localId": "129",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/129",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.12
+        }
+      },
+      {
+        "id": "swsh9-130",
+        "name": "Barry",
+        "localId": "130",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/130",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-131",
+        "name": "Blunder Policy",
+        "localId": "131",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/131",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh9-132",
+        "name": "Boss's Orders",
+        "localId": "132",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/132",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.33,
+          "low": 0.02,
+          "trend": 0.39
+        }
+      },
+      {
+        "id": "swsh9-133",
+        "name": "Café Master",
+        "localId": "133",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/133",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-134",
+        "name": "Cheren's Care",
+        "localId": "134",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/134",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-135",
+        "name": "Choice Belt",
+        "localId": "135",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/135",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-136",
+        "name": "Cleansing Gloves",
+        "localId": "136",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/136",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-137",
+        "name": "Collapsed Stadium",
+        "localId": "137",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/137",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.11
+        }
+      },
+      {
+        "id": "swsh9-138",
+        "name": "Cynthia's Ambition",
+        "localId": "138",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/138",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-139",
+        "name": "Fresh Water Set",
+        "localId": "139",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/139",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-140",
+        "name": "Friends in Galar",
+        "localId": "140",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/140",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "swsh9-141",
+        "name": "Gloria",
+        "localId": "141",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/141",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-142",
+        "name": "Hunting Gloves",
+        "localId": "142",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/142",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-143",
+        "name": "Kindler",
+        "localId": "143",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/143",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh9-144",
+        "name": "Magma Basin",
+        "localId": "144",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/144",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-145",
+        "name": "Marnie's Pride",
+        "localId": "145",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/145",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.12
+        }
+      },
+      {
+        "id": "swsh9-146",
+        "name": "Pot Helmet",
+        "localId": "146",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/146",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-147",
+        "name": "Professor's Research",
+        "localId": "147",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/147",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Holo Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.13,
+          "low": 0.02,
+          "trend": 0.13
+        }
+      },
+      {
+        "id": "swsh9-148",
+        "name": "Roseanne's Backup",
+        "localId": "148",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/148",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-149",
+        "name": "Team Yell's Cheer",
+        "localId": "149",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/149",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-150",
+        "name": "Ultra Ball",
+        "localId": "150",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/150",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.14
+        }
+      },
+      {
+        "id": "swsh9-151",
+        "name": "Double Turbo Energy",
+        "localId": "151",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/151",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.14,
+          "low": 0.02,
+          "trend": 0.13
+        }
+      },
+      {
+        "id": "swsh9-152",
+        "name": "Shaymin V",
+        "localId": "152",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/152",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 190,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.84,
+          "low": 0.05,
+          "trend": 0.78
+        }
+      },
+      {
+        "id": "swsh9-153",
+        "name": "Charizard V",
+        "localId": "153",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/153",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.51,
+          "low": 1.8,
+          "trend": 4.49
+        }
+      },
+      {
+        "id": "swsh9-154",
+        "name": "Charizard V",
+        "localId": "154",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/154",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.51,
+          "low": 1.8,
+          "trend": 4.49
+        }
+      },
+      {
+        "id": "swsh9-155",
+        "name": "Lumineon V",
+        "localId": "155",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/155",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 170,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.7,
+          "low": 0.1,
+          "trend": 0.65
+        }
+      },
+      {
+        "id": "swsh9-156",
+        "name": "Lumineon V",
+        "localId": "156",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/156",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 170,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.7,
+          "low": 0.1,
+          "trend": 0.65
+        }
+      },
+      {
+        "id": "swsh9-157",
+        "name": "Pikachu V",
+        "localId": "157",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/157",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 190,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 12.88,
+          "low": 2,
+          "trend": 13.27
+        }
+      },
+      {
+        "id": "swsh9-158",
+        "name": "Raichu V",
+        "localId": "158",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/158",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 200,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.44,
+          "low": 0.15,
+          "trend": 1.3
+        }
+      },
+      {
+        "id": "swsh9-159",
+        "name": "Granbull V",
+        "localId": "159",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/159",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 210,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.67,
+          "low": 0.02,
+          "trend": 0.67
+        }
+      },
+      {
+        "id": "swsh9-160",
+        "name": "Whimsicott V",
+        "localId": "160",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/160",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 190,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.63,
+          "low": 0.1,
+          "trend": 0.71
+        }
+      },
+      {
+        "id": "swsh9-161",
+        "name": "Honchkrow V",
+        "localId": "161",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/161",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 200,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.69,
+          "low": 0.02,
+          "trend": 0.66
+        }
+      },
+      {
+        "id": "swsh9-162",
+        "name": "Honchkrow V",
+        "localId": "162",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/162",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 200,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.69,
+          "low": 0.02,
+          "trend": 0.66
+        }
+      },
+      {
+        "id": "swsh9-163",
+        "name": "Zamazenta V",
+        "localId": "163",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/163",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.72,
+          "low": 0.3,
+          "trend": 0.74
+        }
+      },
+      {
+        "id": "swsh9-164",
+        "name": "Flygon V",
+        "localId": "164",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/164",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.67,
+          "low": 0.1,
+          "trend": 0.79
+        }
+      },
+      {
+        "id": "swsh9-165",
+        "name": "Arceus V",
+        "localId": "165",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/165",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.25,
+          "low": 0.39,
+          "trend": 1.2
+        }
+      },
+      {
+        "id": "swsh9-166",
+        "name": "Arceus V",
+        "localId": "166",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/166",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.25,
+          "low": 0.39,
+          "trend": 1.2
+        }
+      },
+      {
+        "id": "swsh9-167",
+        "name": "Barry",
+        "localId": "167",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/167",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-168",
+        "name": "Cheren's Care",
+        "localId": "168",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/168",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-169",
+        "name": "Cynthia's Ambition",
+        "localId": "169",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/169",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-170",
+        "name": "Kindler",
+        "localId": "170",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/170",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh9-171",
+        "name": "Marnie's Pride",
+        "localId": "171",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/171",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.12
+        }
+      },
+      {
+        "id": "swsh9-172",
+        "name": "Roseanne's Backup",
+        "localId": "172",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/172",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-173",
+        "name": "Shaymin VSTAR",
+        "localId": "173",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/173",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "hp": 250,
+        "types": [
+          "Grass"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.22,
+          "low": 0.25,
+          "trend": 1.22
+        }
+      },
+      {
+        "id": "swsh9-174",
+        "name": "Charizard VSTAR",
+        "localId": "174",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/174",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "hp": 280,
+        "types": [
+          "Fire"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 6.79,
+          "low": 2.99,
+          "trend": 6.3
+        }
+      },
+      {
+        "id": "swsh9-175",
+        "name": "Whimsicott VSTAR",
+        "localId": "175",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/175",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "hp": 250,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.87,
+          "low": 0.2,
+          "trend": 0.88
+        }
+      },
+      {
+        "id": "swsh9-176",
+        "name": "Arceus VSTAR",
+        "localId": "176",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/176",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "hp": 280,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.25,
+          "low": 0.7,
+          "trend": 2.48
+        }
+      },
+      {
+        "id": "swsh9-177",
+        "name": "Cheren's Care",
+        "localId": "177",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/177",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-178",
+        "name": "Cynthia's Ambition",
+        "localId": "178",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/178",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-179",
+        "name": "Kindler",
+        "localId": "179",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/179",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh9-180",
+        "name": "Roseanne's Backup",
+        "localId": "180",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/180",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-181",
+        "name": "Galarian Articuno V",
+        "localId": "181",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/181",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "hp": 210,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 12.6,
+          "low": 4.99,
+          "trend": 11.73
+        }
+      },
+      {
+        "id": "swsh9-182",
+        "name": "Galarian Zapdos V",
+        "localId": "182",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/182",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "hp": 200,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 11.27,
+          "low": 4.9,
+          "trend": 11.33
+        }
+      },
+      {
+        "id": "swsh9-183",
+        "name": "Galarian Moltres V",
+        "localId": "183",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/183",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "hp": 220,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 14.23,
+          "low": 8,
+          "trend": 15.24
+        }
+      },
+      {
+        "id": "swsh9-184",
+        "name": "Arceus VSTAR",
+        "localId": "184",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/184",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "hp": 280,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.25,
+          "low": 0.7,
+          "trend": 2.48
+        }
+      },
+      {
+        "id": "swsh9-185",
+        "name": "Magma Basin",
+        "localId": "185",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/185",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-186",
+        "name": "Ultra Ball",
+        "localId": "186",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/186",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.14
+        }
+      },
+      {
+        "id": "swsh9-TG01",
+        "name": "Flareon",
+        "localId": "TG01",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG01",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 110,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 11.27,
+          "low": 5,
+          "trend": 11.57
+        }
+      },
+      {
+        "id": "swsh9-TG02",
+        "name": "Vaporeon",
+        "localId": "TG02",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG02",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 110,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 11.62,
+          "low": 3,
+          "trend": 13.02
+        }
+      },
+      {
+        "id": "swsh9-TG03",
+        "name": "Octillery",
+        "localId": "TG03",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG03",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 110,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.78,
+          "low": 0.49,
+          "trend": 1.84
+        }
+      },
+      {
+        "id": "swsh9-TG04",
+        "name": "Jolteon",
+        "localId": "TG04",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG04",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 100,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.87,
+          "low": 4.99,
+          "trend": 9.36
+        }
+      },
+      {
+        "id": "swsh9-TG05",
+        "name": "Zekrom",
+        "localId": "TG05",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG05",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 130,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 9.7,
+          "low": 6.7,
+          "trend": 10.05
+        }
+      },
+      {
+        "id": "swsh9-TG06",
+        "name": "Dusknoir",
+        "localId": "TG06",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG06",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 150,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.14,
+          "low": 0.02,
+          "trend": 0.17
+        }
+      },
+      {
+        "id": "swsh9-TG07",
+        "name": "Dedenne",
+        "localId": "TG07",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG07",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 70,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh9-TG08",
+        "name": "Alcremie",
+        "localId": "TG08",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG08",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 90,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh9-TG09",
+        "name": "Ariados",
+        "localId": "TG09",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG09",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 110,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.59,
+          "low": 0.89,
+          "trend": 1.64
+        }
+      },
+      {
+        "id": "swsh9-TG10",
+        "name": "Houndoom",
+        "localId": "TG10",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG10",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 130,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.92,
+          "low": 0.9,
+          "trend": 1.95
+        }
+      },
+      {
+        "id": "swsh9-TG11",
+        "name": "Eevee",
+        "localId": "TG11",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG11",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 70,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 10.05,
+          "low": 3,
+          "trend": 11.47
+        }
+      },
+      {
+        "id": "swsh9-TG12",
+        "name": "Oranguru",
+        "localId": "TG12",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG12",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.81,
+          "low": 0.5,
+          "trend": 2.16
+        }
+      },
+      {
+        "id": "swsh9-TG13",
+        "name": "Boltund V",
+        "localId": "TG13",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG13",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 200,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.23,
+          "low": 4,
+          "trend": 8.77
+        }
+      },
+      {
+        "id": "swsh9-TG14",
+        "name": "Sylveon V",
+        "localId": "TG14",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG14",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 200,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 39.52,
+          "low": 18,
+          "trend": 49.03
+        }
+      },
+      {
+        "id": "swsh9-TG15",
+        "name": "Sylveon VMAX",
+        "localId": "TG15",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG15",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 310,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 42.47,
+          "low": 20,
+          "trend": 36.96
+        }
+      },
+      {
+        "id": "swsh9-TG16",
+        "name": "Mimikyu V",
+        "localId": "TG16",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG16",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 160,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.05,
+          "low": 0.15,
+          "trend": 1.03
+        }
+      },
+      {
+        "id": "swsh9-TG17",
+        "name": "Mimikyu VMAX",
+        "localId": "TG17",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG17",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 300,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.16,
+          "low": 1,
+          "trend": 2.12
+        }
+      },
+      {
+        "id": "swsh9-TG18",
+        "name": "Single Strike Urshifu V",
+        "localId": "TG18",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG18",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.29,
+          "low": 1.99,
+          "trend": 4.5
+        }
+      },
+      {
+        "id": "swsh9-TG19",
+        "name": "Single Strike Urshifu VMAX",
+        "localId": "TG19",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG19",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 330,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.11,
+          "low": 2.99,
+          "trend": 6.58
+        }
+      },
+      {
+        "id": "swsh9-TG20",
+        "name": "Rapid Strike Urshifu V",
+        "localId": "TG20",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG20",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 5.16,
+          "low": 2.5,
+          "trend": 6.24
+        }
+      },
+      {
+        "id": "swsh9-TG21",
+        "name": "Rapid Strike Urshifu VMAX",
+        "localId": "TG21",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG21",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 330,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 9.16,
+          "low": 4.93,
+          "trend": 9.09
+        }
+      },
+      {
+        "id": "swsh9-TG22",
+        "name": "Umbreon V",
+        "localId": "TG22",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG22",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 200,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 47.06,
+          "low": 10,
+          "trend": 41.84
+        }
+      },
+      {
+        "id": "swsh9-TG23",
+        "name": "Umbreon VMAX",
+        "localId": "TG23",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG23",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "hp": 310,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 64.68,
+          "low": 23.5,
+          "trend": 55.1
+        }
+      },
+      {
+        "id": "swsh9-TG24",
+        "name": "Acerola's Premonition",
+        "localId": "TG24",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG24",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.12
+        }
+      },
+      {
+        "id": "swsh9-TG25",
+        "name": "Café Master",
+        "localId": "TG25",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG25",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh9-TG26",
+        "name": "Gloria",
+        "localId": "TG26",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG26",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh9-TG27",
+        "name": "Rapid Strike Style Mustard",
+        "localId": "TG27",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG27",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.57,
+          "low": 0.5,
+          "trend": 1.49
+        }
+      },
+      {
+        "id": "swsh9-TG28",
+        "name": "Single Strike Style Mustard",
+        "localId": "TG28",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG28",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.69,
+          "low": 0.5,
+          "trend": 1.75
+        }
+      },
+      {
+        "id": "swsh9-TG29",
+        "name": "Single Strike Urshifu VMAX",
+        "localId": "TG29",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG29",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "hp": 330,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.11,
+          "low": 2.99,
+          "trend": 6.58
+        }
+      },
+      {
+        "id": "swsh9-TG30",
+        "name": "Rapid Strike Urshifu VMAX",
+        "localId": "TG30",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh9/TG30",
+        "set": "Brilliant Stars",
+        "setId": "swsh9",
+        "rarity": "Secret Rare",
+        "hp": 330,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 9.16,
+          "low": 4.93,
+          "trend": 9.09
         }
       }
     ]
