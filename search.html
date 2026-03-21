@@ -418,7 +418,8 @@ function filterByGame(game) {
   sets.forEach(s => {
     const opt = document.createElement('option');
     opt.value = s;
-    opt.textContent = gameCards.find(c => c.setId === s)?.set || s;
+    const setName = gameCards.find(c => c.setId === s)?.set;
+    opt.textContent = setName && setName !== s ? `${s} - ${setName}` : s;
     setFilter.appendChild(opt);
   });
   
