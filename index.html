@@ -51,8 +51,21 @@ h1{text-align:center;color:#222;font-size:1.8em;margin-bottom:8px}
 .set-link.new::before{content:'New';display:block;font-size:.6em;color:#fff;background:#EE1515;padding:1px 6px;border-radius:3px;margin-bottom:4px;width:fit-content;margin-left:auto;margin-right:auto}
 .set-link .name{font-weight:600;line-height:1.2}
 /* Footer */
-footer{margin-top:10px;color:#888;font-size:.8em;text-align:center}
-footer a{color:#EE1515}
+#site-footer{background:#222;color:#aaa;padding:30px 15px;margin:40px -20px -20px;font-size:.85em;width:calc(100% + 40px)}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:25px;max-width:800px;margin:0 auto 25px}
+.footer-col h4{color:#fff;font-size:.9em;margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px}
+.footer-col a{display:block;color:#aaa;text-decoration:none;padding:4px 0}
+.footer-col a:hover{color:#fff}
+.footer-legal{text-align:center;padding-top:20px;border-top:1px solid #444;font-size:.8em;line-height:1.8}
+.footer-legal a{color:#aaa}
+.footer-legal a:hover{color:#fff}
+@media(max-width:500px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:20px 15px}
+  .footer-col h4{font-size:.8em;margin-bottom:8px}
+  .footer-col a{font-size:.85em;padding:3px 0}
+  .footer-legal{font-size:.75em;line-height:1.6}
+  .footer-legal p{margin:5px 0}
+}
 </style>
 <link rel="icon" href="/japan-tcg-price-guide/favicon.ico">
 <meta property="og:title" content="Japan TCG Price Guide">
