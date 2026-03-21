@@ -163,7 +163,8 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
         <dt>Set</dt><dd id="modal-set"></dd>
         <dt>Card ID</dt><dd id="modal-id"></dd>
         <dt>Rarity</dt><dd id="modal-rarity"></dd>
-        <dt>Price (EUR)</dt><dd id="modal-price"></dd>
+        <dt id="modal-extra-label" style="display:none"></dt><dd id="modal-extra" style="display:none"></dd>
+        <dt>Price</dt><dd id="modal-price"></dd>
       </dl>
     </div>
   </div>
@@ -424,6 +425,22 @@ function showCard(id) {
   document.getElementById('modal-set').textContent = card.set || card.setId;
   document.getElementById('modal-id').textContent = card.id;
   document.getElementById('modal-rarity').textContent = card.rarity || '-';
+  
+  // Game-specific extra info
+  const extraLabel = document.getElementById('modal-extra-label');
+  const extra = document.getElementById('modal-extra');
+  if (card.game === 'onepiece' && card.type) {
+    extraLabel.textContent = 'Type';
+    extra.textContent = [card.type, card.color, card.power ? `${card.power} PWR` : ''].filter(Boolean).join(' · ');
+    extraLabel.style.display = extra.style.display = '';
+  } else if (card.hp) {
+    extraLabel.textContent = 'HP';
+    extra.textContent = card.hp + (card.types?.length ? ' · ' + card.types.join('/') : '');
+    extraLabel.style.display = extra.style.display = '';
+  } else {
+    extraLabel.style.display = extra.style.display = 'none';
+  }
+  
   document.getElementById('modal-price').textContent = card.price ? formatPrice(card) : 'No price data';
   document.getElementById('modal').classList.add('active');
 }
