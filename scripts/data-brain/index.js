@@ -6,43 +6,25 @@
 const fs = require('fs');
 const path = require('path');
 
-// Source adapters
+// Source adapters - only load enabled ones
 const tcgdex = require('./sources/tcgdex');
-const pokemonPriceTracker = require('./sources/pokemon-price-tracker');
-const jpnCards = require('./sources/jpn-cards');
 
 const METRICS_FILE = path.join(__dirname, '../../data/source-metrics.json');
 
 // Default metrics
 const defaultMetrics = {
   sources: {
-    tcgdex: { accuracyScore: 0.7, requestsToday: 0, health: 'unknown' },
-    pokemonPriceTracker: { accuracyScore: 0.85, requestsToday: 0, health: 'unknown' },
-    jpnCards: { accuracyScore: 0.9, requestsToday: 0, health: 'down' }
+    tcgdex: { accuracyScore: 0.9, requestsToday: 0, health: 'unknown' }
   },
   lastReset: new Date().toISOString().split('T')[0]
 };
 
-// Source registry
+// Source registry - only tcgdex is active
 const sources = {
   tcgdex: {
     id: 'tcgdex',
     adapter: tcgdex,
     provides: ['metadata', 'images', 'jp_names'],
-    quota: Infinity,
-    requiresKey: false
-  },
-  pokemonPriceTracker: {
-    id: 'pokemonPriceTracker',
-    adapter: pokemonPriceTracker,
-    provides: ['metadata', 'prices', 'price_history', 'jp_cards'],
-    quota: 100,
-    requiresKey: true
-  },
-  jpnCards: {
-    id: 'jpnCards',
-    adapter: jpnCards,
-    provides: ['metadata', 'jp_names', 'images'],
     quota: Infinity,
     requiresKey: false
   }
