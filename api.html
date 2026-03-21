@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API Documentation | Japan TCG Price Guide</title>
+<meta name="description" content="Free JSON API for Pokemon card prices. Access 5,000+ cards with EUR/USD/JPY pricing for your apps and tools.">
+<link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
+<style>
+.api-section{background:#fff;border:1px solid #ddd;border-radius:8px;padding:20px;margin:20px 0}
+.endpoint{background:#1a1a2e;color:#0f0;padding:15px;border-radius:6px;font-family:monospace;overflow-x:auto;margin:10px 0}
+.param{background:#f5f5f5;padding:8px 12px;border-left:3px solid #EE1515;margin:8px 0;font-size:.9em}
+pre{background:#1a1a2e;color:#eee;padding:15px;border-radius:6px;overflow-x:auto;font-size:.85em}
+.try-btn{background:#EE1515;color:#fff;border:none;padding:8px 16px;border-radius:4px;cursor:pointer;margin:10px 0}
+.try-btn:hover{background:#cc0000}
+#result{background:#f9f9f9;border:1px solid #ddd;padding:15px;border-radius:6px;margin-top:10px;max-height:300px;overflow:auto;display:none}
+.badge{display:inline-block;padding:2px 8px;border-radius:12px;font-size:.75em;margin-left:8px}
+.badge-free{background:#dcfce7;color:#166534}
+.badge-static{background:#dbeafe;color:#1d4ed8}
+</style>
+</head>
+<body>
+<nav><a href="/japan-tcg-price-guide/">← Home</a></nav>
+
+<h1>📡 API Documentation <span class="badge badge-free">FREE</span> <span class="badge badge-static">Static JSON</span></h1>
+
+<p>Access our Pokemon card database directly via static JSON. No API key required. Perfect for hobby projects, price trackers, and collection apps.</p>
+
+<div class="api-section">
+<h2>📦 Full Database</h2>
+<p>Complete card database with all sets and pricing.</p>
+<div class="endpoint">GET https://arthurb2l.github.io/japan-tcg-price-guide/data/brain-cache.json</div>
+<div class="param"><strong>Size:</strong> ~3MB | <strong>Cards:</strong> 5,600+ | <strong>Sets:</strong> 28</div>
+<button class="try-btn" onclick="tryAPI('data/brain-cache.json')">Try It</button>
+</div>
+
+<div class="api-section">
+<h2>📊 Response Schema</h2>
+<pre>{
+  "sets": {
+    "sv01": [
+      {
+        "id": "sv01-1",
+        "name": "Sprigatito",
+        "setId": "sv01",
+        "set": "Scarlet & Violet",
+        "rarity": "Common",
+        "img": "https://...",
+        "price": {
+          "eur": 0.15,
+          "updated": "2026-03-21"
+        }
+      }
+    ]
+  },
+  "meta": {
+    "lastUpdated": "2026-03-21",
+    "totalCards": 5637,
+    "source": "TCGdex + Cardmarket"
+  }
+}</pre>
+</div>
+
+<div class="api-section">
+<h2>💡 Usage Examples</h2>
+
+<h3>JavaScript - Fetch All Cards</h3>
+<pre>const res = await fetch('https://arthurb2l.github.io/japan-tcg-price-guide/data/brain-cache.json');
+const data = await res.json();
+const allCards = Object.values(data.sets).flat();
+console.log(`${allCards.length} cards loaded`);</pre>
+
+<h3>JavaScript - Search by Name</h3>
+<pre>const cards = Object.values(data.sets).flat();
+const charizards = cards.filter(c => 
+  c.name.toLowerCase().includes('charizard')
+);
+console.log(charizards.map(c => `${c.name} - €${c.price?.eur}`));</pre>
+
+<h3>JavaScript - Top 10 Most Valuable</h3>
+<pre>const top10 = Object.values(data.sets).flat()
+  .filter(c => c.price?.eur)
+  .sort((a,b) => b.price.eur - a.price.eur)
+  .slice(0, 10);
+console.table(top10.map(c => ({name: c.name, price: c.price.eur})));</pre>
+
+<h3>Python</h3>
+<pre>import requests
+data = requests.get('https://arthurb2l.github.io/japan-tcg-price-guide/data/brain-cache.json').json()
+cards = [card for cards in data['sets'].values() for card in cards]
+print(f"{len(cards)} cards loaded")</pre>
+</div>
+
+<div class="api-section">
+<h2>⚡ Rate Limits & Caching</h2>
+<ul>
+<li>No rate limits (static file)</li>
+<li>GitHub Pages CDN - fast worldwide</li>
+<li>Cache locally - data updates weekly</li>
+<li>CORS enabled - works from any domain</li>
+</ul>
+</div>
+
+<div class="api-section">
+<h2>📋 Data Sources</h2>
+<ul>
+<li><strong>Card data:</strong> <a href="https://tcgdex.dev">TCGdex</a> (open source)</li>
+<li><strong>EUR prices:</strong> <a href="https://cardmarket.com">Cardmarket</a> via TCGdex</li>
+<li><strong>Currency rates:</strong> Static (EUR→USD: 1.08, EUR→JPY: 162)</li>
+</ul>
+</div>
+
+<div class="api-section">
+<h2>🔧 Live Test</h2>
+<p>Click "Try It" above or test here:</p>
+<div id="result"></div>
+</div>
+
+<script>
+async function tryAPI(endpoint) {
+  const res = document.getElementById('result');
+  res.style.display = 'block';
+  res.textContent = 'Loading...';
+  try {
+    const data = await fetch('/japan-tcg-price-guide/' + endpoint).then(r => r.json());
+    const cards = Object.values(data.sets).flat();
+    res.innerHTML = `<strong>✅ Success!</strong><br>
+      Cards: ${cards.length}<br>
+      Sets: ${Object.keys(data.sets).length}<br>
+      Sample: ${cards[0]?.name} (${cards[0]?.set})<br><br>
+      <details><summary>View raw (first 3 cards)</summary><pre>${JSON.stringify(cards.slice(0,3), null, 2)}</pre></details>`;
+  } catch(e) {
+    res.textContent = '❌ Error: ' + e.message;
+  }
+}
+</script>
+
+<footer id="site-footer"></footer>
+<script src="/japan-tcg-price-guide/components/footer.js"></script>
+</body>
+</html>

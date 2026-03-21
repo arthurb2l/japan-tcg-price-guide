@@ -11,6 +11,7 @@ const footerLinks = {
     { text: "Legal", href: "/japan-tcg-price-guide/legal.html" }
   ],
   more: [
+    { text: "API Docs", href: "/japan-tcg-price-guide/api.html" },
     { text: "Donate", href: "/japan-tcg-price-guide/donate.html" },
     { text: "GitHub", href: "https://github.com/arthurb2l/japan-tcg-price-guide", external: true }
   ]
