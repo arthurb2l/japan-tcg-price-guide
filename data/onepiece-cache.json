@@ -2,7 +2,7 @@
   "meta": {
     "lastUpdated": "2026-03-21",
     "source": "Manual from pricecharting.com + onepiece-cardgame.dev",
-    "totalCards": 17
+    "totalCards": 32
   },
   "sets": {
     "OP-09": [
@@ -18,6 +18,36 @@
         "price": {
           "jpy": 550000,
           "eur": 3400,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP09-072",
+        "name": "Kaido",
+        "nameJp": "カイドウ",
+        "setId": "OP-09",
+        "set": "Four Emperors",
+        "rarity": "SEC",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 35000,
+          "eur": 216,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP09-119",
+        "name": "Big Mom",
+        "nameJp": "ビッグ・マム",
+        "setId": "OP-09",
+        "set": "Four Emperors",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": null,
+        "price": {
+          "jpy": 28000,
+          "eur": 173,
           "updated": "2026-03-21"
         }
       }
@@ -37,6 +67,36 @@
           "eur": 1540,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP05-074",
+        "name": "Trafalgar Law",
+        "nameJp": "トラファルガー・ロー",
+        "setId": "OP-05",
+        "set": "Awakening of the New Era",
+        "rarity": "SR",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 12000,
+          "eur": 74,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP05-118",
+        "name": "Sabo",
+        "nameJp": "サボ",
+        "setId": "OP-05",
+        "set": "Awakening of the New Era",
+        "rarity": "SEC",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 18000,
+          "eur": 111,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-02": [
@@ -52,6 +112,36 @@
         "price": {
           "jpy": 175000,
           "eur": 1080,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP02-120",
+        "name": "Edward Newgate",
+        "nameJp": "エドワード・ニューゲート",
+        "setId": "OP-02",
+        "set": "Paramount War",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": null,
+        "price": {
+          "jpy": 40000,
+          "eur": 247,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP02-085",
+        "name": "Crocodile",
+        "nameJp": "クロコダイル",
+        "setId": "OP-02",
+        "set": "Paramount War",
+        "rarity": "SR",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 7000,
+          "eur": 43,
           "updated": "2026-03-21"
         }
       }
@@ -84,6 +174,36 @@
         "price": {
           "jpy": 60000,
           "eur": 370,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP01-025",
+        "name": "Nami",
+        "nameJp": "ナミ",
+        "setId": "OP-01",
+        "set": "Romance Dawn",
+        "rarity": "SR",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 8000,
+          "eur": 49,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP01-047",
+        "name": "Roronoa Zoro",
+        "nameJp": "ロロノア・ゾロ",
+        "setId": "OP-01",
+        "set": "Romance Dawn",
+        "rarity": "SR",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 10000,
+          "eur": 62,
           "updated": "2026-03-21"
         }
       }
@@ -152,6 +272,21 @@
           "eur": 111,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP03-099",
+        "name": "Charlotte Katakuri",
+        "nameJp": "シャーロット・カタクリ",
+        "setId": "OP-03",
+        "set": "Pillars of Strength",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": null,
+        "price": {
+          "jpy": 15000,
+          "eur": 93,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-04": [
@@ -169,6 +304,21 @@
           "eur": 74,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP04-112",
+        "name": "Sabo",
+        "nameJp": "サボ",
+        "setId": "OP-04",
+        "set": "Kingdoms of Intrigue",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": null,
+        "price": {
+          "jpy": 20000,
+          "eur": 123,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-06": [
@@ -184,6 +334,21 @@
         "price": {
           "jpy": 45000,
           "eur": 278,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP06-118",
+        "name": "Sanji",
+        "nameJp": "サンジ",
+        "setId": "OP-06",
+        "set": "Wings of the Captain",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": null,
+        "price": {
+          "jpy": 18000,
+          "eur": 111,
           "updated": "2026-03-21"
         }
       }
@@ -218,6 +383,21 @@
           "eur": 93,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP07-015",
+        "name": "Vegapunk",
+        "nameJp": "ベガパンク",
+        "setId": "OP-07",
+        "set": "500 Years in the Future",
+        "rarity": "SR",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 8000,
+          "eur": 49,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-08": [
@@ -250,6 +430,21 @@
           "eur": 136,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP08-058",
+        "name": "Whitebeard",
+        "nameJp": "白ひげ",
+        "setId": "OP-08",
+        "set": "Two Legends",
+        "rarity": "L",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 12000,
+          "eur": 74,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "PRB-02": [
@@ -267,6 +462,21 @@
           "eur": 123,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "PRB02-003",
+        "name": "Shanks",
+        "nameJp": "シャンクス",
+        "setId": "PRB-02",
+        "set": "Premium Booster 2",
+        "rarity": "SEC",
+        "variant": "Film Red",
+        "img": null,
+        "price": {
+          "jpy": 15000,
+          "eur": 93,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "ST-10": [
@@ -282,6 +492,23 @@
         "price": {
           "jpy": 8000,
           "eur": 49,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "ST-13": [
+      {
+        "id": "ST13-003",
+        "name": "Monkey D. Luffy",
+        "nameJp": "モンキー・D・ルフィ",
+        "setId": "ST-13",
+        "set": "The Three Brothers",
+        "rarity": "L",
+        "variant": "Parallel",
+        "img": null,
+        "price": {
+          "jpy": 6000,
+          "eur": 37,
           "updated": "2026-03-21"
         }
       }
