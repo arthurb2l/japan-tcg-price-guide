@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arthurb2l.github.io/japan-pokemon-card-price-guide/sitemap.xml
+Sitemap: https://arthurb2l.github.io/japan-tcg-price-guide/sitemap.xml
