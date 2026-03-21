@@ -114,6 +114,23 @@ footer a{color:#EE1515}
   </a>
 </div>
 
+<!-- Onboarding overlay -->
+<div id="onboard" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:1000;padding:20px;overflow-y:auto">
+  <div style="background:#fff;max-width:360px;margin:50px auto;border-radius:12px;padding:25px;text-align:center">
+    <h2 style="margin:0 0 20px;font-size:1.3em">🛒 Flea Market Mode</h2>
+    <div style="text-align:left;margin-bottom:20px">
+      <p style="margin:12px 0;display:flex;gap:10px"><span style="font-size:1.3em">1️⃣</span><span>Search any card name or set</span></p>
+      <p style="margin:12px 0;display:flex;gap:10px"><span style="font-size:1.3em">2️⃣</span><span>Compare price to what you see</span></p>
+      <p style="margin:12px 0;display:flex;gap:10px"><span style="font-size:1.3em">3️⃣</span><span>Works offline at markets!</span></p>
+    </div>
+    <button onclick="dismissOnboard()" style="background:#EE1515;color:#fff;border:none;padding:12px 30px;border-radius:8px;font-size:1em;cursor:pointer;font-weight:600">Got it!</button>
+  </div>
+</div>
+<script>
+if(!localStorage.getItem('tcg-onboarded')){document.getElementById('onboard').style.display='block'}
+function dismissOnboard(){localStorage.setItem('tcg-onboarded','1');document.getElementById('onboard').style.display='none'}
+</script>
+
 <footer id="site-footer"></footer>
 <script src="components/footer.js"></script>
 <script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/japan-tcg-price-guide/sw.js")</script>
