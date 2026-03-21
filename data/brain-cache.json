@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-21T05:37:11.650Z",
+  "updated": "2026-03-21T06:24:11.472Z",
   "sets": {
     "sv01": [
       {
@@ -167524,6 +167524,6200 @@
           "eur": 1.59,
           "low": 0.2,
           "trend": 1.99
+        }
+      }
+    ],
+    "swsh11": [
+      {
+        "id": "swsh11-001",
+        "name": "Oddish",
+        "localId": "001",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/001",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-002",
+        "name": "Gloom",
+        "localId": "002",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/002",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh11-003",
+        "name": "Vileplume",
+        "localId": "003",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/003",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 150,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.25,
+          "low": 0.02,
+          "trend": 0.29
+        }
+      },
+      {
+        "id": "swsh11-004",
+        "name": "Paras",
+        "localId": "004",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/004",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh11-005",
+        "name": "Parasect",
+        "localId": "005",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/005",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh11-006",
+        "name": "Wurmple",
+        "localId": "006",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/006",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-007",
+        "name": "Silcoon",
+        "localId": "007",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/007",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-008",
+        "name": "Beautifly",
+        "localId": "008",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/008",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 130,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.29,
+          "low": 0.02,
+          "trend": 0.27
+        }
+      },
+      {
+        "id": "swsh11-009",
+        "name": "Cascoon",
+        "localId": "009",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/009",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "swsh11-010",
+        "name": "Dustox",
+        "localId": "010",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/010",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 140,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.14
+        }
+      },
+      {
+        "id": "swsh11-011",
+        "name": "Seedot",
+        "localId": "011",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/011",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-012",
+        "name": "Nuzleaf",
+        "localId": "012",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/012",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-013",
+        "name": "Shiftry",
+        "localId": "013",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/013",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 160,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.21,
+          "low": 0.02,
+          "trend": 0.31
+        }
+      },
+      {
+        "id": "swsh11-014",
+        "name": "Roselia",
+        "localId": "014",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/014",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-015",
+        "name": "Roserade",
+        "localId": "015",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/015",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 120,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-016",
+        "name": "Phantump",
+        "localId": "016",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/016",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.02,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-017",
+        "name": "Trevenant",
+        "localId": "017",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/017",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 120,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.25
+        }
+      },
+      {
+        "id": "swsh11-018",
+        "name": "Blipbug",
+        "localId": "018",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/018",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-019",
+        "name": "Dottler",
+        "localId": "019",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/019",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-020",
+        "name": "Orbeetle",
+        "localId": "020",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/020",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 110,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.19,
+          "low": 0.02,
+          "trend": 0.32
+        }
+      },
+      {
+        "id": "swsh11-021",
+        "name": "Slugma",
+        "localId": "021",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/021",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.11
+        }
+      },
+      {
+        "id": "swsh11-022",
+        "name": "Magcargo",
+        "localId": "022",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/022",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 130,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh11-023",
+        "name": "Torkoal",
+        "localId": "023",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/023",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 110,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh11-024",
+        "name": "Litwick",
+        "localId": "024",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/024",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-025",
+        "name": "Lampent",
+        "localId": "025",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/025",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 80,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-026",
+        "name": "Chandelure",
+        "localId": "026",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/026",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 150,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.68,
+          "low": 0.7,
+          "trend": 1.72
+        }
+      },
+      {
+        "id": "swsh11-027",
+        "name": "Delphox V",
+        "localId": "027",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/027",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare V",
+        "hp": 210,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.52,
+          "low": 0.1,
+          "trend": 0.73
+        }
+      },
+      {
+        "id": "swsh11-028",
+        "name": "Litleo",
+        "localId": "028",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/028",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-029",
+        "name": "Pyroar",
+        "localId": "029",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/029",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 120,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.19,
+          "low": 0.02,
+          "trend": 0.22
+        }
+      },
+      {
+        "id": "swsh11-030",
+        "name": "Poliwag",
+        "localId": "030",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/030",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-031",
+        "name": "Poliwhirl",
+        "localId": "031",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/031",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh11-032",
+        "name": "Politoed",
+        "localId": "032",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/032",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 140,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.11
+        }
+      },
+      {
+        "id": "swsh11-033",
+        "name": "Seel",
+        "localId": "033",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/033",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-034",
+        "name": "Dewgong",
+        "localId": "034",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/034",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.13
+        }
+      },
+      {
+        "id": "swsh11-035",
+        "name": "Horsea",
+        "localId": "035",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/035",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-036",
+        "name": "Seadra",
+        "localId": "036",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/036",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 80,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-037",
+        "name": "Kingdra",
+        "localId": "037",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/037",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 150,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.22,
+          "low": 0.02,
+          "trend": 0.37
+        }
+      },
+      {
+        "id": "swsh11-038",
+        "name": "Luvdisc",
+        "localId": "038",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/038",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-039",
+        "name": "Shellos",
+        "localId": "039",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/039",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-040",
+        "name": "Finneon",
+        "localId": "040",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/040",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-041",
+        "name": "Lumineon",
+        "localId": "041",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/041",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-042",
+        "name": "Snover",
+        "localId": "042",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/042",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 80,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.02,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-043",
+        "name": "Abomasnow",
+        "localId": "043",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/043",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 140,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-044",
+        "name": "Hisuian Basculin",
+        "localId": "044",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/044",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-045",
+        "name": "Hisuian Basculegion",
+        "localId": "045",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/045",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 110,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.29,
+          "low": 0.02,
+          "trend": 0.31
+        }
+      },
+      {
+        "id": "swsh11-046",
+        "name": "Ducklett",
+        "localId": "046",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/046",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-047",
+        "name": "Swanna",
+        "localId": "047",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/047",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 120,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-048",
+        "name": "Kyurem V",
+        "localId": "048",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/048",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare V",
+        "hp": 220,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.61,
+          "low": 0.1,
+          "trend": 0.73
+        }
+      },
+      {
+        "id": "swsh11-049",
+        "name": "Kyurem VMAX",
+        "localId": "049",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/049",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare VMAX",
+        "hp": 330,
+        "types": [
+          "Water"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.37,
+          "low": 0.45,
+          "trend": 1.46
+        }
+      },
+      {
+        "id": "swsh11-050",
+        "name": "Cramorant",
+        "localId": "050",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/050",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 110,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-051",
+        "name": "Glastrier",
+        "localId": "051",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/051",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 130,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.25,
+          "low": 0.02,
+          "trend": 0.14
+        }
+      },
+      {
+        "id": "swsh11-052",
+        "name": "Pikachu",
+        "localId": "052",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/052",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.11
+        }
+      },
+      {
+        "id": "swsh11-053",
+        "name": "Raichu",
+        "localId": "053",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/053",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.14,
+          "low": 0.02,
+          "trend": 0.14
+        }
+      },
+      {
+        "id": "swsh11-054",
+        "name": "Electrike",
+        "localId": "054",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/054",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.02,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-055",
+        "name": "Manectric",
+        "localId": "055",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/055",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "swsh11-056",
+        "name": "Magnezone V",
+        "localId": "056",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/056",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare VMAX",
+        "hp": 210,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.47,
+          "low": 0.08,
+          "trend": 0.57
+        }
+      },
+      {
+        "id": "swsh11-057",
+        "name": "Magnezone VSTAR",
+        "localId": "057",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/057",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare VSTAR",
+        "hp": 270,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.81,
+          "low": 0.1,
+          "trend": 0.8
+        }
+      },
+      {
+        "id": "swsh11-058",
+        "name": "Rotom V",
+        "localId": "058",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/058",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare VMAX",
+        "hp": 190,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.59,
+          "low": 0.02,
+          "trend": 0.58
+        }
+      },
+      {
+        "id": "swsh11-059",
+        "name": "Tynamo",
+        "localId": "059",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/059",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 30,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-060",
+        "name": "Eelektrik",
+        "localId": "060",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/060",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 80,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-061",
+        "name": "Eelektross",
+        "localId": "061",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/061",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 160,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.12
+        }
+      },
+      {
+        "id": "swsh11-062",
+        "name": "Clefairy",
+        "localId": "062",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/062",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh11-063",
+        "name": "Clefable",
+        "localId": "063",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/063",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 100,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "swsh11-064",
+        "name": "Gastly",
+        "localId": "064",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/064",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-065",
+        "name": "Haunter",
+        "localId": "065",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/065",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 70,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-066",
+        "name": "Gengar",
+        "localId": "066",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/066",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 120,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.18,
+          "low": 0.4,
+          "trend": 1.23
+        }
+      },
+      {
+        "id": "swsh11-067",
+        "name": "Mr. Mime",
+        "localId": "067",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/067",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 90,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "swsh11-068",
+        "name": "Jynx",
+        "localId": "068",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/068",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 100,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.02,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-069",
+        "name": "Radiant Gardevoir",
+        "localId": "069",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/069",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Radiant Rare",
+        "hp": 130,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.59,
+          "low": 0.07,
+          "trend": 0.67
+        }
+      },
+      {
+        "id": "swsh11-070",
+        "name": "Sableye",
+        "localId": "070",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/070",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 80,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.36,
+          "low": 0.02,
+          "trend": 0.34
+        }
+      },
+      {
+        "id": "swsh11-071",
+        "name": "Mawile",
+        "localId": "071",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/071",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 90,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-072",
+        "name": "Shuppet",
+        "localId": "072",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/072",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.02,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-073",
+        "name": "Banette",
+        "localId": "073",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/073",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 100,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.11
+        }
+      },
+      {
+        "id": "swsh11-074",
+        "name": "Cresselia",
+        "localId": "074",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/074",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 120,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.3,
+          "low": 0.02,
+          "trend": 0.24
+        }
+      },
+      {
+        "id": "swsh11-075",
+        "name": "Hisuian Zorua",
+        "localId": "075",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/075",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-076",
+        "name": "Hisuian Zoroark",
+        "localId": "076",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/076",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 120,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.27,
+          "low": 0.02,
+          "trend": 0.23
+        }
+      },
+      {
+        "id": "swsh11-077",
+        "name": "Inkay",
+        "localId": "077",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/077",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-078",
+        "name": "Malamar",
+        "localId": "078",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/078",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 110,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh11-079",
+        "name": "Comfey",
+        "localId": "079",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/079",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 70,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "swsh11-080",
+        "name": "Mimikyu",
+        "localId": "080",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/080",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 70,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.14,
+          "low": 0.02,
+          "trend": 0.14
+        }
+      },
+      {
+        "id": "swsh11-081",
+        "name": "Spectrier",
+        "localId": "081",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/081",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 120,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.41,
+          "low": 0.02,
+          "trend": 0.21
+        }
+      },
+      {
+        "id": "swsh11-082",
+        "name": "Enamorus V",
+        "localId": "082",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/082",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare V",
+        "hp": 210,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.66,
+          "low": 0.02,
+          "trend": 0.69
+        }
+      },
+      {
+        "id": "swsh11-083",
+        "name": "Hisuian Growlithe",
+        "localId": "083",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/083",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-084",
+        "name": "Hisuian Arcanine",
+        "localId": "084",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/084",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 130,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.19,
+          "low": 0.02,
+          "trend": 0.28
+        }
+      },
+      {
+        "id": "swsh11-085",
+        "name": "Poliwrath",
+        "localId": "085",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/085",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 160,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "swsh11-086",
+        "name": "Machop",
+        "localId": "086",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/086",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-087",
+        "name": "Machoke",
+        "localId": "087",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/087",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 100,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh11-088",
+        "name": "Machamp",
+        "localId": "088",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/088",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 150,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.28,
+          "low": 0.04,
+          "trend": 0.38
+        }
+      },
+      {
+        "id": "swsh11-089",
+        "name": "Rhyhorn",
+        "localId": "089",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/089",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 100,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-090",
+        "name": "Rhydon",
+        "localId": "090",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/090",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 120,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh11-091",
+        "name": "Rhyperior",
+        "localId": "091",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/091",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 190,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.15
+        }
+      },
+      {
+        "id": "swsh11-092",
+        "name": "Aerodactyl V",
+        "localId": "092",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/092",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare V",
+        "hp": 210,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.13,
+          "low": 0.35,
+          "trend": 0.95
+        }
+      },
+      {
+        "id": "swsh11-093",
+        "name": "Aerodactyl VSTAR",
+        "localId": "093",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/093",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare VSTAR",
+        "hp": 260,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.13,
+          "low": 0.35,
+          "trend": 0.95
+        }
+      },
+      {
+        "id": "swsh11-094",
+        "name": "Sudowoodo",
+        "localId": "094",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/094",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 110,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-095",
+        "name": "Gligar",
+        "localId": "095",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/095",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.02,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-096",
+        "name": "Gliscor",
+        "localId": "096",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/096",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.1
+        }
+      },
+      {
+        "id": "swsh11-097",
+        "name": "Makuhita",
+        "localId": "097",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/097",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 80,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-098",
+        "name": "Hariyama",
+        "localId": "098",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/098",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 140,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-099",
+        "name": "Meditite",
+        "localId": "099",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/099",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-100",
+        "name": "Medicham",
+        "localId": "100",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/100",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 110,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh11-101",
+        "name": "Relicanth",
+        "localId": "101",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/101",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-102",
+        "name": "Gastrodon",
+        "localId": "102",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/102",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 130,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-103",
+        "name": "Mienfoo",
+        "localId": "103",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/103",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.02,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-104",
+        "name": "Mienshao",
+        "localId": "104",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/104",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-105",
+        "name": "Landorus",
+        "localId": "105",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/105",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.15
+        }
+      },
+      {
+        "id": "swsh11-106",
+        "name": "Binacle",
+        "localId": "106",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/106",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-107",
+        "name": "Barbaracle",
+        "localId": "107",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/107",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 130,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.23,
+          "low": 0.02,
+          "trend": 0.34
+        }
+      },
+      {
+        "id": "swsh11-108",
+        "name": "Carbink",
+        "localId": "108",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/108",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-109",
+        "name": "Rockruff",
+        "localId": "109",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/109",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-110",
+        "name": "Falinks",
+        "localId": "110",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/110",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 100,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-111",
+        "name": "Stonjourner",
+        "localId": "111",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/111",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 140,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-112",
+        "name": "Spinarak",
+        "localId": "112",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/112",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-113",
+        "name": "Ariados",
+        "localId": "113",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/113",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 90,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.13
+        }
+      },
+      {
+        "id": "swsh11-114",
+        "name": "Murkrow",
+        "localId": "114",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/114",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-115",
+        "name": "Honchkrow",
+        "localId": "115",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/115",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-116",
+        "name": "Seviper",
+        "localId": "116",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/116",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 110,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-117",
+        "name": "Spiritomb",
+        "localId": "117",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/117",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 60,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "swsh11-118",
+        "name": "Drapion V",
+        "localId": "118",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/118",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare V",
+        "hp": 210,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.53,
+          "low": 0.1,
+          "trend": 0.59
+        }
+      },
+      {
+        "id": "swsh11-119",
+        "name": "Drapion VSTAR",
+        "localId": "119",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/119",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare VSTAR",
+        "hp": 270,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.77,
+          "low": 0.18,
+          "trend": 0.74
+        }
+      },
+      {
+        "id": "swsh11-120",
+        "name": "Darkrai",
+        "localId": "120",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/120",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 120,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.27,
+          "low": 0.02,
+          "trend": 0.38
+        }
+      },
+      {
+        "id": "swsh11-121",
+        "name": "Inkay",
+        "localId": "121",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/121",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-122",
+        "name": "Hoopa",
+        "localId": "122",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/122",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.15
+        }
+      },
+      {
+        "id": "swsh11-123",
+        "name": "Radiant Hisuian Sneasler",
+        "localId": "123",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/123",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Radiant Rare",
+        "hp": 130,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.41,
+          "low": 0.02,
+          "trend": 0.39
+        }
+      },
+      {
+        "id": "swsh11-124",
+        "name": "Radiant Steelix",
+        "localId": "124",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/124",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Radiant Rare",
+        "hp": 170,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.58,
+          "low": 0.05,
+          "trend": 0.62
+        }
+      },
+      {
+        "id": "swsh11-125",
+        "name": "Bronzor",
+        "localId": "125",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/125",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 70,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "swsh11-126",
+        "name": "Bronzong",
+        "localId": "126",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/126",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 130,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-127",
+        "name": "Galarian Stunfisk",
+        "localId": "127",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/127",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 100,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-128",
+        "name": "Magearna",
+        "localId": "128",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/128",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 90,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.09
+        }
+      },
+      {
+        "id": "swsh11-129",
+        "name": "Galarian Perrserker V",
+        "localId": "129",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/129",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare V",
+        "hp": 200,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.56,
+          "low": 0.05,
+          "trend": 0.81
+        }
+      },
+      {
+        "id": "swsh11-130",
+        "name": "Giratina V",
+        "localId": "130",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/130",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare V",
+        "hp": 220,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.19,
+          "low": 0.49,
+          "trend": 1.24
+        }
+      },
+      {
+        "id": "swsh11-131",
+        "name": "Giratina VSTAR",
+        "localId": "131",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/131",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare VSTAR",
+        "hp": 280,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.5,
+          "low": 0.5,
+          "trend": 1.47
+        }
+      },
+      {
+        "id": "swsh11-132",
+        "name": "Goomy",
+        "localId": "132",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/132",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-133",
+        "name": "Hisuian Sliggoo",
+        "localId": "133",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/133",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-134",
+        "name": "Hisuian Goodra",
+        "localId": "134",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/134",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 160,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.23,
+          "low": 0.02,
+          "trend": 0.24
+        }
+      },
+      {
+        "id": "swsh11-135",
+        "name": "Hisuian Goodra V",
+        "localId": "135",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/135",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare V",
+        "hp": 220,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.91,
+          "low": 0.19,
+          "trend": 0.83
+        }
+      },
+      {
+        "id": "swsh11-136",
+        "name": "Hisuian Goodra VSTAR",
+        "localId": "136",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/136",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare VSTAR",
+        "hp": 270,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.91,
+          "low": 0.19,
+          "trend": 0.83
+        }
+      },
+      {
+        "id": "swsh11-137",
+        "name": "Pidgeot V",
+        "localId": "137",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/137",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare V",
+        "hp": 210,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.82,
+          "low": 0.1,
+          "trend": 0.74
+        }
+      },
+      {
+        "id": "swsh11-138",
+        "name": "Lickitung",
+        "localId": "138",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/138",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 110,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-139",
+        "name": "Lickilicky",
+        "localId": "139",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/139",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 140,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-140",
+        "name": "Porygon",
+        "localId": "140",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/140",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-141",
+        "name": "Porygon2",
+        "localId": "141",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/141",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-142",
+        "name": "Porygon-Z",
+        "localId": "142",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/142",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 150,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.13,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-143",
+        "name": "Snorlax",
+        "localId": "143",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/143",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "hp": 150,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.29,
+          "low": 3,
+          "trend": 8.16
+        }
+      },
+      {
+        "id": "swsh11-144",
+        "name": "Aipom",
+        "localId": "144",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/144",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-145",
+        "name": "Ambipom",
+        "localId": "145",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/145",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 90,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-146",
+        "name": "Hisuian Zoroark V",
+        "localId": "146",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/146",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare V",
+        "hp": 210,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.91,
+          "low": 0.36,
+          "trend": 1.1
+        }
+      },
+      {
+        "id": "swsh11-147",
+        "name": "Hisuian Zoroark VSTAR",
+        "localId": "147",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/147",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare VSTAR",
+        "hp": 270,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.91,
+          "low": 0.36,
+          "trend": 1.1
+        }
+      },
+      {
+        "id": "swsh11-148",
+        "name": "Bouffalant",
+        "localId": "148",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/148",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 130,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-149",
+        "name": "Komala",
+        "localId": "149",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/149",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "hp": 100,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-150",
+        "name": "Skwovet",
+        "localId": "150",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/150",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Common",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-151",
+        "name": "Greedent",
+        "localId": "151",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/151",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 130,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.15
+        }
+      },
+      {
+        "id": "swsh11-152",
+        "name": "Arc Phone",
+        "localId": "152",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/152",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-153",
+        "name": "Arezu",
+        "localId": "153",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/153",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-154",
+        "name": "Box of Disaster",
+        "localId": "154",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/154",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-155",
+        "name": "Colress's Experiment",
+        "localId": "155",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/155",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-156",
+        "name": "Damage Pump",
+        "localId": "156",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/156",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-157",
+        "name": "Fantina",
+        "localId": "157",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/157",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-158",
+        "name": "Iscan",
+        "localId": "158",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/158",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-159",
+        "name": "Lady",
+        "localId": "159",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/159",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-160",
+        "name": "Lake Acuity",
+        "localId": "160",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/160",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-161",
+        "name": "Lost City",
+        "localId": "161",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/161",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-162",
+        "name": "Lost Vacuum",
+        "localId": "162",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/162",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-163",
+        "name": "Mirage Gate",
+        "localId": "163",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/163",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-164",
+        "name": "Miss Fortune Sisters",
+        "localId": "164",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/164",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-165",
+        "name": "Panic Mask",
+        "localId": "165",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/165",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-166",
+        "name": "Riley",
+        "localId": "166",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/166",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-167",
+        "name": "Thorton",
+        "localId": "167",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/167",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-168",
+        "name": "Tool Box",
+        "localId": "168",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/168",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-169",
+        "name": "Volo",
+        "localId": "169",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/169",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Holo Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.14,
+          "low": 1,
+          "trend": 3.47
+        }
+      },
+      {
+        "id": "swsh11-170",
+        "name": "Windup Arm",
+        "localId": "170",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/170",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-171",
+        "name": "Gift Energy",
+        "localId": "171",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/171",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-172",
+        "name": "Hisuian Electrode V",
+        "localId": "172",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/172",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 210,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.28,
+          "low": 1,
+          "trend": 1.96
+        }
+      },
+      {
+        "id": "swsh11-173",
+        "name": "Delphox V",
+        "localId": "173",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/173",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 210,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.52,
+          "low": 0.1,
+          "trend": 0.73
+        }
+      },
+      {
+        "id": "swsh11-174",
+        "name": "Kyurem V",
+        "localId": "174",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/174",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.61,
+          "low": 0.1,
+          "trend": 0.73
+        }
+      },
+      {
+        "id": "swsh11-175",
+        "name": "Magnezone V",
+        "localId": "175",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/175",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 210,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.47,
+          "low": 0.08,
+          "trend": 0.57
+        }
+      },
+      {
+        "id": "swsh11-176",
+        "name": "Rotom V",
+        "localId": "176",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/176",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 190,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.59,
+          "low": 0.02,
+          "trend": 0.58
+        }
+      },
+      {
+        "id": "swsh11-177",
+        "name": "Rotom V",
+        "localId": "177",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/177",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 190,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.59,
+          "low": 0.02,
+          "trend": 0.58
+        }
+      },
+      {
+        "id": "swsh11-178",
+        "name": "Enamorus V",
+        "localId": "178",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/178",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 210,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.66,
+          "low": 0.02,
+          "trend": 0.69
+        }
+      },
+      {
+        "id": "swsh11-179",
+        "name": "Aerodactyl V",
+        "localId": "179",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/179",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 210,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.13,
+          "low": 0.35,
+          "trend": 0.95
+        }
+      },
+      {
+        "id": "swsh11-180",
+        "name": "Aerodactyl V",
+        "localId": "180",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/180",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 210,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.13,
+          "low": 0.35,
+          "trend": 0.95
+        }
+      },
+      {
+        "id": "swsh11-181",
+        "name": "Gallade V",
+        "localId": "181",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/181",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.02,
+          "low": 4,
+          "trend": 7.45
+        }
+      },
+      {
+        "id": "swsh11-182",
+        "name": "Drapion V",
+        "localId": "182",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/182",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 210,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.53,
+          "low": 0.1,
+          "trend": 0.59
+        }
+      },
+      {
+        "id": "swsh11-183",
+        "name": "Galarian Perrserker V",
+        "localId": "183",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/183",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 200,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.56,
+          "low": 0.05,
+          "trend": 0.81
+        }
+      },
+      {
+        "id": "swsh11-184",
+        "name": "Galarian Perrserker V",
+        "localId": "184",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/184",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 200,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.56,
+          "low": 0.05,
+          "trend": 0.81
+        }
+      },
+      {
+        "id": "swsh11-185",
+        "name": "Giratina V",
+        "localId": "185",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/185",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.19,
+          "low": 0.49,
+          "trend": 1.24
+        }
+      },
+      {
+        "id": "swsh11-186",
+        "name": "Giratina V",
+        "localId": "186",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/186",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.19,
+          "low": 0.49,
+          "trend": 1.24
+        }
+      },
+      {
+        "id": "swsh11-187",
+        "name": "Hisuian Goodra V",
+        "localId": "187",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/187",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.91,
+          "low": 0.19,
+          "trend": 0.83
+        }
+      },
+      {
+        "id": "swsh11-188",
+        "name": "Pidgeot V",
+        "localId": "188",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/188",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 210,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.82,
+          "low": 0.1,
+          "trend": 0.74
+        }
+      },
+      {
+        "id": "swsh11-189",
+        "name": "Arezu",
+        "localId": "189",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/189",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-190",
+        "name": "Colress's Experiment",
+        "localId": "190",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/190",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-191",
+        "name": "Fantina",
+        "localId": "191",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/191",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-192",
+        "name": "Iscan",
+        "localId": "192",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/192",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-193",
+        "name": "Lady",
+        "localId": "193",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/193",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-194",
+        "name": "Miss Fortune Sisters",
+        "localId": "194",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/194",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-195",
+        "name": "Thorton",
+        "localId": "195",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/195",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-196",
+        "name": "Volo",
+        "localId": "196",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/196",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.14,
+          "low": 1,
+          "trend": 3.47
+        }
+      },
+      {
+        "id": "swsh11-197",
+        "name": "Kyurem VMAX",
+        "localId": "197",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/197",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "hp": 330,
+        "types": [
+          "Water"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.37,
+          "low": 0.45,
+          "trend": 1.46
+        }
+      },
+      {
+        "id": "swsh11-198",
+        "name": "Magnezone VSTAR",
+        "localId": "198",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/198",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "hp": 270,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.81,
+          "low": 0.1,
+          "trend": 0.8
+        }
+      },
+      {
+        "id": "swsh11-199",
+        "name": "Aerodactyl VSTAR",
+        "localId": "199",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/199",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "hp": 260,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.13,
+          "low": 0.35,
+          "trend": 0.95
+        }
+      },
+      {
+        "id": "swsh11-200",
+        "name": "Drapion VSTAR",
+        "localId": "200",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/200",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "hp": 270,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.77,
+          "low": 0.18,
+          "trend": 0.74
+        }
+      },
+      {
+        "id": "swsh11-201",
+        "name": "Giratina VSTAR",
+        "localId": "201",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/201",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "hp": 280,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.5,
+          "low": 0.5,
+          "trend": 1.47
+        }
+      },
+      {
+        "id": "swsh11-202",
+        "name": "Hisuian Goodra VSTAR",
+        "localId": "202",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/202",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "hp": 270,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.91,
+          "low": 0.19,
+          "trend": 0.83
+        }
+      },
+      {
+        "id": "swsh11-203",
+        "name": "Hisuian Zoroark VSTAR",
+        "localId": "203",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/203",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "hp": 270,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.91,
+          "low": 0.36,
+          "trend": 1.1
+        }
+      },
+      {
+        "id": "swsh11-204",
+        "name": "Arezu",
+        "localId": "204",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/204",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-205",
+        "name": "Colress's Experiment",
+        "localId": "205",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/205",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.03
+        }
+      },
+      {
+        "id": "swsh11-206",
+        "name": "Fantina",
+        "localId": "206",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/206",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-207",
+        "name": "Iscan",
+        "localId": "207",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/207",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "swsh11-208",
+        "name": "Lady",
+        "localId": "208",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/208",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-209",
+        "name": "Miss Fortune Sisters",
+        "localId": "209",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/209",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-210",
+        "name": "Thorton",
+        "localId": "210",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/210",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-211",
+        "name": "Volo",
+        "localId": "211",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/211",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.14,
+          "low": 1,
+          "trend": 3.47
+        }
+      },
+      {
+        "id": "swsh11-212",
+        "name": "Giratina VSTAR",
+        "localId": "212",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/212",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "hp": 280,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.5,
+          "low": 0.5,
+          "trend": 1.47
+        }
+      },
+      {
+        "id": "swsh11-213",
+        "name": "Hisuian Zoroark VSTAR",
+        "localId": "213",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/213",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "hp": 270,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "VSTAR",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.91,
+          "low": 0.36,
+          "trend": 1.1
+        }
+      },
+      {
+        "id": "swsh11-214",
+        "name": "Box of Disaster",
+        "localId": "214",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/214",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.04
+        }
+      },
+      {
+        "id": "swsh11-215",
+        "name": "Collapsed Stadium",
+        "localId": "215",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/215",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.98,
+          "low": 1.44,
+          "trend": 2.71
+        }
+      },
+      {
+        "id": "swsh11-216",
+        "name": "Dark Patch",
+        "localId": "216",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/216",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.18,
+          "low": 1.2,
+          "trend": 2.79
+        }
+      },
+      {
+        "id": "swsh11-217",
+        "name": "Lost Vacuum",
+        "localId": "217",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/217",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.06
+        }
+      },
+      {
+        "id": "swsh11-TG01",
+        "name": "Parasect",
+        "localId": "TG01",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG01",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
+        }
+      },
+      {
+        "id": "swsh11-TG02",
+        "name": "Roserade",
+        "localId": "TG02",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG02",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.03,
+          "low": 0.02,
+          "trend": 0.05
+        }
+      },
+      {
+        "id": "swsh11-TG03",
+        "name": "Charizard",
+        "localId": "TG03",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG03",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 170,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 19.08,
+          "low": 14,
+          "trend": 17.27
+        }
+      },
+      {
+        "id": "swsh11-TG04",
+        "name": "Chandelure",
+        "localId": "TG04",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG04",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 150,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.68,
+          "low": 0.7,
+          "trend": 1.72
+        }
+      },
+      {
+        "id": "swsh11-TG05",
+        "name": "Pikachu",
+        "localId": "TG05",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG05",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 60,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.11
+        }
+      },
+      {
+        "id": "swsh11-TG06",
+        "name": "Gengar",
+        "localId": "TG06",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG06",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 120,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.18,
+          "low": 0.4,
+          "trend": 1.23
+        }
+      },
+      {
+        "id": "swsh11-TG07",
+        "name": "Banette",
+        "localId": "TG07",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG07",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 80,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.11
+        }
+      },
+      {
+        "id": "swsh11-TG08",
+        "name": "Hisuian Arcanine",
+        "localId": "TG08",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG08",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 130,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.19,
+          "low": 0.02,
+          "trend": 0.28
+        }
+      },
+      {
+        "id": "swsh11-TG09",
+        "name": "Spiritomb",
+        "localId": "TG09",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG09",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 60,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.08
+        }
+      },
+      {
+        "id": "swsh11-TG10",
+        "name": "Snorlax",
+        "localId": "TG10",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG10",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 150,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.29,
+          "low": 3,
+          "trend": 8.16
+        }
+      },
+      {
+        "id": "swsh11-TG11",
+        "name": "Castform",
+        "localId": "TG11",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG11",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Rare",
+        "hp": 70,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.36,
+          "low": 0.3,
+          "trend": 1.44
+        }
+      },
+      {
+        "id": "swsh11-TG12",
+        "name": "Orbeetle V",
+        "localId": "TG12",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG12",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 180,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 5.28,
+          "low": 1.99,
+          "trend": 4.79
+        }
+      },
+      {
+        "id": "swsh11-TG13",
+        "name": "Orbeetle VMAX",
+        "localId": "TG13",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG13",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 310,
+        "types": [
+          "Grass"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.76,
+          "low": 3.5,
+          "trend": 7.08
+        }
+      },
+      {
+        "id": "swsh11-TG14",
+        "name": "Centiskorch V",
+        "localId": "TG14",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG14",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 210,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.53,
+          "low": 2.18,
+          "trend": 4.78
+        }
+      },
+      {
+        "id": "swsh11-TG15",
+        "name": "Centiskorch VMAX",
+        "localId": "TG15",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG15",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 320,
+        "types": [
+          "Fire"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 5.69,
+          "low": 3.5,
+          "trend": 6.12
+        }
+      },
+      {
+        "id": "swsh11-TG16",
+        "name": "Pikachu V",
+        "localId": "TG16",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG16",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 190,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 64.3,
+          "low": 35,
+          "trend": 75.61
+        }
+      },
+      {
+        "id": "swsh11-TG17",
+        "name": "Pikachu VMAX",
+        "localId": "TG17",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG17",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 310,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 54.79,
+          "low": 25,
+          "trend": 65.12
+        }
+      },
+      {
+        "id": "swsh11-TG18",
+        "name": "Enamorus V",
+        "localId": "TG18",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG18",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 210,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.66,
+          "low": 0.02,
+          "trend": 0.69
+        }
+      },
+      {
+        "id": "swsh11-TG19",
+        "name": "Gallade V",
+        "localId": "TG19",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG19",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.02,
+          "low": 4,
+          "trend": 7.45
+        }
+      },
+      {
+        "id": "swsh11-TG20",
+        "name": "Crobat V",
+        "localId": "TG20",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG20",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 180,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.58,
+          "low": 6,
+          "trend": 9.07
+        }
+      },
+      {
+        "id": "swsh11-TG21",
+        "name": "Eternatus V",
+        "localId": "TG21",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG21",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 220,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.74,
+          "low": 2,
+          "trend": 4.97
+        }
+      },
+      {
+        "id": "swsh11-TG22",
+        "name": "Eternatus VMAX",
+        "localId": "TG22",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG22",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "hp": 340,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.74,
+          "low": 4.25,
+          "trend": 10.3
+        }
+      },
+      {
+        "id": "swsh11-TG23",
+        "name": "Adventurer's Discovery",
+        "localId": "TG23",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG23",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3,
+          "low": 0.89,
+          "trend": 2.94
+        }
+      },
+      {
+        "id": "swsh11-TG24",
+        "name": "Boss's Orders",
+        "localId": "TG24",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG24",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 5.74,
+          "low": 2,
+          "trend": 5.11
+        }
+      },
+      {
+        "id": "swsh11-TG25",
+        "name": "Cook",
+        "localId": "TG25",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG25",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.71,
+          "low": 0.94,
+          "trend": 1.93
+        }
+      },
+      {
+        "id": "swsh11-TG26",
+        "name": "Kabu",
+        "localId": "TG26",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG26",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.74,
+          "low": 0.5,
+          "trend": 1.34
+        }
+      },
+      {
+        "id": "swsh11-TG27",
+        "name": "Nessa",
+        "localId": "TG27",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG27",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 6.77,
+          "low": 2,
+          "trend": 6.7
+        }
+      },
+      {
+        "id": "swsh11-TG28",
+        "name": "Opal",
+        "localId": "TG28",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG28",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Ultra Rare",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.64,
+          "low": 0.9,
+          "trend": 1.56
+        }
+      },
+      {
+        "id": "swsh11-TG29",
+        "name": "Pikachu VMAX",
+        "localId": "TG29",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG29",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "hp": 310,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 54.79,
+          "low": 25,
+          "trend": 65.12
+        }
+      },
+      {
+        "id": "swsh11-TG30",
+        "name": "Mew VMAX",
+        "localId": "TG30",
+        "image": "https://assets.tcgdex.net/en/swsh/swsh11/TG30",
+        "set": "Lost Origin",
+        "setId": "swsh11",
+        "rarity": "Secret Rare",
+        "hp": 310,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "VMAX",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 12.68,
+          "low": 7,
+          "trend": 11.53
         }
       }
     ]
