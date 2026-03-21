@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-21T06:24:11.472Z",
+  "updated": "2026-03-21T06:32:36.265Z",
   "sets": {
     "sv01": [
       {
@@ -173718,6 +173718,2968 @@
           "eur": 12.68,
           "low": 7,
           "trend": 11.53
+        }
+      }
+    ],
+    "neo4": [
+      {
+        "id": "neo4-1",
+        "name": "Dark Ampharos",
+        "localId": "1",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/1",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Kagemaru Himeno",
+        "hp": 70,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 59,
+          "low": 10,
+          "trend": 74.36
+        }
+      },
+      {
+        "id": "neo4-2",
+        "name": "Dark Crobat",
+        "localId": "2",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/2",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "hp": 70,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 74.38,
+          "low": 12,
+          "trend": 70.01
+        }
+      },
+      {
+        "id": "neo4-3",
+        "name": "Dark Donphan",
+        "localId": "3",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/3",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Shin-ichi Yoshida",
+        "hp": 60,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 23.83,
+          "low": 10,
+          "trend": 23.96
+        }
+      },
+      {
+        "id": "neo4-4",
+        "name": "Dark Espeon",
+        "localId": "4",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/4",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Atsuko Nishida",
+        "hp": 60,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 236.13,
+          "low": 50,
+          "trend": 209.16
+        }
+      },
+      {
+        "id": "neo4-5",
+        "name": "Dark Feraligatr",
+        "localId": "5",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/5",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Atsuko Nishida",
+        "hp": 80,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 90.81,
+          "low": 15,
+          "trend": 223.03
+        }
+      },
+      {
+        "id": "neo4-6",
+        "name": "Dark Gengar",
+        "localId": "6",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/6",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Aya Kusube",
+        "hp": 70,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 301.59,
+          "low": 75,
+          "trend": 296.63
+        }
+      },
+      {
+        "id": "neo4-7",
+        "name": "Dark Houndoom",
+        "localId": "7",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/7",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Kagemaru Himeno",
+        "hp": 60,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 80.6,
+          "low": 18,
+          "trend": 112.99
+        }
+      },
+      {
+        "id": "neo4-8",
+        "name": "Dark Porygon2",
+        "localId": "8",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/8",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 39.95,
+          "low": 12,
+          "trend": 36.83
+        }
+      },
+      {
+        "id": "neo4-9",
+        "name": "Dark Scizor",
+        "localId": "9",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/9",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 70,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 104.83,
+          "low": 12,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "neo4-10",
+        "name": "Dark Typhlosion",
+        "localId": "10",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/10",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 80,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 28.27,
+          "low": 3.25,
+          "trend": 68.24
+        }
+      },
+      {
+        "id": "neo4-11",
+        "name": "Dark Tyranitar",
+        "localId": "11",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/11",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Shin-ichi Yoshida",
+        "hp": 90,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 92.69,
+          "low": 14,
+          "trend": 144.15
+        }
+      },
+      {
+        "id": "neo4-12",
+        "name": "Light Arcanine",
+        "localId": "12",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/12",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Atsuko Nishida",
+        "hp": 100,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 132.98,
+          "low": 30,
+          "trend": 173.62
+        }
+      },
+      {
+        "id": "neo4-13",
+        "name": "Light Azumarill",
+        "localId": "13",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/13",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Yuka Morii",
+        "hp": 80,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 13.88,
+          "low": 2,
+          "trend": 17.68
+        }
+      },
+      {
+        "id": "neo4-14",
+        "name": "Light Dragonite",
+        "localId": "14",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/14",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Atsuko Nishida",
+        "hp": 100,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 250.9,
+          "low": 26.94,
+          "trend": 168.82
+        }
+      },
+      {
+        "id": "neo4-15",
+        "name": "Light Togetic",
+        "localId": "15",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/15",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Naoyo Kimura",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 39.79,
+          "low": 5,
+          "trend": 60.79
+        }
+      },
+      {
+        "id": "neo4-16",
+        "name": "Miracle Energy",
+        "localId": "16",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/16",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Milky Isobe",
+        "variants": {
+          "firstEdition": true,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 24.84,
+          "low": 6.99,
+          "trend": 12.21
+        }
+      },
+      {
+        "id": "neo4-17",
+        "name": "Dark Ariados",
+        "localId": "17",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/17",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Toshinao Aoki",
+        "hp": 60,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.34,
+          "low": 0.95,
+          "trend": 5.02
+        }
+      },
+      {
+        "id": "neo4-18",
+        "name": "Dark Magcargo",
+        "localId": "18",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/18",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Toshinao Aoki",
+        "hp": 60,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.59,
+          "low": 0.4,
+          "trend": 2.48
+        }
+      },
+      {
+        "id": "neo4-19",
+        "name": "Dark Omastar",
+        "localId": "19",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/19",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Tomokazu Komiya",
+        "hp": 70,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 14.59,
+          "low": 5,
+          "trend": 12.04
+        }
+      },
+      {
+        "id": "neo4-20",
+        "name": "Dark Slowking",
+        "localId": "20",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/20",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Tomokazu Komiya",
+        "hp": 60,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 19.3,
+          "low": 6.5,
+          "trend": 18.69
+        }
+      },
+      {
+        "id": "neo4-21",
+        "name": "Dark Ursaring",
+        "localId": "21",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/21",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.84,
+          "low": 2,
+          "trend": 9.9
+        }
+      },
+      {
+        "id": "neo4-22",
+        "name": "Light Dragonair",
+        "localId": "22",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/22",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Atsuko Nishida",
+        "hp": 80,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 21.25,
+          "low": 4,
+          "trend": 21.84
+        }
+      },
+      {
+        "id": "neo4-23",
+        "name": "Light Lanturn",
+        "localId": "23",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/23",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Miki Tanaka",
+        "hp": 80,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.26,
+          "low": 1.25,
+          "trend": 6.04
+        }
+      },
+      {
+        "id": "neo4-24",
+        "name": "Light Ledian",
+        "localId": "24",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/24",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Tomokazu Komiya",
+        "hp": 70,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.57,
+          "low": 2,
+          "trend": 4.16
+        }
+      },
+      {
+        "id": "neo4-25",
+        "name": "Light Machamp",
+        "localId": "25",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/25",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Miki Tanaka",
+        "hp": 100,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.98,
+          "low": 0.88,
+          "trend": 5.52
+        }
+      },
+      {
+        "id": "neo4-26",
+        "name": "Light Piloswine",
+        "localId": "26",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/26",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Yukiko Baba",
+        "hp": 90,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.52,
+          "low": 1.85,
+          "trend": 7.53
+        }
+      },
+      {
+        "id": "neo4-27",
+        "name": "Unown [G]",
+        "localId": "27",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/27",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "CR CG gangs",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.5,
+          "low": 1,
+          "trend": 5.88
+        }
+      },
+      {
+        "id": "neo4-28",
+        "name": "Unown [H]",
+        "localId": "28",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/28",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "CR CG gangs",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 12.54,
+          "low": 3.99,
+          "trend": 10.3
+        }
+      },
+      {
+        "id": "neo4-29",
+        "name": "Unown [W]",
+        "localId": "29",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/29",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "CR CG gangs",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 9.28,
+          "low": 2.3,
+          "trend": 9.86
+        }
+      },
+      {
+        "id": "neo4-30",
+        "name": "Unown [X]",
+        "localId": "30",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/30",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "CR CG gangs",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 12.87,
+          "low": 1.99,
+          "trend": 18.42
+        }
+      },
+      {
+        "id": "neo4-31",
+        "name": "Chansey",
+        "localId": "31",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/31",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Yuka Morii",
+        "hp": 90,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 10.86,
+          "low": 1,
+          "trend": 5.92
+        }
+      },
+      {
+        "id": "neo4-32",
+        "name": "Dark Croconaw",
+        "localId": "32",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/32",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Shin-ichi Yoshida",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.12,
+          "low": 0.5,
+          "trend": 1.48
+        }
+      },
+      {
+        "id": "neo4-33",
+        "name": "Dark Exeggutor",
+        "localId": "33",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/33",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Toshinao Aoki",
+        "hp": 60,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 5.59,
+          "low": 0.75,
+          "trend": 4.24
+        }
+      },
+      {
+        "id": "neo4-34",
+        "name": "Dark Flaaffy",
+        "localId": "34",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/34",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Kagemaru Himeno",
+        "hp": 60,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.56,
+          "low": 0.1,
+          "trend": 3.22
+        }
+      },
+      {
+        "id": "neo4-35",
+        "name": "Dark Forretress",
+        "localId": "35",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/35",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 60,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.16,
+          "low": 0.3,
+          "trend": 2.8
+        }
+      },
+      {
+        "id": "neo4-36",
+        "name": "Dark Haunter",
+        "localId": "36",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/36",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Aya Kusube",
+        "hp": 50,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 5.15,
+          "low": 1,
+          "trend": 2.49
+        }
+      },
+      {
+        "id": "neo4-37",
+        "name": "Dark Omanyte",
+        "localId": "37",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/37",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Tomokazu Komiya",
+        "hp": 40,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.65,
+          "low": 0.49,
+          "trend": 2.06
+        }
+      },
+      {
+        "id": "neo4-38",
+        "name": "Dark Pupitar",
+        "localId": "38",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/38",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 60,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.79,
+          "low": 0.09,
+          "trend": 2.12
+        }
+      },
+      {
+        "id": "neo4-39",
+        "name": "Dark Quilava",
+        "localId": "39",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/39",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 60,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.23,
+          "low": 0.15,
+          "trend": 4.56
+        }
+      },
+      {
+        "id": "neo4-40",
+        "name": "Dark Wigglytuff",
+        "localId": "40",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/40",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Miki Tanaka",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.21,
+          "low": 1,
+          "trend": 4.68
+        }
+      },
+      {
+        "id": "neo4-41",
+        "name": "Heracross",
+        "localId": "41",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/41",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "hp": 60,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.73,
+          "low": 0.1,
+          "trend": 4.18
+        }
+      },
+      {
+        "id": "neo4-42",
+        "name": "Hitmonlee",
+        "localId": "42",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/42",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Yukiko Baba",
+        "hp": 60,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.95,
+          "low": 0.14,
+          "trend": 2.02
+        }
+      },
+      {
+        "id": "neo4-43",
+        "name": "Houndour",
+        "localId": "43",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/43",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Yukiko Baba",
+        "hp": 40,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.98,
+          "low": 0.15,
+          "trend": 4.82
+        }
+      },
+      {
+        "id": "neo4-44",
+        "name": "Jigglypuff",
+        "localId": "44",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/44",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Yuka Morii",
+        "hp": 50,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.62,
+          "low": 1,
+          "trend": 7.01
+        }
+      },
+      {
+        "id": "neo4-45",
+        "name": "Light Dewgong",
+        "localId": "45",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/45",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Masako Yamashita",
+        "hp": 80,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.11,
+          "low": 0.1,
+          "trend": 3.13
+        }
+      },
+      {
+        "id": "neo4-46",
+        "name": "Light Flareon",
+        "localId": "46",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/46",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Atsuko Nishida",
+        "hp": 80,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 14.57,
+          "low": 2,
+          "trend": 27.54
+        }
+      },
+      {
+        "id": "neo4-47",
+        "name": "Light Golduck",
+        "localId": "47",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/47",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Atsuko Nishida",
+        "hp": 80,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.09,
+          "low": 0.18,
+          "trend": 3.89
+        }
+      },
+      {
+        "id": "neo4-48",
+        "name": "Light Jolteon",
+        "localId": "48",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/48",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Naoyo Kimura",
+        "hp": 70,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 32.64,
+          "low": 5,
+          "trend": 26.48
+        }
+      },
+      {
+        "id": "neo4-49",
+        "name": "Light Machoke",
+        "localId": "49",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/49",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Miki Tanaka",
+        "hp": 80,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.38,
+          "low": 0.15,
+          "trend": 3.23
+        }
+      },
+      {
+        "id": "neo4-50",
+        "name": "Light Ninetales",
+        "localId": "50",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/50",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Masako Yamashita",
+        "hp": 90,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 6.71,
+          "low": 1.35,
+          "trend": 9.24
+        }
+      },
+      {
+        "id": "neo4-51",
+        "name": "Light Slowbro",
+        "localId": "51",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/51",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Tomokazu Komiya",
+        "hp": 80,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 11.01,
+          "low": 5,
+          "trend": 10.16
+        }
+      },
+      {
+        "id": "neo4-52",
+        "name": "Light Vaporeon",
+        "localId": "52",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/52",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Kagemaru Himeno",
+        "hp": 80,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 12.56,
+          "low": 2,
+          "trend": 13.21
+        }
+      },
+      {
+        "id": "neo4-53",
+        "name": "Light Venomoth",
+        "localId": "53",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/53",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Masako Yamashita",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.9,
+          "low": 1,
+          "trend": 4.43
+        }
+      },
+      {
+        "id": "neo4-54",
+        "name": "Light Wigglytuff",
+        "localId": "54",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/54",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Naoyo Kimura",
+        "hp": 80,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 6.43,
+          "low": 0.28,
+          "trend": 8.21
+        }
+      },
+      {
+        "id": "neo4-55",
+        "name": "Scyther",
+        "localId": "55",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/55",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Shin-ichi Yoshida",
+        "hp": 60,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.25,
+          "low": 0.5,
+          "trend": 1.71
+        }
+      },
+      {
+        "id": "neo4-56",
+        "name": "Togepi",
+        "localId": "56",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/56",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Yuka Morii",
+        "hp": 40,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 6.67,
+          "low": 0.99,
+          "trend": 5.4
+        }
+      },
+      {
+        "id": "neo4-57",
+        "name": "Unown [C]",
+        "localId": "57",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/57",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "CR CG gangs",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.97,
+          "low": 0.5,
+          "trend": 2.32
+        }
+      },
+      {
+        "id": "neo4-58",
+        "name": "Unown [P]",
+        "localId": "58",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/58",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "CR CG gangs",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.29,
+          "low": 0.35,
+          "trend": 4.57
+        }
+      },
+      {
+        "id": "neo4-59",
+        "name": "Unown [Q]",
+        "localId": "59",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/59",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "CR CG gangs",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.1,
+          "low": 0.3,
+          "trend": 2.72
+        }
+      },
+      {
+        "id": "neo4-60",
+        "name": "Unown [Z]",
+        "localId": "60",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/60",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "CR CG gangs",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.12,
+          "low": 0.5,
+          "trend": 2.85
+        }
+      },
+      {
+        "id": "neo4-61",
+        "name": "Cyndaquil",
+        "localId": "61",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/61",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Yukiko Baba",
+        "hp": 40,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.66,
+          "low": 0.1,
+          "trend": 1.36
+        }
+      },
+      {
+        "id": "neo4-62",
+        "name": "Dark Octillery",
+        "localId": "62",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/62",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Shin-ichi Yoshida",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.02,
+          "low": 0.09,
+          "trend": 0.78
+        }
+      },
+      {
+        "id": "neo4-63",
+        "name": "Dratini",
+        "localId": "63",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/63",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Yuka Morii",
+        "hp": 40,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.75,
+          "low": 0.1,
+          "trend": 1.66
+        }
+      },
+      {
+        "id": "neo4-64",
+        "name": "Exeggcute",
+        "localId": "64",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/64",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Toshinao Aoki",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.74,
+          "low": 0.02,
+          "trend": 0.81
+        }
+      },
+      {
+        "id": "neo4-65",
+        "name": "Gastly",
+        "localId": "65",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/65",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Aya Kusube",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.89,
+          "low": 0.1,
+          "trend": 2.35
+        }
+      },
+      {
+        "id": "neo4-66",
+        "name": "Girafarig",
+        "localId": "66",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/66",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Yuka Morii",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.69,
+          "low": 0.02,
+          "trend": 2.66
+        }
+      },
+      {
+        "id": "neo4-67",
+        "name": "Gligar",
+        "localId": "67",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/67",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 50,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.52,
+          "low": 0.02,
+          "trend": 0.64
+        }
+      },
+      {
+        "id": "neo4-68",
+        "name": "Growlithe",
+        "localId": "68",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/68",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Atsuko Nishida",
+        "hp": 50,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.74,
+          "low": 0.05,
+          "trend": 1.99
+        }
+      },
+      {
+        "id": "neo4-69",
+        "name": "Hitmonchan",
+        "localId": "69",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/69",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Shin-ichi Yoshida",
+        "hp": 60,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.78,
+          "low": 0.04,
+          "trend": 2.69
+        }
+      },
+      {
+        "id": "neo4-70",
+        "name": "Larvitar",
+        "localId": "70",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/70",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 40,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.94,
+          "low": 0.02,
+          "trend": 0.73
+        }
+      },
+      {
+        "id": "neo4-71",
+        "name": "Ledyba",
+        "localId": "71",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/71",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Tomokazu Komiya",
+        "hp": 40,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1,
+          "low": 0.1,
+          "trend": 1.61
+        }
+      },
+      {
+        "id": "neo4-72",
+        "name": "Light Sunflora",
+        "localId": "72",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/72",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Toshinao Aoki",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.05,
+          "low": 0.1,
+          "trend": 1.45
+        }
+      },
+      {
+        "id": "neo4-73",
+        "name": "Machop",
+        "localId": "73",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/73",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Toshinao Aoki",
+        "hp": 40,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.71,
+          "low": 0.03,
+          "trend": 0.89
+        }
+      },
+      {
+        "id": "neo4-74",
+        "name": "Mantine",
+        "localId": "74",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/74",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Yukiko Baba",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.78,
+          "low": 0.05,
+          "trend": 0.58
+        }
+      },
+      {
+        "id": "neo4-75",
+        "name": "Mareep",
+        "localId": "75",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/75",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Kagemaru Himeno",
+        "hp": 50,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.98,
+          "low": 0.05,
+          "trend": 2.67
+        }
+      },
+      {
+        "id": "neo4-76",
+        "name": "Phanpy",
+        "localId": "76",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/76",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Miki Tanaka",
+        "hp": 40,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.74,
+          "low": 0.02,
+          "trend": 0.44
+        }
+      },
+      {
+        "id": "neo4-77",
+        "name": "Pineco",
+        "localId": "77",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/77",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 40,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.75,
+          "low": 0.02,
+          "trend": 1.52
+        }
+      },
+      {
+        "id": "neo4-78",
+        "name": "Porygon",
+        "localId": "78",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/78",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "hp": 50,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.01,
+          "low": 0.09,
+          "trend": 0.41
+        }
+      },
+      {
+        "id": "neo4-79",
+        "name": "Psyduck",
+        "localId": "79",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/79",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Yuka Morii",
+        "hp": 50,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.85,
+          "low": 0.1,
+          "trend": 3.78
+        }
+      },
+      {
+        "id": "neo4-80",
+        "name": "Remoraid",
+        "localId": "80",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/80",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "hp": 40,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.06,
+          "low": 0.02,
+          "trend": 0.31
+        }
+      },
+      {
+        "id": "neo4-81",
+        "name": "Seel",
+        "localId": "81",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/81",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Masako Yamashita",
+        "hp": 50,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.71,
+          "low": 0.02,
+          "trend": 0.97
+        }
+      },
+      {
+        "id": "neo4-82",
+        "name": "Slugma",
+        "localId": "82",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/82",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "hp": 50,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.36,
+          "low": 0.02,
+          "trend": 0.34
+        }
+      },
+      {
+        "id": "neo4-83",
+        "name": "Sunkern",
+        "localId": "83",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/83",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Etsuya Hattori",
+        "hp": 40,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.87,
+          "low": 0.03,
+          "trend": 0.02
+        }
+      },
+      {
+        "id": "neo4-84",
+        "name": "Swinub",
+        "localId": "84",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/84",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Kagemaru Himeno",
+        "hp": 50,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.77,
+          "low": 0.02,
+          "trend": 1.35
+        }
+      },
+      {
+        "id": "neo4-85",
+        "name": "Totodile",
+        "localId": "85",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/85",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Miki Tanaka",
+        "hp": 50,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.65,
+          "low": 0.05,
+          "trend": 0.9
+        }
+      },
+      {
+        "id": "neo4-86",
+        "name": "Unown [L]",
+        "localId": "86",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/86",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "CR CG gangs",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.07,
+          "low": 0.1,
+          "trend": 1.08
+        }
+      },
+      {
+        "id": "neo4-87",
+        "name": "Unown [S]",
+        "localId": "87",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/87",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "CR CG gangs",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.97,
+          "low": 0.09,
+          "trend": 3.46
+        }
+      },
+      {
+        "id": "neo4-88",
+        "name": "Unown [T]",
+        "localId": "88",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/88",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "CR CG gangs",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.89,
+          "low": 0.02,
+          "trend": 0.81
+        }
+      },
+      {
+        "id": "neo4-89",
+        "name": "Unown [V]",
+        "localId": "89",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/89",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "CR CG gangs",
+        "hp": 40,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.02,
+          "low": 0.04,
+          "trend": 0.98
+        }
+      },
+      {
+        "id": "neo4-90",
+        "name": "Venonat",
+        "localId": "90",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/90",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Masako Yamashita",
+        "hp": 40,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.71,
+          "low": 0.02,
+          "trend": 0.97
+        }
+      },
+      {
+        "id": "neo4-91",
+        "name": "Vulpix",
+        "localId": "91",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/91",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Masako Yamashita",
+        "hp": 50,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.13,
+          "low": 0.1,
+          "trend": 1.47
+        }
+      },
+      {
+        "id": "neo4-92",
+        "name": "Broken Ground Gym",
+        "localId": "92",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/92",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Tomokazu Komiya",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 13.03,
+          "low": 4.8,
+          "trend": 8.93
+        }
+      },
+      {
+        "id": "neo4-93",
+        "name": "EXP.ALL",
+        "localId": "93",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/93",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Keiji Kinebuchi",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": null
+      },
+      {
+        "id": "neo4-94",
+        "name": "Impostor Professor Oak's Invention",
+        "localId": "94",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/94",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 5.27,
+          "low": 1,
+          "trend": 5.54
+        }
+      },
+      {
+        "id": "neo4-95",
+        "name": "Radio Tower",
+        "localId": "95",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/95",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.08,
+          "low": 1.5,
+          "trend": 6.32
+        }
+      },
+      {
+        "id": "neo4-96",
+        "name": "Thought Wave Machine (Rocket's Secret Machine)",
+        "localId": "96",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/96",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Sumiyoshi Kizuki",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": null
+      },
+      {
+        "id": "neo4-97",
+        "name": "Counterattack Claws",
+        "localId": "97",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/97",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.12,
+          "low": 0.07,
+          "trend": 1.12
+        }
+      },
+      {
+        "id": "neo4-98",
+        "name": "Energy Amplifier",
+        "localId": "98",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/98",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.76,
+          "low": 0.02,
+          "trend": 2.25
+        }
+      },
+      {
+        "id": "neo4-99",
+        "name": "Energy Stadium",
+        "localId": "99",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/99",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Hideki Kazama",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.83,
+          "low": 0.1,
+          "trend": 1.93
+        }
+      },
+      {
+        "id": "neo4-100",
+        "name": "Lucky Stadium",
+        "localId": "100",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/100",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Imakuni?",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.02,
+          "low": 0.5,
+          "trend": 3.42
+        }
+      },
+      {
+        "id": "neo4-101",
+        "name": "Magnifier",
+        "localId": "101",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/101",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Keiji Kinebuchi",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.36,
+          "low": 0.09,
+          "trend": 0.85
+        }
+      },
+      {
+        "id": "neo4-102",
+        "name": "Pokémon Personality Test",
+        "localId": "102",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/102",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Tomokazu Komiya",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.26,
+          "low": 2,
+          "trend": 3.55
+        }
+      },
+      {
+        "id": "neo4-103",
+        "name": "Team Rocket's Evil Deeds",
+        "localId": "103",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/103",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Uncommon",
+        "illustrator": "Ken Sugimori",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 3.6,
+          "low": 0.89,
+          "trend": 3.32
+        }
+      },
+      {
+        "id": "neo4-104",
+        "name": "Heal Powder",
+        "localId": "104",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/104",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.3,
+          "low": 0.02,
+          "trend": 0.37
+        }
+      },
+      {
+        "id": "neo4-105",
+        "name": "Mail from Bill",
+        "localId": "105",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/105",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Common",
+        "illustrator": "Ken Sugimori",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.48,
+          "low": 0.05,
+          "trend": 0.33
+        }
+      },
+      {
+        "id": "neo4-106",
+        "name": "Shining Celebi",
+        "localId": "106",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/106",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Hironobu Yoshida",
+        "hp": 50,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 250.35,
+          "low": 100,
+          "trend": 278.29
+        }
+      },
+      {
+        "id": "neo4-107",
+        "name": "Shining Charizard",
+        "localId": "107",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/107",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Hironobu Yoshida",
+        "hp": 100,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2220.76,
+          "low": 298,
+          "trend": 1960.97
+        }
+      },
+      {
+        "id": "neo4-108",
+        "name": "Shining Kabutops",
+        "localId": "108",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/108",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Hironobu Yoshida",
+        "hp": 80,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 211.5,
+          "low": 80,
+          "trend": 193.4
+        }
+      },
+      {
+        "id": "neo4-109",
+        "name": "Shining Mewtwo",
+        "localId": "109",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/109",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Hironobu Yoshida",
+        "hp": 70,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 722.46,
+          "low": 200,
+          "trend": 1088.13
+        }
+      },
+      {
+        "id": "neo4-110",
+        "name": "Shining Noctowl",
+        "localId": "110",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/110",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 250.64,
+          "low": 75,
+          "trend": 382.75
+        }
+      },
+      {
+        "id": "neo4-111",
+        "name": "Shining Raichu",
+        "localId": "111",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/111",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Hironobu Yoshida",
+        "hp": 70,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 384.99,
+          "low": 100,
+          "trend": 228.61
+        }
+      },
+      {
+        "id": "neo4-112",
+        "name": "Shining Steelix",
+        "localId": "112",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/112",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 90,
+        "types": [
+          "Metal"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 183.63,
+          "low": 80,
+          "trend": 254.55
+        }
+      },
+      {
+        "id": "neo4-113",
+        "name": "Shining Tyranitar",
+        "localId": "113",
+        "image": "https://assets.tcgdex.net/en/neo/neo4/113",
+        "set": "Neo Destiny",
+        "setId": "neo4",
+        "rarity": "Rare",
+        "illustrator": "Ken Sugimori",
+        "hp": 80,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": true,
+          "holo": false,
+          "normal": true,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1502.27,
+          "low": 170,
+          "trend": 2232.92
         }
       }
     ]
