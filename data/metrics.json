@@ -1,8 +1,8 @@
 {
-  "generated": "2026-03-21T00:58:07.261Z",
+  "generated": "2026-03-21T01:23:37.795Z",
   "content": {
-    "totalCards": 2536,
-    "setsCount": 11,
+    "totalCards": 3633,
+    "setsCount": 17,
     "sets": [
       "sv01",
       "sv02",
@@ -14,9 +14,15 @@
       "sv08.5",
       "sv06",
       "sv07",
-      "sv08"
+      "sv08",
+      "sv06.5",
+      "sv09",
+      "sv10",
+      "sv10.5b",
+      "sv10.5w",
+      "svp"
     ],
-    "lastSync": "2026-03-21T00:57:08.035Z"
+    "lastSync": "2026-03-21T01:23:09.941Z"
   },
   "health": {},
   "contributions": {
