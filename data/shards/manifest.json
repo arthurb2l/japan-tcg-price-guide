@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-21T19:29:13.010Z",
+  "lastUpdated": "2026-03-21T19:58:27.567Z",
   "shards": {
     "bw": {
       "file": "bw.json",
@@ -27,9 +27,9 @@
     },
     "sv": {
       "file": "sv.json",
-      "cards": 4654,
-      "sets": 27,
-      "size": 1329906
+      "cards": 6402,
+      "sets": 41,
+      "size": 1685784
     },
     "swsh": {
       "file": "swsh.json",
