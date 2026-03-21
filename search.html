@@ -322,13 +322,30 @@ function getGameCards() {
 
 function doSearch() {
   const query = document.getElementById('search').value.toLowerCase().trim();
+  if (!query) { filteredCards = getGameCards(); sortCards(document.getElementById('sort').value); return; }
+  
   const gameCards = getGameCards();
-  filteredCards = query ? gameCards.filter(c => 
+  filteredCards = gameCards.filter(c => 
     c.name?.toLowerCase().includes(query) ||
     c.id?.toLowerCase().includes(query) ||
     c.set?.toLowerCase().includes(query) ||
     c.setId?.toLowerCase().includes(query)
-  ) : gameCards;
+  );
+  
+  // Smart switch: if no results in current game, check other game
+  if (!filteredCards.length) {
+    const otherGame = currentGame === 'pokemon' ? 'onepiece' : 'pokemon';
+    const otherCards = allCards.filter(c => c.game === otherGame);
+    const otherResults = otherCards.filter(c => 
+      c.name?.toLowerCase().includes(query) ||
+      c.id?.toLowerCase().includes(query)
+    );
+    if (otherResults.length) {
+      filterByGame(otherGame);
+      filteredCards = otherResults;
+    }
+  }
+  
   document.getElementById('set-filter').value = '';
   sortCards(document.getElementById('sort').value);
 }
