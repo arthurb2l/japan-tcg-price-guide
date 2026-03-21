@@ -1,0 +1,290 @@
+{
+  "meta": {
+    "lastUpdated": "2026-03-21",
+    "source": "Manual from pricecharting.com + onepiece-cardgame.dev",
+    "totalCards": 17
+  },
+  "sets": {
+    "OP-09": [
+      {
+        "id": "OP09-118",
+        "name": "Gol D. Roger",
+        "nameJp": "ゴール・D・ロジャー",
+        "setId": "OP-09",
+        "set": "Four Emperors",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": "https://onepiece-cardgame.dev/images/cards/OP09-118_p1.png",
+        "price": {
+          "jpy": 550000,
+          "eur": 3400,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "OP-05": [
+      {
+        "id": "OP05-119",
+        "name": "Monkey D. Luffy",
+        "nameJp": "モンキー・D・ルフィ",
+        "setId": "OP-05",
+        "set": "Awakening of the New Era",
+        "rarity": "SEC",
+        "variant": "Manga Gear 5",
+        "img": "https://onepiece-cardgame.dev/images/cards/OP05-119_p1.png",
+        "price": {
+          "jpy": 250000,
+          "eur": 1540,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "OP-02": [
+      {
+        "id": "OP02-013",
+        "name": "Portgas D. Ace",
+        "nameJp": "ポートガス・D・エース",
+        "setId": "OP-02",
+        "set": "Paramount War",
+        "rarity": "SR",
+        "variant": "Manga",
+        "img": "https://onepiece-cardgame.dev/images/cards/OP02-013_p1.png",
+        "price": {
+          "jpy": 175000,
+          "eur": 1080,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "OP-01": [
+      {
+        "id": "OP01-120",
+        "name": "Shanks",
+        "nameJp": "シャンクス",
+        "setId": "OP-01",
+        "set": "Romance Dawn",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": "https://onepiece-cardgame.dev/images/cards/OP01-120_p1.png",
+        "price": {
+          "jpy": 85000,
+          "eur": 525,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP01-003",
+        "name": "Monkey D. Luffy",
+        "nameJp": "モンキー・D・ルフィ",
+        "setId": "OP-01",
+        "set": "Romance Dawn",
+        "rarity": "L",
+        "variant": "Alt Art",
+        "img": "https://onepiece-cardgame.dev/images/cards/OP01-003_p1.png",
+        "price": {
+          "jpy": 60000,
+          "eur": 370,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "ST-01": [
+      {
+        "id": "ST01-012",
+        "name": "Monkey D. Luffy",
+        "nameJp": "モンキー・D・ルフィ",
+        "setId": "ST-01",
+        "set": "Straw Hat Crew",
+        "rarity": "L",
+        "variant": "Gold Signature",
+        "img": "https://onepiece-cardgame.dev/images/cards/ST01-012_p1.png",
+        "price": {
+          "jpy": 400000,
+          "eur": 2470,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "PRB-01": [
+      {
+        "id": "PRB01-001",
+        "name": "Nami",
+        "nameJp": "ナミ",
+        "setId": "PRB-01",
+        "set": "Premium Booster",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": null,
+        "price": {
+          "jpy": 35000,
+          "eur": 216,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "PRB01-002",
+        "name": "Nico Robin",
+        "nameJp": "ニコ・ロビン",
+        "setId": "PRB-01",
+        "set": "Premium Booster",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": null,
+        "price": {
+          "jpy": 28000,
+          "eur": 173,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "OP-03": [
+      {
+        "id": "OP03-112",
+        "name": "Boa Hancock",
+        "nameJp": "ボア・ハンコック",
+        "setId": "OP-03",
+        "set": "Pillars of Strength",
+        "rarity": "SR",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 18000,
+          "eur": 111,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "OP-04": [
+      {
+        "id": "OP04-024",
+        "name": "Yamato",
+        "nameJp": "ヤマト",
+        "setId": "OP-04",
+        "set": "Kingdoms of Intrigue",
+        "rarity": "SR",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 12000,
+          "eur": 74,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "OP-06": [
+      {
+        "id": "OP06-086",
+        "name": "Roronoa Zoro",
+        "nameJp": "ロロノア・ゾロ",
+        "setId": "OP-06",
+        "set": "Wings of the Captain",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": null,
+        "price": {
+          "jpy": 45000,
+          "eur": 278,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "OP-07": [
+      {
+        "id": "OP07-109",
+        "name": "Eustass Kid",
+        "nameJp": "ユースタス・キッド",
+        "setId": "OP-07",
+        "set": "500 Years in the Future",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": null,
+        "price": {
+          "jpy": 25000,
+          "eur": 154,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP07-118",
+        "name": "Jewelry Bonney",
+        "nameJp": "ジュエリー・ボニー",
+        "setId": "OP-07",
+        "set": "500 Years in the Future",
+        "rarity": "SEC",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 15000,
+          "eur": 93,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "OP-08": [
+      {
+        "id": "OP08-106",
+        "name": "Silvers Rayleigh",
+        "nameJp": "シルバーズ・レイリー",
+        "setId": "OP-08",
+        "set": "Two Legends",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": null,
+        "price": {
+          "jpy": 30000,
+          "eur": 185,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP08-118",
+        "name": "Monkey D. Garp",
+        "nameJp": "モンキー・D・ガープ",
+        "setId": "OP-08",
+        "set": "Two Legends",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": null,
+        "price": {
+          "jpy": 22000,
+          "eur": 136,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "PRB-02": [
+      {
+        "id": "PRB02-001",
+        "name": "Uta",
+        "nameJp": "ウタ",
+        "setId": "PRB-02",
+        "set": "Premium Booster 2",
+        "rarity": "SEC",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 20000,
+          "eur": 123,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "ST-10": [
+      {
+        "id": "ST10-001",
+        "name": "Trafalgar Law",
+        "nameJp": "トラファルガー・ロー",
+        "setId": "ST-10",
+        "set": "Ultimate Deck",
+        "rarity": "L",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 8000,
+          "eur": 49,
+          "updated": "2026-03-21"
+        }
+      }
+    ]
+  }
+}
