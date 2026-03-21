@@ -77,6 +77,13 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
   <a href="pokemon/">Pokemon</a>
   <span class="sep">·</span>
   <a href="onepiece/">One Piece</a>
+  <span style="margin-left:auto">
+    <select id="currency" onchange="setCurrency(this.value)" style="padding:4px 8px;border:1px solid #ddd;border-radius:4px;font-size:.8em">
+      <option value="EUR">€ EUR</option>
+      <option value="USD">$ USD</option>
+      <option value="JPY">¥ JPY</option>
+    </select>
+  </span>
 </div>
 
 <div class="search-header">
@@ -140,10 +147,29 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 </div>
 
 <script>
-let allCards = [], filteredCards = [], currentView = 'grid';
+let allCards = [], filteredCards = [], currentView = 'grid', currency = 'EUR';
 const rarityOrder = ['Common','Uncommon','Rare','Double Rare','Ultra Rare','Illustration Rare','Special Art Rare','Hyper Rare','Shiny Rare','ACE SPEC Rare'];
+// Static rates (updated periodically) - EUR base
+const rates = { EUR: 1, USD: 1.08, JPY: 162 };
+
+function formatPrice(eurPrice) {
+  if (!eurPrice) return '-';
+  const converted = eurPrice * rates[currency];
+  const symbol = currency === 'EUR' ? '€' : currency === 'USD' ? '$' : '¥';
+  return currency === 'JPY' ? symbol + Math.round(converted).toLocaleString() : symbol + converted.toFixed(2);
+}
+
+function setCurrency(c) {
+  currency = c;
+  localStorage.setItem('tcg-currency', c);
+  renderCards();
+}
 
 async function loadCards() {
+  // Load saved currency
+  const saved = localStorage.getItem('tcg-currency');
+  if (saved) { currency = saved; document.getElementById('currency').value = saved; }
+  
   try {
     const res = await fetch('data/brain-cache.json');
     const data = await res.json();
@@ -208,13 +234,13 @@ function renderCards() {
         <span class="set">${c.set || c.setId}</span>
         <span class="id">${c.id}</span>
         <span class="rarity">${c.rarity || '-'}</span>
-        <span class="price">${c.price ? '€' + c.price.eur.toFixed(2) : '-'}</span>
+        <span class="price">${formatPrice(c.price?.eur)}</span>
       </div>
     `).join('');
   } else if (currentView === 'text') {
     grid.innerHTML = cards.map(c => `
       <div class="card-item" onclick="showCard('${c.id}')">
-        <div class="name">${c.name}${c.price ? ' · €' + c.price.eur.toFixed(2) : ''}</div>
+        <div class="name">${c.name}${c.price ? ' · ' + formatPrice(c.price.eur) : ''}</div>
         <div class="set">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown rarity'}</div>
         <div class="details">${c.types ? 'Type: ' + c.types.join(', ') : ''} ${c.hp ? '· HP: ' + c.hp : ''}</div>
       </div>
@@ -225,7 +251,7 @@ function renderCards() {
         <img src="${c.image}/low.webp" alt="${c.name}" loading="lazy">
         <div class="name">${c.name}</div>
         <div class="set">${c.setId}</div>
-        ${c.price ? '<div class="price">€' + c.price.eur.toFixed(2) + '</div>' : ''}
+        ${c.price ? '<div class="price">' + formatPrice(c.price.eur) + '</div>' : ''}
       </div>
     `).join('');
   }
@@ -284,7 +310,7 @@ function showCard(id) {
   document.getElementById('modal-set').textContent = card.set || card.setId;
   document.getElementById('modal-id').textContent = card.id;
   document.getElementById('modal-rarity').textContent = card.rarity || '-';
-  document.getElementById('modal-price').textContent = card.price ? `€${card.price.eur.toFixed(2)} (low: €${card.price.low.toFixed(2)})` : 'No price data';
+  document.getElementById('modal-price').textContent = card.price ? `${formatPrice(card.price.eur)} (low: ${formatPrice(card.price.low)})` : 'No price data';
   document.getElementById('modal').classList.add('active');
 }
 
