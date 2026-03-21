@@ -126,15 +126,31 @@ const EVENT_CARDS = [
 
 // More characters from each set
 const MORE_CARDS = [
+  // OP-06 Wings of the Captain
   { id: "OP06-022", name: "Kuzan", nameJp: "クザン", set: "OP-06", setName: "Wings of the Captain", rarity: "SR", variant: null, price: { jpy: 2500, eur: 15 }, img: null },
   { id: "OP06-035", name: "Borsalino", nameJp: "ボルサリーノ", set: "OP-06", setName: "Wings of the Captain", rarity: "SR", variant: null, price: { jpy: 1800, eur: 11 }, img: null },
+  { id: "OP06-101", name: "Rob Lucci", nameJp: "ロブ・ルッチ", set: "OP-06", setName: "Wings of the Captain", rarity: "SEC", variant: null, price: { jpy: 8500, eur: 52 }, img: null },
+  // OP-07 500 Years
   { id: "OP07-045", name: "Kuma", nameJp: "くま", set: "OP-07", setName: "500 Years in the Future", rarity: "SR", variant: null, price: { jpy: 2000, eur: 12 }, img: null },
   { id: "OP07-064", name: "Sentomaru", nameJp: "戦桃丸", set: "OP-07", setName: "500 Years in the Future", rarity: "R", variant: null, price: { jpy: 400, eur: 2.5 }, img: null },
+  { id: "OP07-109", name: "Jewelry Bonney", nameJp: "ジュエリー・ボニー", set: "OP-07", setName: "500 Years in the Future", rarity: "SEC", variant: null, price: { jpy: 12000, eur: 74 }, img: null },
+  // OP-08 Two Legends
   { id: "OP08-022", name: "Sengoku", nameJp: "センゴク", set: "OP-08", setName: "Two Legends", rarity: "SR", variant: null, price: { jpy: 1500, eur: 9 }, img: null },
   { id: "OP08-067", name: "Shiki", nameJp: "シキ", set: "OP-08", setName: "Two Legends", rarity: "SR", variant: null, price: { jpy: 2200, eur: 14 }, img: null },
+  { id: "OP08-106", name: "Monkey D. Garp", nameJp: "モンキー・D・ガープ", set: "OP-08", setName: "Two Legends", rarity: "SEC", variant: null, price: { jpy: 15000, eur: 92 }, img: null },
+  { id: "OP08-118", name: "Gol D. Roger", nameJp: "ゴール・D・ロジャー", set: "OP-08", setName: "Two Legends", rarity: "SEC", variant: "Alt Art", price: { jpy: 35000, eur: 216 }, img: null },
+  // OP-09 Four Emperors
   { id: "OP09-030", name: "King", nameJp: "キング", set: "OP-09", setName: "Four Emperors", rarity: "SR", variant: null, price: { jpy: 2800, eur: 17 }, img: null },
   { id: "OP09-051", name: "Queen", nameJp: "クイーン", set: "OP-09", setName: "Four Emperors", rarity: "SR", variant: null, price: { jpy: 1800, eur: 11 }, img: null },
   { id: "OP09-091", name: "Charlotte Linlin", nameJp: "シャーロット・リンリン", set: "OP-09", setName: "Four Emperors", rarity: "SR", variant: null, price: { jpy: 2500, eur: 15 }, img: null },
+  { id: "OP09-119", name: "Kaido", nameJp: "カイドウ", set: "OP-09", setName: "Four Emperors", rarity: "SEC", variant: "Manga", price: { jpy: 45000, eur: 278 }, img: null },
+  // Starter Decks
+  { id: "ST02-001", name: "Trafalgar Law", nameJp: "トラファルガー・ロー", set: "ST-02", setName: "Worst Generation", rarity: "L", variant: null, price: { jpy: 800, eur: 5 }, img: null },
+  { id: "ST03-001", name: "Crocodile", nameJp: "クロコダイル", set: "ST-03", setName: "The Seven Warlords", rarity: "L", variant: null, price: { jpy: 600, eur: 4 }, img: null },
+  { id: "ST05-001", name: "Uta", nameJp: "ウタ", set: "ST-05", setName: "Film Edition", rarity: "L", variant: null, price: { jpy: 1200, eur: 7 }, img: null },
+  { id: "ST08-001", name: "Monkey D. Luffy", nameJp: "モンキー・D・ルフィ", set: "ST-08", setName: "Monkey D. Luffy", rarity: "L", variant: null, price: { jpy: 500, eur: 3 }, img: null },
+  { id: "ST09-001", name: "Yamato", nameJp: "ヤマト", set: "ST-09", setName: "Yamato", rarity: "L", variant: null, price: { jpy: 1500, eur: 9 }, img: null },
+  { id: "ST12-001", name: "Zoro & Sanji", nameJp: "ゾロ＆サンジ", set: "ST-12", setName: "Zoro & Sanji", rarity: "L", variant: null, price: { jpy: 2000, eur: 12 }, img: null },
 ];
 
 function buildCache() {

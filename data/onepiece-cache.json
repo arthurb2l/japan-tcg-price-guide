@@ -2,7 +2,7 @@
   "meta": {
     "lastUpdated": "2026-03-21",
     "source": "Manual from pricecharting.com + onepiece-cardgame.dev",
-    "totalCards": 70
+    "totalCards": 81
   },
   "sets": {
     "OP-09": [
@@ -108,6 +108,21 @@
         "price": {
           "jpy": 2500,
           "eur": 15,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP09-119",
+        "name": "Kaido",
+        "nameJp": "カイドウ",
+        "setId": "OP-09",
+        "set": "Four Emperors",
+        "rarity": "SEC",
+        "variant": "Manga",
+        "img": null,
+        "price": {
+          "jpy": 45000,
+          "eur": 278,
           "updated": "2026-03-21"
         }
       }
@@ -831,6 +846,21 @@
           "eur": 11,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP06-101",
+        "name": "Rob Lucci",
+        "nameJp": "ロブ・ルッチ",
+        "setId": "OP-06",
+        "set": "Wings of the Captain",
+        "rarity": "SEC",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 8500,
+          "eur": 52,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-07": [
@@ -921,6 +951,21 @@
         "price": {
           "jpy": 400,
           "eur": 2.5,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP07-109",
+        "name": "Jewelry Bonney",
+        "nameJp": "ジュエリー・ボニー",
+        "setId": "OP-07",
+        "set": "500 Years in the Future",
+        "rarity": "SEC",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 12000,
+          "eur": 74,
           "updated": "2026-03-21"
         }
       }
@@ -1015,6 +1060,36 @@
           "eur": 14,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP08-106",
+        "name": "Monkey D. Garp",
+        "nameJp": "モンキー・D・ガープ",
+        "setId": "OP-08",
+        "set": "Two Legends",
+        "rarity": "SEC",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 15000,
+          "eur": 92,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP08-118",
+        "name": "Gol D. Roger",
+        "nameJp": "ゴール・D・ロジャー",
+        "setId": "OP-08",
+        "set": "Two Legends",
+        "rarity": "SEC",
+        "variant": "Alt Art",
+        "img": null,
+        "price": {
+          "jpy": 35000,
+          "eur": 216,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "PRB-02": [
@@ -1079,6 +1154,108 @@
         "price": {
           "jpy": 6000,
           "eur": 37,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "ST-02": [
+      {
+        "id": "ST02-001",
+        "name": "Trafalgar Law",
+        "nameJp": "トラファルガー・ロー",
+        "setId": "ST-02",
+        "set": "Worst Generation",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 800,
+          "eur": 5,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "ST-03": [
+      {
+        "id": "ST03-001",
+        "name": "Crocodile",
+        "nameJp": "クロコダイル",
+        "setId": "ST-03",
+        "set": "The Seven Warlords",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 600,
+          "eur": 4,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "ST-05": [
+      {
+        "id": "ST05-001",
+        "name": "Uta",
+        "nameJp": "ウタ",
+        "setId": "ST-05",
+        "set": "Film Edition",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 1200,
+          "eur": 7,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "ST-08": [
+      {
+        "id": "ST08-001",
+        "name": "Monkey D. Luffy",
+        "nameJp": "モンキー・D・ルフィ",
+        "setId": "ST-08",
+        "set": "Monkey D. Luffy",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 500,
+          "eur": 3,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "ST-09": [
+      {
+        "id": "ST09-001",
+        "name": "Yamato",
+        "nameJp": "ヤマト",
+        "setId": "ST-09",
+        "set": "Yamato",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 1500,
+          "eur": 9,
+          "updated": "2026-03-21"
+        }
+      }
+    ],
+    "ST-12": [
+      {
+        "id": "ST12-001",
+        "name": "Zoro & Sanji",
+        "nameJp": "ゾロ＆サンジ",
+        "setId": "ST-12",
+        "set": "Zoro & Sanji",
+        "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 2000,
+          "eur": 12,
           "updated": "2026-03-21"
         }
       }
