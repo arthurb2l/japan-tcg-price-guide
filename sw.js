@@ -1,10 +1,11 @@
-const CACHE_NAME = 'tcg-v1';
+const CACHE_NAME = 'tcg-v2';
 const OFFLINE_URLS = [
   '/japan-tcg-price-guide/',
   '/japan-tcg-price-guide/index.html',
   '/japan-tcg-price-guide/search.html',
   '/japan-tcg-price-guide/base.css',
-  '/japan-tcg-price-guide/data/brain-cache.json'
+  '/japan-tcg-price-guide/data/brain-cache.json',
+  '/japan-tcg-price-guide/data/onepiece-cache.json'
 ];
 
 self.addEventListener('install', e => {
