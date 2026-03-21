@@ -1,0 +1,48 @@
+name: Feature Request
+description: Suggest a new feature for the TCG Price Guide
+labels: ["enhancement", "feature-request"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem does this solve?
+      placeholder: "When I'm at a flea market, I can't..."
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How should it work?
+      placeholder: "Add a feature that..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: How do we know it's done?
+      options:
+        - label: "Criterion 1 (edit this)"
+        - label: "Criterion 2 (edit this)"
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Complexity Estimate
+      options:
+        - Small (< 2 hours)
+        - Medium (2-8 hours)
+        - Large (> 8 hours)
+        - Unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Would you contribute the code?
+      options:
+        - "Yes, I can submit a PR"
+        - "No, needs maintainer"
+    validations:
+      required: true

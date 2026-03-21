@@ -1,0 +1,31 @@
+name: Bug Report
+description: Report something that's broken
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      placeholder: "When I searched for..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should happen?
+      placeholder: "It should show..."
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Mobile (iPhone)
+        - Mobile (Android)
+        - Desktop (Chrome)
+        - Desktop (Safari)
+        - Desktop (Firefox)
+        - Other
+    validations:
+      required: true
