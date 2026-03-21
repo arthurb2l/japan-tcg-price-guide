@@ -1,53 +1,53 @@
 {
-  "lastUpdated": "2026-03-21T08:13:00.695Z",
+  "lastUpdated": "2026-03-21T19:29:13.010Z",
   "shards": {
-    "sv": {
-      "file": "sv.json",
-      "cards": 3633,
-      "sets": 17,
-      "size": 1128215
-    },
-    "vintage": {
-      "file": "vintage.json",
-      "cards": 6809,
-      "sets": 92,
-      "size": 1168857
-    },
-    "swsh": {
-      "file": "swsh.json",
-      "cards": 3600,
-      "sets": 17,
-      "size": 721463
-    },
-    "sm": {
-      "file": "sm.json",
-      "cards": 2895,
-      "sets": 17,
-      "size": 723664
-    },
-    "xy": {
-      "file": "xy.json",
-      "cards": 1775,
-      "sets": 14,
-      "size": 353985
-    },
     "bw": {
       "file": "bw.json",
       "cards": 1416,
       "sets": 12,
-      "size": 194697
+      "size": 194683
     },
     "dp": {
       "file": "dp.json",
       "cards": 900,
       "sets": 8,
-      "size": 123631
+      "size": 123619
     },
     "ex": {
       "file": "ex.json",
-      "cards": 1727,
-      "sets": 18,
-      "size": 236067
+      "cards": 2906,
+      "sets": 33,
+      "size": 424342
+    },
+    "sm": {
+      "file": "sm.json",
+      "cards": 2895,
+      "sets": 17,
+      "size": 723468
+    },
+    "sv": {
+      "file": "sv.json",
+      "cards": 4654,
+      "sets": 27,
+      "size": 1329906
+    },
+    "swsh": {
+      "file": "swsh.json",
+      "cards": 4199,
+      "sets": 21,
+      "size": 842625
+    },
+    "vintage": {
+      "file": "vintage.json",
+      "cards": 7491,
+      "sets": 99,
+      "size": 1274767
+    },
+    "xy": {
+      "file": "xy.json",
+      "cards": 1775,
+      "sets": 14,
+      "size": 353953
     }
   }
 }
