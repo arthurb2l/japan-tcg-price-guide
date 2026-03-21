@@ -1,8 +1,8 @@
 {
-  "generated": "2026-03-21T07:30:58.152Z",
+  "generated": "2026-03-21T07:33:01.422Z",
   "content": {
-    "totalCards": 11072,
-    "setsCount": 63,
+    "totalCards": 12093,
+    "setsCount": 71,
     "sets": [
       "sv01",
       "sv02",
@@ -66,9 +66,17 @@
       "xy8",
       "xy9",
       "xy10",
-      "swsh10.5"
+      "swsh10.5",
+      "sm115",
+      "sm3.5",
+      "sm2",
+      "sm4",
+      "sm5",
+      "sm6",
+      "sm7",
+      "sm7.5"
     ],
-    "lastSync": "2026-03-21T07:29:30.742Z"
+    "lastSync": "2026-03-21T07:31:21.295Z"
   },
   "health": {},
   "contributions": {
