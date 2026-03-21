@@ -361,6 +361,7 @@ function filterBySet(setId) {
 }
 
 function sortCards(by) {
+  const getPrice = c => c.price?.[currency.toLowerCase()] || c.price?.jpy || c.price?.eur || 0;
   filteredCards.sort((a, b) => {
     if (by === 'name') return (a.name || '').localeCompare(b.name || '');
     if (by === 'id') return (a.localId || '').localeCompare(b.localId || '', undefined, {numeric: true});
@@ -370,8 +371,8 @@ function sortCards(by) {
       const bi = rarityOrder.indexOf(b.rarity) === -1 ? 99 : rarityOrder.indexOf(b.rarity);
       return bi - ai;
     }
-    if (by === 'price-high') return (b.price?.eur || 0) - (a.price?.eur || 0);
-    if (by === 'price-low') return (a.price?.eur || 999999) - (b.price?.eur || 999999);
+    if (by === 'price-high') return getPrice(b) - getPrice(a);
+    if (by === 'price-low') return (getPrice(a) || 999999) - (getPrice(b) || 999999);
     return 0;
   });
   renderCards();
