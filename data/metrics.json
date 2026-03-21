@@ -1,8 +1,8 @@
 {
-  "generated": "2026-03-21T08:06:05.027Z",
+  "generated": "2026-03-21T08:13:32.775Z",
   "content": {
-    "totalCards": 22387,
-    "setsCount": 190,
+    "totalCards": 22755,
+    "setsCount": 195,
     "sets": [
       "sv01",
       "sv02",
@@ -193,9 +193,14 @@
       "tk-xy-latio",
       "tk-xy-su",
       "tk-sm-l",
-      "tk-sm-r"
+      "tk-sm-r",
+      "ex5.5",
+      "exu",
+      "me02.5",
+      "mep",
+      "tk-xy-p"
     ],
-    "lastSync": "2026-03-21T08:05:24.086Z"
+    "lastSync": "2026-03-21T08:12:55.724Z"
   },
   "health": {},
   "contributions": {
