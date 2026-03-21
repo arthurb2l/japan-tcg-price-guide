@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-21T08:02:47.413Z",
+  "updated": "2026-03-21T08:05:24.086Z",
   "sets": {
     "sv01": [
       {
@@ -293063,6 +293063,7015 @@
         "image": "https://assets.tcgdex.net/en/xy/dc1/34",
         "set": "Double Crisis",
         "setId": "dc1"
+      }
+    ],
+    "2011bw": [
+      {
+        "id": "2011bw-1",
+        "name": "Snivy",
+        "localId": "1",
+        "set": "Macdonald's Collection 2011",
+        "setId": "2011bw"
+      },
+      {
+        "id": "2011bw-2",
+        "name": "Maractus",
+        "localId": "2",
+        "set": "Macdonald's Collection 2011",
+        "setId": "2011bw"
+      },
+      {
+        "id": "2011bw-3",
+        "name": "Tepig",
+        "localId": "3",
+        "set": "Macdonald's Collection 2011",
+        "setId": "2011bw"
+      },
+      {
+        "id": "2011bw-4",
+        "name": "Oshawott",
+        "localId": "4",
+        "set": "Macdonald's Collection 2011",
+        "setId": "2011bw"
+      },
+      {
+        "id": "2011bw-5",
+        "name": "Alomomola",
+        "localId": "5",
+        "set": "Macdonald's Collection 2011",
+        "setId": "2011bw"
+      },
+      {
+        "id": "2011bw-6",
+        "name": "Blitzle",
+        "localId": "6",
+        "set": "Macdonald's Collection 2011",
+        "setId": "2011bw"
+      },
+      {
+        "id": "2011bw-7",
+        "name": "Munna",
+        "localId": "7",
+        "set": "Macdonald's Collection 2011",
+        "setId": "2011bw"
+      },
+      {
+        "id": "2011bw-8",
+        "name": "Sandile",
+        "localId": "8",
+        "set": "Macdonald's Collection 2011",
+        "setId": "2011bw"
+      },
+      {
+        "id": "2011bw-9",
+        "name": "Zorua",
+        "localId": "9",
+        "set": "Macdonald's Collection 2011",
+        "setId": "2011bw"
+      },
+      {
+        "id": "2011bw-10",
+        "name": "Klink",
+        "localId": "10",
+        "set": "Macdonald's Collection 2011",
+        "setId": "2011bw"
+      },
+      {
+        "id": "2011bw-11",
+        "name": "Pidove",
+        "localId": "11",
+        "set": "Macdonald's Collection 2011",
+        "setId": "2011bw"
+      },
+      {
+        "id": "2011bw-12",
+        "name": "Audino",
+        "localId": "12",
+        "set": "Macdonald's Collection 2011",
+        "setId": "2011bw"
+      }
+    ],
+    "2012bw": [
+      {
+        "id": "2012bw-1",
+        "name": "Servine",
+        "localId": "1",
+        "set": "Macdonald's Collection 2012",
+        "setId": "2012bw"
+      },
+      {
+        "id": "2012bw-2",
+        "name": "Pansage",
+        "localId": "2",
+        "set": "Macdonald's Collection 2012",
+        "setId": "2012bw"
+      },
+      {
+        "id": "2012bw-3",
+        "name": "Dwebble",
+        "localId": "3",
+        "set": "Macdonald's Collection 2012",
+        "setId": "2012bw"
+      },
+      {
+        "id": "2012bw-4",
+        "name": "Pignite",
+        "localId": "4",
+        "set": "Macdonald's Collection 2012",
+        "setId": "2012bw"
+      },
+      {
+        "id": "2012bw-5",
+        "name": "Dewott",
+        "localId": "5",
+        "set": "Macdonald's Collection 2012",
+        "setId": "2012bw"
+      },
+      {
+        "id": "2012bw-6",
+        "name": "Emolga",
+        "localId": "6",
+        "set": "Macdonald's Collection 2012",
+        "setId": "2012bw"
+      },
+      {
+        "id": "2012bw-7",
+        "name": "Woobat",
+        "localId": "7",
+        "set": "Macdonald's Collection 2012",
+        "setId": "2012bw"
+      },
+      {
+        "id": "2012bw-8",
+        "name": "Drilbur",
+        "localId": "8",
+        "set": "Macdonald's Collection 2012",
+        "setId": "2012bw"
+      },
+      {
+        "id": "2012bw-9",
+        "name": "Purrloin",
+        "localId": "9",
+        "set": "Macdonald's Collection 2012",
+        "setId": "2012bw"
+      },
+      {
+        "id": "2012bw-10",
+        "name": "Scraggy",
+        "localId": "10",
+        "set": "Macdonald's Collection 2012",
+        "setId": "2012bw"
+      },
+      {
+        "id": "2012bw-11",
+        "name": "Klang",
+        "localId": "11",
+        "set": "Macdonald's Collection 2012",
+        "setId": "2012bw"
+      },
+      {
+        "id": "2012bw-12",
+        "name": "Axew",
+        "localId": "12",
+        "set": "Macdonald's Collection 2012",
+        "setId": "2012bw"
+      }
+    ],
+    "2014xy": [
+      {
+        "id": "2014xy-1",
+        "name": "Weedle",
+        "localId": "1",
+        "set": "Macdonald's Collection 2014",
+        "setId": "2014xy"
+      },
+      {
+        "id": "2014xy-2",
+        "name": "Chespin",
+        "localId": "2",
+        "set": "Macdonald's Collection 2014",
+        "setId": "2014xy"
+      },
+      {
+        "id": "2014xy-3",
+        "name": "Fennekin",
+        "localId": "3",
+        "set": "Macdonald's Collection 2014",
+        "setId": "2014xy"
+      },
+      {
+        "id": "2014xy-4",
+        "name": "Froakie",
+        "localId": "4",
+        "set": "Macdonald's Collection 2014",
+        "setId": "2014xy"
+      },
+      {
+        "id": "2014xy-5",
+        "name": "Pikachu",
+        "localId": "5",
+        "set": "Macdonald's Collection 2014",
+        "setId": "2014xy"
+      },
+      {
+        "id": "2014xy-6",
+        "name": "Inkay",
+        "localId": "6",
+        "set": "Macdonald's Collection 2014",
+        "setId": "2014xy"
+      },
+      {
+        "id": "2014xy-7",
+        "name": "Honedge",
+        "localId": "7",
+        "set": "Macdonald's Collection 2014",
+        "setId": "2014xy"
+      },
+      {
+        "id": "2014xy-8",
+        "name": "Snubbull",
+        "localId": "8",
+        "set": "Macdonald's Collection 2014",
+        "setId": "2014xy"
+      },
+      {
+        "id": "2014xy-9",
+        "name": "Swirlix",
+        "localId": "9",
+        "set": "Macdonald's Collection 2014",
+        "setId": "2014xy"
+      },
+      {
+        "id": "2014xy-10",
+        "name": "Bunnelby",
+        "localId": "10",
+        "set": "Macdonald's Collection 2014",
+        "setId": "2014xy"
+      },
+      {
+        "id": "2014xy-11",
+        "name": "Fletchling",
+        "localId": "11",
+        "set": "Macdonald's Collection 2014",
+        "setId": "2014xy"
+      },
+      {
+        "id": "2014xy-12",
+        "name": "Furfrou",
+        "localId": "12",
+        "set": "Macdonald's Collection 2014",
+        "setId": "2014xy"
+      }
+    ],
+    "2015xy": [
+      {
+        "id": "2015xy-1",
+        "name": "Treecko",
+        "localId": "1",
+        "set": "Macdonald's Collection 2015",
+        "setId": "2015xy"
+      },
+      {
+        "id": "2015xy-2",
+        "name": "Lotad",
+        "localId": "2",
+        "set": "Macdonald's Collection 2015",
+        "setId": "2015xy"
+      },
+      {
+        "id": "2015xy-3",
+        "name": "Torchic",
+        "localId": "3",
+        "set": "Macdonald's Collection 2015",
+        "setId": "2015xy"
+      },
+      {
+        "id": "2015xy-4",
+        "name": "Staryu",
+        "localId": "4",
+        "set": "Macdonald's Collection 2015",
+        "setId": "2015xy"
+      },
+      {
+        "id": "2015xy-5",
+        "name": "Mudkip",
+        "localId": "5",
+        "set": "Macdonald's Collection 2015",
+        "setId": "2015xy"
+      },
+      {
+        "id": "2015xy-6",
+        "name": "Pikachu",
+        "localId": "6",
+        "set": "Macdonald's Collection 2015",
+        "setId": "2015xy"
+      },
+      {
+        "id": "2015xy-7",
+        "name": "Electrike",
+        "localId": "7",
+        "set": "Macdonald's Collection 2015",
+        "setId": "2015xy"
+      },
+      {
+        "id": "2015xy-8",
+        "name": "Rhyhorn",
+        "localId": "8",
+        "set": "Macdonald's Collection 2015",
+        "setId": "2015xy"
+      },
+      {
+        "id": "2015xy-9",
+        "name": "Meditite",
+        "localId": "9",
+        "set": "Macdonald's Collection 2015",
+        "setId": "2015xy"
+      },
+      {
+        "id": "2015xy-10",
+        "name": "Marill",
+        "localId": "10",
+        "set": "Macdonald's Collection 2015",
+        "setId": "2015xy"
+      },
+      {
+        "id": "2015xy-11",
+        "name": "Zigzagoon",
+        "localId": "11",
+        "set": "Macdonald's Collection 2015",
+        "setId": "2015xy"
+      },
+      {
+        "id": "2015xy-12",
+        "name": "Skitty",
+        "localId": "12",
+        "set": "Macdonald's Collection 2015",
+        "setId": "2015xy"
+      }
+    ],
+    "2016xy": [
+      {
+        "id": "2016xy-1",
+        "name": "Vulpix",
+        "localId": "1",
+        "set": "Macdonald's Collection 2016",
+        "setId": "2016xy"
+      },
+      {
+        "id": "2016xy-2",
+        "name": "Torchic",
+        "localId": "2",
+        "set": "Macdonald's Collection 2016",
+        "setId": "2016xy"
+      },
+      {
+        "id": "2016xy-3",
+        "name": "Fennekin",
+        "localId": "3",
+        "set": "Macdonald's Collection 2016",
+        "setId": "2016xy"
+      },
+      {
+        "id": "2016xy-4",
+        "name": "Magikarp",
+        "localId": "4",
+        "set": "Macdonald's Collection 2016",
+        "setId": "2016xy"
+      },
+      {
+        "id": "2016xy-5",
+        "name": "Totodile",
+        "localId": "5",
+        "set": "Macdonald's Collection 2016",
+        "setId": "2016xy"
+      },
+      {
+        "id": "2016xy-6",
+        "name": "Pikachu",
+        "localId": "6",
+        "set": "Macdonald's Collection 2016",
+        "setId": "2016xy"
+      },
+      {
+        "id": "2016xy-7",
+        "name": "Scraggy",
+        "localId": "7",
+        "set": "Macdonald's Collection 2016",
+        "setId": "2016xy"
+      },
+      {
+        "id": "2016xy-8",
+        "name": "Jigglypuff",
+        "localId": "8",
+        "set": "Macdonald's Collection 2016",
+        "setId": "2016xy"
+      },
+      {
+        "id": "2016xy-9",
+        "name": "Togepi",
+        "localId": "9",
+        "set": "Macdonald's Collection 2016",
+        "setId": "2016xy"
+      },
+      {
+        "id": "2016xy-10",
+        "name": "Dedenne",
+        "localId": "10",
+        "set": "Macdonald's Collection 2016",
+        "setId": "2016xy"
+      },
+      {
+        "id": "2016xy-11",
+        "name": "Meowth",
+        "localId": "11",
+        "set": "Macdonald's Collection 2016",
+        "setId": "2016xy"
+      },
+      {
+        "id": "2016xy-12",
+        "name": "Eevee",
+        "localId": "12",
+        "set": "Macdonald's Collection 2016",
+        "setId": "2016xy"
+      }
+    ],
+    "2017sm": [
+      {
+        "id": "2017sm-1",
+        "name": "Rowlet",
+        "localId": "1",
+        "set": "Macdonald's Collection 2017",
+        "setId": "2017sm"
+      },
+      {
+        "id": "2017sm-2",
+        "name": "Grubbin",
+        "localId": "2",
+        "set": "Macdonald's Collection 2017",
+        "setId": "2017sm"
+      },
+      {
+        "id": "2017sm-3",
+        "name": "Litten",
+        "localId": "3",
+        "set": "Macdonald's Collection 2017",
+        "setId": "2017sm"
+      },
+      {
+        "id": "2017sm-4",
+        "name": "Popplio",
+        "localId": "4",
+        "set": "Macdonald's Collection 2017",
+        "setId": "2017sm"
+      },
+      {
+        "id": "2017sm-5",
+        "name": "Pikachu",
+        "localId": "5",
+        "set": "Macdonald's Collection 2017",
+        "setId": "2017sm"
+      },
+      {
+        "id": "2017sm-6",
+        "name": "Cosmog",
+        "localId": "6",
+        "set": "Macdonald's Collection 2017",
+        "setId": "2017sm"
+      },
+      {
+        "id": "2017sm-7",
+        "name": "Crabrawler",
+        "localId": "7",
+        "set": "Macdonald's Collection 2017",
+        "setId": "2017sm"
+      },
+      {
+        "id": "2017sm-8",
+        "name": "Alolan Meowth",
+        "localId": "8",
+        "set": "Macdonald's Collection 2017",
+        "setId": "2017sm"
+      },
+      {
+        "id": "2017sm-9",
+        "name": "Alolan Diglett",
+        "localId": "9",
+        "set": "Macdonald's Collection 2017",
+        "setId": "2017sm"
+      },
+      {
+        "id": "2017sm-10",
+        "name": "Cutiefly",
+        "localId": "10",
+        "set": "Macdonald's Collection 2017",
+        "setId": "2017sm"
+      },
+      {
+        "id": "2017sm-11",
+        "name": "Pikipek",
+        "localId": "11",
+        "set": "Macdonald's Collection 2017",
+        "setId": "2017sm"
+      },
+      {
+        "id": "2017sm-12",
+        "name": "Yungoos",
+        "localId": "12",
+        "set": "Macdonald's Collection 2017",
+        "setId": "2017sm"
+      }
+    ],
+    "2018sm": [
+      {
+        "id": "2018sm-1",
+        "name": "Growlithe",
+        "localId": "1",
+        "set": "Macdonald's Collection 2018",
+        "setId": "2018sm"
+      },
+      {
+        "id": "2018sm-2",
+        "name": "Psyduck",
+        "localId": "2",
+        "set": "Macdonald's Collection 2018",
+        "setId": "2018sm"
+      },
+      {
+        "id": "2018sm-3",
+        "name": "Horsea",
+        "localId": "3",
+        "set": "Macdonald's Collection 2018",
+        "setId": "2018sm"
+      },
+      {
+        "id": "2018sm-4",
+        "name": "Pikachu",
+        "localId": "4",
+        "set": "Macdonald's Collection 2018",
+        "setId": "2018sm"
+      },
+      {
+        "id": "2018sm-5",
+        "name": "Slowpoke",
+        "localId": "5",
+        "set": "Macdonald's Collection 2018",
+        "setId": "2018sm"
+      },
+      {
+        "id": "2018sm-6",
+        "name": "Machop",
+        "localId": "6",
+        "set": "Macdonald's Collection 2018",
+        "setId": "2018sm"
+      },
+      {
+        "id": "2018sm-7",
+        "name": "Cubone",
+        "localId": "7",
+        "set": "Macdonald's Collection 2018",
+        "setId": "2018sm"
+      },
+      {
+        "id": "2018sm-8",
+        "name": "Magnemite",
+        "localId": "8",
+        "set": "Macdonald's Collection 2018",
+        "setId": "2018sm"
+      },
+      {
+        "id": "2018sm-9",
+        "name": "Dratini",
+        "localId": "9",
+        "set": "Macdonald's Collection 2018",
+        "setId": "2018sm"
+      },
+      {
+        "id": "2018sm-10",
+        "name": "Chansey",
+        "localId": "10",
+        "set": "Macdonald's Collection 2018",
+        "setId": "2018sm"
+      },
+      {
+        "id": "2018sm-11",
+        "name": "Eevee",
+        "localId": "11",
+        "set": "Macdonald's Collection 2018",
+        "setId": "2018sm"
+      },
+      {
+        "id": "2018sm-12",
+        "name": "Porygon",
+        "localId": "12",
+        "set": "Macdonald's Collection 2018",
+        "setId": "2018sm"
+      }
+    ],
+    "2019sm": [
+      {
+        "id": "2019sm-1",
+        "name": "Caterpie",
+        "localId": "1",
+        "set": "Macdonald's Collection 2019",
+        "setId": "2019sm"
+      },
+      {
+        "id": "2019sm-2",
+        "name": "Alolan Exeggutor",
+        "localId": "2",
+        "set": "Macdonald's Collection 2019",
+        "setId": "2019sm"
+      },
+      {
+        "id": "2019sm-3",
+        "name": "Magmar",
+        "localId": "3",
+        "set": "Macdonald's Collection 2019",
+        "setId": "2019sm"
+      },
+      {
+        "id": "2019sm-4",
+        "name": "Alolan Sandshrew",
+        "localId": "4",
+        "set": "Macdonald's Collection 2019",
+        "setId": "2019sm"
+      },
+      {
+        "id": "2019sm-5",
+        "name": "Lapras",
+        "localId": "5",
+        "set": "Macdonald's Collection 2019",
+        "setId": "2019sm"
+      },
+      {
+        "id": "2019sm-6",
+        "name": "Pikachu",
+        "localId": "6",
+        "set": "Macdonald's Collection 2019",
+        "setId": "2019sm"
+      },
+      {
+        "id": "2019sm-7",
+        "name": "Gastly",
+        "localId": "7",
+        "set": "Macdonald's Collection 2019",
+        "setId": "2019sm"
+      },
+      {
+        "id": "2019sm-8",
+        "name": "Mankey",
+        "localId": "8",
+        "set": "Macdonald's Collection 2019",
+        "setId": "2019sm"
+      },
+      {
+        "id": "2019sm-9",
+        "name": "Onix",
+        "localId": "9",
+        "set": "Macdonald's Collection 2019",
+        "setId": "2019sm"
+      },
+      {
+        "id": "2019sm-10",
+        "name": "Alolan Meowth",
+        "localId": "10",
+        "set": "Macdonald's Collection 2019",
+        "setId": "2019sm"
+      },
+      {
+        "id": "2019sm-11",
+        "name": "Alolan Dugtrio",
+        "localId": "11",
+        "set": "Macdonald's Collection 2019",
+        "setId": "2019sm"
+      },
+      {
+        "id": "2019sm-12",
+        "name": "Eevee",
+        "localId": "12",
+        "set": "Macdonald's Collection 2019",
+        "setId": "2019sm"
+      }
+    ],
+    "2021swsh": [
+      {
+        "id": "2021swsh-1",
+        "name": "Bulbasaur",
+        "localId": "1",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-2",
+        "name": "Chikorita",
+        "localId": "2",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-3",
+        "name": "Treecko",
+        "localId": "3",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-4",
+        "name": "Turtwig",
+        "localId": "4",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-5",
+        "name": "Snivy",
+        "localId": "5",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-6",
+        "name": "Chespin",
+        "localId": "6",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-7",
+        "name": "Rowlet",
+        "localId": "7",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-8",
+        "name": "Grookey",
+        "localId": "8",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-9",
+        "name": "Charmander",
+        "localId": "9",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-10",
+        "name": "Cyndaquil",
+        "localId": "10",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-11",
+        "name": "Torchic",
+        "localId": "11",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-12",
+        "name": "Chimchar",
+        "localId": "12",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-13",
+        "name": "Tepig",
+        "localId": "13",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-14",
+        "name": "Fennekin",
+        "localId": "14",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-15",
+        "name": "Litten",
+        "localId": "15",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-16",
+        "name": "Scorbunny",
+        "localId": "16",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-17",
+        "name": "Squirtle",
+        "localId": "17",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-18",
+        "name": "Totodile",
+        "localId": "18",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-19",
+        "name": "Mudkip",
+        "localId": "19",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-20",
+        "name": "Piplup",
+        "localId": "20",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-21",
+        "name": "Oshawott",
+        "localId": "21",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-22",
+        "name": "Froakie",
+        "localId": "22",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-23",
+        "name": "Popplio",
+        "localId": "23",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-24",
+        "name": "Sobble",
+        "localId": "24",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      },
+      {
+        "id": "2021swsh-25",
+        "name": "Pikachu",
+        "localId": "25",
+        "set": "Macdonald's Collection 2021",
+        "setId": "2021swsh"
+      }
+    ],
+    "ru1": [
+      {
+        "id": "ru1-1",
+        "name": "Venusaur",
+        "localId": "1",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/1",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-2",
+        "name": "Cherrim",
+        "localId": "2",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/2",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-3",
+        "name": "Ninetales",
+        "localId": "3",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/3",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-4",
+        "name": "Heatran",
+        "localId": "4",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/4",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-5",
+        "name": "Starmie",
+        "localId": "5",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/5",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-6",
+        "name": "Gyarados",
+        "localId": "6",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/6",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-7",
+        "name": "Pikachu",
+        "localId": "7",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/7",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-8",
+        "name": "Zapdos",
+        "localId": "8",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/8",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-9",
+        "name": "Mewtwo",
+        "localId": "9",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/9",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-10",
+        "name": "Mew",
+        "localId": "10",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/10",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-11",
+        "name": "Diglett",
+        "localId": "11",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/11",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-12",
+        "name": "Lucario",
+        "localId": "12",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/12",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-13",
+        "name": "Skuntank",
+        "localId": "13",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/13",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-14",
+        "name": "Bastiodon",
+        "localId": "14",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/14",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-15",
+        "name": "Rattata",
+        "localId": "15",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/15",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      },
+      {
+        "id": "ru1-16",
+        "name": "Bibarel",
+        "localId": "16",
+        "image": "https://assets.tcgdex.net/en/pl/ru1/16",
+        "set": "Pokémon Rumble",
+        "setId": "ru1"
+      }
+    ],
+    "sma": [
+      {
+        "id": "sma-SV1",
+        "name": "Scyther",
+        "localId": "SV1",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV1",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV10",
+        "name": "Quagsire",
+        "localId": "SV10",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV10",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV11",
+        "name": "Froakie",
+        "localId": "SV11",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV11",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV12",
+        "name": "Frogadier",
+        "localId": "SV12",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV12",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV13",
+        "name": "Voltorb",
+        "localId": "SV13",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV13",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV14",
+        "name": "Xurkitree",
+        "localId": "SV14",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV14",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV15",
+        "name": "Seviper",
+        "localId": "SV15",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV15",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV16",
+        "name": "Shuppet",
+        "localId": "SV16",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV16",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV17",
+        "name": "Inkay",
+        "localId": "SV17",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV17",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV18",
+        "name": "Malamar",
+        "localId": "SV18",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV18",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV19",
+        "name": "Poipole",
+        "localId": "SV19",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV19",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV2",
+        "name": "Rowlet",
+        "localId": "SV2",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV2",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV20",
+        "name": "Sudowoodo",
+        "localId": "SV20",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV20",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV21",
+        "name": "Riolu",
+        "localId": "SV21",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV21",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV22",
+        "name": "Lucario",
+        "localId": "SV22",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV22",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV23",
+        "name": "Rockruff",
+        "localId": "SV23",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV23",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV24",
+        "name": "Buzzwole",
+        "localId": "SV24",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV24",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV25",
+        "name": "Zorua",
+        "localId": "SV25",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV25",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV26",
+        "name": "Guzzlord",
+        "localId": "SV26",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV26",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV27",
+        "name": "Magnemite",
+        "localId": "SV27",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV27",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV28",
+        "name": "Magneton",
+        "localId": "SV28",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV28",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV29",
+        "name": "Magnezone",
+        "localId": "SV29",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV29",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV3",
+        "name": "Dartrix",
+        "localId": "SV3",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV3",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV30",
+        "name": "Beldum",
+        "localId": "SV30",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV30",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV31",
+        "name": "Metang",
+        "localId": "SV31",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV31",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV32",
+        "name": "Celesteela",
+        "localId": "SV32",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV32",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV33",
+        "name": "Kartana",
+        "localId": "SV33",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV33",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV34",
+        "name": "Ralts",
+        "localId": "SV34",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV34",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV35",
+        "name": "Kirlia",
+        "localId": "SV35",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV35",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV36",
+        "name": "Diancie",
+        "localId": "SV36",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV36",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV37",
+        "name": "Altaria",
+        "localId": "SV37",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV37",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV38",
+        "name": "Gible",
+        "localId": "SV38",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV38",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV39",
+        "name": "Gabite",
+        "localId": "SV39",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV39",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV4",
+        "name": "Wimpod",
+        "localId": "SV4",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV4",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV40",
+        "name": "Garchomp",
+        "localId": "SV40",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV40",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV41",
+        "name": "Eevee",
+        "localId": "SV41",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV41",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV42",
+        "name": "Swablu",
+        "localId": "SV42",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV42",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV43",
+        "name": "Noibat",
+        "localId": "SV43",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV43",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV44",
+        "name": "Oranguru",
+        "localId": "SV44",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV44",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV45",
+        "name": "Type: Null",
+        "localId": "SV45",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV45",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV46",
+        "name": "Leafeon-GX",
+        "localId": "SV46",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV46",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV47",
+        "name": "Decidueye-GX",
+        "localId": "SV47",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV47",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV48",
+        "name": "Golisopod-GX",
+        "localId": "SV48",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV48",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV49",
+        "name": "Charizard-GX",
+        "localId": "SV49",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV49",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV5",
+        "name": "Pheromosa",
+        "localId": "SV5",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV5",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV50",
+        "name": "Ho-Oh-GX",
+        "localId": "SV50",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV50",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV51",
+        "name": "Reshiram-GX",
+        "localId": "SV51",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV51",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV52",
+        "name": "Turtonator-GX",
+        "localId": "SV52",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV52",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV53",
+        "name": "Alolan Ninetales-GX",
+        "localId": "SV53",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV53",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV54",
+        "name": "Articuno-GX",
+        "localId": "SV54",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV54",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV55",
+        "name": "Glaceon-GX",
+        "localId": "SV55",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV55",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV56",
+        "name": "Greninja-GX",
+        "localId": "SV56",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV56",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV57",
+        "name": "Electrode-GX",
+        "localId": "SV57",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV57",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV58",
+        "name": "Xurkitree-GX",
+        "localId": "SV58",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV58",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV59",
+        "name": "Mewtwo-GX",
+        "localId": "SV59",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV59",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV6",
+        "name": "Charmander",
+        "localId": "SV6",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV6",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV60",
+        "name": "Espeon-GX",
+        "localId": "SV60",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV60",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV61",
+        "name": "Banette-GX",
+        "localId": "SV61",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV61",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV62",
+        "name": "Nihilego-GX",
+        "localId": "SV62",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV62",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV63",
+        "name": "Naganadel-GX",
+        "localId": "SV63",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV63",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV64",
+        "name": "Lucario-GX",
+        "localId": "SV64",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV64",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV65",
+        "name": "Zygarde-GX",
+        "localId": "SV65",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV65",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV66",
+        "name": "Lycanroc-GX",
+        "localId": "SV66",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV66",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV67",
+        "name": "Lycanroc-GX",
+        "localId": "SV67",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV67",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV68",
+        "name": "Buzzwole-GX",
+        "localId": "SV68",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV68",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV69",
+        "name": "Umbreon-GX",
+        "localId": "SV69",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV69",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV7",
+        "name": "Charmeleon",
+        "localId": "SV7",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV7",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV70",
+        "name": "Darkrai-GX",
+        "localId": "SV70",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV70",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV71",
+        "name": "Guzzlord-GX",
+        "localId": "SV71",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV71",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV72",
+        "name": "Scizor-GX",
+        "localId": "SV72",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV72",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV73",
+        "name": "Kartana-GX",
+        "localId": "SV73",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV73",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV74",
+        "name": "Stakataka-GX",
+        "localId": "SV74",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV74",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV75",
+        "name": "Gardevoir-GX",
+        "localId": "SV75",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV75",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV76",
+        "name": "Sylveon-GX",
+        "localId": "SV76",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV76",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV77",
+        "name": "Altaria-GX",
+        "localId": "SV77",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV77",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV78",
+        "name": "Noivern-GX",
+        "localId": "SV78",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV78",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV79",
+        "name": "Silvally-GX",
+        "localId": "SV79",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV79",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV8",
+        "name": "Alolan Vulpix",
+        "localId": "SV8",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV8",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV80",
+        "name": "Drampa-GX",
+        "localId": "SV80",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV80",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV81",
+        "name": "Aether Foundation Employee",
+        "localId": "SV81",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV81",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV82",
+        "name": "Cynthia",
+        "localId": "SV82",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV82",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV83",
+        "name": "Fisherman",
+        "localId": "SV83",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV83",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV84",
+        "name": "Guzma",
+        "localId": "SV84",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV84",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV85",
+        "name": "Hiker",
+        "localId": "SV85",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV85",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV86",
+        "name": "Lady",
+        "localId": "SV86",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV86",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV87",
+        "name": "Aether Paradise Conservation Area",
+        "localId": "SV87",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV87",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV88",
+        "name": "Brooklet Hill",
+        "localId": "SV88",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV88",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV89",
+        "name": "Mt. Coronet",
+        "localId": "SV89",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV89",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV9",
+        "name": "Wooper",
+        "localId": "SV9",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV9",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV90",
+        "name": "Shrine of Punishment",
+        "localId": "SV90",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV90",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV91",
+        "name": "Tapu Bulu-GX",
+        "localId": "SV91",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV91",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV92",
+        "name": "Tapu Fini-GX",
+        "localId": "SV92",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV92",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV93",
+        "name": "Tapu Koko-GX",
+        "localId": "SV93",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV93",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      },
+      {
+        "id": "sma-SV94",
+        "name": "Tapu Lele-GX",
+        "localId": "SV94",
+        "image": "https://assets.tcgdex.net/en/sm/sma/SV94",
+        "set": "Yellow A Alternate",
+        "setId": "sma"
+      }
+    ],
+    "fut2020": [
+      {
+        "id": "fut2020-1",
+        "name": "Pikachu on the Ball",
+        "localId": "1",
+        "image": "https://assets.tcgdex.net/en/swsh/fut2020/1",
+        "set": "Pokémon Futsal 2020",
+        "setId": "fut2020"
+      },
+      {
+        "id": "fut2020-2",
+        "name": "Eevee on the Ball",
+        "localId": "2",
+        "image": "https://assets.tcgdex.net/en/swsh/fut2020/2",
+        "set": "Pokémon Futsal 2020",
+        "setId": "fut2020"
+      },
+      {
+        "id": "fut2020-3",
+        "name": "Grookey on the Ball",
+        "localId": "3",
+        "image": "https://assets.tcgdex.net/en/swsh/fut2020/3",
+        "set": "Pokémon Futsal 2020",
+        "setId": "fut2020"
+      },
+      {
+        "id": "fut2020-4",
+        "name": "Scorbunny on the Ball",
+        "localId": "4",
+        "image": "https://assets.tcgdex.net/en/swsh/fut2020/4",
+        "set": "Pokémon Futsal 2020",
+        "setId": "fut2020"
+      },
+      {
+        "id": "fut2020-5",
+        "name": "Sobble on the Ball",
+        "localId": "5",
+        "image": "https://assets.tcgdex.net/en/swsh/fut2020/5",
+        "set": "Pokémon Futsal 2020",
+        "setId": "fut2020"
+      }
+    ],
+    "me01": [
+      {
+        "id": "me01-001",
+        "name": "Bulbasaur",
+        "localId": "001",
+        "image": "https://assets.tcgdex.net/en/me/me01/001",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-002",
+        "name": "Ivysaur",
+        "localId": "002",
+        "image": "https://assets.tcgdex.net/en/me/me01/002",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-003",
+        "name": "Mega Venusaur ex",
+        "localId": "003",
+        "image": "https://assets.tcgdex.net/en/me/me01/003",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-004",
+        "name": "Exeggcute",
+        "localId": "004",
+        "image": "https://assets.tcgdex.net/en/me/me01/004",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-005",
+        "name": "Exeggutor",
+        "localId": "005",
+        "image": "https://assets.tcgdex.net/en/me/me01/005",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-006",
+        "name": "Tangela",
+        "localId": "006",
+        "image": "https://assets.tcgdex.net/en/me/me01/006",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-007",
+        "name": "Tangrowth",
+        "localId": "007",
+        "image": "https://assets.tcgdex.net/en/me/me01/007",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-008",
+        "name": "Chikorita",
+        "localId": "008",
+        "image": "https://assets.tcgdex.net/en/me/me01/008",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-009",
+        "name": "Bayleef",
+        "localId": "009",
+        "image": "https://assets.tcgdex.net/en/me/me01/009",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-010",
+        "name": "Meganium",
+        "localId": "010",
+        "image": "https://assets.tcgdex.net/en/me/me01/010",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-011",
+        "name": "Shuckle",
+        "localId": "011",
+        "image": "https://assets.tcgdex.net/en/me/me01/011",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-012",
+        "name": "Celebi",
+        "localId": "012",
+        "image": "https://assets.tcgdex.net/en/me/me01/012",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-013",
+        "name": "Seedot",
+        "localId": "013",
+        "image": "https://assets.tcgdex.net/en/me/me01/013",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-014",
+        "name": "Nuzleaf",
+        "localId": "014",
+        "image": "https://assets.tcgdex.net/en/me/me01/014",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-015",
+        "name": "Shiftry",
+        "localId": "015",
+        "image": "https://assets.tcgdex.net/en/me/me01/015",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-016",
+        "name": "Nincada",
+        "localId": "016",
+        "image": "https://assets.tcgdex.net/en/me/me01/016",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-017",
+        "name": "Ninjask",
+        "localId": "017",
+        "image": "https://assets.tcgdex.net/en/me/me01/017",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-018",
+        "name": "Dhelmise",
+        "localId": "018",
+        "image": "https://assets.tcgdex.net/en/me/me01/018",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-019",
+        "name": "Vulpix",
+        "localId": "019",
+        "image": "https://assets.tcgdex.net/en/me/me01/019",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-020",
+        "name": "Ninetales",
+        "localId": "020",
+        "image": "https://assets.tcgdex.net/en/me/me01/020",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-021",
+        "name": "Numel",
+        "localId": "021",
+        "image": "https://assets.tcgdex.net/en/me/me01/021",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-022",
+        "name": "Mega Camerupt ex",
+        "localId": "022",
+        "image": "https://assets.tcgdex.net/en/me/me01/022",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-023",
+        "name": "Litleo",
+        "localId": "023",
+        "image": "https://assets.tcgdex.net/en/me/me01/023",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-024",
+        "name": "Pyroar",
+        "localId": "024",
+        "image": "https://assets.tcgdex.net/en/me/me01/024",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-025",
+        "name": "Volcanion",
+        "localId": "025",
+        "image": "https://assets.tcgdex.net/en/me/me01/025",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-026",
+        "name": "Scorbunny",
+        "localId": "026",
+        "image": "https://assets.tcgdex.net/en/me/me01/026",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-027",
+        "name": "Raboot",
+        "localId": "027",
+        "image": "https://assets.tcgdex.net/en/me/me01/027",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-028",
+        "name": "Cinderace",
+        "localId": "028",
+        "image": "https://assets.tcgdex.net/en/me/me01/028",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-029",
+        "name": "Sizzlipede",
+        "localId": "029",
+        "image": "https://assets.tcgdex.net/en/me/me01/029",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-030",
+        "name": "Centiskorch",
+        "localId": "030",
+        "image": "https://assets.tcgdex.net/en/me/me01/030",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-031",
+        "name": "Chi-Yu",
+        "localId": "031",
+        "image": "https://assets.tcgdex.net/en/me/me01/031",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-032",
+        "name": "Mantine",
+        "localId": "032",
+        "image": "https://assets.tcgdex.net/en/me/me01/032",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-033",
+        "name": "Corphish",
+        "localId": "033",
+        "image": "https://assets.tcgdex.net/en/me/me01/033",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-034",
+        "name": "Kyogre",
+        "localId": "034",
+        "image": "https://assets.tcgdex.net/en/me/me01/034",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-035",
+        "name": "Snover",
+        "localId": "035",
+        "image": "https://assets.tcgdex.net/en/me/me01/035",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-036",
+        "name": "Mega Abomasnow ex",
+        "localId": "036",
+        "image": "https://assets.tcgdex.net/en/me/me01/036",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-037",
+        "name": "Clauncher",
+        "localId": "037",
+        "image": "https://assets.tcgdex.net/en/me/me01/037",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-038",
+        "name": "Clawitzer",
+        "localId": "038",
+        "image": "https://assets.tcgdex.net/en/me/me01/038",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-039",
+        "name": "Sobble",
+        "localId": "039",
+        "image": "https://assets.tcgdex.net/en/me/me01/039",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-040",
+        "name": "Drizzile",
+        "localId": "040",
+        "image": "https://assets.tcgdex.net/en/me/me01/040",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-041",
+        "name": "Inteleon",
+        "localId": "041",
+        "image": "https://assets.tcgdex.net/en/me/me01/041",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-042",
+        "name": "Snom",
+        "localId": "042",
+        "image": "https://assets.tcgdex.net/en/me/me01/042",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-043",
+        "name": "Frosmoth",
+        "localId": "043",
+        "image": "https://assets.tcgdex.net/en/me/me01/043",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-044",
+        "name": "Eiscue",
+        "localId": "044",
+        "image": "https://assets.tcgdex.net/en/me/me01/044",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-045",
+        "name": "Magnemite",
+        "localId": "045",
+        "image": "https://assets.tcgdex.net/en/me/me01/045",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-046",
+        "name": "Magneton",
+        "localId": "046",
+        "image": "https://assets.tcgdex.net/en/me/me01/046",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-047",
+        "name": "Magnezone",
+        "localId": "047",
+        "image": "https://assets.tcgdex.net/en/me/me01/047",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-048",
+        "name": "Raikou",
+        "localId": "048",
+        "image": "https://assets.tcgdex.net/en/me/me01/048",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-049",
+        "name": "Electrike",
+        "localId": "049",
+        "image": "https://assets.tcgdex.net/en/me/me01/049",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-050",
+        "name": "Mega Manectric ex",
+        "localId": "050",
+        "image": "https://assets.tcgdex.net/en/me/me01/050",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-051",
+        "name": "Pachirisu",
+        "localId": "051",
+        "image": "https://assets.tcgdex.net/en/me/me01/051",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-052",
+        "name": "Helioptile",
+        "localId": "052",
+        "image": "https://assets.tcgdex.net/en/me/me01/052",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-053",
+        "name": "Heliolisk",
+        "localId": "053",
+        "image": "https://assets.tcgdex.net/en/me/me01/053",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-054",
+        "name": "Abra",
+        "localId": "054",
+        "image": "https://assets.tcgdex.net/en/me/me01/054",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-055",
+        "name": "Kadabra",
+        "localId": "055",
+        "image": "https://assets.tcgdex.net/en/me/me01/055",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-056",
+        "name": "Alakazam",
+        "localId": "056",
+        "image": "https://assets.tcgdex.net/en/me/me01/056",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-057",
+        "name": "Jynx",
+        "localId": "057",
+        "image": "https://assets.tcgdex.net/en/me/me01/057",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-058",
+        "name": "Ralts",
+        "localId": "058",
+        "image": "https://assets.tcgdex.net/en/me/me01/058",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-059",
+        "name": "Kirlia",
+        "localId": "059",
+        "image": "https://assets.tcgdex.net/en/me/me01/059",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-060",
+        "name": "Mega Gardevoir ex",
+        "localId": "060",
+        "image": "https://assets.tcgdex.net/en/me/me01/060",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-061",
+        "name": "Shedinja",
+        "localId": "061",
+        "image": "https://assets.tcgdex.net/en/me/me01/061",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-062",
+        "name": "Spoink",
+        "localId": "062",
+        "image": "https://assets.tcgdex.net/en/me/me01/062",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-063",
+        "name": "Grumpig",
+        "localId": "063",
+        "image": "https://assets.tcgdex.net/en/me/me01/063",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-064",
+        "name": "Xerneas",
+        "localId": "064",
+        "image": "https://assets.tcgdex.net/en/me/me01/064",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-065",
+        "name": "Greavard",
+        "localId": "065",
+        "image": "https://assets.tcgdex.net/en/me/me01/065",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-066",
+        "name": "Houndstone",
+        "localId": "066",
+        "image": "https://assets.tcgdex.net/en/me/me01/066",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-067",
+        "name": "Gimmighoul",
+        "localId": "067",
+        "image": "https://assets.tcgdex.net/en/me/me01/067",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-068",
+        "name": "Sandshrew",
+        "localId": "068",
+        "image": "https://assets.tcgdex.net/en/me/me01/068",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-069",
+        "name": "Sandslash",
+        "localId": "069",
+        "image": "https://assets.tcgdex.net/en/me/me01/069",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-070",
+        "name": "Onix",
+        "localId": "070",
+        "image": "https://assets.tcgdex.net/en/me/me01/070",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-071",
+        "name": "Tyrogue",
+        "localId": "071",
+        "image": "https://assets.tcgdex.net/en/me/me01/071",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-072",
+        "name": "Makuhita",
+        "localId": "072",
+        "image": "https://assets.tcgdex.net/en/me/me01/072",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-073",
+        "name": "Hariyama",
+        "localId": "073",
+        "image": "https://assets.tcgdex.net/en/me/me01/073",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-074",
+        "name": "Lunatone",
+        "localId": "074",
+        "image": "https://assets.tcgdex.net/en/me/me01/074",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-075",
+        "name": "Solrock",
+        "localId": "075",
+        "image": "https://assets.tcgdex.net/en/me/me01/075",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-076",
+        "name": "Riolu",
+        "localId": "076",
+        "image": "https://assets.tcgdex.net/en/me/me01/076",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-077",
+        "name": "Mega Lucario ex",
+        "localId": "077",
+        "image": "https://assets.tcgdex.net/en/me/me01/077",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-078",
+        "name": "Croagunk",
+        "localId": "078",
+        "image": "https://assets.tcgdex.net/en/me/me01/078",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-079",
+        "name": "Toxicroak",
+        "localId": "079",
+        "image": "https://assets.tcgdex.net/en/me/me01/079",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-080",
+        "name": "Marshadow",
+        "localId": "080",
+        "image": "https://assets.tcgdex.net/en/me/me01/080",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-081",
+        "name": "Stonjourner",
+        "localId": "081",
+        "image": "https://assets.tcgdex.net/en/me/me01/081",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-082",
+        "name": "Nacli",
+        "localId": "082",
+        "image": "https://assets.tcgdex.net/en/me/me01/082",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-083",
+        "name": "Naclstack",
+        "localId": "083",
+        "image": "https://assets.tcgdex.net/en/me/me01/083",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-084",
+        "name": "Garganacl",
+        "localId": "084",
+        "image": "https://assets.tcgdex.net/en/me/me01/084",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-085",
+        "name": "Crawdaunt",
+        "localId": "085",
+        "image": "https://assets.tcgdex.net/en/me/me01/085",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-086",
+        "name": "Mega Absol ex",
+        "localId": "086",
+        "image": "https://assets.tcgdex.net/en/me/me01/086",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-087",
+        "name": "Spiritomb",
+        "localId": "087",
+        "image": "https://assets.tcgdex.net/en/me/me01/087",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-088",
+        "name": "Yveltal",
+        "localId": "088",
+        "image": "https://assets.tcgdex.net/en/me/me01/088",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-089",
+        "name": "Nickit",
+        "localId": "089",
+        "image": "https://assets.tcgdex.net/en/me/me01/089",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-090",
+        "name": "Thievul",
+        "localId": "090",
+        "image": "https://assets.tcgdex.net/en/me/me01/090",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-091",
+        "name": "Shroodle",
+        "localId": "091",
+        "image": "https://assets.tcgdex.net/en/me/me01/091",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-092",
+        "name": "Grafaiai",
+        "localId": "092",
+        "image": "https://assets.tcgdex.net/en/me/me01/092",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-093",
+        "name": "Steelix",
+        "localId": "093",
+        "image": "https://assets.tcgdex.net/en/me/me01/093",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-094",
+        "name": "Mega Mawile ex",
+        "localId": "094",
+        "image": "https://assets.tcgdex.net/en/me/me01/094",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-095",
+        "name": "Dialga",
+        "localId": "095",
+        "image": "https://assets.tcgdex.net/en/me/me01/095",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-096",
+        "name": "Tinkatink",
+        "localId": "096",
+        "image": "https://assets.tcgdex.net/en/me/me01/096",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-097",
+        "name": "Tinkatuff",
+        "localId": "097",
+        "image": "https://assets.tcgdex.net/en/me/me01/097",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-098",
+        "name": "Tinkaton",
+        "localId": "098",
+        "image": "https://assets.tcgdex.net/en/me/me01/098",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-099",
+        "name": "Gholdengo",
+        "localId": "099",
+        "image": "https://assets.tcgdex.net/en/me/me01/099",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-100",
+        "name": "Mega Latias ex",
+        "localId": "100",
+        "image": "https://assets.tcgdex.net/en/me/me01/100",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-101",
+        "name": "Latios",
+        "localId": "101",
+        "image": "https://assets.tcgdex.net/en/me/me01/101",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-102",
+        "name": "Spearow",
+        "localId": "102",
+        "image": "https://assets.tcgdex.net/en/me/me01/102",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-103",
+        "name": "Fearow",
+        "localId": "103",
+        "image": "https://assets.tcgdex.net/en/me/me01/103",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-104",
+        "name": "Mega Kangaskhan ex",
+        "localId": "104",
+        "image": "https://assets.tcgdex.net/en/me/me01/104",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-105",
+        "name": "Delibird",
+        "localId": "105",
+        "image": "https://assets.tcgdex.net/en/me/me01/105",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-106",
+        "name": "Miltank",
+        "localId": "106",
+        "image": "https://assets.tcgdex.net/en/me/me01/106",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-107",
+        "name": "Buneary",
+        "localId": "107",
+        "image": "https://assets.tcgdex.net/en/me/me01/107",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-108",
+        "name": "Lopunny",
+        "localId": "108",
+        "image": "https://assets.tcgdex.net/en/me/me01/108",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-109",
+        "name": "Yungoos",
+        "localId": "109",
+        "image": "https://assets.tcgdex.net/en/me/me01/109",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-110",
+        "name": "Gumshoos",
+        "localId": "110",
+        "image": "https://assets.tcgdex.net/en/me/me01/110",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-111",
+        "name": "Stufful",
+        "localId": "111",
+        "image": "https://assets.tcgdex.net/en/me/me01/111",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-112",
+        "name": "Bewear",
+        "localId": "112",
+        "image": "https://assets.tcgdex.net/en/me/me01/112",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-113",
+        "name": "Acerola's Mischief",
+        "localId": "113",
+        "image": "https://assets.tcgdex.net/en/me/me01/113",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-114",
+        "name": "Boss's Orders",
+        "localId": "114",
+        "image": "https://assets.tcgdex.net/en/me/me01/114",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-115",
+        "name": "Energy Switch",
+        "localId": "115",
+        "image": "https://assets.tcgdex.net/en/me/me01/115",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-116",
+        "name": "Fighting Gong",
+        "localId": "116",
+        "image": "https://assets.tcgdex.net/en/me/me01/116",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-117",
+        "name": "Forest of Vitality",
+        "localId": "117",
+        "image": "https://assets.tcgdex.net/en/me/me01/117",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-118",
+        "name": "Iron Defender",
+        "localId": "118",
+        "image": "https://assets.tcgdex.net/en/me/me01/118",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-119",
+        "name": "Lillie's Determination",
+        "localId": "119",
+        "image": "https://assets.tcgdex.net/en/me/me01/119",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-120",
+        "name": "Lt. Surge's Bargain",
+        "localId": "120",
+        "image": "https://assets.tcgdex.net/en/me/me01/120",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-121",
+        "name": "Mega Signal",
+        "localId": "121",
+        "image": "https://assets.tcgdex.net/en/me/me01/121",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-122",
+        "name": "Mystery Garden",
+        "localId": "122",
+        "image": "https://assets.tcgdex.net/en/me/me01/122",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-123",
+        "name": "Pokémon Center Lady",
+        "localId": "123",
+        "image": "https://assets.tcgdex.net/en/me/me01/123",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-124",
+        "name": "Premium Power Pro",
+        "localId": "124",
+        "image": "https://assets.tcgdex.net/en/me/me01/124",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-125",
+        "name": "Rare Candy",
+        "localId": "125",
+        "image": "https://assets.tcgdex.net/en/me/me01/125",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-126",
+        "name": "Repel",
+        "localId": "126",
+        "image": "https://assets.tcgdex.net/en/me/me01/126",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-127",
+        "name": "Risky Ruins",
+        "localId": "127",
+        "image": "https://assets.tcgdex.net/en/me/me01/127",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-128",
+        "name": "Strange Timepiece",
+        "localId": "128",
+        "image": "https://assets.tcgdex.net/en/me/me01/128",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-129",
+        "name": "Surfing Beach",
+        "localId": "129",
+        "image": "https://assets.tcgdex.net/en/me/me01/129",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-130",
+        "name": "Switch",
+        "localId": "130",
+        "image": "https://assets.tcgdex.net/en/me/me01/130",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-131",
+        "name": "Ultra Ball",
+        "localId": "131",
+        "image": "https://assets.tcgdex.net/en/me/me01/131",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-132",
+        "name": "Wally's Compassion",
+        "localId": "132",
+        "image": "https://assets.tcgdex.net/en/me/me01/132",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-133",
+        "name": "Bulbasaur",
+        "localId": "133",
+        "image": "https://assets.tcgdex.net/en/me/me01/133",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-134",
+        "name": "Ivysaur",
+        "localId": "134",
+        "image": "https://assets.tcgdex.net/en/me/me01/134",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-135",
+        "name": "Exeggutor",
+        "localId": "135",
+        "image": "https://assets.tcgdex.net/en/me/me01/135",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-136",
+        "name": "Shuckle",
+        "localId": "136",
+        "image": "https://assets.tcgdex.net/en/me/me01/136",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-137",
+        "name": "Ninjask",
+        "localId": "137",
+        "image": "https://assets.tcgdex.net/en/me/me01/137",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-138",
+        "name": "Vulpix",
+        "localId": "138",
+        "image": "https://assets.tcgdex.net/en/me/me01/138",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-139",
+        "name": "Litleo",
+        "localId": "139",
+        "image": "https://assets.tcgdex.net/en/me/me01/139",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-140",
+        "name": "Snover",
+        "localId": "140",
+        "image": "https://assets.tcgdex.net/en/me/me01/140",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-141",
+        "name": "Clawitzer",
+        "localId": "141",
+        "image": "https://assets.tcgdex.net/en/me/me01/141",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-142",
+        "name": "Inteleon",
+        "localId": "142",
+        "image": "https://assets.tcgdex.net/en/me/me01/142",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-143",
+        "name": "Helioptile",
+        "localId": "143",
+        "image": "https://assets.tcgdex.net/en/me/me01/143",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-144",
+        "name": "Shedinja",
+        "localId": "144",
+        "image": "https://assets.tcgdex.net/en/me/me01/144",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-145",
+        "name": "Houndstone",
+        "localId": "145",
+        "image": "https://assets.tcgdex.net/en/me/me01/145",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-146",
+        "name": "Marshadow",
+        "localId": "146",
+        "image": "https://assets.tcgdex.net/en/me/me01/146",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-147",
+        "name": "Garganacl",
+        "localId": "147",
+        "image": "https://assets.tcgdex.net/en/me/me01/147",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-148",
+        "name": "Spiritomb",
+        "localId": "148",
+        "image": "https://assets.tcgdex.net/en/me/me01/148",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-149",
+        "name": "Shroodle",
+        "localId": "149",
+        "image": "https://assets.tcgdex.net/en/me/me01/149",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-150",
+        "name": "Steelix",
+        "localId": "150",
+        "image": "https://assets.tcgdex.net/en/me/me01/150",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-151",
+        "name": "Spearow",
+        "localId": "151",
+        "image": "https://assets.tcgdex.net/en/me/me01/151",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-152",
+        "name": "Delibird",
+        "localId": "152",
+        "image": "https://assets.tcgdex.net/en/me/me01/152",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-153",
+        "name": "Gumshoos",
+        "localId": "153",
+        "image": "https://assets.tcgdex.net/en/me/me01/153",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-154",
+        "name": "Stufful",
+        "localId": "154",
+        "image": "https://assets.tcgdex.net/en/me/me01/154",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-155",
+        "name": "Mega Venusaur ex",
+        "localId": "155",
+        "image": "https://assets.tcgdex.net/en/me/me01/155",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-156",
+        "name": "Mega Camerupt ex",
+        "localId": "156",
+        "image": "https://assets.tcgdex.net/en/me/me01/156",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-157",
+        "name": "Mega Abomasnow ex",
+        "localId": "157",
+        "image": "https://assets.tcgdex.net/en/me/me01/157",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-158",
+        "name": "Mega Manectric ex",
+        "localId": "158",
+        "image": "https://assets.tcgdex.net/en/me/me01/158",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-159",
+        "name": "Mega Gardevoir ex",
+        "localId": "159",
+        "image": "https://assets.tcgdex.net/en/me/me01/159",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-160",
+        "name": "Mega Lucario ex",
+        "localId": "160",
+        "image": "https://assets.tcgdex.net/en/me/me01/160",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-161",
+        "name": "Mega Absol ex",
+        "localId": "161",
+        "image": "https://assets.tcgdex.net/en/me/me01/161",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-162",
+        "name": "Mega Mawile ex",
+        "localId": "162",
+        "image": "https://assets.tcgdex.net/en/me/me01/162",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-163",
+        "name": "Mega Latias ex",
+        "localId": "163",
+        "image": "https://assets.tcgdex.net/en/me/me01/163",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-164",
+        "name": "Mega Kangaskhan ex",
+        "localId": "164",
+        "image": "https://assets.tcgdex.net/en/me/me01/164",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-165",
+        "name": "Acerola's Mischief",
+        "localId": "165",
+        "image": "https://assets.tcgdex.net/en/me/me01/165",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-166",
+        "name": "Air Balloon",
+        "localId": "166",
+        "image": "https://assets.tcgdex.net/en/me/me01/166",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-167",
+        "name": "Buddy-Buddy Poffin",
+        "localId": "167",
+        "image": "https://assets.tcgdex.net/en/me/me01/167",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-168",
+        "name": "Fighting Gong",
+        "localId": "168",
+        "image": "https://assets.tcgdex.net/en/me/me01/168",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-169",
+        "name": "Lillie's Determination",
+        "localId": "169",
+        "image": "https://assets.tcgdex.net/en/me/me01/169",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-170",
+        "name": "Lt. Surge's Bargain",
+        "localId": "170",
+        "image": "https://assets.tcgdex.net/en/me/me01/170",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-171",
+        "name": "Mega Signal",
+        "localId": "171",
+        "image": "https://assets.tcgdex.net/en/me/me01/171",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-172",
+        "name": "Mystery Garden",
+        "localId": "172",
+        "image": "https://assets.tcgdex.net/en/me/me01/172",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-173",
+        "name": "Night Stretcher",
+        "localId": "173",
+        "image": "https://assets.tcgdex.net/en/me/me01/173",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-174",
+        "name": "Premium Power Pro",
+        "localId": "174",
+        "image": "https://assets.tcgdex.net/en/me/me01/174",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-175",
+        "name": "Rare Candy",
+        "localId": "175",
+        "image": "https://assets.tcgdex.net/en/me/me01/175",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-176",
+        "name": "Wally's Compassion",
+        "localId": "176",
+        "image": "https://assets.tcgdex.net/en/me/me01/176",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-177",
+        "name": "Mega Venusaur ex",
+        "localId": "177",
+        "image": "https://assets.tcgdex.net/en/me/me01/177",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-178",
+        "name": "Mega Gardevoir ex",
+        "localId": "178",
+        "image": "https://assets.tcgdex.net/en/me/me01/178",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-179",
+        "name": "Mega Lucario ex",
+        "localId": "179",
+        "image": "https://assets.tcgdex.net/en/me/me01/179",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-180",
+        "name": "Mega Absol ex",
+        "localId": "180",
+        "image": "https://assets.tcgdex.net/en/me/me01/180",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-181",
+        "name": "Mega Latias ex",
+        "localId": "181",
+        "image": "https://assets.tcgdex.net/en/me/me01/181",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-182",
+        "name": "Mega Kangaskhan ex",
+        "localId": "182",
+        "image": "https://assets.tcgdex.net/en/me/me01/182",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-183",
+        "name": "Acerola's Mischief",
+        "localId": "183",
+        "image": "https://assets.tcgdex.net/en/me/me01/183",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-184",
+        "name": "Lillie's Determination",
+        "localId": "184",
+        "image": "https://assets.tcgdex.net/en/me/me01/184",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-185",
+        "name": "Lt. Surge's Bargain",
+        "localId": "185",
+        "image": "https://assets.tcgdex.net/en/me/me01/185",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-186",
+        "name": "Wally's Compassion",
+        "localId": "186",
+        "image": "https://assets.tcgdex.net/en/me/me01/186",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-187",
+        "name": "Mega Gardevoir ex",
+        "localId": "187",
+        "image": "https://assets.tcgdex.net/en/me/me01/187",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      },
+      {
+        "id": "me01-188",
+        "name": "Mega Lucario ex",
+        "localId": "188",
+        "image": "https://assets.tcgdex.net/en/me/me01/188",
+        "set": "Mega Evolution",
+        "setId": "me01"
+      }
+    ],
+    "me02": [
+      {
+        "id": "me02-001",
+        "name": "Oddish",
+        "localId": "001",
+        "image": "https://assets.tcgdex.net/en/me/me02/001",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-002",
+        "name": "Gloom",
+        "localId": "002",
+        "image": "https://assets.tcgdex.net/en/me/me02/002",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-003",
+        "name": "Vileplume",
+        "localId": "003",
+        "image": "https://assets.tcgdex.net/en/me/me02/003",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-004",
+        "name": "Mega Heracross ex",
+        "localId": "004",
+        "image": "https://assets.tcgdex.net/en/me/me02/004",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-005",
+        "name": "Lotad",
+        "localId": "005",
+        "image": "https://assets.tcgdex.net/en/me/me02/005",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-006",
+        "name": "Lombre",
+        "localId": "006",
+        "image": "https://assets.tcgdex.net/en/me/me02/006",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-007",
+        "name": "Ludicolo",
+        "localId": "007",
+        "image": "https://assets.tcgdex.net/en/me/me02/007",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-008",
+        "name": "Genesect",
+        "localId": "008",
+        "image": "https://assets.tcgdex.net/en/me/me02/008",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-009",
+        "name": "Nymble",
+        "localId": "009",
+        "image": "https://assets.tcgdex.net/en/me/me02/009",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-010",
+        "name": "Lokix",
+        "localId": "010",
+        "image": "https://assets.tcgdex.net/en/me/me02/010",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-011",
+        "name": "Charmander",
+        "localId": "011",
+        "image": "https://assets.tcgdex.net/en/me/me02/011",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-012",
+        "name": "Charmeleon",
+        "localId": "012",
+        "image": "https://assets.tcgdex.net/en/me/me02/012",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-013",
+        "name": "Mega Charizard X ex",
+        "localId": "013",
+        "image": "https://assets.tcgdex.net/en/me/me02/013",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-014",
+        "name": "Moltres",
+        "localId": "014",
+        "image": "https://assets.tcgdex.net/en/me/me02/014",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-015",
+        "name": "Darumaka",
+        "localId": "015",
+        "image": "https://assets.tcgdex.net/en/me/me02/015",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-016",
+        "name": "Darmanitan",
+        "localId": "016",
+        "image": "https://assets.tcgdex.net/en/me/me02/016",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-017",
+        "name": "Reshiram",
+        "localId": "017",
+        "image": "https://assets.tcgdex.net/en/me/me02/017",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-018",
+        "name": "Oricorio ex",
+        "localId": "018",
+        "image": "https://assets.tcgdex.net/en/me/me02/018",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-019",
+        "name": "Charcadet",
+        "localId": "019",
+        "image": "https://assets.tcgdex.net/en/me/me02/019",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-020",
+        "name": "Ceruledge",
+        "localId": "020",
+        "image": "https://assets.tcgdex.net/en/me/me02/020",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-021",
+        "name": "Seel",
+        "localId": "021",
+        "image": "https://assets.tcgdex.net/en/me/me02/021",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-022",
+        "name": "Dewgong",
+        "localId": "022",
+        "image": "https://assets.tcgdex.net/en/me/me02/022",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-023",
+        "name": "Swinub",
+        "localId": "023",
+        "image": "https://assets.tcgdex.net/en/me/me02/023",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-024",
+        "name": "Piloswine",
+        "localId": "024",
+        "image": "https://assets.tcgdex.net/en/me/me02/024",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-025",
+        "name": "Mamoswine",
+        "localId": "025",
+        "image": "https://assets.tcgdex.net/en/me/me02/025",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-026",
+        "name": "Suicune",
+        "localId": "026",
+        "image": "https://assets.tcgdex.net/en/me/me02/026",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-027",
+        "name": "Piplup",
+        "localId": "027",
+        "image": "https://assets.tcgdex.net/en/me/me02/027",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-028",
+        "name": "Prinplup",
+        "localId": "028",
+        "image": "https://assets.tcgdex.net/en/me/me02/028",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-029",
+        "name": "Rotom ex",
+        "localId": "029",
+        "image": "https://assets.tcgdex.net/en/me/me02/029",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-030",
+        "name": "Yamper",
+        "localId": "030",
+        "image": "https://assets.tcgdex.net/en/me/me02/030",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-031",
+        "name": "Boltund",
+        "localId": "031",
+        "image": "https://assets.tcgdex.net/en/me/me02/031",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-032",
+        "name": "Pawmi",
+        "localId": "032",
+        "image": "https://assets.tcgdex.net/en/me/me02/032",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-033",
+        "name": "Pawmo",
+        "localId": "033",
+        "image": "https://assets.tcgdex.net/en/me/me02/033",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-034",
+        "name": "Pawmot",
+        "localId": "034",
+        "image": "https://assets.tcgdex.net/en/me/me02/034",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-035",
+        "name": "Misdreavus",
+        "localId": "035",
+        "image": "https://assets.tcgdex.net/en/me/me02/035",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-036",
+        "name": "Mismagius ex",
+        "localId": "036",
+        "image": "https://assets.tcgdex.net/en/me/me02/036",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-037",
+        "name": "Snubbull",
+        "localId": "037",
+        "image": "https://assets.tcgdex.net/en/me/me02/037",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-038",
+        "name": "Granbull",
+        "localId": "038",
+        "image": "https://assets.tcgdex.net/en/me/me02/038",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-039",
+        "name": "Cresselia",
+        "localId": "039",
+        "image": "https://assets.tcgdex.net/en/me/me02/039",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-040",
+        "name": "Meloetta",
+        "localId": "040",
+        "image": "https://assets.tcgdex.net/en/me/me02/040",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-041",
+        "name": "Mega Diancie ex",
+        "localId": "041",
+        "image": "https://assets.tcgdex.net/en/me/me02/041",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-042",
+        "name": "Mimikyu",
+        "localId": "042",
+        "image": "https://assets.tcgdex.net/en/me/me02/042",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-043",
+        "name": "Milcery",
+        "localId": "043",
+        "image": "https://assets.tcgdex.net/en/me/me02/043",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-044",
+        "name": "Alcremie",
+        "localId": "044",
+        "image": "https://assets.tcgdex.net/en/me/me02/044",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-045",
+        "name": "Zacian",
+        "localId": "045",
+        "image": "https://assets.tcgdex.net/en/me/me02/045",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-046",
+        "name": "Bramblin",
+        "localId": "046",
+        "image": "https://assets.tcgdex.net/en/me/me02/046",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-047",
+        "name": "Brambleghast",
+        "localId": "047",
+        "image": "https://assets.tcgdex.net/en/me/me02/047",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-048",
+        "name": "Paldean Tauros",
+        "localId": "048",
+        "image": "https://assets.tcgdex.net/en/me/me02/048",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-049",
+        "name": "Gligar",
+        "localId": "049",
+        "image": "https://assets.tcgdex.net/en/me/me02/049",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-050",
+        "name": "Gliscor",
+        "localId": "050",
+        "image": "https://assets.tcgdex.net/en/me/me02/050",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-051",
+        "name": "Trapinch",
+        "localId": "051",
+        "image": "https://assets.tcgdex.net/en/me/me02/051",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-052",
+        "name": "Vibrava",
+        "localId": "052",
+        "image": "https://assets.tcgdex.net/en/me/me02/052",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-053",
+        "name": "Flygon",
+        "localId": "053",
+        "image": "https://assets.tcgdex.net/en/me/me02/053",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-054",
+        "name": "Gastly",
+        "localId": "054",
+        "image": "https://assets.tcgdex.net/en/me/me02/054",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-055",
+        "name": "Haunter",
+        "localId": "055",
+        "image": "https://assets.tcgdex.net/en/me/me02/055",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-056",
+        "name": "Mega Gengar ex",
+        "localId": "056",
+        "image": "https://assets.tcgdex.net/en/me/me02/056",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-057",
+        "name": "Murkrow",
+        "localId": "057",
+        "image": "https://assets.tcgdex.net/en/me/me02/057",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-058",
+        "name": "Honchkrow",
+        "localId": "058",
+        "image": "https://assets.tcgdex.net/en/me/me02/058",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-059",
+        "name": "Sableye",
+        "localId": "059",
+        "image": "https://assets.tcgdex.net/en/me/me02/059",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-060",
+        "name": "Carvanha",
+        "localId": "060",
+        "image": "https://assets.tcgdex.net/en/me/me02/060",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-061",
+        "name": "Mega Sharpedo ex",
+        "localId": "061",
+        "image": "https://assets.tcgdex.net/en/me/me02/061",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-062",
+        "name": "Seviper",
+        "localId": "062",
+        "image": "https://assets.tcgdex.net/en/me/me02/062",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-063",
+        "name": "Absol",
+        "localId": "063",
+        "image": "https://assets.tcgdex.net/en/me/me02/063",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-064",
+        "name": "Sandile",
+        "localId": "064",
+        "image": "https://assets.tcgdex.net/en/me/me02/064",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-065",
+        "name": "Krokorok",
+        "localId": "065",
+        "image": "https://assets.tcgdex.net/en/me/me02/065",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-066",
+        "name": "Krookodile",
+        "localId": "066",
+        "image": "https://assets.tcgdex.net/en/me/me02/066",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-067",
+        "name": "Toxel",
+        "localId": "067",
+        "image": "https://assets.tcgdex.net/en/me/me02/067",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-068",
+        "name": "Toxtricity",
+        "localId": "068",
+        "image": "https://assets.tcgdex.net/en/me/me02/068",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-069",
+        "name": "Eternatus",
+        "localId": "069",
+        "image": "https://assets.tcgdex.net/en/me/me02/069",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-070",
+        "name": "Empoleon ex",
+        "localId": "070",
+        "image": "https://assets.tcgdex.net/en/me/me02/070",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-071",
+        "name": "Bronzor",
+        "localId": "071",
+        "image": "https://assets.tcgdex.net/en/me/me02/071",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-072",
+        "name": "Bronzong",
+        "localId": "072",
+        "image": "https://assets.tcgdex.net/en/me/me02/072",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-073",
+        "name": "Togedemaru",
+        "localId": "073",
+        "image": "https://assets.tcgdex.net/en/me/me02/073",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-074",
+        "name": "Duraludon",
+        "localId": "074",
+        "image": "https://assets.tcgdex.net/en/me/me02/074",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-075",
+        "name": "Archaludon",
+        "localId": "075",
+        "image": "https://assets.tcgdex.net/en/me/me02/075",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-076",
+        "name": "Jigglypuff",
+        "localId": "076",
+        "image": "https://assets.tcgdex.net/en/me/me02/076",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-077",
+        "name": "Wigglytuff",
+        "localId": "077",
+        "image": "https://assets.tcgdex.net/en/me/me02/077",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-078",
+        "name": "Aipom",
+        "localId": "078",
+        "image": "https://assets.tcgdex.net/en/me/me02/078",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-079",
+        "name": "Ambipom",
+        "localId": "079",
+        "image": "https://assets.tcgdex.net/en/me/me02/079",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-080",
+        "name": "Smeargle",
+        "localId": "080",
+        "image": "https://assets.tcgdex.net/en/me/me02/080",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-081",
+        "name": "Zigzagoon",
+        "localId": "081",
+        "image": "https://assets.tcgdex.net/en/me/me02/081",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-082",
+        "name": "Linoone",
+        "localId": "082",
+        "image": "https://assets.tcgdex.net/en/me/me02/082",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-083",
+        "name": "Buneary",
+        "localId": "083",
+        "image": "https://assets.tcgdex.net/en/me/me02/083",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-084",
+        "name": "Mega Lopunny ex",
+        "localId": "084",
+        "image": "https://assets.tcgdex.net/en/me/me02/084",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-085",
+        "name": "Battle Cage",
+        "localId": "085",
+        "image": "https://assets.tcgdex.net/en/me/me02/085",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-086",
+        "name": "Blowtorch",
+        "localId": "086",
+        "image": "https://assets.tcgdex.net/en/me/me02/086",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-087",
+        "name": "Dawn",
+        "localId": "087",
+        "image": "https://assets.tcgdex.net/en/me/me02/087",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-088",
+        "name": "Dizzying Valley",
+        "localId": "088",
+        "image": "https://assets.tcgdex.net/en/me/me02/088",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-089",
+        "name": "Firebreather",
+        "localId": "089",
+        "image": "https://assets.tcgdex.net/en/me/me02/089",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-090",
+        "name": "Grimsley's Move",
+        "localId": "090",
+        "image": "https://assets.tcgdex.net/en/me/me02/090",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-091",
+        "name": "Jumbo Ice Cream",
+        "localId": "091",
+        "image": "https://assets.tcgdex.net/en/me/me02/091",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-092",
+        "name": "Punk Helmet",
+        "localId": "092",
+        "image": "https://assets.tcgdex.net/en/me/me02/092",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-093",
+        "name": "Sacred Charm",
+        "localId": "093",
+        "image": "https://assets.tcgdex.net/en/me/me02/093",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-094",
+        "name": "Wondrous Patch",
+        "localId": "094",
+        "image": "https://assets.tcgdex.net/en/me/me02/094",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-095",
+        "name": "Ludicolo",
+        "localId": "095",
+        "image": "https://assets.tcgdex.net/en/me/me02/095",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-096",
+        "name": "Nymble",
+        "localId": "096",
+        "image": "https://assets.tcgdex.net/en/me/me02/096",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-097",
+        "name": "Dewgong",
+        "localId": "097",
+        "image": "https://assets.tcgdex.net/en/me/me02/097",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-098",
+        "name": "Piplup",
+        "localId": "098",
+        "image": "https://assets.tcgdex.net/en/me/me02/098",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-099",
+        "name": "Yamper",
+        "localId": "099",
+        "image": "https://assets.tcgdex.net/en/me/me02/099",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-100",
+        "name": "Zacian",
+        "localId": "100",
+        "image": "https://assets.tcgdex.net/en/me/me02/100",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-101",
+        "name": "Flygon",
+        "localId": "101",
+        "image": "https://assets.tcgdex.net/en/me/me02/101",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-102",
+        "name": "Paldean Wooper",
+        "localId": "102",
+        "image": "https://assets.tcgdex.net/en/me/me02/102",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-103",
+        "name": "Toxtricity",
+        "localId": "103",
+        "image": "https://assets.tcgdex.net/en/me/me02/103",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-104",
+        "name": "Togedemaru",
+        "localId": "104",
+        "image": "https://assets.tcgdex.net/en/me/me02/104",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-105",
+        "name": "Wigglytuff",
+        "localId": "105",
+        "image": "https://assets.tcgdex.net/en/me/me02/105",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-106",
+        "name": "Meowth",
+        "localId": "106",
+        "image": "https://assets.tcgdex.net/en/me/me02/106",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-107",
+        "name": "Ambipom",
+        "localId": "107",
+        "image": "https://assets.tcgdex.net/en/me/me02/107",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-108",
+        "name": "Mega Heracross ex",
+        "localId": "108",
+        "image": "https://assets.tcgdex.net/en/me/me02/108",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-109",
+        "name": "Mega Charizard X ex",
+        "localId": "109",
+        "image": "https://assets.tcgdex.net/en/me/me02/109",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-110",
+        "name": "Oricorio ex",
+        "localId": "110",
+        "image": "https://assets.tcgdex.net/en/me/me02/110",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-111",
+        "name": "Rotom ex",
+        "localId": "111",
+        "image": "https://assets.tcgdex.net/en/me/me02/111",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-112",
+        "name": "Mismagius ex",
+        "localId": "112",
+        "image": "https://assets.tcgdex.net/en/me/me02/112",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-113",
+        "name": "Mega Sharpedo ex",
+        "localId": "113",
+        "image": "https://assets.tcgdex.net/en/me/me02/113",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-114",
+        "name": "Empoleon ex",
+        "localId": "114",
+        "image": "https://assets.tcgdex.net/en/me/me02/114",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-115",
+        "name": "Mega Lopunny ex",
+        "localId": "115",
+        "image": "https://assets.tcgdex.net/en/me/me02/115",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-116",
+        "name": "Battle Cage",
+        "localId": "116",
+        "image": "https://assets.tcgdex.net/en/me/me02/116",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-117",
+        "name": "Blowtorch",
+        "localId": "117",
+        "image": "https://assets.tcgdex.net/en/me/me02/117",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-118",
+        "name": "Dawn",
+        "localId": "118",
+        "image": "https://assets.tcgdex.net/en/me/me02/118",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-119",
+        "name": "Firebreather",
+        "localId": "119",
+        "image": "https://assets.tcgdex.net/en/me/me02/119",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-120",
+        "name": "Grimsley's Move",
+        "localId": "120",
+        "image": "https://assets.tcgdex.net/en/me/me02/120",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-121",
+        "name": "Punk Helmet",
+        "localId": "121",
+        "image": "https://assets.tcgdex.net/en/me/me02/121",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-122",
+        "name": "Sacred Charm",
+        "localId": "122",
+        "image": "https://assets.tcgdex.net/en/me/me02/122",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-123",
+        "name": "Switch",
+        "localId": "123",
+        "image": "https://assets.tcgdex.net/en/me/me02/123",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-124",
+        "name": "Ignition Energy",
+        "localId": "124",
+        "image": "https://assets.tcgdex.net/en/me/me02/124",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-125",
+        "name": "Mega Charizard X ex",
+        "localId": "125",
+        "image": "https://assets.tcgdex.net/en/me/me02/125",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-126",
+        "name": "Rotom ex",
+        "localId": "126",
+        "image": "https://assets.tcgdex.net/en/me/me02/126",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-127",
+        "name": "Mega Sharpedo ex",
+        "localId": "127",
+        "image": "https://assets.tcgdex.net/en/me/me02/127",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-128",
+        "name": "Mega Lopunny ex",
+        "localId": "128",
+        "image": "https://assets.tcgdex.net/en/me/me02/128",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-129",
+        "name": "Dawn",
+        "localId": "129",
+        "image": "https://assets.tcgdex.net/en/me/me02/129",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      },
+      {
+        "id": "me02-130",
+        "name": "Mega Charizard X ex",
+        "localId": "130",
+        "image": "https://assets.tcgdex.net/en/me/me02/130",
+        "set": "Phantasmal Flames",
+        "setId": "me02"
+      }
+    ],
+    "tk-ex-latia": [
+      {
+        "id": "tk-ex-latia-1",
+        "name": "Bagon",
+        "localId": "1",
+        "set": "EX trainer Kit (Latias)",
+        "setId": "tk-ex-latia"
+      },
+      {
+        "id": "tk-ex-latia-2",
+        "name": "Combusken",
+        "localId": "2",
+        "set": "EX trainer Kit (Latias)",
+        "setId": "tk-ex-latia"
+      },
+      {
+        "id": "tk-ex-latia-3",
+        "name": "Delcatty",
+        "localId": "3",
+        "set": "EX trainer Kit (Latias)",
+        "setId": "tk-ex-latia"
+      },
+      {
+        "id": "tk-ex-latia-4",
+        "name": "Latias",
+        "localId": "4",
+        "set": "EX trainer Kit (Latias)",
+        "setId": "tk-ex-latia"
+      },
+      {
+        "id": "tk-ex-latia-5",
+        "name": "Numel",
+        "localId": "5",
+        "set": "EX trainer Kit (Latias)",
+        "setId": "tk-ex-latia"
+      },
+      {
+        "id": "tk-ex-latia-6",
+        "name": "Skitty",
+        "localId": "6",
+        "set": "EX trainer Kit (Latias)",
+        "setId": "tk-ex-latia"
+      },
+      {
+        "id": "tk-ex-latia-7",
+        "name": "Torchic",
+        "localId": "7",
+        "set": "EX trainer Kit (Latias)",
+        "setId": "tk-ex-latia"
+      },
+      {
+        "id": "tk-ex-latia-8",
+        "name": "Potion",
+        "localId": "8",
+        "set": "EX trainer Kit (Latias)",
+        "setId": "tk-ex-latia"
+      },
+      {
+        "id": "tk-ex-latia-9",
+        "name": "Energy Search",
+        "localId": "9",
+        "set": "EX trainer Kit (Latias)",
+        "setId": "tk-ex-latia"
+      },
+      {
+        "id": "tk-ex-latia-10",
+        "name": "Fire Energy",
+        "localId": "10",
+        "set": "EX trainer Kit (Latias)",
+        "setId": "tk-ex-latia"
+      }
+    ],
+    "tk-ex-latio": [
+      {
+        "id": "tk-ex-latio-1",
+        "name": "Electrike",
+        "localId": "1",
+        "set": "EX trainer Kit (Latios)",
+        "setId": "tk-ex-latio"
+      },
+      {
+        "id": "tk-ex-latio-2",
+        "name": "Latios",
+        "localId": "2",
+        "set": "EX trainer Kit (Latios)",
+        "setId": "tk-ex-latio"
+      },
+      {
+        "id": "tk-ex-latio-3",
+        "name": "Linoone",
+        "localId": "3",
+        "set": "EX trainer Kit (Latios)",
+        "setId": "tk-ex-latio"
+      },
+      {
+        "id": "tk-ex-latio-4",
+        "name": "Magnemite",
+        "localId": "4",
+        "set": "EX trainer Kit (Latios)",
+        "setId": "tk-ex-latio"
+      },
+      {
+        "id": "tk-ex-latio-5",
+        "name": "Magneton",
+        "localId": "5",
+        "set": "EX trainer Kit (Latios)",
+        "setId": "tk-ex-latio"
+      },
+      {
+        "id": "tk-ex-latio-6",
+        "name": "Pikachu",
+        "localId": "6",
+        "set": "EX trainer Kit (Latios)",
+        "setId": "tk-ex-latio"
+      },
+      {
+        "id": "tk-ex-latio-7",
+        "name": "Zigzagoon",
+        "localId": "7",
+        "set": "EX trainer Kit (Latios)",
+        "setId": "tk-ex-latio"
+      },
+      {
+        "id": "tk-ex-latio-8",
+        "name": "Potion",
+        "localId": "8",
+        "set": "EX trainer Kit (Latios)",
+        "setId": "tk-ex-latio"
+      },
+      {
+        "id": "tk-ex-latio-9",
+        "name": "Energy Search",
+        "localId": "9",
+        "set": "EX trainer Kit (Latios)",
+        "setId": "tk-ex-latio"
+      },
+      {
+        "id": "tk-ex-latio-10",
+        "name": "Lightning Energy",
+        "localId": "10",
+        "set": "EX trainer Kit (Latios)",
+        "setId": "tk-ex-latio"
+      }
+    ],
+    "tk-ex-p": [
+      {
+        "id": "tk-ex-p-1",
+        "name": "Beldum",
+        "localId": "1",
+        "set": "EX trainer Kit 2 (Plusle)",
+        "setId": "tk-ex-p"
+      },
+      {
+        "id": "tk-ex-p-2",
+        "name": "Electrike",
+        "localId": "2",
+        "set": "EX trainer Kit 2 (Plusle)",
+        "setId": "tk-ex-p"
+      },
+      {
+        "id": "tk-ex-p-3",
+        "name": "Grumpig",
+        "localId": "3",
+        "set": "EX trainer Kit 2 (Plusle)",
+        "setId": "tk-ex-p"
+      },
+      {
+        "id": "tk-ex-p-4",
+        "name": "Meowth",
+        "localId": "4",
+        "set": "EX trainer Kit 2 (Plusle)",
+        "setId": "tk-ex-p"
+      },
+      {
+        "id": "tk-ex-p-5",
+        "name": "Metang",
+        "localId": "5",
+        "set": "EX trainer Kit 2 (Plusle)",
+        "setId": "tk-ex-p"
+      },
+      {
+        "id": "tk-ex-p-6",
+        "name": "Plusle",
+        "localId": "6",
+        "set": "EX trainer Kit 2 (Plusle)",
+        "setId": "tk-ex-p"
+      },
+      {
+        "id": "tk-ex-p-7",
+        "name": "Spoink",
+        "localId": "7",
+        "set": "EX trainer Kit 2 (Plusle)",
+        "setId": "tk-ex-p"
+      },
+      {
+        "id": "tk-ex-p-8",
+        "name": "Energy Search",
+        "localId": "8",
+        "set": "EX trainer Kit 2 (Plusle)",
+        "setId": "tk-ex-p"
+      },
+      {
+        "id": "tk-ex-p-9",
+        "name": "Potion",
+        "localId": "9",
+        "set": "EX trainer Kit 2 (Plusle)",
+        "setId": "tk-ex-p"
+      },
+      {
+        "id": "tk-ex-p-10",
+        "name": "Professor Cozmo's Discovery",
+        "localId": "10",
+        "set": "EX trainer Kit 2 (Plusle)",
+        "setId": "tk-ex-p"
+      },
+      {
+        "id": "tk-ex-p-11",
+        "name": "Lightning Energy",
+        "localId": "11",
+        "set": "EX trainer Kit 2 (Plusle)",
+        "setId": "tk-ex-p"
+      },
+      {
+        "id": "tk-ex-p-12",
+        "name": "Psychic Energy",
+        "localId": "12",
+        "set": "EX trainer Kit 2 (Plusle)",
+        "setId": "tk-ex-p"
+      }
+    ],
+    "tk-ex-m": [
+      {
+        "id": "tk-ex-m-1",
+        "name": "Arcanine",
+        "localId": "1",
+        "set": "EX trainer Kit 2 (Minun)",
+        "setId": "tk-ex-m"
+      },
+      {
+        "id": "tk-ex-m-2",
+        "name": "Charmander",
+        "localId": "2",
+        "set": "EX trainer Kit 2 (Minun)",
+        "setId": "tk-ex-m"
+      },
+      {
+        "id": "tk-ex-m-3",
+        "name": "Charmeleon",
+        "localId": "3",
+        "set": "EX trainer Kit 2 (Minun)",
+        "setId": "tk-ex-m"
+      },
+      {
+        "id": "tk-ex-m-4",
+        "name": "Growlithe",
+        "localId": "4",
+        "set": "EX trainer Kit 2 (Minun)",
+        "setId": "tk-ex-m"
+      },
+      {
+        "id": "tk-ex-m-5",
+        "name": "Mareep",
+        "localId": "5",
+        "set": "EX trainer Kit 2 (Minun)",
+        "setId": "tk-ex-m"
+      },
+      {
+        "id": "tk-ex-m-6",
+        "name": "Minun",
+        "localId": "6",
+        "set": "EX trainer Kit 2 (Minun)",
+        "setId": "tk-ex-m"
+      },
+      {
+        "id": "tk-ex-m-7",
+        "name": "Vulpix",
+        "localId": "7",
+        "set": "EX trainer Kit 2 (Minun)",
+        "setId": "tk-ex-m"
+      },
+      {
+        "id": "tk-ex-m-8",
+        "name": "Celio's Network",
+        "localId": "8",
+        "set": "EX trainer Kit 2 (Minun)",
+        "setId": "tk-ex-m"
+      },
+      {
+        "id": "tk-ex-m-9",
+        "name": "Energy Search",
+        "localId": "9",
+        "set": "EX trainer Kit 2 (Minun)",
+        "setId": "tk-ex-m"
+      },
+      {
+        "id": "tk-ex-m-10",
+        "name": "Potion",
+        "localId": "10",
+        "set": "EX trainer Kit 2 (Minun)",
+        "setId": "tk-ex-m"
+      },
+      {
+        "id": "tk-ex-m-11",
+        "name": "Fire Energy",
+        "localId": "11",
+        "set": "EX trainer Kit 2 (Minun)",
+        "setId": "tk-ex-m"
+      },
+      {
+        "id": "tk-ex-m-12",
+        "name": "Lightning Energy",
+        "localId": "12",
+        "set": "EX trainer Kit 2 (Minun)",
+        "setId": "tk-ex-m"
+      }
+    ],
+    "tk-dp-l": [
+      {
+        "id": "tk-dp-l-1",
+        "name": "Geodude",
+        "localId": "1",
+        "set": "DP trainer Kit (Lucario)",
+        "setId": "tk-dp-l"
+      },
+      {
+        "id": "tk-dp-l-2",
+        "name": "Graveler",
+        "localId": "2",
+        "set": "DP trainer Kit (Lucario)",
+        "setId": "tk-dp-l"
+      },
+      {
+        "id": "tk-dp-l-3",
+        "name": "Lucario",
+        "localId": "3",
+        "set": "DP trainer Kit (Lucario)",
+        "setId": "tk-dp-l"
+      },
+      {
+        "id": "tk-dp-l-4",
+        "name": "Machoke",
+        "localId": "4",
+        "set": "DP trainer Kit (Lucario)",
+        "setId": "tk-dp-l"
+      },
+      {
+        "id": "tk-dp-l-5",
+        "name": "Machop",
+        "localId": "5",
+        "set": "DP trainer Kit (Lucario)",
+        "setId": "tk-dp-l"
+      },
+      {
+        "id": "tk-dp-l-6",
+        "name": "Riolu",
+        "localId": "6",
+        "set": "DP trainer Kit (Lucario)",
+        "setId": "tk-dp-l"
+      },
+      {
+        "id": "tk-dp-l-7",
+        "name": "Starly",
+        "localId": "7",
+        "set": "DP trainer Kit (Lucario)",
+        "setId": "tk-dp-l"
+      },
+      {
+        "id": "tk-dp-l-8",
+        "name": "Energy Search",
+        "localId": "8",
+        "set": "DP trainer Kit (Lucario)",
+        "setId": "tk-dp-l"
+      },
+      {
+        "id": "tk-dp-l-9",
+        "name": "Potion",
+        "localId": "9",
+        "set": "DP trainer Kit (Lucario)",
+        "setId": "tk-dp-l"
+      },
+      {
+        "id": "tk-dp-l-10",
+        "name": "Quick Ball",
+        "localId": "10",
+        "set": "DP trainer Kit (Lucario)",
+        "setId": "tk-dp-l"
+      },
+      {
+        "id": "tk-dp-l-11",
+        "name": "Fighting Energy",
+        "localId": "11",
+        "set": "DP trainer Kit (Lucario)",
+        "setId": "tk-dp-l"
+      }
+    ],
+    "tk-dp-m": [
+      {
+        "id": "tk-dp-m-1",
+        "name": "Buizel",
+        "localId": "1",
+        "set": "DP trainer Kit (Manaphy)",
+        "setId": "tk-dp-m"
+      },
+      {
+        "id": "tk-dp-m-2",
+        "name": "Floatzel",
+        "localId": "2",
+        "set": "DP trainer Kit (Manaphy)",
+        "setId": "tk-dp-m"
+      },
+      {
+        "id": "tk-dp-m-3",
+        "name": "Goldeen",
+        "localId": "3",
+        "set": "DP trainer Kit (Manaphy)",
+        "setId": "tk-dp-m"
+      },
+      {
+        "id": "tk-dp-m-4",
+        "name": "Manaphy",
+        "localId": "4",
+        "set": "DP trainer Kit (Manaphy)",
+        "setId": "tk-dp-m"
+      },
+      {
+        "id": "tk-dp-m-5",
+        "name": "Piplup",
+        "localId": "5",
+        "set": "DP trainer Kit (Manaphy)",
+        "setId": "tk-dp-m"
+      },
+      {
+        "id": "tk-dp-m-6",
+        "name": "Prinplup",
+        "localId": "6",
+        "set": "DP trainer Kit (Manaphy)",
+        "setId": "tk-dp-m"
+      },
+      {
+        "id": "tk-dp-m-7",
+        "name": "Seaking",
+        "localId": "7",
+        "set": "DP trainer Kit (Manaphy)",
+        "setId": "tk-dp-m"
+      },
+      {
+        "id": "tk-dp-m-8",
+        "name": "Totodile",
+        "localId": "8",
+        "set": "DP trainer Kit (Manaphy)",
+        "setId": "tk-dp-m"
+      },
+      {
+        "id": "tk-dp-m-9",
+        "name": "Dusk Ball",
+        "localId": "9",
+        "set": "DP trainer Kit (Manaphy)",
+        "setId": "tk-dp-m"
+      },
+      {
+        "id": "tk-dp-m-10",
+        "name": "Energy Search",
+        "localId": "10",
+        "set": "DP trainer Kit (Manaphy)",
+        "setId": "tk-dp-m"
+      },
+      {
+        "id": "tk-dp-m-11",
+        "name": "Potion",
+        "localId": "11",
+        "set": "DP trainer Kit (Manaphy)",
+        "setId": "tk-dp-m"
+      },
+      {
+        "id": "tk-dp-m-12",
+        "name": "Water Energy",
+        "localId": "12",
+        "set": "DP trainer Kit (Manaphy)",
+        "setId": "tk-dp-m"
+      }
+    ],
+    "tk-hs-g": [
+      {
+        "id": "tk-hs-g-20",
+        "name": "Gyarados",
+        "localId": "20",
+        "set": "HS trainer Kit (Gyarados)",
+        "setId": "tk-hs-g"
+      }
+    ],
+    "tk-hs-r": [
+      {
+        "id": "tk-hs-r-19",
+        "name": "Raichu",
+        "localId": "19",
+        "set": "HS trainer Kit (Raichu)",
+        "setId": "tk-hs-r"
+      }
+    ],
+    "tk-bw-z": [
+      {
+        "id": "tk-bw-z-1",
+        "name": "Purrloin",
+        "localId": "1",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-2",
+        "name": "Watchog",
+        "localId": "2",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-3",
+        "name": "Darkness Energy",
+        "localId": "3",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-4",
+        "name": "Minccino",
+        "localId": "4",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-5",
+        "name": "Darkness Energy",
+        "localId": "5",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-6",
+        "name": "Darkness Energy",
+        "localId": "6",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-7",
+        "name": "Darkness Energy",
+        "localId": "7",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-8",
+        "name": "Darkness Energy",
+        "localId": "8",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-9",
+        "name": "Darkness Energy",
+        "localId": "9",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-10",
+        "name": "Darkness Energy",
+        "localId": "10",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-11",
+        "name": "PlusPower",
+        "localId": "11",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-12",
+        "name": "Patrat",
+        "localId": "12",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-13",
+        "name": "Zorua",
+        "localId": "13",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-14",
+        "name": "Pidove",
+        "localId": "14",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-15",
+        "name": "Tranquill",
+        "localId": "15",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-16",
+        "name": "Energy Retrieval",
+        "localId": "16",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-17",
+        "name": "Zoroark",
+        "localId": "17",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-18",
+        "name": "Pokémon Communication",
+        "localId": "18",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-19",
+        "name": "Minccino",
+        "localId": "19",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-20",
+        "name": "Darkness Energy",
+        "localId": "20",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-21",
+        "name": "Pidove",
+        "localId": "21",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-22",
+        "name": "Darkness Energy",
+        "localId": "22",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-23",
+        "name": "Zorua",
+        "localId": "23",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-24",
+        "name": "Darkness Energy",
+        "localId": "24",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-25",
+        "name": "Purrloin",
+        "localId": "25",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-26",
+        "name": "Darkness Energy",
+        "localId": "26",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-27",
+        "name": "Energy Search",
+        "localId": "27",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-28",
+        "name": "Darkness Energy",
+        "localId": "28",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-29",
+        "name": "Patrat",
+        "localId": "29",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      },
+      {
+        "id": "tk-bw-z-30",
+        "name": "Zoroark",
+        "localId": "30",
+        "set": "BW trainer Kit (Zoroark)",
+        "setId": "tk-bw-z"
+      }
+    ],
+    "tk-bw-e": [
+      {
+        "id": "tk-bw-e-1",
+        "name": "Lillipup",
+        "localId": "1",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-2",
+        "name": "Fighting Energy",
+        "localId": "2",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-3",
+        "name": "Fighting Energy",
+        "localId": "3",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-4",
+        "name": "Energy Switch",
+        "localId": "4",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-5",
+        "name": "Fighting Energy",
+        "localId": "5",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-6",
+        "name": "Fighting Energy",
+        "localId": "6",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-7",
+        "name": "Fighting Energy",
+        "localId": "7",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-8",
+        "name": "Fighting Energy",
+        "localId": "8",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-9",
+        "name": "Fighting Energy",
+        "localId": "9",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-10",
+        "name": "Fighting Energy",
+        "localId": "10",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-11",
+        "name": "Timburr",
+        "localId": "11",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-12",
+        "name": "Audino",
+        "localId": "12",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-13",
+        "name": "Drilbur",
+        "localId": "13",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-14",
+        "name": "Gurdurr",
+        "localId": "14",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-15",
+        "name": "Potion",
+        "localId": "15",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-16",
+        "name": "PlusPower",
+        "localId": "16",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-17",
+        "name": "Excadrill",
+        "localId": "17",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-18",
+        "name": "Audino",
+        "localId": "18",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-19",
+        "name": "Herdier",
+        "localId": "19",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-20",
+        "name": "Fighting Energy",
+        "localId": "20",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-21",
+        "name": "Energy Search",
+        "localId": "21",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-22",
+        "name": "Fighting Energy",
+        "localId": "22",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-23",
+        "name": "Potion",
+        "localId": "23",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-24",
+        "name": "Pokémon Communication",
+        "localId": "24",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-25",
+        "name": "Drilbur",
+        "localId": "25",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-26",
+        "name": "Fighting Energy",
+        "localId": "26",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-27",
+        "name": "Lillipup",
+        "localId": "27",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-28",
+        "name": "Fighting Energy",
+        "localId": "28",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-29",
+        "name": "Timburr",
+        "localId": "29",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      },
+      {
+        "id": "tk-bw-e-30",
+        "name": "Excadrill",
+        "localId": "30",
+        "set": "BW trainer Kit (Excadrill)",
+        "setId": "tk-bw-e"
+      }
+    ],
+    "tk-xy-sy": [
+      {
+        "id": "tk-xy-sy-1",
+        "name": "Fletchling",
+        "localId": "1",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-2",
+        "name": "Fairy Energy",
+        "localId": "2",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-3",
+        "name": "Fairy Energy",
+        "localId": "3",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-4",
+        "name": "Switch",
+        "localId": "4",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-5",
+        "name": "Fairy Energy",
+        "localId": "5",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-6",
+        "name": "Fairy Energy",
+        "localId": "6",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-7",
+        "name": "Fairy Energy",
+        "localId": "7",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-8",
+        "name": "Fairy Energy",
+        "localId": "8",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-9",
+        "name": "Fairy Energy",
+        "localId": "9",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-10",
+        "name": "Fairy Energy",
+        "localId": "10",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-11",
+        "name": "Snubbull",
+        "localId": "11",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-12",
+        "name": "Fairy Energy",
+        "localId": "12",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-13",
+        "name": "Eevee",
+        "localId": "13",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-14",
+        "name": "Granbull",
+        "localId": "14",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-15",
+        "name": "Sylveon",
+        "localId": "15",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-16",
+        "name": "Furfrou",
+        "localId": "16",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-17",
+        "name": "Fairy Energy",
+        "localId": "17",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-18",
+        "name": "Fairy Energy",
+        "localId": "18",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-19",
+        "name": "Fletchling",
+        "localId": "19",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-20",
+        "name": "Potion",
+        "localId": "20",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-21",
+        "name": "Eevee",
+        "localId": "21",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-22",
+        "name": "Furfrou",
+        "localId": "22",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-23",
+        "name": "Pokémon Catcher",
+        "localId": "23",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-24",
+        "name": "Potion",
+        "localId": "24",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-25",
+        "name": "Fairy Energy",
+        "localId": "25",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-26",
+        "name": "Poké Ball",
+        "localId": "26",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-27",
+        "name": "Snubbull",
+        "localId": "27",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-28",
+        "name": "Professor’s Letter",
+        "localId": "28",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-29",
+        "name": "Granbull",
+        "localId": "29",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      },
+      {
+        "id": "tk-xy-sy-30",
+        "name": "Sylveon",
+        "localId": "30",
+        "set": "XY trainer Kit (Sylveon)",
+        "setId": "tk-xy-sy"
+      }
+    ],
+    "tk-xy-n": [
+      {
+        "id": "tk-xy-n-1",
+        "name": "Spoink",
+        "localId": "1",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-2",
+        "name": "Gourgeist",
+        "localId": "2",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-3",
+        "name": "Arbok",
+        "localId": "3",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-4",
+        "name": "Bunnelby",
+        "localId": "4",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-5",
+        "name": "Psychic Energy",
+        "localId": "5",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-6",
+        "name": "Psychic Energy",
+        "localId": "6",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-7",
+        "name": "Psychic Energy",
+        "localId": "7",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-8",
+        "name": "Psychic Energy",
+        "localId": "8",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-9",
+        "name": "Psychic Energy",
+        "localId": "9",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-10",
+        "name": "Psychic Energy",
+        "localId": "10",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-11",
+        "name": "Pumpkaboo",
+        "localId": "11",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-12",
+        "name": "Noibat",
+        "localId": "12",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-13",
+        "name": "Noivern",
+        "localId": "13",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-14",
+        "name": "Pokémon Catcher",
+        "localId": "14",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-15",
+        "name": "Potion",
+        "localId": "15",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-16",
+        "name": "Ekans",
+        "localId": "16",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-17",
+        "name": "Psychic Energy",
+        "localId": "17",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-18",
+        "name": "Pumpkaboo",
+        "localId": "18",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-19",
+        "name": "Darkness Energy",
+        "localId": "19",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-20",
+        "name": "Furfrou",
+        "localId": "20",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-21",
+        "name": "Poké Ball",
+        "localId": "21",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-22",
+        "name": "Darkness Energy",
+        "localId": "22",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-23",
+        "name": "Noibat",
+        "localId": "23",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-24",
+        "name": "Professor’s Letter",
+        "localId": "24",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-25",
+        "name": "Psychic Energy",
+        "localId": "25",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-26",
+        "name": "Darkness Energy",
+        "localId": "26",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-27",
+        "name": "Potion",
+        "localId": "27",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-28",
+        "name": "Darkness Energy",
+        "localId": "28",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-29",
+        "name": "Switch",
+        "localId": "29",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      },
+      {
+        "id": "tk-xy-n-30",
+        "name": "Noivern",
+        "localId": "30",
+        "set": "XY trainer Kit (Noivern)",
+        "setId": "tk-xy-n"
+      }
+    ],
+    "tk-xy-b": [
+      {
+        "id": "tk-xy-b-1",
+        "name": "Fletchling",
+        "localId": "1",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-2",
+        "name": "Metal Energy",
+        "localId": "2",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-3",
+        "name": "Metal Energy",
+        "localId": "3",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-4",
+        "name": "Vigoroth",
+        "localId": "4",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-5",
+        "name": "Metal Energy",
+        "localId": "5",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-6",
+        "name": "Metal Energy",
+        "localId": "6",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-7",
+        "name": "Metal Energy",
+        "localId": "7",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-8",
+        "name": "Metal Energy",
+        "localId": "8",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-9",
+        "name": "Metal Energy",
+        "localId": "9",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-10",
+        "name": "Metal Energy",
+        "localId": "10",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-11",
+        "name": "Honedge",
+        "localId": "11",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-12",
+        "name": "Bidoof",
+        "localId": "12",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-13",
+        "name": "Pawniard",
+        "localId": "13",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-14",
+        "name": "Doublade",
+        "localId": "14",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-15",
+        "name": "Slakoth",
+        "localId": "15",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-16",
+        "name": "Bisharp",
+        "localId": "16",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-17",
+        "name": "Patrat",
+        "localId": "17",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-18",
+        "name": "Metal Energy",
+        "localId": "18",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-19",
+        "name": "Tierno",
+        "localId": "19",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-20",
+        "name": "Trevor",
+        "localId": "20",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-21",
+        "name": "Pawniard",
+        "localId": "21",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-22",
+        "name": "Metal Energy",
+        "localId": "22",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-23",
+        "name": "Doublade",
+        "localId": "23",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-24",
+        "name": "Metal Energy",
+        "localId": "24",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-25",
+        "name": "Potion",
+        "localId": "25",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-26",
+        "name": "Slakoth",
+        "localId": "26",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-27",
+        "name": "Honedge",
+        "localId": "27",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-28",
+        "name": "Vigoroth",
+        "localId": "28",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-29",
+        "name": "Potion",
+        "localId": "29",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      },
+      {
+        "id": "tk-xy-b-30",
+        "name": "Bisharp",
+        "localId": "30",
+        "set": "XY trainer Kit (Bisharp)",
+        "setId": "tk-xy-b"
+      }
+    ],
+    "tk-xy-w": [
+      {
+        "id": "tk-xy-w-1",
+        "name": "Swirlix",
+        "localId": "1",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-2",
+        "name": "Pidgeotto",
+        "localId": "2",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-3",
+        "name": "Fairy Energy",
+        "localId": "3",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-4",
+        "name": "Sentret",
+        "localId": "4",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-5",
+        "name": "Fairy Energy",
+        "localId": "5",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-6",
+        "name": "Fairy Energy",
+        "localId": "6",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-7",
+        "name": "Fairy Energy",
+        "localId": "7",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-8",
+        "name": "Fairy Energy",
+        "localId": "8",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-9",
+        "name": "Fairy Energy",
+        "localId": "9",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-10",
+        "name": "Fairy Energy",
+        "localId": "10",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-11",
+        "name": "Pidgey",
+        "localId": "11",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-12",
+        "name": "Jigglypuff",
+        "localId": "12",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-13",
+        "name": "Clefairy",
+        "localId": "13",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-14",
+        "name": "Wigglytuff",
+        "localId": "14",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-15",
+        "name": "Potion",
+        "localId": "15",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-16",
+        "name": "Clefable",
+        "localId": "16",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-17",
+        "name": "Fairy Energy",
+        "localId": "17",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-18",
+        "name": "Swirlix",
+        "localId": "18",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-19",
+        "name": "Clefairy",
+        "localId": "19",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-20",
+        "name": "Potion",
+        "localId": "20",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-21",
+        "name": "Fairy Energy",
+        "localId": "21",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-22",
+        "name": "Fairy Energy",
+        "localId": "22",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-23",
+        "name": "Pidgeotto",
+        "localId": "23",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-24",
+        "name": "Trevor",
+        "localId": "24",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-25",
+        "name": "Jigglypuff",
+        "localId": "25",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-26",
+        "name": "Tierno",
+        "localId": "26",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-27",
+        "name": "Fairy Energy",
+        "localId": "27",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-28",
+        "name": "Clefable",
+        "localId": "28",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-29",
+        "name": "Pidgey",
+        "localId": "29",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      },
+      {
+        "id": "tk-xy-w-30",
+        "name": "Wigglytuff",
+        "localId": "30",
+        "set": "XY trainer Kit (Wigglytuff)",
+        "setId": "tk-xy-w"
+      }
+    ],
+    "tk-xy-latia": [
+      {
+        "id": "tk-xy-latia-1",
+        "name": "Grass Energy",
+        "localId": "1",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-2",
+        "name": "Grass Energy",
+        "localId": "2",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-3",
+        "name": "Grass Energy",
+        "localId": "3",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-4",
+        "name": "Fletchling",
+        "localId": "4",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-5",
+        "name": "Grass Energy",
+        "localId": "5",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-6",
+        "name": "Lombre",
+        "localId": "6",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-7",
+        "name": "Treecko",
+        "localId": "7",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-8",
+        "name": "Psychic Energy",
+        "localId": "8",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-9",
+        "name": "Psychic Energy",
+        "localId": "9",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-10",
+        "name": "Psychic Energy",
+        "localId": "10",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-11",
+        "name": "Lotad",
+        "localId": "11",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-12",
+        "name": "Tangrowth",
+        "localId": "12",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-13",
+        "name": "Tangela",
+        "localId": "13",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-14",
+        "name": "Latias",
+        "localId": "14",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-15",
+        "name": "Potion",
+        "localId": "15",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-16",
+        "name": "Surskit",
+        "localId": "16",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-17",
+        "name": "Psychic Energy",
+        "localId": "17",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-18",
+        "name": "Grovyle",
+        "localId": "18",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-19",
+        "name": "Grass Energy",
+        "localId": "19",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-20",
+        "name": "Acro Bike",
+        "localId": "20",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-21",
+        "name": "Lombre",
+        "localId": "21",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-22",
+        "name": "Psychic Energy",
+        "localId": "22",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-23",
+        "name": "Lotad",
+        "localId": "23",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-24",
+        "name": "Treecko",
+        "localId": "24",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-25",
+        "name": "Tangrowth",
+        "localId": "25",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-26",
+        "name": "Tangela",
+        "localId": "26",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-27",
+        "name": "Grovyle",
+        "localId": "27",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-28",
+        "name": "Psychic Energy",
+        "localId": "28",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-29",
+        "name": "Acro Bike",
+        "localId": "29",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      },
+      {
+        "id": "tk-xy-latia-30",
+        "name": "Latias",
+        "localId": "30",
+        "set": "XY trainer Kit (Latias)",
+        "setId": "tk-xy-latia"
+      }
+    ],
+    "tk-xy-latio": [
+      {
+        "id": "tk-xy-latio-1",
+        "name": "Skitty",
+        "localId": "1",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-2",
+        "name": "Fighting Energy",
+        "localId": "2",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-3",
+        "name": "Fighting Energy",
+        "localId": "3",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-4",
+        "name": "Rhydon",
+        "localId": "4",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-5",
+        "name": "Fighting Energy",
+        "localId": "5",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-6",
+        "name": "Fighting Energy",
+        "localId": "6",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-7",
+        "name": "Fighting Energy",
+        "localId": "7",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-8",
+        "name": "Fighting Energy",
+        "localId": "8",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-9",
+        "name": "Fighting Energy",
+        "localId": "9",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-10",
+        "name": "Fighting Energy",
+        "localId": "10",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-11",
+        "name": "Machop",
+        "localId": "11",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-12",
+        "name": "Solrock",
+        "localId": "12",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-13",
+        "name": "Latios",
+        "localId": "13",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-14",
+        "name": "Machoke",
+        "localId": "14",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-15",
+        "name": "Rhyhorn",
+        "localId": "15",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-16",
+        "name": "Psychic Energy",
+        "localId": "16",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-17",
+        "name": "Fighting Energy",
+        "localId": "17",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-18",
+        "name": "Psychic Energy",
+        "localId": "18",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-19",
+        "name": "Delcatty",
+        "localId": "19",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-20",
+        "name": "Acro Bike",
+        "localId": "20",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-21",
+        "name": "Potion",
+        "localId": "21",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-22",
+        "name": "Machoke",
+        "localId": "22",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-23",
+        "name": "Rhyhorn",
+        "localId": "23",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-24",
+        "name": "Delcatty",
+        "localId": "24",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-25",
+        "name": "Rhydon",
+        "localId": "25",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-26",
+        "name": "Solrock",
+        "localId": "26",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-27",
+        "name": "Skitty",
+        "localId": "27",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-28",
+        "name": "Machop",
+        "localId": "28",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-29",
+        "name": "Psychic Energy",
+        "localId": "29",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      },
+      {
+        "id": "tk-xy-latio-30",
+        "name": "Latios",
+        "localId": "30",
+        "set": "XY trainer Kit (Latios)",
+        "setId": "tk-xy-latio"
+      }
+    ],
+    "tk-xy-su": [
+      {
+        "id": "tk-xy-su-1",
+        "name": "Water Energy",
+        "localId": "1",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-2",
+        "name": "Water Energy",
+        "localId": "2",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-3",
+        "name": "Water Energy",
+        "localId": "3",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-4",
+        "name": "Eevee",
+        "localId": "4",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-5",
+        "name": "Water Energy",
+        "localId": "5",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-6",
+        "name": "Frogadier",
+        "localId": "6",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-7",
+        "name": "Ducklett",
+        "localId": "7",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-8",
+        "name": "Water Energy",
+        "localId": "8",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-9",
+        "name": "Water Energy",
+        "localId": "9",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-10",
+        "name": "Water Energy",
+        "localId": "10",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-11",
+        "name": "Froakie",
+        "localId": "11",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-12",
+        "name": "Seaking",
+        "localId": "12",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-13",
+        "name": "Goldeen",
+        "localId": "13",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-14",
+        "name": "Suicune",
+        "localId": "14",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-15",
+        "name": "Potion",
+        "localId": "15",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-16",
+        "name": "Piplup",
+        "localId": "16",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-17",
+        "name": "Water Energy",
+        "localId": "17",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-18",
+        "name": "Swanna",
+        "localId": "18",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-19",
+        "name": "Water Energy",
+        "localId": "19",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-20",
+        "name": "Tierno",
+        "localId": "20",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-21",
+        "name": "Frogadier",
+        "localId": "21",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-22",
+        "name": "Water Energy",
+        "localId": "22",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-23",
+        "name": "Froakie",
+        "localId": "23",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-24",
+        "name": "Ducklett",
+        "localId": "24",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-25",
+        "name": "Seaking",
+        "localId": "25",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-26",
+        "name": "Goldeen",
+        "localId": "26",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-27",
+        "name": "Swanna",
+        "localId": "27",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-28",
+        "name": "Water Energy",
+        "localId": "28",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-29",
+        "name": "Tierno",
+        "localId": "29",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      },
+      {
+        "id": "tk-xy-su-30",
+        "name": "Suicune",
+        "localId": "30",
+        "set": "XY trainer Kit (Suicune)",
+        "setId": "tk-xy-su"
+      }
+    ],
+    "tk-sm-l": [
+      {
+        "id": "tk-sm-l-1",
+        "name": "Caterpie",
+        "localId": "1",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-4",
+        "name": "Trumbeak",
+        "localId": "4",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-5",
+        "name": "Fighting Energy",
+        "localId": "5",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-11",
+        "name": "Fletchling",
+        "localId": "11",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-12",
+        "name": "Yungoos",
+        "localId": "12",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-13",
+        "name": "Fletchinder",
+        "localId": "13",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-14",
+        "name": "Rockruff",
+        "localId": "14",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-15",
+        "name": "Pikipek",
+        "localId": "15",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-16",
+        "name": "Lycanroc",
+        "localId": "16",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-18",
+        "name": "Makuhita",
+        "localId": "18",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-19",
+        "name": "Hau",
+        "localId": "19",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-21",
+        "name": "Great Ball",
+        "localId": "21",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-22",
+        "name": "Toucannon",
+        "localId": "22",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-23",
+        "name": "Hau",
+        "localId": "23",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-25",
+        "name": "Great Ball",
+        "localId": "25",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-27",
+        "name": "Big Malasada",
+        "localId": "27",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-29",
+        "name": "Rockruff",
+        "localId": "29",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      },
+      {
+        "id": "tk-sm-l-30",
+        "name": "Lycanroc",
+        "localId": "30",
+        "set": "SM trainer Kit (Lycanroc)",
+        "setId": "tk-sm-l"
+      }
+    ],
+    "tk-sm-r": [
+      {
+        "id": "tk-sm-r-2",
+        "name": "Lightning Energy",
+        "localId": "2",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-4",
+        "name": "Stufful",
+        "localId": "4",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-6",
+        "name": "Golbat",
+        "localId": "6",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-11",
+        "name": "Zubat",
+        "localId": "11",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-13",
+        "name": "Spearow",
+        "localId": "13",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-14",
+        "name": "Pikachu",
+        "localId": "14",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-15",
+        "name": "Potion",
+        "localId": "15",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-16",
+        "name": "Grubbin",
+        "localId": "16",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-17",
+        "name": "Alolan Raichu",
+        "localId": "17",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-18",
+        "name": "Bewear",
+        "localId": "18",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-19",
+        "name": "Hau",
+        "localId": "19",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-20",
+        "name": "Psychic Energy",
+        "localId": "20",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-21",
+        "name": "Great Ball",
+        "localId": "21",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-22",
+        "name": "Drowzee",
+        "localId": "22",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-23",
+        "name": "Hau",
+        "localId": "23",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-25",
+        "name": "Great Ball",
+        "localId": "25",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-26",
+        "name": "Togedemaru",
+        "localId": "26",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-29",
+        "name": "Pikachu",
+        "localId": "29",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
+      },
+      {
+        "id": "tk-sm-r-30",
+        "name": "Alolan Raichu",
+        "localId": "30",
+        "set": "SM trainer Kit (Alolan Raichu)",
+        "setId": "tk-sm-r"
       }
     ]
   }
