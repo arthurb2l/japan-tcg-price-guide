@@ -124,8 +124,21 @@ const EVENT_CARDS = [
   { id: "OP04-044", name: "Perona", nameJp: "ペローナ", set: "OP-04", setName: "Kingdoms of Intrigue", rarity: "SR", variant: null, price: { jpy: 1500, eur: 9 }, img: null },
 ];
 
+// More characters from each set
+const MORE_CARDS = [
+  { id: "OP06-022", name: "Kuzan", nameJp: "クザン", set: "OP-06", setName: "Wings of the Captain", rarity: "SR", variant: null, price: { jpy: 2500, eur: 15 }, img: null },
+  { id: "OP06-035", name: "Borsalino", nameJp: "ボルサリーノ", set: "OP-06", setName: "Wings of the Captain", rarity: "SR", variant: null, price: { jpy: 1800, eur: 11 }, img: null },
+  { id: "OP07-045", name: "Kuma", nameJp: "くま", set: "OP-07", setName: "500 Years in the Future", rarity: "SR", variant: null, price: { jpy: 2000, eur: 12 }, img: null },
+  { id: "OP07-064", name: "Sentomaru", nameJp: "戦桃丸", set: "OP-07", setName: "500 Years in the Future", rarity: "R", variant: null, price: { jpy: 400, eur: 2.5 }, img: null },
+  { id: "OP08-022", name: "Sengoku", nameJp: "センゴク", set: "OP-08", setName: "Two Legends", rarity: "SR", variant: null, price: { jpy: 1500, eur: 9 }, img: null },
+  { id: "OP08-067", name: "Shiki", nameJp: "シキ", set: "OP-08", setName: "Two Legends", rarity: "SR", variant: null, price: { jpy: 2200, eur: 14 }, img: null },
+  { id: "OP09-030", name: "King", nameJp: "キング", set: "OP-09", setName: "Four Emperors", rarity: "SR", variant: null, price: { jpy: 2800, eur: 17 }, img: null },
+  { id: "OP09-051", name: "Queen", nameJp: "クイーン", set: "OP-09", setName: "Four Emperors", rarity: "SR", variant: null, price: { jpy: 1800, eur: 11 }, img: null },
+  { id: "OP09-091", name: "Charlotte Linlin", nameJp: "シャーロット・リンリン", set: "OP-09", setName: "Four Emperors", rarity: "SR", variant: null, price: { jpy: 2500, eur: 15 }, img: null },
+];
+
 function buildCache() {
-  const allCards = [...GRAIL_CARDS, ...FINDABLE_CARDS, ...COMMON_PLAYABLES, ...LEADER_CARDS, ...EVENT_CARDS];
+  const allCards = [...GRAIL_CARDS, ...FINDABLE_CARDS, ...COMMON_PLAYABLES, ...LEADER_CARDS, ...EVENT_CARDS, ...MORE_CARDS];
   const sets = {};
   
   allCards.forEach(card => {

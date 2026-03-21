@@ -2,7 +2,7 @@
   "meta": {
     "lastUpdated": "2026-03-21",
     "source": "Manual from pricecharting.com + onepiece-cardgame.dev",
-    "totalCards": 61
+    "totalCards": 70
   },
   "sets": {
     "OP-09": [
@@ -63,6 +63,51 @@
         "price": {
           "jpy": 3000,
           "eur": 18,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP09-030",
+        "name": "King",
+        "nameJp": "キング",
+        "setId": "OP-09",
+        "set": "Four Emperors",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 2800,
+          "eur": 17,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP09-051",
+        "name": "Queen",
+        "nameJp": "クイーン",
+        "setId": "OP-09",
+        "set": "Four Emperors",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 1800,
+          "eur": 11,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP09-091",
+        "name": "Charlotte Linlin",
+        "nameJp": "シャーロット・リンリン",
+        "setId": "OP-09",
+        "set": "Four Emperors",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 2500,
+          "eur": 15,
           "updated": "2026-03-21"
         }
       }
@@ -756,6 +801,36 @@
           "eur": 15,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP06-022",
+        "name": "Kuzan",
+        "nameJp": "クザン",
+        "setId": "OP-06",
+        "set": "Wings of the Captain",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 2500,
+          "eur": 15,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP06-035",
+        "name": "Borsalino",
+        "nameJp": "ボルサリーノ",
+        "setId": "OP-06",
+        "set": "Wings of the Captain",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 1800,
+          "eur": 11,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-07": [
@@ -818,6 +893,36 @@
           "eur": 11,
           "updated": "2026-03-21"
         }
+      },
+      {
+        "id": "OP07-045",
+        "name": "Kuma",
+        "nameJp": "くま",
+        "setId": "OP-07",
+        "set": "500 Years in the Future",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 2000,
+          "eur": 12,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP07-064",
+        "name": "Sentomaru",
+        "nameJp": "戦桃丸",
+        "setId": "OP-07",
+        "set": "500 Years in the Future",
+        "rarity": "R",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 400,
+          "eur": 2.5,
+          "updated": "2026-03-21"
+        }
       }
     ],
     "OP-08": [
@@ -873,6 +978,36 @@
         "setId": "OP-08",
         "set": "Two Legends",
         "rarity": "L",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 2200,
+          "eur": 14,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP08-022",
+        "name": "Sengoku",
+        "nameJp": "センゴク",
+        "setId": "OP-08",
+        "set": "Two Legends",
+        "rarity": "SR",
+        "variant": null,
+        "img": null,
+        "price": {
+          "jpy": 1500,
+          "eur": 9,
+          "updated": "2026-03-21"
+        }
+      },
+      {
+        "id": "OP08-067",
+        "name": "Shiki",
+        "nameJp": "シキ",
+        "setId": "OP-08",
+        "set": "Two Legends",
+        "rarity": "SR",
         "variant": null,
         "img": null,
         "price": {
