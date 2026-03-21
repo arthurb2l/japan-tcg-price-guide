@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-20T23:37:21.708Z",
+  "updated": "2026-03-21T00:03:37.626Z",
   "sets": {
     "sv01": [
       {
@@ -17533,11 +17533,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/001",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Yuu Nishida",
+        "hp": 70,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.09
         }
       },
       {
@@ -17547,11 +17560,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/002",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Yuu Nishida",
+        "hp": 100,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.11
         }
       },
       {
@@ -17561,11 +17587,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/003",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Double rare",
+        "illustrator": "5ban Graphics",
+        "hp": 340,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -17575,11 +17614,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/004",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "GIDORA",
+        "hp": 70,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.14
         }
       },
       {
@@ -17589,11 +17641,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/005",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "GIDORA",
+        "hp": 100,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.09
         }
       },
       {
@@ -17603,11 +17668,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/006",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Double rare",
+        "illustrator": "PLANETA Mochizuki",
+        "hp": 330,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.09,
+          "low": 3.8,
+          "trend": 7.11
         }
       },
       {
@@ -17617,11 +17695,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/007",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "kantaro",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -17631,11 +17722,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/008",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "kantaro",
+        "hp": 100,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -17645,11 +17749,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/009",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Double rare",
+        "illustrator": "PLANETA Yamashita",
+        "hp": 330,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.47,
+          "low": 0.8,
+          "trend": 2.9
         }
       },
       {
@@ -17659,11 +17776,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/010",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Tika Matsuno",
+        "hp": 50,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.16
         }
       },
       {
@@ -17673,11 +17803,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/011",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Tika Matsuno",
+        "hp": 90,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.11
         }
       },
       {
@@ -17687,11 +17830,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/012",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Tika Matsuno",
+        "hp": 130,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.09
         }
       },
       {
@@ -17701,11 +17857,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/013",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "nisimono",
+        "hp": 50,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.09
         }
       },
       {
@@ -17715,11 +17884,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/014",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "nisimono",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -17729,11 +17911,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/015",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "nisimono",
+        "hp": 130,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.17
         }
       },
       {
@@ -17743,11 +17938,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/016",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Oswaldo KATO",
+        "hp": 50,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -17757,11 +17965,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/017",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Oswaldo KATO",
+        "hp": 80,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.25,
+          "low": 0.02,
+          "trend": 0.24
         }
       },
       {
@@ -17771,11 +17992,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/018",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Oswaldo KATO",
+        "hp": 130,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -17785,11 +18019,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/019",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "sowsow",
+        "hp": 40,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -17799,11 +18046,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/020",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "sowsow",
+        "hp": 70,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -17813,11 +18073,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/021",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Gemi",
+        "hp": 50,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.09
         }
       },
       {
@@ -17827,11 +18100,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/022",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Gemi",
+        "hp": 90,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -17841,11 +18127,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/023",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Kedamahadaitai Yawarakai",
+        "hp": 70,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -17855,11 +18154,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/024",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Double rare",
+        "illustrator": "Eske Yoshinob",
+        "hp": 270,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.86,
+          "low": 0.35,
+          "trend": 2.05
         }
       },
       {
@@ -17869,11 +18181,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/025",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Naoyo Kimura",
+        "hp": 60,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.1
         }
       },
       {
@@ -17883,11 +18208,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/026",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Naoyo Kimura",
+        "hp": 120,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.2,
+          "low": 0.02,
+          "trend": 0.2
         }
       },
       {
@@ -17897,11 +18235,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/027",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "kodama",
+        "hp": 60,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -17911,11 +18262,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/028",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "kodama",
+        "hp": 120,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -17925,11 +18289,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/029",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Teeziro",
+        "hp": 60,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.11,
+          "low": 0.02,
+          "trend": 0.2
         }
       },
       {
@@ -17939,11 +18316,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/030",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Teeziro",
+        "hp": 90,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -17953,11 +18343,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/031",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Teeziro",
+        "hp": 170,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -17967,11 +18370,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/032",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Shiburingaru",
+        "hp": 60,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.12,
+          "low": 0.02,
+          "trend": 0.16
         }
       },
       {
@@ -17981,11 +18397,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/033",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Shiburingaru",
+        "hp": 90,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -17995,11 +18424,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/034",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Shiburingaru",
+        "hp": 170,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.2,
+          "low": 0.02,
+          "trend": 0.21
         }
       },
       {
@@ -18009,11 +18451,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/035",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "ryoma uratsuka",
+        "hp": 60,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -18023,11 +18478,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/036",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "ryoma uratsuka",
+        "hp": 100,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -18037,11 +18505,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/037",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "kawayoo",
+        "hp": 70,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18051,11 +18532,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/038",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Double rare",
+        "illustrator": "kawayoo",
+        "hp": 260,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.11
         }
       },
       {
@@ -18065,11 +18559,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/039",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "saino misaki",
+        "hp": 70,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18079,11 +18586,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/040",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Double rare",
+        "illustrator": "Saki Hayashiro",
+        "hp": 250,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.22,
+          "low": 0.25,
+          "trend": 1.41
         }
       },
       {
@@ -18093,11 +18613,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/041",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Scav",
+        "hp": 40,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -18107,11 +18640,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/042",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Scav",
+        "hp": 80,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18121,11 +18667,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/043",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Sekio",
+        "hp": 60,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -18135,11 +18694,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/044",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Sekio",
+        "hp": 70,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18149,11 +18721,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/045",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Sekio",
+        "hp": 140,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.17
         }
       },
       {
@@ -18163,11 +18748,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/046",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Yoriyuki Ikegami",
+        "hp": 70,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -18177,11 +18775,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/047",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Yoriyuki Ikegami",
+        "hp": 120,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18191,11 +18802,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/048",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Kagemaru Himeno",
+        "hp": 70,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18205,11 +18829,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/049",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Kagemaru Himeno",
+        "hp": 90,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18219,11 +18856,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/050",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Miki Tanaka",
+        "hp": 50,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18233,11 +18883,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/051",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Miki Tanaka",
+        "hp": 90,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18247,11 +18910,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/052",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Naoki Saito",
+        "hp": 70,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.09
         }
       },
       {
@@ -18261,11 +18937,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/053",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Naoki Saito",
+        "hp": 110,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18275,11 +18964,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/054",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Taira Akitsu",
+        "hp": 70,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.09
         }
       },
       {
@@ -18289,11 +18991,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/055",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Taira Akitsu",
+        "hp": 110,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18303,11 +19018,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/056",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Mina Nakai",
+        "hp": 60,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
         }
       },
       {
@@ -18317,11 +19045,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/057",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Mina Nakai",
+        "hp": 120,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18331,11 +19072,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/058",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Atsushi Furusawa",
+        "hp": 80,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18345,11 +19099,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/059",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Atsushi Furusawa",
+        "hp": 150,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -18359,11 +19126,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/060",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Kurata So",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18373,11 +19153,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/061",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Kurata So",
+        "hp": 90,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.1,
+          "low": 0.02,
+          "trend": 0.12
         }
       },
       {
@@ -18387,11 +19180,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/062",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Kurata So",
+        "hp": 160,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18401,11 +19207,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/063",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 50,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18415,11 +19234,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/064",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 80,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18429,11 +19261,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/065",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Double rare",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 310,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 2.15,
+          "low": 0.2,
+          "trend": 2.2
         }
       },
       {
@@ -18443,11 +19288,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/066",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Ryuta Fuse",
+        "hp": 70,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18457,11 +19315,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/067",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Ryuta Fuse",
+        "hp": 100,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -18471,11 +19342,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/068",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Ryuta Fuse",
+        "hp": 180,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.19,
+          "low": 0.02,
+          "trend": 0.19
         }
       },
       {
@@ -18485,11 +19369,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/069",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Jerky",
+        "hp": 60,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18499,11 +19396,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/070",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Jerky",
+        "hp": 90,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.12
         }
       },
       {
@@ -18513,11 +19423,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/071",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Jerky",
+        "hp": 150,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -18527,11 +19450,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/072",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "miki kudo",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18541,11 +19477,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/073",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "miki kudo",
+        "hp": 120,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18555,11 +19504,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/074",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Uta",
+        "hp": 80,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18569,11 +19531,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/075",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Uta",
+        "hp": 110,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18583,11 +19558,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/076",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Double rare",
+        "illustrator": "Uta",
+        "hp": 330,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.45,
+          "low": 0.08,
+          "trend": 1.77
         }
       },
       {
@@ -18597,11 +19585,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/077",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Nurikabe",
+        "hp": 70,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -18611,11 +19612,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/078",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Nurikabe",
+        "hp": 100,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -18625,11 +19639,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/079",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "OKACHEKE",
+        "hp": 80,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.04
         }
       },
       {
@@ -18639,11 +19666,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/080",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "OKACHEKE",
+        "hp": 130,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -18653,11 +19693,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/081",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Yuka Morii",
+        "hp": 60,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18667,11 +19720,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/082",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Yuka Morii",
+        "hp": 90,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18681,11 +19747,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/083",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "KG-2000",
+        "hp": 90,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18695,11 +19774,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/084",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Anesaki Dynamic",
+        "hp": 70,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.1
         }
       },
       {
@@ -18709,11 +19801,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/085",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Anesaki Dynamic",
+        "hp": 100,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.19
         }
       },
       {
@@ -18723,11 +19828,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/086",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "aoki",
+        "hp": 80,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
         }
       },
       {
@@ -18737,11 +19855,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/087",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "aoki",
+        "hp": 130,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18751,11 +19882,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/088",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Nisota Niso",
+        "hp": 80,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18765,11 +19909,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/089",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Nisota Niso",
+        "hp": 150,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18779,11 +19936,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/090",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Nelnal",
+        "hp": 70,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -18793,11 +19963,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/091",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Nelnal",
+        "hp": 130,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -18807,11 +19990,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/092",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Tomokazu Komiya",
+        "hp": 50,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18821,11 +20017,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/093",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Tomokazu Komiya",
+        "hp": 80,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -18835,11 +20044,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/094",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Tomokazu Komiya",
+        "hp": 130,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.55,
+          "low": 0.05,
+          "trend": 0.58
         }
       },
       {
@@ -18849,11 +20071,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/095",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Shin Nagasawa",
+        "hp": 120,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18863,11 +20098,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/096",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Mousho",
+        "hp": 80,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -18877,11 +20125,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/097",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Mousho",
+        "hp": 110,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18891,11 +20152,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/098",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Yukiko Baba",
+        "hp": 70,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -18905,11 +20179,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/099",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Yukiko Baba",
+        "hp": 140,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.1
         }
       },
       {
@@ -18919,11 +20206,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/100",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "nagimiso",
+        "hp": 60,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.1
         }
       },
       {
@@ -18933,11 +20233,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/101",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "nagimiso",
+        "hp": 90,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.16,
+          "low": 0.02,
+          "trend": 0.17
         }
       },
       {
@@ -18947,11 +20260,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/102",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Shigenori Negishi",
+        "hp": 60,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
         }
       },
       {
@@ -18961,11 +20287,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/103",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Shigenori Negishi",
+        "hp": 140,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18975,11 +20314,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/104",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Shinya Komatsu",
+        "hp": 70,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -18989,11 +20341,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/105",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Shinya Komatsu",
+        "hp": 120,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.16
         }
       },
       {
@@ -19003,11 +20368,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/106",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Hitoshi Ariga",
+        "hp": 120,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -19017,11 +20395,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/107",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "DOM",
+        "hp": 120,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.1
         }
       },
       {
@@ -19031,11 +20422,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/108",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Saya Tsuruta",
+        "hp": 100,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.04
         }
       },
       {
@@ -19045,11 +20449,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/109",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Shibuzoh.",
+        "hp": 60,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -19059,11 +20476,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/110",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Shibuzoh.",
+        "hp": 110,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.18
         }
       },
       {
@@ -19073,11 +20503,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/111",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "GOSSAN",
+        "hp": 100,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -19087,11 +20530,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/112",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "GOSSAN",
+        "hp": 120,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -19101,11 +20557,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/113",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Taiga Kayama",
+        "hp": 110,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.21,
+          "low": 0.02,
+          "trend": 0.21
         }
       },
       {
@@ -19115,11 +20584,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/114",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Aya Kusube",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -19129,11 +20611,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/115",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Double rare",
+        "illustrator": "N-DESIGN Inc.",
+        "hp": 230,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.43,
+          "low": 0.17,
+          "trend": 1.53
         }
       },
       {
@@ -19143,11 +20638,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/116",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "aspara",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.14,
+          "low": 0.02,
+          "trend": 0.14
         }
       },
       {
@@ -19157,11 +20665,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/117",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "aspara",
+        "hp": 80,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -19171,11 +20692,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/118",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "SIE NANAHARA",
+        "hp": 70,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -19185,11 +20719,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/119",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "SIE NANAHARA",
+        "hp": 110,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -19199,11 +20746,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/120",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Arai Kiriko",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -19213,11 +20773,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/121",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Arai Kiriko",
+        "hp": 90,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.18
         }
       },
       {
@@ -19227,11 +20800,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/122",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "OOYAMA",
+        "hp": 90,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.16
         }
       },
       {
@@ -19241,11 +20827,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/123",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Hideki Ishikawa",
+        "hp": 70,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -19255,11 +20854,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/124",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Double rare",
+        "illustrator": "Ayaka Yoshida",
+        "hp": 200,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.65,
+          "low": 0.3,
+          "trend": 1.84
         }
       },
       {
@@ -19269,11 +20881,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/125",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "NC Empire",
+        "hp": 90,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -19283,11 +20908,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/126",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Toshinao Aoki",
+        "hp": 90,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -19297,11 +20935,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/127",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Yuya Oka",
+        "hp": 120,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -19311,11 +20962,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/128",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Takeshi Nakamura",
+        "hp": 120,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -19325,11 +20989,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/129",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Kouki Saitou",
+        "hp": 30,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.04,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -19339,11 +21016,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/130",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Kouki Saitou",
+        "hp": 190,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.21,
+          "low": 0.02,
+          "trend": 0.17
         }
       },
       {
@@ -19353,11 +21043,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/131",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "LINNE",
+        "hp": 110,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.1
         }
       },
       {
@@ -19367,11 +21070,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/132",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "KIYOTAKA OSHIYAMA",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.09
         }
       },
       {
@@ -19381,11 +21097,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/133",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Narumi Sato",
+        "hp": 70,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -19395,11 +21124,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/134",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "kirisAki",
+        "hp": 130,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.24,
+          "low": 0.02,
+          "trend": 0.27
         }
       },
       {
@@ -19409,11 +21151,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/135",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "sui",
+        "hp": 110,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.27,
+          "low": 0.02,
+          "trend": 0.32
         }
       },
       {
@@ -19423,11 +21178,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/136",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Ryota Murayama",
+        "hp": 130,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -19437,11 +21205,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/137",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "5ban Graphics",
+        "hp": 60,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.09
         }
       },
       {
@@ -19451,11 +21232,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/138",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Akira Komayama",
+        "hp": 100,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -19465,11 +21259,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/139",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Akira Komayama",
+        "hp": 150,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.17,
+          "low": 0.02,
+          "trend": 0.23
         }
       },
       {
@@ -19479,11 +21286,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/140",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Souichirou Gunjima",
+        "hp": 90,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.09
         }
       },
       {
@@ -19493,11 +21313,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/141",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Souichirou Gunjima",
+        "hp": 160,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.19,
+          "low": 0.02,
+          "trend": 0.22
         }
       },
       {
@@ -19507,11 +21340,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/142",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Shinji Kanda",
+        "hp": 130,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.21,
+          "low": 0.02,
+          "trend": 0.23
         }
       },
       {
@@ -19521,11 +21367,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/143",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "HYOGONOSUKE",
+        "hp": 150,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.09
         }
       },
       {
@@ -19535,11 +21394,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/144",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "chibi",
+        "hp": 120,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.28,
+          "low": 0.02,
+          "trend": 0.29
         }
       },
       {
@@ -19549,11 +21421,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/145",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Double rare",
+        "illustrator": "takuyoa",
+        "hp": 200,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 1.77,
+          "low": 0.49,
+          "trend": 1.99
         }
       },
       {
@@ -19563,11 +21448,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/146",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "KEIICHIRO ITO",
+        "hp": 120,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.24,
+          "low": 0.02,
+          "trend": 0.24
         }
       },
       {
@@ -19577,11 +21475,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/147",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "Sanosuke Sakuma",
+        "hp": 60,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.09
         }
       },
       {
@@ -19591,11 +21502,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/148",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Sanosuke Sakuma",
+        "hp": 100,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.16
         }
       },
       {
@@ -19605,11 +21529,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/149",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "Sanosuke Sakuma",
+        "hp": 180,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.42,
+          "low": 0.02,
+          "trend": 0.48
         }
       },
       {
@@ -19619,11 +21556,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/150",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Rare",
+        "illustrator": "AKIRA EGAWA",
+        "hp": 130,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.61,
+          "low": 0.03,
+          "trend": 0.66
         }
       },
       {
@@ -19633,11 +21583,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/151",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Double rare",
+        "illustrator": "aky CG Works",
+        "hp": 180,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.07,
+          "low": 3.3,
+          "trend": 6.94
         }
       },
       {
@@ -19647,11 +21610,20 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/152",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "AYUMI ODASHIMA",
+        "hp": 60,
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.11
         }
       },
       {
@@ -19661,11 +21633,20 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/153",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "AYUMI ODASHIMA",
+        "hp": 60,
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.11
         }
       },
       {
@@ -19675,11 +21656,20 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/154",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Common",
+        "illustrator": "AYUMI ODASHIMA",
+        "hp": 60,
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.09,
+          "low": 0.02,
+          "trend": 0.12
         }
       },
       {
@@ -19689,11 +21679,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/155",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Toyste Beach",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -19703,11 +21701,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/156",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "GIDORA",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -19717,11 +21723,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/157",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Oswaldo KATO",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -19731,11 +21745,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/158",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Tomomi Kaneko",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -19745,11 +21767,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/159",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Ayaka Yoshida",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.15,
+          "low": 0.02,
+          "trend": 0.15
         }
       },
       {
@@ -19759,11 +21789,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/160",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "saino misaki",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -19773,11 +21811,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/161",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "hncl",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -19787,11 +21833,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/162",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "inose yukie",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.15,
+          "low": 0.02,
+          "trend": 0.15
         }
       },
       {
@@ -19801,11 +21855,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/163",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Studio Bora Inc.",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -19815,11 +21877,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/164",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Toyste Beach",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.14,
+          "low": 0.02,
+          "trend": 0.14
         }
       },
       {
@@ -19829,11 +21899,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/165",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Uncommon",
+        "illustrator": "Toyste Beach",
+        "variants": {
+          "firstEdition": false,
+          "holo": false,
+          "normal": true,
+          "reverse": true,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -19843,11 +21921,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/166",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "Yoriyuki Ikegami",
+        "hp": 70,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 66.06,
+          "low": 33,
+          "trend": 80.25
         }
       },
       {
@@ -19857,11 +21948,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/167",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "Yoriyuki Ikegami",
+        "hp": 100,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 42.28,
+          "low": 23.94,
+          "trend": 47.63
         }
       },
       {
@@ -19871,11 +21975,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/168",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "miki kudo",
+        "hp": 70,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 79.18,
+          "low": 46,
+          "trend": 94.64
         }
       },
       {
@@ -19885,11 +22002,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/169",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "miki kudo",
+        "hp": 100,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.2,
+          "low": 0.02,
+          "trend": 0.19
         }
       },
       {
@@ -19899,11 +22029,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/170",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 60,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 72.88,
+          "low": 39.99,
+          "trend": 89.98
         }
       },
       {
@@ -19913,11 +22056,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/171",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 100,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 47.16,
+          "low": 24.97,
+          "trend": 55.33
         }
       },
       {
@@ -19927,11 +22083,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/172",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "Teeziro",
+        "hp": 50,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 14.6,
+          "low": 4,
+          "trend": 15.08
         }
       },
       {
@@ -19941,11 +22110,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/173",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "Hiroyuki Yamamoto",
+        "hp": 60,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 55.64,
+          "low": 39.74,
+          "trend": 67.34
         }
       },
       {
@@ -19955,11 +22137,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/174",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "Misaki Hashimoto",
+        "hp": 170,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -19969,11 +22164,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/175",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "Whisker",
+        "hp": 70,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 36.81,
+          "low": 18.9,
+          "trend": 42.98
         }
       },
       {
@@ -19983,11 +22191,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/176",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "Gemi",
+        "hp": 90,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 26.75,
+          "low": 20,
+          "trend": 28.17
         }
       },
       {
@@ -19997,11 +22218,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/177",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "Tetsu Kayama",
+        "hp": 100,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -20011,11 +22245,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/178",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "Oswaldo KATO",
+        "hp": 80,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -20025,11 +22272,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/179",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "OKACHEKE",
+        "hp": 90,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.06,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -20039,11 +22299,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/180",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "Yano Keiji",
+        "hp": 100,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 11.72,
+          "low": 6.49,
+          "trend": 12.88
         }
       },
       {
@@ -20053,11 +22326,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/181",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Illustration rare",
+        "illustrator": "rika",
+        "hp": 100,
+        "types": [
+          "Dragon"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 33.44,
+          "low": 24.9,
+          "trend": 38.75
         }
       },
       {
@@ -20067,11 +22353,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/182",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "PLANETA Yamashita",
+        "hp": 340,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 17.11,
+          "low": 13.99,
+          "trend": 18.49
         }
       },
       {
@@ -20081,11 +22380,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/183",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "PLANETA Mochizuki",
+        "hp": 330,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 42.17,
+          "low": 36.99,
+          "trend": 44.74
         }
       },
       {
@@ -20095,11 +22407,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/184",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "PLANETA Yamashita",
+        "hp": 330,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 21.41,
+          "low": 12.99,
+          "trend": 21.59
         }
       },
       {
@@ -20109,11 +22434,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/185",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "Eske Yoshinob",
+        "hp": 270,
+        "types": [
+          "Darkness"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 9.25,
+          "low": 7,
+          "trend": 10.27
         }
       },
       {
@@ -20123,11 +22461,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/186",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "PLANETA Tsuji",
+        "hp": 260,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 12.98,
+          "low": 5,
+          "trend": 13.88
         }
       },
       {
@@ -20137,11 +22488,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/187",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "Saki Hayashiro",
+        "hp": 250,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Stage1",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 9.66,
+          "low": 6.99,
+          "trend": 9.8
         }
       },
       {
@@ -20151,11 +22515,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/188",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "PLANETA Tsuji",
+        "hp": 310,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 12.34,
+          "low": 9,
+          "trend": 12.45
         }
       },
       {
@@ -20165,11 +22542,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/189",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "PLANETA Igarashi",
+        "hp": 330,
+        "types": [
+          "Fighting"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.94,
+          "low": 6,
+          "trend": 9.48
         }
       },
       {
@@ -20179,11 +22569,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/190",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "N-DESIGN Inc.",
+        "hp": 230,
+        "types": [
+          "Colorless"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 9.22,
+          "low": 5,
+          "trend": 9.9
         }
       },
       {
@@ -20193,11 +22596,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/191",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "Ayaka Yoshida",
+        "hp": 200,
+        "types": [
+          "Water"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 8.65,
+          "low": 5.9,
+          "trend": 9.47
         }
       },
       {
@@ -20207,11 +22623,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/192",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "takuyoa",
+        "hp": 200,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 12.18,
+          "low": 5.97,
+          "trend": 12.94
         }
       },
       {
@@ -20221,11 +22650,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/193",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "aky CG Works",
+        "hp": 180,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 25.38,
+          "low": 16.97,
+          "trend": 28.28
         }
       },
       {
@@ -20235,11 +22677,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/194",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "GIDORA",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.07,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -20249,11 +22699,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/195",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "Fumie Kittaka",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.05
         }
       },
       {
@@ -20263,11 +22721,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/196",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "saino misaki",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 9.77,
+          "low": 4,
+          "trend": 10.59
         }
       },
       {
@@ -20277,11 +22743,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/197",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Ultra Rare",
+        "illustrator": "hncl",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 7.05,
+          "low": 4,
+          "trend": 7.42
         }
       },
       {
@@ -20291,11 +22765,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/198",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Special illustration rare",
+        "illustrator": "Yoriyuki Ikegami",
+        "hp": 340,
+        "types": [
+          "Grass"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 109.47,
+          "low": 76,
+          "trend": 135.48
         }
       },
       {
@@ -20305,11 +22792,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/199",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Special illustration rare",
+        "illustrator": "miki kudo",
+        "hp": 330,
+        "types": [
+          "Fire"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 14.17,
+          "low": 10.38,
+          "trend": 22.07
         }
       },
       {
@@ -20319,11 +22819,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/200",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Special illustration rare",
+        "illustrator": "Mitsuhiro Arita",
+        "hp": 330,
+        "types": [
+          "Water"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 139.94,
+          "low": 99.84,
+          "trend": 171.91
         }
       },
       {
@@ -20333,11 +22846,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/201",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Special illustration rare",
+        "illustrator": "Shinya Komatsu",
+        "hp": 310,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Stage2",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 68.83,
+          "low": 42.7,
+          "trend": 84.1
         }
       },
       {
@@ -20347,11 +22873,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/202",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Special illustration rare",
+        "illustrator": "Shiburingaru",
+        "hp": 200,
+        "types": [
+          "Lightning"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 103.62,
+          "low": 80,
+          "trend": 116.52
         }
       },
       {
@@ -20361,11 +22900,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/203",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Special illustration rare",
+        "illustrator": "Cona Nitanda",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 19.51,
+          "low": 13,
+          "trend": 21.57
         }
       },
       {
@@ -20375,11 +22922,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/204",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Special illustration rare",
+        "illustrator": "Hideki Ishikawa",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.06
         }
       },
       {
@@ -20389,11 +22944,24 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/205",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Hyper rare",
+        "illustrator": "aky CG Works",
+        "hp": 180,
+        "types": [
+          "Psychic"
+        ],
+        "stage": "Basic",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.05,
+          "low": 0.02,
+          "trend": 0.08
         }
       },
       {
@@ -20403,11 +22971,19 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/206",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Hyper rare",
+        "illustrator": "Studio Bora Inc.",
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 0.08,
+          "low": 0.02,
+          "trend": 0.07
         }
       },
       {
@@ -20417,11 +22993,21 @@
         "image": "https://assets.tcgdex.net/en/sv/sv03.5/207",
         "set": "151",
         "setId": "sv03.5",
-        "_meta": {
-          "sources": [
-            "tcgdex"
-          ],
-          "fetchedAt": "2026-03-20T23:37:10.161Z"
+        "rarity": "Hyper rare",
+        "types": [
+          "Psychic"
+        ],
+        "variants": {
+          "firstEdition": false,
+          "holo": true,
+          "normal": false,
+          "reverse": false,
+          "wPromo": false
+        },
+        "price": {
+          "eur": 4.72,
+          "low": 1,
+          "trend": 5.41
         }
       }
     ],

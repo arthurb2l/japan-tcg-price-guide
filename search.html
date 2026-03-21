@@ -34,6 +34,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 .card-item img{width:100%;height:auto;border-radius:4px}
 .card-item .name{font-weight:600;margin-top:5px;font-size:.8em;line-height:1.2}
 .card-item .set{color:#666;font-size:.7em}
+.card-item .price{color:#2a7;font-size:.75em;font-weight:600}
 /* Checklist view */
 .card-grid.checklist{display:table;width:100%;border-collapse:collapse}
 .card-grid.checklist .card-item{display:table-row;text-align:left;padding:0;box-shadow:none;border-radius:0}
@@ -44,6 +45,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 .card-grid.checklist .card-item .set{font-size:.85em;width:25%}
 .card-grid.checklist .card-item .id{font-size:.8em;color:#666;font-family:monospace}
 .card-grid.checklist .card-item .rarity{font-size:.8em;color:#888}
+.card-grid.checklist .card-item .price{font-size:.85em;color:#2a7;font-weight:600;text-align:right}
 /* Text view */
 .card-grid.text{display:flex;flex-direction:column;gap:15px}
 .card-grid.text .card-item{text-align:left;padding:15px;display:block}
@@ -102,6 +104,8 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
       <option value="name">Name</option>
       <option value="set">Set</option>
       <option value="rarity">Rarity</option>
+      <option value="price-high">Price: High → Low</option>
+      <option value="price-low">Price: Low → High</option>
     </select>
   </div>
   <span class="stats" id="stats">Loading...</span>
@@ -127,6 +131,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
         <dt>Set</dt><dd id="modal-set"></dd>
         <dt>Card ID</dt><dd id="modal-id"></dd>
         <dt>Rarity</dt><dd id="modal-rarity"></dd>
+        <dt>Price (EUR)</dt><dd id="modal-price"></dd>
       </dl>
     </div>
   </div>
@@ -201,12 +206,13 @@ function renderCards() {
         <span class="set">${c.set || c.setId}</span>
         <span class="id">${c.id}</span>
         <span class="rarity">${c.rarity || '-'}</span>
+        <span class="price">${c.price ? '€' + c.price.eur.toFixed(2) : '-'}</span>
       </div>
     `).join('');
   } else if (currentView === 'text') {
     grid.innerHTML = cards.map(c => `
       <div class="card-item" onclick="showCard('${c.id}')">
-        <div class="name">${c.name}</div>
+        <div class="name">${c.name}${c.price ? ' · €' + c.price.eur.toFixed(2) : ''}</div>
         <div class="set">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown rarity'}</div>
         <div class="details">${c.types ? 'Type: ' + c.types.join(', ') : ''} ${c.hp ? '· HP: ' + c.hp : ''}</div>
       </div>
@@ -217,6 +223,7 @@ function renderCards() {
         <img src="${c.image}/low.webp" alt="${c.name}" loading="lazy">
         <div class="name">${c.name}</div>
         <div class="set">${c.setId}</div>
+        ${c.price ? '<div class="price">€' + c.price.eur.toFixed(2) + '</div>' : ''}
       </div>
     `).join('');
   }
@@ -249,8 +256,10 @@ function sortCards(by) {
     if (by === 'rarity') {
       const ai = rarityOrder.indexOf(a.rarity) === -1 ? 99 : rarityOrder.indexOf(a.rarity);
       const bi = rarityOrder.indexOf(b.rarity) === -1 ? 99 : rarityOrder.indexOf(b.rarity);
-      return bi - ai; // Higher rarity first
+      return bi - ai;
     }
+    if (by === 'price-high') return (b.price?.eur || 0) - (a.price?.eur || 0);
+    if (by === 'price-low') return (a.price?.eur || 999999) - (b.price?.eur || 999999);
     return 0;
   });
   renderCards();
@@ -273,6 +282,7 @@ function showCard(id) {
   document.getElementById('modal-set').textContent = card.set || card.setId;
   document.getElementById('modal-id').textContent = card.id;
   document.getElementById('modal-rarity').textContent = card.rarity || '-';
+  document.getElementById('modal-price').textContent = card.price ? `€${card.price.eur.toFixed(2)} (low: €${card.price.low.toFixed(2)})` : 'No price data';
   document.getElementById('modal').classList.add('active');
 }
 

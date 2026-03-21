@@ -15,8 +15,8 @@ const BASE_URL = 'https://api.tcgdex.net/v2/en';
 // Popular sets for Japan tourists
 const DEFAULT_SETS = ['sv03.5', 'sv04.5', 'sv08.5', 'sv01', 'sv02', 'sv03', 'sv04', 'sv05', 'sv06', 'sv07', 'sv08'];
 
-async function fetchSet(setId) {
-  console.log(`Fetching ${setId}...`);
+async function fetchSet(setId, detailed = false) {
+  console.log(`Fetching ${setId}${detailed ? ' (detailed)' : ''}...`);
   const set = await fetchJson(`${BASE_URL}/sets/${setId}`);
   
   if (!set.cards?.length) {
@@ -24,23 +24,44 @@ async function fetchSet(setId) {
     return [];
   }
   
-  // Use basic card data from set endpoint (faster than individual fetches)
-  const cards = set.cards.map(card => ({
-    id: card.id,
-    name: card.name,
-    localId: card.localId,
-    image: card.image,
-    set: set.name,
-    setId: setId,
-    _meta: { sources: ['tcgdex'], fetchedAt: new Date().toISOString() }
-  }));
+  let cards;
+  if (detailed) {
+    // Fetch full details for each card (slower but includes pricing)
+    cards = [];
+    for (const c of set.cards) {
+      try {
+        const full = await fetchJson(`${BASE_URL}/cards/${c.id}`);
+        cards.push({
+          id: full.id, name: full.name, localId: full.localId, image: full.image,
+          set: set.name, setId, rarity: full.rarity, illustrator: full.illustrator,
+          hp: full.hp, types: full.types, stage: full.stage,
+          variants: full.variants,
+          price: full.pricing?.cardmarket ? {
+            eur: full.pricing.cardmarket.avg,
+            low: full.pricing.cardmarket.low,
+            trend: full.pricing.cardmarket.trend
+          } : null
+        });
+        process.stdout.write('.');
+      } catch (e) { process.stdout.write('x'); }
+    }
+    console.log();
+  } else {
+    // Basic data from set endpoint (faster)
+    cards = set.cards.map(card => ({
+      id: card.id, name: card.name, localId: card.localId, image: card.image,
+      set: set.name, setId
+    }));
+  }
   
   console.log(`  Got ${cards.length} cards from ${set.name}`);
   return cards;
 }
 
 async function main() {
-  const sets = process.argv.slice(2).length ? process.argv.slice(2) : DEFAULT_SETS;
+  const args = process.argv.slice(2);
+  const detailed = args.includes('--detailed');
+  const sets = args.filter(a => !a.startsWith('--')).length ? args.filter(a => !a.startsWith('--')) : DEFAULT_SETS;
   
   // Load existing cache
   let cache = { updated: new Date().toISOString(), sets: {} };
@@ -51,7 +72,7 @@ async function main() {
   // Fetch each set
   for (const setId of sets) {
     try {
-      const cards = await fetchSet(setId);
+      const cards = await fetchSet(setId, detailed);
       if (cards.length) {
         cache.sets[setId] = cards;
       }
