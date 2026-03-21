@@ -183,10 +183,21 @@ async function loadCards() {
   if (saved) { currency = saved; document.getElementById('currency').value = saved; }
   
   try {
-    // Load Pokemon cards
-    const pokemonRes = await fetch('data/brain-cache.json');
-    const pokemonData = await pokemonRes.json();
-    const pokemonCards = Object.values(pokemonData.sets).flat().map(c => ({...c, game: 'pokemon'}));
+    // Try sharded data first, fallback to monolithic
+    let pokemonCards = [];
+    try {
+      const manifest = await fetch('data/shards/manifest.json').then(r => r.json());
+      const shardPromises = Object.values(manifest.shards).map(s => 
+        fetch(`data/shards/${s.file}`).then(r => r.json())
+      );
+      const shards = await Promise.all(shardPromises);
+      pokemonCards = shards.flatMap(s => Object.values(s.sets).flat()).map(c => ({...c, game: 'pokemon'}));
+    } catch(e) {
+      // Fallback to monolithic
+      const pokemonRes = await fetch('data/brain-cache.json');
+      const pokemonData = await pokemonRes.json();
+      pokemonCards = Object.values(pokemonData.sets).flat().map(c => ({...c, game: 'pokemon'}));
+    }
     
     // Load One Piece cards
     let opCards = [];

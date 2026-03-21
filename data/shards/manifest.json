@@ -1,0 +1,35 @@
+{
+  "lastUpdated": "2026-03-21T07:29:56.373Z",
+  "shards": {
+    "sv": {
+      "file": "sv.json",
+      "cards": 3633,
+      "sets": 17,
+      "size": 1170101
+    },
+    "vintage": {
+      "file": "vintage.json",
+      "cards": 1070,
+      "sets": 11,
+      "size": 384154
+    },
+    "swsh": {
+      "file": "swsh.json",
+      "cards": 3313,
+      "sets": 16,
+      "size": 673189
+    },
+    "sm": {
+      "file": "sm.json",
+      "cards": 1536,
+      "sets": 7,
+      "size": 542745
+    },
+    "xy": {
+      "file": "xy.json",
+      "cards": 1520,
+      "sets": 12,
+      "size": 316374
+    }
+  }
+}
