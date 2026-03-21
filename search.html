@@ -223,15 +223,8 @@ async function loadCards() {
     
     allCards = [...pokemonCards, ...opCards];
     
-    // Populate set filter
-    const sets = [...new Set(allCards.map(c => c.setId))].sort();
-    const setFilter = document.getElementById('set-filter');
-    sets.forEach(s => {
-      const opt = document.createElement('option');
-      opt.value = s;
-      opt.textContent = allCards.find(c => c.setId === s)?.set || s;
-      setFilter.appendChild(opt);
-    });
+    // Populate set filter (respects game filter)
+    filterByGame(currentGame);
     
     // Check URL params
     const params = new URLSearchParams(location.search);
