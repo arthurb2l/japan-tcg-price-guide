@@ -9,10 +9,20 @@
 <link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
 <style>
 /* Nav */
-.nav{background:#fff;border-bottom:1px solid #ddd;padding:10px 15px;margin:-10px -10px 0;display:flex;align-items:center;gap:15px}
+.nav{background:#fff;border-bottom:1px solid #ddd;padding:10px 15px;margin:-10px -10px 0;display:flex;align-items:center;gap:15px;flex-wrap:wrap}
 .nav a{color:#666;text-decoration:none;font-size:.9em}
 .nav a:hover{color:#EE1515}
 .nav .sep{color:#ddd}
+/* Game tabs */
+.game-tabs{display:flex;gap:0;margin:0 auto 0 15px}
+.game-tab{padding:8px 16px;border:2px solid #ddd;background:#fff;cursor:pointer;font-size:.85em;font-weight:600;transition:all .15s}
+.game-tab:first-child{border-radius:6px 0 0 6px}
+.game-tab:last-child{border-radius:0 6px 6px 0}
+.game-tab:not(:first-child){border-left:none}
+.game-tab:hover{border-color:#EE1515;color:#EE1515}
+.game-tab.active{background:#EE1515;color:#fff;border-color:#EE1515}
+.game-tab.pokemon.active{background:#EE1515;border-color:#EE1515}
+.game-tab.onepiece.active{background:#E21A22;border-color:#E21A22}
 /* Search header */
 .search-header{background:#fff;border-bottom:1px solid #ddd;padding:15px;position:sticky;top:0;z-index:100}
 .search-row{display:flex;gap:10px;max-width:700px;margin:0 auto}
@@ -84,15 +94,16 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 
 <div class="nav">
   <a href="index.html">← Home</a>
-  <span class="sep">·</span>
-  <a href="pokemon/">Pokemon</a>
-  <span class="sep">·</span>
-  <a href="onepiece/">One Piece</a>
+  <div class="game-tabs">
+    <button class="game-tab active" data-game="all" onclick="filterByGame('all')">All</button>
+    <button class="game-tab pokemon" data-game="pokemon" onclick="filterByGame('pokemon')">Pokemon</button>
+    <button class="game-tab onepiece" data-game="onepiece" onclick="filterByGame('onepiece')">One Piece</button>
+  </div>
   <span style="margin-left:auto">
     <select id="currency" onchange="setCurrency(this.value)" style="padding:4px 8px;border:1px solid #ddd;border-radius:4px;font-size:.8em">
-      <option value="EUR">€ EUR</option>
-      <option value="USD">$ USD</option>
       <option value="JPY">¥ JPY</option>
+      <option value="USD">$ USD</option>
+      <option value="EUR">€ EUR</option>
     </select>
   </span>
 </div>
@@ -159,16 +170,19 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 </div>
 
 <script>
-let allCards = [], filteredCards = [], currentView = 'grid', currency = 'EUR';
+let allCards = [], filteredCards = [], currentView = 'grid', currency = 'JPY', currentGame = 'all';
 const rarityOrder = ['Common','Uncommon','Rare','Double Rare','Ultra Rare','Illustration Rare','Special Art Rare','Hyper Rare','Shiny Rare','ACE SPEC Rare'];
-// Static rates (updated periodically) - EUR base
-const rates = { EUR: 1, USD: 1.08, JPY: 162 };
+// Static rates - JPY base (primary currency for Japan tourists)
+const rates = { JPY: 1, USD: 0.0067, EUR: 0.0062 };
 
-function formatPrice(eurPrice) {
-  if (!eurPrice) return '-';
-  const converted = eurPrice * rates[currency];
-  const symbol = currency === 'EUR' ? '€' : currency === 'USD' ? '$' : '¥';
-  return currency === 'JPY' ? symbol + Math.round(converted).toLocaleString() : symbol + converted.toFixed(2);
+function formatPrice(card) {
+  // Prefer JPY if available (One Piece), otherwise convert from EUR (Pokemon)
+  let jpy = card.price?.jpy || (card.price?.eur ? Math.round(card.price.eur * 162) : null);
+  if (!jpy) return '-';
+  
+  if (currency === 'JPY') return '¥' + jpy.toLocaleString();
+  if (currency === 'USD') return '$' + (jpy * rates.USD).toFixed(2);
+  return '€' + (jpy * rates.EUR).toFixed(2);
 }
 
 function setCurrency(c) {
@@ -273,13 +287,13 @@ function renderCards() {
         <span class="set">${c.set || c.setId}</span>
         <span class="id">${c.id}</span>
         <span class="rarity">${c.rarity || '-'}</span>
-        <span class="price">${formatPrice(c.price?.eur)}</span>
+        <span class="price">${formatPrice(c)}</span>
       </div>
     `).join('');
   } else if (currentView === 'text') {
     grid.innerHTML = cards.map(c => `
       <div class="card-item" onclick="showCard('${c.id}')">
-        <div class="name">${c.name}${jpName(c)}${c.price ? ' · ' + formatPrice(c.price.eur) : ''}</div>
+        <div class="name">${c.name}${jpName(c)}${c.price ? ' · ' + formatPrice(c) : ''}</div>
         <div class="set">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown rarity'}${variant(c)}</div>
         <div class="details">${c.types ? 'Type: ' + c.types.join(', ') : ''} ${c.hp ? '· HP: ' + c.hp : ''}</div>
       </div>
@@ -293,7 +307,7 @@ function renderCards() {
           <div class="meta">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown'}${variant(c)}</div>
           ${c.types ? '<div class="types">' + c.types.map(t => '<span class="type-badge">' + t + '</span>').join('') + '</div>' : ''}
           ${c.hp ? '<div class="meta">HP: ' + c.hp + '</div>' : ''}
-          ${c.price ? '<div class="price">' + formatPrice(c.price.eur) + (c.price.low ? ' <span style="color:#888;font-weight:400">(low: ' + formatPrice(c.price.low) + ')</span>' : '') + '</div>' : ''}
+          ${c.price ? '<div class="price">' + formatPrice(c) + '</div>' : ''}
         </div>
       </div>
     `).join('');
@@ -303,28 +317,34 @@ function renderCards() {
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy">
         <div class="name">${c.name}${jpName(c)}</div>
         <div class="set">${c.setId}</div>
-        ${c.price ? '<div class="price">' + formatPrice(c.price.eur) + '</div>' : ''}
+        ${c.price ? '<div class="price">' + formatPrice(c) + '</div>' : ''}
       </div>
     `).join('');
   }
   updateStats();
 }
 
+function getGameCards() {
+  return currentGame === 'all' ? allCards : allCards.filter(c => c.game === currentGame);
+}
+
 function doSearch() {
   const query = document.getElementById('search').value.toLowerCase().trim();
-  filteredCards = query ? allCards.filter(c => 
+  const gameCards = getGameCards();
+  filteredCards = query ? gameCards.filter(c => 
     c.name?.toLowerCase().includes(query) ||
     c.id?.toLowerCase().includes(query) ||
     c.set?.toLowerCase().includes(query) ||
     c.setId?.toLowerCase().includes(query)
-  ) : allCards;
+  ) : gameCards;
   document.getElementById('set-filter').value = '';
   sortCards(document.getElementById('sort').value);
 }
 
 function filterBySet(setId) {
   document.getElementById('search').value = '';
-  filteredCards = setId ? allCards.filter(c => c.setId === setId) : allCards;
+  const gameCards = getGameCards();
+  filteredCards = setId ? gameCards.filter(c => c.setId === setId) : gameCards;
   sortCards(document.getElementById('sort').value);
 }
 
@@ -353,16 +373,48 @@ function setView(view) {
   renderCards();
 }
 
+function filterByGame(game) {
+  currentGame = game;
+  document.querySelectorAll('.game-tab').forEach(t => t.classList.toggle('active', t.dataset.game === game));
+  
+  // Update set filter to only show sets from selected game
+  const setFilter = document.getElementById('set-filter');
+  const currentSet = setFilter.value;
+  setFilter.innerHTML = '<option value="">All Sets</option>';
+  
+  const gameCards = game === 'all' ? allCards : allCards.filter(c => c.game === game);
+  const sets = [...new Set(gameCards.map(c => c.setId))].sort();
+  sets.forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s;
+    opt.textContent = gameCards.find(c => c.setId === s)?.set || s;
+    setFilter.appendChild(opt);
+  });
+  
+  // Re-apply current search/filter
+  if (document.getElementById('search').value) {
+    doSearch();
+  } else if (currentSet && sets.includes(currentSet)) {
+    setFilter.value = currentSet;
+    filterBySet(currentSet);
+  } else {
+    setFilter.value = '';
+    filteredCards = gameCards;
+    sortCards(document.getElementById('sort').value);
+  }
+}
+
 function showCard(id) {
   const card = allCards.find(c => c.id === id);
   if (!card) return;
+  const getImgHigh = c => c.game === 'onepiece' ? (c.img || 'onepiece/images/card-back.png') : c.image + '/high.webp';
   document.getElementById('modal-title').textContent = card.name;
-  document.getElementById('modal-img').src = card.image + '/high.webp';
-  document.getElementById('modal-name').textContent = card.name;
+  document.getElementById('modal-img').src = getImgHigh(card);
+  document.getElementById('modal-name').textContent = card.name + (card.nameJp ? ' ' + card.nameJp : '');
   document.getElementById('modal-set').textContent = card.set || card.setId;
   document.getElementById('modal-id').textContent = card.id;
   document.getElementById('modal-rarity').textContent = card.rarity || '-';
-  document.getElementById('modal-price').textContent = card.price ? `${formatPrice(card.price.eur)} (low: ${formatPrice(card.price.low)})` : 'No price data';
+  document.getElementById('modal-price').textContent = card.price ? formatPrice(card) : 'No price data';
   document.getElementById('modal').classList.add('active');
 }
 

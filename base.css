@@ -23,3 +23,10 @@ h1,h2,h3{margin:15px 0 10px}
 .footer-legal{text-align:center;padding-top:20px;border-top:1px solid #444;font-size:.8em;line-height:1.8}
 .footer-legal a{color:#aaa}
 .footer-legal a:hover{color:#fff}
+@media(max-width:500px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:20px 15px}
+  .footer-col h4{font-size:.8em;margin-bottom:8px}
+  .footer-col a{font-size:.85em;padding:3px 0}
+  .footer-legal{font-size:.75em;line-height:1.6}
+  .footer-legal p{margin:5px 0}
+}
