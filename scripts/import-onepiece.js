@@ -56,12 +56,12 @@ async function importCards() {
       setNames[setId] = setName;
     }
     
-    // Transform to our format
+    // Transform to our format (setId for compatibility with search.html)
     const transformed = {
       id: normalizeId(card.CardNum),
       name: card.Name,
-      set: setId,
-      setName: setName,
+      set: setName,
+      setId: setId,
       rarity: card.Rarity,
       type: card.CardType,
       color: card.Color,
