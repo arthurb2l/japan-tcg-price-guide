@@ -98,24 +98,36 @@ async function importCards() {
     finalSets[setId] = sets[setId];
   }
   
-  // PRESERVE EXISTING PRICING - load old cache and merge prices
+  // PRESERVE EXISTING DATA - load old cache
   let existingPrices = {};
+  let existingSets = {};
   if (fs.existsSync(CACHE_FILE)) {
     try {
       const oldData = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
+      // Preserve prices
       for (const cards of Object.values(oldData.sets || {})) {
         for (const card of cards) {
           if (card.pricing) existingPrices[card.id] = card.pricing;
         }
       }
-      console.log(`\nPreserving ${Object.keys(existingPrices).length} existing prices`);
-    } catch(e) { console.log('No existing prices to preserve'); }
+      // Preserve sets not in upstream (DON, variants, etc.)
+      existingSets = oldData.sets || {};
+      console.log(`\nPreserving ${Object.keys(existingPrices).length} prices, ${Object.keys(existingSets).length} existing sets`);
+    } catch(e) { console.log('No existing data to preserve'); }
   }
   
   // Apply preserved prices to new data
   for (const setId of Object.keys(finalSets)) {
     for (const card of finalSets[setId]) {
       if (existingPrices[card.id]) card.pricing = existingPrices[card.id];
+    }
+  }
+  
+  // Merge: keep existing sets that aren't in upstream, update ones that are
+  for (const setId of Object.keys(existingSets)) {
+    if (!finalSets[setId]) {
+      finalSets[setId] = existingSets[setId];
+      console.log(`  Kept existing set: ${setId} (${existingSets[setId].length} cards)`);
     }
   }
   
