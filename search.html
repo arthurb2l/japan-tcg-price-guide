@@ -474,9 +474,10 @@ async function loadCards() {
       document.getElementById('set-filter').value = params.get('set');
       filterBySet(params.get('set'));
     } else if (params.get('random')) {
-      const card = allCards[Math.floor(Math.random() * allCards.length)];
+      const gameCards = getGameCards();
+      const card = gameCards[Math.floor(Math.random() * gameCards.length)];
       showCard(card.id);
-      filteredCards = allCards;
+      filteredCards = gameCards;
       renderCards();
     } else {
       filteredCards = allCards;
@@ -738,11 +739,11 @@ function showCard(id, isEn) {
   if (!card) return;
   currentCard = card;
   
-  const proxyImg = url => url?.startsWith('https://onepiece-cardgame.com') || url?.startsWith('https://www.onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
-  const getImg = c => isEn && c.imgEn ? proxyImg(c.imgEn) : (c.imgJp || c.imgHigh || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/high.webp') || 'onepiece/images/card-back.png');
+  const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
+  const getImg = c => isEn && c.imgEn ? proxyImg(c.imgEn) : proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/high.webp') || 'onepiece/images/card-back.png';
   
   document.getElementById('modal-title').textContent = card.name;
-  document.getElementById('modal-img').src = proxyImg(getImg(card));
+  document.getElementById('modal-img').src = getImg(card);
   document.getElementById('modal-name').textContent = card.name + (card.nameJp ? ' ' + card.nameJp : '');
   document.getElementById('modal-set').textContent = card.set || card.setId;
   document.getElementById('modal-id').textContent = card.id;

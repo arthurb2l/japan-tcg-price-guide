@@ -22977,7 +22977,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-001_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-001_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "LEADER",
+        "color": "Red",
+        "power": 5000,
+        "cost": 5,
+        "counter": null,
+        "trait": "The Four Emperors/Red-Haired Pirates"
       },
       {
         "id": "OP09-001-p2",
@@ -23020,7 +23026,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-001_p3.png",
         "imgEn": null,
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "LEADER",
+        "color": "Red",
+        "power": 5000,
+        "cost": 5,
+        "counter": null,
+        "trait": "The Four Emperors/Red-Haired Pirates"
       },
       {
         "id": "OP09-002",
@@ -23035,7 +23047,7 @@
       },
       {
         "id": "OP09-002-p1",
-        "name": "OP09-002-p1",
+        "name": "OP09-002",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23047,7 +23059,7 @@
       },
       {
         "id": "OP09-002-p2",
-        "name": "OP09-002-p2",
+        "name": "OP09-002",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23099,7 +23111,7 @@
       },
       {
         "id": "OP09-004-p1",
-        "name": "OP09-004-p1",
+        "name": "OP09-004",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23111,7 +23123,7 @@
       },
       {
         "id": "OP09-004-p2",
-        "name": "OP09-004-p2",
+        "name": "OP09-004",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23123,7 +23135,7 @@
       },
       {
         "id": "OP09-004-p3",
-        "name": "OP09-004-p3",
+        "name": "OP09-004",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23135,7 +23147,7 @@
       },
       {
         "id": "OP09-004-p4",
-        "name": "OP09-004-p4",
+        "name": "OP09-004",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23158,7 +23170,7 @@
       },
       {
         "id": "OP09-005-p1",
-        "name": "OP09-005-p1",
+        "name": "OP09-005",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23266,7 +23278,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-008_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-008_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 2000,
+        "cost": 1,
+        "counter": null,
+        "trait": "Red-Haired Pirates"
       },
       {
         "id": "OP09-009",
@@ -23281,7 +23299,7 @@
       },
       {
         "id": "OP09-009-p1",
-        "name": "OP09-009-p1",
+        "name": "OP09-009",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23293,7 +23311,7 @@
       },
       {
         "id": "OP09-009-p2",
-        "name": "OP09-009-p2",
+        "name": "OP09-009",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23471,7 +23489,7 @@
       },
       {
         "id": "OP09-013-p1",
-        "name": "OP09-013-p1",
+        "name": "OP09-013",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23494,7 +23512,7 @@
       },
       {
         "id": "OP09-014-p2",
-        "name": "OP09-014-p2",
+        "name": "OP09-014",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23506,7 +23524,7 @@
       },
       {
         "id": "OP09-014-p3",
-        "name": "OP09-014-p3",
+        "name": "OP09-014",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23657,7 +23675,7 @@
       },
       {
         "id": "OP09-020-p1",
-        "name": "OP09-020-p1",
+        "name": "OP09-020",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23669,7 +23687,7 @@
       },
       {
         "id": "OP09-020-p2",
-        "name": "OP09-020-p2",
+        "name": "OP09-020",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23779,7 +23797,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-022_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-022_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "LEADER",
+        "color": "Green/Purple",
+        "power": 5000,
+        "cost": 4,
+        "counter": null,
+        "trait": "ODYSSEY"
       },
       {
         "id": "OP09-023",
@@ -23852,7 +23876,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-023_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-023_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Green",
+        "power": 9000,
+        "cost": 9,
+        "counter": null,
+        "trait": "ODYSSEY"
       },
       {
         "id": "OP09-024",
@@ -23954,7 +23984,7 @@
       },
       {
         "id": "OP09-027-p1",
-        "name": "OP09-027-p1",
+        "name": "OP09-027",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23966,7 +23996,7 @@
       },
       {
         "id": "OP09-027-p2",
-        "name": "OP09-027-p2",
+        "name": "OP09-027",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24134,7 +24164,7 @@
       },
       {
         "id": "OP09-033-p1",
-        "name": "OP09-033-p1",
+        "name": "OP09-033",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24215,7 +24245,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-034_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-034_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Green",
+        "power": 2000,
+        "cost": 1,
+        "counter": 2000,
+        "trait": "Muggy Kingdom/Thriller Bark Pirates"
       },
       {
         "id": "OP09-034-p2",
@@ -24227,7 +24263,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-034_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-034_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Green",
+        "power": 2000,
+        "cost": 1,
+        "counter": 2000,
+        "trait": "Muggy Kingdom/Thriller Bark Pirates"
       },
       {
         "id": "OP09-035",
@@ -24301,7 +24343,7 @@
       },
       {
         "id": "OP09-037-p1",
-        "name": "OP09-037-p1",
+        "name": "OP09-037",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24313,7 +24355,7 @@
       },
       {
         "id": "OP09-037-p2",
-        "name": "OP09-037-p2",
+        "name": "OP09-037",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24511,7 +24553,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-042_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-042_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "LEADER",
+        "color": "Blue",
+        "power": 5000,
+        "cost": 5,
+        "counter": null,
+        "trait": "The Four Emperors/Cross Guild"
       },
       {
         "id": "OP09-042-p2",
@@ -24554,7 +24602,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-042_p3.png",
         "imgEn": null,
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "LEADER",
+        "color": "Blue",
+        "power": 5000,
+        "cost": 5,
+        "counter": null,
+        "trait": "The Four Emperors/Cross Guild"
       },
       {
         "id": "OP09-043",
@@ -24599,7 +24653,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-043_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-043_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 6000,
+        "cost": 5,
+        "counter": 1000,
+        "trait": "Cross Guild"
       },
       {
         "id": "OP09-044",
@@ -24673,7 +24733,7 @@
       },
       {
         "id": "OP09-046-p1",
-        "name": "OP09-046-p1",
+        "name": "OP09-046",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24725,7 +24785,7 @@
       },
       {
         "id": "OP09-048-p1",
-        "name": "OP09-048-p1",
+        "name": "OP09-048",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24836,7 +24896,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-050_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-050_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 1000,
+        "cost": 1,
+        "counter": 1000,
+        "trait": "East Blue"
       },
       {
         "id": "OP09-050-p2",
@@ -24848,7 +24914,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-050_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-050_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 1000,
+        "cost": 1,
+        "counter": 1000,
+        "trait": "East Blue"
       },
       {
         "id": "OP09-051",
@@ -24863,7 +24935,7 @@
       },
       {
         "id": "OP09-051-p1",
-        "name": "OP09-051-p1",
+        "name": "OP09-051",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24875,7 +24947,7 @@
       },
       {
         "id": "OP09-051-p2",
-        "name": "OP09-051-p2",
+        "name": "OP09-051",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24887,7 +24959,7 @@
       },
       {
         "id": "OP09-051-p3",
-        "name": "OP09-051-p3",
+        "name": "OP09-051",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24899,7 +24971,7 @@
       },
       {
         "id": "OP09-051-p4",
-        "name": "OP09-051-p4",
+        "name": "OP09-051",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25041,7 +25113,7 @@
       },
       {
         "id": "OP09-056-p1",
-        "name": "OP09-056-p1",
+        "name": "OP09-056",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25064,7 +25136,7 @@
       },
       {
         "id": "OP09-057-p1",
-        "name": "OP09-057-p1",
+        "name": "OP09-057",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25076,7 +25148,7 @@
       },
       {
         "id": "OP09-057-p2",
-        "name": "OP09-057-p2",
+        "name": "OP09-057",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25245,7 +25317,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-061_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-061_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "LEADER",
+        "color": "Purple/Black",
+        "power": 5000,
+        "cost": 4,
+        "counter": null,
+        "trait": "The Four Emperors/Straw Hat Crew"
       },
       {
         "id": "OP09-061-p2",
@@ -25288,7 +25366,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-061_p3.png",
         "imgEn": null,
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "LEADER",
+        "color": "Purple/Black",
+        "power": 5000,
+        "cost": 4,
+        "counter": null,
+        "trait": "The Four Emperors/Straw Hat Crew"
       },
       {
         "id": "OP09-062",
@@ -25361,7 +25445,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-062_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-062_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "LEADER",
+        "color": "Purple/Yellow",
+        "power": 5000,
+        "cost": 4,
+        "counter": null,
+        "trait": "Straw Hat Crew"
       },
       {
         "id": "OP09-063",
@@ -25435,7 +25525,7 @@
       },
       {
         "id": "OP09-065-p1",
-        "name": "OP09-065-p1",
+        "name": "OP09-065",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25447,7 +25537,7 @@
       },
       {
         "id": "OP09-065-p2",
-        "name": "OP09-065-p2",
+        "name": "OP09-065",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25557,7 +25647,7 @@
       },
       {
         "id": "OP09-069-p1",
-        "name": "OP09-069-p1",
+        "name": "OP09-069",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25569,7 +25659,7 @@
       },
       {
         "id": "OP09-069-p2",
-        "name": "OP09-069-p2",
+        "name": "OP09-069",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25650,7 +25740,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-070_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-070_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 2000,
+        "cost": 3,
+        "counter": 2000,
+        "trait": "Straw Hat Crew"
       },
       {
         "id": "OP09-071",
@@ -25694,7 +25790,7 @@
       },
       {
         "id": "OP09-072-p1",
-        "name": "OP09-072-p1",
+        "name": "OP09-072",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25804,7 +25900,7 @@
       },
       {
         "id": "OP09-076-p1",
-        "name": "OP09-076-p1",
+        "name": "OP09-076",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25816,7 +25912,7 @@
       },
       {
         "id": "OP09-076-p2",
-        "name": "OP09-076-p2",
+        "name": "OP09-076",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25839,7 +25935,7 @@
       },
       {
         "id": "OP09-077-p1",
-        "name": "OP09-077-p1",
+        "name": "OP09-077",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25851,7 +25947,7 @@
       },
       {
         "id": "OP09-077-p2",
-        "name": "OP09-077-p2",
+        "name": "OP09-077",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25874,7 +25970,7 @@
       },
       {
         "id": "OP09-078-p1",
-        "name": "OP09-078-p1",
+        "name": "OP09-078",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25886,7 +25982,7 @@
       },
       {
         "id": "OP09-078-p2",
-        "name": "OP09-078-p2",
+        "name": "OP09-078",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25909,7 +26005,7 @@
       },
       {
         "id": "OP09-079-p1",
-        "name": "OP09-079-p1",
+        "name": "OP09-079",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26020,7 +26116,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-081_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-081_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "LEADER",
+        "color": "Black",
+        "power": 5000,
+        "cost": 5,
+        "counter": null,
+        "trait": "The Four Emperors/Blackbeard Pirates"
       },
       {
         "id": "OP09-081-p2",
@@ -26063,7 +26165,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-081_p3.png",
         "imgEn": null,
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "LEADER",
+        "color": "Black",
+        "power": 5000,
+        "cost": 5,
+        "counter": null,
+        "trait": "The Four Emperors/Blackbeard Pirates"
       },
       {
         "id": "OP09-082",
@@ -26137,7 +26245,7 @@
       },
       {
         "id": "OP09-084-p1",
-        "name": "OP09-084-p1",
+        "name": "OP09-084",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26189,7 +26297,7 @@
       },
       {
         "id": "OP09-086-p1",
-        "name": "OP09-086-p1",
+        "name": "OP09-086",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26301,7 +26409,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-089_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-089_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Black",
+        "power": null,
+        "cost": 1,
+        "counter": 2000,
+        "trait": "Animal/Blackbeard Pirates"
       },
       {
         "id": "OP09-090",
@@ -26405,7 +26519,7 @@
       },
       {
         "id": "OP09-093-p1",
-        "name": "OP09-093-p1",
+        "name": "OP09-093",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26417,7 +26531,7 @@
       },
       {
         "id": "OP09-093-p2",
-        "name": "OP09-093-p2",
+        "name": "OP09-093",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26429,7 +26543,7 @@
       },
       {
         "id": "OP09-093-p3",
-        "name": "OP09-093-p3",
+        "name": "OP09-093",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26441,7 +26555,7 @@
       },
       {
         "id": "OP09-093-p4",
-        "name": "OP09-093-p4",
+        "name": "OP09-093",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26551,7 +26665,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-095_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-095_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Black",
+        "power": 1000,
+        "cost": 1,
+        "counter": 1000,
+        "trait": "Blackbeard Pirates"
       },
       {
         "id": "OP09-096",
@@ -26566,7 +26686,7 @@
       },
       {
         "id": "OP09-096-p1",
-        "name": "OP09-096-p1",
+        "name": "OP09-096",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26589,7 +26709,7 @@
       },
       {
         "id": "OP09-097-p1",
-        "name": "OP09-097-p1",
+        "name": "OP09-097",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26612,7 +26732,7 @@
       },
       {
         "id": "OP09-098-p1",
-        "name": "OP09-098-p1",
+        "name": "OP09-098",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26810,7 +26930,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-103_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-103_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Yellow",
+        "power": 6000,
+        "cost": 6,
+        "counter": null,
+        "trait": "Revolutionary Army"
       },
       {
         "id": "OP09-104",
@@ -26946,7 +27072,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-106_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-106_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Yellow",
+        "power": null,
+        "cost": 1,
+        "counter": 2000,
+        "trait": "Ohara"
       },
       {
         "id": "OP09-107",
@@ -27019,7 +27151,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-107_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-107_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Yellow",
+        "power": 6000,
+        "cost": 6,
+        "counter": 1000,
+        "trait": "Straw Hat Crew"
       },
       {
         "id": "OP09-108",
@@ -27385,7 +27523,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-117_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-117_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "EVENT",
+        "color": "Yellow",
+        "power": null,
+        "cost": 3,
+        "counter": null,
+        "trait": "Ohara"
       },
       {
         "id": "OP09-118",
@@ -27400,7 +27544,7 @@
       },
       {
         "id": "OP09-118-p1",
-        "name": "OP09-118-p1",
+        "name": "OP09-118",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -27412,7 +27556,7 @@
       },
       {
         "id": "OP09-118-p2",
-        "name": "OP09-118-p2",
+        "name": "OP09-118",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -27424,7 +27568,7 @@
       },
       {
         "id": "OP09-118-p3",
-        "name": "OP09-118-p3",
+        "name": "OP09-118",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -27447,7 +27591,7 @@
       },
       {
         "id": "OP09-119-p1",
-        "name": "OP09-119-p1",
+        "name": "OP09-119",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -27459,7 +27603,7 @@
       },
       {
         "id": "OP09-119-p2",
-        "name": "OP09-119-p2",
+        "name": "OP09-119",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -27471,7 +27615,7 @@
       },
       {
         "id": "OP09-119-p3",
-        "name": "OP09-119-p3",
+        "name": "OP09-119",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
