@@ -1,38 +1,38 @@
-MIT License
+# License
 
-Copyright (c) 2026 Japan TCG Price Guide
+## Source Code License (CC BY-NC-SA 4.0)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+The source code of this project (HTML, CSS, JavaScript) is licensed under the 
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+You are free to:
+- **Share** — copy and redistribute the material in any medium or format
+- **Adapt** — remix, transform, and build upon the material
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Under the following terms:
+- **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+- **NonCommercial** — You may not use the material for commercial purposes.
+- **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license.
+
+Full license: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+## Data Files
+
+The card data files (JSON files in `/data/`) are compiled from multiple sources:
+- Card names, images, and metadata: © Bandai, The Pokemon Company
+- Price data: Aggregated from public sources for personal reference use only
+
+The data files are provided for personal, non-commercial use only. 
+Redistribution of the data files is not permitted without explicit permission.
+
+## Trademarks
+
+- Pokemon is a trademark of Nintendo/Creatures Inc./GAME FREAK Inc.
+- One Piece is a trademark of Shueisha/Toei Animation/Bandai
+- All card images and names are property of their respective owners.
+
+This project is not affiliated with, endorsed by, or sponsored by any of these companies.
 
 ---
 
-CONTENT LICENSE NOTICE
-
-The MIT License above applies only to the source code of this project
-(HTML, CSS, JavaScript, build scripts, and documentation).
-
-The following content is NOT covered by the MIT License and remains the
-property of their respective copyright holders:
-
-- Pokémon card images, names, and data © The Pokémon Company International
-- One Piece card images, names, and data © Bandai Co., Ltd.
-- Price data © respective data providers (TCGdex, Cardmarket)
-
-This project is unofficial Fan Content and is not produced by, endorsed by,
-or affiliated with The Pokémon Company, Bandai, or any card game publisher.
+Copyright (c) 2026 Japan TCG Price Guide
