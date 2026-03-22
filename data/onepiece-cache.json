@@ -52461,7 +52461,7 @@
       },
       {
         "id": "ST16-003",
-        "name": "ST16-003",
+        "name": "Charlotte Katakuri",
         "set": "Green Uta",
         "setId": "ST-16",
         "setName": "Green Uta",
@@ -52475,11 +52475,14 @@
           "updated": "2026-03-22"
         },
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/ST16-003.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/ST16-003.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/ST16-003.png",
+        "type": "FILM/Big Mom Pirates",
+        "color": "Green",
+        "cardType": "CHARACTER"
       },
       {
         "id": "ST16-004",
-        "name": "ST16-004",
+        "name": "Shanks",
         "set": "Green Uta",
         "setId": "ST-16",
         "setName": "Green Uta",
@@ -52493,11 +52496,14 @@
           "updated": "2026-03-22"
         },
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/ST16-004.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/ST16-004.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/ST16-004.png",
+        "type": "FILM/The Four Emperors/Red-Haired Pirates",
+        "color": "Green",
+        "cardType": "CHARACTER"
       },
       {
         "id": "ST16-005",
-        "name": "ST16-005",
+        "name": "Monkey.D.Luffy",
         "set": "Green Uta",
         "setId": "ST-16",
         "setName": "Green Uta",
@@ -52511,7 +52517,10 @@
           "updated": "2026-03-22"
         },
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/ST16-005.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/ST16-005.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/ST16-005.png",
+        "type": "FILM/Supernovas/Straw Hat Crew",
+        "color": "Green",
+        "cardType": "CHARACTER"
       }
     ],
     "ST-17": [
