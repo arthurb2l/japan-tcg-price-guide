@@ -343,7 +343,7 @@ function renderCards() {
       <div class="card-item" onclick="showCard('${c.id}')">
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>
-        <div class="set">${c.setId}${variant(c)}</div>
+        <div class="set">${c.id}${variant(c)}</div>
         ${c.pricing ? '<div class="price">' + formatPrice(c) + '</div>' : ''}
       </div>
     `).join('');
