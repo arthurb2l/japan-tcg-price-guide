@@ -661,11 +661,12 @@ function sortCards(by) {
     if (c.pricing?.cardmarket?.trend) return c.pricing.cardmarket.trend * 1.08;
     return 0;
   };
-  const getNum = c => c.localId || (c.id?.match(/\d+$/)?.[0]) || c.id || '';
+  // Sort by full ID with numeric comparison for the number part
+  const sortById = (a, b) => (a.id || '').localeCompare(b.id || '', undefined, {numeric: true});
   filteredCards.sort((a, b) => {
     if (by === 'name') return (a.name || '').localeCompare(b.name || '');
-    if (by === 'id') return getNum(a).localeCompare(getNum(b), undefined, {numeric: true});
-    if (by === 'set') return (a.setId || '').localeCompare(b.setId || '') || getNum(a).localeCompare(getNum(b), undefined, {numeric: true});
+    if (by === 'id') return sortById(a, b);
+    if (by === 'set') return (a.setId || '').localeCompare(b.setId || '') || sortById(a, b);
     if (by === 'rarity') {
       const ai = rarityOrder.indexOf(a.rarity) === -1 ? 99 : rarityOrder.indexOf(a.rarity);
       const bi = rarityOrder.indexOf(b.rarity) === -1 ? 99 : rarityOrder.indexOf(b.rarity);
