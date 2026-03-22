@@ -91,7 +91,14 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 .card-grid.checklist .card-item .set{font-size:.85em;width:25%}
 .card-grid.checklist .card-item .id{font-size:.8em;color:#666;font-family:monospace}
 .card-grid.checklist .card-item .rarity{font-size:.8em;color:#888}
+.card-grid.checklist .card-item .finish{font-size:.75em;color:#666;width:80px}
 .card-grid.checklist .card-item .price{font-size:.85em;color:#2a7;font-weight:600;text-align:right}
+/* Foil badges */
+.foil-badge{position:absolute;bottom:4px;left:4px;padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;text-transform:uppercase;pointer-events:none}
+.foil-badge.regular{display:none}
+.foil-badge.parallel{background:linear-gradient(135deg,#a855f7,#6366f1);color:#fff}
+.foil-badge.alt-art{background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff}
+.card-grid.checklist .foil-badge{display:none}
 /* Text view */
 .card-grid.text{display:flex;flex-direction:column;gap:15px}
 .card-grid.text .card-item{text-align:left;padding:15px;display:block}
@@ -186,6 +193,16 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
     </select>
   </div>
   <div class="filter-group">
+    <span class="filter-label">Finish:</span>
+    <select class="filter" id="finish-filter" onchange="filterByFinish(this.value)">
+      <option value="">All</option>
+      <option value="regular">Regular Only</option>
+      <option value="parallel">Parallel Only</option>
+      <option value="alternate-art">Alt Art Only</option>
+      <option value="foil">All Foil (P+AA)</option>
+    </select>
+  </div>
+  <div class="filter-group">
     <span class="filter-label">Sort:</span>
     <select class="filter" id="sort" onchange="sortCards(this.value)">
       <option value="price-high">Price: High → Low</option>
@@ -230,6 +247,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
         <dt>Set</dt><dd id="modal-set"></dd>
         <dt>Card ID</dt><dd id="modal-id"></dd>
         <dt>Rarity</dt><dd id="modal-rarity"></dd>
+        <dt>Finish</dt><dd id="modal-finish"></dd>
         <dt id="modal-extra-label" style="display:none"></dt><dd id="modal-extra" style="display:none"></dd>
         <dt>Price</dt><dd id="modal-price"></dd>
       </dl>
@@ -467,6 +485,11 @@ async function loadCards() {
     if (params.get('game')) filterByGame(params.get('game'));
     else filterByGame(currentGame);
     
+    // Set finish filter from URL
+    if (params.get('finish')) {
+      document.getElementById('finish-filter').value = params.get('finish');
+    }
+    
     if (params.get('q')) {
       document.getElementById('search').value = params.get('q');
       doSearch();
@@ -478,9 +501,11 @@ async function loadCards() {
       const card = gameCards[Math.floor(Math.random() * gameCards.length)];
       showCard(card.id);
       filteredCards = gameCards;
+      applyFinishFilter();
       renderCards();
     } else {
-      filteredCards = allCards;
+      filteredCards = getGameCards();
+      applyFinishFilter();
       renderCards();
     }
     updateStats();
@@ -541,12 +566,28 @@ function renderCards() {
   const collBtn = c => `<div class="coll-dot"></div><div class="coll-add" onclick="toggleCollection(event,'${c.id}')">+</div>`;
   const flipBtn = c => c.imgEn ? `<button class="flip-tile" onclick="flipTile(event,this)" data-jp="${proxyImg(c.imgJp||c.img)}" data-en="${proxyImg(c.imgEn)}">EN</button>` : '';
   
+  // Foil badge helper
+  const foilBadge = c => {
+    if (!c.finish || c.finish === 'regular') return '';
+    if (c.finish === 'alternate-art') return '<span class="foil-badge alt-art">AA</span>';
+    if (c.finish.startsWith('parallel')) return `<span class="foil-badge parallel">${c.finish.replace('parallel-','P')}</span>`;
+    return '';
+  };
+  const finishLabel = c => {
+    if (!c.finish) return '?';
+    if (c.finish === 'regular') return 'Regular';
+    if (c.finish === 'alternate-art') return 'Alt Art';
+    if (c.finish.startsWith('parallel')) return c.finish.replace('parallel-','Parallel ');
+    return c.finish;
+  };
+  
   if (currentView === 'checklist') {
     grid.innerHTML = `<div class="card-item header">
         <span></span>
         <span class="name" onclick="sortCards('name')">Name ▼</span>
         <span class="set" onclick="sortCards('set')">Set ▼</span>
         <span class="id" onclick="sortCards('id')">ID ▼</span>
+        <span class="finish" onclick="sortCards('finish')">Finish ▼</span>
         <span class="rarity" onclick="sortCards('rarity')">Rarity ▼</span>
         <span class="price" onclick="sortCards('price-high')">Price ▼</span>
       </div>` + cards.map(c => `
@@ -555,6 +596,7 @@ function renderCards() {
         <span class="name">${c.name}${jpName(c)}</span>
         <span class="set">${c.set || c.setId}</span>
         <span class="id">${c.id}</span>
+        <span class="finish">${finishLabel(c)}</span>
         <span class="rarity">${c.rarity || '-'}</span>
         <span class="price">${formatPrice(c)}</span>
       </div>
@@ -563,18 +605,18 @@ function renderCards() {
     grid.innerHTML = cards.map(c => `
       <div class="card-item${owned(c)}" onclick="showCard('${c.id}')">
         <div class="name">${c.name}${jpName(c)}${c.pricing ? ' · ' + formatPrice(c) : ''}</div>
-        <div class="set">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown rarity'}${variant(c)}</div>
+        <div class="set">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown rarity'}${variant(c)} · ${finishLabel(c)}</div>
         <div class="details">${c.types ? 'Type: ' + c.types.join(', ') : ''} ${c.hp ? '· HP: ' + c.hp : ''}</div>
       </div>
     `).join('');
   } else if (currentView === 'full') {
     grid.innerHTML = cards.map(c => `
       <div class="card-item${owned(c)}" onclick="showCardFromTile(this,'${c.id}')">
-        ${collBtn(c)}${flipBtn(c)}
+        ${collBtn(c)}${flipBtn(c)}${foilBadge(c)}
         <img src="${getImgHigh(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <div class="info">
           <div class="name">${c.name}${jpName(c)}</div>
-          <div class="meta">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown'}${variant(c)}</div>
+          <div class="meta">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown'}${variant(c)} · ${finishLabel(c)}</div>
           ${c.types ? '<div class="types">' + c.types.map(t => '<span class="type-badge">' + t + '</span>').join('') + '</div>' : ''}
           ${c.hp ? '<div class="meta">HP: ' + c.hp + '</div>' : ''}
           ${c.pricing ? '<div class="price">' + formatPrice(c) + '</div>' : ''}
@@ -584,7 +626,7 @@ function renderCards() {
   } else {
     grid.innerHTML = cards.map(c => `
       <div class="card-item${owned(c)}" onclick="showCardFromTile(this,'${c.id}')">
-        ${collBtn(c)}${flipBtn(c)}
+        ${collBtn(c)}${flipBtn(c)}${foilBadge(c)}
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>
         <div class="set">${c.id}${variant(c)}</div>
@@ -636,6 +678,7 @@ function doSearch() {
   }
   
   document.getElementById('set-filter').value = '';
+  applyFinishFilter();
   sortCards(document.getElementById('sort').value);
   updateURL();
 }
@@ -647,6 +690,8 @@ function updateURL() {
   if (q) params.set('q', q);
   if (set) params.set('set', set);
   if (currentGame !== 'pokemon') params.set('game', currentGame);
+  const finish = document.getElementById('finish-filter')?.value;
+  if (finish) params.set('finish', finish);
   const url = params.toString() ? '?' + params.toString() : location.pathname;
   history.replaceState(null, '', url);
 }
@@ -656,8 +701,33 @@ function filterBySet(setId) {
   displayLimit = 60;
   const gameCards = getGameCards();
   filteredCards = setId ? gameCards.filter(c => c.setId === setId) : gameCards;
+  applyFinishFilter();
   sortCards(document.getElementById('sort').value);
   updateURL();
+}
+
+function filterByFinish(finish) {
+  displayLimit = 60;
+  const setId = document.getElementById('set-filter').value;
+  const gameCards = getGameCards();
+  filteredCards = setId ? gameCards.filter(c => c.setId === setId) : gameCards;
+  applyFinishFilter();
+  sortCards(document.getElementById('sort').value);
+  updateURL();
+}
+
+function applyFinishFilter() {
+  const finish = document.getElementById('finish-filter')?.value;
+  if (!finish) return;
+  if (finish === 'regular') {
+    filteredCards = filteredCards.filter(c => c.finish === 'regular' || !c.finish);
+  } else if (finish === 'parallel') {
+    filteredCards = filteredCards.filter(c => c.finish?.startsWith('parallel'));
+  } else if (finish === 'alternate-art') {
+    filteredCards = filteredCards.filter(c => c.finish === 'alternate-art');
+  } else if (finish === 'foil') {
+    filteredCards = filteredCards.filter(c => c.finish && c.finish !== 'regular');
+  }
 }
 
 function sortCards(by) {
@@ -670,10 +740,16 @@ function sortCards(by) {
   };
   // Sort by full ID with numeric comparison for the number part
   const sortById = (a, b) => (a.id || '').localeCompare(b.id || '', undefined, {numeric: true});
+  const finishOrder = ['regular','parallel-1','parallel-2','parallel-3','parallel-4','parallel-5','parallel-6','parallel-7','alternate-art'];
   filteredCards.sort((a, b) => {
     if (by === 'name') return (a.name || '').localeCompare(b.name || '');
     if (by === 'id') return sortById(a, b);
     if (by === 'set') return (a.setId || '').localeCompare(b.setId || '') || sortById(a, b);
+    if (by === 'finish') {
+      const ai = finishOrder.indexOf(a.finish) === -1 ? 99 : finishOrder.indexOf(a.finish);
+      const bi = finishOrder.indexOf(b.finish) === -1 ? 99 : finishOrder.indexOf(b.finish);
+      return ai - bi;
+    }
     if (by === 'rarity') {
       const ai = rarityOrder.indexOf(a.rarity) === -1 ? 99 : rarityOrder.indexOf(a.rarity);
       const bi = rarityOrder.indexOf(b.rarity) === -1 ? 99 : rarityOrder.indexOf(b.rarity);
@@ -748,6 +824,16 @@ function showCard(id, isEn) {
   document.getElementById('modal-set').textContent = card.set || card.setId;
   document.getElementById('modal-id').textContent = card.id;
   document.getElementById('modal-rarity').textContent = card.rarity || '-';
+  
+  // Finish label
+  const finishLabel = f => {
+    if (!f) return '?';
+    if (f === 'regular') return 'Regular';
+    if (f === 'alternate-art') return 'Alternate Art';
+    if (f.startsWith('parallel')) return f.replace('parallel-','Parallel ');
+    return f;
+  };
+  document.getElementById('modal-finish').textContent = finishLabel(card.finish);
   
   // Hide flip button in modal (flip is on tiles only)
   document.getElementById('flip-btn').style.display = 'none';
