@@ -98,6 +98,27 @@ async function importCards() {
     finalSets[setId] = sets[setId];
   }
   
+  // PRESERVE EXISTING PRICING - load old cache and merge prices
+  let existingPrices = {};
+  if (fs.existsSync(CACHE_FILE)) {
+    try {
+      const oldData = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
+      for (const cards of Object.values(oldData.sets || {})) {
+        for (const card of cards) {
+          if (card.pricing) existingPrices[card.id] = card.pricing;
+        }
+      }
+      console.log(`\nPreserving ${Object.keys(existingPrices).length} existing prices`);
+    } catch(e) { console.log('No existing prices to preserve'); }
+  }
+  
+  // Apply preserved prices to new data
+  for (const setId of Object.keys(finalSets)) {
+    for (const card of finalSets[setId]) {
+      if (existingPrices[card.id]) card.pricing = existingPrices[card.id];
+    }
+  }
+  
   const output = {
     meta: {
       lastUpdated: new Date().toISOString(),
