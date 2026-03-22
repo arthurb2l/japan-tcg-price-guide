@@ -15,6 +15,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;padding:15px}
 .header{display:flex;align-items:center;gap:15px;margin-bottom:20px}
+.header .home-link{font-size:1.5em;text-decoration:none}
 .header img{width:50px;height:50px}
 .header h1{font-size:1.4em;color:#EE1515}
 .header-right{margin-left:auto;display:flex;align-items:center;gap:10px}
@@ -46,6 +47,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <body>
 
 <div class="header">
+  <a href="../" class="home-link">🏠</a>
   <img src="images/pokemon-logo.png" alt="Pokemon" onerror="this.outerHTML='<div style=font-size:2.5em>⚡</div>'">
   <h1>Pokemon TCG Japan</h1>
   <div class="header-right"><div id="auth-container"></div><a href="../onepiece/" class="game-switch">🏴☠️ One Piece</a></div>
