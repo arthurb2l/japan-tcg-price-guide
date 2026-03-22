@@ -360,14 +360,21 @@ function doSearch() {
   const query = document.getElementById('search').value.toLowerCase().trim();
   if (!query) { filteredCards = getGameCards(); sortCards(document.getElementById('sort').value); updateURL(); return; }
   
+  // Normalize query: "st16 003" or "st16003" -> "st16-003"
+  const normalizedQuery = query.replace(/([a-z]+)(\d+)\s*(\d+)/i, '$1$2-$3').replace(/\s+/g, '-');
+  
   const gameCards = getGameCards();
-  filteredCards = gameCards.filter(c => 
-    c.name?.toLowerCase().includes(query) ||
-    c.id?.toLowerCase().includes(query) ||
-    c.localId?.toLowerCase().includes(query) ||
-    c.set?.toLowerCase().includes(query) ||
-    c.setId?.toLowerCase().includes(query)
-  );
+  filteredCards = gameCards.filter(c => {
+    const idNorm = c.id?.toLowerCase().replace(/-/g, '');
+    const queryNorm = query.replace(/[\s-]/g, '');
+    return c.name?.toLowerCase().includes(query) ||
+      c.id?.toLowerCase().includes(query) ||
+      c.id?.toLowerCase().includes(normalizedQuery) ||
+      idNorm?.includes(queryNorm) ||
+      c.localId?.toLowerCase().includes(query) ||
+      c.set?.toLowerCase().includes(query) ||
+      c.setId?.toLowerCase().includes(query);
+  });
   
   // Smart switch: if no results in current game, check other game
   if (!filteredCards.length) {
