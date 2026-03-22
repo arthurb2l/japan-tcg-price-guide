@@ -83265,6 +83265,18 @@
           "source": "pricecharting",
           "updated": "2026-03-22"
         }
+      },
+      {
+        "id": "DON-EB04",
+        "name": "DON!! Card (EB-04 Egghead Crisis)",
+        "set": "DON Cards",
+        "setId": "DON",
+        "img": null,
+        "pricing": {
+          "usd": 3,
+          "source": "estimate",
+          "updated": "2026-03-22"
+        }
       }
     ]
   }
