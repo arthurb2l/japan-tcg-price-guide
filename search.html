@@ -127,6 +127,9 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 @media(max-width:600px){.coll-add{opacity:.7}}
 .coll-add:hover{border-color:#22c55e;color:#22c55e}
 .card-item.owned .coll-add{background:#22c55e;border-color:#22c55e;color:#fff;opacity:1}
+.list-menu{position:fixed;background:#fff;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.2);z-index:1000;overflow:hidden}
+.list-menu div{padding:10px 16px;cursor:pointer;font-size:.9em;white-space:nowrap}
+.list-menu div:hover{background:#f5f5f5}
 .flip-tile{position:absolute;bottom:4px;left:4px;background:rgba(0,0,0,0.6);color:#fff;border:none;border-radius:4px;padding:2px 6px;font-size:11px;cursor:pointer;opacity:0;transition:opacity .15s}
 .card-item:hover .flip-tile{opacity:1}
 .coll-filter{margin-left:10px}
@@ -268,51 +271,69 @@ const rates = { JPY: 1, USD: 0.0067, EUR: 0.0062 };
 // Auth state
 let currentUser = null;
 let userCollection = {};
+let userWishlist = {};
+let userTradelist = {};
 
 // Collection Store (localStorage + Firestore when logged in)
 const collectionStore = {
-  _key: 'tcg_collection',
-  _local() { return JSON.parse(localStorage.getItem(this._key) || '{}'); },
-  _saveLocal(data) { localStorage.setItem(this._key, JSON.stringify(data)); },
+  _localKey(list) { return `tcg_${list}`; },
+  _local(list = 'inventory') { return JSON.parse(localStorage.getItem(this._localKey(list)) || '{}'); },
+  _saveLocal(list, data) { localStorage.setItem(this._localKey(list), JSON.stringify(data)); },
+  _getStore(list) {
+    if (list === 'wishlist') return userWishlist;
+    if (list === 'tradelist') return userTradelist;
+    return userCollection;
+  },
+  _setStore(list, data) {
+    if (list === 'wishlist') userWishlist = data;
+    else if (list === 'tradelist') userTradelist = data;
+    else userCollection = data;
+  },
   
-  async add(cardId) {
+  async add(cardId, list = 'inventory') {
     if (currentUser) {
-      userCollection[cardId] = true;
-      await db.collection('users').doc(currentUser.uid).collection('cards').doc(cardId).set({ owned: true, addedAt: Date.now() });
+      const store = this._getStore(list);
+      store[cardId] = true;
+      await db.collection('users').doc(currentUser.uid).collection(list).doc(cardId).set({ owned: true, addedAt: Date.now() });
     } else {
-      const d = this._local(); d[cardId] = true; this._saveLocal(d);
+      const d = this._local(list); d[cardId] = true; this._saveLocal(list, d);
     }
     this._updateCount();
   },
   
-  async remove(cardId) {
+  async remove(cardId, list = 'inventory') {
     if (currentUser) {
-      delete userCollection[cardId];
-      await db.collection('users').doc(currentUser.uid).collection('cards').doc(cardId).delete();
+      const store = this._getStore(list);
+      delete store[cardId];
+      await db.collection('users').doc(currentUser.uid).collection(list).doc(cardId).delete();
     } else {
-      const d = this._local(); delete d[cardId]; this._saveLocal(d);
+      const d = this._local(list); delete d[cardId]; this._saveLocal(list, d);
     }
     this._updateCount();
   },
   
-  has(cardId) {
-    return currentUser ? !!userCollection[cardId] : !!this._local()[cardId];
+  has(cardId, list = 'inventory') {
+    return currentUser ? !!this._getStore(list)[cardId] : !!this._local(list)[cardId];
   },
   
-  async toggle(cardId) {
-    this.has(cardId) ? await this.remove(cardId) : await this.add(cardId);
-    return this.has(cardId);
+  inAnyList(cardId) {
+    return this.has(cardId, 'inventory') || this.has(cardId, 'wishlist') || this.has(cardId, 'tradelist');
   },
   
-  count() {
-    return currentUser ? Object.keys(userCollection).length : Object.keys(this._local()).length;
+  async toggle(cardId, list = 'inventory') {
+    this.has(cardId, list) ? await this.remove(cardId, list) : await this.add(cardId, list);
+    return this.has(cardId, list);
   },
   
-  getAll() {
-    return currentUser ? userCollection : this._local();
+  count(list = 'inventory') {
+    return currentUser ? Object.keys(this._getStore(list)).length : Object.keys(this._local(list)).length;
   },
   
-  _updateCount() { document.getElementById('coll-count').textContent = this.count(); }
+  getAll(list = 'inventory') {
+    return currentUser ? this._getStore(list) : this._local(list);
+  },
+  
+  _updateCount() { document.getElementById('coll-count').textContent = this.count('inventory'); }
 };
 
 // Auth functions
@@ -330,25 +351,58 @@ function signOut() {
 
 async function loadUserCollection(uid) {
   userCollection = {};
-  const snapshot = await db.collection('users').doc(uid).collection('cards').get();
-  snapshot.forEach(doc => { userCollection[doc.id] = true; });
+  userWishlist = {};
+  userTradelist = {};
+  
+  const [inv, wish, trade] = await Promise.all([
+    db.collection('users').doc(uid).collection('inventory').get(),
+    db.collection('users').doc(uid).collection('wishlist').get(),
+    db.collection('users').doc(uid).collection('tradelist').get()
+  ]);
+  
+  inv.forEach(doc => { userCollection[doc.id] = true; });
+  wish.forEach(doc => { userWishlist[doc.id] = true; });
+  trade.forEach(doc => { userTradelist[doc.id] = true; });
+  
   collectionStore._updateCount();
   renderCards();
 }
 
 async function migrateLocalToCloud(uid) {
-  const local = JSON.parse(localStorage.getItem('tcg_collection') || '{}');
-  const cardIds = Object.keys(local);
-  if (cardIds.length === 0) return;
+  // Migrate all lists
+  const lists = ['inventory', 'wishlist', 'tradelist'];
+  let totalMigrated = 0;
   
-  const batch = db.batch();
-  const userCardsRef = db.collection('users').doc(uid).collection('cards');
-  cardIds.forEach(cardId => {
-    batch.set(userCardsRef.doc(cardId), { owned: true, addedAt: Date.now() });
-  });
-  await batch.commit();
-  localStorage.removeItem('tcg_collection');
-  showToast(`Migrated ${cardIds.length} cards to cloud`);
+  for (const list of lists) {
+    const local = JSON.parse(localStorage.getItem(`tcg_${list}`) || '{}');
+    const cardIds = Object.keys(local);
+    if (cardIds.length === 0) continue;
+    
+    const batch = db.batch();
+    const ref = db.collection('users').doc(uid).collection(list);
+    cardIds.forEach(cardId => {
+      batch.set(ref.doc(cardId), { owned: true, addedAt: Date.now(), ...(local[cardId].qty ? {qty: local[cardId].qty} : {}) });
+    });
+    await batch.commit();
+    localStorage.removeItem(`tcg_${list}`);
+    totalMigrated += cardIds.length;
+  }
+  
+  // Also migrate old format
+  const oldLocal = JSON.parse(localStorage.getItem('tcg_collection') || '{}');
+  const oldIds = Object.keys(oldLocal);
+  if (oldIds.length > 0) {
+    const batch = db.batch();
+    const ref = db.collection('users').doc(uid).collection('inventory');
+    oldIds.forEach(cardId => {
+      batch.set(ref.doc(cardId), { owned: true, addedAt: Date.now() });
+    });
+    await batch.commit();
+    localStorage.removeItem('tcg_collection');
+    totalMigrated += oldIds.length;
+  }
+  
+  if (totalMigrated > 0) showToast(`Migrated ${totalMigrated} cards to cloud`);
 }
 
 // Auth state listener
@@ -383,13 +437,47 @@ auth.onAuthStateChanged(async user => {
   }
 });
 
-async function toggleCollection(e, cardId) {
+async function toggleCollection(e, cardId, list = 'inventory') {
   e.stopPropagation();
-  const owned = await collectionStore.toggle(cardId);
+  const owned = await collectionStore.toggle(cardId, list);
   const item = e.target.closest('.card-item');
-  item.classList.toggle('owned', owned);
-  showToast(owned ? '✓ Added to collection' : '✗ Removed from collection');
-  if (collFilterActive && !owned) item.style.display = 'none';
+  item.classList.toggle('owned', collectionStore.inAnyList(cardId));
+  const listNames = {inventory: 'Inventory', wishlist: 'Wishlist', tradelist: 'Tradelist'};
+  showToast(owned ? `✓ Added to ${listNames[list]}` : `✗ Removed from ${listNames[list]}`);
+  if (collFilterActive && !collectionStore.inAnyList(cardId)) item.style.display = 'none';
+}
+
+async function addToList(e, cardId, list) {
+  e.stopPropagation();
+  await collectionStore.add(cardId, list);
+  const item = e.target.closest('.card-item');
+  if (item) item.classList.add('owned');
+  const listNames = {inventory: 'Inventory', wishlist: 'Wishlist', tradelist: 'Tradelist'};
+  showToast(`✓ Added to ${listNames[list]}`);
+  hideListMenu();
+}
+
+function showListMenu(e, cardId) {
+  e.stopPropagation();
+  hideListMenu();
+  const menu = document.createElement('div');
+  menu.id = 'list-menu';
+  menu.className = 'list-menu';
+  menu.innerHTML = `
+    <div onclick="addToList(event,'${cardId}','inventory')">📦 Inventory</div>
+    <div onclick="addToList(event,'${cardId}','wishlist')">⭐ Wishlist</div>
+    <div onclick="addToList(event,'${cardId}','tradelist')">🔄 Tradelist</div>
+  `;
+  const rect = e.target.getBoundingClientRect();
+  menu.style.top = (rect.bottom + 5) + 'px';
+  menu.style.left = (rect.left - 50) + 'px';
+  document.body.appendChild(menu);
+  setTimeout(() => document.addEventListener('click', hideListMenu, {once: true}), 10);
+}
+
+function hideListMenu() {
+  const menu = document.getElementById('list-menu');
+  if (menu) menu.remove();
 }
 
 function showToast(msg) {
@@ -564,8 +652,8 @@ function renderCards() {
   const imgErr = "this.style.opacity='0.3';this.style.background='#ddd'";
   const jpName = c => c.nameJp ? `<span style="color:#7c3aed;font-size:.8em"> ${c.nameJp}</span>` : '';
   const variant = c => c.variant ? `<span style="color:#888;font-size:.85em"> (${c.variant})</span>` : '';
-  const owned = c => collectionStore.has(c.id) ? ' owned' : '';
-  const collBtn = c => `<div class="coll-dot"></div><div class="coll-add" onclick="toggleCollection(event,'${c.id}')">+</div>`;
+  const owned = c => collectionStore.inAnyList(c.id) ? ' owned' : '';
+  const collBtn = c => `<div class="coll-dot"></div><div class="coll-add" onclick="showListMenu(event,'${c.id}')">+</div>`;
   const flipBtn = c => c.imgEn ? `<button class="flip-tile" onclick="flipTile(event,this)" data-jp="${proxyImg(c.imgJp||c.img)}" data-en="${proxyImg(c.imgEn)}">EN</button>` : '';
   
   // Foil badge helper
