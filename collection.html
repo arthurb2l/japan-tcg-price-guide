@@ -47,6 +47,15 @@ const db = firebase.firestore();
 .stat-card.onepiece .value{color:#D70000}
 .stat-card.total .value{color:#22c55e}
 
+/* List tabs */
+.list-tabs{display:flex;gap:5px;margin-bottom:20px;flex-wrap:wrap}
+.list-tab{padding:10px 20px;border:2px solid #ddd;border-radius:8px;background:#fff;cursor:pointer;font-size:.9em;font-weight:500;transition:all .15s}
+.list-tab:hover{border-color:#888}
+.list-tab.active{border-color:#EE1515;background:#EE1515;color:#fff}
+.list-tab.wishlist.active{border-color:#f59e0b;background:#f59e0b}
+.list-tab.tradelist.active{border-color:#3b82f6;background:#3b82f6}
+.list-tab .count{font-size:.8em;opacity:.8;margin-left:5px}
+
 /* Filters */
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
 .filter-group{display:flex;align-items:center;gap:6px}
@@ -114,7 +123,11 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
 
 <script>
 let allCards = [], collectionCards = [], currentUser = null, userCollection = {};
-let currentGame = '', currentSort = 'added';
+let currentGame = '', currentSort = 'added', currentList = 'inventory';
+
+// List types: inventory (owned), wishlist (want), tradelist (for trade)
+const listTypes = ['inventory', 'wishlist', 'tradelist'];
+const listLabels = {inventory: '📦 Inventory', wishlist: '⭐ Wishlist', tradelist: '🔄 Tradelist'};
 
 // Auth functions
 function signInWithGoogle() {
@@ -127,8 +140,16 @@ function signOut() {
 }
 
 // Get local collection
-function getLocalCollection() {
-  return JSON.parse(localStorage.getItem('tcg_collection') || '{}');
+function getLocalCollection(list = 'inventory') {
+  return JSON.parse(localStorage.getItem(`tcg_${list}`) || '{}');
+}
+
+function getAllLocalLists() {
+  return {
+    inventory: getLocalCollection('inventory'),
+    wishlist: getLocalCollection('wishlist'),
+    tradelist: getLocalCollection('tradelist')
+  };
 }
 
 // Auth state listener
@@ -145,7 +166,7 @@ auth.onAuthStateChanged(async user => {
     await loadUserCollection(user.uid);
   } else {
     currentUser = null;
-    userCollection = getLocalCollection();
+    userCollection = getLocalCollection(currentList);
     container.innerHTML = `
       <button class="auth-btn" onclick="signInWithGoogle()">
         <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="G">
@@ -157,18 +178,28 @@ auth.onAuthStateChanged(async user => {
 
 async function loadUserCollection(uid) {
   userCollection = {};
-  const snapshot = await db.collection('users').doc(uid).collection('cards').get();
+  const snapshot = await db.collection('users').doc(uid).collection(currentList).get();
   snapshot.forEach(doc => { userCollection[doc.id] = doc.data(); });
+}
+
+function switchList(list) {
+  currentList = list;
+  if (currentUser) {
+    loadUserCollection(currentUser.uid).then(renderCollection);
+  } else {
+    userCollection = getLocalCollection(list);
+    renderCollection();
+  }
 }
 
 async function removeFromCollection(cardId) {
   if (currentUser) {
     delete userCollection[cardId];
-    await db.collection('users').doc(currentUser.uid).collection('cards').doc(cardId).delete();
+    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(cardId).delete();
   } else {
-    const local = getLocalCollection();
+    const local = getLocalCollection(currentList);
     delete local[cardId];
-    localStorage.setItem('tcg_collection', JSON.stringify(local));
+    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
     userCollection = local;
   }
   renderCollection();
@@ -180,11 +211,11 @@ async function updateQuantity(cardId, delta) {
   
   if (currentUser) {
     userCollection[cardId] = {...(userCollection[cardId] || {}), qty: newQty};
-    await db.collection('users').doc(currentUser.uid).collection('cards').doc(cardId).update({qty: newQty});
+    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(cardId).update({qty: newQty});
   } else {
-    const local = getLocalCollection();
+    const local = getLocalCollection(currentList);
     local[cardId] = {...(local[cardId] || {}), qty: newQty};
-    localStorage.setItem('tcg_collection', JSON.stringify(local));
+    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
     userCollection = local;
   }
   renderCollection();
@@ -231,12 +262,34 @@ function renderCollection() {
   const content = document.getElementById('content');
   const collectionIds = Object.keys(userCollection);
   
+  // Get counts for tabs even when empty
+  const getListCount = list => {
+    if (currentUser) return '';
+    return Object.keys(getLocalCollection(list)).length;
+  };
+  
+  const tabsHtml = `
+    <div class="list-tabs">
+      ${listTypes.map(list => `
+        <button class="list-tab ${list} ${currentList === list ? 'active' : ''}" onclick="switchList('${list}')">
+          ${listLabels[list]}${!currentUser ? `<span class="count">(${getListCount(list)})</span>` : ''}
+        </button>
+      `).join('')}
+    </div>`;
+  
+  const emptyMessages = {
+    inventory: {icon: '📦', title: 'Your inventory is empty', desc: 'Start adding cards you own by clicking the + button.'},
+    wishlist: {icon: '⭐', title: 'Your wishlist is empty', desc: 'Add cards you want to find at flea markets.'},
+    tradelist: {icon: '🔄', title: 'Your tradelist is empty', desc: 'Add cards you have available for trade.'}
+  };
+  
   if (!collectionIds.length) {
-    content.innerHTML = `
+    const msg = emptyMessages[currentList];
+    content.innerHTML = tabsHtml + `
       <div class="empty-state">
-        <div class="icon">📦</div>
-        <h2>Your collection is empty</h2>
-        <p>Start adding cards by clicking the + button on any card.</p>
+        <div class="icon">${msg.icon}</div>
+        <h2>${msg.title}</h2>
+        <p>${msg.desc}</p>
         <a href="search.html" class="btn">Browse Cards</a>
       </div>`;
     return;
@@ -266,7 +319,7 @@ function renderCollection() {
   const getImg = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || '';
   const formatPrice = p => p !== null ? '$' + p.toFixed(2) : '-';
   
-  content.innerHTML = `
+  content.innerHTML = tabsHtml + `
     <div class="stats-row">
       <div class="stat-card total">
         <div class="value">${totalCards}</div>
