@@ -568,7 +568,7 @@ function renderCards() {
     `).join('');
   } else if (currentView === 'full') {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item${owned(c)}" onclick="showCard('${c.id}')">
+      <div class="card-item${owned(c)}" onclick="showCardFromTile(this,'${c.id}')">
         ${collBtn(c)}${flipBtn(c)}
         <img src="${getImgHigh(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <div class="info">
@@ -582,7 +582,7 @@ function renderCards() {
     `).join('');
   } else {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item${owned(c)}" onclick="showCard('${c.id}')">
+      <div class="card-item${owned(c)}" onclick="showCardFromTile(this,'${c.id}')">
         ${collBtn(c)}${flipBtn(c)}
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>
@@ -732,14 +732,13 @@ function filterByGame(game) {
 let currentCard = null;
 let showingJp = true;
 
-function showCard(id) {
+function showCard(id, isEn) {
   const card = allCards.find(c => c.id === id);
   if (!card) return;
   currentCard = card;
-  showingJp = true;
   
   const proxyImg = url => url?.startsWith('https://onepiece-cardgame.com') || url?.startsWith('https://www.onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
-  const getImg = c => c.imgJp || c.imgHigh || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/high.webp') || 'onepiece/images/card-back.png';
+  const getImg = c => isEn && c.imgEn ? proxyImg(c.imgEn) : (c.imgJp || c.imgHigh || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/high.webp') || 'onepiece/images/card-back.png');
   
   document.getElementById('modal-title').textContent = card.name;
   document.getElementById('modal-img').src = proxyImg(getImg(card));
@@ -748,10 +747,8 @@ function showCard(id) {
   document.getElementById('modal-id').textContent = card.id;
   document.getElementById('modal-rarity').textContent = card.rarity || '-';
   
-  // Show flip button if EN image available
-  const flipBtn = document.getElementById('flip-btn');
-  flipBtn.style.display = card.imgEn ? 'block' : 'none';
-  flipBtn.textContent = '🔄 EN';
+  // Hide flip button in modal (flip is on tiles only)
+  document.getElementById('flip-btn').style.display = 'none';
   
   // Game-specific extra info
   const extraLabel = document.getElementById('modal-extra-label');
@@ -804,6 +801,12 @@ function flipTile(e, btn) {
   const isJp = btn.textContent === 'EN';
   img.src = isJp ? btn.dataset.en : btn.dataset.jp;
   btn.textContent = isJp ? 'JP' : 'EN';
+}
+
+function showCardFromTile(tile, id) {
+  const flipBtn = tile.querySelector('.flip-tile');
+  const isEn = flipBtn && flipBtn.textContent === 'JP';
+  showCard(id, isEn);
 }
 
 function clearSearch() {
