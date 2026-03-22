@@ -268,16 +268,24 @@ async function loadCards() {
   }
 }
 
+let displayLimit = 60;
+
 function updateStats() {
-  const showing = Math.min(filteredCards.length, 60);
-  document.getElementById('stats').textContent = 
-    filteredCards.length + ' cards' + (filteredCards.length > 60 ? ` (showing ${showing})` : '');
+  const showing = Math.min(filteredCards.length, displayLimit);
+  document.getElementById('stats').innerHTML = 
+    filteredCards.length + ' cards' + (filteredCards.length > displayLimit ? ` (showing ${showing}) <a href="#" onclick="showMore();return false" style="margin-left:8px">Show more</a>` : '');
+}
+
+function showMore() {
+  displayLimit += 60;
+  renderCards();
+  updateStats();
 }
 
 function renderCards() {
   const grid = document.getElementById('results');
   const noResults = document.getElementById('no-results');
-  const cards = filteredCards.slice(0, 60);
+  const cards = filteredCards.slice(0, displayLimit);
   
   if (!cards.length) {
     grid.innerHTML = '';
@@ -343,6 +351,7 @@ function getGameCards() {
 }
 
 function doSearch() {
+  displayLimit = 60;
   const query = document.getElementById('search').value.toLowerCase().trim();
   if (!query) { filteredCards = getGameCards(); sortCards(document.getElementById('sort').value); updateURL(); return; }
   
@@ -388,6 +397,7 @@ function updateURL() {
 
 function filterBySet(setId) {
   document.getElementById('search').value = '';
+  displayLimit = 60;
   const gameCards = getGameCards();
   filteredCards = setId ? gameCards.filter(c => c.setId === setId) : gameCards;
   sortCards(document.getElementById('sort').value);
@@ -429,6 +439,7 @@ function setView(view) {
 
 function filterByGame(game) {
   currentGame = game;
+  displayLimit = 60;
   document.querySelectorAll('.game-tab').forEach(t => t.classList.toggle('active', t.dataset.game === game));
   
   // Update set filter to only show sets from selected game
