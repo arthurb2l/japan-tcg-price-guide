@@ -186,7 +186,7 @@ function formatPrice(card) {
     if (card.pricing.source === 'limitlesstcg') {
       if (currency === 'USD' && card.pricing.usd) return '$' + card.pricing.usd.toFixed(2);
       if (currency === 'EUR' && card.pricing.eur) return '€' + card.pricing.eur.toFixed(2);
-      if (currency === 'JPY' && card.pricing.eur) return '¥' + Math.round(card.pricing.eur * 162).toLocaleString();
+      if (currency === 'JPY' && card.pricing.usd) return '¥' + Math.round(card.pricing.usd * 150).toLocaleString();
       return card.pricing.usd ? '$' + card.pricing.usd.toFixed(2) : '-';
     }
     // TCGdex format (Pokemon)
