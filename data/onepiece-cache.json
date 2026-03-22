@@ -23053,11 +23053,12 @@
         "counter": 1000,
         "trait": "FILM",
         "effect": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 {Red-Haired Pirates} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
-        "attribute": "Special"
+        "attribute": "Special",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-002-p1",
-        "name": "OP09-002",
+        "name": "Uta",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23076,7 +23077,7 @@
       },
       {
         "id": "OP09-002-p2",
-        "name": "OP09-002",
+        "name": "Uta",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23138,11 +23139,12 @@
         "cost": 10,
         "trait": "The Four Emperors/Red-Haired Pirates",
         "effect": "Give all of your opponent's Characters −1000 power.[Rush] (This card can attack on the turn in which it is played.)",
-        "attribute": "Slash"
+        "attribute": "Slash",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-004-p1",
-        "name": "OP09-004",
+        "name": "Shanks",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23160,7 +23162,7 @@
       },
       {
         "id": "OP09-004-p2",
-        "name": "OP09-004",
+        "name": "Shanks",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23178,7 +23180,7 @@
       },
       {
         "id": "OP09-004-p3",
-        "name": "OP09-004",
+        "name": "Shanks",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23196,7 +23198,7 @@
       },
       {
         "id": "OP09-004-p4",
-        "name": "OP09-004",
+        "name": "Shanks",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23229,11 +23231,12 @@
         "counter": 1000,
         "trait": "Roger Pirates",
         "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[On Play] If your opponent has 2 or more Characters with a base power of 5000 or more, draw 2 cards and trash 1 card from your hand.",
-        "attribute": "Slash"
+        "attribute": "Slash",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-005-p1",
-        "name": "OP09-005",
+        "name": "Silvers Rayleigh",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23374,11 +23377,12 @@
         "counter": 1000,
         "trait": "Red-Haired Pirates",
         "effect": "[On Play] Trash up to 1 of your opponent's Characters with 6000 power or less.",
-        "attribute": "Ranged"
+        "attribute": "Ranged",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-009-p1",
-        "name": "OP09-009",
+        "name": "Benn.Beckman",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23397,7 +23401,7 @@
       },
       {
         "id": "OP09-009-p2",
-        "name": "OP09-009",
+        "name": "Benn.Beckman",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23586,11 +23590,12 @@
         "counter": 1000,
         "trait": "Red-Haired Pirates",
         "effect": "[On Play] Up to 1 of your Leader gains +1000 power until the end of your opponent's next turn.[DON!! x1] [When Attacking] Give up to 1 of your opponent's Characters −1000 power during this turn.",
-        "attribute": "Ranged"
+        "attribute": "Ranged",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-013-p1",
-        "name": "OP09-013",
+        "name": "Yasopp",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23624,11 +23629,12 @@
         "counter": 2000,
         "trait": "Red-Haired Pirates",
         "effect": "[On Play] Your opponent cannot activate up to 1 [Blocker] Character that has 4000 power or less during this turn.",
-        "attribute": "Special"
+        "attribute": "Special",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-014-p2",
-        "name": "OP09-014",
+        "name": "Limejuice",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23647,7 +23653,7 @@
       },
       {
         "id": "OP09-014-p3",
-        "name": "OP09-014",
+        "name": "Limejuice",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23681,7 +23687,8 @@
         "counter": 1000,
         "trait": "Red-Haired Pirates",
         "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[On K.O.] If your Leader has the {Red-Haired Pirates} type, K.O. up to 1 of your opponent's Characters with a base power of 6000 or less.",
-        "attribute": "Ranged"
+        "attribute": "Ranged",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-016",
@@ -23816,11 +23823,12 @@
         "cost": 1,
         "trait": "The Four Emperors/Red-Haired Pirates",
         "effect": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 {Red-Haired Pirates} type card other than [Come On!! We'll Fight You!!] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
-        "attribute": ""
+        "attribute": "",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-020-p1",
-        "name": "OP09-020",
+        "name": "Come On!! We'll Fight You!!",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -23838,7 +23846,7 @@
       },
       {
         "id": "OP09-020-p2",
-        "name": "OP09-020",
+        "name": "Come On!! We'll Fight You!!",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24147,11 +24155,12 @@
         "counter": 1000,
         "trait": "ODYSSEY/Revolutionary Army",
         "effect": "[When Attacking] [Once Per Turn] If you have 3 or more rested Characters, draw 1 card.",
-        "attribute": "Special"
+        "attribute": "Special",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-027-p1",
-        "name": "OP09-027",
+        "name": "Sabo",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24170,7 +24179,7 @@
       },
       {
         "id": "OP09-027-p2",
-        "name": "OP09-027",
+        "name": "Sabo",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24349,11 +24358,12 @@
         "counter": 1000,
         "trait": "ODYSSEY/Straw Hat Crew",
         "effect": "[On Play] If you have 2 or more rested Characters, none of your {ODYSSEY} or {Straw Hat Crew} type Characters can be K.O.'d by effects until the end of your opponent's next turn.",
-        "attribute": "Strike"
+        "attribute": "Strike",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-033-p1",
-        "name": "OP09-033",
+        "name": "Nico Robin",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24544,11 +24554,12 @@
         "cost": 3,
         "trait": "ODYSSEY",
         "effect": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 {ODYSSEY} type card other than [Lim] and add it to your hand. Then, place the rest at the bottom of your deck in any order.[End of Your Turn] If you have 3 or more rested Characters, set this Character as active.",
-        "attribute": "Wisdom"
+        "attribute": "Wisdom",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-037-p1",
-        "name": "OP09-037",
+        "name": "Lim",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24566,7 +24577,7 @@
       },
       {
         "id": "OP09-037-p2",
-        "name": "OP09-037",
+        "name": "Lim",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -24957,11 +24968,12 @@
         "counter": 1000,
         "trait": "Cross Guild/Former Baroque Works",
         "effect": "[On Play] Play up to 1 {Cross Guild} type Character card or Character card with a type including \"Baroque Works\" with a cost of 5 or less from your hand.",
-        "attribute": "Special"
+        "attribute": "Special",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-046-p1",
-        "name": "OP09-046",
+        "name": "Crocodile",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25023,11 +25035,12 @@
         "cost": 6,
         "trait": "Cross Guild",
         "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[On Play] Draw 2 cards and trash 1 card from your hand.",
-        "attribute": "Slash"
+        "attribute": "Slash",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-048-p1",
-        "name": "OP09-048",
+        "name": "Dracule Mihawk",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25188,11 +25201,12 @@
         "cost": 10,
         "trait": "The Four Emperors/Cross Guild",
         "effect": "[On Play] Place up to 1 of your opponent's Characters at the bottom of the owner's deck. Then, if you do not have 5 Characters with a cost of 5 or more, place this Character at the bottom of the owner's deck.",
-        "attribute": "Slash"
+        "attribute": "Slash",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-051-p1",
-        "name": "OP09-051",
+        "name": "Buggy",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25210,7 +25224,7 @@
       },
       {
         "id": "OP09-051-p2",
-        "name": "OP09-051",
+        "name": "Buggy",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25228,7 +25242,7 @@
       },
       {
         "id": "OP09-051-p3",
-        "name": "OP09-051",
+        "name": "Buggy",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25246,7 +25260,7 @@
       },
       {
         "id": "OP09-051-p4",
-        "name": "OP09-051",
+        "name": "Buggy",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25398,11 +25412,12 @@
         "counter": 1000,
         "trait": "Cross Guild/Former Baroque Works",
         "effect": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 {Cross Guild} type card or card with a type including \"Baroque Works\" other than [Mr.3(Galdino)] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
-        "attribute": "Special"
+        "attribute": "Special",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-056-p1",
-        "name": "OP09-056",
+        "name": "Mr.3(Galdino)",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25435,11 +25450,12 @@
         "cost": 1,
         "trait": "Cross Guild",
         "effect": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 {Cross Guild} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
-        "attribute": ""
+        "attribute": "",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-057-p1",
-        "name": "OP09-057",
+        "name": "Cross Guild",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25457,7 +25473,7 @@
       },
       {
         "id": "OP09-057-p2",
-        "name": "OP09-057",
+        "name": "Cross Guild",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25847,11 +25863,12 @@
         "counter": 1000,
         "trait": "Straw Hat Crew",
         "effect": "[On Play] You may return 1 or more DON!! cards from your field to your DON!! deck: This Character gains [Rush] during this turn. Then, rest up to 1 of your opponent's Characters with a cost of 6 or less.",
-        "attribute": "Strike"
+        "attribute": "Strike",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-065-p1",
-        "name": "OP09-065",
+        "name": "Sanji",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25870,7 +25887,7 @@
       },
       {
         "id": "OP09-065-p2",
-        "name": "OP09-065",
+        "name": "Sanji",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -25991,11 +26008,12 @@
         "counter": 1000,
         "trait": "Heart Pirates",
         "effect": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 {Straw Hat Crew} or {Heart Pirates} type card with a cost of 2 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
-        "attribute": "Slash"
+        "attribute": "Slash",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-069-p1",
-        "name": "OP09-069",
+        "name": "Trafalgar Law",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26014,7 +26032,7 @@
       },
       {
         "id": "OP09-069-p2",
-        "name": "OP09-069",
+        "name": "Trafalgar Law",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26157,11 +26175,12 @@
         "counter": 1000,
         "trait": "Straw Hat Crew",
         "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[On Play] DON!! −2, You may trash 1 card from your hand: Draw 2 cards.",
-        "attribute": "Strike"
+        "attribute": "Strike",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-072-p1",
-        "name": "OP09-072",
+        "name": "Franky",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26281,11 +26300,12 @@
         "cost": 3,
         "trait": "Straw Hat Crew",
         "effect": "[On Play] You may return 1 or more DON!! cards from your field to your DON!! deck: Add up to 1 DON!! card from your DON!! deck and set it as active.",
-        "attribute": "Slash"
+        "attribute": "Slash",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-076-p1",
-        "name": "OP09-076",
+        "name": "Roronoa Zoro",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26303,7 +26323,7 @@
       },
       {
         "id": "OP09-076-p2",
-        "name": "OP09-076",
+        "name": "Roronoa Zoro",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26335,11 +26355,12 @@
         "cost": 2,
         "trait": "The Four Emperors/Straw Hat Crew",
         "effect": "[Main] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): K.O. up to 1 of your opponent's Characters with 6000 power or less.",
-        "attribute": ""
+        "attribute": "",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-077-p1",
-        "name": "OP09-077",
+        "name": "Gum-Gum Lightning",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26357,7 +26378,7 @@
       },
       {
         "id": "OP09-077-p2",
-        "name": "OP09-077",
+        "name": "Gum-Gum Lightning",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26389,11 +26410,12 @@
         "cost": 1,
         "trait": "The Four Emperors/Straw Hat Crew",
         "effect": "[Counter] DON!! −2, You may trash 1 card from your hand: If your Leader has the {Straw Hat Crew} type, up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, draw 2 cards.",
-        "attribute": ""
+        "attribute": "",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-078-p1",
-        "name": "OP09-078",
+        "name": "Gum-Gum Giant",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26411,7 +26433,7 @@
       },
       {
         "id": "OP09-078-p2",
-        "name": "OP09-078",
+        "name": "Gum-Gum Giant",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26443,11 +26465,12 @@
         "cost": 2,
         "trait": "The Four Emperors/Straw Hat Crew",
         "effect": "[Main] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Rest up to 1 of your opponent's Characters with a cost of 5 or less. Then, draw 1 card.",
-        "attribute": ""
+        "attribute": "",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-079-p1",
-        "name": "OP09-079",
+        "name": "Gum-Gum Jump Rope",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26699,11 +26722,12 @@
         "counter": 1000,
         "trait": "Blackbeard Pirates",
         "effect": "[Activate: Main] [Once Per Turn] If your Leader has the {Blackbeard Pirates} type, this Character gains [Double Attack], [Banish] or [Blocker] until the end of your opponent's next turn.",
-        "attribute": "Special"
+        "attribute": "Special",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-084-p1",
-        "name": "OP09-084",
+        "name": "Catarina Devon",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -26766,11 +26790,12 @@
         "counter": 1000,
         "trait": "Blackbeard Pirates",
         "effect": "This Character cannot be K.O.'d by your opponent's effects.If your Leader has the {Blackbeard Pirates} type, this Character gains +1000 power for every 4 cards in your trash.",
-        "attribute": "Strike"
+        "attribute": "Strike",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-086-p1",
-        "name": "OP09-086",
+        "name": "Jesus Burgess",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -27003,11 +27028,12 @@
         "cost": 10,
         "trait": "The Four Emperors/Blackbeard Pirates",
         "effect": "[Blocker][Activate: Main] [Once Per Turn] If your Leader has the {Blackbeard Pirates} type and this Character was played on this turn, negate the effect of up to 1 of your opponent's Leader during this turn. Then, negate the effect of up to 1 of your opponent's Characters and that Character cannot attack until the end of your opponent's next turn.",
-        "attribute": "Special"
+        "attribute": "Special",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-093-p1",
-        "name": "OP09-093",
+        "name": "Marshall.D.Teach",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -27025,7 +27051,7 @@
       },
       {
         "id": "OP09-093-p2",
-        "name": "OP09-093",
+        "name": "Marshall.D.Teach",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -27043,7 +27069,7 @@
       },
       {
         "id": "OP09-093-p3",
-        "name": "OP09-093",
+        "name": "Marshall.D.Teach",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -27061,7 +27087,7 @@
       },
       {
         "id": "OP09-093-p4",
-        "name": "OP09-093",
+        "name": "Marshall.D.Teach",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -27202,11 +27228,12 @@
         "cost": 1,
         "trait": "Blackbeard Pirates",
         "effect": "[Main] Look at 3 cards from the top of your deck; reveal up to 1 {Blackbeard Pirates} type card other than [My Era...Begins!!] and add it to your hand. Then, trash the rest.",
-        "attribute": ""
+        "attribute": "",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-096-p1",
-        "name": "OP09-096",
+        "name": "My Era...Begins!!",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -27238,11 +27265,12 @@
         "cost": 2,
         "trait": "Blackbeard Pirates",
         "effect": "[Counter] Negate the effect of up to 1 of your opponent's Leader or Character cards and give that card −4000 power during this turn.",
-        "attribute": ""
+        "attribute": "",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-097-p1",
-        "name": "OP09-097",
+        "name": "Black Vortex",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -27274,11 +27302,12 @@
         "cost": 4,
         "trait": "Blackbeard Pirates",
         "effect": "[Main] If your Leader has the {Blackbeard Pirates} type, negate the effect of up to 1 of your opponent's Characters during this turn. Then, if that Character has a cost of 4 or less, K.O. it.",
-        "attribute": ""
+        "attribute": "",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-098-p1",
-        "name": "OP09-098",
+        "name": "Black Hole",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -28103,11 +28132,12 @@
         "cost": 10,
         "trait": "King of the Pirates/Roger Pirates",
         "effect": "[Rush] (This card can attack on the turn in which it is played.)When your opponent activates [Blocker], if either you or your opponent has 0 Life cards, you win the game.",
-        "attribute": "Slash"
+        "attribute": "Slash",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-118-p1",
-        "name": "OP09-118",
+        "name": "Gol.D.Roger",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -28125,7 +28155,7 @@
       },
       {
         "id": "OP09-118-p2",
-        "name": "OP09-118",
+        "name": "Gol.D.Roger",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -28143,7 +28173,7 @@
       },
       {
         "id": "OP09-118-p3",
-        "name": "OP09-118",
+        "name": "Gol.D.Roger",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -28175,11 +28205,12 @@
         "cost": 9,
         "trait": "Straw Hat Crew",
         "effect": "[On Play] You may return 1 or more DON!! cards from your field to your DON!! deck: Draw 1 card and this Character gains [Rush] during this turn.",
-        "attribute": "Strike"
+        "attribute": "Strike",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-119-p1",
-        "name": "OP09-119",
+        "name": "Monkey.D.Luffy",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -28197,7 +28228,7 @@
       },
       {
         "id": "OP09-119-p2",
-        "name": "OP09-119",
+        "name": "Monkey.D.Luffy",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -28215,7 +28246,7 @@
       },
       {
         "id": "OP09-119-p3",
-        "name": "OP09-119",
+        "name": "Monkey.D.Luffy",
         "set": "OP-09",
         "setId": "OP-09",
         "setName": "Emperors in the New World",
@@ -28233,7 +28264,7 @@
       },
       {
         "id": "OP09-004-p5",
-        "name": "OP09-004",
+        "name": "Shanks",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p5.png",
@@ -28247,11 +28278,12 @@
         "power": 12000,
         "cost": 10,
         "trait": "The Four Emperors/Red-Haired Pirates",
-        "attribute": "Slash"
+        "attribute": "Slash",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-004-p6",
-        "name": "OP09-004",
+        "name": "Shanks",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p6.png",
@@ -28265,11 +28297,12 @@
         "power": 12000,
         "cost": 10,
         "trait": "The Four Emperors/Red-Haired Pirates",
-        "attribute": "Slash"
+        "attribute": "Slash",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-004-p7",
-        "name": "OP09-004",
+        "name": "Shanks",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p7.png",
@@ -28283,11 +28316,12 @@
         "power": 12000,
         "cost": 10,
         "trait": "The Four Emperors/Red-Haired Pirates",
-        "attribute": "Slash"
+        "attribute": "Slash",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-051-p5",
-        "name": "OP09-051",
+        "name": "Buggy",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p5.png",
@@ -28301,11 +28335,12 @@
         "power": 12000,
         "cost": 10,
         "trait": "The Four Emperors/Cross Guild",
-        "attribute": "Slash"
+        "attribute": "Slash",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-051-p6",
-        "name": "OP09-051",
+        "name": "Buggy",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p6.png",
@@ -28319,11 +28354,12 @@
         "power": 12000,
         "cost": 10,
         "trait": "The Four Emperors/Cross Guild",
-        "attribute": "Slash"
+        "attribute": "Slash",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-093-p5",
-        "name": "OP09-093",
+        "name": "Marshall.D.Teach",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p5.png",
@@ -28337,11 +28373,12 @@
         "power": 12000,
         "cost": 10,
         "trait": "The Four Emperors/Blackbeard Pirates",
-        "attribute": "Special"
+        "attribute": "Special",
+        "setId": "OP-09"
       },
       {
         "id": "OP09-093-p6",
-        "name": "OP09-093",
+        "name": "Marshall.D.Teach",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p6.png",
@@ -28355,7 +28392,8 @@
         "power": 12000,
         "cost": 10,
         "trait": "The Four Emperors/Blackbeard Pirates",
-        "attribute": "Special"
+        "attribute": "Special",
+        "setId": "OP-09"
       }
     ],
     "OP-10": [
