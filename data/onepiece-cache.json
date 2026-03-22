@@ -21366,7 +21366,9 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-001.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-001.png"
       },
       {
         "id": "OP09-001-aa",
@@ -21383,7 +21385,7 @@
         "block": 3,
         "trait": "The Four Emperors/Red-Haired Pirates",
         "effect": "[Once Per Turn] This effect can be activated when your opponent attacks. Give up to 1 of your opponent's Leader or Character cards −1000 power during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-001_p1.png?260130",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-001.png",
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-001_p1.png?260130"
         ],
@@ -21395,7 +21397,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Alternate Art"
+        "variant": "Alternate Art",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-001.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-001_p1.png?260130"
+      },
+      {
+        "id": "OP09-001-p1",
+        "name": "OP09-001-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-001_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-001_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-001_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-001-p2",
@@ -21424,7 +21440,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Parallel 2"
+        "variant": "Parallel 2",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-001_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-001_p2.png"
+      },
+      {
+        "id": "OP09-001-p3",
+        "name": "OP09-001-p3",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-001_p3.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-001_p3.png",
+        "imgEn": null,
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-002",
@@ -21433,6 +21463,32 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-002.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-002.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-002.png"
+      },
+      {
+        "id": "OP09-002-p1",
+        "name": "OP09-002-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-002_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-002_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-002_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-002-p2",
+        "name": "OP09-002-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-002_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-002_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-002_p2.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -21460,7 +21516,9 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-003.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-003.png"
       },
       {
         "id": "OP09-004",
@@ -21469,6 +21527,56 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004.png"
+      },
+      {
+        "id": "OP09-004-p1",
+        "name": "OP09-004-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-004-p2",
+        "name": "OP09-004-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004_p2.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-004-p3",
+        "name": "OP09-004-p3",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p3.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p3.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004_p3.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-004-p4",
+        "name": "OP09-004-p4",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p4.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p4.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004_p4.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -21478,6 +21586,20 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-005.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-005.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-005.png"
+      },
+      {
+        "id": "OP09-005-p1",
+        "name": "OP09-005-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-005_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-005_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-005_p1.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -21506,7 +21628,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-006.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-006.png"
       },
       {
         "id": "OP09-007",
@@ -21533,7 +21657,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-007.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-007.png"
       },
       {
         "id": "OP09-008",
@@ -21560,7 +21686,21 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-008.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-008.png"
+      },
+      {
+        "id": "OP09-008-p1",
+        "name": "OP09-008-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-008_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-008_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-008_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-009",
@@ -21569,6 +21709,32 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-009.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-009.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-009.png"
+      },
+      {
+        "id": "OP09-009-p1",
+        "name": "OP09-009-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-009_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-009_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-009_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-009-p2",
+        "name": "OP09-009-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-009_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-009_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-009_p2.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -21597,7 +21763,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-010.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-010.png"
       },
       {
         "id": "OP09-011",
@@ -21628,7 +21796,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-011.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-011.png"
       },
       {
         "id": "OP09-011-p1",
@@ -21657,7 +21827,9 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Parallel 1"
+        "variant": "Parallel 1",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-011_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-011_p1.png"
       },
       {
         "id": "OP09-011-p2",
@@ -21714,7 +21886,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-012.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-012.png"
       },
       {
         "id": "OP09-013",
@@ -21723,6 +21897,20 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-013.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-013.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-013.png"
+      },
+      {
+        "id": "OP09-013-p1",
+        "name": "OP09-013-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-013_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-013_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-013_p1.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -21732,6 +21920,32 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-014.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-014.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-014.png"
+      },
+      {
+        "id": "OP09-014-p2",
+        "name": "OP09-014-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-014_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-014_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-014_p2.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-014-p3",
+        "name": "OP09-014-p3",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-014_p3.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-014_p3.png",
+        "imgEn": null,
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -21741,7 +21955,9 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-015.png",
         "rarity": "C",
-        "game": "onepiece"
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-015.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-015.png"
       },
       {
         "id": "OP09-016",
@@ -21769,7 +21985,9 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-016.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-016.png"
       },
       {
         "id": "OP09-017",
@@ -21796,7 +22014,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-017.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-017.png"
       },
       {
         "id": "OP09-018",
@@ -21823,7 +22043,9 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-018.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-018.png"
       },
       {
         "id": "OP09-019",
@@ -21850,7 +22072,9 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-019.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-019.png"
       },
       {
         "id": "OP09-020",
@@ -21859,6 +22083,32 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-020.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-020.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-020.png"
+      },
+      {
+        "id": "OP09-020-p1",
+        "name": "OP09-020-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-020_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-020_p1.png",
+        "imgEn": null,
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-020-p2",
+        "name": "OP09-020-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-020_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-020_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-020_p2.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -21886,7 +22136,9 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-021.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-021.png"
       },
       {
         "id": "OP09-022",
@@ -21914,7 +22166,9 @@
           "eur": 0.08,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-022.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-022.png"
       },
       {
         "id": "OP09-022-aa",
@@ -21931,7 +22185,7 @@
         "block": 3,
         "trait": "ODYSSEY",
         "effect": "Your Character cards are played rested.[Activate: Main] [Once Per Turn] You may rest 3 of your DON!! cards: Add up to 1 DON!! card from your DON!! deck and rest it, and play up to 1 {ODYSSEY} type Character card with a cost of 5 or less from your hand.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-022_p1.png?260130",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-022.png",
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-022_p1.png?260130"
         ],
@@ -21943,7 +22197,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Alternate Art"
+        "variant": "Alternate Art",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-022.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-022_p1.png?260130"
+      },
+      {
+        "id": "OP09-022-p1",
+        "name": "OP09-022-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-022_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-022_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-022_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-023",
@@ -21971,7 +22239,9 @@
           "eur": 0.16,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-023.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-023.png"
       },
       {
         "id": "OP09-023-aa",
@@ -21988,7 +22258,7 @@
         "block": 3,
         "trait": "ODYSSEY",
         "effect": "[On Play] If your Leader has the {ODYSSEY} type, set up to 3 of your DON!! cards as active.[On Your Opponent's Attack] [Once Per Turn] You may rest 1 of your DON!! cards: Up to 1 of your Leader or Character cards gains +2000 power during this battle.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-023_p1.png?260130",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-023.png",
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-023_p1.png?260130"
         ],
@@ -22000,7 +22270,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Alternate Art"
+        "variant": "Alternate Art",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-023.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-023_p1.png?260130"
+      },
+      {
+        "id": "OP09-023-p1",
+        "name": "OP09-023-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-023_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-023_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-023_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-024",
@@ -22027,7 +22311,9 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-024.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-024.png"
       },
       {
         "id": "OP09-025",
@@ -22054,7 +22340,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-025.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-025.png"
       },
       {
         "id": "OP09-026",
@@ -22081,7 +22369,9 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-026.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-026.png"
       },
       {
         "id": "OP09-027",
@@ -22090,6 +22380,32 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-027.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-027.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-027.png"
+      },
+      {
+        "id": "OP09-027-p1",
+        "name": "OP09-027-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-027_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-027_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-027_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-027-p2",
+        "name": "OP09-027-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-027_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-027_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-027_p2.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -22117,7 +22433,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-028.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-028.png"
       },
       {
         "id": "OP09-029",
@@ -22144,7 +22462,9 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-029.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-029.png"
       },
       {
         "id": "OP09-030",
@@ -22171,7 +22491,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-030.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-030.png"
       },
       {
         "id": "OP09-031",
@@ -22198,7 +22520,9 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-031.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-031.png"
       },
       {
         "id": "OP09-032",
@@ -22225,7 +22549,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-032.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-032.png"
       },
       {
         "id": "OP09-033",
@@ -22234,6 +22560,20 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-033.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-033.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-033.png"
+      },
+      {
+        "id": "OP09-033-p1",
+        "name": "OP09-033-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-033_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-033_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-033_p1.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -22262,7 +22602,9 @@
           "eur": 0.1,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-034.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-034.png"
       },
       {
         "id": "OP09-034-aa",
@@ -22279,7 +22621,7 @@
         "block": 3,
         "trait": "Muggy Kingdom/Thriller Bark Pirates",
         "effect": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Dracule Mihawk] or {Thriller Bark Pirates} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order and trash 1 card from your hand.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-034_p1.png?260130",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-034.png",
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-034_p1.png?260130"
         ],
@@ -22291,7 +22633,33 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Alternate Art"
+        "variant": "Alternate Art",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-034.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-034_p1.png?260130"
+      },
+      {
+        "id": "OP09-034-p1",
+        "name": "OP09-034-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-034_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-034_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-034_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-034-p2",
+        "name": "OP09-034-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-034_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-034_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-034_p2.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-035",
@@ -22319,7 +22687,9 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-035.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-035.png"
       },
       {
         "id": "OP09-036",
@@ -22346,7 +22716,9 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-036.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-036.png"
       },
       {
         "id": "OP09-037",
@@ -22355,6 +22727,32 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-037.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-037.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-037.png"
+      },
+      {
+        "id": "OP09-037-p1",
+        "name": "OP09-037-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-037_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-037_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-037_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-037-p2",
+        "name": "OP09-037-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-037_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-037_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-037_p2.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -22382,7 +22780,9 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-038.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-038.png"
       },
       {
         "id": "OP09-039",
@@ -22409,7 +22809,9 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-039.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-039.png"
       },
       {
         "id": "OP09-040",
@@ -22436,7 +22838,9 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-040.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-040.png"
       },
       {
         "id": "OP09-041",
@@ -22463,7 +22867,9 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-041.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-041.png"
       },
       {
         "id": "OP09-042",
@@ -22492,7 +22898,9 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-042.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-042.png"
       },
       {
         "id": "OP09-042-aa",
@@ -22509,7 +22917,7 @@
         "block": 3,
         "trait": "The Four Emperors/Cross Guild",
         "effect": "[Activate: Main] You may rest 5 of your DON!! cards and trash 1 card from your hand: Play up to 1 {Cross Guild} type Character card from your hand.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-042_p1.png?260130",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-042.png",
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-042_p1.png?260130"
         ],
@@ -22521,7 +22929,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Alternate Art"
+        "variant": "Alternate Art",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-042.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-042_p1.png?260130"
+      },
+      {
+        "id": "OP09-042-p1",
+        "name": "OP09-042-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-042_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-042_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-042_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-042-p2",
@@ -22550,7 +22972,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Parallel 2"
+        "variant": "Parallel 2",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-042_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-042_p2.png"
+      },
+      {
+        "id": "OP09-042-p3",
+        "name": "OP09-042-p3",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-042_p3.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-042_p3.png",
+        "imgEn": null,
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-043",
@@ -22581,7 +23017,21 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-043.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-043.png"
+      },
+      {
+        "id": "OP09-043-p1",
+        "name": "OP09-043-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-043_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-043_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-043_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-044",
@@ -22608,7 +23058,9 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-044.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-044.png"
       },
       {
         "id": "OP09-045",
@@ -22636,7 +23088,9 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-045.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-045.png"
       },
       {
         "id": "OP09-046",
@@ -22645,6 +23099,20 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-046.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-046.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-046.png"
+      },
+      {
+        "id": "OP09-046-p1",
+        "name": "OP09-046-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-046_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-046_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-046_p1.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -22672,7 +23140,9 @@
           "eur": 0.1,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-047.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-047.png"
       },
       {
         "id": "OP09-048",
@@ -22681,6 +23151,20 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-048.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-048.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-048.png"
+      },
+      {
+        "id": "OP09-048-p1",
+        "name": "OP09-048-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-048_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-048_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-048_p1.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -22708,7 +23192,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-049.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-049.png"
       },
       {
         "id": "OP09-050",
@@ -22737,7 +23223,9 @@
           "eur": 0.13,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-050.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-050.png"
       },
       {
         "id": "OP09-050-aa",
@@ -22754,7 +23242,7 @@
         "block": 3,
         "trait": "East Blue",
         "effect": "[When Attacking] Look at 5 cards from the top of your deck; reveal up to 1 blue Event and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-050_p1.png?260130",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-050.png",
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-050_p1.png?260130"
         ],
@@ -22766,7 +23254,33 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Alternate Art"
+        "variant": "Alternate Art",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-050.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-050_p1.png?260130"
+      },
+      {
+        "id": "OP09-050-p1",
+        "name": "OP09-050-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-050_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-050_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-050_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-050-p2",
+        "name": "OP09-050-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-050_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-050_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-050_p2.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-051",
@@ -22775,6 +23289,56 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051.png"
+      },
+      {
+        "id": "OP09-051-p1",
+        "name": "OP09-051-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-051-p2",
+        "name": "OP09-051-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051_p2.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-051-p3",
+        "name": "OP09-051-p3",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p3.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p3.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051_p3.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-051-p4",
+        "name": "OP09-051-p4",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p4.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p4.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051_p4.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -22802,7 +23366,9 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-052.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-052.png"
       },
       {
         "id": "OP09-053",
@@ -22830,7 +23396,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-053.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-053.png"
       },
       {
         "id": "OP09-054",
@@ -22858,7 +23426,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-054.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-054.png"
       },
       {
         "id": "OP09-055",
@@ -22886,7 +23456,9 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-055.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-055.png"
       },
       {
         "id": "OP09-056",
@@ -22895,6 +23467,20 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-056.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-056.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-056.png"
+      },
+      {
+        "id": "OP09-056-p1",
+        "name": "OP09-056-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-056_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-056_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-056_p1.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -22904,6 +23490,32 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-057.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-057.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-057.png"
+      },
+      {
+        "id": "OP09-057-p1",
+        "name": "OP09-057-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-057_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-057_p1.png",
+        "imgEn": null,
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-057-p2",
+        "name": "OP09-057-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-057_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-057_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-057_p2.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -22931,7 +23543,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-058.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-058.png"
       },
       {
         "id": "OP09-059",
@@ -22958,7 +23572,9 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-059.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-059.png"
       },
       {
         "id": "OP09-060",
@@ -22985,7 +23601,9 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-060.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-060.png"
       },
       {
         "id": "OP09-061",
@@ -23014,7 +23632,9 @@
           "eur": 0.08,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-061.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-061.png"
       },
       {
         "id": "OP09-061-aa",
@@ -23031,7 +23651,7 @@
         "block": 3,
         "trait": "The Four Emperors/Straw Hat Crew",
         "effect": "[DON!! x1] All of your Characters gain +1 cost.[Your Turn] [Once Per Turn] When 2 or more DON!! cards on your field are returned to your DON!! deck, add up to 1 DON!! card from your DON!! deck and set it as active, and add up to 1 additional DON!! card and rest it.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-061_p1.png?260130",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-061.png",
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-061_p1.png?260130"
         ],
@@ -23043,7 +23663,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Alternate Art"
+        "variant": "Alternate Art",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-061.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-061_p1.png?260130"
+      },
+      {
+        "id": "OP09-061-p1",
+        "name": "OP09-061-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-061_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-061_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-061_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-061-p2",
@@ -23072,7 +23706,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Parallel 2"
+        "variant": "Parallel 2",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-061_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-061_p2.png"
+      },
+      {
+        "id": "OP09-061-p3",
+        "name": "OP09-061-p3",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-061_p3.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-061_p3.png",
+        "imgEn": null,
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-062",
@@ -23100,7 +23748,9 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-062.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-062.png"
       },
       {
         "id": "OP09-062-aa",
@@ -23117,7 +23767,7 @@
         "block": 3,
         "trait": "Straw Hat Crew",
         "effect": "[Banish] (When this card deals damage, the target card is trashed without activating its Trigger.)[When Attacking] You may trash 1 card with a [Trigger] from your hand: Add up to 1 DON!! card from your DON!! deck and rest it.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-062_p1.png?260130",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-062.png",
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-062_p1.png?260130"
         ],
@@ -23129,7 +23779,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Alternate Art"
+        "variant": "Alternate Art",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-062.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-062_p1.png?260130"
+      },
+      {
+        "id": "OP09-062-p1",
+        "name": "OP09-062-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-062_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-062_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-062_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-063",
@@ -23157,7 +23821,9 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-063.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-063.png"
       },
       {
         "id": "OP09-064",
@@ -23184,7 +23850,9 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-064.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-064.png"
       },
       {
         "id": "OP09-065",
@@ -23193,6 +23861,32 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-065.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-065.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-065.png"
+      },
+      {
+        "id": "OP09-065-p1",
+        "name": "OP09-065-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-065_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-065_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-065_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-065-p2",
+        "name": "OP09-065-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-065_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-065_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-065_p2.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -23220,7 +23914,9 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-066.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-066.png"
       },
       {
         "id": "OP09-067",
@@ -23247,7 +23943,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-067.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-067.png"
       },
       {
         "id": "OP09-068",
@@ -23274,7 +23972,9 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-068.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-068.png"
       },
       {
         "id": "OP09-069",
@@ -23283,6 +23983,32 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-069.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-069.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-069.png"
+      },
+      {
+        "id": "OP09-069-p1",
+        "name": "OP09-069-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-069_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-069_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-069_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-069-p2",
+        "name": "OP09-069-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-069_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-069_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-069_p2.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -23311,7 +24037,9 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-070.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-070.png"
       },
       {
         "id": "OP09-070-aa",
@@ -23328,7 +24056,7 @@
         "block": 3,
         "trait": "Straw Hat Crew",
         "effect": "[On Play] You may return 1 or more DON!! cards from your field to your DON!! deck: Give up to 2 rested DON!! cards to your Leader or 1 of your Characters.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-070_r1.png?260130",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-070.png",
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-070_r1.png?260130"
         ],
@@ -23340,7 +24068,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Alternate Art"
+        "variant": "Alternate Art",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-070.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-070_r1.png?260130"
+      },
+      {
+        "id": "OP09-070-p1",
+        "name": "OP09-070-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-070_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-070_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-070_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-071",
@@ -23367,7 +24109,9 @@
           "eur": 0.08,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-071.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-071.png"
       },
       {
         "id": "OP09-072",
@@ -23376,6 +24120,20 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-072.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-072.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-072.png"
+      },
+      {
+        "id": "OP09-072-p1",
+        "name": "OP09-072-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-072_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-072_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-072_p1.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -23403,7 +24161,9 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-073.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-073.png"
       },
       {
         "id": "OP09-074",
@@ -23430,7 +24190,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-074.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-074.png"
       },
       {
         "id": "OP09-075",
@@ -23457,7 +24219,9 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-075.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-075.png"
       },
       {
         "id": "OP09-076",
@@ -23466,6 +24230,32 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-076.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-076.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-076.png"
+      },
+      {
+        "id": "OP09-076-p1",
+        "name": "OP09-076-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-076_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-076_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-076_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-076-p2",
+        "name": "OP09-076-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-076_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-076_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-076_p2.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -23475,6 +24265,32 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-077.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-077.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-077.png"
+      },
+      {
+        "id": "OP09-077-p1",
+        "name": "OP09-077-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-077_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-077_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-077_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-077-p2",
+        "name": "OP09-077-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-077_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-077_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-077_p2.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -23484,6 +24300,32 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-078.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-078.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-078.png"
+      },
+      {
+        "id": "OP09-078-p1",
+        "name": "OP09-078-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-078_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-078_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-078_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-078-p2",
+        "name": "OP09-078-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-078_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-078_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-078_p2.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -23493,6 +24335,20 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-079.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-079.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-079.png"
+      },
+      {
+        "id": "OP09-079-p1",
+        "name": "OP09-079-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-079_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-079_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-079_p1.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -23520,7 +24376,9 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-080.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-080.png"
       },
       {
         "id": "OP09-081",
@@ -23549,7 +24407,9 @@
           "eur": 0.08,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-081.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-081.png"
       },
       {
         "id": "OP09-081-aa",
@@ -23566,7 +24426,7 @@
         "block": 3,
         "trait": "The Four Emperors/Blackbeard Pirates",
         "effect": "Your [On Play] effects are negated.[Activate: Main] You may trash 1 card from your hand: Your opponent's [On Play] effects are negated until the end of your opponent's next turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-081_p1.png?260130",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-081.png",
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-081_p1.png?260130"
         ],
@@ -23578,7 +24438,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Alternate Art"
+        "variant": "Alternate Art",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-081.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-081_p1.png?260130"
+      },
+      {
+        "id": "OP09-081-p1",
+        "name": "OP09-081-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-081_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-081_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-081_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-081-p2",
@@ -23607,7 +24481,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Parallel 2"
+        "variant": "Parallel 2",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-081_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-081_p2.png"
+      },
+      {
+        "id": "OP09-081-p3",
+        "name": "OP09-081-p3",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-081_p3.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-081_p3.png",
+        "imgEn": null,
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-082",
@@ -23634,7 +24522,9 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-082.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-082.png"
       },
       {
         "id": "OP09-083",
@@ -23662,7 +24552,9 @@
           "eur": 0.08,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-083.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-083.png"
       },
       {
         "id": "OP09-084",
@@ -23671,6 +24563,20 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-084.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-084.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-084.png"
+      },
+      {
+        "id": "OP09-084-p1",
+        "name": "OP09-084-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-084_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-084_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-084_p1.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -23698,7 +24604,9 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-085.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-085.png"
       },
       {
         "id": "OP09-086",
@@ -23707,6 +24615,20 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-086.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-086.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-086.png"
+      },
+      {
+        "id": "OP09-086-p1",
+        "name": "OP09-086-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-086_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-086_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-086_p1.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -23734,7 +24656,9 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-087.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-087.png"
       },
       {
         "id": "OP09-088",
@@ -23762,7 +24686,9 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-088.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-088.png"
       },
       {
         "id": "OP09-089",
@@ -23793,7 +24719,21 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-089.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-089.png"
+      },
+      {
+        "id": "OP09-089-p1",
+        "name": "OP09-089-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-089_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-089_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-089_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-090",
@@ -23821,7 +24761,9 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-090.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-090.png"
       },
       {
         "id": "OP09-091",
@@ -23849,7 +24791,9 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-091.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-091.png"
       },
       {
         "id": "OP09-092",
@@ -23876,7 +24820,9 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-092.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-092.png"
       },
       {
         "id": "OP09-093",
@@ -23885,6 +24831,56 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093.png"
+      },
+      {
+        "id": "OP09-093-p1",
+        "name": "OP09-093-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-093-p2",
+        "name": "OP09-093-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093_p2.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-093-p3",
+        "name": "OP09-093-p3",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p3.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p3.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093_p3.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-093-p4",
+        "name": "OP09-093-p4",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p4.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p4.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093_p4.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -23912,7 +24908,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-094.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-094.png"
       },
       {
         "id": "OP09-095",
@@ -23940,7 +24938,9 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-095.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-095.png"
       },
       {
         "id": "OP09-095-aa",
@@ -23957,7 +24957,7 @@
         "block": 3,
         "trait": "Blackbeard Pirates",
         "effect": "[Activate: Main] You may rest 1 of your DON!! cards and this Character: Look at 5 cards from the top of your deck; reveal up to 1 {Blackbeard Pirates} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-095_r1.png?260130",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-095.png",
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-095_r1.png?260130"
         ],
@@ -23969,7 +24969,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Alternate Art"
+        "variant": "Alternate Art",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-095.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-095_r1.png?260130"
+      },
+      {
+        "id": "OP09-095-p1",
+        "name": "OP09-095-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-095_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-095_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-095_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-096",
@@ -23978,6 +24992,20 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-096.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-096.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-096.png"
+      },
+      {
+        "id": "OP09-096-p1",
+        "name": "OP09-096-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-096_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-096_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-096_p1.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -23987,6 +25015,20 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-097.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-097.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-097.png"
+      },
+      {
+        "id": "OP09-097-p1",
+        "name": "OP09-097-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-097_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-097_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-097_p1.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -23996,6 +25038,20 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-098.png",
         "rarity": "C",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-098.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-098.png"
+      },
+      {
+        "id": "OP09-098-p1",
+        "name": "OP09-098-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-098_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-098_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-098_p1.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -24024,7 +25080,9 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-099.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-099.png"
       },
       {
         "id": "OP09-100",
@@ -24051,7 +25109,9 @@
           "eur": 0.12,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-100.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-100.png"
       },
       {
         "id": "OP09-101",
@@ -24078,7 +25138,9 @@
           "eur": 0.12,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-101.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-101.png"
       },
       {
         "id": "OP09-102",
@@ -24105,7 +25167,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-102.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-102.png"
       },
       {
         "id": "OP09-103",
@@ -24133,7 +25197,9 @@
           "eur": 0.38,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-103.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-103.png"
       },
       {
         "id": "OP09-103-aa",
@@ -24150,7 +25216,7 @@
         "block": 3,
         "trait": "Revolutionary Army",
         "effect": "[Blocker][On Play] You may add 1 card from the top or bottom of your Life cards to your hand: Play up to 1 {Revolutionary Army} type Character card with a cost of 4 or less from your hand. If you do, draw 1 card.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-103_p1.png?260130",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-103.png",
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-103_p1.png?260130"
         ],
@@ -24162,7 +25228,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Alternate Art"
+        "variant": "Alternate Art",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-103.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-103_p1.png?260130"
+      },
+      {
+        "id": "OP09-103-p1",
+        "name": "OP09-103-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-103_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-103_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-103_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-104",
@@ -24189,7 +25269,9 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-104.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-104.png"
       },
       {
         "id": "OP09-105",
@@ -24216,7 +25298,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-105.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-105.png"
       },
       {
         "id": "OP09-106",
@@ -24249,7 +25333,9 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-106.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-106.png"
       },
       {
         "id": "OP09-106-p1",
@@ -24278,7 +25364,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Parallel 1"
+        "variant": "Parallel 1",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-106_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-106_p1.png"
+      },
+      {
+        "id": "OP09-106-p2",
+        "name": "OP09-106-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-106_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-106_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-106_p2.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-107",
@@ -24306,7 +25406,9 @@
           "eur": 0.76,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-107.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-107.png"
       },
       {
         "id": "OP09-107-aa",
@@ -24323,7 +25425,7 @@
         "block": 3,
         "trait": "Straw Hat Crew",
         "effect": "[On Play] If your opponent has 3 or more Life cards, trash up to 1 card from the top of your opponent's Life cards.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-107_p1.png?260130",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-107.png",
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-107_p1.png?260130"
         ],
@@ -24335,7 +25437,21 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Alternate Art"
+        "variant": "Alternate Art",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-107.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-107_p1.png?260130"
+      },
+      {
+        "id": "OP09-107-p1",
+        "name": "OP09-107-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-107_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-107_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-107_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-108",
@@ -24364,7 +25480,9 @@
           "eur": 0.11,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-108.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-108.png"
       },
       {
         "id": "OP09-108-p1",
@@ -24422,7 +25540,9 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         },
-        "variant": "Parallel 2"
+        "variant": "Parallel 2",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-108_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-108_p2.png"
       },
       {
         "id": "OP09-109",
@@ -24449,7 +25569,9 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-109.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-109.png"
       },
       {
         "id": "OP09-110",
@@ -24476,7 +25598,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-110.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-110.png"
       },
       {
         "id": "OP09-111",
@@ -24503,7 +25627,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-111.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-111.png"
       },
       {
         "id": "OP09-112",
@@ -24530,7 +25656,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-112.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-112.png"
       },
       {
         "id": "OP09-113",
@@ -24557,7 +25685,9 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-113.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-113.png"
       },
       {
         "id": "OP09-114",
@@ -24584,7 +25714,9 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-114.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-114.png"
       },
       {
         "id": "OP09-115",
@@ -24611,7 +25743,9 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-115.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-115.png"
       },
       {
         "id": "OP09-116",
@@ -24638,7 +25772,9 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-116.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-116.png"
       },
       {
         "id": "OP09-117",
@@ -24665,7 +25801,21 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-117.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-117.png"
+      },
+      {
+        "id": "OP09-117-p1",
+        "name": "OP09-117-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-117_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-117_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-117_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
       },
       {
         "id": "OP09-118",
@@ -24674,6 +25824,44 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-118.png",
         "rarity": "SEC",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-118.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-118.png"
+      },
+      {
+        "id": "OP09-118-p1",
+        "name": "OP09-118-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-118_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-118_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-118_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-118-p2",
+        "name": "OP09-118-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-118_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-118_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-118_p2.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-118-p3",
+        "name": "OP09-118-p3",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-118_p3.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-118_p3.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-118_p3.png",
+        "rarity": "P",
         "game": "onepiece"
       },
       {
@@ -24683,6 +25871,44 @@
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-119.png",
         "rarity": "SEC",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-119.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-119.png"
+      },
+      {
+        "id": "OP09-119-p1",
+        "name": "OP09-119-p1",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-119_p1.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-119_p1.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-119_p1.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-119-p2",
+        "name": "OP09-119-p2",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-119_p2.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-119_p2.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-119_p2.png",
+        "rarity": "P",
+        "game": "onepiece"
+      },
+      {
+        "id": "OP09-119-p3",
+        "name": "OP09-119-p3",
+        "set": "OP-09",
+        "setId": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-119_p3.png",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-119_p3.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-119_p3.png",
+        "rarity": "P",
         "game": "onepiece"
       }
     ],
