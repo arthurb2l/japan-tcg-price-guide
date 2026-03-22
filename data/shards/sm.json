@@ -41843,7 +41843,13 @@
         "localId": "1",
         "image": "https://assets.tcgdex.net/en/sm/sm115/1",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-2",
@@ -41851,7 +41857,13 @@
         "localId": "2",
         "image": "https://assets.tcgdex.net/en/sm/sm115/2",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.14,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-3",
@@ -41859,7 +41871,13 @@
         "localId": "3",
         "image": "https://assets.tcgdex.net/en/sm/sm115/3",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.16,
+          "eur": 0.28,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-4",
@@ -41867,7 +41885,13 @@
         "localId": "4",
         "image": "https://assets.tcgdex.net/en/sm/sm115/4",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.16,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-5",
@@ -41875,7 +41899,13 @@
         "localId": "5",
         "image": "https://assets.tcgdex.net/en/sm/sm115/5",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-6",
@@ -41883,7 +41913,13 @@
         "localId": "6",
         "image": "https://assets.tcgdex.net/en/sm/sm115/6",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 1.25,
+          "eur": 2.17,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-7",
@@ -41891,7 +41927,13 @@
         "localId": "7",
         "image": "https://assets.tcgdex.net/en/sm/sm115/7",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.23,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-8",
@@ -41899,7 +41941,13 @@
         "localId": "8",
         "image": "https://assets.tcgdex.net/en/sm/sm115/8",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.16,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-9",
@@ -41907,7 +41955,13 @@
         "localId": "9",
         "image": "https://assets.tcgdex.net/en/sm/sm115/9",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 11.48,
+          "eur": 9.17,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-10",
@@ -41915,7 +41969,13 @@
         "localId": "10",
         "image": "https://assets.tcgdex.net/en/sm/sm115/10",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-11",
@@ -41923,7 +41983,13 @@
         "localId": "11",
         "image": "https://assets.tcgdex.net/en/sm/sm115/11",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.23,
+          "eur": 0.15,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-12",
@@ -41931,7 +41997,13 @@
         "localId": "12",
         "image": "https://assets.tcgdex.net/en/sm/sm115/12",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 1.31,
+          "eur": 1.55,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-13",
@@ -41939,7 +42011,13 @@
         "localId": "13",
         "image": "https://assets.tcgdex.net/en/sm/sm115/13",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.13,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-14",
@@ -41947,7 +42025,13 @@
         "localId": "14",
         "image": "https://assets.tcgdex.net/en/sm/sm115/14",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 1.64,
+          "eur": 1.93,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-15",
@@ -41955,7 +42039,13 @@
         "localId": "15",
         "image": "https://assets.tcgdex.net/en/sm/sm115/15",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.79,
+          "eur": 0.91,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-16",
@@ -41963,7 +42053,13 @@
         "localId": "16",
         "image": "https://assets.tcgdex.net/en/sm/sm115/16",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 2.88,
+          "eur": 3.48,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-17",
@@ -41971,7 +42067,13 @@
         "localId": "17",
         "image": "https://assets.tcgdex.net/en/sm/sm115/17",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.35,
+          "eur": 0.21,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-18",
@@ -41979,7 +42081,13 @@
         "localId": "18",
         "image": "https://assets.tcgdex.net/en/sm/sm115/18",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.82,
+          "eur": 1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-19",
@@ -41987,7 +42095,13 @@
         "localId": "19",
         "image": "https://assets.tcgdex.net/en/sm/sm115/19",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.64,
+          "eur": 0.49,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-20",
@@ -41995,7 +42109,13 @@
         "localId": "20",
         "image": "https://assets.tcgdex.net/en/sm/sm115/20",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 1.64,
+          "eur": 3.62,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-21",
@@ -42003,7 +42123,13 @@
         "localId": "21",
         "image": "https://assets.tcgdex.net/en/sm/sm115/21",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-22",
@@ -42011,7 +42137,13 @@
         "localId": "22",
         "image": "https://assets.tcgdex.net/en/sm/sm115/22",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.17,
+          "eur": 0.15,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-23",
@@ -42019,7 +42151,13 @@
         "localId": "23",
         "image": "https://assets.tcgdex.net/en/sm/sm115/23",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.5,
+          "eur": 0.47,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-24",
@@ -42027,7 +42165,13 @@
         "localId": "24",
         "image": "https://assets.tcgdex.net/en/sm/sm115/24",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.49,
+          "eur": 0.53,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-25",
@@ -42035,7 +42179,13 @@
         "localId": "25",
         "image": "https://assets.tcgdex.net/en/sm/sm115/25",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.18,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-26",
@@ -42043,7 +42193,13 @@
         "localId": "26",
         "image": "https://assets.tcgdex.net/en/sm/sm115/26",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-27",
@@ -42051,7 +42207,13 @@
         "localId": "27",
         "image": "https://assets.tcgdex.net/en/sm/sm115/27",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.25,
+          "eur": 0.24,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-28",
@@ -42059,7 +42221,13 @@
         "localId": "28",
         "image": "https://assets.tcgdex.net/en/sm/sm115/28",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.13,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-29",
@@ -42067,7 +42235,13 @@
         "localId": "29",
         "image": "https://assets.tcgdex.net/en/sm/sm115/29",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.27,
+          "eur": 0.18,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-30",
@@ -42075,7 +42249,13 @@
         "localId": "30",
         "image": "https://assets.tcgdex.net/en/sm/sm115/30",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.14,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-31",
@@ -42083,7 +42263,13 @@
         "localId": "31",
         "image": "https://assets.tcgdex.net/en/sm/sm115/31",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 7.99,
+          "eur": 4.33,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-32",
@@ -42091,7 +42277,13 @@
         "localId": "32",
         "image": "https://assets.tcgdex.net/en/sm/sm115/32",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 1.79,
+          "eur": 2.58,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-33",
@@ -42099,7 +42291,13 @@
         "localId": "33",
         "image": "https://assets.tcgdex.net/en/sm/sm115/33",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.13,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-34",
@@ -42107,7 +42305,13 @@
         "localId": "34",
         "image": "https://assets.tcgdex.net/en/sm/sm115/34",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.13,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-35",
@@ -42115,7 +42319,13 @@
         "localId": "35",
         "image": "https://assets.tcgdex.net/en/sm/sm115/35",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.26,
+          "eur": 0.18,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-36",
@@ -42123,7 +42333,13 @@
         "localId": "36",
         "image": "https://assets.tcgdex.net/en/sm/sm115/36",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 2.46,
+          "eur": 2.56,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-37",
@@ -42131,7 +42347,13 @@
         "localId": "37",
         "image": "https://assets.tcgdex.net/en/sm/sm115/37",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.19,
+          "eur": 0.13,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-38",
@@ -42139,7 +42361,13 @@
         "localId": "38",
         "image": "https://assets.tcgdex.net/en/sm/sm115/38",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.21,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-39",
@@ -42147,7 +42375,13 @@
         "localId": "39",
         "image": "https://assets.tcgdex.net/en/sm/sm115/39",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.17,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-40",
@@ -42155,7 +42389,13 @@
         "localId": "40",
         "image": "https://assets.tcgdex.net/en/sm/sm115/40",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.3,
+          "eur": 0.22,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-41",
@@ -42163,7 +42403,13 @@
         "localId": "41",
         "image": "https://assets.tcgdex.net/en/sm/sm115/41",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.3,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-42",
@@ -42171,7 +42417,13 @@
         "localId": "42",
         "image": "https://assets.tcgdex.net/en/sm/sm115/42",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 2.9,
+          "eur": 1.8,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-43",
@@ -42179,7 +42431,13 @@
         "localId": "43",
         "image": "https://assets.tcgdex.net/en/sm/sm115/43",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.24,
+          "eur": 0.19,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-44",
@@ -42187,7 +42445,13 @@
         "localId": "44",
         "image": "https://assets.tcgdex.net/en/sm/sm115/44",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 115.72,
+          "eur": 81.99,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-45",
@@ -42195,7 +42459,13 @@
         "localId": "45",
         "image": "https://assets.tcgdex.net/en/sm/sm115/45",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.15,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-46",
@@ -42203,7 +42473,13 @@
         "localId": "46",
         "image": "https://assets.tcgdex.net/en/sm/sm115/46",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.17,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-47",
@@ -42211,7 +42487,13 @@
         "localId": "47",
         "image": "https://assets.tcgdex.net/en/sm/sm115/47",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.18,
+          "eur": 0.24,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-48",
@@ -42219,7 +42501,13 @@
         "localId": "48",
         "image": "https://assets.tcgdex.net/en/sm/sm115/48",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 1.8,
+          "eur": 1.62,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-49",
@@ -42227,7 +42515,13 @@
         "localId": "49",
         "image": "https://assets.tcgdex.net/en/sm/sm115/49",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.69,
+          "eur": 0.2,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-50",
@@ -42235,7 +42529,13 @@
         "localId": "50",
         "image": "https://assets.tcgdex.net/en/sm/sm115/50",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.7,
+          "eur": 0.34,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-51",
@@ -42243,7 +42543,13 @@
         "localId": "51",
         "image": "https://assets.tcgdex.net/en/sm/sm115/51",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.44,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-52",
@@ -42251,7 +42557,13 @@
         "localId": "52",
         "image": "https://assets.tcgdex.net/en/sm/sm115/52",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.33,
+          "eur": 0.51,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-53",
@@ -42259,7 +42571,13 @@
         "localId": "53",
         "image": "https://assets.tcgdex.net/en/sm/sm115/53",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.09,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-54",
@@ -42267,7 +42585,13 @@
         "localId": "54",
         "image": "https://assets.tcgdex.net/en/sm/sm115/54",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-55",
@@ -42275,7 +42599,13 @@
         "localId": "55",
         "image": "https://assets.tcgdex.net/en/sm/sm115/55",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.27,
+          "eur": 0.29,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-56",
@@ -42283,7 +42613,13 @@
         "localId": "56",
         "image": "https://assets.tcgdex.net/en/sm/sm115/56",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.61,
+          "eur": 0.57,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-57",
@@ -42291,7 +42627,13 @@
         "localId": "57",
         "image": "https://assets.tcgdex.net/en/sm/sm115/57",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.15,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-58",
@@ -42299,7 +42641,13 @@
         "localId": "58",
         "image": "https://assets.tcgdex.net/en/sm/sm115/58",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 1.21,
+          "eur": 1.38,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-59",
@@ -42307,7 +42655,13 @@
         "localId": "59",
         "image": "https://assets.tcgdex.net/en/sm/sm115/59",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.13,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-60",
@@ -42315,7 +42669,13 @@
         "localId": "60",
         "image": "https://assets.tcgdex.net/en/sm/sm115/60",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.19,
+          "eur": 0.2,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-61",
@@ -42323,7 +42683,13 @@
         "localId": "61",
         "image": "https://assets.tcgdex.net/en/sm/sm115/61",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.19,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-62",
@@ -42331,7 +42697,13 @@
         "localId": "62",
         "image": "https://assets.tcgdex.net/en/sm/sm115/62",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.31,
+          "eur": 0.22,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-63",
@@ -42339,7 +42711,13 @@
         "localId": "63",
         "image": "https://assets.tcgdex.net/en/sm/sm115/63",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.76,
+          "eur": 0.36,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-64",
@@ -42347,7 +42725,13 @@
         "localId": "64",
         "image": "https://assets.tcgdex.net/en/sm/sm115/64",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.23,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-65",
@@ -42355,7 +42739,13 @@
         "localId": "65",
         "image": "https://assets.tcgdex.net/en/sm/sm115/65",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.2,
+          "eur": 0.24,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-66",
@@ -42363,7 +42753,13 @@
         "localId": "66",
         "image": "https://assets.tcgdex.net/en/sm/sm115/66",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 115.72,
+          "eur": 81.99,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-67",
@@ -42371,7 +42767,13 @@
         "localId": "67",
         "image": "https://assets.tcgdex.net/en/sm/sm115/67",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.15,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-68",
@@ -42379,7 +42781,13 @@
         "localId": "68",
         "image": "https://assets.tcgdex.net/en/sm/sm115/68",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 1.21,
+          "eur": 1.38,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm115-69",
@@ -42387,7 +42795,13 @@
         "localId": "69",
         "image": "https://assets.tcgdex.net/en/sm/sm115/69",
         "set": "Hidden Fates",
-        "setId": "sm115"
+        "setId": "sm115",
+        "pricing": {
+          "usd": 115.72,
+          "eur": 81.99,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       }
     ],
     "sm3.5": [
@@ -42396,546 +42810,1014 @@
         "name": "Bulbasaur",
         "localId": "1",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.45,
+          "eur": 0.2,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-2",
         "name": "Ivysaur",
         "localId": "2",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.35,
+          "eur": 0.12,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-3",
         "name": "Venusaur",
         "localId": "3",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 1.3,
+          "eur": 0.75,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-4",
         "name": "Shroomish",
         "localId": "4",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.17,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-5",
         "name": "Breloom",
         "localId": "5",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.25,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-6",
         "name": "Carnivine",
         "localId": "6",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.28,
+          "eur": 0.12,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-7",
         "name": "Shaymin",
         "localId": "7",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.32,
+          "eur": 0.3,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-8",
         "name": "Virizion",
         "localId": "8",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.27,
+          "eur": 0.31,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-9",
         "name": "Shining Genesect",
         "localId": "9",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 10.7,
+          "eur": 7.69,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-10",
         "name": "Entei GX",
         "localId": "10",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 3.98,
+          "eur": 2.75,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-11",
         "name": "Torkoal",
         "localId": "11",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.17,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-12",
         "name": "Larvesta",
         "localId": "12",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-13",
         "name": "Volcarona",
         "localId": "13",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-14",
         "name": "Reshiram",
         "localId": "14",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.53,
+          "eur": 0.45,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-15",
         "name": "Litten",
         "localId": "15",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.17,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-16",
         "name": "Torracat",
         "localId": "16",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.18,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-17",
         "name": "Incineroar",
         "localId": "17",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.19,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-18",
         "name": "Totodile",
         "localId": "18",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.27,
+          "eur": 0.2,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-19",
         "name": "Croconaw",
         "localId": "19",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.21,
+          "eur": 0.12,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-20",
         "name": "Feraligatr",
         "localId": "20",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.4,
+          "eur": 0.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-21",
         "name": "Qwilfish",
         "localId": "21",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.14,
+          "eur": 0.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-22",
         "name": "Buizel",
         "localId": "22",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-23",
         "name": "Floatzel",
         "localId": "23",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-24",
         "name": "Palkia",
         "localId": "24",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.37,
+          "eur": 0.51,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-25",
         "name": "Manaphy",
         "localId": "25",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.35,
+          "eur": 0.34,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-26",
         "name": "Keldeo",
         "localId": "26",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.28,
+          "eur": 0.34,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-27",
         "name": "Shining Volcanion",
         "localId": "27",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 6.72,
+          "eur": 6.69,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-28",
         "name": "Pikachu",
         "localId": "28",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 1.08,
+          "eur": 1.35,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-29",
         "name": "Raichu GX",
         "localId": "29",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 7.4,
+          "eur": 4.57,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-30",
         "name": "Voltorb",
         "localId": "30",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.11,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-31",
         "name": "Electrode",
         "localId": "31",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-32",
         "name": "Raikou",
         "localId": "32",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.77,
+          "eur": 0.75,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-33",
         "name": "Plusle",
         "localId": "33",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.46,
+          "eur": 0.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-34",
         "name": "Minun",
         "localId": "34",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.3,
+          "eur": 0.12,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-35",
         "name": "Zekrom",
         "localId": "35",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.4,
+          "eur": 0.5,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-36",
         "name": "Ekans",
         "localId": "36",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.18,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-37",
         "name": "Arbok",
         "localId": "37",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.2,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-38",
         "name": "Jynx",
         "localId": "38",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.25,
+          "eur": 0.13,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-39",
         "name": "Mewtwo GX",
         "localId": "39",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 9.1,
+          "eur": 5.81,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-40",
         "name": "Shining Mew",
         "localId": "40",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 100.39,
+          "eur": 72.48,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-41",
         "name": "Latios",
         "localId": "41",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 5.93,
+          "eur": 1.98,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-42",
         "name": "Shining Jirachi",
         "localId": "42",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 24.56,
+          "eur": 12.65,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-43",
         "name": "Golett",
         "localId": "43",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-44",
         "name": "Golurk",
         "localId": "44",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.16,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-45",
         "name": "Marshadow",
         "localId": "45",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 3.3,
+          "eur": 1.14,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-46",
         "name": "Stunfisk",
         "localId": "46",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.14,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-47",
         "name": "Spiritomb",
         "localId": "47",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.17,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-48",
         "name": "Purrloin",
         "localId": "48",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.14,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-49",
         "name": "Liepard",
         "localId": "49",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.14,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-50",
         "name": "Scraggy",
         "localId": "50",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.14,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-51",
         "name": "Scrafty",
         "localId": "51",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.2,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-52",
         "name": "Zorua",
         "localId": "52",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 1.68,
+          "eur": 1.37,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-53",
         "name": "Zoroark GX",
         "localId": "53",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 3.93,
+          "eur": 2.59,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-54",
         "name": "Yveltal",
         "localId": "54",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.33,
+          "eur": 0.31,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-55",
         "name": "Hoopa",
         "localId": "55",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.39,
+          "eur": 0.41,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-56",
         "name": "Shining Rayquaza",
         "localId": "56",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 77.35,
+          "eur": 134.47,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-57",
         "name": "Shining Arceus",
         "localId": "57",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 23.55,
+          "eur": 31.37,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-58",
         "name": "Damage Mover",
         "localId": "58",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.13,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-59",
         "name": "Energy Retrieval",
         "localId": "59",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.56,
+          "eur": 1.3,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-60",
         "name": "Great Ball",
         "localId": "60",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 1.66,
+          "eur": 1.74,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-61",
         "name": "Hau",
         "localId": "61",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-62",
         "name": "Lillie",
         "localId": "62",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.16,
+          "eur": 0.21,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-63",
         "name": "Pokémon Breeder",
         "localId": "63",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 7.73,
+          "eur": 11.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-64",
         "name": "Pokémon Catcher",
         "localId": "64",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 1.92,
+          "eur": 0.55,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-65",
         "name": "Sophocles",
         "localId": "65",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-66",
         "name": "Super Scoop Up",
         "localId": "66",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 1.34,
+          "eur": 0.86,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-67",
         "name": "Switch",
         "localId": "67",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 0.34,
+          "eur": 0.84,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-68",
         "name": "Ultra Ball",
         "localId": "68",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 1.05,
+          "eur": 1.21,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-69",
         "name": "Double Colorless Energy",
         "localId": "69",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 5.92,
+          "eur": 6.7,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-70",
         "name": "Warp Energy",
         "localId": "70",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 6.28,
+          "eur": 1.73,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-71",
         "name": "Entei GX",
         "localId": "71",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 3.98,
+          "eur": 2.75,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-72",
         "name": "Mewtwo GX",
         "localId": "72",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 9.1,
+          "eur": 5.81,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-73",
         "name": "Pokémon Breeder",
         "localId": "73",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 7.73,
+          "eur": 11.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-74",
         "name": "Entei GX",
         "localId": "74",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 3.98,
+          "eur": 2.75,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-75",
         "name": "Raichu GX",
         "localId": "75",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 7.4,
+          "eur": 4.57,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-76",
         "name": "Mewtwo GX",
         "localId": "76",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 9.1,
+          "eur": 5.81,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-77",
         "name": "Zoroark GX",
         "localId": "77",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 3.93,
+          "eur": 2.59,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm3.5-78",
         "name": "Mewtwo GX",
         "localId": "78",
         "set": "Shining Legends",
-        "setId": "sm3.5"
+        "setId": "sm3.5",
+        "pricing": {
+          "usd": 9.1,
+          "eur": 5.81,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       }
     ],
     "sm2": [
@@ -54085,546 +54967,1014 @@
         "name": "Charmander",
         "localId": "1",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 3.08,
+          "eur": 1.62,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-2",
         "name": "Charmeleon",
         "localId": "2",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.75,
+          "eur": 0.64,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-3",
         "name": "Charizard",
         "localId": "3",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 10.27,
+          "eur": 7.51,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-4",
         "name": "Torchic",
         "localId": "4",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.26,
+          "eur": 0.22,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-5",
         "name": "Combusken",
         "localId": "5",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.27,
+          "eur": 0.17,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-6",
         "name": "Blaziken",
         "localId": "6",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 1.9,
+          "eur": 0.93,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-7",
         "name": "Victini ◇",
         "localId": "7",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 7.64,
+          "eur": 3.95,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-8",
         "name": "Darumaka",
         "localId": "8",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.2,
+          "eur": 0.21,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-9",
         "name": "Darmanitan",
         "localId": "9",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.2,
+          "eur": 0.29,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-10",
         "name": "Heatmor",
         "localId": "10",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.26,
+          "eur": 0.25,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-11",
         "name": "Reshiram GX",
         "localId": "11",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 7.47,
+          "eur": 5.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-12",
         "name": "Litten",
         "localId": "12",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.29,
+          "eur": 0.18,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-13",
         "name": "Salandit",
         "localId": "13",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.24,
+          "eur": 0.15,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-14",
         "name": "Salazzle",
         "localId": "14",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.23,
+          "eur": 0.3,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-15",
         "name": "Horsea",
         "localId": "15",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.17,
+          "eur": 0.22,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-16",
         "name": "Horsea",
         "localId": "16",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.22,
+          "eur": 0.17,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-17",
         "name": "Seadra",
         "localId": "17",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.32,
+          "eur": 0.29,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-18",
         "name": "Kingdra GX",
         "localId": "18",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 10.52,
+          "eur": 7.35,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-19",
         "name": "Magikarp",
         "localId": "19",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.5,
+          "eur": 0.3,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-20",
         "name": "Gyarados",
         "localId": "20",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 2.17,
+          "eur": 2.12,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-21",
         "name": "Lapras",
         "localId": "21",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.46,
+          "eur": 0.58,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-22",
         "name": "Totodile",
         "localId": "22",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.35,
+          "eur": 0.2,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-23",
         "name": "Croconaw",
         "localId": "23",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.31,
+          "eur": 0.25,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-24",
         "name": "Feraligatr",
         "localId": "24",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 1.19,
+          "eur": 1.65,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-25",
         "name": "Wooper",
         "localId": "25",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 1.16,
+          "eur": 0.71,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-26",
         "name": "Quagsire",
         "localId": "26",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.88,
+          "eur": 0.85,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-27",
         "name": "Corsola",
         "localId": "27",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.34,
+          "eur": 0.28,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-28",
         "name": "Feebas",
         "localId": "28",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.37,
+          "eur": 0.34,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-29",
         "name": "Milotic",
         "localId": "29",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.36,
+          "eur": 0.35,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-30",
         "name": "Phione",
         "localId": "30",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.36,
+          "eur": 0.28,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-31",
         "name": "Wishiwashi",
         "localId": "31",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.2,
+          "eur": 0.13,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-32",
         "name": "Trapinch",
         "localId": "32",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.19,
+          "eur": 0.12,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-33",
         "name": "Hydreigon",
         "localId": "33",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.26,
+          "eur": 0.27,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-34",
         "name": "Dratini",
         "localId": "34",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.32,
+          "eur": 0.3,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-35",
         "name": "Dratini",
         "localId": "35",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.37,
+          "eur": 0.25,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-36",
         "name": "Dragonair",
         "localId": "36",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.53,
+          "eur": 0.37,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-37",
         "name": "Dragonite GX",
         "localId": "37",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 76.75,
+          "eur": 20.15,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-38",
         "name": "Vibrava",
         "localId": "38",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.25,
+          "eur": 0.18,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-39",
         "name": "Flygon",
         "localId": "39",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.41,
+          "eur": 0.27,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-40",
         "name": "Altaria",
         "localId": "40",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 1.38,
+          "eur": 1.62,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-41",
         "name": "Altaria GX",
         "localId": "41",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 3.38,
+          "eur": 6.89,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-42",
         "name": "Bagon",
         "localId": "42",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.22,
+          "eur": 0.21,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-43",
         "name": "Shelgon",
         "localId": "43",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.54,
+          "eur": 0.61,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-44",
         "name": "Salamence GX",
         "localId": "44",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 13.51,
+          "eur": 3.83,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-45",
         "name": "Druddigon",
         "localId": "45",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.35,
+          "eur": 0.3,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-46",
         "name": "Zekrom",
         "localId": "46",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.78,
+          "eur": 1.42,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-47",
         "name": "Kyurem",
         "localId": "47",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 1.72,
+          "eur": 3.23,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-48",
         "name": "White Kyurem GX",
         "localId": "48",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 14.17,
+          "eur": 16.92,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-49",
         "name": "Zygarde",
         "localId": "49",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.37,
+          "eur": 0.41,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-50",
         "name": "Turtonator",
         "localId": "50",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.22,
+          "eur": 0.26,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-51",
         "name": "Drampa",
         "localId": "51",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.27,
+          "eur": 0.26,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-52",
         "name": "Jangmo-o",
         "localId": "52",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.2,
+          "eur": 0.22,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-53",
         "name": "Hakamo-o",
         "localId": "53",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.22,
+          "eur": 0.19,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-54",
         "name": "Kommo-o",
         "localId": "54",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.86,
+          "eur": 1.44,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-55",
         "name": "Kangaskhan",
         "localId": "55",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.26,
+          "eur": 0.13,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-56",
         "name": "Swablu",
         "localId": "56",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.3,
+          "eur": 0.2,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-57",
         "name": "Swablu",
         "localId": "57",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.37,
+          "eur": 0.42,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-58",
         "name": "Blaine’s Last Stand",
         "localId": "58",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.33,
+          "eur": 0.51,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-59",
         "name": "Dragon Talon",
         "localId": "59",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.29,
+          "eur": 0.23,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-60",
         "name": "Fiery Flint",
         "localId": "60",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.5,
+          "eur": 0.65,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-61",
         "name": "Lance ◇",
         "localId": "61",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 1.85,
+          "eur": 1.77,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-62",
         "name": "Switch Raft",
         "localId": "62",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 2.15,
+          "eur": 0.94,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-63",
         "name": "Wela Volcano Park",
         "localId": "63",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.34,
+          "eur": 0.3,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-64",
         "name": "Zinnia",
         "localId": "64",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.32,
+          "eur": 0.27,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-65",
         "name": "Reshiram GX",
         "localId": "65",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 7.47,
+          "eur": 5.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-66",
         "name": "Kingdra GX",
         "localId": "66",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 10.52,
+          "eur": 7.35,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-67",
         "name": "Dragonite GX",
         "localId": "67",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 76.75,
+          "eur": 20.15,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-68",
         "name": "Altaria GX",
         "localId": "68",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 3.38,
+          "eur": 6.89,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-69",
         "name": "Blaine’s Last Stand",
         "localId": "69",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.33,
+          "eur": 0.51,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-70",
         "name": "Zinnia",
         "localId": "70",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.32,
+          "eur": 0.27,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-71",
         "name": "Reshiram GX",
         "localId": "71",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 7.47,
+          "eur": 5.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-72",
         "name": "Altaria GX",
         "localId": "72",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 3.38,
+          "eur": 6.89,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-73",
         "name": "Salamence GX",
         "localId": "73",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 13.51,
+          "eur": 3.83,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-74",
         "name": "White Kyurem GX",
         "localId": "74",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 14.17,
+          "eur": 16.92,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-75",
         "name": "Dragon Talon",
         "localId": "75",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.29,
+          "eur": 0.23,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-76",
         "name": "Fiery Flint",
         "localId": "76",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 0.4,
+          "eur": 0.72,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-77",
         "name": "Switch Raft",
         "localId": "77",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 2.15,
+          "eur": 0.94,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "sm7.5-78",
         "name": "Ultra Necrozma GX",
         "localId": "78",
         "set": "Dragon Majesty",
-        "setId": "sm7.5"
+        "setId": "sm7.5",
+        "pricing": {
+          "usd": 7.56,
+          "eur": 7.17,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       }
     ],
     "smp": [
