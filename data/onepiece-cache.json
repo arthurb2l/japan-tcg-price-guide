@@ -27480,6 +27480,90 @@
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-119_p3.png",
         "rarity": "P",
         "game": "onepiece"
+      },
+      {
+        "id": "OP09-004-p5",
+        "name": "OP09-004",
+        "set": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p5.png",
+        "rarity": "SR",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p5.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004.png",
+        "variant": "Parallel 5"
+      },
+      {
+        "id": "OP09-004-p6",
+        "name": "OP09-004",
+        "set": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p6.png",
+        "rarity": "SR",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p6.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004.png",
+        "variant": "Parallel 6"
+      },
+      {
+        "id": "OP09-004-p7",
+        "name": "OP09-004",
+        "set": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p7.png",
+        "rarity": "SR",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p7.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004.png",
+        "variant": "Parallel 7"
+      },
+      {
+        "id": "OP09-051-p5",
+        "name": "OP09-051",
+        "set": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p5.png",
+        "rarity": "SR",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p5.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051.png",
+        "variant": "Parallel 5"
+      },
+      {
+        "id": "OP09-051-p6",
+        "name": "OP09-051",
+        "set": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p6.png",
+        "rarity": "SR",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p6.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051.png",
+        "variant": "Parallel 6"
+      },
+      {
+        "id": "OP09-093-p5",
+        "name": "OP09-093",
+        "set": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p5.png",
+        "rarity": "SR",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p5.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093.png",
+        "variant": "Parallel 5"
+      },
+      {
+        "id": "OP09-093-p6",
+        "name": "OP09-093",
+        "set": "OP-09",
+        "setName": "Emperors in the New World",
+        "img": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p6.png",
+        "rarity": "SR",
+        "game": "onepiece",
+        "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p6.png",
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093.png",
+        "variant": "Parallel 6"
       }
     ],
     "OP-10": [
