@@ -2,6 +2,14 @@
 
 > Single source of truth for AI agents and contributors.
 
+## Related Documentation
+
+| Doc | Purpose |
+|-----|---------|
+| `DATABASE_COVERAGE.md` | Card database status, TCGdex set IDs, coverage gaps |
+| `PRICING.md` | Price data sources, APIs, fetch scripts, maintenance |
+| `research/METHODOLOGY.md` | AI Work Tax research methodology |
+
 ## File Structure
 
 ```

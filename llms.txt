@@ -4,6 +4,8 @@
 
 ## Quick Links for AI Agents
 - Architecture: /docs/ARCHITECTURE.md (file structure, data flow, patterns)
+- Database Coverage: /docs/DATABASE_COVERAGE.md (card counts, set IDs)
+- Pricing: /docs/PRICING.md (price sources, APIs, maintenance)
 - Submission Schema: /data/submission-schema.json
 - Research: /docs/research/METHODOLOGY.md
 
