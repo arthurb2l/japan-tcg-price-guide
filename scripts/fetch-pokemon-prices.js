@@ -24,6 +24,11 @@ const SET_MAP = {
   'bw1': 'BLW', 'bw2': 'EPO', 'bw3': 'NVI', 'bw4': 'NXD', 'bw5': 'DEX',
   'bw6': 'DRX', 'bw7': 'BCR', 'bw8': 'PLS', 'bw9': 'PLF', 'bw10': 'PLB',
   'bw11': 'LTR',
+  // SM English sets
+  'sm1': 'SUM', 'sm2': 'GRI', 'sm3': 'BUS', 'sm3.5': 'SLG', 'sm4': 'CIN',
+  'sm5': 'UPR', 'sm6': 'FLI', 'sm7': 'CES', 'sm7.5': 'DRM', 'sm8': 'LOT',
+  'sm9': 'TEU', 'sm10': 'UNB', 'sm11': 'UNM', 'sm115': 'HIF', 'sm12': 'CEC',
+  'sma': 'DET', 'smp': 'SMP',
 };
 
 async function fetchWithRetry(url, retries = 3) {
