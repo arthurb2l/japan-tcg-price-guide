@@ -136,12 +136,12 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
   <div class="filter-group">
     <span class="filter-label">Sort:</span>
     <select class="filter" id="sort" onchange="sortCards(this.value)">
+      <option value="price-high">Price: High → Low</option>
+      <option value="price-low">Price: Low → High</option>
       <option value="id">Card #</option>
       <option value="name">Name</option>
       <option value="set">Set</option>
       <option value="rarity">Rarity</option>
-      <option value="price-high">Price: High → Low</option>
-      <option value="price-low">Price: Low → High</option>
     </select>
   </div>
   <span class="stats" id="stats">Loading...</span>
