@@ -307,7 +307,7 @@ function renderCards() {
   } else if (currentView === 'text') {
     grid.innerHTML = cards.map(c => `
       <div class="card-item" onclick="showCard('${c.id}')">
-        <div class="name">${c.name}${jpName(c)}${c.price ? ' · ' + formatPrice(c) : ''}</div>
+        <div class="name">${c.name}${jpName(c)}${c.pricing ? ' · ' + formatPrice(c) : ''}</div>
         <div class="set">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown rarity'}${variant(c)}</div>
         <div class="details">${c.types ? 'Type: ' + c.types.join(', ') : ''} ${c.hp ? '· HP: ' + c.hp : ''}</div>
       </div>
@@ -321,7 +321,7 @@ function renderCards() {
           <div class="meta">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown'}${variant(c)}</div>
           ${c.types ? '<div class="types">' + c.types.map(t => '<span class="type-badge">' + t + '</span>').join('') + '</div>' : ''}
           ${c.hp ? '<div class="meta">HP: ' + c.hp + '</div>' : ''}
-          ${c.price ? '<div class="price">' + formatPrice(c) + '</div>' : ''}
+          ${c.pricing ? '<div class="price">' + formatPrice(c) + '</div>' : ''}
         </div>
       </div>
     `).join('');
@@ -331,7 +331,7 @@ function renderCards() {
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>
         <div class="set">${c.setId}</div>
-        ${c.price ? '<div class="price">' + formatPrice(c) + '</div>' : ''}
+        ${c.pricing ? '<div class="price">' + formatPrice(c) + '</div>' : ''}
       </div>
     `).join('');
   }
@@ -393,7 +393,13 @@ function filterBySet(setId) {
 }
 
 function sortCards(by) {
-  const getPrice = c => c.price?.[currency.toLowerCase()] || c.price?.jpy || c.price?.eur || 0;
+  const getPrice = c => {
+    if (c.pricing?.usd) return c.pricing.usd;
+    if (c.pricing?.tcgplayer?.normal?.marketPrice) return c.pricing.tcgplayer.normal.marketPrice;
+    if (c.pricing?.tcgplayer?.holofoil?.marketPrice) return c.pricing.tcgplayer.holofoil.marketPrice;
+    if (c.pricing?.cardmarket?.trend) return c.pricing.cardmarket.trend * 1.08;
+    return 0;
+  };
   filteredCards.sort((a, b) => {
     if (by === 'name') return (a.name || '').localeCompare(b.name || '');
     if (by === 'id') return (a.localId || '').localeCompare(b.localId || '', undefined, {numeric: true});
