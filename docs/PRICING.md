@@ -1,5 +1,20 @@
 # Pricing Data Sources
 
+## Current Coverage
+
+| Game | Cards | With Prices | Coverage | Source |
+|------|-------|-------------|----------|--------|
+| Pokemon | 27,984 | 1,031 | 3.7% | TCGdex (free) |
+| One Piece | 2,274 | 0 | 0% | Pending (#76) |
+
+## Roadmap
+
+1. **#76** - Add One Piece prices via one-piece-api.com (HIGH)
+2. **#77** - Complete Pokemon price coverage (MEDIUM)
+3. **#78** - Long-term infrastructure: validation, history, trends (LOW)
+
+---
+
 ## Overview
 
 Card prices come from free APIs. No paid services required.
@@ -50,7 +65,27 @@ The script:
 
 ## One Piece Cards
 
-**Source:** None currently (researching options)
+**Source:** [one-piece-api.com](https://one-piece-api.com) via RapidAPI
+
+### Pricing
+- Free tier: 100 requests/day
+- Pro: $9.90/mo for 3,000/day
+
+### Data Structure
+```json
+{
+  "prices": {
+    "cardmarket": { "currency": "EUR", "lowest_near_mint": 7.50 },
+    "tcgplayer": { "currency": "EUR", "market_price": 7.20 }
+  }
+}
+```
+
+### Fetching Prices
+```bash
+# Requires RAPIDAPI_KEY environment variable
+cd /mnt/c/q/Pokemon && node scripts/fetch-onepiece-prices.js 100
+```
 
 ### Challenges
 - TCGdex is Pokemon-only
