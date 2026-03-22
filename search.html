@@ -454,7 +454,7 @@ function showCard(id) {
   const card = allCards.find(c => c.id === id);
   if (!card) return;
   const proxyImg = url => url?.startsWith('https://en.onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
-  const getImgHigh = c => c.game === 'onepiece' ? proxyImg(c.img) || 'onepiece/images/card-back.png' : c.image + '/high.webp';
+  const getImgHigh = c => c.imgHigh || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/high.webp') || 'onepiece/images/card-back.png';
   document.getElementById('modal-title').textContent = card.name;
   document.getElementById('modal-img').src = getImgHigh(card);
   document.getElementById('modal-name').textContent = card.name + (card.nameJp ? ' ' + card.nameJp : '');
@@ -478,7 +478,14 @@ function showCard(id) {
     extraLabel.style.display = extra.style.display = 'none';
   }
   
-  document.getElementById('modal-price').textContent = card.price ? formatPrice(card) : 'No price data';
+  // Price with variants
+  let priceHtml = card.pricing ? formatPrice(card) : 'No price data';
+  if (card.variants?.length > 1) {
+    priceHtml += '<br><small style="color:#666">';
+    priceHtml += card.variants.slice(1).map(v => `${v.label || 'Alt'}: $${v.usd?.toFixed(2) || '?'}`).join(' · ');
+    priceHtml += '</small>';
+  }
+  document.getElementById('modal-price').innerHTML = priceHtml;
   document.getElementById('modal').classList.add('active');
 }
 

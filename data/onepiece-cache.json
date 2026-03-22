@@ -34,7 +34,28 @@
           "eur": 1.49,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-001_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 2.12,
+            "eur": 1.49
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 556.45,
+            "eur": 536.06
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 70.74,
+            "eur": 19.97
+          }
+        ]
       },
       {
         "id": "OP01-002",
@@ -62,7 +83,22 @@
           "eur": 0.48,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-002_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 1.14,
+            "eur": 0.48
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 476.83,
+            "eur": 421.28
+          }
+        ]
       },
       {
         "id": "OP01-003",
@@ -90,7 +126,22 @@
           "eur": 0.7,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-003_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 5.3,
+            "eur": 0.7
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 847.45,
+            "eur": 755.11
+          }
+        ]
       },
       {
         "id": "OP01-004",
@@ -118,7 +169,28 @@
           "eur": 0.11,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-004_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.21,
+            "eur": 0.11
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 340.24,
+            "eur": 158.03
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 49.3,
+            "eur": 65.58
+          }
+        ]
       },
       {
         "id": "OP01-005",
@@ -147,7 +219,34 @@
           "eur": 0.21,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-005_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.26,
+            "eur": 0.21
+          },
+          {
+            "id": 1,
+            "label": "Regular",
+            "usd": 7.24,
+            "eur": 5.17
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 13,
+            "eur": 10
+          },
+          {
+            "id": 3,
+            "label": "aa",
+            "usd": 16.11,
+            "eur": 11.05
+          }
+        ]
       },
       {
         "id": "OP01-007",
@@ -174,7 +273,8 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-007_EN.webp"
       },
       {
         "id": "OP01-008",
@@ -202,7 +302,22 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-008_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.07,
+            "eur": 0.05
+          },
+          {
+            "id": 1,
+            "label": "fa",
+            "usd": 2.87,
+            "eur": 4.88
+          }
+        ]
       },
       {
         "id": "OP01-009",
@@ -229,7 +344,8 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-009_EN.webp"
       },
       {
         "id": "OP01-010",
@@ -256,7 +372,8 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-010_EN.webp"
       },
       {
         "id": "OP01-011",
@@ -283,7 +400,8 @@
           "eur": 0.11,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-011_EN.webp"
       },
       {
         "id": "OP01-012",
@@ -310,7 +428,8 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-012_EN.webp"
       },
       {
         "id": "OP01-013",
@@ -341,7 +460,40 @@
           "eur": 0.71,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-013_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 1.15,
+            "eur": 0.71
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 48.7,
+            "eur": 51.55
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 15.47,
+            "eur": 6.37
+          },
+          {
+            "id": 3,
+            "label": "Regular",
+            "usd": 12.96,
+            "eur": 11.13
+          },
+          {
+            "id": 4,
+            "label": "Regular",
+            "usd": 100.85,
+            "eur": 44.67
+          }
+        ]
       },
       {
         "id": "OP01-014",
@@ -369,7 +521,22 @@
           "eur": 0.09,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-014_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.14,
+            "eur": 0.09
+          },
+          {
+            "id": 1,
+            "label": "Regular",
+            "usd": 3.73,
+            "eur": 0.93
+          }
+        ]
       },
       {
         "id": "OP01-015",
@@ -397,7 +564,22 @@
           "eur": 0.11,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-015_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.31,
+            "eur": 0.11
+          },
+          {
+            "id": 1,
+            "label": "Regular",
+            "usd": 75.1,
+            "eur": 42.95
+          }
+        ]
       },
       {
         "id": "OP01-017",
@@ -426,7 +608,34 @@
           "eur": 0.15,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-017_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.45,
+            "eur": 0.15
+          },
+          {
+            "id": 1,
+            "label": "Regular",
+            "usd": 41.21,
+            "eur": 45.53
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 15.37,
+            "eur": 6.31
+          },
+          {
+            "id": 3,
+            "label": "Regular",
+            "usd": 181.64,
+            "eur": 87.99
+          }
+        ]
       },
       {
         "id": "OP01-018",
@@ -453,7 +662,8 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-018_EN.webp"
       },
       {
         "id": "OP01-019",
@@ -480,7 +690,8 @@
           "eur": 0.1,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-019_EN.webp"
       },
       {
         "id": "OP01-020",
@@ -507,7 +718,8 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-020_EN.webp"
       },
       {
         "id": "OP01-021",
@@ -537,7 +749,46 @@
           "eur": 0.08,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-021_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.15,
+            "eur": 0.08
+          },
+          {
+            "id": 1,
+            "label": "Regular",
+            "usd": 0.33,
+            "eur": 0.14
+          },
+          {
+            "id": 2,
+            "label": "fa",
+            "usd": 12.1,
+            "eur": 11.19
+          },
+          {
+            "id": 3,
+            "label": "Regular",
+            "usd": 4.28,
+            "eur": 0.89
+          },
+          {
+            "id": 4,
+            "label": "Regular",
+            "usd": 28.95,
+            "eur": 12.99
+          },
+          {
+            "id": 5,
+            "label": "Regular",
+            "usd": 9.21,
+            "eur": 4.38
+          }
+        ]
       },
       {
         "id": "OP01-022",
@@ -565,7 +816,22 @@
           "eur": 0.11,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-022_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.26,
+            "eur": 0.11
+          },
+          {
+            "id": 1,
+            "label": "Regular",
+            "usd": 10.12,
+            "eur": 2.65
+          }
+        ]
       },
       {
         "id": "OP01-023",
@@ -592,7 +858,8 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-023_EN.webp"
       },
       {
         "id": "OP01-025",
@@ -622,7 +889,34 @@
           "eur": 3.79,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-025_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 6.37,
+            "eur": 3.79
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 171.9,
+            "eur": 163.78
+          },
+          {
+            "id": 2,
+            "label": "aa",
+            "usd": 2.85,
+            "eur": 1.66
+          },
+          {
+            "id": 3,
+            "label": "Regular",
+            "usd": 259.25,
+            "eur": 143.52
+          }
+        ]
       },
       {
         "id": "OP01-026",
@@ -649,7 +943,8 @@
           "eur": 0.72,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-026_EN.webp"
       },
       {
         "id": "OP01-027",
@@ -676,7 +971,8 @@
           "eur": 0.15,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-027_EN.webp"
       },
       {
         "id": "OP01-028",
@@ -703,7 +999,8 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-028_EN.webp"
       },
       {
         "id": "OP01-030",
@@ -730,7 +1027,22 @@
           "eur": 0.35,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-030_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 1.76,
+            "eur": 0.35
+          },
+          {
+            "id": 1,
+            "label": "Regular",
+            "usd": 56.92,
+            "eur": 27.05
+          }
+        ]
       },
       {
         "id": "OP01-031",
@@ -758,7 +1070,22 @@
           "eur": 0.24,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-031_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.26,
+            "eur": 0.24
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 115.46,
+            "eur": 81.08
+          }
+        ]
       },
       {
         "id": "OP01-032",
@@ -785,7 +1112,8 @@
           "eur": 0.1,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-032_EN.webp"
       },
       {
         "id": "OP01-034",
@@ -813,7 +1141,22 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-034_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.08,
+            "eur": 0.05
+          },
+          {
+            "id": 1,
+            "label": "fa",
+            "usd": 2.33,
+            "eur": 3.67
+          }
+        ]
       },
       {
         "id": "OP01-036",
@@ -840,7 +1183,8 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-036_EN.webp"
       },
       {
         "id": "OP01-037",
@@ -867,7 +1211,8 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-037_EN.webp"
       },
       {
         "id": "OP01-038",
@@ -894,7 +1239,8 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-038_EN.webp"
       },
       {
         "id": "OP01-040",
@@ -922,7 +1268,22 @@
           "eur": 0.74,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-040_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.68,
+            "eur": 0.74
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 7.11,
+            "eur": 12.42
+          }
+        ]
       },
       {
         "id": "OP01-042",
@@ -949,7 +1310,8 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-042_EN.webp"
       },
       {
         "id": "OP01-043",
@@ -976,7 +1338,8 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-043_EN.webp"
       },
       {
         "id": "OP01-044",
@@ -1003,7 +1366,8 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-044_EN.webp"
       },
       {
         "id": "OP01-045",
@@ -1030,7 +1394,8 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-045_EN.webp"
       },
       {
         "id": "OP01-046",
@@ -1057,7 +1422,8 @@
           "eur": 0.25,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-046_EN.webp"
       },
       {
         "id": "OP01-048",
@@ -1085,7 +1451,22 @@
           "eur": 0.08,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-048_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.08,
+            "eur": 0.08
+          },
+          {
+            "id": 1,
+            "label": "fa",
+            "usd": 4.67,
+            "eur": 4.93
+          }
+        ]
       },
       {
         "id": "OP01-049",
@@ -1112,7 +1493,8 @@
           "eur": 0.15,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-049_EN.webp"
       },
       {
         "id": "OP01-050",
@@ -1139,7 +1521,8 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-050_EN.webp"
       },
       {
         "id": "OP01-053",
@@ -1166,7 +1549,8 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-053_EN.webp"
       },
       {
         "id": "OP01-054",
@@ -1193,7 +1577,8 @@
           "eur": 0.13,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-054_EN.webp"
       },
       {
         "id": "OP01-056",
@@ -1220,7 +1605,8 @@
           "eur": 0.1,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-056_EN.webp"
       },
       {
         "id": "OP01-057",
@@ -1247,7 +1633,22 @@
           "eur": 1.18,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-057_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 1.59,
+            "eur": 1.18
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 10.57,
+            "eur": 4.69
+          }
+        ]
       },
       {
         "id": "OP01-058",
@@ -1274,7 +1675,8 @@
           "eur": 0.66,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-058_EN.webp"
       },
       {
         "id": "OP01-059",
@@ -1301,7 +1703,8 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-059_EN.webp"
       },
       {
         "id": "OP01-060",
@@ -1330,7 +1733,28 @@
           "eur": 0.33,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-060_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.37,
+            "eur": 0.33
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 296.72,
+            "eur": 251.6
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 1.34,
+            "eur": 0.71
+          }
+        ]
       },
       {
         "id": "OP01-061",
@@ -1358,7 +1782,22 @@
           "eur": 0.21,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-061_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.3,
+            "eur": 0.21
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 142.83,
+            "eur": 219.69
+          }
+        ]
       },
       {
         "id": "OP01-062",
@@ -1386,7 +1825,22 @@
           "eur": 0.22,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-062_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.27,
+            "eur": 0.22
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 142.91,
+            "eur": 148.24
+          }
+        ]
       },
       {
         "id": "OP01-063",
@@ -1413,7 +1867,8 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-063_EN.webp"
       },
       {
         "id": "OP01-064",
@@ -1441,7 +1896,22 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-064_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.1,
+            "eur": 0.05
+          },
+          {
+            "id": 1,
+            "label": "fa",
+            "usd": 7.32,
+            "eur": 6.63
+          }
+        ]
       },
       {
         "id": "OP01-065",
@@ -1468,7 +1938,8 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-065_EN.webp"
       },
       {
         "id": "OP01-066",
@@ -1495,7 +1966,8 @@
           "eur": 0.08,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-066_EN.webp"
       },
       {
         "id": "OP01-067",
@@ -1523,7 +1995,22 @@
           "eur": 0.85,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-067_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.66,
+            "eur": 0.85
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 15.14,
+            "eur": 19.52
+          }
+        ]
       },
       {
         "id": "OP01-068",
@@ -1550,7 +2037,8 @@
           "eur": 0.14,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-068_EN.webp"
       },
       {
         "id": "OP01-069",
@@ -1577,7 +2065,8 @@
           "eur": 0.14,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-069_EN.webp"
       },
       {
         "id": "OP01-071",
@@ -1604,7 +2093,8 @@
           "eur": 0.17,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-071_EN.webp"
       },
       {
         "id": "OP01-072",
@@ -1631,7 +2121,8 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-072_EN.webp"
       },
       {
         "id": "OP01-074",
@@ -1658,7 +2149,8 @@
           "eur": 0.11,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-074_EN.webp"
       },
       {
         "id": "OP01-075",
@@ -1685,7 +2177,8 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-075_EN.webp"
       },
       {
         "id": "OP01-076",
@@ -1712,7 +2205,8 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-076_EN.webp"
       },
       {
         "id": "OP01-077",
@@ -1740,7 +2234,34 @@
           "eur": 0.63,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-077_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.69,
+            "eur": 0.63
+          },
+          {
+            "id": 1,
+            "label": "fa",
+            "usd": 20.89,
+            "eur": 18.45
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 290,
+            "eur": 239.73
+          },
+          {
+            "id": 3,
+            "label": "Regular",
+            "usd": 445,
+            "eur": 490
+          }
+        ]
       },
       {
         "id": "OP01-079",
@@ -1767,7 +2288,22 @@
           "eur": 0.19,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-079_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.74,
+            "eur": 0.19
+          },
+          {
+            "id": 1,
+            "label": "Regular",
+            "usd": 18.59,
+            "eur": 2.26
+          }
+        ]
       },
       {
         "id": "OP01-080",
@@ -1794,7 +2330,8 @@
           "eur": 0.08,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-080_EN.webp"
       },
       {
         "id": "OP01-081",
@@ -1821,7 +2358,8 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-081_EN.webp"
       },
       {
         "id": "OP01-082",
@@ -1848,7 +2386,8 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-082_EN.webp"
       },
       {
         "id": "OP01-083",
@@ -1875,7 +2414,8 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-083_EN.webp"
       },
       {
         "id": "OP01-084",
@@ -1902,7 +2442,22 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-084_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.14,
+            "eur": 0.04
+          },
+          {
+            "id": 1,
+            "label": "Regular",
+            "usd": 16.27,
+            "eur": 7
+          }
+        ]
       },
       {
         "id": "OP01-085",
@@ -1929,7 +2484,8 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-085_EN.webp"
       },
       {
         "id": "OP01-086",
@@ -1957,7 +2513,8 @@
           "eur": 0.16,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-086_EN.webp"
       },
       {
         "id": "OP01-087",
@@ -1984,7 +2541,8 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-087_EN.webp"
       },
       {
         "id": "OP01-088",
@@ -2011,7 +2569,8 @@
           "eur": 0.48,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-088_EN.webp"
       },
       {
         "id": "OP01-089",
@@ -2038,7 +2597,8 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-089_EN.webp"
       },
       {
         "id": "OP01-090",
@@ -2065,7 +2625,8 @@
           "eur": 0.08,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-090_EN.webp"
       },
       {
         "id": "OP01-091",
@@ -2093,7 +2654,22 @@
           "eur": 0.23,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-091_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.27,
+            "eur": 0.23
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 119.63,
+            "eur": 94.26
+          }
+        ]
       },
       {
         "id": "OP01-092",
@@ -2120,7 +2696,8 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-092_EN.webp"
       },
       {
         "id": "OP01-093",
@@ -2148,7 +2725,28 @@
           "eur": 0.21,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-093_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.33,
+            "eur": 0.21
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 12.92,
+            "eur": 15.32
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 0.97,
+            "eur": 0.35
+          }
+        ]
       },
       {
         "id": "OP01-094",
@@ -2176,7 +2774,22 @@
           "eur": 4.47,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-094_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 4.09,
+            "eur": 4.47
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 27.32,
+            "eur": 29.06
+          }
+        ]
       },
       {
         "id": "OP01-095",
@@ -2203,7 +2816,8 @@
           "eur": 0.08,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-095_EN.webp"
       },
       {
         "id": "OP01-096",
@@ -2231,7 +2845,22 @@
           "eur": 0.78,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-096_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.62,
+            "eur": 0.78
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 11.9,
+            "eur": 27.64
+          }
+        ]
       },
       {
         "id": "OP01-097",
@@ -2259,7 +2888,22 @@
           "eur": 0.26,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-097_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.22,
+            "eur": 0.26
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 7.92,
+            "eur": 9.49
+          }
+        ]
       },
       {
         "id": "OP01-098",
@@ -2286,7 +2930,8 @@
           "eur": 0.11,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-098_EN.webp"
       },
       {
         "id": "OP01-099",
@@ -2313,7 +2958,8 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-099_EN.webp"
       },
       {
         "id": "OP01-100",
@@ -2340,7 +2986,8 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-100_EN.webp"
       },
       {
         "id": "OP01-101",
@@ -2368,7 +3015,28 @@
           "eur": 0.26,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-101_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.32,
+            "eur": 0.26
+          },
+          {
+            "id": 1,
+            "label": "Regular",
+            "usd": 2.7,
+            "eur": 1.1
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 15.73,
+            "eur": 16.4
+          }
+        ]
       },
       {
         "id": "OP01-102",
@@ -2396,7 +3064,22 @@
           "eur": 0.17,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-102_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.28,
+            "eur": 0.17
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 7.19,
+            "eur": 7.03
+          }
+        ]
       },
       {
         "id": "OP01-103",
@@ -2423,7 +3106,8 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-103_EN.webp"
       },
       {
         "id": "OP01-104",
@@ -2450,7 +3134,8 @@
           "eur": 0.03,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-104_EN.webp"
       },
       {
         "id": "OP01-105",
@@ -2477,7 +3162,8 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-105_EN.webp"
       },
       {
         "id": "OP01-106",
@@ -2504,7 +3190,8 @@
           "eur": 0.11,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-106_EN.webp"
       },
       {
         "id": "OP01-107",
@@ -2531,7 +3218,8 @@
           "eur": 0.07,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-107_EN.webp"
       },
       {
         "id": "OP01-108",
@@ -2558,7 +3246,22 @@
           "eur": 0.09,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-108_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.12,
+            "eur": 0.09
+          },
+          {
+            "id": 1,
+            "label": "Regular",
+            "usd": 7.15,
+            "eur": 2.49
+          }
+        ]
       },
       {
         "id": "OP01-109",
@@ -2586,7 +3289,22 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-109_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.08,
+            "eur": 0.05
+          },
+          {
+            "id": 1,
+            "label": "fa",
+            "usd": 2.28,
+            "eur": 2.14
+          }
+        ]
       },
       {
         "id": "OP01-110",
@@ -2613,7 +3331,8 @@
           "eur": 0.05,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-110_EN.webp"
       },
       {
         "id": "OP01-111",
@@ -2640,7 +3359,8 @@
           "eur": 0.16,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-111_EN.webp"
       },
       {
         "id": "OP01-112",
@@ -2667,7 +3387,8 @@
           "eur": 0.18,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-112_EN.webp"
       },
       {
         "id": "OP01-113",
@@ -2694,7 +3415,8 @@
           "eur": 0.06,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-113_EN.webp"
       },
       {
         "id": "OP01-114",
@@ -2721,7 +3443,22 @@
           "eur": 0.18,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-114_EN.webp",
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.32,
+            "eur": 0.18
+          },
+          {
+            "id": 1,
+            "label": "Regular",
+            "usd": 1.94,
+            "eur": 0.92
+          }
+        ]
       },
       {
         "id": "OP01-115",
@@ -2748,7 +3485,8 @@
           "eur": 0.04,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-115_EN.webp"
       },
       {
         "id": "OP01-116",
@@ -2775,7 +3513,8 @@
           "eur": 0.08,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-116_EN.webp"
       },
       {
         "id": "OP01-117",
@@ -2802,7 +3541,8 @@
           "eur": 0.02,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-117_EN.webp"
       },
       {
         "id": "OP01-118",
@@ -2829,7 +3569,8 @@
           "eur": 0.09,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-118_EN.webp"
       },
       {
         "id": "OP01-119",
@@ -2856,7 +3597,8 @@
           "eur": 2.01,
           "source": "limitlesstcg",
           "updated": "2026-03-22"
-        }
+        },
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP01/OP01-119_EN.webp"
       }
     ],
     "OP02": [
