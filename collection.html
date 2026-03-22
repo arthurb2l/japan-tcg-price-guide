@@ -408,16 +408,21 @@ function exportCollection() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `tcg-collection-${new Date().toISOString().split('T')[0]}.csv`;
+  a.download = `tcg-${currentList}-${new Date().toISOString().split('T')[0]}.csv`;
   a.click();
   URL.revokeObjectURL(url);
 }
 
 // Initialize
+const params = new URLSearchParams(location.search);
+if (params.get('list') && listTypes.includes(params.get('list'))) {
+  currentList = params.get('list');
+}
+
 loadCards().then(() => {
   // Wait for auth state before rendering
   if (!currentUser) {
-    userCollection = getLocalCollection();
+    userCollection = getLocalCollection(currentList);
     renderCollection();
   }
 });
