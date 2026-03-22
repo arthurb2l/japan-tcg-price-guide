@@ -539,9 +539,9 @@ function renderCards() {
         <span></span>
         <span class="name" onclick="sortCards('name')">Name ▼</span>
         <span class="set" onclick="sortCards('set')">Set ▼</span>
-        <span class="id" onclick="sortCards('number')">ID ▼</span>
+        <span class="id" onclick="sortCards('id')">ID ▼</span>
         <span class="rarity" onclick="sortCards('rarity')">Rarity ▼</span>
-        <span class="price" onclick="sortCards('price')">Price ▼</span>
+        <span class="price" onclick="sortCards('price-high')">Price ▼</span>
       </div>` + cards.map(c => `
       <div class="card-item${owned(c)}" onclick="showCard('${c.id}')">
         <img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
