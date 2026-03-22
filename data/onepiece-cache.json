@@ -28,7 +28,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-001_p1.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-001_p2.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 2.12,
+          "eur": 1.49,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-002",
@@ -50,7 +56,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-002.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-002_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 1.14,
+          "eur": 0.48,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-003",
@@ -72,7 +84,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-003.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-003_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 5.3,
+          "eur": 0.7,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-004",
@@ -94,7 +112,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-004.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-004_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.21,
+          "eur": 0.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-005",
@@ -117,7 +141,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-005_p1.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-005_p2.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.26,
+          "eur": 0.21,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-007",
@@ -138,7 +168,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-007.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-008",
@@ -160,7 +196,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-008.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-008_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-009",
@@ -181,7 +223,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-009.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-010",
@@ -202,7 +250,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-010.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-011",
@@ -223,7 +277,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-011.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-012",
@@ -244,7 +304,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-012.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-013",
@@ -269,7 +335,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-013_p3.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-013_p4.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 1.15,
+          "eur": 0.71,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-014",
@@ -291,7 +363,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-014.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-014_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.14,
+          "eur": 0.09,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-015",
@@ -313,7 +391,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-015.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-015_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.31,
+          "eur": 0.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-017",
@@ -336,7 +420,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-017_p1.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-017_p2.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.45,
+          "eur": 0.15,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-018",
@@ -357,7 +447,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-018.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-019",
@@ -378,7 +474,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-019.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.11,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-020",
@@ -399,7 +501,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-020.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-021",
@@ -423,7 +531,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-021_p1.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-021_p3.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-022",
@@ -445,7 +559,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-022.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-022_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.26,
+          "eur": 0.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-023",
@@ -466,7 +586,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-023.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-025",
@@ -490,7 +616,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-025_p2.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-025_p3.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 6.37,
+          "eur": 3.79,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-026",
@@ -511,7 +643,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-026.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.84,
+          "eur": 0.72,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-027",
@@ -532,7 +670,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-027.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 1.05,
+          "eur": 0.15,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-028",
@@ -553,7 +697,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-028.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-030",
@@ -574,7 +724,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-030.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 1.76,
+          "eur": 0.35,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-031",
@@ -596,7 +752,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-031.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-031_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.26,
+          "eur": 0.24,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-032",
@@ -617,7 +779,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-032.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-034",
@@ -639,7 +807,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-034.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-034_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-036",
@@ -660,7 +834,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-036.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-037",
@@ -681,7 +861,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-037.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-038",
@@ -702,7 +888,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-038.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-040",
@@ -724,7 +916,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-040.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-040_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.68,
+          "eur": 0.74,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-042",
@@ -745,7 +943,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-042.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-043",
@@ -766,7 +970,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-043.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-044",
@@ -787,7 +997,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-044.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-045",
@@ -808,7 +1024,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-045.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-046",
@@ -829,7 +1051,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-046.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.35,
+          "eur": 0.25,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-048",
@@ -851,7 +1079,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-048.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-048_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-049",
@@ -872,7 +1106,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-049.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.28,
+          "eur": 0.15,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-050",
@@ -893,7 +1133,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-050.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-053",
@@ -914,7 +1160,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-053.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-054",
@@ -935,7 +1187,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-054.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.3,
+          "eur": 0.13,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-056",
@@ -956,7 +1214,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-056.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-057",
@@ -977,7 +1241,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-057.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 1.59,
+          "eur": 1.18,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-058",
@@ -998,7 +1268,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-058.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.56,
+          "eur": 0.66,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-059",
@@ -1019,7 +1295,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-059.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-060",
@@ -1042,7 +1324,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-060_p1.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-060_p2.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.37,
+          "eur": 0.33,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-061",
@@ -1064,7 +1352,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-061.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-061_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.3,
+          "eur": 0.21,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-062",
@@ -1086,7 +1380,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-062.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-062_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.27,
+          "eur": 0.22,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-063",
@@ -1107,7 +1407,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-063.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.19,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-064",
@@ -1129,7 +1435,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-064.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-064_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-065",
@@ -1150,7 +1462,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-065.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-066",
@@ -1171,7 +1489,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-066.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.04,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-067",
@@ -1193,7 +1517,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-067.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-067_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.66,
+          "eur": 0.85,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-068",
@@ -1214,7 +1544,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-068.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.27,
+          "eur": 0.14,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-069",
@@ -1235,7 +1571,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-069.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.33,
+          "eur": 0.14,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-071",
@@ -1256,7 +1598,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-071.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.17,
+          "eur": 0.17,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-072",
@@ -1277,7 +1625,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-072.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-074",
@@ -1298,7 +1652,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-074.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.27,
+          "eur": 0.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-075",
@@ -1319,7 +1679,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-075.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-076",
@@ -1340,7 +1706,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-076.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-077",
@@ -1362,7 +1734,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-077.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-077_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.69,
+          "eur": 0.63,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-079",
@@ -1383,7 +1761,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-079.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.74,
+          "eur": 0.19,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-080",
@@ -1404,7 +1788,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-080.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-081",
@@ -1425,7 +1815,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-081.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.04,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-082",
@@ -1446,7 +1842,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-082.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-083",
@@ -1467,7 +1869,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-083.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-084",
@@ -1488,7 +1896,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-084.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.14,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-085",
@@ -1509,7 +1923,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-085.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.11,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-086",
@@ -1531,7 +1951,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-086.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-086_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.21,
+          "eur": 0.16,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-087",
@@ -1552,7 +1978,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-087.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-088",
@@ -1573,7 +2005,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-088.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.38,
+          "eur": 0.48,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-089",
@@ -1594,7 +2032,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-089.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-090",
@@ -1615,7 +2059,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-090.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-091",
@@ -1637,7 +2087,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-091.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-091_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.27,
+          "eur": 0.23,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-092",
@@ -1658,7 +2114,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-092.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-093",
@@ -1680,7 +2142,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-093.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-093_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.33,
+          "eur": 0.21,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-094",
@@ -1702,7 +2170,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-094.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-094_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 4.09,
+          "eur": 4.47,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-095",
@@ -1723,7 +2197,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-095.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-096",
@@ -1745,7 +2225,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-096.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-096_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.62,
+          "eur": 0.78,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-097",
@@ -1767,7 +2253,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-097.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-097_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.22,
+          "eur": 0.26,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-098",
@@ -1788,7 +2280,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-098.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.13,
+          "eur": 0.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-099",
@@ -1809,7 +2307,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-099.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.04,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-100",
@@ -1830,7 +2334,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-100.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.04,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-101",
@@ -1852,7 +2362,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-101.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-101_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.32,
+          "eur": 0.26,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-102",
@@ -1874,7 +2390,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-102.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-102_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.28,
+          "eur": 0.17,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-103",
@@ -1895,7 +2417,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-103.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-104",
@@ -1916,7 +2444,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-104.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-105",
@@ -1937,7 +2471,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-105.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-106",
@@ -1958,7 +2498,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-106.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.3,
+          "eur": 0.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-107",
@@ -1979,7 +2525,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-107.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-108",
@@ -2000,7 +2552,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-108.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.09,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-109",
@@ -2022,7 +2580,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-109.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-109_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-110",
@@ -2043,7 +2607,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-110.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-111",
@@ -2064,7 +2634,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-111.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.26,
+          "eur": 0.16,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-112",
@@ -2085,7 +2661,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-112.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.24,
+          "eur": 0.18,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-113",
@@ -2106,7 +2688,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-113.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-114",
@@ -2127,7 +2715,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-114.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.32,
+          "eur": 0.18,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-115",
@@ -2148,7 +2742,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-115.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-116",
@@ -2169,7 +2769,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-116.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-117",
@@ -2190,7 +2796,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-117.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-118",
@@ -2211,7 +2823,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-118.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.09,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP01-119",
@@ -2232,7 +2850,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-119.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 1.75,
+          "eur": 2.01,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       }
     ],
     "OP02": [
@@ -2257,7 +2881,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-001_p1.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-001_p2.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.3,
+          "eur": 0.27,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-002",
@@ -2279,7 +2909,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-002.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-002_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.41,
+          "eur": 0.21,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-003",
@@ -2300,7 +2936,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-003.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-006",
@@ -2321,7 +2963,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-006.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.04,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-007",
@@ -2342,7 +2990,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-007.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-008",
@@ -2364,7 +3018,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-008.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-008_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.8,
+          "eur": 0.39,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-009",
@@ -2386,7 +3046,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-009.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-009_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-010",
@@ -2407,7 +3073,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-010.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.04,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-011",
@@ -2428,7 +3100,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-011.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.25,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-012",
@@ -2449,7 +3127,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-012.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-014",
@@ -2470,7 +3154,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-014.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-016",
@@ -2491,7 +3181,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-016.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-017",
@@ -2513,7 +3209,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-017.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-017_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-019",
@@ -2535,7 +3237,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-019.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-019_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-020",
@@ -2556,7 +3264,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-020.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-021",
@@ -2577,7 +3291,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-021.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.31,
+          "eur": 0.09,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-022",
@@ -2599,7 +3319,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-022.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-022_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.18,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-023",
@@ -2621,7 +3347,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-023.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-023_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-024",
@@ -2642,7 +3374,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-024.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.19,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-025",
@@ -2664,7 +3402,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-025.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-025_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.18,
+          "eur": 0.25,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-026",
@@ -2686,7 +3430,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-026.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-026_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.3,
+          "eur": 0.19,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-027",
@@ -2707,7 +3457,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-027.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.11,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-028",
@@ -2729,7 +3485,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-028.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-028_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-029",
@@ -2750,7 +3512,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-029.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.56,
+          "eur": 0.2,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-030",
@@ -2772,7 +3540,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-030.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-030_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 1.06,
+          "eur": 0.84,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-031",
@@ -2794,7 +3568,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-031.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-031_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.16,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-032",
@@ -2815,7 +3595,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-032.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.16,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-033",
@@ -2837,7 +3623,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-033.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-033_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-034",
@@ -2860,7 +3652,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-034_p1.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-034_p2.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.35,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-035",
@@ -2883,7 +3681,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-035_p2.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-035_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.11,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-036",
@@ -2905,7 +3709,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-036.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-036_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 4.77,
+          "eur": 2.12,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-037",
@@ -2927,7 +3737,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-037.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-037_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.14,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-038",
@@ -2948,7 +3764,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-038.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.14,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-039",
@@ -2970,7 +3792,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-039.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-039_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-040",
@@ -2992,7 +3820,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-040.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-040_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.27,
+          "eur": 0.12,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-041",
@@ -3015,7 +3849,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-041_p1.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-041_p2.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.35,
+          "eur": 0.18,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-042",
@@ -3036,7 +3876,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-042.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.42,
+          "eur": 0.17,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-043",
@@ -3058,7 +3904,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-043.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-043_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-044",
@@ -3079,7 +3931,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-044.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-045",
@@ -3101,7 +3959,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-045.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-045_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-046",
@@ -3122,7 +3986,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-046.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.13,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-047",
@@ -3143,7 +4013,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-047.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.17,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-048",
@@ -3164,7 +4040,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-048.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-049",
@@ -3186,7 +4068,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-049.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-049_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.21,
+          "eur": 0.19,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-050",
@@ -3207,7 +4095,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-050.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.16,
+          "eur": 0.13,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-051",
@@ -3229,7 +4123,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-051.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-051_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.58,
+          "eur": 0.59,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-052",
@@ -3250,7 +4150,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-052.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-053",
@@ -3271,7 +4177,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-053.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-054",
@@ -3293,7 +4205,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-054.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-054_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-055",
@@ -3314,7 +4232,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-055.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-056",
@@ -3335,7 +4259,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-056.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.11,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-057",
@@ -3357,7 +4287,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-057.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-057_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-058",
@@ -3379,7 +4315,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-058.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-058_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.28,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-059",
@@ -3402,7 +4344,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-059_p1.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-059_p2.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.25,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-060",
@@ -3423,7 +4371,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-060.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-061",
@@ -3444,7 +4398,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-061.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-062",
@@ -3466,7 +4426,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-062.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-062_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 1.86,
+          "eur": 0.47,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-063",
@@ -3488,7 +4454,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-063.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-063_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.23,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-064",
@@ -3509,7 +4481,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-064.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.36,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-065",
@@ -3530,7 +4508,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-065.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.16,
+          "eur": 0.09,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-066",
@@ -3551,7 +4535,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-066.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.17,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-067",
@@ -3572,7 +4562,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-067.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.26,
+          "eur": 0.14,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-069",
@@ -3593,7 +4589,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-069.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-070",
@@ -3614,7 +4616,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-070.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-071",
@@ -3636,7 +4644,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-071.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-071_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.25,
+          "eur": 0.16,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-072",
@@ -3658,7 +4672,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-072.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-072_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.23,
+          "eur": 0.17,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-073",
@@ -3680,7 +4700,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-073.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-073_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.24,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-074",
@@ -3701,7 +4727,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-074.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-075",
@@ -3722,7 +4754,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-075.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.13,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-076",
@@ -3743,7 +4781,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-076.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-077",
@@ -3764,7 +4808,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-077.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-078",
@@ -3785,7 +4835,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-078.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-079",
@@ -3806,7 +4862,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-079.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-080",
@@ -3827,7 +4889,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-080.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.03,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-081",
@@ -3848,7 +4916,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-081.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-082",
@@ -3869,7 +4943,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-082.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-083",
@@ -3890,7 +4970,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-083.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.18,
+          "eur": 0.13,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-084",
@@ -3911,7 +4997,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-084.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-086",
@@ -3933,7 +5025,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-086.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-086_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.14,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-087",
@@ -3954,7 +5052,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-087.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.11,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-088",
@@ -3975,7 +5079,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-088.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-090",
@@ -3996,7 +5106,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-090.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-091",
@@ -4017,7 +5133,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-091.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-092",
@@ -4038,7 +5160,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-092.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-093",
@@ -4061,7 +5189,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-093_p1.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-093_p2.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.24,
+          "eur": 0.28,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-094",
@@ -4082,7 +5216,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-094.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-095",
@@ -4103,7 +5243,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-095.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-097",
@@ -4124,7 +5270,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-097.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.04,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-098",
@@ -4147,7 +5299,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-098_r1.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-098_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.24,
+          "eur": 0.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-100",
@@ -4168,7 +5326,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-100.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.04,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-101",
@@ -4189,7 +5353,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-101.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-102",
@@ -4210,7 +5380,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-102.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.16,
+          "eur": 0.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-103",
@@ -4231,7 +5407,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-103.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.2,
+          "eur": 0.13,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-104",
@@ -4252,7 +5434,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-104.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-105",
@@ -4274,7 +5462,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-105.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-105_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-107",
@@ -4295,7 +5489,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-107.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-108",
@@ -4318,7 +5518,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-108_p1.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-108_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-109",
@@ -4340,7 +5546,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-109.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-109_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.04,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-110",
@@ -4361,7 +5573,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-110.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.33,
+          "eur": 0.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-111",
@@ -4382,7 +5600,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-111.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-112",
@@ -4403,7 +5627,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-112.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-113",
@@ -4425,7 +5655,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-113.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-113_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-115",
@@ -4447,7 +5683,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-115.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-115_p1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.25,
+          "eur": 0.15,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-116",
@@ -4469,7 +5711,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-116.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-116_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.04,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-118",
@@ -4490,7 +5738,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-118.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP02-119",
@@ -4511,7 +5765,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-119.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.34,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       }
     ],
     "OP03": [
@@ -4536,7 +5796,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-001_p1.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-001_p2.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.39,
+          "eur": 0.18,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP03-002",
@@ -4557,7 +5823,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-002.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP03-004",
@@ -4578,7 +5850,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-004.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.04,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP03-005",
@@ -4599,7 +5877,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-005.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP03-006",
@@ -4621,7 +5905,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-006.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-006_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP03-007",
@@ -4643,7 +5933,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-007.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-007_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP03-009",
@@ -4665,7 +5961,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-009.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-009_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP03-010",
@@ -4687,7 +5989,13 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-010.png?260130",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-010_r1.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP03-011",
@@ -4708,7 +6016,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-011.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP03-012",
@@ -4729,7 +6043,13 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-012.png?260130"
         ],
-        "source": "nemesis312/OnePieceTCGEngCardList"
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.13,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        }
       },
       {
         "id": "OP03-013",
