@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Search - Japan TCG Price Guide</title>
+<meta name="description" content="Advanced card search with filters for price, rarity, foil type, and more. Find underpriced cards for Japanese flea markets.">
+<link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
+<style>
+.nav{background:#fff;border-bottom:1px solid #ddd;padding:10px 15px;margin:-10px -10px 0;display:flex;align-items:center;gap:15px;flex-wrap:wrap}
+.nav a{color:#666;text-decoration:none;font-size:.9em}
+.nav a:hover{color:#EE1515}
+.page-title{font-size:1.5em;font-weight:700;margin:20px 0 10px}
+.page-desc{color:#666;margin-bottom:20px}
+
+/* Form layout */
+.search-form{background:#fff;border-radius:8px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.1);margin-bottom:20px}
+.form-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-bottom:15px}
+.form-group{display:flex;flex-direction:column;gap:4px}
+.form-group label{font-size:.8em;font-weight:600;color:#666;text-transform:uppercase}
+.form-group input,.form-group select{padding:10px;border:1px solid #ddd;border-radius:6px;font-size:.9em}
+.form-group input:focus,.form-group select:focus{border-color:#EE1515;outline:none}
+.form-group small{font-size:.75em;color:#999}
+
+/* Price range */
+.price-range{display:flex;gap:8px;align-items:center}
+.price-range input{width:80px}
+.price-range span{color:#666}
+
+/* Buttons */
+.form-actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.btn{padding:12px 24px;border:none;border-radius:6px;font-weight:600;cursor:pointer;font-size:.9em}
+.btn-primary{background:#EE1515;color:#fff}
+.btn-primary:hover{background:#cc1010}
+.btn-secondary{background:#fff;border:1px solid #ddd;color:#666}
+.btn-secondary:hover{border-color:#EE1515;color:#EE1515}
+
+/* Results */
+.results-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;flex-wrap:wrap;gap:10px}
+.results-count{font-weight:600}
+.results-sort{display:flex;align-items:center;gap:8px}
+.results-sort label{font-size:.8em;color:#666}
+.results-sort select{padding:6px 10px;border:1px solid #ddd;border-radius:4px}
+
+/* Card grid */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+.card-item{background:#fff;border-radius:6px;padding:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);cursor:pointer;transition:transform .15s}
+.card-item:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+.card-item img{width:100%;border-radius:4px}
+.card-item .name{font-weight:600;font-size:.8em;margin-top:6px;line-height:1.2}
+.card-item .meta{font-size:.7em;color:#666;margin-top:2px}
+.card-item .price{font-size:.8em;color:#2a7;font-weight:600;margin-top:4px}
+.card-item .finish-badge{display:inline-block;font-size:.65em;padding:1px 4px;border-radius:3px;margin-left:4px}
+.card-item .finish-badge.parallel{background:linear-gradient(135deg,#a855f7,#6366f1);color:#fff}
+.card-item .finish-badge.alt-art{background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff}
+
+/* Checklist view */
+.card-grid.checklist{display:table;width:100%;border-collapse:collapse}
+.card-grid.checklist .card-item{display:table-row;padding:0;box-shadow:none;border-radius:0}
+.card-grid.checklist .card-item:hover{background:#f5f5f5;transform:none}
+.card-grid.checklist .card-item>*{display:table-cell;padding:8px;border-bottom:1px solid #eee;vertical-align:middle}
+.card-grid.checklist .card-item img{width:40px}
+.card-grid.checklist .header{background:#f8f8f8;font-weight:600}
+.card-grid.checklist .header span{cursor:pointer;user-select:none}
+
+/* No results */
+.no-results{text-align:center;padding:40px;color:#666}
+
+/* Loading */
+.loading{text-align:center;padding:40px;color:#666}
+
+/* URL display */
+.url-display{background:#f5f5f5;padding:10px;border-radius:4px;font-family:monospace;font-size:.8em;word-break:break-all;margin-top:15px}
+.url-display a{color:#EE1515}
+
+@media(max-width:600px){
+  .form-row{grid-template-columns:1fr}
+  .price-range input{width:70px}
+}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="index.html">← Home</a>
+  <a href="search.html">Basic Search</a>
+</div>
+
+<h1 class="page-title">Advanced Search</h1>
+<p class="page-desc">Build complex queries to find exactly the cards you need. Perfect for finding underpriced cards at flea markets.</p>
+
+<div class="search-form">
+  <div class="form-row">
+    <div class="form-group">
+      <label>Game</label>
+      <select id="game">
+        <option value="onepiece">One Piece</option>
+        <option value="pokemon">Pokemon</option>
+        <option value="">All Games</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Card Name</label>
+      <input type="text" id="name" placeholder="e.g. Luffy, Charizard">
+    </div>
+    <div class="form-group">
+      <label>Set</label>
+      <select id="set">
+        <option value="">All Sets</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group">
+      <label>Finish / Foil</label>
+      <select id="finish">
+        <option value="">Any</option>
+        <option value="regular">Regular Only (Non-Foil)</option>
+        <option value="parallel">Parallel Only</option>
+        <option value="alternate-art">Alternate Art Only</option>
+        <option value="foil">All Foil (Parallel + AA)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Rarity</label>
+      <select id="rarity">
+        <option value="">Any</option>
+        <option value="C">Common (C)</option>
+        <option value="UC">Uncommon (UC)</option>
+        <option value="R">Rare (R)</option>
+        <option value="SR">Super Rare (SR)</option>
+        <option value="SEC">Secret (SEC)</option>
+        <option value="L">Leader (L)</option>
+        <option value="P">Promo (P)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Has Price</label>
+      <select id="hasPrice">
+        <option value="">Any</option>
+        <option value="yes">Yes - Has Price</option>
+        <option value="no">No - Missing Price</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group">
+      <label>Price Range (USD)</label>
+      <div class="price-range">
+        <input type="number" id="priceMin" placeholder="Min" step="0.01" min="0">
+        <span>to</span>
+        <input type="number" id="priceMax" placeholder="Max" step="0.01" min="0">
+      </div>
+      <small>Leave empty for no limit</small>
+    </div>
+  </div>
+  
+  <div class="form-actions">
+    <button class="btn btn-primary" onclick="doSearch()">Search</button>
+    <button class="btn btn-secondary" onclick="clearForm()">Clear All</button>
+    <button class="btn btn-secondary" onclick="copyURL()">📋 Copy Search URL</button>
+  </div>
+  
+  <div class="url-display" id="url-display" style="display:none">
+    <strong>Shareable URL:</strong> <a id="share-url" href="#" target="_blank"></a>
+  </div>
+</div>
+
+<div class="results-header" id="results-header" style="display:none">
+  <span class="results-count" id="results-count">0 cards found</span>
+  <div class="results-sort">
+    <label>Sort:</label>
+    <select id="sort" onchange="sortResults()">
+      <option value="price-low">Price: Low → High</option>
+      <option value="price-high">Price: High → Low</option>
+      <option value="name">Name A-Z</option>
+      <option value="id">Card Number</option>
+      <option value="rarity">Rarity</option>
+    </select>
+    <label style="margin-left:15px">View:</label>
+    <select id="view" onchange="renderResults()">
+      <option value="grid">Grid</option>
+      <option value="checklist">Checklist</option>
+    </select>
+  </div>
+</div>
+
+<div class="loading" id="loading">Loading card data...</div>
+<div class="card-grid" id="results"></div>
+<div class="no-results" id="no-results" style="display:none">
+  <p>No cards match your search criteria.</p>
+  <p><a href="#" onclick="clearForm();return false">Clear filters</a> and try again.</p>
+</div>
+
+<div id="show-more" style="display:none;text-align:center;padding:20px">
+  <button class="btn btn-secondary" onclick="showMore()">Show More</button>
+</div>
+
+<script>
+let allCards = [], filteredCards = [], displayLimit = 100;
+const rarityOrder = ['C','UC','R','SR','SEC','L','SP','P','DON!!','Promo'];
+
+async function loadCards() {
+  try {
+    // Load Pokemon
+    let pokemonCards = [];
+    try {
+      const manifest = await fetch('data/shards/manifest.json').then(r => r.json());
+      const shards = await Promise.all(Object.values(manifest.shards).map(s => 
+        fetch(`data/shards/${s.file}`).then(r => r.json())
+      ));
+      pokemonCards = shards.flatMap(s => Object.values(s.sets).flat()).map(c => ({...c, game: 'pokemon'}));
+    } catch(e) {
+      const data = await fetch('data/brain-cache.json').then(r => r.json());
+      pokemonCards = Object.values(data.sets).flat().map(c => ({...c, game: 'pokemon'}));
+    }
+    
+    // Load One Piece
+    let opCards = [];
+    try {
+      const data = await fetch('data/onepiece-cache.json').then(r => r.json());
+      opCards = Object.values(data.sets).flat().map(c => ({...c, game: 'onepiece'}));
+    } catch(e) {}
+    
+    allCards = [...pokemonCards, ...opCards];
+    document.getElementById('loading').style.display = 'none';
+    
+    // Populate set dropdown
+    populateSets();
+    
+    // Check URL params
+    loadFromURL();
+  } catch(e) {
+    document.getElementById('loading').textContent = 'Error loading cards';
+  }
+}
+
+function populateSets() {
+  const game = document.getElementById('game').value;
+  const setSelect = document.getElementById('set');
+  const currentSet = setSelect.value;
+  
+  setSelect.innerHTML = '<option value="">All Sets</option>';
+  
+  const cards = game ? allCards.filter(c => c.game === game) : allCards;
+  const sets = [...new Set(cards.map(c => c.setId))].filter(Boolean).sort((a, b) => {
+    const norm = s => s.replace(/(\d+)/g, n => n.padStart(3, '0'));
+    return norm(a).localeCompare(norm(b));
+  });
+  
+  sets.forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s;
+    const setName = cards.find(c => c.setId === s)?.set;
+    opt.textContent = setName && setName !== s ? `${s} - ${setName}` : s;
+    setSelect.appendChild(opt);
+  });
+  
+  if (currentSet && sets.includes(currentSet)) setSelect.value = currentSet;
+}
+
+document.getElementById('game').addEventListener('change', populateSets);
+
+function getPrice(c) {
+  if (c.pricing?.usd) return c.pricing.usd;
+  if (c.pricing?.tcgplayer?.normal?.marketPrice) return c.pricing.tcgplayer.normal.marketPrice;
+  if (c.pricing?.tcgplayer?.holofoil?.marketPrice) return c.pricing.tcgplayer.holofoil.marketPrice;
+  if (c.pricing?.cardmarket?.trend) return c.pricing.cardmarket.trend * 1.08;
+  return null;
+}
+
+function doSearch() {
+  displayLimit = 100;
+  const game = document.getElementById('game').value;
+  const name = document.getElementById('name').value.toLowerCase().trim();
+  const set = document.getElementById('set').value;
+  const finish = document.getElementById('finish').value;
+  const rarity = document.getElementById('rarity').value;
+  const hasPrice = document.getElementById('hasPrice').value;
+  const priceMin = parseFloat(document.getElementById('priceMin').value) || null;
+  const priceMax = parseFloat(document.getElementById('priceMax').value) || null;
+  
+  filteredCards = allCards.filter(c => {
+    if (game && c.game !== game) return false;
+    if (name && !c.name?.toLowerCase().includes(name)) return false;
+    if (set && c.setId !== set) return false;
+    if (rarity && c.rarity !== rarity) return false;
+    
+    // Finish filter
+    if (finish === 'regular' && c.finish && c.finish !== 'regular') return false;
+    if (finish === 'parallel' && !c.finish?.startsWith('parallel')) return false;
+    if (finish === 'alternate-art' && c.finish !== 'alternate-art') return false;
+    if (finish === 'foil' && (!c.finish || c.finish === 'regular')) return false;
+    
+    // Price filters
+    const price = getPrice(c);
+    if (hasPrice === 'yes' && price === null) return false;
+    if (hasPrice === 'no' && price !== null) return false;
+    if (priceMin !== null && (price === null || price < priceMin)) return false;
+    if (priceMax !== null && (price === null || price > priceMax)) return false;
+    
+    return true;
+  });
+  
+  sortResults();
+  updateURL();
+}
+
+function sortResults() {
+  const sort = document.getElementById('sort').value;
+  const sortById = (a, b) => (a.id || '').localeCompare(b.id || '', undefined, {numeric: true});
+  
+  filteredCards.sort((a, b) => {
+    if (sort === 'name') return (a.name || '').localeCompare(b.name || '');
+    if (sort === 'id') return sortById(a, b);
+    if (sort === 'rarity') {
+      const ai = rarityOrder.indexOf(a.rarity) === -1 ? 99 : rarityOrder.indexOf(a.rarity);
+      const bi = rarityOrder.indexOf(b.rarity) === -1 ? 99 : rarityOrder.indexOf(b.rarity);
+      return bi - ai;
+    }
+    if (sort === 'price-high') return (getPrice(b) || 0) - (getPrice(a) || 0);
+    if (sort === 'price-low') return (getPrice(a) || 999999) - (getPrice(b) || 999999);
+    return 0;
+  });
+  
+  renderResults();
+}
+
+function renderResults() {
+  const grid = document.getElementById('results');
+  const header = document.getElementById('results-header');
+  const noResults = document.getElementById('no-results');
+  const showMore = document.getElementById('show-more');
+  const view = document.getElementById('view').value;
+  
+  header.style.display = 'flex';
+  document.getElementById('results-count').textContent = `${filteredCards.length} cards found`;
+  
+  if (!filteredCards.length) {
+    grid.innerHTML = '';
+    noResults.style.display = 'block';
+    showMore.style.display = 'none';
+    return;
+  }
+  noResults.style.display = 'none';
+  
+  const cards = filteredCards.slice(0, displayLimit);
+  showMore.style.display = filteredCards.length > displayLimit ? 'block' : 'none';
+  
+  const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
+  const getImg = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || '';
+  const formatPrice = c => {
+    const p = getPrice(c);
+    return p !== null ? '$' + p.toFixed(2) : '-';
+  };
+  const finishBadge = c => {
+    if (!c.finish || c.finish === 'regular') return '';
+    if (c.finish === 'alternate-art') return '<span class="finish-badge alt-art">AA</span>';
+    if (c.finish.startsWith('parallel')) return `<span class="finish-badge parallel">${c.finish.replace('parallel-','P')}</span>`;
+    return '';
+  };
+  const finishLabel = c => {
+    if (!c.finish) return '?';
+    if (c.finish === 'regular') return 'Regular';
+    if (c.finish === 'alternate-art') return 'Alt Art';
+    if (c.finish.startsWith('parallel')) return c.finish.replace('parallel-','P');
+    return c.finish;
+  };
+  
+  grid.className = 'card-grid' + (view === 'checklist' ? ' checklist' : '');
+  
+  if (view === 'checklist') {
+    grid.innerHTML = `<div class="card-item header">
+      <span></span>
+      <span onclick="setSortAndRender('name')">Name</span>
+      <span onclick="setSortAndRender('id')">ID</span>
+      <span>Finish</span>
+      <span onclick="setSortAndRender('rarity')">Rarity</span>
+      <span onclick="setSortAndRender('price-low')">Price</span>
+    </div>` + cards.map(c => `
+      <div class="card-item" onclick="window.open('search.html?q=${encodeURIComponent(c.id)}','_blank')">
+        <img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer">
+        <span class="name">${c.name || c.id}</span>
+        <span class="meta">${c.id}</span>
+        <span class="meta">${finishLabel(c)}</span>
+        <span class="meta">${c.rarity || '-'}</span>
+        <span class="price">${formatPrice(c)}</span>
+      </div>
+    `).join('');
+  } else {
+    grid.innerHTML = cards.map(c => `
+      <div class="card-item" onclick="window.open('search.html?q=${encodeURIComponent(c.id)}','_blank')">
+        <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
+        <div class="name">${c.name || c.id}${finishBadge(c)}</div>
+        <div class="meta">${c.id} · ${c.rarity || '?'}</div>
+        <div class="price">${formatPrice(c)}</div>
+      </div>
+    `).join('');
+  }
+}
+
+function setSortAndRender(sort) {
+  document.getElementById('sort').value = sort;
+  sortResults();
+}
+
+function showMore() {
+  displayLimit += 100;
+  renderResults();
+}
+
+function clearForm() {
+  document.getElementById('game').value = 'onepiece';
+  document.getElementById('name').value = '';
+  document.getElementById('set').value = '';
+  document.getElementById('finish').value = '';
+  document.getElementById('rarity').value = '';
+  document.getElementById('hasPrice').value = '';
+  document.getElementById('priceMin').value = '';
+  document.getElementById('priceMax').value = '';
+  populateSets();
+  filteredCards = [];
+  document.getElementById('results').innerHTML = '';
+  document.getElementById('results-header').style.display = 'none';
+  document.getElementById('no-results').style.display = 'none';
+  document.getElementById('url-display').style.display = 'none';
+  history.replaceState(null, '', location.pathname);
+}
+
+function updateURL() {
+  const params = new URLSearchParams();
+  const fields = ['game','name','set','finish','rarity','hasPrice','priceMin','priceMax','sort'];
+  fields.forEach(f => {
+    const v = document.getElementById(f)?.value;
+    if (v) params.set(f, v);
+  });
+  const url = params.toString() ? '?' + params.toString() : location.pathname;
+  history.replaceState(null, '', url);
+  
+  // Show shareable URL
+  const fullUrl = location.origin + location.pathname + '?' + params.toString();
+  document.getElementById('share-url').href = fullUrl;
+  document.getElementById('share-url').textContent = fullUrl;
+  document.getElementById('url-display').style.display = params.toString() ? 'block' : 'none';
+}
+
+function loadFromURL() {
+  const params = new URLSearchParams(location.search);
+  if (!params.toString()) return;
+  
+  ['game','name','set','finish','rarity','hasPrice','priceMin','priceMax','sort'].forEach(f => {
+    const v = params.get(f);
+    if (v && document.getElementById(f)) document.getElementById(f).value = v;
+  });
+  
+  if (params.get('game')) populateSets();
+  if (params.get('set')) document.getElementById('set').value = params.get('set');
+  
+  doSearch();
+}
+
+function copyURL() {
+  const params = new URLSearchParams();
+  const fields = ['game','name','set','finish','rarity','hasPrice','priceMin','priceMax','sort'];
+  fields.forEach(f => {
+    const v = document.getElementById(f)?.value;
+    if (v) params.set(f, v);
+  });
+  const url = location.origin + location.pathname + '?' + params.toString();
+  navigator.clipboard.writeText(url).then(() => {
+    alert('URL copied to clipboard!');
+  });
+}
+
+loadCards();
+</script>
+
+<footer id="site-footer"></footer>
+<script src="/japan-tcg-price-guide/components/footer.js"></script>
+</body>
+</html>
