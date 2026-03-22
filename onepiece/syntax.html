@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Search Syntax Guide | One Piece TCG Japan</title>
+<meta name="description" content="Learn how to search for One Piece cards using our search syntax.">
+<link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;padding:15px;max-width:800px;margin:0 auto}
+h1{color:#D70000;margin-bottom:20px;font-size:1.5em}
+h2{color:#333;margin:25px 0 15px;font-size:1.2em;border-bottom:2px solid #D70000;padding-bottom:5px}
+.section{background:#fff;border-radius:10px;padding:20px;margin-bottom:20px}
+table{width:100%;border-collapse:collapse;margin:15px 0}
+th,td{text-align:left;padding:10px;border-bottom:1px solid #eee}
+th{background:#f9f9f9;font-weight:600}
+code{background:#f0f0f0;padding:2px 6px;border-radius:4px;font-family:monospace;color:#c00}
+.example{background:#f9f9f9;padding:10px 15px;border-radius:6px;margin:10px 0;border-left:3px solid #D70000}
+.example a{color:#D70000}
+footer{text-align:center;padding:20px 0;color:#666;font-size:.85em}
+</style>
+</head>
+<body>
+
+<h1>🔍 One Piece Search Syntax Guide</h1>
+
+<div class="section">
+<h2>Basic Search</h2>
+<p>Simply type any text to search card names and IDs.</p>
+<div class="example">
+  <code>Luffy</code> → <a href="../search.html?game=onepiece&q=luffy">Cards with "Luffy" in the name</a>
+</div>
+<div class="example">
+  <code>OP01-001</code> → <a href="../search.html?game=onepiece&q=OP01-001">Specific card by ID</a>
+</div>
+</div>
+
+<div class="section">
+<h2>Search by Card ID</h2>
+<p>Card IDs follow the format: <code>SET-NUMBER</code></p>
+<table>
+<tr><th>Format</th><th>Example</th><th>Description</th></tr>
+<tr><td><code>OP01-001</code></td><td>Romance Dawn</td><td>Main booster sets</td></tr>
+<tr><td><code>ST01-001</code></td><td>Straw Hat Crew</td><td>Starter decks</td></tr>
+<tr><td><code>EB01-001</code></td><td>Memorial Collection</td><td>Extra boosters</td></tr>
+<tr><td><code>PRB01-001</code></td><td>Card The Best</td><td>Premium boosters</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Search by Set</h2>
+<p>Use the Set dropdown filter, or include the set code in your search.</p>
+<div class="example">
+  <code>OP01</code> → <a href="../search.html?game=onepiece&set=OP01">All Romance Dawn cards</a>
+</div>
+<div class="example">
+  <code>ST01</code> → <a href="../search.html?game=onepiece&set=ST01">All Straw Hat Crew starter cards</a>
+</div>
+</div>
+
+<div class="section">
+<h2>Set Types</h2>
+<table>
+<tr><th>Prefix</th><th>Type</th><th>Example</th></tr>
+<tr><td><code>OP01-OP14</code></td><td>Main Booster Sets</td><td>OP01 Romance Dawn</td></tr>
+<tr><td><code>ST01-ST29</code></td><td>Starter Decks</td><td>ST01 Straw Hat Crew</td></tr>
+<tr><td><code>EB01-EB02</code></td><td>Extra Boosters</td><td>EB01 Memorial Collection</td></tr>
+<tr><td><code>PRB01-PRB02</code></td><td>Premium Boosters</td><td>PRB01 Card The Best</td></tr>
+<tr><td><code>PROMO</code></td><td>Promotional Cards</td><td>Event & tournament promos</td></tr>
+</table>
+<p style="margin-top:15px"><a href="sets/" style="color:#D70000">View all sets →</a></p>
+</div>
+
+<div class="section">
+<h2>Search by Color</h2>
+<p>One Piece cards have colors: Red, Green, Blue, Purple, Black, Yellow</p>
+<div class="example">
+  <code>Red Luffy</code> → Red Luffy cards
+</div>
+</div>
+
+<div class="section">
+<h2>Search by Card Type</h2>
+<p>Card types: LEADER, CHARACTER, EVENT, STAGE</p>
+<div class="example">
+  <code>Leader Shanks</code> → Shanks leader cards
+</div>
+</div>
+
+<div class="section">
+<h2>Tips</h2>
+<ul style="margin-left:20px;line-height:1.8">
+<li>Search is case-insensitive</li>
+<li>Partial matches work (e.g., "Zoro" finds all Zoro cards)</li>
+<li>Use the Set filter for browsing entire sets</li>
+<li>Card effects are also searchable</li>
+</ul>
+</div>
+
+<footer>
+  <a href="./">← Back to One Piece</a> · <a href="../search.html?game=onepiece">Full Search</a>
+</footer>
+
+</body>
+</html>

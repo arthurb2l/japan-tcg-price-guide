@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>One Piece Card Price Guide Japan | Flea Market Deals</title>
-<meta name="description" content="Search One Piece TCG cards with Japanese prices. Free offline guide for finding deals at flea markets, Hard-Off & recycle shops.">
+<meta name="description" content="Search 2,200+ One Piece TCG cards with Japanese prices. Free offline guide for finding deals at flea markets, Hard-Off & recycle shops.">
 <link rel="manifest" href="/japan-tcg-price-guide/manifest.json">
 <meta name="theme-color" content="#D70000">
 <link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
@@ -16,18 +16,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .header h1{font-size:1.4em;color:#D70000}
 .game-switch{margin-left:auto;background:#222;color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-size:.85em}
 .game-switch:hover{background:#EE1515}
-.search-wrap{margin-bottom:20px}
+.search-wrap{margin-bottom:8px}
 .search-box{width:100%;padding:14px 18px;font-size:16px;border:3px solid #D70000;border-radius:10px;outline:none}
 .search-box:focus{box-shadow:0 0 0 3px rgba(215,0,0,0.2)}
-.stats{text-align:center;color:#666;font-size:.85em;margin:-10px 0 15px}
+.search-links{display:flex;gap:15px;justify-content:center;flex-wrap:wrap;margin-bottom:15px;font-size:.85em}
+.search-links a{color:#D70000;text-decoration:none}
+.search-links a:hover{text-decoration:underline}
+.stats{text-align:center;color:#666;font-size:.85em;margin-bottom:20px}
 .section{margin-bottom:25px}
 .section h2{font-size:1.1em;margin-bottom:12px;color:#222;display:flex;align-items:center;gap:8px}
 .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
-.tile{background:#fff;border:2px solid #ddd;border-radius:10px;padding:15px 12px;text-decoration:none;color:#222;text-align:center;transition:all .15s}
+.tile{background:#fff;border:2px solid #ddd;border-radius:10px;padding:15px 12px;text-decoration:none;color:#222;text-align:center;transition:all .15s;display:flex;flex-direction:column;align-items:center}
 .tile:hover{border-color:#D70000;transform:translateY(-2px)}
-.tile .emoji{font-size:1.8em;display:block;margin-bottom:8px}
-.tile .label{font-weight:600;font-size:.85em}
-.tile .sub{color:#666;font-size:.75em;margin-top:4px}
+.tile .emoji{font-size:1.8em;margin-bottom:8px}
+.tile .label{font-weight:600;font-size:.85em;display:block}
+.tile .sub{color:#666;font-size:.75em;margin-top:4px;display:block}
 .sets-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px}
 .set-tile{background:#fff;border:1px solid #ddd;border-radius:6px;padding:10px 8px;text-decoration:none;color:#222;text-align:center;font-size:.8em;transition:all .15s}
 .set-tile:hover{border-color:#D70000}
@@ -48,27 +51,49 @@ footer{text-align:center;padding:20px 0;color:#666;font-size:.8em;border-top:1px
 <div class="search-wrap">
   <input type="text" id="search" class="search-box" placeholder="Search One Piece cards (e.g. Luffy, Shanks, OP01-120)" onkeyup="if(event.key==='Enter')doSearch()">
 </div>
+<div class="search-links">
+  <a href="advanced.html">Advanced Search</a>
+  <a href="syntax.html">Syntax Guide</a>
+  <a href="sets/">All Sets</a>
+  <a href="#" onclick="randomCard();return false">Random Card</a>
+</div>
 <div class="stats" id="stats">Loading cards...</div>
 
 <div class="section">
   <h2>📚 Guides</h2>
   <div class="tiles">
-    <a href="cheat-sheet.html" class="tile"><span class="emoji">📋</span><span class="label">Cheat Sheet</span><span class="sub">Flea market guide</span></a>
-    <a href="../guides/onepiece-guide.html" class="tile"><span class="emoji">🏴‍☠️</span><span class="label">OP Guide</span><span class="sub">Collecting tips</span></a>
-    <a href="../guides/where-to-buy.html" class="tile"><span class="emoji">🏪</span><span class="label">Where to Buy</span><span class="sub">Shops & markets</span></a>
-    <a href="../guides/useful-phrases.html" class="tile"><span class="emoji">🗣️</span><span class="label">Japanese</span><span class="sub">Useful phrases</span></a>
+    <a href="cheat-sheet.html" class="tile">
+      <span class="emoji">📋</span>
+      <span class="label">Cheat Sheet</span>
+      <span class="sub">Flea market guide</span>
+    </a>
+    <a href="../guides/onepiece-guide.html" class="tile">
+      <span class="emoji">🏴‍☠️</span>
+      <span class="label">OP Guide</span>
+      <span class="sub">Collecting tips</span>
+    </a>
+    <a href="../guides/where-to-buy.html" class="tile">
+      <span class="emoji">🏪</span>
+      <span class="label">Where to Buy</span>
+      <span class="sub">Shops & markets</span>
+    </a>
+    <a href="../guides/useful-phrases.html" class="tile">
+      <span class="emoji">🗣️</span>
+      <span class="label">Japanese</span>
+      <span class="sub">Useful phrases</span>
+    </a>
   </div>
 </div>
 
 <div class="section">
   <h2>🔥 Hot Sets</h2>
   <div class="sets-grid">
-    <a href="../search.html?game=onepiece&set=OP-09" class="set-tile hot"><div class="name">OP-09 Emperors</div></a>
-    <a href="../search.html?game=onepiece&set=OP-08" class="set-tile hot"><div class="name">OP-08 Two Legends</div></a>
-    <a href="../search.html?game=onepiece&set=OP-01" class="set-tile"><div class="name">OP-01 Romance Dawn</div></a>
-    <a href="../search.html?game=onepiece&set=OP-02" class="set-tile"><div class="name">OP-02 Paramount War</div></a>
-    <a href="../search.html?game=onepiece&set=ST-13" class="set-tile"><div class="name">ST-13 Starter</div></a>
-    <a href="../search.html?game=onepiece&set=ST-12" class="set-tile"><div class="name">ST-12 Starter</div></a>
+    <a href="../search.html?game=onepiece&set=OP09" class="set-tile hot"><div class="name">OP-09 Emperors</div></a>
+    <a href="../search.html?game=onepiece&set=OP08" class="set-tile hot"><div class="name">OP-08 Two Legends</div></a>
+    <a href="../search.html?game=onepiece&set=OP01" class="set-tile"><div class="name">OP-01 Romance Dawn</div></a>
+    <a href="../search.html?game=onepiece&set=OP02" class="set-tile"><div class="name">OP-02 Paramount War</div></a>
+    <a href="../search.html?game=onepiece&set=ST13" class="set-tile"><div class="name">ST-13 Starter</div></a>
+    <a href="../search.html?game=onepiece&set=ST12" class="set-tile"><div class="name">ST-12 Starter</div></a>
   </div>
   <p style="text-align:center;margin-top:12px"><a href="sets/" style="color:#D70000">View all sets →</a></p>
 </div>
@@ -116,16 +141,21 @@ function doSearch() {
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-top:20px">
       ${results.map(c => `
         <a href="../search.html?game=onepiece&q=${encodeURIComponent(c.id)}" style="background:#fff;border-radius:8px;padding:8px;text-decoration:none;color:#222;text-align:center">
-          <img src="${c.image || ''}" alt="${c.name}" style="width:100%;border-radius:4px" onerror="this.style.display='none'">
+          <img src="${c.img || ''}" alt="${c.name}" style="width:100%;border-radius:4px" onerror="this.style.display='none'">
           <div style="font-weight:600;font-size:.8em;margin-top:5px">${c.name || 'Unknown'}</div>
-          <div style="color:#666;font-size:.7em">${c.setName || c.setId || ''}</div>
-          ${c.price?.jpy ? `<div style="color:#2a7;font-size:.75em;font-weight:600">¥${c.price.jpy.toLocaleString()}</div>` : ''}
+          <div style="color:#666;font-size:.7em">${c.set || c.setId || ''}</div>
         </a>
       `).join('')}
     </div>
   `;
   
   history.replaceState(null, '', `?q=${encodeURIComponent(q)}`);
+}
+
+function randomCard() {
+  if (!allCards.length) return;
+  const card = allCards[Math.floor(Math.random() * allCards.length)];
+  window.location.href = `../search.html?game=onepiece&q=${encodeURIComponent(card.id)}`;
 }
 
 loadCards();

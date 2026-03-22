@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>All Pokemon Sets | Japan TCG Price Guide</title>
+<meta name="description" content="Browse all Pokemon TCG sets available in Japan.">
+<link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;padding:15px;max-width:1000px;margin:0 auto}
+h1{color:#EE1515;margin-bottom:10px;font-size:1.5em}
+.stats{color:#666;font-size:.9em;margin-bottom:20px}
+.era{margin-bottom:30px}
+.era h2{font-size:1.1em;color:#333;margin-bottom:12px;padding-bottom:5px;border-bottom:2px solid #EE1515}
+.sets-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.set-card{background:#fff;border:1px solid #ddd;border-radius:8px;padding:12px;text-decoration:none;color:#222;transition:all .15s}
+.set-card:hover{border-color:#EE1515;transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.set-card .code{font-weight:700;color:#EE1515;font-size:.85em}
+.set-card .name{font-weight:600;margin:4px 0;font-size:.9em;line-height:1.3}
+.set-card .count{color:#666;font-size:.8em}
+footer{text-align:center;padding:20px 0;color:#666;font-size:.85em;border-top:1px solid #ddd;margin-top:30px}
+.loading{text-align:center;padding:40px;color:#666}
+</style>
+</head>
+<body>
+
+<h1>📦 All Pokemon Sets</h1>
+<div class="stats" id="stats">Loading sets...</div>
+
+<div id="sets-container">
+  <div class="loading">Loading sets...</div>
+</div>
+
+<footer>
+  <a href="../">← Back to Pokemon</a> · <a href="../../search.html?game=pokemon">Search Cards</a>
+</footer>
+
+<script>
+const BASE = '/japan-tcg-price-guide';
+const ERAS = {
+  'sv': 'Scarlet & Violet',
+  'swsh': 'Sword & Shield',
+  'sm': 'Sun & Moon',
+  'xy': 'XY',
+  'bw': 'Black & White',
+  'dp': 'Diamond & Pearl',
+  'ex': 'EX Era',
+  'vintage': 'Vintage'
+};
+
+async function loadSets() {
+  try {
+    const manifest = await fetch(`${BASE}/data/shards/manifest.json`).then(r => r.json());
+    const shardData = {};
+    
+    for (const [era, info] of Object.entries(manifest.shards)) {
+      const shard = await fetch(`${BASE}/data/shards/${info.file}`).then(r => r.json());
+      shardData[era] = shard.sets;
+    }
+    
+    let totalCards = 0;
+    let totalSets = 0;
+    let html = '';
+    
+    for (const [era, eraName] of Object.entries(ERAS)) {
+      const sets = shardData[era];
+      if (!sets) continue;
+      
+      const setEntries = Object.entries(sets).sort((a, b) => b[0].localeCompare(a[0]));
+      if (!setEntries.length) continue;
+      
+      html += `<div class="era"><h2>${eraName}</h2><div class="sets-grid">`;
+      
+      for (const [setId, cards] of setEntries) {
+        const setName = cards[0]?.set || cards[0]?.setName || setId;
+        totalCards += cards.length;
+        totalSets++;
+        
+        html += `
+          <a href="../../search.html?game=pokemon&set=${setId}" class="set-card">
+            <div class="code">${setId}</div>
+            <div class="name">${setName}</div>
+            <div class="count">${cards.length} cards</div>
+          </a>
+        `;
+      }
+      
+      html += '</div></div>';
+    }
+    
+    document.getElementById('sets-container').innerHTML = html;
+    document.getElementById('stats').textContent = `${totalSets} sets · ${totalCards.toLocaleString()} cards`;
+    
+  } catch (e) {
+    document.getElementById('sets-container').innerHTML = '<p style="text-align:center;color:#c00">Error loading sets</p>';
+  }
+}
+
+loadSets();
+</script>
+</body>
+</html>
