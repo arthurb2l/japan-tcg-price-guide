@@ -219,7 +219,10 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
       <button class="modal-close" onclick="closeModal()">×</button>
     </div>
     <div class="modal-body">
-      <img id="modal-img" src="" alt="" referrerpolicy="no-referrer">
+      <div style="position:relative">
+        <img id="modal-img" src="" alt="" referrerpolicy="no-referrer">
+        <button id="flip-btn" onclick="flipCard()" style="display:none;position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,0.7);color:#fff;border:none;padding:6px 12px;border-radius:5px;cursor:pointer;font-size:.8em">🔄 EN</button>
+      </div>
       <dl class="card-details">
         <dt>Name</dt><dd id="modal-name"></dd>
         <dt>Set</dt><dd id="modal-set"></dd>
@@ -723,17 +726,29 @@ function filterByGame(game) {
   }
 }
 
+let currentCard = null;
+let showingJp = true;
+
 function showCard(id) {
   const card = allCards.find(c => c.id === id);
   if (!card) return;
-  const proxyImg = url => url?.startsWith('https://en.onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
-  const getImgHigh = c => c.imgHigh || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/high.webp') || 'onepiece/images/card-back.png';
+  currentCard = card;
+  showingJp = true;
+  
+  const proxyImg = url => url?.startsWith('https://onepiece-cardgame.com') || url?.startsWith('https://www.onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
+  const getImg = c => c.imgJp || c.imgHigh || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/high.webp') || 'onepiece/images/card-back.png';
+  
   document.getElementById('modal-title').textContent = card.name;
-  document.getElementById('modal-img').src = getImgHigh(card);
+  document.getElementById('modal-img').src = proxyImg(getImg(card));
   document.getElementById('modal-name').textContent = card.name + (card.nameJp ? ' ' + card.nameJp : '');
   document.getElementById('modal-set').textContent = card.set || card.setId;
   document.getElementById('modal-id').textContent = card.id;
   document.getElementById('modal-rarity').textContent = card.rarity || '-';
+  
+  // Show flip button if EN image available
+  const flipBtn = document.getElementById('flip-btn');
+  flipBtn.style.display = card.imgEn ? 'block' : 'none';
+  flipBtn.textContent = '🔄 EN';
   
   // Game-specific extra info
   const extraLabel = document.getElementById('modal-extra-label');
@@ -763,6 +778,22 @@ function showCard(id) {
 }
 
 function closeModal() { document.getElementById('modal').classList.remove('active'); }
+
+function flipCard() {
+  if (!currentCard) return;
+  const img = document.getElementById('modal-img');
+  const btn = document.getElementById('flip-btn');
+  const proxyImg = url => url ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : null;
+  
+  showingJp = !showingJp;
+  if (showingJp) {
+    img.src = proxyImg(currentCard.imgJp || currentCard.img);
+    btn.textContent = '🔄 EN';
+  } else {
+    img.src = proxyImg(currentCard.imgEn);
+    btn.textContent = '🔄 JP';
+  }
+}
 
 function clearSearch() {
   document.getElementById('search').value = '';
