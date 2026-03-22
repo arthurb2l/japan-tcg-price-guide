@@ -85167,3034 +85167,6 @@
     ],
     "EB-02": [
       {
-        "id": "OP05-001",
-        "name": "Sabo",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Black",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Revolutionary Army",
-        "effect": "[DON!! x1] [Opponent's Turn] [Once Per Turn] If your Character with 5000 power or more would be K.O.'d, you may give that Character −1000 power during this turn instead of that Character being K.O.'d.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-001_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-001_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-001.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-001_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP05/OP05-001_EN.webp",
-        "pricing": {
-          "usd": 0.15,
-          "eur": 0.07,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.15,
-            "eur": 0.07
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 20.94,
-            "eur": 19.73
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 334.94,
-            "eur": 291.53
-          }
-        ]
-      },
-      {
-        "id": "OP05-001-aa",
-        "name": "Sabo",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Black",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Revolutionary Army",
-        "effect": "[DON!! x1] [Opponent's Turn] [Once Per Turn] If your Character with 5000 power or more would be K.O.'d, you may give that Character −1000 power during this turn instead of that Character being K.O.'d.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-001.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-001.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 20.94,
-          "eur": 19.73,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP05-001-p2",
-        "name": "Sabo",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Black",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Revolutionary Army",
-        "effect": "[DON!! x1] [Opponent's Turn] [Once Per Turn] If your Character with 5000 power or more would be K.O.'d, you may give that Character −1000 power during this turn instead of that Character being K.O.'d.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-001_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-001_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 334.94,
-          "eur": 291.53,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP05-002",
-        "name": "Belo Betty",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Revolutionary Army",
-        "effect": "[Activate: Main] [Once Per Turn] You may trash 1 {Revolutionary Army} type card from your hand: Up to 3 of your {Revolutionary Army} type Characters or Characters with a [Trigger] gain +3000 power during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-002_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-002_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-002.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-002_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP05/OP05-002_EN.webp",
-        "pricing": {
-          "usd": 0.22,
-          "eur": 0.1,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.22,
-            "eur": 0.1
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 33,
-            "eur": 24.4
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 257.93,
-            "eur": 203.74
-          }
-        ]
-      },
-      {
-        "id": "OP05-002-aa",
-        "name": "Belo Betty",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Revolutionary Army",
-        "effect": "[Activate: Main] [Once Per Turn] You may trash 1 {Revolutionary Army} type card from your hand: Up to 3 of your {Revolutionary Army} type Characters or Characters with a [Trigger] gain +3000 power during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-002.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-002.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 33,
-          "eur": 24.4,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP05-002-p2",
-        "name": "Belo Betty",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Revolutionary Army",
-        "effect": "[Activate: Main] [Once Per Turn] You may trash 1 {Revolutionary Army} type card from your hand: Up to 3 of your {Revolutionary Army} type Characters or Characters with a [Trigger] gain +3000 power during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-002_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-002_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 257.93,
-          "eur": 203.74,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP05-022",
-        "name": "Donquixote Rosinante",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green/Blue",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Navy/Donquixote Pirates",
-        "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[End of Your Turn] If you have 6 or less cards in your hand, set this Leader as active.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-022_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-022_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-022.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-022_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP05/OP05-022_EN.webp",
-        "pricing": {
-          "usd": 0.13,
-          "eur": 0.09,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.13,
-            "eur": 0.09
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 23.24,
-            "eur": 17.42
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 243.11,
-            "eur": 216.78
-          }
-        ]
-      },
-      {
-        "id": "OP05-022-aa",
-        "name": "Donquixote Rosinante",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green/Blue",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Navy/Donquixote Pirates",
-        "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[End of Your Turn] If you have 6 or less cards in your hand, set this Leader as active.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-022.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-022.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 23.24,
-          "eur": 17.42,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP05-022-p2",
-        "name": "Donquixote Rosinante",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green/Blue",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Navy/Donquixote Pirates",
-        "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[End of Your Turn] If you have 6 or less cards in your hand, set this Leader as active.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-022_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-022_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 243.11,
-          "eur": 216.78,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP05-060",
-        "name": "Monkey.D.Luffy",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Straw Hat Crew",
-        "effect": "[Activate: Main] [Once Per Turn] You may add 1 card from the top of your Life cards to your hand: If you have 0 or 3 or more DON!! cards on your field, add up to 1 DON!! card from your DON!! deck and set it as active.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060_p4.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060_p4.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060_p1.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060_p3.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060_p2.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP05/OP05-060_EN.webp",
-        "pricing": {
-          "usd": 0.21,
-          "eur": 0.08,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.21,
-            "eur": 0.08
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 63.95,
-            "eur": 43.57
-          },
-          {
-            "id": 2,
-            "label": "aa",
-            "usd": 261,
-            "eur": 303.75
-          },
-          {
-            "id": 3,
-            "label": "Regular",
-            "usd": 2.17,
-            "eur": 1.27
-          },
-          {
-            "id": 4,
-            "label": "Regular",
-            "usd": 17.79,
-            "eur": 51.26
-          },
-          {
-            "id": 5,
-            "label": "Regular",
-            "usd": 971.91,
-            "eur": 1.604
-          }
-        ]
-      },
-      {
-        "id": "OP05-060-aa",
-        "name": "Monkey.D.Luffy",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Straw Hat Crew",
-        "effect": "[Activate: Main] [Once Per Turn] You may add 1 card from the top of your Life cards to your hand: If you have 0 or 3 or more DON!! cards on your field, add up to 1 DON!! card from your DON!! deck and set it as active.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 63.95,
-          "eur": 43.57,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP05-060-p3",
-        "name": "Monkey.D.Luffy",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Straw Hat Crew",
-        "effect": "[Activate: Main] [Once Per Turn] You may add 1 card from the top of your Life cards to your hand: If you have 0 or 3 or more DON!! cards on your field, add up to 1 DON!! card from your DON!! deck and set it as active.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060_p3.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060_p3.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 2.17,
-          "eur": 1.27,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 3"
-      },
-      {
-        "id": "OP05-060-p4",
-        "name": "Monkey.D.Luffy",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Straw Hat Crew",
-        "effect": "[Activate: Main] [Once Per Turn] You may add 1 card from the top of your Life cards to your hand: If you have 0 or 3 or more DON!! cards on your field, add up to 1 DON!! card from your DON!! deck and set it as active.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060_p2.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 17.79,
-          "eur": 51.26,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 4"
-      },
-      {
-        "id": "OP05-060-p5",
-        "name": "Monkey.D.Luffy",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Straw Hat Crew",
-        "effect": "[Activate: Main] [Once Per Turn] You may add 1 card from the top of your Life cards to your hand: If you have 0 or 3 or more DON!! cards on your field, add up to 1 DON!! card from your DON!! deck and set it as active.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060_p4.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-060_p4.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 971.91,
-          "eur": 1.604,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 5"
-      },
-      {
-        "id": "OP05-098",
-        "name": "Enel",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Sky Island",
-        "effect": "[Opponent's Turn] [Once Per Turn] When your number of Life cards becomes 0, add 1 card from the top of your deck to the top of your Life cards. Then, trash 1 card from your hand.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-098_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-098_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-098.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-098_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP05/OP05-098_EN.webp",
-        "pricing": {
-          "usd": 0.26,
-          "eur": 0.08,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.26,
-            "eur": 0.08
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 46.83,
-            "eur": 52.09
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 7.87,
-            "eur": 28.8
-          },
-          {
-            "id": 3,
-            "label": "Regular",
-            "usd": 382.95,
-            "eur": 443.5
-          }
-        ]
-      },
-      {
-        "id": "OP05-098-aa",
-        "name": "Enel",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Sky Island",
-        "effect": "[Opponent's Turn] [Once Per Turn] When your number of Life cards becomes 0, add 1 card from the top of your deck to the top of your Life cards. Then, trash 1 card from your hand.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-098.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-098.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 46.83,
-          "eur": 52.09,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP05-098-p2",
-        "name": "Enel",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Sky Island",
-        "effect": "[Opponent's Turn] [Once Per Turn] When your number of Life cards becomes 0, add 1 card from the top of your deck to the top of your Life cards. Then, trash 1 card from your hand.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-098_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-098_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 7.87,
-          "eur": 28.8,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP05-098-p3",
-        "name": "Enel",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Sky Island",
-        "effect": "[Opponent's Turn] [Once Per Turn] When your number of Life cards becomes 0, add 1 card from the top of your deck to the top of your Life cards. Then, trash 1 card from your hand.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-098_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-098_p2.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 382.95,
-          "eur": 443.5,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 3"
-      },
-      {
-        "id": "OP06-001",
-        "name": "Uta",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Purple",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "FILM",
-        "effect": "[When Attacking] You may trash 1 {FILM} type card from your hand: Give up to 1 of your opponent's Characters −2000 power during this turn. Then, add up to 1 DON!! card from your DON!! deck and rest it.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-001_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-001_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-001.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-001_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP06/OP06-001_EN.webp",
-        "pricing": {
-          "usd": 0.21,
-          "eur": 0.05,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.21,
-            "eur": 0.05
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 39.53,
-            "eur": 25.86
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 325.09,
-            "eur": 227.18
-          }
-        ]
-      },
-      {
-        "id": "OP06-001-aa",
-        "name": "Uta",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Purple",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "FILM",
-        "effect": "[When Attacking] You may trash 1 {FILM} type card from your hand: Give up to 1 of your opponent's Characters −2000 power during this turn. Then, add up to 1 DON!! card from your DON!! deck and rest it.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-001.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-001.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 39.53,
-          "eur": 25.86,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP06-001-p2",
-        "name": "Uta",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Purple",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "FILM",
-        "effect": "[When Attacking] You may trash 1 {FILM} type card from your hand: Give up to 1 of your opponent's Characters −2000 power during this turn. Then, add up to 1 DON!! card from your DON!! deck and rest it.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-001_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-001_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 325.09,
-          "eur": 227.18,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP06-020",
-        "name": "Hody Jones",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Fish-Man/New Fish-Man Pirates",
-        "effect": "[Activate: Main] You may rest this Leader: Rest up to 1 of your opponent's DON!! cards or Characters with a cost of 3 or less. Then, you cannot add Life cards to your hand using your own effects during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-020_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-020_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-020.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-020_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP06/OP06-020_EN.webp",
-        "pricing": {
-          "usd": 0.13,
-          "eur": 0.05,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.13,
-            "eur": 0.05
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 14.2,
-            "eur": 10.33
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 86.7,
-            "eur": 76.57
-          }
-        ]
-      },
-      {
-        "id": "OP06-020-aa",
-        "name": "Hody Jones",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Fish-Man/New Fish-Man Pirates",
-        "effect": "[Activate: Main] You may rest this Leader: Rest up to 1 of your opponent's DON!! cards or Characters with a cost of 3 or less. Then, you cannot add Life cards to your hand using your own effects during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-020.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-020.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 14.2,
-          "eur": 10.33,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP06-020-p2",
-        "name": "Hody Jones",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Fish-Man/New Fish-Man Pirates",
-        "effect": "[Activate: Main] You may rest this Leader: Rest up to 1 of your opponent's DON!! cards or Characters with a cost of 3 or less. Then, you cannot add Life cards to your hand using your own effects during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-020_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-020_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 86.7,
-          "eur": 76.57,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP06-021",
-        "name": "Perona",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green/Black",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Thriller Bark Pirates",
-        "effect": "[Activate: Main] [Once Per Turn] Choose one:• Rest up to 1 of your opponent's Characters with a cost of 4 or less.• Give up to 1 of your opponent's Characters −1 cost during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-021_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-021_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-021.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-021_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP06/OP06-021_EN.webp",
-        "pricing": {
-          "usd": 0.24,
-          "eur": 0.08,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.24,
-            "eur": 0.08
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 71.67,
-            "eur": 33.82
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 360.27,
-            "eur": 283.67
-          }
-        ]
-      },
-      {
-        "id": "OP06-021-aa",
-        "name": "Perona",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green/Black",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Thriller Bark Pirates",
-        "effect": "[Activate: Main] [Once Per Turn] Choose one:• Rest up to 1 of your opponent's Characters with a cost of 4 or less.• Give up to 1 of your opponent's Characters −1 cost during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-021.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-021.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 71.67,
-          "eur": 33.82,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP06-021-p2",
-        "name": "Perona",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green/Black",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Thriller Bark Pirates",
-        "effect": "[Activate: Main] [Once Per Turn] Choose one:• Rest up to 1 of your opponent's Characters with a cost of 4 or less.• Give up to 1 of your opponent's Characters −1 cost during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-021_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-021_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 360.27,
-          "eur": 283.67,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP06-022",
-        "name": "Yamato",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green/Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Land of Wano",
-        "effect": "[Double Attack] (This card deals 2 damage.)[Activate: Main] [Once Per Turn] If your opponent has 3 or less Life cards, give up to 2 rested DON!! cards to 1 of your Characters.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-022_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-022_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-022.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-022_p1.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-022_p3.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP06/OP06-022_EN.webp",
-        "pricing": {
-          "usd": 0.23,
-          "eur": 0.13,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.23,
-            "eur": 0.13
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 87.75,
-            "eur": 56.84
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 424.73,
-            "eur": 344.19
-          },
-          {
-            "id": 3,
-            "label": "Regular",
-            "usd": 1.34,
-            "eur": 0.81
-          }
-        ]
-      },
-      {
-        "id": "OP06-022-aa",
-        "name": "Yamato",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green/Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Land of Wano",
-        "effect": "[Double Attack] (This card deals 2 damage.)[Activate: Main] [Once Per Turn] If your opponent has 3 or less Life cards, give up to 2 rested DON!! cards to 1 of your Characters.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-022.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-022.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 87.75,
-          "eur": 56.84,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP06-022-p2",
-        "name": "Yamato",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green/Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Land of Wano",
-        "effect": "[Double Attack] (This card deals 2 damage.)[Activate: Main] [Once Per Turn] If your opponent has 3 or less Life cards, give up to 2 rested DON!! cards to 1 of your Characters.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-022_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-022_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 424.73,
-          "eur": 344.19,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP06-022-p3",
-        "name": "Yamato",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green/Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Land of Wano",
-        "effect": "[Double Attack] (This card deals 2 damage.)[Activate: Main] [Once Per Turn] If your opponent has 3 or less Life cards, give up to 2 rested DON!! cards to 1 of your Characters.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-022_p3.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-022_p3.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 1.34,
-          "eur": 0.81,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 3"
-      },
-      {
-        "id": "OP06-042",
-        "name": "Vinsmoke Reiju",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Blue/Purple",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "The Vinsmoke Family/GERMA 66",
-        "effect": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, draw 1 card.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-042_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-042_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-042.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-042_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP06/OP06-042_EN.webp",
-        "pricing": {
-          "usd": 0.19,
-          "eur": 0.06,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.19,
-            "eur": 0.06
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 44.04,
-            "eur": 29.92
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 354.99,
-            "eur": 268.51
-          }
-        ]
-      },
-      {
-        "id": "OP06-042-aa",
-        "name": "Vinsmoke Reiju",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Blue/Purple",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "The Vinsmoke Family/GERMA 66",
-        "effect": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, draw 1 card.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-042.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-042.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 44.04,
-          "eur": 29.92,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP06-042-p2",
-        "name": "Vinsmoke Reiju",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Blue/Purple",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "The Vinsmoke Family/GERMA 66",
-        "effect": "[Your Turn] [Once Per Turn] When a DON!! card on your field is returned to your DON!! deck, draw 1 card.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-042_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-042_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 354.99,
-          "eur": 268.51,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP06-080",
-        "name": "Gecko Moria",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Black",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "The Seven Warlords of the Sea/Thriller Bark Pirates",
-        "effect": "[DON!! x1] [When Attacking] You may rest 2 of your DON!! cards and trash 1 card from your hand: Trash 2 cards from the top of your deck and play up to 1 {Thriller Bark Pirates} type Character card with a cost of 4 or less from your trash.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-080_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-080_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-080.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-080_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP06/OP06-080_EN.webp",
-        "pricing": {
-          "usd": 0.23,
-          "eur": 0.07,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.23,
-            "eur": 0.07
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 14.35,
-            "eur": 17.46
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 255.84,
-            "eur": 230.37
-          }
-        ]
-      },
-      {
-        "id": "OP06-080-aa",
-        "name": "Gecko Moria",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Black",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "The Seven Warlords of the Sea/Thriller Bark Pirates",
-        "effect": "[DON!! x1] [When Attacking] You may rest 2 of your DON!! cards and trash 1 card from your hand: Trash 2 cards from the top of your deck and play up to 1 {Thriller Bark Pirates} type Character card with a cost of 4 or less from your trash.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-080.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-080.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 14.35,
-          "eur": 17.46,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP06-080-p2",
-        "name": "Gecko Moria",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Black",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "The Seven Warlords of the Sea/Thriller Bark Pirates",
-        "effect": "[DON!! x1] [When Attacking] You may rest 2 of your DON!! cards and trash 1 card from your hand: Trash 2 cards from the top of your deck and play up to 1 {Thriller Bark Pirates} type Character card with a cost of 4 or less from your trash.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-080_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-080_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 255.84,
-          "eur": 230.37,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP07-001",
-        "name": "Monkey.D.Dragon",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Revolutionary Army",
-        "effect": "[Activate: Main] [Once Per Turn] Give up to 2 total of your currently given DON!! cards to 1 of your Characters.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-001_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-001_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-001.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-001_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP07/OP07-001_EN.webp",
-        "pricing": {
-          "usd": 0.2,
-          "eur": 0.09,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.2,
-            "eur": 0.09
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 20.8,
-            "eur": 17.96
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 218.95,
-            "eur": 286.78
-          }
-        ]
-      },
-      {
-        "id": "OP07-001-aa",
-        "name": "Monkey.D.Dragon",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Revolutionary Army",
-        "effect": "[Activate: Main] [Once Per Turn] Give up to 2 total of your currently given DON!! cards to 1 of your Characters.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-001.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-001.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 20.8,
-          "eur": 17.96,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP07-001-p2",
-        "name": "Monkey.D.Dragon",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Revolutionary Army",
-        "effect": "[Activate: Main] [Once Per Turn] Give up to 2 total of your currently given DON!! cards to 1 of your Characters.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-001_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-001_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 218.95,
-          "eur": 286.78,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP07-019",
-        "name": "Jewelry Bonney",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Supernovas/Bonney Pirates",
-        "effect": "[On Your Opponent's Attack] [Once Per Turn] You may rest 1 of your DON!! cards: Rest up to 1 of your opponent's Leader or Character cards.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-019_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-019_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-019.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-019_p1.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-019_p3.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP07/OP07-019_EN.webp",
-        "pricing": {
-          "usd": 0.2,
-          "eur": 0.09,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.2,
-            "eur": 0.09
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 70.3,
-            "eur": 38.85
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 616.13,
-            "eur": 568.28
-          },
-          {
-            "id": 3,
-            "label": "Regular",
-            "usd": 0.86,
-            "eur": 0.73
-          }
-        ]
-      },
-      {
-        "id": "OP07-019-aa",
-        "name": "Jewelry Bonney",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Supernovas/Bonney Pirates",
-        "effect": "[On Your Opponent's Attack] [Once Per Turn] You may rest 1 of your DON!! cards: Rest up to 1 of your opponent's Leader or Character cards.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-019.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-019.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 70.3,
-          "eur": 38.85,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP07-019-p2",
-        "name": "Jewelry Bonney",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Supernovas/Bonney Pirates",
-        "effect": "[On Your Opponent's Attack] [Once Per Turn] You may rest 1 of your DON!! cards: Rest up to 1 of your opponent's Leader or Character cards.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-019_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-019_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 616.13,
-          "eur": 568.28,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP07-019-p3",
-        "name": "Jewelry Bonney",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Supernovas/Bonney Pirates",
-        "effect": "[On Your Opponent's Attack] [Once Per Turn] You may rest 1 of your DON!! cards: Rest up to 1 of your opponent's Leader or Character cards.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-019_p3.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-019_p3.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 0.86,
-          "eur": 0.73,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 3"
-      },
-      {
-        "id": "OP07-038",
-        "name": "Boa Hancock",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Blue",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "The Seven Warlords of the Sea/Kuja Pirates",
-        "effect": "[Your Turn] [Once Per Turn] This effect can be activated when a Character is removed from the field by your effect. If you have 5 or less cards in your hand, draw 1 card.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-038_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-038_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-038.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-038_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP07/OP07-038_EN.webp",
-        "pricing": {
-          "usd": 0.25,
-          "eur": 0.08,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.25,
-            "eur": 0.08
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 92.6,
-            "eur": 66.73
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 640.49,
-            "eur": 974.17
-          },
-          {
-            "id": 3,
-            "label": "Regular",
-            "usd": 144.47,
-            "eur": 160.13
-          }
-        ]
-      },
-      {
-        "id": "OP07-038-aa",
-        "name": "Boa Hancock",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Blue",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "The Seven Warlords of the Sea/Kuja Pirates",
-        "effect": "[Your Turn] [Once Per Turn] This effect can be activated when a Character is removed from the field by your effect. If you have 5 or less cards in your hand, draw 1 card.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-038.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-038.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 92.6,
-          "eur": 66.73,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP07-038-p2",
-        "name": "Boa Hancock",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Blue",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "The Seven Warlords of the Sea/Kuja Pirates",
-        "effect": "[Your Turn] [Once Per Turn] This effect can be activated when a Character is removed from the field by your effect. If you have 5 or less cards in your hand, draw 1 card.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-038_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-038_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 640.49,
-          "eur": 974.17,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP07-038-p3",
-        "name": "Boa Hancock",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Blue",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "The Seven Warlords of the Sea/Kuja Pirates",
-        "effect": "[Your Turn] [Once Per Turn] This effect can be activated when a Character is removed from the field by your effect. If you have 5 or less cards in your hand, draw 1 card.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-038_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-038_p2.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 144.47,
-          "eur": 160.13,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 3"
-      },
-      {
-        "id": "OP07-059",
-        "name": "Foxy",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Foxy Pirates",
-        "effect": "[When Attacking] DON!! −3 (You may return the specified number of DON!! cards from your field to your DON!! deck.): If you have 3 or more {Foxy Pirates} type Characters, select up to 1 each of your opponent's rested Leader and Character cards. The selected cards will not become active in your opponent's next Refresh Phase.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-059_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-059_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-059.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-059_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP07/OP07-059_EN.webp",
-        "pricing": {
-          "usd": 0.18,
-          "eur": 0.13,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.18,
-            "eur": 0.13
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 30.43,
-            "eur": 21.32
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 130.95,
-            "eur": 205.13
-          }
-        ]
-      },
-      {
-        "id": "OP07-059-aa",
-        "name": "Foxy",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Foxy Pirates",
-        "effect": "[When Attacking] DON!! −3 (You may return the specified number of DON!! cards from your field to your DON!! deck.): If you have 3 or more {Foxy Pirates} type Characters, select up to 1 each of your opponent's rested Leader and Character cards. The selected cards will not become active in your opponent's next Refresh Phase.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-059.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-059.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 30.43,
-          "eur": 21.32,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP07-059-p2",
-        "name": "Foxy",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Foxy Pirates",
-        "effect": "[When Attacking] DON!! −3 (You may return the specified number of DON!! cards from your field to your DON!! deck.): If you have 3 or more {Foxy Pirates} type Characters, select up to 1 each of your opponent's rested Leader and Character cards. The selected cards will not become active in your opponent's next Refresh Phase.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-059_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-059_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 130.95,
-          "eur": 205.13,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP07-079",
-        "name": "Rob Lucci",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Black",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "CP0",
-        "effect": "[When Attacking] You may trash 2 cards from the top of your deck: Give up to 1 of your opponent's Characters −1 cost during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-079_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-079_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-079.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-079_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP07/OP07-079_EN.webp",
-        "pricing": {
-          "usd": 0.14,
-          "eur": 0.09,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.14,
-            "eur": 0.09
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 23.78,
-            "eur": 24.24
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 223.31,
-            "eur": 219.57
-          }
-        ]
-      },
-      {
-        "id": "OP07-079-aa",
-        "name": "Rob Lucci",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Black",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "CP0",
-        "effect": "[When Attacking] You may trash 2 cards from the top of your deck: Give up to 1 of your opponent's Characters −1 cost during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-079.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-079.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 23.78,
-          "eur": 24.24,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP07-079-p2",
-        "name": "Rob Lucci",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Black",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "CP0",
-        "effect": "[When Attacking] You may trash 2 cards from the top of your deck: Give up to 1 of your opponent's Characters −1 cost during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-079_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-079_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 223.31,
-          "eur": 219.57,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP07-097",
-        "name": "Vegapunk",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Yellow",
-        "cost": 2,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Wisdom",
-        "block": 2,
-        "trait": "Scientist/Egghead",
-        "effect": "This Leader cannot attack.[Activate: Main] [Once Per Turn] You may rest 1 of your DON!! cards: Select up to 1 {Egghead} type card with a cost of 5 or less from your hand and play it or add it to the top of your Life cards face-up.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-097_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-097_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-097.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-097_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP07/OP07-097_EN.webp",
-        "pricing": {
-          "usd": 0.13,
-          "eur": 0.06,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.13,
-            "eur": 0.06
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 48.7,
-            "eur": 38.51
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 373.42,
-            "eur": 382.72
-          }
-        ]
-      },
-      {
-        "id": "OP07-097-aa",
-        "name": "Vegapunk",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Yellow",
-        "cost": 2,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Wisdom",
-        "block": 2,
-        "trait": "Scientist/Egghead",
-        "effect": "This Leader cannot attack.[Activate: Main] [Once Per Turn] You may rest 1 of your DON!! cards: Select up to 1 {Egghead} type card with a cost of 5 or less from your hand and play it or add it to the top of your Life cards face-up.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-097.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-097.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 48.7,
-          "eur": 38.51,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP07-097-p2",
-        "name": "Vegapunk",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Yellow",
-        "cost": 2,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Wisdom",
-        "block": 2,
-        "trait": "Scientist/Egghead",
-        "effect": "This Leader cannot attack.[Activate: Main] [Once Per Turn] You may rest 1 of your DON!! cards: Select up to 1 {Egghead} type card with a cost of 5 or less from your hand and play it or add it to the top of your Life cards face-up.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-097_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-097_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 373.42,
-          "eur": 382.72,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP08-001",
-        "name": "Tony Tony.Chopper",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Green",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Animal/Drum Kingdom/Straw Hat Crew",
-        "effect": "[Activate: Main] [Once Per Turn] Give up to 3 of your {Animal} or {Drum Kingdom} type Characters up to 1 rested DON!! card each.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-001_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-001_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-001.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-001_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP08/OP08-001_EN.webp",
-        "pricing": {
-          "usd": 0.36,
-          "eur": 0.06,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.36,
-            "eur": 0.06
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 60.2,
-            "eur": 33.99
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 359.42,
-            "eur": 381.34
-          }
-        ]
-      },
-      {
-        "id": "OP08-001-aa",
-        "name": "Tony Tony.Chopper",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Green",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Animal/Drum Kingdom/Straw Hat Crew",
-        "effect": "[Activate: Main] [Once Per Turn] Give up to 3 of your {Animal} or {Drum Kingdom} type Characters up to 1 rested DON!! card each.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-001.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-001.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 60.2,
-          "eur": 33.99,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP08-001-p2",
-        "name": "Tony Tony.Chopper",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Green",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Strike",
-        "block": 2,
-        "trait": "Animal/Drum Kingdom/Straw Hat Crew",
-        "effect": "[Activate: Main] [Once Per Turn] Give up to 3 of your {Animal} or {Drum Kingdom} type Characters up to 1 rested DON!! card each.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-001_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-001_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 359.42,
-          "eur": 381.34,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP08-002",
-        "name": "Marco",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Blue",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Whitebeard Pirates",
-        "effect": "[DON!! x1] [Activate: Main] [Once Per Turn] Draw 1 card and place 1 card from your hand at the top or bottom of your deck. Then, give up to 1 of your opponent's Characters −2000 power during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-002_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-002_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-002.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-002_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP08/OP08-002_EN.webp",
-        "pricing": {
-          "usd": 0.11,
-          "eur": 0.07,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.11,
-            "eur": 0.07
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 18.44,
-            "eur": 18.92
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 219.89,
-            "eur": 207.9
-          }
-        ]
-      },
-      {
-        "id": "OP08-002-aa",
-        "name": "Marco",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Blue",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Whitebeard Pirates",
-        "effect": "[DON!! x1] [Activate: Main] [Once Per Turn] Draw 1 card and place 1 card from your hand at the top or bottom of your deck. Then, give up to 1 of your opponent's Characters −2000 power during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-002.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-002.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 18.44,
-          "eur": 18.92,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP08-002-p2",
-        "name": "Marco",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Blue",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Whitebeard Pirates",
-        "effect": "[DON!! x1] [Activate: Main] [Once Per Turn] Draw 1 card and place 1 card from your hand at the top or bottom of your deck. Then, give up to 1 of your opponent's Characters −2000 power during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-002_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-002_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 219.89,
-          "eur": 207.9,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP08-021",
-        "name": "Carrot",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Minks",
-        "effect": "[Activate: Main] [Once Per Turn] If you have a {Minks} type Character, rest up to 1 of your opponent's Characters with a cost of 5 or less.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-021_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-021_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-021.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-021_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP08/OP08-021_EN.webp",
-        "pricing": {
-          "usd": 0.19,
-          "eur": 0.05,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.19,
-            "eur": 0.05
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 36.09,
-            "eur": 24.62
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 287.33,
-            "eur": 263.39
-          }
-        ]
-      },
-      {
-        "id": "OP08-021-aa",
-        "name": "Carrot",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Minks",
-        "effect": "[Activate: Main] [Once Per Turn] If you have a {Minks} type Character, rest up to 1 of your opponent's Characters with a cost of 5 or less.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-021.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-021.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 36.09,
-          "eur": 24.62,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP08-021-p2",
-        "name": "Carrot",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Green",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Minks",
-        "effect": "[Activate: Main] [Once Per Turn] If you have a {Minks} type Character, rest up to 1 of your opponent's Characters with a cost of 5 or less.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-021_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-021_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 287.33,
-          "eur": 263.39,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP08-057",
-        "name": "King",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple/Black",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Animal Kingdom Pirates",
-        "effect": "[Activate: Main] [Once Per Turn] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Choose one:• If you have 5 or less cards in your hand, draw 1 card.• Give up to 1 of your opponent's Characters −2 cost during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-057_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-057_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-057.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-057_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP08/OP08-057_EN.webp",
-        "pricing": {
-          "usd": 0.1,
-          "eur": 0.04,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.1,
-            "eur": 0.04
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 12.65,
-            "eur": 14.1
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 251.46,
-            "eur": 247.66
-          }
-        ]
-      },
-      {
-        "id": "OP08-057-aa",
-        "name": "King",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple/Black",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Animal Kingdom Pirates",
-        "effect": "[Activate: Main] [Once Per Turn] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Choose one:• If you have 5 or less cards in your hand, draw 1 card.• Give up to 1 of your opponent's Characters −2 cost during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-057.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-057.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 12.65,
-          "eur": 14.1,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP08-057-p2",
-        "name": "King",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple/Black",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Special",
-        "block": 2,
-        "trait": "Animal Kingdom Pirates",
-        "effect": "[Activate: Main] [Once Per Turn] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Choose one:• If you have 5 or less cards in your hand, draw 1 card.• Give up to 1 of your opponent's Characters −2 cost during this turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-057_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-057_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 251.46,
-          "eur": 247.66,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP08-058",
-        "name": "Charlotte Pudding",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple/Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Wisdom",
-        "block": 2,
-        "trait": "Big Mom Pirates",
-        "effect": "[When Attacking] You may turn 2 cards from the top of your Life cards face-up: Add up to 1 DON!! card from your DON!! deck and rest it.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-058_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-058_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-058.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-058_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP08/OP08-058_EN.webp",
-        "pricing": {
-          "usd": 0.18,
-          "eur": 0.05,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.18,
-            "eur": 0.05
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 33.24,
-            "eur": 23.33
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 242.67,
-            "eur": 230.27
-          }
-        ]
-      },
-      {
-        "id": "OP08-058-aa",
-        "name": "Charlotte Pudding",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple/Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Wisdom",
-        "block": 2,
-        "trait": "Big Mom Pirates",
-        "effect": "[When Attacking] You may turn 2 cards from the top of your Life cards face-up: Add up to 1 DON!! card from your DON!! deck and rest it.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-058.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-058.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 33.24,
-          "eur": 23.33,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP08-058-p2",
-        "name": "Charlotte Pudding",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Purple/Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Wisdom",
-        "block": 2,
-        "trait": "Big Mom Pirates",
-        "effect": "[When Attacking] You may turn 2 cards from the top of your Life cards face-up: Add up to 1 DON!! card from your DON!! deck and rest it.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-058_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-058_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 242.67,
-          "eur": 230.27,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "OP08-098",
-        "name": "Kalgara",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Yellow",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Slash",
-        "block": 2,
-        "trait": "Jaya/Sky Island/Shandian Warrior",
-        "effect": "[DON!! x1] [When Attacking] Play up to 1 {Shandian Warrior} type Character card from your hand with a cost equal to or less than the number of DON!! cards on your field. If you do, add 1 card from the top of your Life cards to your hand.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-098_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-098_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-098.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-098_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/OP08/OP08-098_EN.webp",
-        "pricing": {
-          "usd": 0.12,
-          "eur": 0.08,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.12,
-            "eur": 0.08
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 27.55,
-            "eur": 29.24
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 151.19,
-            "eur": 282.13
-          }
-        ]
-      },
-      {
-        "id": "OP08-098-aa",
-        "name": "Kalgara",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Yellow",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Slash",
-        "block": 2,
-        "trait": "Jaya/Sky Island/Shandian Warrior",
-        "effect": "[DON!! x1] [When Attacking] Play up to 1 {Shandian Warrior} type Character card from your hand with a cost equal to or less than the number of DON!! cards on your field. If you do, add 1 card from the top of your Life cards to your hand.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-098.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-098.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 27.55,
-          "eur": 29.24,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "OP08-098-p2",
-        "name": "Kalgara",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Yellow",
-        "cost": 5,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Slash",
-        "block": 2,
-        "trait": "Jaya/Sky Island/Shandian Warrior",
-        "effect": "[DON!! x1] [When Attacking] Play up to 1 {Shandian Warrior} type Character card from your hand with a cost equal to or less than the number of DON!! cards on your field. If you do, add 1 card from the top of your Life cards to your hand.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-098_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-098_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 151.19,
-          "eur": 282.13,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "EB01-001",
-        "name": "Kouzuki Oden",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Green",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Slash",
-        "block": 2,
-        "trait": "Land of Wano/Kouzuki Clan",
-        "effect": "All of your {Land of Wano} type Character cards without a Counter have a +1000 Counter, according to the rules.[DON!! x1] [When Attacking] If you have a {Land of Wano} type Character with a cost of 5 or more, this Leader gains +1000 power until the start of your next turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-001_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-001_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-001.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-001_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB01/EB01-001_EN.webp",
-        "pricing": {
-          "usd": 0.22,
-          "eur": 0.09,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.22,
-            "eur": 0.09
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 59.05,
-            "eur": 40.36
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 301.14,
-            "eur": 238.94
-          }
-        ]
-      },
-      {
-        "id": "EB01-001-aa",
-        "name": "Kouzuki Oden",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Green",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Slash",
-        "block": 2,
-        "trait": "Land of Wano/Kouzuki Clan",
-        "effect": "All of your {Land of Wano} type Character cards without a Counter have a +1000 Counter, according to the rules.[DON!! x1] [When Attacking] If you have a {Land of Wano} type Character with a cost of 5 or more, this Leader gains +1000 power until the start of your next turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-001.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-001.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 59.05,
-          "eur": 40.36,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "EB01-001-p2",
-        "name": "Kouzuki Oden",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Red/Green",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Slash",
-        "block": 2,
-        "trait": "Land of Wano/Kouzuki Clan",
-        "effect": "All of your {Land of Wano} type Character cards without a Counter have a +1000 Counter, according to the rules.[DON!! x1] [When Attacking] If you have a {Land of Wano} type Character with a cost of 5 or more, this Leader gains +1000 power until the start of your next turn.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-001_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-001_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 301.14,
-          "eur": 238.94,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "EB01-021",
-        "name": "Hannyabal",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Blue/Purple",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Slash",
-        "block": 2,
-        "trait": "Impel Down",
-        "effect": "[End of Your Turn] You may return 1 of your {Impel Down} type Characters with a cost of 2 or more to the owner's hand: Add up to 1 DON!! card from your DON!! deck and set it as active.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-021_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-021_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-021.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-021_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB01/EB01-021_EN.webp",
-        "pricing": {
-          "usd": 0.17,
-          "eur": 0.1,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.17,
-            "eur": 0.1
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 15.77,
-            "eur": 14.09
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 161.86,
-            "eur": 113.24
-          }
-        ]
-      },
-      {
-        "id": "EB01-021-aa",
-        "name": "Hannyabal",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Blue/Purple",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Slash",
-        "block": 2,
-        "trait": "Impel Down",
-        "effect": "[End of Your Turn] You may return 1 of your {Impel Down} type Characters with a cost of 2 or more to the owner's hand: Add up to 1 DON!! card from your DON!! deck and set it as active.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-021.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-021.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 15.77,
-          "eur": 14.09,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "EB01-021-p2",
-        "name": "Hannyabal",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Blue/Purple",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Slash",
-        "block": 2,
-        "trait": "Impel Down",
-        "effect": "[End of Your Turn] You may return 1 of your {Impel Down} type Characters with a cost of 2 or more to the owner's hand: Add up to 1 DON!! card from your DON!! deck and set it as active.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-021_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-021_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 161.86,
-          "eur": 113.24,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
-        "id": "EB01-040",
-        "name": "Kyros",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Black/Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Slash",
-        "block": 2,
-        "trait": "Dressrosa",
-        "effect": "[Activate: Main] [Once Per Turn] You may turn 1 card from the top of your Life cards face-up: K.O. up to 1 of your opponent's Characters with a cost of 0.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-040_p2.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-040_p2.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-040.png?260130",
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-040_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB01/EB01-040_EN.webp",
-        "pricing": {
-          "usd": 0.19,
-          "eur": 0.08,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variants": [
-          {
-            "id": 0,
-            "label": "Regular",
-            "usd": 0.19,
-            "eur": 0.08
-          },
-          {
-            "id": 1,
-            "label": "aa",
-            "usd": 27.74,
-            "eur": 13.28
-          },
-          {
-            "id": 2,
-            "label": "Regular",
-            "usd": 122.91,
-            "eur": 116
-          }
-        ]
-      },
-      {
-        "id": "EB01-040-aa",
-        "name": "Kyros",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Black/Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Slash",
-        "block": 2,
-        "trait": "Dressrosa",
-        "effect": "[Activate: Main] [Once Per Turn] You may turn 1 card from the top of your Life cards face-up: K.O. up to 1 of your opponent's Characters with a cost of 0.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-040.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-040.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 27.74,
-          "eur": 13.28,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Alternate Art"
-      },
-      {
-        "id": "EB01-040-p2",
-        "name": "Kyros",
-        "set": "Anime 25th Collection",
-        "setId": "EB-02",
-        "rarity": "L",
-        "type": "LEADER",
-        "color": "Black/Yellow",
-        "cost": 4,
-        "power": 5000,
-        "counter": null,
-        "attribute": "Slash",
-        "block": 2,
-        "trait": "Dressrosa",
-        "effect": "[Activate: Main] [Once Per Turn] You may turn 1 card from the top of your Life cards face-up: K.O. up to 1 of your opponent's Characters with a cost of 0.",
-        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-040_p1.png?260130",
-        "images": [
-          "https://en.onepiece-cardgame.com/images/cardlist/card/EB01-040_p1.png?260130"
-        ],
-        "source": "nemesis312/OnePieceTCGEngCardList",
-        "imgHigh": null,
-        "pricing": {
-          "usd": 122.91,
-          "eur": 116,
-          "source": "limitlesstcg",
-          "updated": "2026-03-22"
-        },
-        "variant": "Parallel 2"
-      },
-      {
         "id": "EB02-001",
         "name": "Karoo",
         "set": "Anime 25th Collection",
@@ -119404,6 +116376,1422 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         }
+      }
+    ],
+    "EB-03": [
+      {
+        "id": "EB03-001",
+        "name": "EB03-001",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-001_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-001_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-001_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.19,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.19,
+            "eur": 0.02
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 12.51,
+            "eur": 7.41
+          }
+        ]
+      },
+      {
+        "id": "EB03-002",
+        "name": "EB03-002",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-002_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-002_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-002_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.06,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-003",
+        "name": "EB03-003",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-003_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-003_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-003_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.66,
+          "eur": 0.13,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.66,
+            "eur": 0.13
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 12.47,
+            "eur": 6.71
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 320.32,
+            "eur": 168.77
+          }
+        ]
+      },
+      {
+        "id": "EB03-004",
+        "name": "EB03-004",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-004_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-004_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-004_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.07,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-005",
+        "name": "EB03-005",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-005_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-005_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-005_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.17,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.17,
+            "eur": 0.07
+          }
+        ]
+      },
+      {
+        "id": "EB03-006",
+        "name": "EB03-006",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-006_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-006_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-006_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.65,
+          "eur": 0.32,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.65,
+            "eur": 0.32
+          }
+        ]
+      },
+      {
+        "id": "EB03-007",
+        "name": "EB03-007",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-007_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-007_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-007_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.07,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-008",
+        "name": "EB03-008",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-008_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-008_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-008_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.29,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.29,
+            "eur": 0.02
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 14.81,
+            "eur": 9.68
+          }
+        ]
+      },
+      {
+        "id": "EB03-009",
+        "name": "EB03-009",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-009_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-009_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-009_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.05,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.05,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-010",
+        "name": "EB03-010",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-010_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-010_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-010_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.18,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.18,
+            "eur": 0.07
+          }
+        ]
+      },
+      {
+        "id": "EB03-011",
+        "name": "EB03-011",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-011_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-011_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-011_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.09,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-012",
+        "name": "EB03-012",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-012_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-012_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-012_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.13,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.13,
+            "eur": 0.05
+          }
+        ]
+      },
+      {
+        "id": "EB03-013",
+        "name": "EB03-013",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-013_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-013_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-013_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.24,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.24,
+            "eur": 0.02
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 9.27,
+            "eur": 6.06
+          }
+        ]
+      },
+      {
+        "id": "EB03-014",
+        "name": "EB03-014",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-014_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-014_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-014_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.07,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-015",
+        "name": "EB03-015",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-015_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-015_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-015_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.08,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-016",
+        "name": "EB03-016",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-016_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-016_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-016_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.1,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-017",
+        "name": "EB03-017",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-017_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-017_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-017_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.27,
+          "eur": 0.16,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.27,
+            "eur": 0.16
+          }
+        ]
+      },
+      {
+        "id": "EB03-018",
+        "name": "EB03-018",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-018_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-018_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-018_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.86,
+          "eur": 0.56,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.86,
+            "eur": 0.56
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 7.46,
+            "eur": 4.89
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 160.51,
+            "eur": 84.15
+          }
+        ]
+      },
+      {
+        "id": "EB03-019",
+        "name": "EB03-019",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-019_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-019_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-019_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.12,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.12,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-020",
+        "name": "EB03-020",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-020_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-020_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-020_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.08,
+            "eur": 0.04
+          }
+        ]
+      },
+      {
+        "id": "EB03-021",
+        "name": "EB03-021",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-021_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-021_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-021_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.09,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-022",
+        "name": "EB03-022",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-022_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-022_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-022_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.19,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.19,
+            "eur": 0.05
+          }
+        ]
+      },
+      {
+        "id": "EB03-023",
+        "name": "EB03-023",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-023_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-023_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-023_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.09,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-024",
+        "name": "EB03-024",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-024_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-024_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-024_EN.webp"
+        ],
+        "pricing": {
+          "usd": 4.79,
+          "eur": 4.5,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 4.79,
+            "eur": 4.5
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 34.19,
+            "eur": 21.7
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 507.81,
+            "eur": 178.74
+          }
+        ]
+      },
+      {
+        "id": "EB03-025",
+        "name": "EB03-025",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-025_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-025_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-025_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.18,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.18,
+            "eur": 0.06
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 4.47,
+            "eur": 2.27
+          }
+        ]
+      },
+      {
+        "id": "EB03-026",
+        "name": "EB03-026",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-026_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-026_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-026_EN.webp"
+        ],
+        "pricing": {
+          "usd": 1.26,
+          "eur": 0.44,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 1.26,
+            "eur": 0.44
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 28.77,
+            "eur": 14.83
+          }
+        ]
+      },
+      {
+        "id": "EB03-027",
+        "name": "EB03-027",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-027_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-027_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-027_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.15,
+            "eur": 0.04
+          }
+        ]
+      },
+      {
+        "id": "EB03-028",
+        "name": "EB03-028",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-028_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-028_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-028_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.06,
+            "eur": 0.03
+          }
+        ]
+      },
+      {
+        "id": "EB03-029",
+        "name": "EB03-029",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-029_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-029_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-029_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.07,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-030",
+        "name": "EB03-030",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-030_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-030_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-030_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.06,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.06,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-031",
+        "name": "EB03-031",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-031_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-031_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-031_EN.webp"
+        ],
+        "pricing": {
+          "usd": 3.03,
+          "eur": 2.93,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 3.03,
+            "eur": 2.93
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 15.84,
+            "eur": 9.12
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 375.02,
+            "eur": 131.96
+          }
+        ]
+      },
+      {
+        "id": "EB03-032",
+        "name": "EB03-032",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-032_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-032_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-032_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.07,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-033",
+        "name": "EB03-033",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-033_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-033_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-033_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.07,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.07,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-034",
+        "name": "EB03-034",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-034_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-034_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-034_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.34,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.34,
+            "eur": 0.02
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 15.65,
+            "eur": 9.98
+          }
+        ]
+      },
+      {
+        "id": "EB03-035",
+        "name": "EB03-035",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-035_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-035_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-035_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.27,
+          "eur": 0.04,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.27,
+            "eur": 0.04
+          }
+        ]
+      },
+      {
+        "id": "EB03-036",
+        "name": "EB03-036",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-036_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-036_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-036_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.08,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-037",
+        "name": "EB03-037",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-037_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-037_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-037_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.15,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.15,
+            "eur": 0.05
+          }
+        ]
+      },
+      {
+        "id": "EB03-038",
+        "name": "EB03-038",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-038_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-038_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-038_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.1,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-039",
+        "name": "EB03-039",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-039_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-039_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-039_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.16,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.16,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-040",
+        "name": "EB03-040",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-040_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-040_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-040_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.1,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.1,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-041",
+        "name": "EB03-041",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-041_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-041_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-041_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.25,
+          "eur": 0.07,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.25,
+            "eur": 0.07
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 19.9,
+            "eur": 10.8
+          }
+        ]
+      },
+      {
+        "id": "EB03-042",
+        "name": "EB03-042",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-042_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-042_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-042_EN.webp"
+        ],
+        "pricing": {
+          "usd": 2.39,
+          "eur": 2.35,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 2.39,
+            "eur": 2.35
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 14.66,
+            "eur": 10.78
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 228.81,
+            "eur": 100.76
+          }
+        ]
+      },
+      {
+        "id": "EB03-043",
+        "name": "EB03-043",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-043_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-043_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-043_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.18,
+          "eur": 0.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.18,
+            "eur": 0.06
+          }
+        ]
+      },
+      {
+        "id": "EB03-044",
+        "name": "EB03-044",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-044_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-044_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-044_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.09,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.09,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-045",
+        "name": "EB03-045",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-045_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-045_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-045_EN.webp"
+        ],
+        "pricing": {
+          "usd": 1.19,
+          "eur": 0.74,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 1.19,
+            "eur": 0.74
+          },
+          {
+            "id": 1,
+            "label": "aa",
+            "usd": 17.65,
+            "eur": 8.06
+          },
+          {
+            "id": 2,
+            "label": "Regular",
+            "usd": 316.64,
+            "eur": 167.55
+          }
+        ]
+      },
+      {
+        "id": "EB03-046",
+        "name": "EB03-046",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-046_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-046_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-046_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.08,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-047",
+        "name": "EB03-047",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-047_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-047_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-047_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.08,
+            "eur": 0.02
+          }
+        ]
+      },
+      {
+        "id": "EB03-048",
+        "name": "EB03-048",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-048_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-048_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-048_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.21,
+          "eur": 0.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.21,
+            "eur": 0.05
+          }
+        ]
+      },
+      {
+        "id": "EB03-049",
+        "name": "EB03-049",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-049_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-049_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-049_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.08,
+            "eur": 0.03
+          }
+        ]
+      },
+      {
+        "id": "EB03-050",
+        "name": "EB03-050",
+        "set": "One Piece Heroines Edition",
+        "setId": "EB-03",
+        "rarity": null,
+        "img": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-050_EN.webp",
+        "imgHigh": "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-050_EN.webp",
+        "images": [
+          "https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/one-piece/EB03/EB03-050_EN.webp"
+        ],
+        "pricing": {
+          "usd": 0.08,
+          "eur": 0.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variants": [
+          {
+            "id": 0,
+            "label": "Regular",
+            "usd": 0.08,
+            "eur": 0.02
+          }
+        ]
       }
     ]
   }
