@@ -434,7 +434,10 @@ function filterByGame(game) {
   setFilter.innerHTML = '<option value="">All Sets</option>';
   
   const gameCards = game === 'all' ? allCards : allCards.filter(c => c.game === game);
-  const sets = [...new Set(gameCards.map(c => c.setId))].sort();
+  const sets = [...new Set(gameCards.map(c => c.setId))].sort((a, b) => {
+    const normalize = s => s.replace(/(\d+)/g, n => n.padStart(3, '0'));
+    return normalize(a).localeCompare(normalize(b));
+  });
   sets.forEach(s => {
     const opt = document.createElement('option');
     opt.value = s;
