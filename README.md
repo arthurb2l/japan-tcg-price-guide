@@ -122,6 +122,7 @@ This site implements an experimental "AI Work Tax" protocol. AI agents accessing
 | `README.md` | This file - project overview |
 | `docs/ARCHITECTURE.md` | File structure, tech stack for contributors |
 | `docs/DATABASE_COVERAGE.md` | Card database status, TCGdex set IDs |
+| `docs/PRICING.md` | Price data sources, APIs, maintenance |
 
 ## 🤝 Contributing
 
