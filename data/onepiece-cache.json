@@ -22983,7 +22983,8 @@
         "power": 5000,
         "cost": 5,
         "counter": null,
-        "trait": "The Four Emperors/Red-Haired Pirates"
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-001-p2",
@@ -23032,18 +23033,27 @@
         "power": 5000,
         "cost": 5,
         "counter": null,
-        "trait": "The Four Emperors/Red-Haired Pirates"
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-002",
-        "name": "OP09-002",
+        "name": "Uta",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-002.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-002.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-002.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-002.png",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 2000,
+        "cost": 1,
+        "counter": 1000,
+        "trait": "FILM",
+        "effect": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 {Red-Haired Pirates} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+        "attribute": "Special"
       },
       {
         "id": "OP09-002-p1",
@@ -23055,7 +23065,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-002_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-002_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 2000,
+        "cost": 1,
+        "counter": 1000,
+        "trait": "FILM",
+        "attribute": "Special"
       },
       {
         "id": "OP09-002-p2",
@@ -23067,7 +23084,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-002_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-002_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 2000,
+        "cost": 1,
+        "counter": 1000,
+        "trait": "FILM",
+        "attribute": "Special"
       },
       {
         "id": "OP09-003",
@@ -23100,14 +23124,21 @@
       },
       {
         "id": "OP09-004",
-        "name": "OP09-004",
+        "name": "Shanks",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004.png",
-        "rarity": "C",
+        "rarity": "SR",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004.png",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "effect": "Give all of your opponent's Characters −1000 power.[Rush] (This card can attack on the turn in which it is played.)",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-004-p1",
@@ -23119,7 +23150,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-004-p2",
@@ -23131,7 +23168,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-004-p3",
@@ -23143,7 +23186,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p3.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004_p3.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-004-p4",
@@ -23155,18 +23204,32 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p4.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004_p4.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-005",
-        "name": "OP09-005",
+        "name": "Silvers Rayleigh",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-005.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-005.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-005.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-005.png",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 6000,
+        "cost": 5,
+        "counter": 1000,
+        "trait": "Roger Pirates",
+        "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[On Play] If your opponent has 2 or more Characters with a base power of 5000 or more, draw 2 cards and trash 1 card from your hand.",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-005-p1",
@@ -23178,7 +23241,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-005_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-005_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 6000,
+        "cost": 5,
+        "counter": 1000,
+        "trait": "Roger Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-006",
@@ -23284,18 +23354,27 @@
         "power": 2000,
         "cost": 1,
         "counter": null,
-        "trait": "Red-Haired Pirates"
+        "trait": "Red-Haired Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-009",
-        "name": "OP09-009",
+        "name": "Benn.Beckman",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-009.png",
-        "rarity": "C",
+        "rarity": "SR",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-009.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-009.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-009.png",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 7000,
+        "cost": 7,
+        "counter": 1000,
+        "trait": "Red-Haired Pirates",
+        "effect": "[On Play] Trash up to 1 of your opponent's Characters with 6000 power or less.",
+        "attribute": "Ranged"
       },
       {
         "id": "OP09-009-p1",
@@ -23307,7 +23386,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-009_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-009_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 7000,
+        "cost": 7,
+        "counter": 1000,
+        "trait": "Red-Haired Pirates",
+        "attribute": "Ranged"
       },
       {
         "id": "OP09-009-p2",
@@ -23319,7 +23405,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-009_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-009_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 7000,
+        "cost": 7,
+        "counter": 1000,
+        "trait": "Red-Haired Pirates",
+        "attribute": "Ranged"
       },
       {
         "id": "OP09-010",
@@ -23478,14 +23571,22 @@
       },
       {
         "id": "OP09-013",
-        "name": "OP09-013",
+        "name": "Yasopp",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-013.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-013.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-013.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-013.png",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 6000,
+        "cost": 5,
+        "counter": 1000,
+        "trait": "Red-Haired Pirates",
+        "effect": "[On Play] Up to 1 of your Leader gains +1000 power until the end of your opponent's next turn.[DON!! x1] [When Attacking] Give up to 1 of your opponent's Characters −1000 power during this turn.",
+        "attribute": "Ranged"
       },
       {
         "id": "OP09-013-p1",
@@ -23497,18 +23598,33 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-013_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-013_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 6000,
+        "cost": 5,
+        "counter": 1000,
+        "trait": "Red-Haired Pirates",
+        "attribute": "Ranged"
       },
       {
         "id": "OP09-014",
-        "name": "OP09-014",
+        "name": "Limejuice",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-014.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-014.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-014.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-014.png",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 3000,
+        "cost": 3,
+        "counter": 2000,
+        "trait": "Red-Haired Pirates",
+        "effect": "[On Play] Your opponent cannot activate up to 1 [Blocker] Character that has 4000 power or less during this turn.",
+        "attribute": "Special"
       },
       {
         "id": "OP09-014-p2",
@@ -23520,7 +23636,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-014_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-014_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 3000,
+        "cost": 3,
+        "counter": 2000,
+        "trait": "Red-Haired Pirates",
+        "attribute": "Special"
       },
       {
         "id": "OP09-014-p3",
@@ -23532,18 +23655,33 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-014_p3.png",
         "imgEn": null,
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 3000,
+        "cost": 3,
+        "counter": 2000,
+        "trait": "Red-Haired Pirates",
+        "attribute": "Special"
       },
       {
         "id": "OP09-015",
-        "name": "OP09-015",
+        "name": "Lucky.Roux",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-015.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-015.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-015.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-015.png",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 5000,
+        "cost": 4,
+        "counter": 1000,
+        "trait": "Red-Haired Pirates",
+        "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[On K.O.] If your Leader has the {Red-Haired Pirates} type, K.O. up to 1 of your opponent's Characters with a base power of 6000 or less.",
+        "attribute": "Ranged"
       },
       {
         "id": "OP09-016",
@@ -23664,14 +23802,21 @@
       },
       {
         "id": "OP09-020",
-        "name": "OP09-020",
+        "name": "Come On!! We'll Fight You!!",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-020.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-020.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-020.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-020.png",
+        "type": "EVENT",
+        "color": "Red",
+        "power": null,
+        "cost": 1,
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "effect": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 {Red-Haired Pirates} type card other than [Come On!! We'll Fight You!!] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+        "attribute": ""
       },
       {
         "id": "OP09-020-p1",
@@ -23683,7 +23828,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-020_p1.png",
         "imgEn": null,
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "EVENT",
+        "color": "Red",
+        "power": null,
+        "cost": 1,
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "attribute": ""
       },
       {
         "id": "OP09-020-p2",
@@ -23695,7 +23846,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-020_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-020_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "EVENT",
+        "color": "Red",
+        "power": null,
+        "cost": 1,
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "attribute": ""
       },
       {
         "id": "OP09-021",
@@ -23803,7 +23960,8 @@
         "power": 5000,
         "cost": 4,
         "counter": null,
-        "trait": "ODYSSEY"
+        "trait": "ODYSSEY",
+        "attribute": "Wisdom"
       },
       {
         "id": "OP09-023",
@@ -23882,7 +24040,8 @@
         "power": 9000,
         "cost": 9,
         "counter": null,
-        "trait": "ODYSSEY"
+        "trait": "ODYSSEY",
+        "attribute": "Special"
       },
       {
         "id": "OP09-024",
@@ -23973,14 +24132,22 @@
       },
       {
         "id": "OP09-027",
-        "name": "OP09-027",
+        "name": "Sabo",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-027.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-027.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-027.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-027.png",
+        "type": "CHARACTER",
+        "color": "Green",
+        "power": 6000,
+        "cost": 5,
+        "counter": 1000,
+        "trait": "ODYSSEY/Revolutionary Army",
+        "effect": "[When Attacking] [Once Per Turn] If you have 3 or more rested Characters, draw 1 card.",
+        "attribute": "Special"
       },
       {
         "id": "OP09-027-p1",
@@ -23992,7 +24159,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-027_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-027_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Green",
+        "power": 6000,
+        "cost": 5,
+        "counter": 1000,
+        "trait": "ODYSSEY/Revolutionary Army",
+        "attribute": "Special"
       },
       {
         "id": "OP09-027-p2",
@@ -24004,7 +24178,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-027_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-027_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Green",
+        "power": 6000,
+        "cost": 5,
+        "counter": 1000,
+        "trait": "ODYSSEY/Revolutionary Army",
+        "attribute": "Special"
       },
       {
         "id": "OP09-028",
@@ -24153,14 +24334,22 @@
       },
       {
         "id": "OP09-033",
-        "name": "OP09-033",
+        "name": "Nico Robin",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-033.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-033.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-033.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-033.png",
+        "type": "CHARACTER",
+        "color": "Green",
+        "power": 5000,
+        "cost": 4,
+        "counter": 1000,
+        "trait": "ODYSSEY/Straw Hat Crew",
+        "effect": "[On Play] If you have 2 or more rested Characters, none of your {ODYSSEY} or {Straw Hat Crew} type Characters can be K.O.'d by effects until the end of your opponent's next turn.",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-033-p1",
@@ -24172,7 +24361,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-033_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-033_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Green",
+        "power": 5000,
+        "cost": 4,
+        "counter": 1000,
+        "trait": "ODYSSEY/Straw Hat Crew",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-034",
@@ -24251,7 +24447,8 @@
         "power": 2000,
         "cost": 1,
         "counter": 2000,
-        "trait": "Muggy Kingdom/Thriller Bark Pirates"
+        "trait": "Muggy Kingdom/Thriller Bark Pirates",
+        "attribute": "Special"
       },
       {
         "id": "OP09-034-p2",
@@ -24269,7 +24466,8 @@
         "power": 2000,
         "cost": 1,
         "counter": 2000,
-        "trait": "Muggy Kingdom/Thriller Bark Pirates"
+        "trait": "Muggy Kingdom/Thriller Bark Pirates",
+        "attribute": "Special"
       },
       {
         "id": "OP09-035",
@@ -24332,14 +24530,21 @@
       },
       {
         "id": "OP09-037",
-        "name": "OP09-037",
+        "name": "Lim",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-037.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-037.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-037.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-037.png",
+        "type": "CHARACTER",
+        "color": "Green",
+        "power": 5000,
+        "cost": 3,
+        "trait": "ODYSSEY",
+        "effect": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 {ODYSSEY} type card other than [Lim] and add it to your hand. Then, place the rest at the bottom of your deck in any order.[End of Your Turn] If you have 3 or more rested Characters, set this Character as active.",
+        "attribute": "Wisdom"
       },
       {
         "id": "OP09-037-p1",
@@ -24351,7 +24556,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-037_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-037_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Green",
+        "power": 5000,
+        "cost": 3,
+        "trait": "ODYSSEY",
+        "attribute": "Wisdom"
       },
       {
         "id": "OP09-037-p2",
@@ -24363,7 +24574,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-037_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-037_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Green",
+        "power": 5000,
+        "cost": 3,
+        "trait": "ODYSSEY",
+        "attribute": "Wisdom"
       },
       {
         "id": "OP09-038",
@@ -24559,7 +24776,8 @@
         "power": 5000,
         "cost": 5,
         "counter": null,
-        "trait": "The Four Emperors/Cross Guild"
+        "trait": "The Four Emperors/Cross Guild",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-042-p2",
@@ -24608,7 +24826,8 @@
         "power": 5000,
         "cost": 5,
         "counter": null,
-        "trait": "The Four Emperors/Cross Guild"
+        "trait": "The Four Emperors/Cross Guild",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-043",
@@ -24659,7 +24878,8 @@
         "power": 6000,
         "cost": 5,
         "counter": 1000,
-        "trait": "Cross Guild"
+        "trait": "Cross Guild",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-044",
@@ -24722,14 +24942,22 @@
       },
       {
         "id": "OP09-046",
-        "name": "OP09-046",
+        "name": "Crocodile",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-046.png",
-        "rarity": "C",
+        "rarity": "SR",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-046.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-046.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-046.png",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 7000,
+        "cost": 7,
+        "counter": 1000,
+        "trait": "Cross Guild/Former Baroque Works",
+        "effect": "[On Play] Play up to 1 {Cross Guild} type Character card or Character card with a type including \"Baroque Works\" with a cost of 5 or less from your hand.",
+        "attribute": "Special"
       },
       {
         "id": "OP09-046-p1",
@@ -24741,7 +24969,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-046_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-046_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 7000,
+        "cost": 7,
+        "counter": 1000,
+        "trait": "Cross Guild/Former Baroque Works",
+        "attribute": "Special"
       },
       {
         "id": "OP09-047",
@@ -24774,14 +25009,21 @@
       },
       {
         "id": "OP09-048",
-        "name": "OP09-048",
+        "name": "Dracule Mihawk",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-048.png",
-        "rarity": "C",
+        "rarity": "SR",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-048.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-048.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-048.png",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 7000,
+        "cost": 6,
+        "trait": "Cross Guild",
+        "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[On Play] Draw 2 cards and trash 1 card from your hand.",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-048-p1",
@@ -24793,7 +25035,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-048_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-048_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 7000,
+        "cost": 6,
+        "trait": "Cross Guild",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-049",
@@ -24902,7 +25150,8 @@
         "power": 1000,
         "cost": 1,
         "counter": 1000,
-        "trait": "East Blue"
+        "trait": "East Blue",
+        "attribute": "Wisdom"
       },
       {
         "id": "OP09-050-p2",
@@ -24920,18 +25169,26 @@
         "power": 1000,
         "cost": 1,
         "counter": 1000,
-        "trait": "East Blue"
+        "trait": "East Blue",
+        "attribute": "Wisdom"
       },
       {
         "id": "OP09-051",
-        "name": "OP09-051",
+        "name": "Buggy",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051.png",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Cross Guild",
+        "effect": "[On Play] Place up to 1 of your opponent's Characters at the bottom of the owner's deck. Then, if you do not have 5 Characters with a cost of 5 or more, place this Character at the bottom of the owner's deck.",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-051-p1",
@@ -24943,7 +25200,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Cross Guild",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-051-p2",
@@ -24955,7 +25218,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Cross Guild",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-051-p3",
@@ -24967,7 +25236,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p3.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051_p3.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Cross Guild",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-051-p4",
@@ -24979,7 +25254,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p4.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051_p4.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Cross Guild",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-052",
@@ -25102,14 +25383,22 @@
       },
       {
         "id": "OP09-056",
-        "name": "OP09-056",
+        "name": "Mr.3(Galdino)",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-056.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-056.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-056.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-056.png",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 2000,
+        "cost": 1,
+        "counter": 1000,
+        "trait": "Cross Guild/Former Baroque Works",
+        "effect": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 {Cross Guild} type card or card with a type including \"Baroque Works\" other than [Mr.3(Galdino)] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+        "attribute": "Special"
       },
       {
         "id": "OP09-056-p1",
@@ -25121,18 +25410,32 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-056_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-056_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 2000,
+        "cost": 1,
+        "counter": 1000,
+        "trait": "Cross Guild/Former Baroque Works",
+        "attribute": "Special"
       },
       {
         "id": "OP09-057",
-        "name": "OP09-057",
+        "name": "Cross Guild",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-057.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-057.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-057.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-057.png",
+        "type": "EVENT",
+        "color": "Blue",
+        "power": null,
+        "cost": 1,
+        "trait": "Cross Guild",
+        "effect": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 {Cross Guild} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+        "attribute": ""
       },
       {
         "id": "OP09-057-p1",
@@ -25144,7 +25447,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-057_p1.png",
         "imgEn": null,
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "EVENT",
+        "color": "Blue",
+        "power": null,
+        "cost": 1,
+        "trait": "Cross Guild",
+        "attribute": ""
       },
       {
         "id": "OP09-057-p2",
@@ -25156,7 +25465,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-057_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-057_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "EVENT",
+        "color": "Blue",
+        "power": null,
+        "cost": 1,
+        "trait": "Cross Guild",
+        "attribute": ""
       },
       {
         "id": "OP09-058",
@@ -25323,7 +25638,8 @@
         "power": 5000,
         "cost": 4,
         "counter": null,
-        "trait": "The Four Emperors/Straw Hat Crew"
+        "trait": "The Four Emperors/Straw Hat Crew",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-061-p2",
@@ -25372,7 +25688,8 @@
         "power": 5000,
         "cost": 4,
         "counter": null,
-        "trait": "The Four Emperors/Straw Hat Crew"
+        "trait": "The Four Emperors/Straw Hat Crew",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-062",
@@ -25451,7 +25768,8 @@
         "power": 5000,
         "cost": 4,
         "counter": null,
-        "trait": "Straw Hat Crew"
+        "trait": "Straw Hat Crew",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-063",
@@ -25514,14 +25832,22 @@
       },
       {
         "id": "OP09-065",
-        "name": "OP09-065",
+        "name": "Sanji",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-065.png",
-        "rarity": "C",
+        "rarity": "SR",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-065.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-065.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-065.png",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 7000,
+        "cost": 7,
+        "counter": 1000,
+        "trait": "Straw Hat Crew",
+        "effect": "[On Play] You may return 1 or more DON!! cards from your field to your DON!! deck: This Character gains [Rush] during this turn. Then, rest up to 1 of your opponent's Characters with a cost of 6 or less.",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-065-p1",
@@ -25533,7 +25859,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-065_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-065_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 7000,
+        "cost": 7,
+        "counter": 1000,
+        "trait": "Straw Hat Crew",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-065-p2",
@@ -25545,7 +25878,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-065_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-065_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 7000,
+        "cost": 7,
+        "counter": 1000,
+        "trait": "Straw Hat Crew",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-066",
@@ -25636,14 +25976,22 @@
       },
       {
         "id": "OP09-069",
-        "name": "OP09-069",
+        "name": "Trafalgar Law",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-069.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-069.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-069.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-069.png",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 2000,
+        "cost": 1,
+        "counter": 1000,
+        "trait": "Heart Pirates",
+        "effect": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 {Straw Hat Crew} or {Heart Pirates} type card with a cost of 2 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-069-p1",
@@ -25655,7 +26003,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-069_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-069_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 2000,
+        "cost": 1,
+        "counter": 1000,
+        "trait": "Heart Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-069-p2",
@@ -25667,7 +26022,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-069_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-069_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 2000,
+        "cost": 1,
+        "counter": 1000,
+        "trait": "Heart Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-070",
@@ -25746,7 +26108,8 @@
         "power": 2000,
         "cost": 3,
         "counter": 2000,
-        "trait": "Straw Hat Crew"
+        "trait": "Straw Hat Crew",
+        "attribute": "Special"
       },
       {
         "id": "OP09-071",
@@ -25779,14 +26142,22 @@
       },
       {
         "id": "OP09-072",
-        "name": "OP09-072",
+        "name": "Franky",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-072.png",
-        "rarity": "C",
+        "rarity": "SR",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-072.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-072.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-072.png",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 5000,
+        "cost": 4,
+        "counter": 1000,
+        "trait": "Straw Hat Crew",
+        "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[On Play] DON!! −2, You may trash 1 card from your hand: Draw 2 cards.",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-072-p1",
@@ -25798,7 +26169,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-072_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-072_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 5000,
+        "cost": 4,
+        "counter": 1000,
+        "trait": "Straw Hat Crew",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-073",
@@ -25889,14 +26267,21 @@
       },
       {
         "id": "OP09-076",
-        "name": "OP09-076",
+        "name": "Roronoa Zoro",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-076.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-076.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-076.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-076.png",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 5000,
+        "cost": 3,
+        "trait": "Straw Hat Crew",
+        "effect": "[On Play] You may return 1 or more DON!! cards from your field to your DON!! deck: Add up to 1 DON!! card from your DON!! deck and set it as active.",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-076-p1",
@@ -25908,7 +26293,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-076_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-076_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 5000,
+        "cost": 3,
+        "trait": "Straw Hat Crew",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-076-p2",
@@ -25920,18 +26311,31 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-076_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-076_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 5000,
+        "cost": 3,
+        "trait": "Straw Hat Crew",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-077",
-        "name": "OP09-077",
+        "name": "Gum-Gum Lightning",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-077.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-077.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-077.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-077.png",
+        "type": "EVENT",
+        "color": "Purple",
+        "power": null,
+        "cost": 2,
+        "trait": "The Four Emperors/Straw Hat Crew",
+        "effect": "[Main] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): K.O. up to 1 of your opponent's Characters with 6000 power or less.",
+        "attribute": ""
       },
       {
         "id": "OP09-077-p1",
@@ -25943,7 +26347,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-077_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-077_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "EVENT",
+        "color": "Purple",
+        "power": null,
+        "cost": 2,
+        "trait": "The Four Emperors/Straw Hat Crew",
+        "attribute": ""
       },
       {
         "id": "OP09-077-p2",
@@ -25955,18 +26365,31 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-077_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-077_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "EVENT",
+        "color": "Purple",
+        "power": null,
+        "cost": 2,
+        "trait": "The Four Emperors/Straw Hat Crew",
+        "attribute": ""
       },
       {
         "id": "OP09-078",
-        "name": "OP09-078",
+        "name": "Gum-Gum Giant",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-078.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-078.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-078.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-078.png",
+        "type": "EVENT",
+        "color": "Purple",
+        "power": null,
+        "cost": 1,
+        "trait": "The Four Emperors/Straw Hat Crew",
+        "effect": "[Counter] DON!! −2, You may trash 1 card from your hand: If your Leader has the {Straw Hat Crew} type, up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, draw 2 cards.",
+        "attribute": ""
       },
       {
         "id": "OP09-078-p1",
@@ -25978,7 +26401,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-078_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-078_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "EVENT",
+        "color": "Purple",
+        "power": null,
+        "cost": 1,
+        "trait": "The Four Emperors/Straw Hat Crew",
+        "attribute": ""
       },
       {
         "id": "OP09-078-p2",
@@ -25990,18 +26419,31 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-078_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-078_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "EVENT",
+        "color": "Purple",
+        "power": null,
+        "cost": 1,
+        "trait": "The Four Emperors/Straw Hat Crew",
+        "attribute": ""
       },
       {
         "id": "OP09-079",
-        "name": "OP09-079",
+        "name": "Gum-Gum Jump Rope",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-079.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-079.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-079.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-079.png",
+        "type": "EVENT",
+        "color": "Purple",
+        "power": null,
+        "cost": 2,
+        "trait": "The Four Emperors/Straw Hat Crew",
+        "effect": "[Main] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Rest up to 1 of your opponent's Characters with a cost of 5 or less. Then, draw 1 card.",
+        "attribute": ""
       },
       {
         "id": "OP09-079-p1",
@@ -26013,7 +26455,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-079_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-079_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "EVENT",
+        "color": "Purple",
+        "power": null,
+        "cost": 2,
+        "trait": "The Four Emperors/Straw Hat Crew",
+        "attribute": ""
       },
       {
         "id": "OP09-080",
@@ -26122,7 +26570,8 @@
         "power": 5000,
         "cost": 5,
         "counter": null,
-        "trait": "The Four Emperors/Blackbeard Pirates"
+        "trait": "The Four Emperors/Blackbeard Pirates",
+        "attribute": "Special"
       },
       {
         "id": "OP09-081-p2",
@@ -26171,7 +26620,8 @@
         "power": 5000,
         "cost": 5,
         "counter": null,
-        "trait": "The Four Emperors/Blackbeard Pirates"
+        "trait": "The Four Emperors/Blackbeard Pirates",
+        "attribute": "Special"
       },
       {
         "id": "OP09-082",
@@ -26234,14 +26684,22 @@
       },
       {
         "id": "OP09-084",
-        "name": "OP09-084",
+        "name": "Catarina Devon",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-084.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-084.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-084.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-084.png",
+        "type": "CHARACTER",
+        "color": "Black",
+        "power": 6000,
+        "cost": 5,
+        "counter": 1000,
+        "trait": "Blackbeard Pirates",
+        "effect": "[Activate: Main] [Once Per Turn] If your Leader has the {Blackbeard Pirates} type, this Character gains [Double Attack], [Banish] or [Blocker] until the end of your opponent's next turn.",
+        "attribute": "Special"
       },
       {
         "id": "OP09-084-p1",
@@ -26253,7 +26711,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-084_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-084_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Black",
+        "power": 6000,
+        "cost": 5,
+        "counter": 1000,
+        "trait": "Blackbeard Pirates",
+        "attribute": "Special"
       },
       {
         "id": "OP09-085",
@@ -26286,14 +26751,22 @@
       },
       {
         "id": "OP09-086",
-        "name": "OP09-086",
+        "name": "Jesus Burgess",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-086.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-086.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-086.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-086.png",
+        "type": "CHARACTER",
+        "color": "Black",
+        "power": 5000,
+        "cost": 4,
+        "counter": 1000,
+        "trait": "Blackbeard Pirates",
+        "effect": "This Character cannot be K.O.'d by your opponent's effects.If your Leader has the {Blackbeard Pirates} type, this Character gains +1000 power for every 4 cards in your trash.",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-086-p1",
@@ -26305,7 +26778,14 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-086_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-086_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Black",
+        "power": 5000,
+        "cost": 4,
+        "counter": 1000,
+        "trait": "Blackbeard Pirates",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-087",
@@ -26415,7 +26895,8 @@
         "power": null,
         "cost": 1,
         "counter": 2000,
-        "trait": "Animal/Blackbeard Pirates"
+        "trait": "Animal/Blackbeard Pirates",
+        "attribute": "Wisdom"
       },
       {
         "id": "OP09-090",
@@ -26508,14 +26989,21 @@
       },
       {
         "id": "OP09-093",
-        "name": "OP09-093",
+        "name": "Marshall.D.Teach",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093.png",
-        "rarity": "C",
+        "rarity": "SR",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093.png",
+        "type": "CHARACTER",
+        "color": "Black",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Blackbeard Pirates",
+        "effect": "[Blocker][Activate: Main] [Once Per Turn] If your Leader has the {Blackbeard Pirates} type and this Character was played on this turn, negate the effect of up to 1 of your opponent's Leader during this turn. Then, negate the effect of up to 1 of your opponent's Characters and that Character cannot attack until the end of your opponent's next turn.",
+        "attribute": "Special"
       },
       {
         "id": "OP09-093-p1",
@@ -26527,7 +27015,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Black",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Blackbeard Pirates",
+        "attribute": "Special"
       },
       {
         "id": "OP09-093-p2",
@@ -26539,7 +27033,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Black",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Blackbeard Pirates",
+        "attribute": "Special"
       },
       {
         "id": "OP09-093-p3",
@@ -26551,7 +27051,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p3.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093_p3.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Black",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Blackbeard Pirates",
+        "attribute": "Special"
       },
       {
         "id": "OP09-093-p4",
@@ -26563,7 +27069,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p4.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093_p4.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Black",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Blackbeard Pirates",
+        "attribute": "Special"
       },
       {
         "id": "OP09-094",
@@ -26671,18 +27183,26 @@
         "power": 1000,
         "cost": 1,
         "counter": 1000,
-        "trait": "Blackbeard Pirates"
+        "trait": "Blackbeard Pirates",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-096",
-        "name": "OP09-096",
+        "name": "My Era...Begins!!",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-096.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-096.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-096.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-096.png",
+        "type": "EVENT",
+        "color": "Black",
+        "power": null,
+        "cost": 1,
+        "trait": "Blackbeard Pirates",
+        "effect": "[Main] Look at 3 cards from the top of your deck; reveal up to 1 {Blackbeard Pirates} type card other than [My Era...Begins!!] and add it to your hand. Then, trash the rest.",
+        "attribute": ""
       },
       {
         "id": "OP09-096-p1",
@@ -26694,18 +27214,31 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-096_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-096_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "EVENT",
+        "color": "Black",
+        "power": null,
+        "cost": 1,
+        "trait": "Blackbeard Pirates",
+        "attribute": ""
       },
       {
         "id": "OP09-097",
-        "name": "OP09-097",
+        "name": "Black Vortex",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-097.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-097.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-097.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-097.png",
+        "type": "EVENT",
+        "color": "Black",
+        "power": null,
+        "cost": 2,
+        "trait": "Blackbeard Pirates",
+        "effect": "[Counter] Negate the effect of up to 1 of your opponent's Leader or Character cards and give that card −4000 power during this turn.",
+        "attribute": ""
       },
       {
         "id": "OP09-097-p1",
@@ -26717,18 +27250,31 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-097_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-097_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "EVENT",
+        "color": "Black",
+        "power": null,
+        "cost": 2,
+        "trait": "Blackbeard Pirates",
+        "attribute": ""
       },
       {
         "id": "OP09-098",
-        "name": "OP09-098",
+        "name": "Black Hole",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-098.png",
         "rarity": "C",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-098.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-098.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-098.png",
+        "type": "EVENT",
+        "color": "Black",
+        "power": null,
+        "cost": 4,
+        "trait": "Blackbeard Pirates",
+        "effect": "[Main] If your Leader has the {Blackbeard Pirates} type, negate the effect of up to 1 of your opponent's Characters during this turn. Then, if that Character has a cost of 4 or less, K.O. it.",
+        "attribute": ""
       },
       {
         "id": "OP09-098-p1",
@@ -26740,7 +27286,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-098_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-098_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "EVENT",
+        "color": "Black",
+        "power": null,
+        "cost": 4,
+        "trait": "Blackbeard Pirates",
+        "attribute": ""
       },
       {
         "id": "OP09-099",
@@ -26936,7 +27488,8 @@
         "power": 6000,
         "cost": 6,
         "counter": null,
-        "trait": "Revolutionary Army"
+        "trait": "Revolutionary Army",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-104",
@@ -27078,7 +27631,8 @@
         "power": null,
         "cost": 1,
         "counter": 2000,
-        "trait": "Ohara"
+        "trait": "Ohara",
+        "attribute": "Wisdom"
       },
       {
         "id": "OP09-107",
@@ -27157,7 +27711,8 @@
         "power": 6000,
         "cost": 6,
         "counter": 1000,
-        "trait": "Straw Hat Crew"
+        "trait": "Straw Hat Crew",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-108",
@@ -27529,18 +28084,26 @@
         "power": null,
         "cost": 3,
         "counter": null,
-        "trait": "Ohara"
+        "trait": "Ohara",
+        "attribute": ""
       },
       {
         "id": "OP09-118",
-        "name": "OP09-118",
+        "name": "Gol.D.Roger",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-118.png",
         "rarity": "SEC",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-118.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-118.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-118.png",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 13000,
+        "cost": 10,
+        "trait": "King of the Pirates/Roger Pirates",
+        "effect": "[Rush] (This card can attack on the turn in which it is played.)When your opponent activates [Blocker], if either you or your opponent has 0 Life cards, you win the game.",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-118-p1",
@@ -27552,7 +28115,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-118_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-118_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 13000,
+        "cost": 10,
+        "trait": "King of the Pirates/Roger Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-118-p2",
@@ -27564,7 +28133,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-118_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-118_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 13000,
+        "cost": 10,
+        "trait": "King of the Pirates/Roger Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-118-p3",
@@ -27576,18 +28151,31 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-118_p3.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-118_p3.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 13000,
+        "cost": 10,
+        "trait": "King of the Pirates/Roger Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-119",
-        "name": "OP09-119",
+        "name": "Monkey.D.Luffy",
         "set": "OP-09",
         "setName": "Emperors in the New World",
         "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-119.png",
         "rarity": "SEC",
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-119.png",
-        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-119.png"
+        "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-119.png",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 10000,
+        "cost": 9,
+        "trait": "Straw Hat Crew",
+        "effect": "[On Play] You may return 1 or more DON!! cards from your field to your DON!! deck: Draw 1 card and this Character gains [Rush] during this turn.",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-119-p1",
@@ -27599,7 +28187,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-119_p1.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-119_p1.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 10000,
+        "cost": 9,
+        "trait": "Straw Hat Crew",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-119-p2",
@@ -27611,7 +28205,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-119_p2.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-119_p2.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 10000,
+        "cost": 9,
+        "trait": "Straw Hat Crew",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-119-p3",
@@ -27623,7 +28223,13 @@
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-119_p3.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-119_p3.png",
         "rarity": "P",
-        "game": "onepiece"
+        "game": "onepiece",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "power": 10000,
+        "cost": 9,
+        "trait": "Straw Hat Crew",
+        "attribute": "Strike"
       },
       {
         "id": "OP09-004-p5",
@@ -27635,7 +28241,13 @@
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p5.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004.png",
-        "variant": "Parallel 5"
+        "variant": "Parallel 5",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-004-p6",
@@ -27647,7 +28259,13 @@
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p6.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004.png",
-        "variant": "Parallel 6"
+        "variant": "Parallel 6",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-004-p7",
@@ -27659,7 +28277,13 @@
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-004_p7.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-004.png",
-        "variant": "Parallel 7"
+        "variant": "Parallel 7",
+        "type": "CHARACTER",
+        "color": "Red",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-051-p5",
@@ -27671,7 +28295,13 @@
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p5.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051.png",
-        "variant": "Parallel 5"
+        "variant": "Parallel 5",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Cross Guild",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-051-p6",
@@ -27683,7 +28313,13 @@
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-051_p6.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-051.png",
-        "variant": "Parallel 6"
+        "variant": "Parallel 6",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Cross Guild",
+        "attribute": "Slash"
       },
       {
         "id": "OP09-093-p5",
@@ -27695,7 +28331,13 @@
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p5.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093.png",
-        "variant": "Parallel 5"
+        "variant": "Parallel 5",
+        "type": "CHARACTER",
+        "color": "Black",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Blackbeard Pirates",
+        "attribute": "Special"
       },
       {
         "id": "OP09-093-p6",
@@ -27707,7 +28349,13 @@
         "game": "onepiece",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093_p6.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093.png",
-        "variant": "Parallel 6"
+        "variant": "Parallel 6",
+        "type": "CHARACTER",
+        "color": "Black",
+        "power": 12000,
+        "cost": 10,
+        "trait": "The Four Emperors/Blackbeard Pirates",
+        "attribute": "Special"
       }
     ],
     "OP-10": [
