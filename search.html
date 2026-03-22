@@ -185,12 +185,12 @@ const rates = { JPY: 1, USD: 0.0067, EUR: 0.0062 };
 
 function formatPrice(card) {
   if (card.pricing) {
-    // Limitlesstcg format (One Piece)
-    if (card.pricing.source === 'limitlesstcg') {
-      if (currency === 'USD' && card.pricing.usd) return '$' + card.pricing.usd.toFixed(2);
-      if (currency === 'EUR' && card.pricing.eur) return '€' + card.pricing.eur.toFixed(2);
-      if (currency === 'JPY' && card.pricing.usd) return '¥' + Math.round(card.pricing.usd * 150).toLocaleString();
-      return card.pricing.usd ? '$' + card.pricing.usd.toFixed(2) : '-';
+    // Simple USD format (One Piece, DON cards, etc.)
+    if (card.pricing.usd) {
+      if (currency === 'USD') return '$' + card.pricing.usd.toFixed(2);
+      if (currency === 'EUR') return '€' + (card.pricing.eur || card.pricing.usd * 0.92).toFixed(2);
+      if (currency === 'JPY') return '¥' + Math.round(card.pricing.usd * 150).toLocaleString();
+      return '$' + card.pricing.usd.toFixed(2);
     }
     // TCGdex format (Pokemon)
     const tcg = card.pricing.tcgplayer;
