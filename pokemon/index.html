@@ -120,8 +120,8 @@ const BASE = '/japan-tcg-price-guide';
 
 async function loadCards() {
   try {
-    const shardIndex = await fetch(`${BASE}/data/shard-index.json`).then(r => r.json());
-    const shards = await Promise.all(shardIndex.shards.map(s => fetch(`${BASE}/data/${s}`).then(r => r.json())));
+    const manifest = await fetch(`${BASE}/data/shards/manifest.json`).then(r => r.json());
+    const shards = await Promise.all(Object.values(manifest.shards).map(s => fetch(`${BASE}/data/shards/${s.file}`).then(r => r.json())));
     allCards = shards.flatMap(s => Object.values(s.sets).flat());
     document.getElementById('stats').textContent = `${allCards.length.toLocaleString()} Pokemon cards loaded`;
     
