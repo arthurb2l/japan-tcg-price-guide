@@ -31,7 +31,8 @@ async function getCard(cardId, options = {}) {
     setId: data.set?.id,
     types: data.types,
     hp: data.hp,
-    artist: data.illustrator
+    artist: data.illustrator,
+    pricing: data.pricing || null
   };
 }
 

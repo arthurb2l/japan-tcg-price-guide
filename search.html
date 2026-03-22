@@ -181,10 +181,21 @@ const rarityOrder = ['Common','Uncommon','Rare','Double Rare','Ultra Rare','Illu
 const rates = { JPY: 1, USD: 0.0067, EUR: 0.0062 };
 
 function formatPrice(card) {
-  // Prefer JPY if available (One Piece), otherwise convert from EUR (Pokemon)
+  // TCGdex pricing structure
+  if (card.pricing) {
+    const tcg = card.pricing.tcgplayer;
+    const cm = card.pricing.cardmarket;
+    if (currency === 'USD' && tcg?.normal?.marketPrice) return '$' + tcg.normal.marketPrice.toFixed(2);
+    if (currency === 'USD' && tcg?.holofoil?.marketPrice) return '$' + tcg.holofoil.marketPrice.toFixed(2);
+    if (cm?.trend) {
+      if (currency === 'EUR') return '€' + cm.trend.toFixed(2);
+      if (currency === 'JPY') return '¥' + Math.round(cm.trend * 162).toLocaleString();
+      return '$' + (cm.trend * 1.08).toFixed(2); // EUR to USD
+    }
+  }
+  // Legacy format
   let jpy = card.price?.jpy || (card.price?.eur ? Math.round(card.price.eur * 162) : null);
   if (!jpy) return '-';
-  
   if (currency === 'JPY') return '¥' + jpy.toLocaleString();
   if (currency === 'USD') return '$' + (jpy * rates.USD).toFixed(2);
   return '€' + (jpy * rates.EUR).toFixed(2);
