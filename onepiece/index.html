@@ -57,7 +57,7 @@ footer{text-align:center;padding:20px 0;color:#666;font-size:.8em;border-top:1px
   <a href="sets/">All Sets</a>
   <a href="#" onclick="randomCard();return false">Random Card</a>
 </div>
-<div class="stats" id="stats">Loading cards...</div>
+<div class="stats" id="stats">Loading...</div>
 
 <div class="section">
   <h2>📚 Guides</h2>
@@ -105,60 +105,27 @@ footer{text-align:center;padding:20px 0;color:#666;font-size:.8em;border-top:1px
 </footer>
 
 <script>
-let allCards = [];
 const BASE = '/japan-tcg-price-guide';
 
-async function loadCards() {
+async function loadStats() {
   try {
     const data = await fetch(`${BASE}/data/onepiece-cache.json`).then(r => r.json());
-    allCards = Object.values(data.sets).flat();
-    document.getElementById('stats').textContent = `${allCards.length.toLocaleString()} One Piece cards loaded`;
-    
-    const params = new URLSearchParams(location.search);
-    if (params.get('q')) {
-      document.getElementById('search').value = params.get('q');
-      doSearch();
-    }
+    document.getElementById('stats').textContent = `${data.meta.totalCards.toLocaleString()} One Piece cards`;
   } catch (e) {
-    document.getElementById('stats').textContent = 'Error loading cards';
+    document.getElementById('stats').textContent = '';
   }
 }
 
 function doSearch() {
-  const q = document.getElementById('search').value.toLowerCase().trim();
-  if (!q) { document.getElementById('results').innerHTML = ''; return; }
-  
-  const results = allCards.filter(c => 
-    c.name?.toLowerCase().includes(q) || c.id?.toLowerCase().includes(q)
-  ).slice(0, 50);
-  
-  if (!results.length) {
-    document.getElementById('results').innerHTML = '<p style="text-align:center;color:#666;padding:30px">No cards found</p>';
-    return;
-  }
-  
-  document.getElementById('results').innerHTML = `
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-top:20px">
-      ${results.map(c => `
-        <a href="../search.html?game=onepiece&q=${encodeURIComponent(c.id)}" style="background:#fff;border-radius:8px;padding:8px;text-decoration:none;color:#222;text-align:center">
-          <img src="${c.img || ''}" alt="${c.name}" style="width:100%;border-radius:4px" onerror="this.style.display='none'">
-          <div style="font-weight:600;font-size:.8em;margin-top:5px">${c.name || 'Unknown'}</div>
-          <div style="color:#666;font-size:.7em">${c.set || c.setId || ''}</div>
-        </a>
-      `).join('')}
-    </div>
-  `;
-  
-  history.replaceState(null, '', `?q=${encodeURIComponent(q)}`);
+  const q = document.getElementById('search').value.trim();
+  if (q) window.location.href = `../search.html?game=onepiece&q=${encodeURIComponent(q)}`;
 }
 
 function randomCard() {
-  if (!allCards.length) return;
-  const card = allCards[Math.floor(Math.random() * allCards.length)];
-  window.location.href = `../search.html?game=onepiece&q=${encodeURIComponent(card.id)}`;
+  window.location.href = `../search.html?game=onepiece&random=1`;
 }
 
-loadCards();
+loadStats();
 </script>
 </body>
 </html>
