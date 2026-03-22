@@ -122,6 +122,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 .card-item.owned .coll-add{background:#22c55e;border-color:#22c55e;color:#fff;opacity:1}
 .coll-filter{margin-left:10px}
 .coll-filter-btn{background:#fff;border:1px solid #ddd;padding:5px 10px;border-radius:5px;font-size:.75em;cursor:pointer}
+.save-cloud-btn{background:#4285f4;color:#fff;border:none;padding:5px 10px;border-radius:5px;font-size:.75em;cursor:pointer;margin-left:5px}
 .coll-filter-btn.active{background:#22c55e;color:#fff;border-color:#22c55e}
 .coll-toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:10px 20px;border-radius:8px;font-size:.9em;opacity:0;transition:opacity .3s;z-index:1001}
 .coll-toast.show{opacity:1}
@@ -195,6 +196,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
   </div>
   <span class="coll-filter">
     <button class="coll-filter-btn" id="coll-filter" onclick="toggleCollFilter()">My Collection (<span id="coll-count">0</span>)</button>
+    <button class="save-cloud-btn" id="save-cloud-btn" onclick="saveToCloud()" style="display:none">☁️ Save to Cloud</button>
   </span>
   <span class="stats" id="stats">Loading...</span>
 </div>
@@ -341,6 +343,7 @@ auth.onAuthStateChanged(async user => {
       await migrateLocalToCloud(user.uid);
     }
     await loadUserCollection(user.uid);
+    updateSaveCloudBtn();
   } else {
     currentUser = null;
     userCollection = {};
@@ -351,6 +354,7 @@ auth.onAuthStateChanged(async user => {
       </button>`;
     collectionStore._updateCount();
     renderCards();
+    updateSaveCloudBtn();
   }
 });
 
@@ -373,7 +377,22 @@ function showToast(msg) {
 function toggleCollFilter() {
   collFilterActive = !collFilterActive;
   document.getElementById('coll-filter').classList.toggle('active', collFilterActive);
+  displayLimit = 60; // Reset limit when toggling
   renderCards();
+  updateStats();
+  updateSaveCloudBtn();
+}
+
+function updateSaveCloudBtn() {
+  const btn = document.getElementById('save-cloud-btn');
+  const count = collectionStore.count();
+  // Show if: not logged in AND has collection AND viewing collection
+  btn.style.display = (!currentUser && count > 0 && collFilterActive) ? 'inline-block' : 'none';
+}
+
+async function saveToCloud() {
+  await signInWithGoogle();
+  // Migration happens automatically in onAuthStateChanged
 }
 
 function formatPrice(card) {
@@ -467,11 +486,16 @@ async function loadCards() {
 let displayLimit = 60;
 
 function updateStats() {
-  const showing = Math.min(filteredCards.length, displayLimit);
+  let total = filteredCards.length;
+  if (collFilterActive) {
+    const coll = collectionStore.getAll();
+    total = filteredCards.filter(c => coll[c.id]).length;
+  }
+  const showing = Math.min(total, displayLimit);
   document.getElementById('stats').textContent = 
-    filteredCards.length + ' cards' + (filteredCards.length > displayLimit ? ` (showing ${showing})` : '');
+    total + ' cards' + (total > displayLimit ? ` (showing ${showing})` : '');
   document.getElementById('show-more-container').style.display = 
-    filteredCards.length > displayLimit ? 'block' : 'none';
+    total > displayLimit ? 'block' : 'none';
 }
 
 function showMore() {
@@ -483,13 +507,16 @@ function showMore() {
 function renderCards() {
   const grid = document.getElementById('results');
   const noResults = document.getElementById('no-results');
-  let cards = filteredCards.slice(0, displayLimit);
   
-  // Filter by collection if active
+  // Filter by collection FIRST if active
+  let cards = filteredCards;
   if (collFilterActive) {
     const coll = collectionStore.getAll();
     cards = cards.filter(c => coll[c.id]);
   }
+  
+  // Then apply display limit
+  cards = cards.slice(0, displayLimit);
   
   if (!cards.length) {
     grid.innerHTML = '';
