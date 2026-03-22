@@ -58,6 +58,64 @@
         ]
       },
       {
+        "id": "OP01-001-aa",
+        "name": "Roronoa Zoro",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Red",
+        "cost": 5,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Supernovas/Straw Hat Crew",
+        "effect": "[DON!! x1] [Your Turn] All of your Characters gain +1000 power.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-001_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-001_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 556.45,
+          "eur": 536.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
+      },
+      {
+        "id": "OP01-001-p2",
+        "name": "Roronoa Zoro",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Red",
+        "cost": 5,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Supernovas/Straw Hat Crew",
+        "effect": "[DON!! x1] [Your Turn] All of your Characters gain +1000 power.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-001_p2.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-001_p2.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 70.74,
+          "eur": 19.97,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 2"
+      },
+      {
         "id": "OP01-002",
         "name": "Trafalgar Law",
         "set": "ROMANCE DAWN",
@@ -101,6 +159,35 @@
         ]
       },
       {
+        "id": "OP01-002-aa",
+        "name": "Trafalgar Law",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Red/Green",
+        "cost": 4,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Supernovas/Heart Pirates",
+        "effect": "[Activate: Main] [Once Per Turn] ➁ (You may rest the specified number of DON!! cards in your cost area.): If you have 5 Characters, return 1 of your Characters to the owner's hand. Then, play up to 1 Character with a cost of 5 or less from your hand that is a different color than the returned Character.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-002_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-002_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 476.83,
+          "eur": 421.28,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
+      },
+      {
         "id": "OP01-003",
         "name": "Monkey.D.Luffy",
         "set": "ROMANCE DAWN",
@@ -142,6 +229,35 @@
             "eur": 755.11
           }
         ]
+      },
+      {
+        "id": "OP01-003-aa",
+        "name": "Monkey.D.Luffy",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Red/Green",
+        "cost": 4,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Supernovas/Straw Hat Crew",
+        "effect": "[Activate: Main] [Once Per Turn] ➃ (You may rest the specified number of DON!! cards in your cost area.): Set up to 1 of your {Supernovas} or {Straw Hat Crew} type Character cards with a cost of 5 or less as active. It gains +1000 power during this turn.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-003_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-003_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 847.45,
+          "eur": 755.11,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
       },
       {
         "id": "OP01-004",
@@ -191,6 +307,64 @@
             "eur": 65.58
           }
         ]
+      },
+      {
+        "id": "OP01-004-aa",
+        "name": "Usopp",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 2,
+        "power": 3000,
+        "counter": 2000,
+        "attribute": "Ranged",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[DON!! x1] [Your Turn] [Once Per Turn] Draw 1 card when your opponent activates an Event.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-004_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-004_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 340.24,
+          "eur": 158.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
+      },
+      {
+        "id": "OP01-004-p2",
+        "name": "Usopp",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 2,
+        "power": 3000,
+        "counter": 2000,
+        "attribute": "Ranged",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[DON!! x1] [Your Turn] [Once Per Turn] Draw 1 card when your opponent activates an Event.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-004.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-004.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 49.3,
+          "eur": 65.58,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 2"
       },
       {
         "id": "OP01-005",
@@ -247,6 +421,93 @@
             "eur": 11.05
           }
         ]
+      },
+      {
+        "id": "OP01-005-p1",
+        "name": "Uta",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 4,
+        "power": 4000,
+        "counter": null,
+        "attribute": "Special",
+        "block": 1,
+        "trait": "FILM",
+        "effect": "[On Play] Add up to 1 red Character card other than [Uta] with a cost of 3 or less from your trash to your hand.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-005_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-005_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 7.24,
+          "eur": 5.17,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 1"
+      },
+      {
+        "id": "OP01-005-p2",
+        "name": "Uta",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 4,
+        "power": 4000,
+        "counter": null,
+        "attribute": "Special",
+        "block": 1,
+        "trait": "FILM",
+        "effect": "[On Play] Add up to 1 red Character card other than [Uta] with a cost of 3 or less from your trash to your hand.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-005_p2.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-005_p2.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 13,
+          "eur": 10,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 2"
+      },
+      {
+        "id": "OP01-005-aa",
+        "name": "Uta",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 4,
+        "power": 4000,
+        "counter": null,
+        "attribute": "Special",
+        "block": 1,
+        "trait": "FILM",
+        "effect": "[On Play] Add up to 1 red Character card other than [Uta] with a cost of 3 or less from your trash to your hand.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-005.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-005.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 16.11,
+          "eur": 11.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
       },
       {
         "id": "OP01-007",
@@ -318,6 +579,35 @@
             "eur": 4.88
           }
         ]
+      },
+      {
+        "id": "OP01-008-p1",
+        "name": "Cavendish",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "C",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 4,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Supernovas/Beautiful Pirates",
+        "effect": "[On Play] You may add 1 card from your Life area to your hand: This Character gains [Rush] during this turn. (This card can attack on the turn in which it is played.)",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-008_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-008_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 2.87,
+          "eur": 4.88,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 1"
       },
       {
         "id": "OP01-009",
@@ -496,6 +786,122 @@
         ]
       },
       {
+        "id": "OP01-013-aa",
+        "name": "Sanji",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 2,
+        "power": 3000,
+        "counter": 2000,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[Activate: Main] [Once Per Turn] You may add 1 card from your Life area to your hand: This Character gains +2000 power during this turn. Then, give this Character up to 2 rested DON!! cards.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-013_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-013_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 48.7,
+          "eur": 51.55,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
+      },
+      {
+        "id": "OP01-013-p2",
+        "name": "Sanji",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 2,
+        "power": 3000,
+        "counter": 2000,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[Activate: Main] [Once Per Turn] You may add 1 card from your Life area to your hand: This Character gains +2000 power during this turn. Then, give this Character up to 2 rested DON!! cards.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-013_p2.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-013_p2.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 15.47,
+          "eur": 6.37,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 2"
+      },
+      {
+        "id": "OP01-013-p3",
+        "name": "Sanji",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 2,
+        "power": 3000,
+        "counter": 2000,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[Activate: Main] [Once Per Turn] You may add 1 card from your Life area to your hand: This Character gains +2000 power during this turn. Then, give this Character up to 2 rested DON!! cards.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-013_p3.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-013_p3.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 12.96,
+          "eur": 11.13,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 3"
+      },
+      {
+        "id": "OP01-013-p4",
+        "name": "Sanji",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 2,
+        "power": 3000,
+        "counter": 2000,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[Activate: Main] [Once Per Turn] You may add 1 card from your Life area to your hand: This Character gains +2000 power during this turn. Then, give this Character up to 2 rested DON!! cards.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-013_p4.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-013_p4.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 100.85,
+          "eur": 44.67,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 4"
+      },
+      {
         "id": "OP01-014",
         "name": "Jinbe",
         "set": "ROMANCE DAWN",
@@ -539,6 +945,35 @@
         ]
       },
       {
+        "id": "OP01-014-p1",
+        "name": "Jinbe",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 4,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Fish-Man/Straw Hat Crew",
+        "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[DON!! x1] [On Block] Play up to 1 red Character card with a cost of 2 or less from your hand.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-014_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-014_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 3.73,
+          "eur": 0.93,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 1"
+      },
+      {
         "id": "OP01-015",
         "name": "Tony Tony.Chopper",
         "set": "ROMANCE DAWN",
@@ -580,6 +1015,35 @@
             "eur": 42.95
           }
         ]
+      },
+      {
+        "id": "OP01-015-p1",
+        "name": "Tony Tony.Chopper",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 4000,
+        "counter": 1000,
+        "attribute": "Wisdom",
+        "block": 1,
+        "trait": "Animal/Straw Hat Crew",
+        "effect": "[DON!! x1] [When Attacking] You may trash 1 card from your hand: Add up to 1 {Straw Hat Crew} type Character card other than [Tony Tony.Chopper] with a cost of 4 or less from your trash to your hand.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-015_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-015_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 75.1,
+          "eur": 42.95,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 1"
       },
       {
         "id": "OP01-017",
@@ -636,6 +1100,93 @@
             "eur": 87.99
           }
         ]
+      },
+      {
+        "id": "OP01-017-p1",
+        "name": "Nico Robin",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 4000,
+        "counter": 1000,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[DON!! x1] [When Attacking] K.O. up to 1 of your opponent's Characters with 3000 power or less.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-017_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-017_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 41.21,
+          "eur": 45.53,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 1"
+      },
+      {
+        "id": "OP01-017-p2",
+        "name": "Nico Robin",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 4000,
+        "counter": 1000,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[DON!! x1] [When Attacking] K.O. up to 1 of your opponent's Characters with 3000 power or less.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-017_p2.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-017_p2.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 15.37,
+          "eur": 6.31,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 2"
+      },
+      {
+        "id": "OP01-017-p3",
+        "name": "Nico Robin",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 4000,
+        "counter": 1000,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[DON!! x1] [When Attacking] K.O. up to 1 of your opponent's Characters with 3000 power or less.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-017.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-017.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 181.64,
+          "eur": 87.99,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 3"
       },
       {
         "id": "OP01-018",
@@ -791,6 +1342,151 @@
         ]
       },
       {
+        "id": "OP01-021-p1",
+        "name": "Franky",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 4000,
+        "counter": null,
+        "attribute": "Ranged",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[DON!! x1] This Character can also attack your opponent's active Characters.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-021_p2.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-021_p2.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.33,
+          "eur": 0.14,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 1"
+      },
+      {
+        "id": "OP01-021-p2",
+        "name": "Franky",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 4000,
+        "counter": null,
+        "attribute": "Ranged",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[DON!! x1] This Character can also attack your opponent's active Characters.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-021_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-021_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 12.1,
+          "eur": 11.19,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 2"
+      },
+      {
+        "id": "OP01-021-p3",
+        "name": "Franky",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 4000,
+        "counter": null,
+        "attribute": "Ranged",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[DON!! x1] This Character can also attack your opponent's active Characters.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-021_p3.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-021_p3.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 4.28,
+          "eur": 0.89,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 3"
+      },
+      {
+        "id": "OP01-021-p4",
+        "name": "Franky",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 4000,
+        "counter": null,
+        "attribute": "Ranged",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[DON!! x1] This Character can also attack your opponent's active Characters.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-021.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-021.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 28.95,
+          "eur": 12.99,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 4"
+      },
+      {
+        "id": "OP01-021-p5",
+        "name": "Franky",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 4000,
+        "counter": null,
+        "attribute": "Ranged",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[DON!! x1] This Character can also attack your opponent's active Characters.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-021.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-021.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 9.21,
+          "eur": 4.38,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 5"
+      },
+      {
         "id": "OP01-022",
         "name": "Brook",
         "set": "ROMANCE DAWN",
@@ -832,6 +1528,35 @@
             "eur": 2.65
           }
         ]
+      },
+      {
+        "id": "OP01-022-p1",
+        "name": "Brook",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 4,
+        "power": 5000,
+        "counter": 1000,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Straw Hat Crew",
+        "effect": "[DON!! x1] [When Attacking] Give up to 2 of your opponent's Characters −2000 power during this turn.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-022_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-022_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 10.12,
+          "eur": 2.65,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 1"
       },
       {
         "id": "OP01-023",
@@ -917,6 +1642,93 @@
             "eur": 143.52
           }
         ]
+      },
+      {
+        "id": "OP01-025-aa",
+        "name": "Roronoa Zoro",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "SR",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Supernovas/Straw Hat Crew",
+        "effect": "[Rush] (This card can attack on the turn in which it is played.)",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-025_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-025_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 171.9,
+          "eur": 163.78,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
+      },
+      {
+        "id": "OP01-025-aa",
+        "name": "Roronoa Zoro",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "SR",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Supernovas/Straw Hat Crew",
+        "effect": "[Rush] (This card can attack on the turn in which it is played.)",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-025_p2.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-025_p2.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 2.85,
+          "eur": 1.66,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
+      },
+      {
+        "id": "OP01-025-p3",
+        "name": "Roronoa Zoro",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "SR",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Supernovas/Straw Hat Crew",
+        "effect": "[Rush] (This card can attack on the turn in which it is played.)",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-025_p3.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-025_p3.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 259.25,
+          "eur": 143.52,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 3"
       },
       {
         "id": "OP01-026",
@@ -1088,6 +1900,35 @@
         ]
       },
       {
+        "id": "OP01-031-aa",
+        "name": "Kouzuki Oden",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Green",
+        "cost": 5,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Land of Wano/Kouzuki Clan",
+        "effect": "[Activate: Main] [Once Per Turn] You can trash 1 {Land of Wano} type card from your hand: Set up to 2 of your DON!! cards as active.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-031_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-031_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 115.46,
+          "eur": 81.08,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
+      },
+      {
         "id": "OP01-032",
         "name": "Ashura Doji",
         "set": "ROMANCE DAWN",
@@ -1157,6 +1998,35 @@
             "eur": 3.67
           }
         ]
+      },
+      {
+        "id": "OP01-034-p1",
+        "name": "Inuarashi",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "C",
+        "type": "CHARACTER",
+        "color": "Green",
+        "cost": 3,
+        "power": 4000,
+        "counter": 1000,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Minks/Land of Wano/The Akazaya Nine",
+        "effect": "[DON!! x2] [When Attacking] Set up to 1 of your DON!! cards as active.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-034_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-034_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 2.33,
+          "eur": 3.67,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 1"
       },
       {
         "id": "OP01-036",
@@ -1284,6 +2154,35 @@
             "eur": 12.42
           }
         ]
+      },
+      {
+        "id": "OP01-040-aa",
+        "name": "Kin'emon",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "SR",
+        "type": "CHARACTER",
+        "color": "Green",
+        "cost": 6,
+        "power": 6000,
+        "counter": null,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Land of Wano/The Akazaya Nine",
+        "effect": "[On Play] If your Leader is [Kouzuki Oden], play up to 1 {The Akazaya Nine} type Character card with a cost of 3 or less from your hand.[DON!! x1] [When Attacking] [Once Per Turn] Set up to 1 of your {The Akazaya Nine} type Character cards with a cost of 3 or less as active.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-040_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-040_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 7.11,
+          "eur": 12.42,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
       },
       {
         "id": "OP01-042",
@@ -1467,6 +2366,35 @@
             "eur": 4.93
           }
         ]
+      },
+      {
+        "id": "OP01-048-p1",
+        "name": "Nekomamushi",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "C",
+        "type": "CHARACTER",
+        "color": "Green",
+        "cost": 2,
+        "power": 3000,
+        "counter": 1000,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Minks/Land of Wano/The Akazaya Nine",
+        "effect": "[On Play] Rest up to 1 of your opponent's Characters with a cost of 3 or less.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-048_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-048_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 4.67,
+          "eur": 4.93,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 1"
       },
       {
         "id": "OP01-049",
@@ -1757,6 +2685,64 @@
         ]
       },
       {
+        "id": "OP01-060-aa",
+        "name": "Donquixote Doflamingo",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Blue",
+        "cost": 5,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Special",
+        "block": 1,
+        "trait": "The Seven Warlords of the Sea/Donquixote Pirates",
+        "effect": "[DON!! x2] [When Attacking] ➀ (You may rest the specified number of DON!! cards in your cost area.): Reveal 1 card from the top of your deck. If that card is a {The Seven Warlords of the Sea} type Character card with a cost of 4 or less, you may play that card rested.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-060_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-060_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 296.72,
+          "eur": 251.6,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
+      },
+      {
+        "id": "OP01-060-p2",
+        "name": "Donquixote Doflamingo",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Blue",
+        "cost": 5,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Special",
+        "block": 1,
+        "trait": "The Seven Warlords of the Sea/Donquixote Pirates",
+        "effect": "[DON!! x2] [When Attacking] ➀ (You may rest the specified number of DON!! cards in your cost area.): Reveal 1 card from the top of your deck. If that card is a {The Seven Warlords of the Sea} type Character card with a cost of 4 or less, you may play that card rested.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-060_p2.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-060_p2.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 1.34,
+          "eur": 0.71,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 2"
+      },
+      {
         "id": "OP01-061",
         "name": "Kaido",
         "set": "ROMANCE DAWN",
@@ -1800,6 +2786,35 @@
         ]
       },
       {
+        "id": "OP01-061-aa",
+        "name": "Kaido",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Blue/Purple",
+        "cost": 4,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "The Four Emperors/Animal Kingdom Pirates",
+        "effect": "[DON!! x1] [Your Turn] [Once Per Turn] When your opponent's Character is K.O.'d, add up to 1 DON!! card from your DON!! deck and set it as active.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-061_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-061_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 142.83,
+          "eur": 219.69,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
+      },
+      {
         "id": "OP01-062",
         "name": "Crocodile",
         "set": "ROMANCE DAWN",
@@ -1841,6 +2856,35 @@
             "eur": 148.24
           }
         ]
+      },
+      {
+        "id": "OP01-062-aa",
+        "name": "Crocodile",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Blue/Purple",
+        "cost": 4,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Special",
+        "block": 1,
+        "trait": "The Seven Warlords of the Sea/Baroque Works",
+        "effect": "[DON!! x1] When you activate an Event, you may draw 1 card if you have 4 or less cards in your hand and haven't drawn a card using this Leader's effect during this turn.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-062_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-062_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 142.91,
+          "eur": 148.24,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
       },
       {
         "id": "OP01-063",
@@ -1912,6 +2956,35 @@
             "eur": 6.63
           }
         ]
+      },
+      {
+        "id": "OP01-064-p1",
+        "name": "Alvida",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "C",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "cost": 2,
+        "power": 3000,
+        "counter": 2000,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Buggy Pirates",
+        "effect": "[DON!! x1] [When Attacking] You may trash 1 card from your hand: Return up to 1 of your opponent's Characters with a cost of 3 or less to the owner's hand.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-064_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-064_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 7.32,
+          "eur": 6.63,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 1"
       },
       {
         "id": "OP01-065",
@@ -2011,6 +3084,35 @@
             "eur": 19.52
           }
         ]
+      },
+      {
+        "id": "OP01-067-aa",
+        "name": "Crocodile",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "SR",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "cost": 7,
+        "power": 7000,
+        "counter": 1000,
+        "attribute": "Special",
+        "block": 1,
+        "trait": "The Seven Warlords of the Sea/Baroque Works",
+        "effect": "[Banish] (When this card deals damage, the target card is trashed without activating its Trigger.)[DON!! x1] Give blue Events in your hand −1 cost.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-067_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-067_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 15.14,
+          "eur": 19.52,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
       },
       {
         "id": "OP01-068",
@@ -2262,6 +3364,93 @@
             "eur": 490
           }
         ]
+      },
+      {
+        "id": "OP01-077-p1",
+        "name": "Perona",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "cost": 1,
+        "power": 2000,
+        "counter": 1000,
+        "attribute": "Special",
+        "block": 1,
+        "trait": "Thriller Bark Pirates",
+        "effect": "[On Play] Look at 5 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-077_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-077_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 20.89,
+          "eur": 18.45,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 1"
+      },
+      {
+        "id": "OP01-077-p2",
+        "name": "Perona",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "cost": 1,
+        "power": 2000,
+        "counter": 1000,
+        "attribute": "Special",
+        "block": 1,
+        "trait": "Thriller Bark Pirates",
+        "effect": "[On Play] Look at 5 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-077.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-077.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 290,
+          "eur": 239.73,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 2"
+      },
+      {
+        "id": "OP01-077-p3",
+        "name": "Perona",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "cost": 1,
+        "power": 2000,
+        "counter": 1000,
+        "attribute": "Special",
+        "block": 1,
+        "trait": "Thriller Bark Pirates",
+        "effect": "[On Play] Look at 5 cards from the top of your deck and place them at the top or bottom of the deck in any order.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-077.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-077.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 445,
+          "eur": 490,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 3"
       },
       {
         "id": "OP01-079",
@@ -2672,6 +3861,35 @@
         ]
       },
       {
+        "id": "OP01-091-aa",
+        "name": "King",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Purple",
+        "cost": 5,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Special",
+        "block": 1,
+        "trait": "Animal Kingdom Pirates",
+        "effect": "[Your Turn] If you have 10 DON!! cards on your field, give all of your opponent's Characters −1000 power.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-091_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-091_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 119.63,
+          "eur": 94.26,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
+      },
+      {
         "id": "OP01-092",
         "name": "Urashima",
         "set": "ROMANCE DAWN",
@@ -2749,6 +3967,64 @@
         ]
       },
       {
+        "id": "OP01-093-aa",
+        "name": "Ulti",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "cost": 2,
+        "power": 3000,
+        "counter": null,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Animal Kingdom Pirates",
+        "effect": "[On Play] ① (You may rest the specified number of DON!! cards in your cost area.): Add up to 1 DON!! card from your DON!! deck and rest it.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-093_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-093_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 12.92,
+          "eur": 15.32,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
+      },
+      {
+        "id": "OP01-093-p2",
+        "name": "Ulti",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "cost": 2,
+        "power": 3000,
+        "counter": null,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Animal Kingdom Pirates",
+        "effect": "[On Play] ① (You may rest the specified number of DON!! cards in your cost area.): Add up to 1 DON!! card from your DON!! deck and rest it.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-093.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-093.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 0.97,
+          "eur": 0.35,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 2"
+      },
+      {
         "id": "OP01-094",
         "name": "Kaido",
         "set": "ROMANCE DAWN",
@@ -2790,6 +4066,35 @@
             "eur": 29.06
           }
         ]
+      },
+      {
+        "id": "OP01-094-aa",
+        "name": "Kaido",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "SR",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "cost": 10,
+        "power": 12000,
+        "counter": null,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "The Four Emperors/Animal Kingdom Pirates",
+        "effect": "[On Play] DON!! −6 (You may return the specified number of DON!! cards from your field to your DON!! deck.): If your Leader has the {Animal Kingdom Pirates} type, K.O. all Characters other than this Character.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-094_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-094_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 27.32,
+          "eur": 29.06,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
       },
       {
         "id": "OP01-095",
@@ -2863,6 +4168,35 @@
         ]
       },
       {
+        "id": "OP01-096-aa",
+        "name": "King",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "SR",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "cost": 7,
+        "power": 7000,
+        "counter": null,
+        "attribute": "Special",
+        "block": 1,
+        "trait": "Animal Kingdom Pirates",
+        "effect": "[On Play] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): K.O. up to 1 of your opponent's Characters with a cost of 3 or less and up to 1 of your opponent's Characters with a cost of 2 or less.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-096_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-096_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 11.9,
+          "eur": 27.64,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
+      },
+      {
         "id": "OP01-097",
         "name": "Queen",
         "set": "ROMANCE DAWN",
@@ -2904,6 +4238,35 @@
             "eur": 9.49
           }
         ]
+      },
+      {
+        "id": "OP01-097-aa",
+        "name": "Queen",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "cost": 6,
+        "power": 5000,
+        "counter": 1000,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Animal Kingdom Pirates",
+        "effect": "[On Play] DON!! −1 (You may return the specified number of DON!! cards from your field to your DON!! deck.): This Character gains [Rush] during this turn. Then, give up to 1 of your opponent's Characters −2000 power during this turn.(This card can attack on the turn in which it is played.)",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-097_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-097_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 7.92,
+          "eur": 9.49,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
       },
       {
         "id": "OP01-098",
@@ -3039,6 +4402,64 @@
         ]
       },
       {
+        "id": "OP01-101-p1",
+        "name": "Sasaki",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "cost": 3,
+        "power": 4000,
+        "counter": 2000,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Animal Kingdom Pirates",
+        "effect": "[DON!! x1] [When Attacking] You may trash 1 card from your hand: Add up to 1 DON!! card from your DON!! deck and rest it.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-101_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-101_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 2.7,
+          "eur": 1.1,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 1"
+      },
+      {
+        "id": "OP01-101-p2",
+        "name": "Sasaki",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "cost": 3,
+        "power": 4000,
+        "counter": 2000,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Animal Kingdom Pirates",
+        "effect": "[DON!! x1] [When Attacking] You may trash 1 card from your hand: Add up to 1 DON!! card from your DON!! deck and rest it.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-101.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-101.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 15.73,
+          "eur": 16.4,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 2"
+      },
+      {
         "id": "OP01-102",
         "name": "Jack",
         "set": "ROMANCE DAWN",
@@ -3080,6 +4501,35 @@
             "eur": 7.03
           }
         ]
+      },
+      {
+        "id": "OP01-102-aa",
+        "name": "Jack",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "cost": 3,
+        "power": 4000,
+        "counter": 1000,
+        "attribute": "Strike",
+        "block": 1,
+        "trait": "Animal Kingdom Pirates",
+        "effect": "[When Attacking] DON!! −1 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Your opponent trashes 1 card from their hand.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-102_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-102_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 7.19,
+          "eur": 7.03,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Alternate Art"
       },
       {
         "id": "OP01-103",
@@ -3305,6 +4755,35 @@
             "eur": 2.14
           }
         ]
+      },
+      {
+        "id": "OP01-109-p1",
+        "name": "Who's.Who",
+        "set": "ROMANCE DAWN",
+        "setId": "OP01",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "cost": 2,
+        "power": 3000,
+        "counter": 1000,
+        "attribute": "Slash",
+        "block": 1,
+        "trait": "Animal Kingdom Pirates",
+        "effect": "[DON!! x1] [Your Turn] If you have 8 or more DON!! cards on your field, this Character gains +1000 power.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-109_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-109_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "pricing": {
+          "usd": 2.28,
+          "eur": 2.14,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "imgHigh": null,
+        "variant": "Parallel 1"
       },
       {
         "id": "OP01-110",
