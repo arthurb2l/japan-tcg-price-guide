@@ -76,6 +76,12 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
 .card-item:hover .remove-btn{opacity:1}
 .card-item .remove-btn:hover{background:#EE1515}
 .card-item .qty-badge{position:absolute;top:4px;left:4px;background:#222;color:#fff;font-size:.7em;padding:2px 6px;border-radius:10px;font-weight:600}
+.card-item .condition-badge{position:absolute;top:4px;left:50%;transform:translateX(-50%);font-size:.65em;padding:2px 5px;border-radius:8px;font-weight:600}
+.card-item .condition-badge.nm{background:#22c55e;color:#fff}
+.card-item .condition-badge.lp{background:#84cc16;color:#fff}
+.card-item .condition-badge.mp{background:#f59e0b;color:#fff}
+.card-item .condition-badge.hp{background:#ef4444;color:#fff}
+.card-item .condition-badge.dmg{background:#7f1d1d;color:#fff}
 .card-item .qty-controls{position:absolute;bottom:60px;left:50%;transform:translateX(-50%);display:flex;gap:4px;opacity:0;transition:opacity .15s}
 .card-item:hover .qty-controls{opacity:1}
 .qty-btn{background:rgba(0,0,0,0.7);color:#fff;border:none;width:24px;height:24px;border-radius:4px;cursor:pointer;font-size:14px}
@@ -215,6 +221,27 @@ async function updateQuantity(cardId, delta) {
   } else {
     const local = getLocalCollection(currentList);
     local[cardId] = {...(local[cardId] || {}), qty: newQty};
+    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
+    userCollection = local;
+  }
+  renderCollection();
+}
+
+const conditions = ['NM', 'LP', 'MP', 'HP', 'DMG'];
+const conditionLabels = {NM: 'Near Mint', LP: 'Lightly Played', MP: 'Moderately Played', HP: 'Heavily Played', DMG: 'Damaged'};
+
+async function cycleCondition(e, cardId) {
+  e.stopPropagation();
+  const current = userCollection[cardId]?.condition || 'NM';
+  const idx = conditions.indexOf(current);
+  const next = conditions[(idx + 1) % conditions.length];
+  
+  if (currentUser) {
+    userCollection[cardId] = {...(userCollection[cardId] || {}), condition: next};
+    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(cardId).update({condition: next});
+  } else {
+    const local = getLocalCollection(currentList);
+    local[cardId] = {...(local[cardId] || {}), condition: next};
     localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
     userCollection = local;
   }
@@ -368,10 +395,12 @@ function renderCollection() {
     <div class="card-grid">
       ${filtered.map(c => {
         const qty = getQty(c.id);
+        const cond = userCollection[c.id]?.condition || 'NM';
         return `
         <div class="card-item" onclick="window.open('search.html?q=${encodeURIComponent(c.id)}','_blank')">
           <button class="remove-btn" onclick="event.stopPropagation();removeFromCollection('${c.id}')" title="Remove">×</button>
           ${qty > 1 ? `<span class="qty-badge">×${qty}</span>` : ''}
+          <span class="condition-badge ${cond.toLowerCase()}" onclick="cycleCondition(event,'${c.id}')" title="Click to change condition">${cond}</span>
           <div class="qty-controls" onclick="event.stopPropagation()">
             <button class="qty-btn" onclick="updateQuantity('${c.id}',-1)">−</button>
             <button class="qty-btn" onclick="updateQuantity('${c.id}',1)">+</button>
@@ -397,11 +426,12 @@ function sortBy(sort) {
 }
 
 function exportCollection() {
-  const rows = [['Card ID', 'Name', 'Set', 'Rarity', 'Game', 'Qty', 'Price USD', 'Total']];
+  const rows = [['Card ID', 'Name', 'Set', 'Rarity', 'Game', 'Qty', 'Condition', 'Price USD', 'Total']];
   collectionCards.forEach(c => {
     const qty = userCollection[c.id]?.qty || 1;
+    const cond = userCollection[c.id]?.condition || 'NM';
     const price = getPrice(c);
-    rows.push([c.id, c.name || '', c.setId || '', c.rarity || '', c.game, qty, price?.toFixed(2) || '', price ? (price * qty).toFixed(2) : '']);
+    rows.push([c.id, c.name || '', c.setId || '', c.rarity || '', c.game, qty, cond, price?.toFixed(2) || '', price ? (price * qty).toFixed(2) : '']);
   });
   const csv = rows.map(r => r.map(v => `"${v}"`).join(',')).join('\n');
   const blob = new Blob([csv], {type: 'text/csv'});
