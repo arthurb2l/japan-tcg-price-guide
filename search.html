@@ -350,6 +350,7 @@ function doSearch() {
   filteredCards = gameCards.filter(c => 
     c.name?.toLowerCase().includes(query) ||
     c.id?.toLowerCase().includes(query) ||
+    c.localId?.toLowerCase().includes(query) ||
     c.set?.toLowerCase().includes(query) ||
     c.setId?.toLowerCase().includes(query)
   );
@@ -360,7 +361,8 @@ function doSearch() {
     const otherCards = allCards.filter(c => c.game === otherGame);
     const otherResults = otherCards.filter(c => 
       c.name?.toLowerCase().includes(query) ||
-      c.id?.toLowerCase().includes(query)
+      c.id?.toLowerCase().includes(query) ||
+      c.localId?.toLowerCase().includes(query)
     );
     if (otherResults.length) {
       filterByGame(otherGame);
