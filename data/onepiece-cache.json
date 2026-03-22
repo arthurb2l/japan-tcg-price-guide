@@ -21369,6 +21369,64 @@
         }
       },
       {
+        "id": "OP09-001-aa",
+        "name": "Shanks",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Red",
+        "cost": 5,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Slash",
+        "block": 3,
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "effect": "[Once Per Turn] This effect can be activated when your opponent attacks. Give up to 1 of your opponent's Leader or Character cards −1000 power during this turn.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-001_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-001_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 31.5,
+          "eur": 28.57,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Alternate Art"
+      },
+      {
+        "id": "OP09-001-p2",
+        "name": "Shanks",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Red",
+        "cost": 5,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Slash",
+        "block": 3,
+        "trait": "The Four Emperors/Red-Haired Pirates",
+        "effect": "[Once Per Turn] This effect can be activated when your opponent attacks. Give up to 1 of your opponent's Leader or Character cards −1000 power during this turn.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-001_p2.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-001_p2.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 0.95,
+          "eur": 0.77,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Parallel 2"
+      },
+      {
         "id": "OP09-002",
         "name": "OP09-002",
         "set": "OP-09",
@@ -21571,6 +21629,64 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         }
+      },
+      {
+        "id": "OP09-011-p1",
+        "name": "Hongo",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 3000,
+        "counter": 2000,
+        "attribute": "Strike",
+        "block": 3,
+        "trait": "Red-Haired Pirates",
+        "effect": "[Activate: Main] You may rest this Character: If your Leader has the {Red-Haired Pirates} type, give up to 1 of your opponent's Characters −2000 power during this turn.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-011_r1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-011_r1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 0.2,
+          "eur": 0.16,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Parallel 1"
+      },
+      {
+        "id": "OP09-011-p2",
+        "name": "Hongo",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Red",
+        "cost": 3,
+        "power": 3000,
+        "counter": 2000,
+        "attribute": "Strike",
+        "block": 3,
+        "trait": "Red-Haired Pirates",
+        "effect": "[Activate: Main] You may rest this Character: If your Leader has the {Red-Haired Pirates} type, give up to 1 of your opponent's Characters −2000 power during this turn.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-011_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-011_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 3.01,
+          "eur": 3.02,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Parallel 2"
       },
       {
         "id": "OP09-012",
@@ -21801,6 +21917,35 @@
         }
       },
       {
+        "id": "OP09-022-aa",
+        "name": "Lim",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Green/Purple",
+        "cost": 4,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Wisdom",
+        "block": 3,
+        "trait": "ODYSSEY",
+        "effect": "Your Character cards are played rested.[Activate: Main] [Once Per Turn] You may rest 3 of your DON!! cards: Add up to 1 DON!! card from your DON!! deck and rest it, and play up to 1 {ODYSSEY} type Character card with a cost of 5 or less from your hand.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-022_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-022_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 14.78,
+          "eur": 12.91,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Alternate Art"
+      },
+      {
         "id": "OP09-023",
         "name": "Adio",
         "set": "EMPERORS IN THE NEW WORLD",
@@ -21827,6 +21972,35 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         }
+      },
+      {
+        "id": "OP09-023-aa",
+        "name": "Adio",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "SR",
+        "type": "CHARACTER",
+        "color": "Green",
+        "cost": 9,
+        "power": 9000,
+        "counter": null,
+        "attribute": "Special",
+        "block": 3,
+        "trait": "ODYSSEY",
+        "effect": "[On Play] If your Leader has the {ODYSSEY} type, set up to 3 of your DON!! cards as active.[On Your Opponent's Attack] [Once Per Turn] You may rest 1 of your DON!! cards: Up to 1 of your Leader or Character cards gains +2000 power during this battle.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-023_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-023_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 1.12,
+          "eur": 2.59,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Alternate Art"
       },
       {
         "id": "OP09-024",
@@ -22091,6 +22265,35 @@
         }
       },
       {
+        "id": "OP09-034-aa",
+        "name": "Perona",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Green",
+        "cost": 1,
+        "power": 2000,
+        "counter": 2000,
+        "attribute": "Special",
+        "block": 3,
+        "trait": "Muggy Kingdom/Thriller Bark Pirates",
+        "effect": "[On Play] Look at 5 cards from the top of your deck; reveal up to 1 [Dracule Mihawk] or {Thriller Bark Pirates} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order and trash 1 card from your hand.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-034_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-034_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 4.27,
+          "eur": 3.7,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Alternate Art"
+      },
+      {
         "id": "OP09-035",
         "name": "Portgas.D.Ace",
         "set": "EMPERORS IN THE NEW WORLD",
@@ -22292,6 +22495,64 @@
         }
       },
       {
+        "id": "OP09-042-aa",
+        "name": "Buggy",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Blue",
+        "cost": 5,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Slash",
+        "block": 3,
+        "trait": "The Four Emperors/Cross Guild",
+        "effect": "[Activate: Main] You may rest 5 of your DON!! cards and trash 1 card from your hand: Play up to 1 {Cross Guild} type Character card from your hand.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-042_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-042_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 33.81,
+          "eur": 25.05,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Alternate Art"
+      },
+      {
+        "id": "OP09-042-p2",
+        "name": "Buggy",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Blue",
+        "cost": 5,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Slash",
+        "block": 3,
+        "trait": "The Four Emperors/Cross Guild",
+        "effect": "[Activate: Main] You may rest 5 of your DON!! cards and trash 1 card from your hand: Play up to 1 {Cross Guild} type Character card from your hand.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-042_p2.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-042_p2.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 1.02,
+          "eur": 0.79,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Parallel 2"
+      },
+      {
         "id": "OP09-043",
         "name": "Alvida",
         "set": "EMPERORS IN THE NEW WORLD",
@@ -22477,6 +22738,35 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         }
+      },
+      {
+        "id": "OP09-050-aa",
+        "name": "Nami",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Blue",
+        "cost": 1,
+        "power": 1000,
+        "counter": 1000,
+        "attribute": "Wisdom",
+        "block": 3,
+        "trait": "East Blue",
+        "effect": "[When Attacking] Look at 5 cards from the top of your deck; reveal up to 1 blue Event and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-050_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-050_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 11.08,
+          "eur": 7.51,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Alternate Art"
       },
       {
         "id": "OP09-051",
@@ -22727,6 +23017,64 @@
         }
       },
       {
+        "id": "OP09-061-aa",
+        "name": "Monkey.D.Luffy",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Purple/Black",
+        "cost": 4,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Strike",
+        "block": 3,
+        "trait": "The Four Emperors/Straw Hat Crew",
+        "effect": "[DON!! x1] All of your Characters gain +1 cost.[Your Turn] [Once Per Turn] When 2 or more DON!! cards on your field are returned to your DON!! deck, add up to 1 DON!! card from your DON!! deck and set it as active, and add up to 1 additional DON!! card and rest it.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-061_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-061_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 105.01,
+          "eur": 68.32,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Alternate Art"
+      },
+      {
+        "id": "OP09-061-p2",
+        "name": "Monkey.D.Luffy",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Purple/Black",
+        "cost": 4,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Strike",
+        "block": 3,
+        "trait": "The Four Emperors/Straw Hat Crew",
+        "effect": "[DON!! x1] All of your Characters gain +1 cost.[Your Turn] [Once Per Turn] When 2 or more DON!! cards on your field are returned to your DON!! deck, add up to 1 DON!! card from your DON!! deck and set it as active, and add up to 1 additional DON!! card and rest it.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-061_p2.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-061_p2.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 6.61,
+          "eur": 3.12,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Parallel 2"
+      },
+      {
         "id": "OP09-062",
         "name": "Nico Robin",
         "set": "EMPERORS IN THE NEW WORLD",
@@ -22753,6 +23101,35 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         }
+      },
+      {
+        "id": "OP09-062-aa",
+        "name": "Nico Robin",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Purple/Yellow",
+        "cost": 4,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Strike",
+        "block": 3,
+        "trait": "Straw Hat Crew",
+        "effect": "[Banish] (When this card deals damage, the target card is trashed without activating its Trigger.)[When Attacking] You may trash 1 card with a [Trigger] from your hand: Add up to 1 DON!! card from your DON!! deck and rest it.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-062_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-062_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 75.43,
+          "eur": 32.4,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Alternate Art"
       },
       {
         "id": "OP09-063",
@@ -22935,6 +23312,35 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         }
+      },
+      {
+        "id": "OP09-070-aa",
+        "name": "Nami",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Purple",
+        "cost": 3,
+        "power": 2000,
+        "counter": 2000,
+        "attribute": "Special",
+        "block": 3,
+        "trait": "Straw Hat Crew",
+        "effect": "[On Play] You may return 1 or more DON!! cards from your field to your DON!! deck: Give up to 2 rested DON!! cards to your Leader or 1 of your Characters.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-070_r1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-070_r1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 51.43,
+          "eur": 28.49,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Alternate Art"
       },
       {
         "id": "OP09-071",
@@ -23144,6 +23550,64 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         }
+      },
+      {
+        "id": "OP09-081-aa",
+        "name": "Marshall.D.Teach",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Black",
+        "cost": 5,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Special",
+        "block": 3,
+        "trait": "The Four Emperors/Blackbeard Pirates",
+        "effect": "Your [On Play] effects are negated.[Activate: Main] You may trash 1 card from your hand: Your opponent's [On Play] effects are negated until the end of your opponent's next turn.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-081_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-081_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 25.34,
+          "eur": 28.12,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Alternate Art"
+      },
+      {
+        "id": "OP09-081-p2",
+        "name": "Marshall.D.Teach",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "L",
+        "type": "LEADER",
+        "color": "Black",
+        "cost": 5,
+        "power": 5000,
+        "counter": null,
+        "attribute": "Special",
+        "block": 3,
+        "trait": "The Four Emperors/Blackbeard Pirates",
+        "effect": "Your [On Play] effects are negated.[Activate: Main] You may trash 1 card from your hand: Your opponent's [On Play] effects are negated until the end of your opponent's next turn.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-081_p2.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-081_p2.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 0.61,
+          "eur": 0.64,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Parallel 2"
       },
       {
         "id": "OP09-082",
@@ -23479,6 +23943,35 @@
         }
       },
       {
+        "id": "OP09-095-aa",
+        "name": "Laffitte",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Black",
+        "cost": 1,
+        "power": 1000,
+        "counter": 1000,
+        "attribute": "Strike",
+        "block": 3,
+        "trait": "Blackbeard Pirates",
+        "effect": "[Activate: Main] You may rest 1 of your DON!! cards and this Character: Look at 5 cards from the top of your deck; reveal up to 1 {Blackbeard Pirates} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-095_r1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-095_r1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 15.99,
+          "eur": 5.14,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Alternate Art"
+      },
+      {
         "id": "OP09-096",
         "name": "OP09-096",
         "set": "OP-09",
@@ -23643,6 +24136,35 @@
         }
       },
       {
+        "id": "OP09-103-aa",
+        "name": "Koala",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "SR",
+        "type": "CHARACTER",
+        "color": "Yellow",
+        "cost": 6,
+        "power": 6000,
+        "counter": null,
+        "attribute": "Strike",
+        "block": 3,
+        "trait": "Revolutionary Army",
+        "effect": "[Blocker][On Play] You may add 1 card from the top or bottom of your Life cards to your hand: Play up to 1 {Revolutionary Army} type Character card with a cost of 4 or less from your hand. If you do, draw 1 card.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-103_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-103_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 4.14,
+          "eur": 3.48,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Alternate Art"
+      },
+      {
         "id": "OP09-104",
         "name": "Sabo",
         "set": "EMPERORS IN THE NEW WORLD",
@@ -23730,6 +24252,35 @@
         }
       },
       {
+        "id": "OP09-106-p1",
+        "name": "Nico Olvia",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "C",
+        "type": "CHARACTER",
+        "color": "Yellow",
+        "cost": 1,
+        "power": null,
+        "counter": 2000,
+        "attribute": "Wisdom",
+        "block": 3,
+        "trait": "Ohara",
+        "effect": "[On Play] Up to 1 of your [Nico Robin] Leader gains +3000 power during this turn.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-106_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-106_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 35.56,
+          "eur": 16.45,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Parallel 1"
+      },
+      {
         "id": "OP09-107",
         "name": "Nico Robin",
         "set": "EMPERORS IN THE NEW WORLD",
@@ -23756,6 +24307,35 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         }
+      },
+      {
+        "id": "OP09-107-aa",
+        "name": "Nico Robin",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "R",
+        "type": "CHARACTER",
+        "color": "Yellow",
+        "cost": 6,
+        "power": 6000,
+        "counter": 1000,
+        "attribute": "Strike",
+        "block": 3,
+        "trait": "Straw Hat Crew",
+        "effect": "[On Play] If your opponent has 3 or more Life cards, trash up to 1 card from the top of your opponent's Life cards.",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-107_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-107_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 40.57,
+          "eur": 17.15,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Alternate Art"
       },
       {
         "id": "OP09-108",
@@ -23785,6 +24365,64 @@
           "source": "limitlesstcg",
           "updated": "2026-03-22"
         }
+      },
+      {
+        "id": "OP09-108-p1",
+        "name": "Bartholomew Kuma",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Yellow",
+        "cost": 4,
+        "power": 5000,
+        "counter": 2000,
+        "attribute": "Strike",
+        "block": 3,
+        "trait": "The Seven Warlords of the Sea/Revolutionary Army",
+        "effect": "-",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-108_p1.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-108_p1.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 0.3,
+          "eur": 0.16,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Parallel 1"
+      },
+      {
+        "id": "OP09-108-p2",
+        "name": "Bartholomew Kuma",
+        "set": "EMPERORS IN THE NEW WORLD",
+        "setId": "OP-09",
+        "rarity": "UC",
+        "type": "CHARACTER",
+        "color": "Yellow",
+        "cost": 4,
+        "power": 5000,
+        "counter": 2000,
+        "attribute": "Strike",
+        "block": 3,
+        "trait": "The Seven Warlords of the Sea/Revolutionary Army",
+        "effect": "-",
+        "img": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-108_p2.png?260130",
+        "images": [
+          "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-108_p2.png?260130"
+        ],
+        "source": "nemesis312/OnePieceTCGEngCardList",
+        "imgHigh": null,
+        "pricing": {
+          "usd": 8.66,
+          "eur": 4.36,
+          "source": "limitlesstcg",
+          "updated": "2026-03-22"
+        },
+        "variant": "Parallel 2"
       },
       {
         "id": "OP09-109",
