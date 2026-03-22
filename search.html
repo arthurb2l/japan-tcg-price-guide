@@ -530,9 +530,9 @@ function renderCards() {
   }
   noResults.style.display = 'none';
   
-  const proxyImg = url => url?.startsWith('https://en.onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
-  const getImg = c => c.imgJp || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || 'onepiece/images/card-back.png';
-  const getImgHigh = c => c.imgJp || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/high.webp') || 'onepiece/images/card-back.png';
+  const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
+  const getImg = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || 'onepiece/images/card-back.png';
+  const getImgHigh = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/high.webp') || 'onepiece/images/card-back.png';
   const imgErr = "this.style.opacity='0.3';this.style.background='#ddd'";
   const jpName = c => c.nameJp ? `<span style="color:#7c3aed;font-size:.8em"> ${c.nameJp}</span>` : '';
   const variant = c => c.variant ? `<span style="color:#888;font-size:.85em"> (${c.variant})</span>` : '';
