@@ -161,7 +161,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
       <button class="modal-close" onclick="closeModal()">×</button>
     </div>
     <div class="modal-body">
-      <img id="modal-img" src="" alt="">
+      <img id="modal-img" src="" alt="" referrerpolicy="no-referrer">
       <dl class="card-details">
         <dt>Name</dt><dd id="modal-name"></dd>
         <dt>Set</dt><dd id="modal-set"></dd>
@@ -282,7 +282,7 @@ function renderCards() {
   if (currentView === 'checklist') {
     grid.innerHTML = cards.map(c => `
       <div class="card-item" onclick="showCard('${c.id}')">
-        <img src="${getImg(c)}" alt="" loading="lazy" onerror="${imgErr}">
+        <img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <span class="name">${c.name}${jpName(c)}</span>
         <span class="set">${c.set || c.setId}</span>
         <span class="id">${c.id}</span>
@@ -301,7 +301,7 @@ function renderCards() {
   } else if (currentView === 'full') {
     grid.innerHTML = cards.map(c => `
       <div class="card-item" onclick="showCard('${c.id}')">
-        <img src="${getImgHigh(c)}" alt="${c.name}" loading="lazy" onerror="${imgErr}">
+        <img src="${getImgHigh(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <div class="info">
           <div class="name">${c.name}${jpName(c)}</div>
           <div class="meta">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown'}${variant(c)}</div>
@@ -314,7 +314,7 @@ function renderCards() {
   } else {
     grid.innerHTML = cards.map(c => `
       <div class="card-item" onclick="showCard('${c.id}')">
-        <img src="${getImg(c)}" alt="${c.name}" loading="lazy">
+        <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>
         <div class="set">${c.setId}</div>
         ${c.price ? '<div class="price">' + formatPrice(c) + '</div>' : ''}
