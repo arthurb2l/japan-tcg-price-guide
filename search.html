@@ -85,6 +85,20 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 .card-grid.full .card-item .type-badge{background:#eee;padding:2px 8px;border-radius:10px;font-size:.75em}
 @media(max-width:500px){.card-grid.full .card-item{grid-template-columns:120px 1fr}.filters{gap:6px}.filter,.filter-btn{padding:6px 10px;font-size:.75em}.game-tab{padding:6px 12px;font-size:.8em}}
 .no-results{text-align:center;padding:50px 20px;color:#666}
+/* Collection */
+.card-item{position:relative}
+.coll-dot{position:absolute;top:4px;left:4px;width:12px;height:12px;background:#22c55e;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 2px rgba(0,0,0,0.3);display:none}
+.card-item.owned .coll-dot{display:block}
+.coll-add{position:absolute;bottom:4px;right:4px;width:28px;height:28px;background:#fff;border:2px solid #ddd;border-radius:50%;cursor:pointer;font-size:18px;line-height:24px;text-align:center;opacity:0;transition:opacity .15s}
+.card-item:hover .coll-add{opacity:1}
+@media(max-width:600px){.coll-add{opacity:.7}}
+.coll-add:hover{border-color:#22c55e;color:#22c55e}
+.card-item.owned .coll-add{background:#22c55e;border-color:#22c55e;color:#fff;opacity:1}
+.coll-filter{margin-left:10px}
+.coll-filter-btn{background:#fff;border:1px solid #ddd;padding:5px 10px;border-radius:5px;font-size:.75em;cursor:pointer}
+.coll-filter-btn.active{background:#22c55e;color:#fff;border-color:#22c55e}
+.coll-toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:10px 20px;border-radius:8px;font-size:.9em;opacity:0;transition:opacity .3s;z-index:1001}
+.coll-toast.show{opacity:1}
 /* Modal */
 .modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.85);z-index:1000;padding:20px;overflow-y:auto}
 .modal.active{display:flex;justify-content:center;align-items:flex-start}
@@ -147,8 +161,12 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
       <option value="rarity">Rarity</option>
     </select>
   </div>
+  <span class="coll-filter">
+    <button class="coll-filter-btn" id="coll-filter" onclick="toggleCollFilter()">My Collection (<span id="coll-count">0</span>)</button>
+  </span>
   <span class="stats" id="stats">Loading...</span>
 </div>
+<div class="coll-toast" id="coll-toast"></div>
 
 <div class="card-grid" id="results"></div>
 <div id="show-more-container" style="display:none;text-align:center;padding:20px">
@@ -182,10 +200,47 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 
 <script>
 let allCards = [], filteredCards = [], currentView = 'grid', currency = 'JPY', currentGame = 'pokemon';
+let collFilterActive = false;
 const rarityOrder = ['Common','Uncommon','Rare','Double Rare','Ultra Rare','Illustration Rare','Special Art Rare','Hyper Rare','Shiny Rare','ACE SPEC Rare',
   'C','UC','R','SR','SEC','L','SP','P','DON!!','Promo']; // One Piece rarities
 // Static rates - JPY base (primary currency for Japan tourists)
 const rates = { JPY: 1, USD: 0.0067, EUR: 0.0062 };
+
+// Collection Store (localStorage, future Firebase swap)
+const collectionStore = {
+  _key: 'tcg_collection',
+  _get() { return JSON.parse(localStorage.getItem(this._key) || '{}'); },
+  _save(data) { localStorage.setItem(this._key, JSON.stringify(data)); },
+  add(cardId) { const d = this._get(); d[cardId] = true; this._save(d); this._updateCount(); },
+  remove(cardId) { const d = this._get(); delete d[cardId]; this._save(d); this._updateCount(); },
+  has(cardId) { return !!this._get()[cardId]; },
+  toggle(cardId) { this.has(cardId) ? this.remove(cardId) : this.add(cardId); return this.has(cardId); },
+  count() { return Object.keys(this._get()).length; },
+  getAll() { return this._get(); },
+  _updateCount() { document.getElementById('coll-count').textContent = this.count(); }
+};
+
+function toggleCollection(e, cardId) {
+  e.stopPropagation();
+  const owned = collectionStore.toggle(cardId);
+  const item = e.target.closest('.card-item');
+  item.classList.toggle('owned', owned);
+  showToast(owned ? '✓ Added to collection' : '✗ Removed from collection');
+  if (collFilterActive && !owned) item.style.display = 'none';
+}
+
+function showToast(msg) {
+  const t = document.getElementById('coll-toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 1500);
+}
+
+function toggleCollFilter() {
+  collFilterActive = !collFilterActive;
+  document.getElementById('coll-filter').classList.toggle('active', collFilterActive);
+  renderCards();
+}
 
 function formatPrice(card) {
   if (card.pricing) {
@@ -294,7 +349,13 @@ function showMore() {
 function renderCards() {
   const grid = document.getElementById('results');
   const noResults = document.getElementById('no-results');
-  const cards = filteredCards.slice(0, displayLimit);
+  let cards = filteredCards.slice(0, displayLimit);
+  
+  // Filter by collection if active
+  if (collFilterActive) {
+    const coll = collectionStore.getAll();
+    cards = cards.filter(c => coll[c.id]);
+  }
   
   if (!cards.length) {
     grid.innerHTML = '';
@@ -309,6 +370,8 @@ function renderCards() {
   const imgErr = "this.style.opacity='0.3';this.style.background='#ddd'";
   const jpName = c => c.nameJp ? `<span style="color:#7c3aed;font-size:.8em"> ${c.nameJp}</span>` : '';
   const variant = c => c.variant ? `<span style="color:#888;font-size:.85em"> (${c.variant})</span>` : '';
+  const owned = c => collectionStore.has(c.id) ? ' owned' : '';
+  const collBtn = c => `<div class="coll-dot"></div><div class="coll-add" onclick="toggleCollection(event,'${c.id}')">+</div>`;
   
   if (currentView === 'checklist') {
     grid.innerHTML = `<div class="card-item header">
@@ -319,7 +382,7 @@ function renderCards() {
         <span class="rarity" onclick="sortCards('rarity')">Rarity ▼</span>
         <span class="price" onclick="sortCards('price')">Price ▼</span>
       </div>` + cards.map(c => `
-      <div class="card-item" onclick="showCard('${c.id}')">
+      <div class="card-item${owned(c)}" onclick="showCard('${c.id}')">
         <img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <span class="name">${c.name}${jpName(c)}</span>
         <span class="set">${c.set || c.setId}</span>
@@ -330,7 +393,7 @@ function renderCards() {
     `).join('');
   } else if (currentView === 'text') {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item" onclick="showCard('${c.id}')">
+      <div class="card-item${owned(c)}" onclick="showCard('${c.id}')">
         <div class="name">${c.name}${jpName(c)}${c.pricing ? ' · ' + formatPrice(c) : ''}</div>
         <div class="set">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown rarity'}${variant(c)}</div>
         <div class="details">${c.types ? 'Type: ' + c.types.join(', ') : ''} ${c.hp ? '· HP: ' + c.hp : ''}</div>
@@ -338,7 +401,8 @@ function renderCards() {
     `).join('');
   } else if (currentView === 'full') {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item" onclick="showCard('${c.id}')">
+      <div class="card-item${owned(c)}" onclick="showCard('${c.id}')">
+        ${collBtn(c)}
         <img src="${getImgHigh(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <div class="info">
           <div class="name">${c.name}${jpName(c)}</div>
@@ -351,7 +415,8 @@ function renderCards() {
     `).join('');
   } else {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item" onclick="showCard('${c.id}')">
+      <div class="card-item${owned(c)}" onclick="showCard('${c.id}')">
+        ${collBtn(c)}
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>
         <div class="set">${c.id}${variant(c)}</div>
@@ -552,6 +617,7 @@ document.getElementById('modal').addEventListener('click', e => { if (e.target.i
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 loadCards();
+collectionStore._updateCount(); // Initialize collection count
 </script>
 <footer id="site-footer"></footer>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
