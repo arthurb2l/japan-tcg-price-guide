@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Collection - Japan TCG Price Guide</title>
+<meta name="description" content="View and manage your Pokemon and One Piece card collection. Track your cards, see total value, and export your collection.">
+<link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyCLzia4937bSBbjsT0JUY-PAgnzygTYj1s",
+  authDomain: "japan-tcg-price-guide.firebaseapp.com",
+  projectId: "japan-tcg-price-guide",
+  storageBucket: "japan-tcg-price-guide.firebasestorage.app",
+  messagingSenderId: "1034858029314",
+  appId: "1:1034858029314:web:b162b211614d6fb3f5e21b"
+};
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+</script>
+<style>
+.nav{background:#fff;border-bottom:1px solid #ddd;padding:10px 15px;margin:-10px -10px 0;display:flex;align-items:center;gap:15px;flex-wrap:wrap}
+.nav a{color:#666;text-decoration:none;font-size:.9em}
+.nav a:hover{color:#EE1515}
+.page-header{display:flex;justify-content:space-between;align-items:center;margin:20px 0;flex-wrap:wrap;gap:15px}
+.page-title{font-size:1.5em;font-weight:700}
+.auth-section{display:flex;align-items:center;gap:10px}
+.auth-btn{background:#fff;border:1px solid #ddd;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:.85em;display:flex;align-items:center;gap:8px}
+.auth-btn:hover{border-color:#4285f4;color:#4285f4}
+.auth-btn img{width:18px;height:18px}
+.user-info{display:flex;align-items:center;gap:10px}
+.user-info img{width:32px;height:32px;border-radius:50%}
+.signout-btn{background:none;border:none;color:#666;cursor:pointer;font-size:.8em}
+.signout-btn:hover{color:#EE1515}
+
+/* Stats cards */
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;margin-bottom:25px}
+.stat-card{background:#fff;border-radius:10px;padding:20px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+.stat-card .value{font-size:2em;font-weight:700;color:#222}
+.stat-card .label{font-size:.85em;color:#666;margin-top:5px}
+.stat-card.pokemon .value{color:#EE1515}
+.stat-card.onepiece .value{color:#D70000}
+.stat-card.total .value{color:#22c55e}
+
+/* Filters */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
+.filter-group{display:flex;align-items:center;gap:6px}
+.filter-label{font-size:.8em;color:#666}
+select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:.85em}
+.export-btn{margin-left:auto;background:#222;color:#fff;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:.85em}
+.export-btn:hover{background:#444}
+
+/* Card grid */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.card-item{background:#fff;border-radius:8px;padding:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);cursor:pointer;transition:transform .15s;position:relative}
+.card-item:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+.card-item img{width:100%;border-radius:4px}
+.card-item .name{font-weight:600;font-size:.8em;margin-top:6px;line-height:1.2}
+.card-item .meta{font-size:.7em;color:#666;margin-top:2px}
+.card-item .price{font-size:.8em;color:#2a7;font-weight:600;margin-top:4px}
+.card-item .remove-btn{position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:#fff;border:none;border-radius:50%;width:24px;height:24px;cursor:pointer;font-size:14px;opacity:0;transition:opacity .15s}
+.card-item:hover .remove-btn{opacity:1}
+.card-item .remove-btn:hover{background:#EE1515}
+
+/* Empty state */
+.empty-state{text-align:center;padding:60px 20px;color:#666}
+.empty-state .icon{font-size:4em;margin-bottom:15px}
+.empty-state h2{margin-bottom:10px;color:#222}
+.empty-state p{margin-bottom:20px}
+.empty-state .btn{display:inline-block;background:#EE1515;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none}
+.empty-state .btn:hover{background:#cc1010}
+
+/* Login prompt */
+.login-prompt{background:#fff;border-radius:10px;padding:40px;text-align:center;max-width:400px;margin:60px auto}
+.login-prompt h2{margin-bottom:15px}
+.login-prompt p{color:#666;margin-bottom:20px}
+.login-prompt .note{font-size:.85em;color:#999;margin-top:15px}
+
+/* Loading */
+.loading{text-align:center;padding:60px;color:#666}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="index.html">← Home</a>
+  <a href="search.html">Search</a>
+  <a href="advanced.html">Advanced Search</a>
+</div>
+
+<div class="page-header">
+  <h1 class="page-title">📦 My Collection</h1>
+  <div class="auth-section" id="auth-container">
+    <button class="auth-btn" onclick="signInWithGoogle()">
+      <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="G">
+      Sign in to sync
+    </button>
+  </div>
+</div>
+
+<div id="content">
+  <div class="loading">Loading collection...</div>
+</div>
+
+<script>
+let allCards = [], collectionCards = [], currentUser = null, userCollection = {};
+let currentGame = '', currentSort = 'added';
+
+// Auth functions
+function signInWithGoogle() {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  auth.signInWithPopup(provider).catch(err => console.error('Sign in error:', err));
+}
+
+function signOut() {
+  auth.signOut();
+}
+
+// Get local collection
+function getLocalCollection() {
+  return JSON.parse(localStorage.getItem('tcg_collection') || '{}');
+}
+
+// Auth state listener
+auth.onAuthStateChanged(async user => {
+  const container = document.getElementById('auth-container');
+  if (user) {
+    currentUser = user;
+    container.innerHTML = `
+      <div class="user-info">
+        <img src="${user.photoURL || ''}" alt="" referrerpolicy="no-referrer">
+        <span>${user.displayName || user.email}</span>
+        <button class="signout-btn" onclick="signOut()">Sign out</button>
+      </div>`;
+    await loadUserCollection(user.uid);
+  } else {
+    currentUser = null;
+    userCollection = getLocalCollection();
+    container.innerHTML = `
+      <button class="auth-btn" onclick="signInWithGoogle()">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="G">
+        Sign in to sync
+      </button>`;
+  }
+  renderCollection();
+});
+
+async function loadUserCollection(uid) {
+  userCollection = {};
+  const snapshot = await db.collection('users').doc(uid).collection('cards').get();
+  snapshot.forEach(doc => { userCollection[doc.id] = doc.data(); });
+}
+
+async function removeFromCollection(cardId) {
+  if (currentUser) {
+    delete userCollection[cardId];
+    await db.collection('users').doc(currentUser.uid).collection('cards').doc(cardId).delete();
+  } else {
+    const local = getLocalCollection();
+    delete local[cardId];
+    localStorage.setItem('tcg_collection', JSON.stringify(local));
+    userCollection = local;
+  }
+  renderCollection();
+}
+
+// Load all cards
+async function loadCards() {
+  try {
+    // Load Pokemon
+    let pokemonCards = [];
+    try {
+      const manifest = await fetch('data/shards/manifest.json').then(r => r.json());
+      const shards = await Promise.all(Object.values(manifest.shards).map(s => 
+        fetch(`data/shards/${s.file}`).then(r => r.json())
+      ));
+      pokemonCards = shards.flatMap(s => Object.values(s.sets).flat()).map(c => ({...c, game: 'pokemon'}));
+    } catch(e) {
+      const data = await fetch('data/brain-cache.json').then(r => r.json());
+      pokemonCards = Object.values(data.sets).flat().map(c => ({...c, game: 'pokemon'}));
+    }
+    
+    // Load One Piece
+    let opCards = [];
+    try {
+      const data = await fetch('data/onepiece-cache.json').then(r => r.json());
+      opCards = Object.values(data.sets).flat().map(c => ({...c, game: 'onepiece'}));
+    } catch(e) {}
+    
+    allCards = [...pokemonCards, ...opCards];
+  } catch(e) {
+    console.error('Error loading cards:', e);
+  }
+}
+
+function getPrice(c) {
+  if (c.pricing?.usd) return c.pricing.usd;
+  if (c.pricing?.tcgplayer?.normal?.marketPrice) return c.pricing.tcgplayer.normal.marketPrice;
+  if (c.pricing?.tcgplayer?.holofoil?.marketPrice) return c.pricing.tcgplayer.holofoil.marketPrice;
+  if (c.pricing?.cardmarket?.trend) return c.pricing.cardmarket.trend * 1.08;
+  return null;
+}
+
+function renderCollection() {
+  const content = document.getElementById('content');
+  const collectionIds = Object.keys(userCollection);
+  
+  if (!collectionIds.length) {
+    content.innerHTML = `
+      <div class="empty-state">
+        <div class="icon">📦</div>
+        <h2>Your collection is empty</h2>
+        <p>Start adding cards by clicking the + button on any card.</p>
+        <a href="search.html" class="btn">Browse Cards</a>
+      </div>`;
+    return;
+  }
+  
+  // Get collection cards with full data
+  collectionCards = collectionIds.map(id => allCards.find(c => c.id === id)).filter(Boolean);
+  
+  // Apply game filter
+  let filtered = currentGame ? collectionCards.filter(c => c.game === currentGame) : collectionCards;
+  
+  // Sort
+  if (currentSort === 'name') filtered.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+  else if (currentSort === 'price-high') filtered.sort((a, b) => (getPrice(b) || 0) - (getPrice(a) || 0));
+  else if (currentSort === 'price-low') filtered.sort((a, b) => (getPrice(a) || 999999) - (getPrice(b) || 999999));
+  else if (currentSort === 'set') filtered.sort((a, b) => (a.setId || '').localeCompare(b.setId || '') || (a.id || '').localeCompare(b.id || ''));
+  // 'added' - keep original order (most recent first for Firestore)
+  
+  // Calculate stats
+  const pokemonCards = collectionCards.filter(c => c.game === 'pokemon');
+  const opCards = collectionCards.filter(c => c.game === 'onepiece');
+  const totalValue = collectionCards.reduce((sum, c) => sum + (getPrice(c) || 0), 0);
+  
+  const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
+  const getImg = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || '';
+  const formatPrice = p => p !== null ? '$' + p.toFixed(2) : '-';
+  
+  content.innerHTML = `
+    <div class="stats-row">
+      <div class="stat-card total">
+        <div class="value">${collectionCards.length}</div>
+        <div class="label">Total Cards</div>
+      </div>
+      <div class="stat-card pokemon">
+        <div class="value">${pokemonCards.length}</div>
+        <div class="label">Pokemon</div>
+      </div>
+      <div class="stat-card onepiece">
+        <div class="value">${opCards.length}</div>
+        <div class="label">One Piece</div>
+      </div>
+      <div class="stat-card">
+        <div class="value">$${totalValue.toFixed(2)}</div>
+        <div class="label">Est. Value</div>
+      </div>
+    </div>
+    
+    <div class="filters">
+      <div class="filter-group">
+        <span class="filter-label">Game:</span>
+        <select class="filter" id="game-filter" onchange="filterByGame(this.value)">
+          <option value="">All Games</option>
+          <option value="pokemon" ${currentGame === 'pokemon' ? 'selected' : ''}>Pokemon</option>
+          <option value="onepiece" ${currentGame === 'onepiece' ? 'selected' : ''}>One Piece</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">Sort:</span>
+        <select class="filter" id="sort-filter" onchange="sortBy(this.value)">
+          <option value="added" ${currentSort === 'added' ? 'selected' : ''}>Recently Added</option>
+          <option value="name" ${currentSort === 'name' ? 'selected' : ''}>Name</option>
+          <option value="price-high" ${currentSort === 'price-high' ? 'selected' : ''}>Price: High → Low</option>
+          <option value="price-low" ${currentSort === 'price-low' ? 'selected' : ''}>Price: Low → High</option>
+          <option value="set" ${currentSort === 'set' ? 'selected' : ''}>Set</option>
+        </select>
+      </div>
+      <button class="export-btn" onclick="exportCollection()">📥 Export CSV</button>
+    </div>
+    
+    <div class="card-grid">
+      ${filtered.map(c => `
+        <div class="card-item" onclick="window.open('search.html?q=${encodeURIComponent(c.id)}','_blank')">
+          <button class="remove-btn" onclick="event.stopPropagation();removeFromCollection('${c.id}')" title="Remove">×</button>
+          <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
+          <div class="name">${c.name || c.id}</div>
+          <div class="meta">${c.setId} · ${c.rarity || '?'}</div>
+          <div class="price">${formatPrice(getPrice(c))}</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function filterByGame(game) {
+  currentGame = game;
+  renderCollection();
+}
+
+function sortBy(sort) {
+  currentSort = sort;
+  renderCollection();
+}
+
+function exportCollection() {
+  const rows = [['Card ID', 'Name', 'Set', 'Rarity', 'Game', 'Price USD']];
+  collectionCards.forEach(c => {
+    rows.push([c.id, c.name || '', c.setId || '', c.rarity || '', c.game, getPrice(c)?.toFixed(2) || '']);
+  });
+  const csv = rows.map(r => r.map(v => `"${v}"`).join(',')).join('\n');
+  const blob = new Blob([csv], {type: 'text/csv'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `tcg-collection-${new Date().toISOString().split('T')[0]}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// Initialize
+loadCards().then(() => {
+  // Wait for auth state before rendering
+  if (!currentUser) {
+    userCollection = getLocalCollection();
+    renderCollection();
+  }
+});
+</script>
+
+<footer id="site-footer"></footer>
+<script src="/japan-tcg-price-guide/components/footer.js"></script>
+</body>
+</html>
