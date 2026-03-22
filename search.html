@@ -120,6 +120,8 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 @media(max-width:600px){.coll-add{opacity:.7}}
 .coll-add:hover{border-color:#22c55e;color:#22c55e}
 .card-item.owned .coll-add{background:#22c55e;border-color:#22c55e;color:#fff;opacity:1}
+.flip-tile{position:absolute;bottom:4px;left:4px;background:rgba(0,0,0,0.6);color:#fff;border:none;border-radius:4px;padding:2px 6px;font-size:11px;cursor:pointer;opacity:0;transition:opacity .15s}
+.card-item:hover .flip-tile{opacity:1}
 .coll-filter{margin-left:10px}
 .coll-filter-btn{background:#fff;border:1px solid #ddd;padding:5px 10px;border-radius:5px;font-size:.75em;cursor:pointer}
 .save-cloud-btn{background:#4285f4;color:#fff;border:none;padding:5px 10px;border-radius:5px;font-size:.75em;cursor:pointer;margin-left:5px}
@@ -529,13 +531,14 @@ function renderCards() {
   noResults.style.display = 'none';
   
   const proxyImg = url => url?.startsWith('https://en.onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
-  const getImg = c => c.game === 'onepiece' ? proxyImg(c.img) || 'onepiece/images/card-back.png' : c.image + '/low.webp';
-  const getImgHigh = c => c.game === 'onepiece' ? proxyImg(c.img) || 'onepiece/images/card-back.png' : c.image + '/high.webp';
+  const getImg = c => c.imgJp || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || 'onepiece/images/card-back.png';
+  const getImgHigh = c => c.imgJp || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/high.webp') || 'onepiece/images/card-back.png';
   const imgErr = "this.style.opacity='0.3';this.style.background='#ddd'";
   const jpName = c => c.nameJp ? `<span style="color:#7c3aed;font-size:.8em"> ${c.nameJp}</span>` : '';
   const variant = c => c.variant ? `<span style="color:#888;font-size:.85em"> (${c.variant})</span>` : '';
   const owned = c => collectionStore.has(c.id) ? ' owned' : '';
   const collBtn = c => `<div class="coll-dot"></div><div class="coll-add" onclick="toggleCollection(event,'${c.id}')">+</div>`;
+  const flipBtn = c => c.imgEn ? `<button class="flip-tile" onclick="flipTile(event,this)" data-jp="${proxyImg(c.imgJp||c.img)}" data-en="${proxyImg(c.imgEn)}">EN</button>` : '';
   
   if (currentView === 'checklist') {
     grid.innerHTML = `<div class="card-item header">
@@ -566,7 +569,7 @@ function renderCards() {
   } else if (currentView === 'full') {
     grid.innerHTML = cards.map(c => `
       <div class="card-item${owned(c)}" onclick="showCard('${c.id}')">
-        ${collBtn(c)}
+        ${collBtn(c)}${flipBtn(c)}
         <img src="${getImgHigh(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <div class="info">
           <div class="name">${c.name}${jpName(c)}</div>
@@ -580,7 +583,7 @@ function renderCards() {
   } else {
     grid.innerHTML = cards.map(c => `
       <div class="card-item${owned(c)}" onclick="showCard('${c.id}')">
-        ${collBtn(c)}
+        ${collBtn(c)}${flipBtn(c)}
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>
         <div class="set">${c.id}${variant(c)}</div>
@@ -793,6 +796,14 @@ function flipCard() {
     img.src = proxyImg(currentCard.imgEn);
     btn.textContent = '🔄 JP';
   }
+}
+
+function flipTile(e, btn) {
+  e.stopPropagation();
+  const img = btn.parentElement.querySelector('img');
+  const isJp = btn.textContent === 'EN';
+  img.src = isJp ? btn.dataset.en : btn.dataset.jp;
+  btn.textContent = isJp ? 'JP' : 'EN';
 }
 
 function clearSearch() {
