@@ -452,9 +452,10 @@ function showCard(id) {
   // Game-specific extra info
   const extraLabel = document.getElementById('modal-extra-label');
   const extra = document.getElementById('modal-extra');
-  if (card.game === 'onepiece' && card.type) {
-    extraLabel.textContent = 'Type';
-    extra.textContent = [card.type, card.color, card.power ? `${card.power} PWR` : ''].filter(Boolean).join(' · ');
+  if (card.game === 'onepiece') {
+    extraLabel.textContent = 'Details';
+    const parts = [card.type, card.color, card.power ? `${card.power} PWR` : '', card.cost ? `Cost ${card.cost}` : '', card.counter ? `+${card.counter} Counter` : '', card.trait, card.attribute].filter(Boolean);
+    extra.textContent = parts.join(' · ');
     extraLabel.style.display = extra.style.display = '';
   } else if (card.hp) {
     extraLabel.textContent = 'HP';

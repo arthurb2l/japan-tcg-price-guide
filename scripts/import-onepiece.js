@@ -69,6 +69,8 @@ async function importCards() {
       power: card.Power !== '-' ? parseInt(card.Power) || null : null,
       counter: card.Counter !== '-' ? parseInt(card.Counter) || null : null,
       attribute: card.Attribute !== '-' ? card.Attribute : null,
+      block: card.Block !== '-' ? parseInt(card.Block) || null : null,
+      trait: card.Type !== '-' ? card.Type : null,
       effect: card.Effect,
       img: card.Img,
       images: card.Images || [card.Img],
