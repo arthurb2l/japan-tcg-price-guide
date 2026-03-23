@@ -196,6 +196,10 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
     </select>
   </div>
   <div class="filter-group">
+    <button id="bulkBtn" onclick="toggleBulkMode()" style="padding:6px 12px;border:1px solid #ddd;border-radius:4px;background:#fff;cursor:pointer;font-size:.85em">☑️ Select</button>
+    <button id="bulkAddBtn" onclick="bulkAdd()" style="display:none;padding:6px 12px;border:none;border-radius:4px;background:#10b981;color:#fff;cursor:pointer;font-size:.85em">Add Selected</button>
+  </div>
+  <div class="filter-group">
     <span class="filter-label">Finish:</span>
     <select class="filter" id="finish-filter" onchange="filterByFinish(this.value)">
       <option value="">All</option>
@@ -826,7 +830,7 @@ function renderCards() {
     `).join('');
   } else if (currentView === 'full') {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item${owned(c)}${isFoil(c)}" onclick="showCardFromTile(this,'${c.id}')">
+      <div class="card-item${owned(c)}${isFoil(c)}" onclick="if(!toggleCardSelect('${c.id}',this))showCardFromTile(this,'${c.id}')">
         ${collBtn(c)}${flipBtn(c)}
         <img src="${getImgHigh(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <div class="info">
@@ -840,7 +844,7 @@ function renderCards() {
     `).join('');
   } else {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item${owned(c)}${isFoil(c)}" onclick="showCardFromTile(this,'${c.id}')">
+      <div class="card-item${owned(c)}${isFoil(c)}" onclick="if(!toggleCardSelect('${c.id}',this))showCardFromTile(this,'${c.id}')">
         ${collBtn(c)}${flipBtn(c)}
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>
@@ -1261,6 +1265,44 @@ document.addEventListener('keydown', e => {
 
 loadCards();
 loadPriceHistory();
+// Bulk select mode
+let bulkMode = false;
+let selectedCards = new Set();
+
+function toggleBulkMode() {
+  bulkMode = !bulkMode;
+  selectedCards.clear();
+  document.getElementById("bulkBtn").style.background = bulkMode ? "#222" : "#fff";
+  document.getElementById("bulkBtn").style.color = bulkMode ? "#fff" : "#222";
+  document.getElementById("bulkAddBtn").style.display = bulkMode ? "inline-block" : "none";
+  document.querySelectorAll(".card-tile").forEach(t => t.classList.remove("selected"));
+  updateBulkCount();
+}
+
+function toggleCardSelect(id, tile) {
+  if (!bulkMode) return false;
+  if (selectedCards.has(id)) {
+    selectedCards.delete(id);
+    tile.classList.remove("selected");
+  } else {
+    selectedCards.add(id);
+    tile.classList.add("selected");
+  }
+  updateBulkCount();
+  return true;
+}
+
+function updateBulkCount() {
+  const btn = document.getElementById("bulkAddBtn");
+  btn.textContent = selectedCards.size ? `Add ${selectedCards.size} Cards` : "Add Selected";
+}
+
+function bulkAdd() {
+  if (!selectedCards.size) return;
+  selectedCards.forEach(id => collectionStore.add(id));
+  alert(`Added ${selectedCards.size} cards to collection!`);
+  toggleBulkMode();
+}
 collectionStore._updateCount(); // Initialize collection count
 
 // Price Alerts
