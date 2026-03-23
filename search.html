@@ -299,6 +299,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
         <dt id="modal-extra-label" style="display:none"></dt><dd id="modal-extra" style="display:none"></dd>
         <dt id="modal-effect-label" style="display:none">Effect</dt><dd id="modal-effect" style="display:none;white-space:pre-wrap;font-size:.85em;line-height:1.4"></dd>
         <dt>Price</dt><dd id="modal-price"></dd>
+        <dt>Links</dt><dd id="modal-links"></dd>
         <dt id="modal-jp-price-label" style="display:none">Japan Price</dt>
         <dd id="modal-jp-price" style="display:none"></dd>
         <dt id="modal-history-label" style="display:none">History</dt>
@@ -1129,6 +1130,16 @@ function showCard(id, isEn) {
     priceHtml += '</small>';
   }
   document.getElementById('modal-price').innerHTML = priceHtml;
+  // External links
+  const links = [];
+  if (card.game === 'pokemon') {
+    links.push('<a href="https://www.tcgplayer.com/search/pokemon/product?q=' + encodeURIComponent(card.name) + '" target="_blank" style="color:#1976d2">TCGPlayer</a>');
+    links.push('<a href="https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=' + encodeURIComponent(card.name) + '" target="_blank" style="color:#1976d2">Cardmarket</a>');
+  } else {
+    links.push('<a href="https://onepiece.gg/cards/' + card.id + '" target="_blank" style="color:#1976d2">onepiece.gg</a>');
+    links.push('<a href="https://www.tcgplayer.com/search/one-piece-card-game/product?q=' + encodeURIComponent(card.name) + '" target="_blank" style="color:#1976d2">TCGPlayer</a>');
+  }
+  document.getElementById('modal-links').innerHTML = links.join(' · ');
   
   // Japan price photo
   const jpLabel = document.getElementById('modal-jp-price-label');
