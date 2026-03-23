@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Recognition Test</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui; max-width: 500px; margin: 0 auto; padding: 15px; }
+    h1 { font-size: 1.3em; }
+    .card { background: #fff; border-radius: 10px; padding: 15px; margin-bottom: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .preview { width: 100%; max-height: 400px; object-fit: contain; border-radius: 8px; }
+    .capture-btn { width: 100%; padding: 30px; border: 2px dashed #ccc; border-radius: 10px; background: #fafafa; cursor: pointer; text-align: center; }
+    .capture-btn input { display: none; }
+    .result { padding: 15px; background: #f0fdf4; border-radius: 8px; margin-top: 15px; }
+    .result.error { background: #fef2f2; }
+    .result.loading { background: #eff6ff; }
+    .detected { font-size: 1.5em; font-weight: bold; color: #16a34a; }
+    .raw { font-size: .8em; color: #666; margin-top: 10px; white-space: pre-wrap; max-height: 150px; overflow-y: auto; }
+    .patterns { margin-top: 10px; font-size: .85em; }
+    .patterns span { background: #e0f2fe; padding: 2px 8px; border-radius: 4px; margin-right: 5px; }
+  </style>
+</head>
+<body>
+  <h1>🔍 Card Recognition Test</h1>
+  <p>Testing OCR to auto-detect card IDs from photos.</p>
+  
+  <div class="card">
+    <label class="capture-btn" id="capture-area">
+      <input type="file" accept="image/*" capture="environment" id="camera" onchange="handlePhoto(this)">
+      <div style="font-size:2em">📷</div>
+      <div>Take photo of a card</div>
+    </label>
+    <img id="preview" class="preview" style="display:none">
+  </div>
+  
+  <div id="result" class="result" style="display:none">
+    <div id="status">Processing...</div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script>
+    // Card ID patterns
+    const PATTERNS = [
+      /OP\d{2}-\d{3}/gi,      // One Piece: OP01-035
+      /ST\d{2}-\d{3}/gi,      // One Piece Starter: ST01-001
+      /EB\d{2}-\d{3}/gi,      // One Piece Extra Booster
+      /PRB-\d{2}-\d{3}/gi,    // One Piece Promo
+      /\d{3}\/\d{3}/g,        // Pokemon: 001/078
+      /[A-Z]{2,4}\d{1,3}/gi,  // Generic set codes
+    ];
+    
+    async function handlePhoto(input) {
+      const file = input.files[0];
+      if (!file) return;
+      
+      const preview = document.getElementById('preview');
+      const captureArea = document.getElementById('capture-area');
+      const result = document.getElementById('result');
+      const status = document.getElementById('status');
+      
+      // Show preview
+      preview.src = URL.createObjectURL(file);
+      preview.style.display = 'block';
+      captureArea.style.display = 'none';
+      
+      // Show loading
+      result.style.display = 'block';
+      result.className = 'result loading';
+      status.innerHTML = '⏳ Analyzing image... (first load may take 10-20s)';
+      
+      try {
+        const { data } = await Tesseract.recognize(file, 'eng', {
+          logger: m => {
+            if (m.status === 'recognizing text') {
+              status.innerHTML = `⏳ Recognizing... ${Math.round(m.progress * 100)}%`;
+            }
+          }
+        });
+        
+        const text = data.text;
+        
+        // Find card ID patterns
+        let matches = [];
+        PATTERNS.forEach(pattern => {
+          const found = text.match(pattern);
+          if (found) matches.push(...found);
+        });
+        
+        // Dedupe and clean
+        matches = [...new Set(matches.map(m => m.toUpperCase()))];
+        
+        if (matches.length > 0) {
+          result.className = 'result';
+          status.innerHTML = `
+            <div class="detected">Found: ${matches[0]}</div>
+            ${matches.length > 1 ? `<div class="patterns">Also found: ${matches.slice(1).map(m => `<span>${m}</span>`).join('')}</div>` : ''}
+            <div class="raw"><strong>Raw OCR:</strong>\n${text}</div>
+          `;
+        } else {
+          result.className = 'result error';
+          status.innerHTML = `
+            <div>❌ No card ID detected</div>
+            <div class="raw"><strong>Raw OCR:</strong>\n${text}</div>
+          `;
+        }
+        
+      } catch(e) {
+        result.className = 'result error';
+        status.innerHTML = `Error: ${e.message}`;
+      }
+    }
+  </script>
+</body>
+</html>
