@@ -90,12 +90,11 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 .card-grid.checklist .card-item .rarity{font-size:.8em;color:#888}
 .card-grid.checklist .card-item .finish{font-size:.75em;color:#666;width:80px}
 .card-grid.checklist .card-item .price{font-size:.85em;color:#2a7;font-weight:600;text-align:right}
-/* Foil badges */
-.foil-badge{position:absolute;bottom:4px;right:4px;padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;text-transform:uppercase;pointer-events:none}
-.foil-badge.regular{display:none}
-.foil-badge.parallel{background:linear-gradient(135deg,#a855f7,#6366f1);color:#fff}
-.foil-badge.alt-art{background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff}
-.card-grid.checklist .foil-badge{display:none}
+/* Foil card shimmer effect */
+.card-item.foil{position:relative;overflow:hidden}
+.card-item.foil::before{content:'';position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transform:skewX(-20deg);animation:shimmer 3s infinite;pointer-events:none;z-index:1}
+@keyframes shimmer{0%{left:-100%}50%,100%{left:150%}}
+.card-grid.checklist .card-item.foil::before{display:none}
 /* Text view */
 .card-grid.text{display:flex;flex-direction:column;gap:15px}
 .card-grid.text .card-item{text-align:left;padding:15px;display:block}
@@ -712,13 +711,7 @@ function renderCards() {
     return `<button class="flip-tile" onclick="flipTile(event,this)" data-jp="${proxyImg(c.imgJp||c.img)}" data-en="${proxyImg(c.imgEn)}">${showingEn ? 'JP' : 'EN'}</button>`;
   };
   
-  // Foil badge helper
-  const foilBadge = c => {
-    if (!c.finish || c.finish === 'regular') return '';
-    if (c.finish === 'alternate-art') return '<span class="foil-badge alt-art">AA</span>';
-    if (c.finish.startsWith('parallel')) return `<span class="foil-badge parallel">${c.finish.replace('parallel-','P')}</span>`;
-    return '';
-  };
+  const isFoil = c => c.finish && c.finish !== 'regular' ? ' foil' : '';
   const finishLabel = c => {
     if (!c.finish) return '?';
     if (c.finish === 'regular') return 'Regular';
@@ -757,8 +750,8 @@ function renderCards() {
     `).join('');
   } else if (currentView === 'full') {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item${owned(c)}" onclick="showCardFromTile(this,'${c.id}')">
-        ${collBtn(c)}${flipBtn(c)}${foilBadge(c)}
+      <div class="card-item${owned(c)}${isFoil(c)}" onclick="showCardFromTile(this,'${c.id}')">
+        ${collBtn(c)}${flipBtn(c)}
         <img src="${getImgHigh(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <div class="info">
           <div class="name">${c.name}${jpName(c)}</div>
@@ -771,8 +764,8 @@ function renderCards() {
     `).join('');
   } else {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item${owned(c)}" onclick="showCardFromTile(this,'${c.id}')">
-        ${collBtn(c)}${flipBtn(c)}${foilBadge(c)}
+      <div class="card-item${owned(c)}${isFoil(c)}" onclick="showCardFromTile(this,'${c.id}')">
+        ${collBtn(c)}${flipBtn(c)}
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>
         <div class="set">${c.id}${variant(c)}</div>
