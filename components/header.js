@@ -95,7 +95,9 @@
   // Login handler
   window.headerLogin = function() {
     // Check if google auth is available on page
-    if (typeof googleLogin === 'function') {
+    if (typeof signInWithGoogle === 'function') {
+      signInWithGoogle();
+    } else if (typeof googleLogin === 'function') {
       googleLogin();
     } else {
       // Redirect to collection which has auth
@@ -123,16 +125,24 @@
   
   // Logout handler
   window.headerLogout = function() {
-    if (typeof googleLogout === 'function') {
+    if (typeof auth !== 'undefined' && auth.signOut) {
+      auth.signOut();
+    } else if (typeof googleLogout === 'function') {
       googleLogout();
     }
     updateHeaderUser(null);
   };
   
-  // Check for existing user session
+  // Check for existing user session - integrate with Firebase auth
   setTimeout(() => {
     if (typeof currentUser !== 'undefined' && currentUser) {
       updateHeaderUser(currentUser);
+    } else if (typeof auth !== 'undefined' && auth.onAuthStateChanged) {
+      auth.onAuthStateChanged(user => {
+        if (user) {
+          updateHeaderUser({ picture: user.photoURL, name: user.displayName });
+        }
+      });
     }
   }, 100);
 })();
