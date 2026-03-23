@@ -51,3 +51,34 @@ body { background: var(--bg, #f5f5f5); color: var(--text, #222); }
   .card-tile img { width: 100%; }
   body { background: #fff; }
 }
+
+/* Dark mode card backgrounds */
+[data-theme="dark"] .card-tile,
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .alert-card,
+[data-theme="dark"] .goal-card,
+[data-theme="dark"] .trade-side,
+[data-theme="dark"] .version,
+[data-theme="dark"] .section,
+[data-theme="dark"] .set-card,
+[data-theme="dark"] .grade,
+[data-theme="dark"] .rarity,
+[data-theme="dark"] .whats-new,
+[data-theme="dark"] .recent-cards,
+[data-theme="dark"] #cotd {
+  background: var(--card);
+  color: var(--text);
+}
+
+[data-theme="dark"] .modal-content {
+  background: var(--card);
+  color: var(--text);
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background: var(--bg);
+  color: var(--text);
+  border-color: var(--border);
+}
