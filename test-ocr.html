@@ -54,6 +54,68 @@
       /\d{3}\/\d{3}/g,
       /[A-Z]{2,3}\d{2}[-—]\d{3}/gi,
     ];
+
+    // Load card database for fuzzy matching
+    let cardDB = [];
+    fetch('data/onepiece-cache.json')
+      .then(r => r.json())
+      .then(data => {
+        for (const [setId, cards] of Object.entries(data.sets || {})) {
+          cards.forEach(c => cardDB.push({ id: c.id, name: c.name, set: setId }));
+        }
+        console.log('Loaded', cardDB.length, 'cards for matching');
+      })
+      .catch(() => console.log('Card DB not available'));
+    
+    // Fuzzy match: handle common OCR errors (0/O, 1/I/L, 5/S, 8/B)
+    function fuzzyMatch(ocrText) {
+      if (!ocrText || cardDB.length === 0) return [];
+      
+      const normalize = s => s.toUpperCase()
+        .replace(/[—–]/g, '-')
+        .replace(/O/g, '0')  // O -> 0
+        .replace(/I|L/g, '1') // I,L -> 1
+        .replace(/S/g, '5')  // S -> 5
+        .replace(/B/g, '8'); // B -> 8
+      
+      const ocrNorm = normalize(ocrText);
+      const matches = [];
+      
+      for (const card of cardDB) {
+        const idNorm = normalize(card.id);
+        
+        // Exact normalized match
+        if (idNorm === ocrNorm) {
+          matches.push({ ...card, score: 100 });
+          continue;
+        }
+        
+        // Levenshtein distance for close matches
+        const dist = levenshtein(idNorm, ocrNorm);
+        if (dist <= 2) {
+          matches.push({ ...card, score: Math.max(0, 100 - dist * 25) });
+        }
+      }
+      
+      return matches.sort((a, b) => b.score - a.score).slice(0, 5);
+    }
+    
+    function levenshtein(a, b) {
+      if (a.length === 0) return b.length;
+      if (b.length === 0) return a.length;
+      const matrix = [];
+      for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+      for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+      for (let i = 1; i <= b.length; i++) {
+        for (let j = 1; j <= a.length; j++) {
+          matrix[i][j] = b[i-1] === a[j-1] 
+            ? matrix[i-1][j-1]
+            : Math.min(matrix[i-1][j-1]+1, matrix[i][j-1]+1, matrix[i-1][j]+1);
+        }
+      }
+      return matrix[b.length][a.length];
+    }
+
     
     async function handlePhoto(input) {
       const file = input.files[0];
@@ -136,9 +198,14 @@
         
         if (allMatches.length > 0) {
           result.className = 'result';
+          const fuzzyResults = fuzzyMatch(allMatches[0]);
+          const matchList = fuzzyResults.length > 0
+            ? fuzzyResults.map(m => `<div style="padding:5px;cursor:pointer" onclick="navigator.clipboard.writeText('${m.id}')">${m.score}% - <b>${m.id}</b> ${m.name || ''}</div>`).join('')
+            : '<div>No database match</div>';
           status.innerHTML = `
-            <div class="detected">✓ Found: ${allMatches[0]}</div>
-            ${allMatches.length > 1 ? `<div>Also: ${allMatches.slice(1).join(', ')}</div>` : ''}
+            <div class="detected">✓ OCR: ${allMatches[0]}</div>
+            <div style="margin-top:10px"><b>Matches:</b></div>
+            ${matchList}
             <div class="raw">${allRaw.join('\n')}</div>
           `;
         } else {
