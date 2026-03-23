@@ -240,6 +240,19 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
       <option value="6">6+</option>
     </select>
   </div>
+  <div class="filter-group op-filter" style="display:none">
+    <span class="filter-label">Power:</span>
+    <select class="filter" id="power-filter" onchange="applyFilters()">
+      <option value="">All</option>
+      <option value="1000">1000</option>
+      <option value="2000">2000</option>
+      <option value="3000">3000</option>
+      <option value="4000">4000</option>
+      <option value="5000">5000</option>
+      <option value="6000">6000</option>
+      <option value="7000">7000+</option>
+    </select>
+  </div>
   <div class="filter-group">
     <span class="filter-label">Lang:</span>
     <select class="filter" id="lang-filter" onchange="setGlobalLang(this.value)">
@@ -888,6 +901,7 @@ function applyFilters() {
   const color = document.getElementById('color-filter')?.value;
   const type = document.getElementById('type-filter')?.value;
   const cost = document.getElementById('cost-filter')?.value;
+  const power = document.getElementById('power-filter')?.value;
   
   let cards = getGameCards();
   
@@ -906,6 +920,10 @@ function applyFilters() {
   if (cost) {
     if (cost === '6') cards = cards.filter(c => c.cost >= 6);
     else cards = cards.filter(c => c.cost === parseInt(cost));
+  }
+  if (power) {
+    if (power === '7000') cards = cards.filter(c => c.power >= 7000);
+    else cards = cards.filter(c => c.power === parseInt(power));
   }
   
   filteredCards = cards;
@@ -970,6 +988,7 @@ function filterByGame(game) {
     document.getElementById('color-filter').value = '';
     document.getElementById('type-filter').value = '';
     document.getElementById('cost-filter').value = '';
+    document.getElementById('power-filter').value = '';
   }
   
   // Update set filter to only show sets from selected game
