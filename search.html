@@ -165,7 +165,8 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 
 <div class="search-header">
   <div class="search-row">
-    <input type="text" class="search-box" id="search" placeholder="Search cards by name, set, or ID...">
+    <input type="text" class="search-box" id="search" list="searchSuggestions" placeholder="Search cards by name, set, or ID...">
+    <datalist id="searchSuggestions"></datalist>
     <button class="search-btn" onclick="doSearch()">Search</button>
   </div>
 </div>
@@ -1276,6 +1277,9 @@ document.addEventListener('keydown', e => {
 });
 
 loadCards();
+// Populate search suggestions from history
+const hist = JSON.parse(localStorage.getItem("tcg_search_history") || "[]");
+document.getElementById("searchSuggestions").innerHTML = hist.map(h => `<option value="${h}">`).join("");
 // Favorites
 function toggleFavorite() {
   if (!currentModalCard) return;
