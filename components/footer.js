@@ -8,7 +8,8 @@ const footerLinks = {
   ],
   site: [
     { text: "Guides", href: "/japan-tcg-price-guide/guides/" },
-    { text: "Legal", href: "/japan-tcg-price-guide/legal.html" }
+    { text: "Legal", href: "/japan-tcg-price-guide/legal.html" },
+    { text: "Changelog", href: "/japan-tcg-price-guide/changelog.html" }
   ],
   more: [
     { text: "API Docs", href: "/japan-tcg-price-guide/api.html" },
