@@ -605,11 +605,17 @@ async function saveToCloud() {
 function formatPrice(card) {
   if (card.pricing) {
     // Simple USD format (One Piece, DON cards, etc.)
+    // Trend indicator
+    let trend = "";
+    if (card.pricing.eurTrend && card.pricing.eur) {
+      if (card.pricing.eurTrend > card.pricing.eur * 1.05) trend = " ↑";
+      else if (card.pricing.eurTrend < card.pricing.eur * 0.95) trend = " ↓";
+    }
     if (card.pricing.usd) {
-      if (currency === 'USD') return '$' + card.pricing.usd.toFixed(2);
+      if (currency === 'USD') return '$' + card.pricing.usd.toFixed(2) + trend;
       if (currency === 'EUR') return '€' + (card.pricing.eur || card.pricing.usd * 0.92).toFixed(2);
-      if (currency === 'JPY') return '¥' + Math.round(card.pricing.usd * 150).toLocaleString();
-      return '$' + card.pricing.usd.toFixed(2);
+      if (currency === 'JPY') return '¥' + Math.round(card.pricing.usd * 150).toLocaleString() + trend;
+      return '$' + card.pricing.usd.toFixed(2) + trend;
     }
     // TCGdex format (Pokemon)
     const tcg = card.pricing.tcgplayer;
