@@ -42,3 +42,12 @@ h1,h2,h3{margin:15px 0 10px}
   --bg: #f5f5f5; --card: #fff; --text: #222; --muted: #666; --border: #ddd;
 }
 body { background: var(--bg, #f5f5f5); color: var(--text, #222); }
+
+/* Print Styles */
+@media print {
+  header, footer, .filters, .search-bar, button { display: none !important; }
+  .card-grid { display: block !important; }
+  .card-tile { display: inline-block; width: 80px; margin: 5px; page-break-inside: avoid; }
+  .card-tile img { width: 100%; }
+  body { background: #fff; }
+}
