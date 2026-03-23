@@ -48,6 +48,11 @@ h1{text-align:center;color:#222;font-size:1.8em;margin-bottom:8px}
 footer{text-align:center;color:#999;font-size:.75em;margin-top:auto;padding-top:30px}
 </style>
 <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');</script>
+function randomCard() {
+  const games = ["pokemon", "onepiece"];
+  const game = games[Math.floor(Math.random() * 2)];
+  location.href = "search.html?game=" + game + "\&random=1";
+}
 </head>
 <body>
 <script src="components/header.js"></script>
@@ -93,6 +98,7 @@ footer{text-align:center;color:#999;font-size:.75em;margin-top:auto;padding-top:
 </div>
 
 <a href="test-ocr.html" class="scan-btn" title="Scan Card">📷</a>
+<button onclick="randomCard()" class="scan-btn" title="Random Card" style="background:#6366f1">🎲</button>
 
 <div class="install-prompt" id="install" onclick="installPWA()">
   📱 Install App for Offline Use
