@@ -155,10 +155,18 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
 .empty-state .btn:hover{background:#cc1010}
 
 /* Login prompt */
-.login-prompt{background:#fff;border-radius:10px;padding:40px;text-align:center;max-width:400px;margin:60px auto}
-.login-prompt h2{margin-bottom:15px}
-.login-prompt p{color:#666;margin-bottom:20px}
-.login-prompt .note{font-size:.85em;color:#999;margin-top:15px}
+/* Login prompt */
+.login-overlay{position:relative;min-height:400px}
+.login-bg{position:absolute;inset:0;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:16px;opacity:0.15}
+.login-prompt{position:relative;background:#fff;border-radius:16px;padding:50px 40px;text-align:center;max-width:420px;margin:40px auto;box-shadow:0 10px 40px rgba(0,0,0,0.1)}
+.login-prompt h2{font-size:1.5em;margin-bottom:10px}
+.login-prompt p{color:#666;margin-bottom:25px;line-height:1.5}
+.login-prompt .google-btn{background:#fff;border:2px solid #4285f4;color:#4285f4;padding:12px 24px;border-radius:25px;cursor:pointer;font-size:1em;font-weight:600;display:inline-flex;align-items:center;gap:10px;transition:all .2s}
+.login-prompt .google-btn:hover{background:#4285f4;color:#fff}
+.login-prompt .google-btn img{width:20px;height:20px}
+.login-prompt .features{display:flex;gap:20px;justify-content:center;margin-top:30px;flex-wrap:wrap}
+.login-prompt .feature{font-size:.85em;color:#666}
+.login-prompt .feature span{display:block;font-size:1.5em;margin-bottom:5px}
 
 /* Loading */
 .loading{text-align:center;padding:60px;color:#666}
@@ -546,6 +554,27 @@ function renderCollection() {
   
   if (!collectionIds.length) {
     const msg = emptyMessages[currentList];
+    // Show login prompt for non-logged users
+    if (!currentUser && currentList === "inventory") {
+      content.innerHTML = tabsHtml + `
+        <div class="login-overlay">
+          <div class="login-bg"></div>
+          <div class="login-prompt">
+            <h2>📦 Start Your Collection</h2>
+            <p>Sign in to track your cards across devices, see your collection value, and never lose your data.</p>
+            <button class="google-btn" onclick="signInWithGoogle()">
+              <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="">
+              Sign in with Google
+            </button>
+            <div class="features">
+              <div class="feature"><span>☁️</span>Cloud sync</div>
+              <div class="feature"><span>💰</span>Track value</div>
+              <div class="feature"><span>📱</span>Any device</div>
+            </div>
+          </div>
+        </div>`;
+      return;
+    }
     content.innerHTML = tabsHtml + `
       <div class="empty-state">
         <div class="icon">${msg.icon}</div>
@@ -553,10 +582,10 @@ function renderCollection() {
         <p>${msg.desc}</p>
         <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
           <a href="search.html" class="btn">🔍 Search Cards</a>
-          <a href="advanced.html" class="btn" style="background:#666">⚙️ Advanced Search</a>
         </div>
       </div>`;
     return;
+  }
   }
   
   // Get collection cards with full data
