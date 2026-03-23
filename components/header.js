@@ -1,53 +1,39 @@
 // Shared Header Component
 (function() {
-  // Detect current page context
   const path = window.location.pathname;
-  const isHome = path.endsWith('/') || path.endsWith('/index.html') || path.endsWith('/japan-tcg-price-guide/');
   const isPokemon = path.includes('/pokemon/');
   const isOnePiece = path.includes('/onepiece/');
   const isCollection = path.includes('collection');
-  const isSearch = path.includes('search.html');
   const isDonate = path.includes('donate');
-  
-  // Determine base path for links
-  const depth = (path.match(/\/pokemon\/|\/onepiece\//)) ? '../' : '';
   const base = '/japan-tcg-price-guide/';
   
-  // Get saved game preference, default based on current page
   const savedGame = localStorage.getItem('tcg_game');
   let searchGame = savedGame || (isPokemon ? 'pokemon' : (isOnePiece ? 'onepiece' : 'pokemon'));
   
-  // Create header HTML
   const headerHTML = `
     <header class="site-header">
       <div class="site-header-inner">
-        <button class="burger-btn" onclick="toggleMobileNav()">☰</button>
+        <button class="burger-btn" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
+        <a href="${base}" class="site-logo">🎴 TCG</a>
         
-        <a href="${base}" class="site-logo">🎴 JP TCG</a>
-        
-        <nav class="nav-links" id="navLinks">
+        <nav class="nav-links">
           <div class="nav-dropdown">
-            <a href="${base}pokemon/" class="nav-link ${isPokemon ? 'active' : ''}" onclick="toggleDropdown(event)">Pokémon</a>
+            <a href="${base}pokemon/" class="nav-link ${isPokemon ? 'active' : ''}">Pokémon</a>
             <div class="nav-dropdown-content">
               <a href="${base}search.html?game=pokemon">🔍 Search</a>
               <a href="${base}pokemon/sets/">Sets</a>
               <a href="${base}pokemon/cheat-sheet.html">Cheat Sheet</a>
-              <a href="${base}pokemon/price-guide.html">Price Guide</a>
             </div>
           </div>
-          
           <div class="nav-dropdown">
-            <a href="${base}onepiece/" class="nav-link ${isOnePiece ? 'active' : ''}" onclick="toggleDropdown(event)">One Piece</a>
+            <a href="${base}onepiece/" class="nav-link ${isOnePiece ? 'active' : ''}">One Piece</a>
             <div class="nav-dropdown-content">
               <a href="${base}search.html?game=onepiece">🔍 Search</a>
               <a href="${base}onepiece/sets/">Sets</a>
               <a href="${base}onepiece/cheat-sheet.html">Cheat Sheet</a>
-              <a href="${base}onepiece/price-guide.html">Price Guide</a>
             </div>
           </div>
-          
           <a href="${base}collection.html" class="nav-link ${isCollection ? 'active' : ''}">📦 Collection</a>
-          <a href="${base}donate.html" class="nav-link ${isDonate ? 'active' : ''}">❤️ Donate</a>
         </nav>
         
         <form class="header-search" onsubmit="headerSearch(event)">
@@ -55,7 +41,7 @@
             <option value="pokemon" ${searchGame === 'pokemon' ? 'selected' : ''}>Pokémon</option>
             <option value="onepiece" ${searchGame === 'onepiece' ? 'selected' : ''}>One Piece</option>
           </select>
-          <input type="text" id="headerSearchInput" placeholder="Search cards...">
+          <input type="text" id="headerSearchInput" placeholder="Search...">
           <button type="submit">🔍</button>
         </form>
         
@@ -64,9 +50,19 @@
         </div>
       </div>
     </header>
+    
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="${base}pokemon/">🟡 Pokémon</a>
+      <a href="${base}search.html?game=pokemon" class="sub">Search Cards</a>
+      <a href="${base}pokemon/sets/" class="sub">Browse Sets</a>
+      <a href="${base}onepiece/">🔴 One Piece</a>
+      <a href="${base}search.html?game=onepiece" class="sub">Search Cards</a>
+      <a href="${base}onepiece/sets/" class="sub">Browse Sets</a>
+      <a href="${base}collection.html">📦 My Collection</a>
+      <a href="${base}donate.html">❤️ Support</a>
+    </nav>
   `;
   
-  // Inject header at start of body
   document.body.insertAdjacentHTML('afterbegin', headerHTML);
   
   // Load CSS
@@ -80,47 +76,28 @@
     document.head.appendChild(link);
   }
   
-  // Mobile nav toggle
   window.toggleMobileNav = function() {
-    document.getElementById('navLinks').classList.toggle('open');
+    document.getElementById('mobileNav').classList.toggle('open');
   };
   
-  // Mobile dropdown toggle
-  window.toggleDropdown = function(e) {
-    e.preventDefault();
-    e.target.closest('.nav-dropdown').classList.toggle('open');
-  };
-  
-  // Save game preference on change
   window.saveGamePref = function(game) {
     localStorage.setItem('tcg_game', game);
   };
   
-  // Search handler
   window.headerSearch = function(e) {
     e.preventDefault();
     const q = document.getElementById('headerSearchInput').value.trim();
     const game = document.getElementById('headerGameSelect').value;
     localStorage.setItem('tcg_game', game);
-    if (q) {
-      window.location.href = `${base}search.html?q=${encodeURIComponent(q)}&game=${game}`;
-    }
+    if (q) window.location.href = `${base}search.html?q=${encodeURIComponent(q)}&game=${game}`;
   };
   
-  // Login handler
   window.headerLogin = function() {
-    // Check if google auth is available on page
-    if (typeof signInWithGoogle === 'function') {
-      signInWithGoogle();
-    } else if (typeof googleLogin === 'function') {
-      googleLogin();
-    } else {
-      // Redirect to collection which has auth
-      window.location.href = `${base}collection.html`;
-    }
+    if (typeof signInWithGoogle === 'function') signInWithGoogle();
+    else if (typeof googleLogin === 'function') googleLogin();
+    else window.location.href = `${base}collection.html`;
   };
   
-  // Update user state
   window.updateHeaderUser = function(user) {
     const container = document.getElementById('headerUser');
     if (user) {
@@ -138,26 +115,25 @@
     }
   };
   
-  // Logout handler
   window.headerLogout = function() {
-    if (typeof auth !== 'undefined' && auth.signOut) {
-      auth.signOut();
-    } else if (typeof googleLogout === 'function') {
-      googleLogout();
-    }
+    if (typeof auth !== 'undefined' && auth.signOut) auth.signOut();
+    else if (typeof googleLogout === 'function') googleLogout();
     updateHeaderUser(null);
   };
   
-  // Check for existing user session - integrate with Firebase auth
+  // Check auth state
   setTimeout(() => {
     if (typeof currentUser !== 'undefined' && currentUser) {
       updateHeaderUser(currentUser);
     } else if (typeof auth !== 'undefined' && auth.onAuthStateChanged) {
       auth.onAuthStateChanged(user => {
-        if (user) {
-          updateHeaderUser({ picture: user.photoURL, name: user.displayName });
-        }
+        if (user) updateHeaderUser({ picture: user.photoURL, name: user.displayName });
       });
     }
   }, 100);
+  
+  // Close mobile nav on link click
+  document.getElementById('mobileNav').addEventListener('click', e => {
+    if (e.target.tagName === 'A') document.getElementById('mobileNav').classList.remove('open');
+  });
 })();
