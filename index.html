@@ -40,6 +40,11 @@ h1{text-align:center;color:#222;font-size:1.8em;margin-bottom:8px}
 .whats-new li{padding:6px 0;border-bottom:1px solid #eee}
 .whats-new li:last-child{border:none}
 .whats-new strong{color:#222}
+.recent-cards{background:#fff;border-radius:12px;padding:20px 25px;max-width:500px;margin-bottom:20px}
+.recent-cards h3{font-size:1em;margin-bottom:12px}
+.recent-grid{display:flex;gap:8px;overflow-x:auto;padding-bottom:5px}
+.recent-grid a{flex-shrink:0}
+.recent-grid img{width:60px;height:84px;object-fit:cover;border-radius:4px}
 footer{text-align:center;color:#999;font-size:.75em;margin-top:auto;padding-top:30px}
 </style>
 <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');</script>
@@ -70,6 +75,11 @@ footer{text-align:center;color:#999;font-size:.75em;margin-top:auto;padding-top:
   <a href="guides/">📚 Guides</a>
   <a href="calendar/">📅 Release Calendar</a>
   <a href="donate.html">❤️ Support</a>
+</div>
+
+<div class="recent-cards" id="recentCards" style="display:none">
+  <h3>🕐 Recently Viewed</h3>
+  <div class="recent-grid" id="recentGrid"></div>
 </div>
 
 <div class="whats-new">
@@ -105,6 +115,15 @@ function installPWA() {
       deferredPrompt = null;
     });
   }
+}
+// Load recently viewed cards
+const recentIds = JSON.parse(localStorage.getItem("tcg_recent") || "[]").slice(0,6);
+if (recentIds.length) {
+  document.getElementById("recentCards").style.display = "block";
+  document.getElementById("recentGrid").innerHTML = recentIds.map(id => {
+    const game = id.match(/^[A-Z]{2,3}[0-9]/) ? "onepiece" : "pokemon";
+    return `<a href="search.html?game=${game}\&q=${encodeURIComponent(id)}"><div style="width:60px;height:84px;background:#eee;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.6em;color:#999">${id}</div></a>`;
+  }).join("");
 }
 </script>
 <footer id="site-footer"></footer>

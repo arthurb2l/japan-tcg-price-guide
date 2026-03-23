@@ -1045,6 +1045,11 @@ let currentCard = null;
 let showingJp = true;
 
 function showCard(id, isEn) {
+  // Track recently viewed
+  const recent = JSON.parse(localStorage.getItem("tcg_recent") || "[]");
+  const filtered = recent.filter(r => r !== id).slice(0, 19);
+  filtered.unshift(id);
+  localStorage.setItem("tcg_recent", JSON.stringify(filtered));
   const card = allCards.find(c => c.id === id);
   if (!card) return;
   currentCard = card;
