@@ -248,7 +248,7 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
 let allCards = [], collectionCards = [], currentUser = null, userCollection = {};
 let currentGame = '', currentSort = 'added', currentList = 'inventory';
 
-// List types: inventory (owned), wishlist (want), tradelist (for trade)
+// List types: inventory (all owned), wishlist/tradelist are filtered views
 const listTypes = ['inventory', 'wishlist', 'tradelist'];
 const listLabels = {inventory: '📦 Inventory', wishlist: '⭐ Wishlist', tradelist: '🔄 Tradelist'};
 
@@ -262,17 +262,20 @@ function signOut() {
   auth.signOut();
 }
 
-// Get local collection
-function getLocalCollection(list = 'inventory') {
-  return JSON.parse(localStorage.getItem(`tcg_${list}`) || '{}');
+// Get local collection - always from inventory, filter by list
+function getLocalCollection() {
+  return JSON.parse(localStorage.getItem('tcg_inventory') || '{}');
 }
 
-function getAllLocalLists() {
-  return {
-    inventory: getLocalCollection('inventory'),
-    wishlist: getLocalCollection('wishlist'),
-    tradelist: getLocalCollection('tradelist')
-  };
+// Get filtered view based on current list
+function getFilteredCollection() {
+  if (currentList === 'inventory') return userCollection;
+  // Filter cards that have the list flag set
+  const filtered = {};
+  for (const [id, card] of Object.entries(userCollection)) {
+    if (card.lists && card.lists[currentList]) filtered[id] = card;
+  }
+  return filtered;
 }
 
 // Auth state listener
@@ -282,7 +285,7 @@ auth.onAuthStateChanged(async user => {
     await loadUserCollection(user.uid);
   } else {
     currentUser = null;
-    userCollection = getLocalCollection(currentList);
+    userCollection = getLocalCollection();
   }
   authChecked = true;
   renderIfReady();
@@ -291,12 +294,13 @@ auth.onAuthStateChanged(async user => {
 async function loadUserCollection(uid) {
   try {
     userCollection = {};
-    const snapshot = await db.collection('users').doc(uid).collection(currentList).get();
+    // Always load from inventory collection
+    const snapshot = await db.collection('users').doc(uid).collection('inventory').get();
     snapshot.forEach(doc => { userCollection[doc.id] = doc.data(); });
     console.log(`Loaded ${Object.keys(userCollection).length} cards from Firestore`);
   } catch(e) {
     console.error('Firestore load error:', e);
-    userCollection = getLocalCollection(currentList); // Fallback to local
+    userCollection = getLocalCollection();
   }
 }
 
@@ -306,24 +310,15 @@ function switchList(list) {
   const url = new URL(window.location);
   url.searchParams.set('list', list);
   history.pushState({}, '', url);
-  
-  if (currentUser) {
-    loadUserCollection(currentUser.uid).then(renderCollection);
-  } else {
-    userCollection = getLocalCollection(list);
-    renderCollection();
-  }
+  renderCollection();
 }
 
 async function removeFromCollection(cardId) {
+  delete userCollection[cardId];
   if (currentUser) {
-    delete userCollection[cardId];
-    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(cardId).delete();
+    await db.collection('users').doc(currentUser.uid).collection('inventory').doc(cardId).delete();
   } else {
-    const local = getLocalCollection(currentList);
-    delete local[cardId];
-    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
-    userCollection = local;
+    localStorage.setItem('tcg_inventory', JSON.stringify(userCollection));
   }
   renderCollection();
 }
@@ -331,15 +326,12 @@ async function removeFromCollection(cardId) {
 async function updateQuantity(cardId, delta) {
   const current = userCollection[cardId]?.qty || 1;
   const newQty = Math.max(1, current + delta);
+  userCollection[cardId] = {...(userCollection[cardId] || {}), qty: newQty};
   
   if (currentUser) {
-    userCollection[cardId] = {...(userCollection[cardId] || {}), qty: newQty};
-    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(cardId).update({qty: newQty});
+    await db.collection('users').doc(currentUser.uid).collection('inventory').doc(cardId).update({qty: newQty});
   } else {
-    const local = getLocalCollection(currentList);
-    local[cardId] = {...(local[cardId] || {}), qty: newQty};
-    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
-    userCollection = local;
+    localStorage.setItem('tcg_inventory', JSON.stringify(userCollection));
   }
   renderCollection();
 }
@@ -352,15 +344,12 @@ async function cycleCondition(e, cardId) {
   const current = userCollection[cardId]?.condition || 'NM';
   const idx = conditions.indexOf(current);
   const next = conditions[(idx + 1) % conditions.length];
+  userCollection[cardId] = {...(userCollection[cardId] || {}), condition: next};
   
   if (currentUser) {
-    userCollection[cardId] = {...(userCollection[cardId] || {}), condition: next};
-    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(cardId).update({condition: next});
+    await db.collection('users').doc(currentUser.uid).collection('inventory').doc(cardId).update({condition: next});
   } else {
-    const local = getLocalCollection(currentList);
-    local[cardId] = {...(local[cardId] || {}), condition: next};
-    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
-    userCollection = local;
+    localStorage.setItem('tcg_inventory', JSON.stringify(userCollection));
   }
   renderCollection();
 }
@@ -416,47 +405,32 @@ async function modalUpdateQty(delta) {
   userCollection[modalCardId].qty = newQty;
   
   if (currentUser) {
-    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(modalCardId).update({qty: newQty});
+    await db.collection('users').doc(currentUser.uid).collection('inventory').doc(modalCardId).update({qty: newQty});
   } else {
-    const local = getLocalCollection(currentList);
-    local[modalCardId] = {...(local[modalCardId] || {}), qty: newQty};
-    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
+    localStorage.setItem('tcg_inventory', JSON.stringify(userCollection));
   }
 }
 
 async function modalUpdateField(field, value) {
   if (!modalCardId) return;
+  userCollection[modalCardId] = {...(userCollection[modalCardId] || {}), [field]: value};
   if (currentUser) {
-    userCollection[modalCardId] = {...(userCollection[modalCardId] || {}), [field]: value};
-    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(modalCardId).update({[field]: value});
+    await db.collection('users').doc(currentUser.uid).collection('inventory').doc(modalCardId).update({[field]: value});
   } else {
-    const local = getLocalCollection(currentList);
-    local[modalCardId] = {...(local[modalCardId] || {}), [field]: value};
-    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
-    userCollection = local;
+    localStorage.setItem('tcg_inventory', JSON.stringify(userCollection));
   }
 }
 
 async function modalToggleList(list, checked) {
   if (!modalCardId) return;
-  if (checked) {
-    // Add to list
-    if (currentUser) {
-      await db.collection('users').doc(currentUser.uid).collection(list).doc(modalCardId).set({owned: true, addedAt: Date.now()});
-    } else {
-      const local = getLocalCollection(list);
-      local[modalCardId] = {owned: true, addedAt: Date.now()};
-      localStorage.setItem(`tcg_${list}`, JSON.stringify(local));
-    }
+  if (!userCollection[modalCardId]) userCollection[modalCardId] = {};
+  if (!userCollection[modalCardId].lists) userCollection[modalCardId].lists = {};
+  userCollection[modalCardId].lists[list] = checked;
+  
+  if (currentUser) {
+    await db.collection('users').doc(currentUser.uid).collection('inventory').doc(modalCardId).update({lists: userCollection[modalCardId].lists});
   } else {
-    // Remove from list
-    if (currentUser) {
-      await db.collection('users').doc(currentUser.uid).collection(list).doc(modalCardId).delete();
-    } else {
-      const local = getLocalCollection(list);
-      delete local[modalCardId];
-      localStorage.setItem(`tcg_${list}`, JSON.stringify(local));
-    }
+    localStorage.setItem('tcg_inventory', JSON.stringify(userCollection));
   }
 }
 
@@ -479,11 +453,9 @@ async function inlineUpdateField(cardId, field, value) {
   userCollection[cardId][field] = value;
   
   if (currentUser) {
-    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(cardId).update({[field]: value});
+    await db.collection('users').doc(currentUser.uid).collection('inventory').doc(cardId).update({[field]: value});
   } else {
-    const local = getLocalCollection(currentList);
-    local[cardId] = {...(local[cardId] || {}), [field]: value};
-    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
+    localStorage.setItem('tcg_inventory', JSON.stringify(userCollection));
   }
 }
 
@@ -493,11 +465,9 @@ async function inlineToggleList(cardId, list) {
   userCollection[cardId].lists[list] = !userCollection[cardId].lists[list];
   
   if (currentUser) {
-    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(cardId).update({lists: userCollection[cardId].lists});
+    await db.collection('users').doc(currentUser.uid).collection('inventory').doc(cardId).update({lists: userCollection[cardId].lists});
   } else {
-    const local = getLocalCollection(currentList);
-    local[cardId] = {...(local[cardId] || {}), lists: userCollection[cardId].lists};
-    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
+    localStorage.setItem('tcg_inventory', JSON.stringify(userCollection));
   }
   renderCollection();
 }
@@ -541,27 +511,28 @@ function getPrice(c) {
 
 function renderCollection() {
   const content = document.getElementById('content');
-  const collectionIds = Object.keys(userCollection);
+  const filteredCollection = getFilteredCollection();
+  const collectionIds = Object.keys(filteredCollection);
   
-  // Get counts for tabs even when empty
+  // Get counts for tabs
   const getListCount = list => {
-    if (currentUser) return '';
-    return Object.keys(getLocalCollection(list)).length;
+    if (list === 'inventory') return Object.keys(userCollection).length;
+    return Object.values(userCollection).filter(c => c.lists && c.lists[list]).length;
   };
   
   const tabsHtml = `
     <div class="list-tabs">
       ${listTypes.map(list => `
         <button class="list-tab ${list} ${currentList === list ? 'active' : ''}" onclick="switchList('${list}')">
-          ${listLabels[list]}${!currentUser ? `<span class="count">(${getListCount(list)})</span>` : ''}
+          ${listLabels[list]}<span class="count">(${getListCount(list)})</span>
         </button>
       `).join('')}
     </div>`;
   
   const emptyMessages = {
     inventory: {icon: '📦', title: 'Your inventory is empty', desc: 'Search for cards to add them to your collection.'},
-    wishlist: {icon: '⭐', title: 'Your wishlist is empty', desc: 'Add cards you want to find at flea markets.'},
-    tradelist: {icon: '🔄', title: 'Your tradelist is empty', desc: 'Add cards you have available for trade.'}
+    wishlist: {icon: '⭐', title: 'Your wishlist is empty', desc: 'Click ⭐ on cards in your inventory to add them here.'},
+    tradelist: {icon: '🔄', title: 'Your tradelist is empty', desc: 'Click 🔄 on cards in your inventory to add them here.'}
   };
   
   if (!collectionIds.length) {
@@ -791,7 +762,7 @@ setTimeout(() => {
     console.log('Auth timeout, using local collection');
     authChecked = true;
     if (!currentUser) {
-      userCollection = getLocalCollection(currentList);
+      userCollection = getLocalCollection();
     }
     renderIfReady();
   }

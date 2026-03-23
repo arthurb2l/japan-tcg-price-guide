@@ -13,20 +13,21 @@
   const depth = (path.match(/\/pokemon\/|\/onepiece\//)) ? '../' : '';
   const base = '/japan-tcg-price-guide/';
   
-  // Default game for search
-  let searchGame = isPokemon ? 'pokemon' : (isOnePiece ? 'onepiece' : 'pokemon');
+  // Get saved game preference, default based on current page
+  const savedGame = localStorage.getItem('tcg_game');
+  let searchGame = savedGame || (isPokemon ? 'pokemon' : (isOnePiece ? 'onepiece' : 'pokemon'));
   
   // Create header HTML
   const headerHTML = `
     <header class="site-header">
       <div class="site-header-inner">
-        <a href="${base}" class="site-logo">🎴 JP TCG</a>
-        
         <button class="burger-btn" onclick="toggleMobileNav()">☰</button>
+        
+        <a href="${base}" class="site-logo">🎴 JP TCG</a>
         
         <nav class="nav-links" id="navLinks">
           <div class="nav-dropdown">
-            <a href="${base}pokemon/" class="nav-link ${isPokemon ? 'active' : ''}">Pokémon ▾</a>
+            <a href="${base}pokemon/" class="nav-link ${isPokemon ? 'active' : ''}" onclick="toggleDropdown(event)">Pokémon</a>
             <div class="nav-dropdown-content">
               <a href="${base}search.html?game=pokemon">🔍 Search</a>
               <a href="${base}pokemon/sets/">Sets</a>
@@ -36,7 +37,7 @@
           </div>
           
           <div class="nav-dropdown">
-            <a href="${base}onepiece/" class="nav-link ${isOnePiece ? 'active' : ''}">One Piece ▾</a>
+            <a href="${base}onepiece/" class="nav-link ${isOnePiece ? 'active' : ''}" onclick="toggleDropdown(event)">One Piece</a>
             <div class="nav-dropdown-content">
               <a href="${base}search.html?game=onepiece">🔍 Search</a>
               <a href="${base}onepiece/sets/">Sets</a>
@@ -50,7 +51,7 @@
         </nav>
         
         <form class="header-search" onsubmit="headerSearch(event)">
-          <select id="headerGameSelect" onchange="searchGame=this.value">
+          <select id="headerGameSelect" onchange="saveGamePref(this.value)">
             <option value="pokemon" ${searchGame === 'pokemon' ? 'selected' : ''}>Pokémon</option>
             <option value="onepiece" ${searchGame === 'onepiece' ? 'selected' : ''}>One Piece</option>
           </select>
@@ -84,11 +85,23 @@
     document.getElementById('navLinks').classList.toggle('open');
   };
   
+  // Mobile dropdown toggle
+  window.toggleDropdown = function(e) {
+    e.preventDefault();
+    e.target.closest('.nav-dropdown').classList.toggle('open');
+  };
+  
+  // Save game preference on change
+  window.saveGamePref = function(game) {
+    localStorage.setItem('tcg_game', game);
+  };
+  
   // Search handler
   window.headerSearch = function(e) {
     e.preventDefault();
     const q = document.getElementById('headerSearchInput').value.trim();
     const game = document.getElementById('headerGameSelect').value;
+    localStorage.setItem('tcg_game', game);
     if (q) {
       window.location.href = `${base}search.html?q=${encodeURIComponent(q)}&game=${game}`;
     }
