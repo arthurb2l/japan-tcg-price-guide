@@ -46,6 +46,7 @@
           <button type="submit">🔍</button>
         </form>
         
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
         <div class="header-user" id="headerUser">
           <button class="login-btn" onclick="headerLogin()">Sign In</button>
         </div>
@@ -138,4 +139,25 @@
   document.getElementById('mobileNav').addEventListener('click', e => {
     if (e.target.tagName === 'A') document.getElementById('mobileNav').classList.remove('open');
   });
+})();
+
+// Theme toggle
+window.toggleTheme = function() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('tcg-theme', next);
+  document.querySelector('.theme-toggle').textContent = next === 'dark' ? '☀️' : '🌙';
+};
+
+// Load saved theme
+(function() {
+  const saved = localStorage.getItem('tcg-theme');
+  if (saved) {
+    document.documentElement.setAttribute('data-theme', saved);
+    setTimeout(() => {
+      const btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+    }, 0);
+  }
 })();

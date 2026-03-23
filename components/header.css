@@ -139,6 +139,7 @@ body { padding-top: 56px; }
   white-space: nowrap;
 }
 .login-btn:hover { background: #444; }
+.theme-toggle { background: none; border: none; font-size: 1.2em; cursor: pointer; padding: 5px; }
 
 .user-avatar {
   width: 32px;
