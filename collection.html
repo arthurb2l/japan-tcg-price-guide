@@ -296,7 +296,8 @@ auth.onAuthStateChanged(async user => {
         Sign in to sync
       </button>`;
   }
-  renderCollection();
+  authChecked = true;
+  if (cardsLoaded) renderCollection();
 });
 
 async function loadUserCollection(uid) {
@@ -762,13 +763,15 @@ if (params.get('list') && listTypes.includes(params.get('list'))) {
   currentList = params.get('list');
 }
 
-// Load local collection immediately for non-logged-in users
-userCollection = getLocalCollection(currentList);
+let cardsLoaded = false;
+let authChecked = false;
 
 loadCards().then(() => {
-  // Render with whatever collection data we have (local or from auth)
-  renderCollection();
+  cardsLoaded = true;
+  if (authChecked) renderCollection();
 });
+
+// Auth will call renderCollection when ready
 </script>
 
 <footer id="site-footer"></footer>
