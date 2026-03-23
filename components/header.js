@@ -28,7 +28,8 @@
           <div class="nav-dropdown">
             <a href="${base}pokemon/" class="nav-link ${isPokemon ? 'active' : ''}">Pokémon ▾</a>
             <div class="nav-dropdown-content">
-              <a href="${base}pokemon/">Browse Sets</a>
+              <a href="${base}search.html?game=pokemon">🔍 Search</a>
+              <a href="${base}pokemon/sets/">Sets</a>
               <a href="${base}pokemon/cheat-sheet.html">Cheat Sheet</a>
               <a href="${base}pokemon/price-guide.html">Price Guide</a>
             </div>
@@ -37,7 +38,8 @@
           <div class="nav-dropdown">
             <a href="${base}onepiece/" class="nav-link ${isOnePiece ? 'active' : ''}">One Piece ▾</a>
             <div class="nav-dropdown-content">
-              <a href="${base}onepiece/">Browse Sets</a>
+              <a href="${base}search.html?game=onepiece">🔍 Search</a>
+              <a href="${base}onepiece/sets/">Sets</a>
               <a href="${base}onepiece/cheat-sheet.html">Cheat Sheet</a>
               <a href="${base}onepiece/price-guide.html">Price Guide</a>
             </div>
