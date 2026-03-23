@@ -3,37 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Card Recognition Test v2</title>
+  <title>Card Scanner</title>
   <style>
     * { box-sizing: border-box; }
-    body { font-family: system-ui; max-width: 500px; margin: 0 auto; padding: 15px; }
-    h1 { font-size: 1.3em; }
-    .card { background: #fff; border-radius: 10px; padding: 15px; margin-bottom: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-    .preview { width: 100%; max-height: 300px; object-fit: contain; border-radius: 8px; }
-    .capture-btn { width: 100%; padding: 30px; border: 2px dashed #ccc; border-radius: 10px; background: #fafafa; cursor: pointer; text-align: center; }
+    body { font-family: system-ui; max-width: 500px; margin: 0 auto; padding: 15px; background: #f5f5f5; }
+    h1 { font-size: 1.3em; text-align: center; }
+    .card { background: #fff; border-radius: 12px; padding: 15px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .tcg-select { display: flex; gap: 10px; margin-bottom: 15px; }
+    .tcg-btn { flex: 1; padding: 12px; border: 2px solid #ddd; border-radius: 8px; background: #fff; cursor: pointer; text-align: center; font-size: 1em; }
+    .tcg-btn.active { border-color: #3b82f6; background: #eff6ff; }
+    .preview { width: 100%; max-height: 250px; object-fit: contain; border-radius: 8px; }
+    .capture-btn { width: 100%; padding: 40px 20px; border: 2px dashed #ccc; border-radius: 12px; background: #fafafa; cursor: pointer; text-align: center; }
     .capture-btn input { display: none; }
+    .frame-hint { background: #fef3c7; padding: 10px; border-radius: 8px; margin-bottom: 15px; font-size: .85em; text-align: center; }
+    .frame-img { width: 100%; max-width: 200px; margin: 10px auto; display: block; border: 2px solid #f59e0b; border-radius: 8px; }
     .result { padding: 15px; background: #f0fdf4; border-radius: 8px; margin-top: 15px; }
     .result.error { background: #fef2f2; }
     .result.loading { background: #eff6ff; }
-    .detected { font-size: 1.5em; font-weight: bold; color: #16a34a; }
-    .raw { font-size: .8em; color: #666; margin-top: 10px; white-space: pre-wrap; max-height: 100px; overflow-y: auto; background: #f5f5f5; padding: 8px; border-radius: 4px; }
-    .crops { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+    .detected { font-size: 1.2em; font-weight: bold; color: #16a34a; }
+    .match-item { padding: 10px; margin: 5px 0; background: #f9fafb; border-radius: 6px; cursor: pointer; border: 1px solid #e5e7eb; }
+    .match-item:hover { background: #f3f4f6; }
+    .match-item b { color: #1d4ed8; }
+    .raw { font-size: .75em; color: #666; margin-top: 10px; white-space: pre-wrap; max-height: 80px; overflow-y: auto; background: #f5f5f5; padding: 8px; border-radius: 4px; }
+    .crops { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
     .crops canvas { border: 1px solid #ddd; border-radius: 4px; }
-    .tip { background: #fef3c7; padding: 10px; border-radius: 8px; margin-bottom: 15px; font-size: .9em; }
+    .back-link { display: block; text-align: center; margin-top: 15px; color: #666; }
   </style>
 </head>
 <body>
-  <h1>🔍 Card Recognition Test v2</h1>
-  
-  <div class="tip">
-    💡 <strong>Tip:</strong> Point camera at the BOTTOM of the card where the ID is printed (e.g., OP01-035)
-  </div>
+  <h1>🔍 Card Scanner</h1>
   
   <div class="card">
+    <div class="tcg-select">
+      <button class="tcg-btn active" onclick="selectTCG('onepiece', this)">🏴‍☠️ One Piece</button>
+      <button class="tcg-btn" onclick="selectTCG('pokemon', this)">⚡ Pokemon</button>
+    </div>
+    
+    <div class="frame-hint">
+      📸 Point camera at the <b>bottom corner</b> where the card ID is printed
+      <img class="frame-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 140'%3E%3Crect fill='%23f3f4f6' width='200' height='140' rx='8'/%3E%3Crect fill='%23fff' x='10' y='10' width='180' height='120' rx='4' stroke='%23ddd'/%3E%3Crect fill='%23fef3c7' x='10' y='95' width='80' height='35' rx='2' stroke='%23f59e0b' stroke-width='2' stroke-dasharray='4'/%3E%3Ctext x='50' y='117' text-anchor='middle' font-size='10' fill='%23b45309'%3EID HERE%3C/text%3E%3C/svg%3E" alt="Align card ID">
+    </div>
+    
     <label class="capture-btn" id="capture-area">
       <input type="file" accept="image/*" capture="environment" id="camera" onchange="handlePhoto(this)">
-      <div style="font-size:2em">📷</div>
-      <div>Photo the card ID area</div>
+      <div style="font-size:2.5em">📷</div>
+      <div>Tap to scan card</div>
     </label>
     <img id="preview" class="preview" style="display:none">
     <div class="crops" id="crops"></div>
@@ -43,10 +57,15 @@
     <div id="status">Processing...</div>
   </div>
   
+  <a href="index.html" class="back-link">← Back to Price Guide</a>
+  
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
   <script>
+    let currentTCG = 'onepiece';
+    let cardDB = [];
+    
     const PATTERNS = [
-      /OP\d{2}[-—]\d{3}/gi,
+      /[O0]P\d{2}[-—]\d{3}/gi,
       /ST\d{2}[-—]\d{3}/gi,
       /EB\d{2}[-—]\d{3}/gi,
       /PRB[-—]?\d{2}[-—]\d{3}/gi,
@@ -54,68 +73,58 @@
       /\d{3}\/\d{3}/g,
       /[A-Z]{2,3}\d{2}[-—]\d{3}/gi,
     ];
-
-    // Load card database for fuzzy matching
-    let cardDB = [];
-    fetch('data/onepiece-cache.json')
-      .then(r => r.json())
-      .then(data => {
-        for (const [setId, cards] of Object.entries(data.sets || {})) {
-          cards.forEach(c => cardDB.push({ id: c.id, name: c.name, set: setId }));
-        }
-        console.log('Loaded', cardDB.length, 'cards for matching');
-      })
-      .catch(() => console.log('Card DB not available'));
     
-    // Fuzzy match: handle common OCR errors (0/O, 1/I/L, 5/S, 8/B)
-    function fuzzyMatch(ocrText) {
-      if (!ocrText || cardDB.length === 0) return [];
-      
-      const normalize = s => s.toUpperCase()
-        .replace(/[—–]/g, '-')
-        .replace(/O/g, '0')  // O -> 0
-        .replace(/I|L/g, '1') // I,L -> 1
-        .replace(/S/g, '5')  // S -> 5
-        .replace(/B/g, '8'); // B -> 8
-      
-      const ocrNorm = normalize(ocrText);
-      const matches = [];
-      
-      for (const card of cardDB) {
-        const idNorm = normalize(card.id);
-        
-        // Exact normalized match
-        if (idNorm === ocrNorm) {
-          matches.push({ ...card, score: 100 });
-          continue;
-        }
-        
-        // Levenshtein distance for close matches
-        const dist = levenshtein(idNorm, ocrNorm);
-        if (dist <= 2) {
-          matches.push({ ...card, score: Math.max(0, 100 - dist * 25) });
-        }
-      }
-      
-      return matches.sort((a, b) => b.score - a.score).slice(0, 5);
+    // Load card databases
+    function loadDB() {
+      const file = currentTCG === 'onepiece' ? 'data/onepiece-cache.json' : 'data/pokemon-cache.json';
+      fetch(file)
+        .then(r => r.json())
+        .then(data => {
+          cardDB = [];
+          for (const cards of Object.values(data.sets || {})) {
+            cards.forEach(c => cardDB.push({ id: c.id, name: c.name }));
+          }
+          console.log('Loaded', cardDB.length, currentTCG, 'cards');
+        })
+        .catch(() => console.log('DB not available'));
+    }
+    loadDB();
+    
+    function selectTCG(tcg, btn) {
+      currentTCG = tcg;
+      document.querySelectorAll('.tcg-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      loadDB();
+    }
+    
+    function normalize(s) {
+      return s.toUpperCase().replace(/[—–]/g, '-').replace(/O/g, '0').replace(/[IL]/g, '1').replace(/S/g, '5').replace(/B/g, '8');
     }
     
     function levenshtein(a, b) {
-      if (a.length === 0) return b.length;
-      if (b.length === 0) return a.length;
-      const matrix = [];
-      for (let i = 0; i <= b.length; i++) matrix[i] = [i];
-      for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
-      for (let i = 1; i <= b.length; i++) {
-        for (let j = 1; j <= a.length; j++) {
-          matrix[i][j] = b[i-1] === a[j-1] 
-            ? matrix[i-1][j-1]
-            : Math.min(matrix[i-1][j-1]+1, matrix[i][j-1]+1, matrix[i-1][j]+1);
-        }
-      }
-      return matrix[b.length][a.length];
+      if (!a.length) return b.length;
+      if (!b.length) return a.length;
+      const m = [];
+      for (let i = 0; i <= b.length; i++) m[i] = [i];
+      for (let j = 0; j <= a.length; j++) m[0][j] = j;
+      for (let i = 1; i <= b.length; i++)
+        for (let j = 1; j <= a.length; j++)
+          m[i][j] = b[i-1] === a[j-1] ? m[i-1][j-1] : Math.min(m[i-1][j-1], m[i][j-1], m[i-1][j]) + 1;
+      return m[b.length][a.length];
     }
-
+    
+    function fuzzyMatch(text) {
+      if (!text || !cardDB.length) return [];
+      const norm = normalize(text);
+      const matches = [];
+      for (const card of cardDB) {
+        const idNorm = normalize(card.id);
+        if (idNorm === norm) { matches.push({ ...card, score: 100 }); continue; }
+        const dist = levenshtein(idNorm, norm);
+        if (dist <= 2) matches.push({ ...card, score: Math.max(0, 100 - dist * 30) });
+      }
+      return matches.sort((a, b) => b.score - a.score).slice(0, 5);
+    }
     
     async function handlePhoto(input) {
       const file = input.files[0];
@@ -134,89 +143,63 @@
       
       result.style.display = 'block';
       result.className = 'result loading';
-      status.innerHTML = '⏳ Processing...';
+      status.innerHTML = '⏳ Scanning...';
       
       const img = new Image();
       img.onload = async () => {
-        // Create crops of likely card ID locations
         const crops = [
-          { name: 'Bottom-Left', x: 0, y: 0.75, w: 0.4, h: 0.25 },
-          { name: 'Bottom-Right', x: 0.6, y: 0.75, w: 0.4, h: 0.25 },
-          { name: 'Bottom-Full', x: 0, y: 0.8, w: 1, h: 0.2 },
-          { name: 'Full', x: 0, y: 0, w: 1, h: 1 },
+          { name: 'BL', x: 0, y: 0.75, w: 0.4, h: 0.25 },
+          { name: 'BR', x: 0.6, y: 0.75, w: 0.4, h: 0.25 },
+          { name: 'Bottom', x: 0, y: 0.8, w: 1, h: 0.2 },
         ];
         
-        let allMatches = [];
-        let allRaw = [];
+        let allMatches = [], allRaw = [];
         
         for (const crop of crops) {
           const canvas = document.createElement('canvas');
           const ctx = canvas.getContext('2d');
-          const sx = img.width * crop.x;
-          const sy = img.height * crop.y;
-          const sw = img.width * crop.w;
-          const sh = img.height * crop.h;
-          
-          // Scale up small crops for better OCR
+          const sx = img.width * crop.x, sy = img.height * crop.y;
+          const sw = img.width * crop.w, sh = img.height * crop.h;
           const scale = Math.max(1, 200 / sh);
           canvas.width = sw * scale;
           canvas.height = sh * scale;
-          
-          // Draw with high contrast
           ctx.filter = 'contrast(1.5) grayscale(1)';
           ctx.drawImage(img, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height);
           
-          // Show crop
           const thumb = document.createElement('canvas');
-          thumb.width = 80;
-          thumb.height = 60;
-          thumb.getContext('2d').drawImage(canvas, 0, 0, 80, 60);
-          thumb.title = crop.name;
+          thumb.width = 60; thumb.height = 45;
+          thumb.getContext('2d').drawImage(canvas, 0, 0, 60, 45);
           cropsDiv.appendChild(thumb);
-          
-          status.innerHTML = `⏳ Scanning ${crop.name}...`;
           
           try {
             const { data } = await Tesseract.recognize(canvas, 'eng', {
               tessedit_char_whitelist: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-/',
             });
-            
-            const text = data.text;
-            allRaw.push(`[${crop.name}]: ${text.trim() || '(empty)'}`);
-            
-            PATTERNS.forEach(pattern => {
-              const found = text.match(pattern);
-              if (found) allMatches.push(...found);
-            });
-          } catch(e) {
-            allRaw.push(`[${crop.name}]: Error`);
-          }
+            allRaw.push(`[${crop.name}]: ${data.text.trim() || '-'}`);
+            PATTERNS.forEach(p => { const f = data.text.match(p); if (f) allMatches.push(...f); });
+          } catch(e) { allRaw.push(`[${crop.name}]: err`); }
         }
         
-        // Dedupe
         allMatches = [...new Set(allMatches.map(m => m.toUpperCase().replace('—','-')))];
         
         if (allMatches.length > 0) {
           result.className = 'result';
-          const fuzzyResults = fuzzyMatch(allMatches[0]);
-          const matchList = fuzzyResults.length > 0
-            ? fuzzyResults.map(m => `<div style="padding:5px;cursor:pointer" onclick="navigator.clipboard.writeText('${m.id}')">${m.score}% - <b>${m.id}</b> ${m.name || ''}</div>`).join('')
-            : '<div>No database match</div>';
-          status.innerHTML = `
-            <div class="detected">✓ OCR: ${allMatches[0]}</div>
-            <div style="margin-top:10px"><b>Matches:</b></div>
-            ${matchList}
-            <div class="raw">${allRaw.join('\n')}</div>
-          `;
+          const fuzzy = fuzzyMatch(allMatches[0]);
+          const list = fuzzy.length > 0
+            ? fuzzy.map(m => `<div class="match-item" onclick="copyId('${m.id}')">${m.score}% - <b>${m.id}</b> ${m.name || ''}</div>`).join('')
+            : '<div>No match in database</div>';
+          status.innerHTML = `<div class="detected">✓ OCR: ${allMatches[0]}</div><div style="margin-top:10px">${list}</div><div class="raw">${allRaw.join('\n')}</div>`;
         } else {
           result.className = 'result error';
-          status.innerHTML = `
-            <div>❌ No card ID detected</div>
-            <div class="raw">${allRaw.join('\n')}</div>
-          `;
+          status.innerHTML = `<div>❌ No card ID found</div><div class="raw">${allRaw.join('\n')}</div>`;
         }
       };
       img.src = URL.createObjectURL(file);
+    }
+    
+    function copyId(id) {
+      navigator.clipboard.writeText(id);
+      alert('Copied: ' + id);
     }
   </script>
 </body>
