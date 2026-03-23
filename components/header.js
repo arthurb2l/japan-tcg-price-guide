@@ -61,6 +61,7 @@
       <a href="${base}search.html?game=onepiece" class="sub">Search Cards</a>
       <a href="${base}onepiece/sets/" class="sub">Browse Sets</a>
       <a href="${base}deck-builder.html" class="sub">Deck Builder</a>
+      <a href="${base}trade.html" class="sub">Trade Calculator</a>
       <a href="${base}alerts.html" class="sub">Price Alerts</a>
       <a href="${base}favorites.html" class="sub">Favorites</a>
       <a href="${base}collection.html">📦 My Collection</a>
