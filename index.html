@@ -34,6 +34,12 @@ h1{text-align:center;color:#222;font-size:1.8em;margin-bottom:8px}
 .scan-btn:hover{transform:scale(1.1)}
 .install-prompt{display:none;background:#222;color:#fff;padding:12px 20px;border-radius:8px;margin-top:20px;font-size:.85em;cursor:pointer}
 .install-prompt:hover{background:#333}
+.whats-new{background:#fff;border-radius:12px;padding:20px 25px;max-width:400px;margin-bottom:30px;text-align:left}
+.whats-new h3{font-size:1em;margin-bottom:12px}
+.whats-new ul{list-style:none;font-size:.85em;color:#555}
+.whats-new li{padding:6px 0;border-bottom:1px solid #eee}
+.whats-new li:last-child{border:none}
+.whats-new strong{color:#222}
 footer{text-align:center;color:#999;font-size:.75em;margin-top:auto;padding-top:30px}
 </style>
 <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');</script>
@@ -48,13 +54,13 @@ footer{text-align:center;color:#999;font-size:.75em;margin-top:auto;padding-top:
   <a href="pokemon/" class="card pokemon">
     <div class="icon">⚡</div>
     <h2>Pokemon TCG</h2>
-    <p>22,700+ cards with prices</p>
+    <p>27,900+ cards · 67% priced</p>
   </a>
   
   <a href="onepiece/" class="card onepiece">
     <div class="icon">🏴‍☠️</div>
     <h2>One Piece TCG</h2>
-    <p>2,800+ cards with prices</p>
+    <p>2,270+ cards · 96% priced</p>
   </a>
 </div>
 
@@ -63,6 +69,16 @@ footer{text-align:center;color:#999;font-size:.75em;margin-top:auto;padding-top:
   <a href="guides/">📚 All Guides</a>
   <a href="calendar/">📅 Release Calendar</a>
   <a href="donate.html">❤️ Support</a>
+</div>
+
+<div class="whats-new">
+  <h3>🆕 What's New</h3>
+  <ul>
+    <li><strong>Deck Builder</strong> - Build & share One Piece decks</li>
+    <li><strong>Set Completion</strong> - Track your collection progress</li>
+    <li><strong>Price History</strong> - See price trends over time</li>
+    <li><strong>CSV Import</strong> - Migrate from other apps</li>
+  </ul>
 </div>
 
 <a href="test-ocr.html" class="scan-btn" title="Scan Card">📷</a>
