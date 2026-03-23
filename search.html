@@ -30,11 +30,8 @@ const db = firebase.firestore();
 // Otherwise this page still works as the full-featured search
 </script>
 <style>
-/* Nav */
-.nav{background:#fff;border-bottom:1px solid #ddd;padding:10px 15px;margin:-10px -10px 0;display:flex;align-items:center;gap:15px;flex-wrap:wrap}
-.nav a{color:#666;text-decoration:none;font-size:.9em}
-.nav a:hover{color:#EE1515}
-.nav .sep{color:#ddd}
+/* Nav - removed, using shared header */
+.page-controls{display:flex;align-items:center;gap:15px;padding:10px 15px;background:#fff;border-bottom:1px solid #eee;flex-wrap:wrap}
 /* Auth UI */
 .auth-btn{background:#fff;border:1px solid #ddd;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:.8em;display:flex;align-items:center;gap:6px}
 .auth-btn:hover{border-color:#4285f4;color:#4285f4}
@@ -153,27 +150,18 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 </head>
 <body>
 
-<div class="nav">
-  <a href="index.html">← Home</a>
-  <a href="advanced.html">Advanced</a>
-  <a href="collection.html">Collection</a>
+<script src="components/header.js"></script>
+
+<div class="page-controls">
   <div class="game-tabs">
     <button class="game-tab pokemon active" data-game="pokemon" onclick="filterByGame('pokemon')">Pokemon</button>
     <button class="game-tab onepiece" data-game="onepiece" onclick="filterByGame('onepiece')">One Piece</button>
   </div>
-  <span style="margin-left:auto;display:flex;align-items:center;gap:10px">
-    <select id="currency" onchange="setCurrency(this.value)" style="padding:4px 8px;border:1px solid #ddd;border-radius:4px;font-size:.8em">
-      <option value="JPY">¥ JPY</option>
-      <option value="USD">$ USD</option>
-      <option value="EUR">€ EUR</option>
-    </select>
-    <div id="auth-container">
-      <button class="auth-btn" onclick="signInWithGoogle()">
-        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="G">
-        Sign in
-      </button>
-    </div>
-  </span>
+  <select id="currency" onchange="setCurrency(this.value)" style="padding:4px 8px;border:1px solid #ddd;border-radius:4px;font-size:.8em">
+    <option value="JPY">¥ JPY</option>
+    <option value="USD">$ USD</option>
+    <option value="EUR">€ EUR</option>
+  </select>
 </div>
 
 <div class="search-header">
