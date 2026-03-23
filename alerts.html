@@ -8,12 +8,17 @@
   <style>
     .container{max-width:800px;margin:0 auto;padding:20px}
     h1{font-size:1.5em;margin-bottom:20px}
+    .triggered{background:#dcfce7;border:2px solid #10b981;margin-bottom:20px;border-radius:12px;padding:15px}
+    .triggered h2{font-size:1em;color:#166534;margin-bottom:10px}
     .alert-card{background:#fff;border-radius:10px;padding:15px;margin-bottom:10px;display:flex;align-items:center;gap:15px}
-    .alert-card img{width:60px;height:84px;object-fit:cover;border-radius:4px}
+    .alert-card.hit{background:#dcfce7}
     .alert-info{flex:1}
     .alert-name{font-weight:600;margin-bottom:5px}
     .alert-prices{font-size:.9em;color:#666}
     .alert-target{color:#2e7d32;font-weight:600}
+    .alert-current{font-weight:600}
+    .alert-current.below{color:#10b981}
+    .alert-current.above{color:#666}
     .alert-delete{background:none;border:none;font-size:1.2em;cursor:pointer;padding:5px}
     .empty{text-align:center;padding:40px;color:#666}
   </style>
@@ -22,30 +27,68 @@
 <header id="site-header"></header>
 <div class="container">
   <h1>🔔 My Price Alerts</h1>
+  <div id="triggered"></div>
   <div id="alertsList"></div>
 </div>
 <footer id="site-footer"></footer>
 <script src="/japan-tcg-price-guide/components/header.js"></script>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
 <script>
-const alerts = JSON.parse(localStorage.getItem("tcg_alerts") || "{}");
-const list = document.getElementById("alertsList");
+async function loadAlerts() {
+  const alerts = JSON.parse(localStorage.getItem("tcg_alerts") || "{}");
+  const list = document.getElementById("alertsList");
+  const triggered = document.getElementById("triggered");
+  
+  if (!Object.keys(alerts).length) {
+    list.innerHTML = '<div class="empty">No price alerts set.<br><br>Browse cards and click 🔔 to set alerts.</div>';
+    return;
+  }
+  
+  // Load current prices
+  const [pk, op] = await Promise.all([
+    fetch('/japan-tcg-price-guide/data/pokemon.json').then(r => r.json()),
+    fetch('/japan-tcg-price-guide/data/onepiece.json').then(r => r.json())
+  ]);
+  const cardMap = Object.fromEntries([...pk, ...op].map(c => [c.id, c]));
+  const getPrice = c => c?.pricing?.usd || c?.pricing?.tcgplayer?.normal?.marketPrice || 0;
+  
+  const triggeredAlerts = [];
+  const pendingAlerts = [];
+  
+  Object.entries(alerts).forEach(([id, a]) => {
+    const card = cardMap[id];
+    const current = getPrice(card);
+    const hit = current > 0 && current <= a.target;
+    (hit ? triggeredAlerts : pendingAlerts).push({ id, ...a, current, card });
+  });
+  
+  if (triggeredAlerts.length) {
+    triggered.innerHTML = `
+      <div class="triggered">
+        <h2>🎉 Price Dropped!</h2>
+        ${triggeredAlerts.map(a => renderAlert(a, true)).join('')}
+      </div>
+    `;
+  }
+  
+  list.innerHTML = pendingAlerts.length ? pendingAlerts.map(a => renderAlert(a, false)).join('') : 
+    '<div class="empty">All alerts are triggered above! 🎉</div>';
+}
 
-if (!Object.keys(alerts).length) {
-  list.innerHTML = '<div class="empty">No price alerts set.<br><br>Browse cards and click 🔔 to set alerts.</div>';
-} else {
-  list.innerHTML = Object.entries(alerts).map(([id, a]) => `
-    <div class="alert-card">
-      <a href="search.html?q=${encodeURIComponent(id)}"><div style="width:60px;height:84px;background:#eee;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.5em;color:#999">${id}</div></a>
+function renderAlert(a, hit) {
+  return `
+    <div class="alert-card ${hit ? 'hit' : ''}">
+      <a href="search.html?q=${encodeURIComponent(a.id)}"><div style="width:60px;height:84px;background:#eee;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.5em;color:#999">${a.id}</div></a>
       <div class="alert-info">
-        <div class="alert-name">${a.name}</div>
+        <div class="alert-name">${hit ? '✅ ' : ''}${a.name}</div>
         <div class="alert-prices">
-          Set at: $${a.setPrice?.toFixed(2) || '?'} → Target: <span class="alert-target">$${a.target?.toFixed(2)}</span>
+          Target: <span class="alert-target">$${a.target?.toFixed(2)}</span> · 
+          Current: <span class="alert-current ${a.current <= a.target ? 'below' : 'above'}">$${a.current?.toFixed(2) || '?'}</span>
         </div>
       </div>
-      <button class="alert-delete" onclick="deleteAlert('${id}')" title="Remove alert">🗑️</button>
+      <button class="alert-delete" onclick="deleteAlert('${a.id}')" title="Remove alert">🗑️</button>
     </div>
-  `).join("");
+  `;
 }
 
 function deleteAlert(id) {
@@ -54,6 +97,8 @@ function deleteAlert(id) {
   localStorage.setItem("tcg_alerts", JSON.stringify(alerts));
   location.reload();
 }
+
+loadAlerts();
 </script>
 </body>
 </html>
