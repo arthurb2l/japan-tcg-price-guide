@@ -318,6 +318,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
       <div class="modal-actions" style="display:flex;gap:10px;margin-top:15px;flex-wrap:wrap">
         <button id="favBtn" onclick="toggleFavorite()" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">🤍 Fav</button>
         <button onclick="copyCardInfo()" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">📋 Copy</button>
+        <button onclick="editNote()" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">📝 Note</button>
         <button onclick="setAlert()" class="alert-btn" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">🔔 Set Price Alert</button>
       </div>
     </div>
@@ -1291,6 +1292,21 @@ loadCards();
 const hist = JSON.parse(localStorage.getItem("tcg_search_history") || "[]");
 document.getElementById("searchSuggestions").innerHTML = hist.map(h => `<option value="${h}">`).join("");
 // Favorites
+// Card Notes
+function editNote() {
+  if (!currentModalCard) return;
+  const notes = JSON.parse(localStorage.getItem("tcg_notes") || "{}");
+  const current = notes[currentModalCard.id] || "";
+  const note = prompt("Note for " + currentModalCard.name + ":", current);
+  if (note === null) return;
+  if (note) {
+    notes[currentModalCard.id] = note;
+  } else {
+    delete notes[currentModalCard.id];
+  }
+  localStorage.setItem("tcg_notes", JSON.stringify(notes));
+}
+
 function toggleFavorite() {
   if (!currentModalCard) return;
   const favs = JSON.parse(localStorage.getItem("tcg_favorites") || "[]");
