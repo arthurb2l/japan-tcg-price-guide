@@ -277,24 +277,12 @@ function getAllLocalLists() {
 
 // Auth state listener
 auth.onAuthStateChanged(async user => {
-  const container = document.getElementById('auth-container');
   if (user) {
     currentUser = user;
-    container.innerHTML = `
-      <div class="user-info">
-        <img src="${user.photoURL || ''}" alt="" referrerpolicy="no-referrer">
-        <span>${user.displayName || user.email}</span>
-        <button class="signout-btn" onclick="signOut()">Sign out</button>
-      </div>`;
     await loadUserCollection(user.uid);
   } else {
     currentUser = null;
     userCollection = getLocalCollection(currentList);
-    container.innerHTML = `
-      <button class="auth-btn" onclick="signInWithGoogle()">
-        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="G">
-        Sign in to sync
-      </button>`;
   }
   authChecked = true;
   renderIfReady();
