@@ -101,16 +101,18 @@
   min-width: 80px;
 }
 .header-search button {
-  background: #222;
-  color: #fff;
+  background: transparent;
+  color: #888;
   border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 0.85em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.header-search button:hover { background: #444; }
+.header-search button:hover { color: #222; }
 
 /* User section */
 .header-user {
