@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Market Movers | Japan TCG Price Guide</title>
+<link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;padding:15px}
+h1{font-size:1.5em;margin-bottom:5px}
+.subtitle{color:#666;margin-bottom:20px}
+.tabs{display:flex;gap:10px;margin-bottom:20px}
+.tab{padding:10px 20px;border-radius:20px;cursor:pointer;border:2px solid #ddd;background:#fff}
+.tab.active{background:#222;color:#fff;border-color:#222}
+.section{margin-bottom:30px}
+.section h2{font-size:1.1em;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.section h2 .up{color:#22c55e}
+.section h2 .down{color:#ef4444}
+.card-list{display:flex;flex-direction:column;gap:8px}
+.mover{display:flex;align-items:center;background:#fff;padding:12px 15px;border-radius:8px;gap:15px;text-decoration:none;color:inherit}
+.mover:hover{box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.mover img{width:50px;height:70px;object-fit:cover;border-radius:4px}
+.mover-info{flex:1}
+.mover-name{font-weight:600;font-size:.9em}
+.mover-id{font-size:.8em;color:#666}
+.mover-change{font-weight:bold;font-size:1.1em}
+.mover-change.up{color:#22c55e}
+.mover-change.down{color:#ef4444}
+.mover-price{font-size:.85em;color:#666}
+.loading{text-align:center;padding:40px;color:#666}
+</style>
+</head>
+<body>
+<script src="/japan-tcg-price-guide/components/header.js"></script>
+
+<h1>📈 Market Movers</h1>
+<p class="subtitle">Cards with biggest price changes (updated daily)</p>
+
+<div class="tabs">
+  <div class="tab active" onclick="showGame('onepiece',this)">One Piece</div>
+  <div class="tab" onclick="showGame('pokemon',this)">Pokémon</div>
+</div>
+
+<div id="content"><div class="loading">Loading price data...</div></div>
+
+<script>
+const BASE = '/japan-tcg-price-guide';
+let priceData = null;
+let cardData = { onepiece: null, pokemon: null };
+
+async function loadData() {
+  try {
+    // Load price history index
+    const index = await fetch(`${BASE}/data/price-history/index.json`).then(r => r.json());
+    if (index.length < 2) {
+      document.getElementById('content').innerHTML = '<p style="text-align:center;color:#666;padding:40px">Need at least 2 days of data. Check back tomorrow!</p>';
+      return;
+    }
+    
+    // Load last 2 snapshots
+    const [older, newer] = await Promise.all([
+      fetch(`${BASE}/data/price-history/${index[index.length-2]}`).then(r => r.json()),
+      fetch(`${BASE}/data/price-history/${index[index.length-1]}`).then(r => r.json())
+    ]);
+    
+    priceData = { older, newer };
+    
+    // Load card data
+    cardData.onepiece = await fetch(`${BASE}/data/onepiece-cache.json`).then(r => r.json());
+    
+    showGame('onepiece');
+  } catch(e) {
+    document.getElementById('content').innerHTML = '<p style="text-align:center;color:#666;padding:40px">Price history not available yet.</p>';
+  }
+}
+
+function showGame(game, btn) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  else document.querySelector('.tab').classList.add('active');
+  
+  if (!priceData) return;
+  
+  const changes = [];
+  const data = game === 'onepiece' ? priceData.newer.onepiece : priceData.newer.pokemon;
+  const oldData = game === 'onepiece' ? priceData.older.onepiece : priceData.older.pokemon;
+  
+  for (const [id, info] of Object.entries(data || {})) {
+    const oldPrice = oldData?.[id]?.usd || oldData?.[id]?.eur;
+    const newPrice = info.usd || info.eur;
+    if (oldPrice && newPrice && oldPrice !== newPrice) {
+      const pctChange = ((newPrice - oldPrice) / oldPrice * 100);
+      changes.push({ id, name: info.name, oldPrice, newPrice, pctChange });
+    }
+  }
+  
+  const gainers = changes.filter(c => c.pctChange > 0).sort((a,b) => b.pctChange - a.pctChange).slice(0,10);
+  const losers = changes.filter(c => c.pctChange < 0).sort((a,b) => a.pctChange - b.pctChange).slice(0,10);
+  
+  const currency = game === 'onepiece' ? '$' : '€';
+  
+  const renderList = (items, isUp) => items.length ? items.map(c => `
+    <a href="${BASE}/search.html?game=${game}&q=${encodeURIComponent(c.id)}" class="mover">
+      <div class="mover-info">
+        <div class="mover-name">${c.name}</div>
+        <div class="mover-id">${c.id}</div>
+      </div>
+      <div>
+        <div class="mover-change ${isUp ? 'up' : 'down'}">${isUp ? '+' : ''}${c.pctChange.toFixed(1)}%</div>
+        <div class="mover-price">${currency}${c.oldPrice.toFixed(2)} → ${currency}${c.newPrice.toFixed(2)}</div>
+      </div>
+    </a>
+  `).join('') : '<p style="color:#666;padding:20px">No significant changes</p>';
+  
+  document.getElementById('content').innerHTML = `
+    <div class="section">
+      <h2><span class="up">📈</span> Top Gainers</h2>
+      <div class="card-list">${renderList(gainers, true)}</div>
+    </div>
+    <div class="section">
+      <h2><span class="down">📉</span> Top Losers</h2>
+      <div class="card-list">${renderList(losers, false)}</div>
+    </div>
+  `;
+}
+
+loadData();
+</script>
+<footer id="site-footer"></footer>
+<script src="/japan-tcg-price-guide/components/footer.js"></script>
+</body>
+</html>
