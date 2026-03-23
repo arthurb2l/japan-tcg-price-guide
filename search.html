@@ -520,6 +520,7 @@ auth.onAuthStateChanged(async user => {
   const collWrap = document.getElementById('coll-filter-wrap');
   if (user) {
     currentUser = user;
+    document.getElementById("fab").style.display = "block";
     container.innerHTML = `
       <div class="user-info">
         <img src="${user.photoURL || ''}" alt="" referrerpolicy="no-referrer">
@@ -1264,6 +1265,14 @@ function clearSearch() {
   renderCards();
   updateStats();
 }
+// Quick Add Mode - tap cards to add directly
+let quickAddActive = false;
+function quickAddMode() {
+  quickAddActive = !quickAddActive;
+  document.getElementById("fab").style.background = quickAddActive ? "#dc2626" : "#10b981";
+  document.getElementById("fab").textContent = quickAddActive ? "✓" : "➕";
+  document.getElementById("fab").title = quickAddActive ? "Exit Quick Add" : "Quick Add Mode";
+}
 
 // Events
 document.getElementById('search').addEventListener('input', doSearch);
@@ -1369,5 +1378,6 @@ function setAlert() {
 </script>
 <footer id="site-footer"></footer>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
+<button id="fab" onclick="quickAddMode()" style="display:none;position:fixed;bottom:20px;right:20px;width:56px;height:56px;border-radius:50%;background:#10b981;color:#fff;border:none;font-size:1.5em;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:999" title="Quick Add Mode">➕</button>
 </body>
 </html>
