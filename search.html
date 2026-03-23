@@ -335,6 +335,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 <script>
 let allCards = [], filteredCards = [], currentView = 'grid', currency = 'JPY', currentGame = 'pokemon';
 let collFilterActive = false;
+let currentModalCard = null; // Currently displayed card in modal
 let globalLang = ''; // '', 'jp', or 'en'
 let pricePhotos = {}; // Japan price photos
 const rarityOrder = ['Common','Uncommon','Rare','Double Rare','Ultra Rare','Illustration Rare','Special Art Rare','Hyper Rare','Shiny Rare','ACE SPEC Rare',
@@ -1375,7 +1376,6 @@ function bulkAdd() {
 collectionStore._updateCount(); // Initialize collection count
 
 // Price Alerts
-let currentModalCard = null;
 function copyCardInfo() {
   if (!currentModalCard) return;
   const c = currentModalCard;

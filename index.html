@@ -48,22 +48,29 @@ h1{text-align:center;color:#222;font-size:1.8em;margin-bottom:8px}
 footer{text-align:center;color:#999;font-size:.75em;margin-top:auto;padding-top:30px}
 </style>
 <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');</script>
+<script>
 function randomCard() {
-// Card of the Day - deterministic based on date
-(async function loadCotd() {
-  const today = new Date().toISOString().split("T")[0];
-  const seed = today.split("-").reduce((a,b) => a + parseInt(b), 0);
-  const games = ["pokemon", "onepiece"];
-  const game = games[seed % 2];
-  const res = await fetch("/japan-tcg-price-guide/data/" + game + ".json");
-  const cards = await res.json();
-  const card = cards[seed % cards.length];
-  document.getElementById("cotdCard").innerHTML = `<a href="search.html?game=${game}\&q=${encodeURIComponent(card.id)}"><img src="${card.images?.small || card.image}" style="width:100px;border-radius:6px"><div style="font-size:.8em;margin-top:8px;color:#333">${card.name}</div></a>`;
-})();
   const games = ["pokemon", "onepiece"];
   const game = games[Math.floor(Math.random() * 2)];
   location.href = "search.html?game=" + game + "\&random=1";
 }
+
+// Card of the Day - runs after DOM loaded
+document.addEventListener("DOMContentLoaded", async function() {
+  const cotdEl = document.getElementById("cotdCard");
+  if (!cotdEl) return;
+  const today = new Date().toISOString().split("T")[0];
+  const seed = today.split("-").reduce((a,b) => a + parseInt(b), 0);
+  const games = ["pokemon", "onepiece"];
+  const game = games[seed % 2];
+  try {
+    const res = await fetch("/japan-tcg-price-guide/data/" + game + ".json");
+    const cards = await res.json();
+    const card = cards[seed % cards.length];
+    cotdEl.innerHTML = `<a href="search.html?game=${game}\&q=${encodeURIComponent(card.id)}"><img src="${card.images?.small || card.image}" style="width:100px;border-radius:6px"><div style="font-size:.8em;margin-top:8px;color:#333">${card.name}</div></a>`;
+  } catch(e) { console.error("COTD error:", e); }
+});
+</script>
 </head>
 <body>
 <script src="components/header.js"></script>
@@ -139,6 +146,7 @@ function installPWA() {
   }
 }
 // Load recently viewed cards
+document.addEventListener("DOMContentLoaded", function() {
 const recentIds = JSON.parse(localStorage.getItem("tcg_recent") || "[]").slice(0,6);
 if (recentIds.length) {
   document.getElementById("recentCards").style.display = "block";
@@ -147,6 +155,7 @@ if (recentIds.length) {
     return `<a href="search.html?game=${game}\&q=${encodeURIComponent(id)}"><div style="width:60px;height:84px;background:#eee;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.6em;color:#999">${id}</div></a>`;
   }).join("");
 }
+});
 </script>
 <footer id="site-footer"></footer>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
