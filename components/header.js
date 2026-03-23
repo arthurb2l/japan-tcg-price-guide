@@ -30,6 +30,7 @@
             <div class="nav-dropdown-content">
               <a href="${base}search.html?game=onepiece">🔍 Search</a>
               <a href="${base}onepiece/sets/">Sets</a>
+              <a href="${base}deck-builder.html">🃏 Deck Builder</a>
               <a href="${base}onepiece/cheat-sheet.html">Cheat Sheet</a>
             </div>
           </div>
@@ -58,6 +59,7 @@
       <a href="${base}onepiece/">🔴 One Piece</a>
       <a href="${base}search.html?game=onepiece" class="sub">Search Cards</a>
       <a href="${base}onepiece/sets/" class="sub">Browse Sets</a>
+      <a href="${base}deck-builder.html" class="sub">Deck Builder</a>
       <a href="${base}collection.html">📦 My Collection</a>
       <a href="${base}donate.html">❤️ Support</a>
     </nav>
