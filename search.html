@@ -186,16 +186,6 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
     </select>
   </div>
   <div class="filter-group">
-    <span class="filter-label">Finish:</span>
-    <select class="filter" id="finish-filter" onchange="filterByFinish(this.value)">
-      <option value="">All</option>
-      <option value="regular">Regular Only</option>
-      <option value="parallel">Parallel Only</option>
-      <option value="alternate-art">Alt Art Only</option>
-      <option value="foil">All Foil (P+AA)</option>
-    </select>
-  </div>
-  <div class="filter-group">
     <span class="filter-label">Sort:</span>
     <select class="filter" id="sort" onchange="sortCards(this.value)">
       <option value="price-high">Price: High → Low</option>
@@ -206,7 +196,17 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
       <option value="rarity">Rarity</option>
     </select>
   </div>
-  <span class="coll-filter">
+  <div class="filter-group">
+    <span class="filter-label">Finish:</span>
+    <select class="filter" id="finish-filter" onchange="filterByFinish(this.value)">
+      <option value="">All</option>
+      <option value="regular">Regular Only</option>
+      <option value="parallel">Parallel Only</option>
+      <option value="alternate-art">Alt Art Only</option>
+      <option value="foil">All Foil (P+AA)</option>
+    </select>
+  </div>
+  <span class="coll-filter" id="coll-filter-wrap">
     <button class="coll-filter-btn" id="coll-filter" onclick="toggleCollFilter()">My Collection (<span id="coll-count">0</span>)</button>
     <button class="save-cloud-btn" id="save-cloud-btn" onclick="saveToCloud()" style="display:none">☁️ Save to Cloud</button>
   </span>
@@ -396,6 +396,7 @@ async function migrateLocalToCloud(uid) {
 // Auth state listener
 auth.onAuthStateChanged(async user => {
   const container = document.getElementById('auth-container');
+  const collWrap = document.getElementById('coll-filter-wrap');
   if (user) {
     currentUser = user;
     container.innerHTML = `
@@ -404,6 +405,8 @@ auth.onAuthStateChanged(async user => {
         <span>${user.displayName || user.email}</span>
         <button class="signout-btn" onclick="signOut()">Sign out</button>
       </div>`;
+    // Hide "My Collection" filter for logged-in users (they use Collection page)
+    collWrap.style.display = 'none';
     // Migrate local collection if exists
     const local = localStorage.getItem('tcg_collection');
     if (local && Object.keys(JSON.parse(local)).length > 0) {
