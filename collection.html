@@ -705,6 +705,7 @@ function renderCollection() {
         <button class="view-btn ${currentView === 'grid' ? 'active' : ''}" data-view="grid" onclick="toggleView('grid')">▦ Grid</button>
         <button class="view-btn ${currentView === 'list' ? 'active' : ''}" data-view="list" onclick="toggleView('list')">☰ List</button>
       </div>
+      <a href="backup.html" class="export-btn" style="text-decoration:none">💾 Backup</a>
       <a href="stats.html" class="export-btn" style="text-decoration:none">📊 Stats</a>
       <button class="export-btn" onclick="shareCollection()" style="background:#10b981">🔗 Share</button>
       <button class="export-btn" onclick="exportCollection()">📥 Export</button>
