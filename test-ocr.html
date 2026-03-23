@@ -204,3 +204,42 @@
   </script>
 </body>
 </html>
+<script>
+// Capture analytics - store for 24hr analysis
+function logCapture(imageData, ocrResult, matches) {
+  const captures = JSON.parse(localStorage.getItem('ocr_captures') || '[]');
+  // Remove entries older than 24hrs
+  const now = Date.now();
+  const recent = captures.filter(c => now - c.ts < 86400000);
+  recent.push({
+    ts: now,
+    tcg: currentTCG,
+    ocr: ocrResult,
+    matches: matches.slice(0, 3).map(m => m.id),
+    thumb: imageData // base64 thumbnail
+  });
+  localStorage.setItem('ocr_captures', JSON.stringify(recent.slice(-50))); // Keep max 50
+}
+
+// Patch handlePhoto to log captures
+const origHandlePhoto = handlePhoto;
+handlePhoto = async function(input) {
+  await origHandlePhoto(input);
+  // After processing, log the capture
+  setTimeout(() => {
+    const preview = document.getElementById('preview');
+    if (preview.src) {
+      const canvas = document.createElement('canvas');
+      canvas.width = 100; canvas.height = 75;
+      const img = new Image();
+      img.onload = () => {
+        canvas.getContext('2d').drawImage(img, 0, 0, 100, 75);
+        const status = document.getElementById('status').innerText;
+        const ocrMatch = status.match(/OCR: ([A-Z0-9-]+)/);
+        logCapture(canvas.toDataURL('image/jpeg', 0.5), ocrMatch?.[1] || 'none', cardDB.length ? fuzzyMatch(ocrMatch?.[1]) : []);
+      };
+      img.src = preview.src;
+    }
+  }, 500);
+};
+</script>
