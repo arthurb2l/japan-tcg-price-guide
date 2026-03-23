@@ -93,6 +93,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="deck-header">
       <h2>🏴‍☠️ Deck</h2>
       <span class="deck-count" id="deckCount">0/50</span>
+      <span class="deck-value" id="deckValue" style="font-size:.9em;color:#2e7d32;margin-left:10px"></span>
     </div>
     <div class="leader-slot empty" id="leaderSlot" onclick="document.getElementById('typeFilter').value='Leader';searchCards()">
       Click to select Leader
@@ -257,6 +258,14 @@ function renderDeck() {
     `<span style="background:${colorMap[c]||"#666"};color:#fff;padding:3px 8px;border-radius:4px;font-size:.8em">${c}: ${n}</span>`
   ).join("");
 
+  // Deck value
+  let value = 0;
+  if (deck.leader) value += deck.leader.pricing?.usd || 0;
+  for (const [id, qty] of cardEntries) {
+    const card = allCards.find(c => c.id === id);
+    value += (card?.pricing?.usd || 0) * qty;
+  }
+  document.getElementById("deckValue").textContent = value > 0 ? `$${value.toFixed(2)}` : "";
   // Auto-save
   localStorage.setItem('op_deck', JSON.stringify(deck));
 }
