@@ -110,6 +110,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="deck-actions">
       <button class="btn-save" onclick="saveDeck()">💾 Save</button>
       <button class="btn-share" onclick="shareDeck()">🔗 Share</button>
+      <button class="btn-share" onclick="importDeckText()" style="background:#f59e0b">📥 Import</button>
       <button class="btn-share" onclick="exportDeckText()" style="background:#6366f1">📋 Copy List</button>
       <button class="btn-clear" onclick="clearDeck()">🗑️ Clear</button>
     </div>
@@ -279,6 +280,27 @@ function clearDeck() {
 function saveDeck() {
   localStorage.setItem('op_deck', JSON.stringify(deck));
   alert('Deck saved!');
+}
+
+function importDeckText() {
+  const text = prompt("Paste deck list (format: 4x Card Name or Card ID per line):");
+  if (!text) return;
+  const lines = text.split("\n");
+  for (const line of lines) {
+    const match = line.match(/(\d+)x?\s*(.+?)\s*(?:\(([^)]+)\))?$/);
+    if (!match) continue;
+    const [, qty, name, id] = match;
+    const card = allCards.find(c => c.id === id || c.name?.toLowerCase() === name.toLowerCase().trim());
+    if (card) {
+      if (card.type === "Leader" || card.type === "LEADER") {
+        deck.leader = card;
+      } else {
+        deck.cards[card.id] = Math.min(4, parseInt(qty) || 1);
+      }
+    }
+  }
+  renderDeck();
+  alert("Deck imported!");
 }
 
 function exportDeckText() {
