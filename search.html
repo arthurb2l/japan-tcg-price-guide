@@ -862,6 +862,14 @@ function getGameCards() {
 }
 
 function doSearch() {
+  // Track search history
+  const q = document.getElementById("search").value.trim();
+  if (q.length > 2) {
+    const hist = JSON.parse(localStorage.getItem("tcg_search_history") || "[]");
+    const filtered = hist.filter(h => h !== q).slice(0, 9);
+    filtered.unshift(q);
+    localStorage.setItem("tcg_search_history", JSON.stringify(filtered));
+  }
   displayLimit = 60;
   const query = document.getElementById('search').value.toLowerCase().trim();
   if (!query) { filteredCards = getGameCards(); sortCards(document.getElementById('sort').value); updateURL(); return; }
