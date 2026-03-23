@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Most Valuable Cards - Japan TCG Price Guide</title>
+  <link rel="stylesheet" href="base.css">
+  <style>
+    .container{max-width:900px;margin:0 auto;padding:20px}
+    h1{font-size:1.5em;margin-bottom:5px}
+    .subtitle{color:#666;margin-bottom:25px}
+    .tabs{display:flex;gap:10px;margin-bottom:20px}
+    .tab{padding:10px 20px;border-radius:8px;background:#eee;cursor:pointer;font-weight:500}
+    .tab.active{background:#222;color:#fff}
+    .card-row{display:flex;align-items:center;gap:15px;background:#fff;border-radius:10px;padding:15px;margin-bottom:10px}
+    .rank{font-size:1.5em;font-weight:700;color:#666;width:40px;text-align:center}
+    .card-row img{width:60px;height:84px;object-fit:cover;border-radius:4px}
+    .card-info{flex:1}
+    .card-name{font-weight:600;margin-bottom:3px}
+    .card-set{font-size:.85em;color:#666}
+    .card-price{font-size:1.2em;font-weight:700;color:#2e7d32}
+  </style>
+</head>
+<body>
+<header id="site-header"></header>
+<div class="container">
+  <h1>💎 Most Valuable Cards</h1>
+  <p class="subtitle">Top 20 highest-priced cards in our database</p>
+  
+  <div class="tabs">
+    <div class="tab active" onclick="loadGame('pokemon')">Pokemon</div>
+    <div class="tab" onclick="loadGame('onepiece')">One Piece</div>
+  </div>
+  
+  <div id="cardList"></div>
+</div>
+<footer id="site-footer"></footer>
+<script src="/japan-tcg-price-guide/components/header.js"></script>
+<script src="/japan-tcg-price-guide/components/footer.js"></script>
+<script>
+let allCards = [];
+let currentGame = 'pokemon';
+
+async function loadGame(game) {
+  currentGame = game;
+  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', (i===0 && game==='pokemon') || (i===1 && game==='onepiece')));
+  
+  if (!allCards.length || allCards[0]?.game !== game) {
+    const res = await fetch(`/japan-tcg-price-guide/data/${game}.json`);
+    allCards = await res.json();
+  }
+  
+  const getPrice = c => c.pricing?.usd || c.pricing?.tcgplayer?.normal?.marketPrice || c.pricing?.tcgplayer?.holofoil?.marketPrice || c.pricing?.eur || 0;
+  const sorted = allCards.filter(c => getPrice(c) > 0).sort((a,b) => getPrice(b) - getPrice(a)).slice(0, 20);
+  
+  document.getElementById('cardList').innerHTML = sorted.map((c, i) => `
+    <a href="search.html?game=${game}&q=${encodeURIComponent(c.id)}" class="card-row" style="text-decoration:none;color:inherit">
+      <div class="rank">#${i+1}</div>
+      <img src="${c.images?.small || c.image}" alt="${c.name}">
+      <div class="card-info">
+        <div class="card-name">${c.name}</div>
+        <div class="card-set">${c.setId} · ${c.rarity || ''}</div>
+      </div>
+      <div class="card-price">$${getPrice(c).toFixed(2)}</div>
+    </a>
+  `).join('');
+}
+
+loadGame('pokemon');
+</script>
+</body>
+</html>
