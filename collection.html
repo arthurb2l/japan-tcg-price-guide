@@ -97,14 +97,26 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
 .card-list.active{display:block}
 .card-grid.hidden{display:none}
 .card-list table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
-.card-list th,.card-list td{padding:10px 12px;text-align:left;border-bottom:1px solid #eee}
-.card-list th{background:#f5f5f5;font-weight:600;font-size:.85em;cursor:pointer}
-.card-list th:hover{background:#eee}
+.card-list th,.card-list td{padding:6px 10px;text-align:left;border-bottom:1px solid #eee;font-size:.85em}
+.card-list th{background:#f5f5f5;font-weight:600;cursor:pointer;white-space:nowrap;user-select:none}
+.card-list th:hover{background:#e8e8e8}
+.card-list th.sorted{color:#EE1515}
+.card-list th .sort-icon{margin-left:4px;opacity:0.5}
+.card-list th.sorted .sort-icon{opacity:1}
+.card-list tr{cursor:pointer}
 .card-list tr:hover{background:#f9f9f9}
-.card-list img{width:40px;border-radius:3px}
-.card-list .actions{display:flex;gap:5px}
-.card-list .actions button{background:#fff;border:1px solid #ddd;padding:4px 8px;border-radius:4px;cursor:pointer;font-size:.75em}
-.card-list .actions button:hover{border-color:#888}
+.card-list img{width:32px;height:45px;object-fit:cover;border-radius:2px}
+.card-list .qty-cell{display:flex;align-items:center;gap:4px}
+.card-list .qty-btn{width:22px;height:22px;border:1px solid #ddd;background:#fff;border-radius:4px;cursor:pointer;font-size:.8em;line-height:1}
+.card-list .qty-btn:hover{background:#f0f0f0;border-color:#999}
+.card-list .qty-val{min-width:20px;text-align:center;font-weight:600}
+.card-list .cond-select,.card-list .lang-select{padding:3px 6px;border:1px solid #ddd;border-radius:4px;font-size:.8em;background:#fff;cursor:pointer}
+.card-list .list-icons{display:flex;gap:4px}
+.card-list .list-icon{width:24px;height:24px;border:1px solid #ddd;border-radius:4px;cursor:pointer;font-size:.7em;display:flex;align-items:center;justify-content:center;background:#fff}
+.card-list .list-icon:hover{background:#f0f0f0}
+.card-list .list-icon.active{background:#e8f5e9;border-color:#22c55e}
+.card-list .delete-btn{background:none;border:none;cursor:pointer;color:#999;font-size:1em;padding:4px}
+.card-list .delete-btn:hover{color:#ef4444}
 
 /* Card modal */
 .card-modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px}
@@ -150,6 +162,24 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
 
 /* Loading */
 .loading{text-align:center;padding:60px;color:#666}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .card-list{overflow-x:auto}
+  .card-list table{min-width:600px}
+  .card-list th,.card-list td{padding:5px 6px;font-size:.8em}
+  .card-list img{width:28px;height:40px}
+  .card-list .qty-btn{width:20px;height:20px;font-size:.75em}
+  .card-list .cond-select,.card-list .lang-select{padding:2px 4px;font-size:.75em}
+  .card-list .list-icon{width:20px;height:20px;font-size:.6em}
+  .stats-row{gap:8px}
+  .stat-card{padding:10px;min-width:70px}
+  .stat-card .value{font-size:1.1em}
+  .stat-card .label{font-size:.65em}
+  .filters{gap:8px}
+  .filter-group{flex-wrap:wrap}
+  select.filter{padding:6px 8px;font-size:.8em}
+}
 </style>
 </head>
 <body>
@@ -337,7 +367,9 @@ async function cycleCondition(e, cardId) {
 
 // Modal functions
 let modalCardId = null;
-let currentView = 'grid';
+let currentView = 'list';
+let currentSortCol = 'name';
+let currentSortDir = 'asc';
 
 function openCardModal(cardId) {
   modalCardId = cardId;
@@ -432,6 +464,21 @@ function toggleView(view) {
   document.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.dataset.view === view));
   document.querySelector('.card-grid')?.classList.toggle('hidden', view === 'list');
   document.querySelector('.card-list')?.classList.toggle('active', view === 'list');
+}
+
+// Inline editing functions for list view
+async function inlineUpdateField(cardId, field, value) {
+  if (!userCollection[cardId]) return;
+  userCollection[cardId][field] = value;
+  await saveCollection();
+}
+
+async function inlineToggleList(cardId, list) {
+  if (!userCollection[cardId]) return;
+  if (!userCollection[cardId].lists) userCollection[cardId].lists = {};
+  userCollection[cardId].lists[list] = !userCollection[cardId].lists[list];
+  await saveCollection();
+  renderCollection(); // Re-render to update icon state
 }
 
 // Load all cards
@@ -611,14 +658,15 @@ function renderCollection() {
       <table>
         <thead>
           <tr>
-            <th>Image</th>
-            <th onclick="sortBy('name')">Name</th>
-            <th onclick="sortBy('set')">Set</th>
-            <th>Qty</th>
-            <th>Cond</th>
-            <th>Lang</th>
-            <th onclick="sortBy('price-high')">Price</th>
-            <th>Actions</th>
+            <th style="width:40px"></th>
+            <th onclick="sortBy('name')" class="${currentSort === 'name' ? 'sorted' : ''}">Name <span class="sort-icon">${currentSort === 'name' ? '▲' : '▽'}</span></th>
+            <th onclick="sortBy('set')" class="${currentSort === 'set' ? 'sorted' : ''}">Set <span class="sort-icon">${currentSort === 'set' ? '▲' : '▽'}</span></th>
+            <th style="width:80px">Qty</th>
+            <th style="width:70px">Cond</th>
+            <th style="width:55px">Lang</th>
+            <th style="width:50px">Lists</th>
+            <th onclick="sortBy('price-high')" class="${currentSort.includes('price') ? 'sorted' : ''}" style="width:70px">Price <span class="sort-icon">${currentSort === 'price-high' ? '▼' : '▽'}</span></th>
+            <th style="width:30px"></th>
           </tr>
         </thead>
         <tbody>
@@ -626,18 +674,39 @@ function renderCollection() {
             const qty = getQty(c.id);
             const cond = userCollection[c.id]?.condition || 'NM';
             const lang = userCollection[c.id]?.language || 'JP';
+            const inWish = userCollection[c.id]?.lists?.wishlist;
+            const inTrade = userCollection[c.id]?.lists?.tradelist;
             return `
-            <tr onclick="openCardModal('${c.id}')" style="cursor:pointer">
-              <td><img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer"></td>
-              <td><strong>${c.name || c.id}</strong><br><small style="color:#666">${c.rarity || '?'}</small></td>
-              <td>${c.setId}</td>
-              <td>${qty}</td>
-              <td><span class="condition-badge ${cond.toLowerCase()}" style="position:static;transform:none">${cond}</span></td>
-              <td>${lang}</td>
-              <td>${formatPrice(getPrice(c))}</td>
-              <td class="actions" onclick="event.stopPropagation()">
-                <button onclick="removeFromCollection('${c.id}')">🗑️</button>
+            <tr>
+              <td onclick="openCardModal('${c.id}')"><img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer"></td>
+              <td onclick="openCardModal('${c.id}')"><strong>${c.name || c.id}</strong><br><small style="color:#888">${c.rarity || '?'}</small></td>
+              <td onclick="openCardModal('${c.id}')">${c.setId}</td>
+              <td onclick="event.stopPropagation()">
+                <div class="qty-cell">
+                  <button class="qty-btn" onclick="updateQuantity('${c.id}',-1)">−</button>
+                  <span class="qty-val">${qty}</span>
+                  <button class="qty-btn" onclick="updateQuantity('${c.id}',1)">+</button>
+                </div>
               </td>
+              <td onclick="event.stopPropagation()">
+                <select class="cond-select" onchange="inlineUpdateField('${c.id}','condition',this.value)">
+                  ${['NM','LP','MP','HP','DMG'].map(v => `<option value="${v}" ${cond === v ? 'selected' : ''}>${v}</option>`).join('')}
+                </select>
+              </td>
+              <td onclick="event.stopPropagation()">
+                <select class="lang-select" onchange="inlineUpdateField('${c.id}','language',this.value)">
+                  <option value="JP" ${lang === 'JP' ? 'selected' : ''}>JP</option>
+                  <option value="EN" ${lang === 'EN' ? 'selected' : ''}>EN</option>
+                </select>
+              </td>
+              <td onclick="event.stopPropagation()">
+                <div class="list-icons">
+                  <span class="list-icon ${inWish ? 'active' : ''}" onclick="inlineToggleList('${c.id}','wishlist')" title="Wishlist">⭐</span>
+                  <span class="list-icon ${inTrade ? 'active' : ''}" onclick="inlineToggleList('${c.id}','tradelist')" title="Tradelist">🔄</span>
+                </div>
+              </td>
+              <td onclick="openCardModal('${c.id}')">${formatPrice(getPrice(c))}</td>
+              <td onclick="event.stopPropagation()"><button class="delete-btn" onclick="removeFromCollection('${c.id}')" title="Remove">🗑️</button></td>
             </tr>`;
           }).join('')}
         </tbody>
