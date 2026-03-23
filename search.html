@@ -91,7 +91,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 .card-grid.checklist .card-item .finish{font-size:.75em;color:#666;width:80px}
 .card-grid.checklist .card-item .price{font-size:.85em;color:#2a7;font-weight:600;text-align:right}
 /* Foil badges */
-.foil-badge{position:absolute;bottom:4px;left:4px;padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;text-transform:uppercase;pointer-events:none}
+.foil-badge{position:absolute;bottom:4px;right:4px;padding:2px 5px;border-radius:3px;font-size:9px;font-weight:600;text-transform:uppercase;pointer-events:none}
 .foil-badge.regular{display:none}
 .foil-badge.parallel{background:linear-gradient(135deg,#a855f7,#6366f1);color:#fff}
 .foil-badge.alt-art{background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff}
@@ -206,6 +206,14 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
       <option value="foil">All Foil (P+AA)</option>
     </select>
   </div>
+  <div class="filter-group">
+    <span class="filter-label">Lang:</span>
+    <select class="filter" id="lang-filter" onchange="setGlobalLang(this.value)">
+      <option value="">Default</option>
+      <option value="jp">All JP</option>
+      <option value="en">All EN</option>
+    </select>
+  </div>
   <span class="coll-filter" id="coll-filter-wrap">
     <button class="coll-filter-btn" id="coll-filter" onclick="toggleCollFilter()">My Collection (<span id="coll-count">0</span>)</button>
     <button class="save-cloud-btn" id="save-cloud-btn" onclick="saveToCloud()" style="display:none">☁️ Save to Cloud</button>
@@ -251,6 +259,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 <script>
 let allCards = [], filteredCards = [], currentView = 'grid', currency = 'JPY', currentGame = 'pokemon';
 let collFilterActive = false;
+let globalLang = ''; // '', 'jp', or 'en'
 const rarityOrder = ['Common','Uncommon','Rare','Double Rare','Ultra Rare','Illustration Rare','Special Art Rare','Hyper Rare','Shiny Rare','ACE SPEC Rare',
   'C','UC','R','SR','SEC','L','SP','P','DON!!','Promo']; // One Piece rarities
 // Static rates - JPY base (primary currency for Japan tourists)
@@ -681,14 +690,27 @@ function renderCards() {
   noResults.style.display = 'none';
   
   const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
-  const getImg = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || 'onepiece/images/card-back.png';
+  // Global lang: prefer requested lang if card has it, else fallback
+  const getCardImg = c => {
+    const jp = proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp');
+    const en = c.imgEn ? proxyImg(c.imgEn) : null;
+    if (globalLang === 'en' && en) return en;
+    if (globalLang === 'jp') return jp;
+    return jp; // default
+  };
+  const getImg = c => getCardImg(c) || 'onepiece/images/card-back.png';
   const getImgHigh = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/high.webp') || 'onepiece/images/card-back.png';
   const imgErr = "this.style.opacity='0.3';this.style.background='#ddd'";
   const jpName = c => c.nameJp ? `<span style="color:#7c3aed;font-size:.8em"> ${c.nameJp}</span>` : '';
   const variant = c => c.variant ? `<span style="color:#888;font-size:.85em"> (${c.variant})</span>` : '';
   const owned = c => collectionStore.inAnyList(c.id) ? ' owned' : '';
   const collBtn = c => `<div class="coll-dot"></div><div class="coll-add" onclick="showListMenu(event,'${c.id}')">+</div>`;
-  const flipBtn = c => c.imgEn ? `<button class="flip-tile" onclick="flipTile(event,this)" data-jp="${proxyImg(c.imgJp||c.img)}" data-en="${proxyImg(c.imgEn)}">EN</button>` : '';
+  // Flip button shows opposite of current display
+  const flipBtn = c => {
+    if (!c.imgEn) return '';
+    const showingEn = globalLang === 'en';
+    return `<button class="flip-tile" onclick="flipTile(event,this)" data-jp="${proxyImg(c.imgJp||c.img)}" data-en="${proxyImg(c.imgEn)}">${showingEn ? 'JP' : 'EN'}</button>`;
+  };
   
   // Foil badge helper
   const foilBadge = c => {
@@ -891,6 +913,11 @@ function setView(view) {
   document.querySelectorAll('[data-view]').forEach(b => b.classList.toggle('active', b.dataset.view === view));
   const grid = document.getElementById('results');
   grid.className = 'card-grid' + (view !== 'grid' ? ' ' + view : '');
+  renderCards();
+}
+
+function setGlobalLang(lang) {
+  globalLang = lang;
   renderCards();
 }
 

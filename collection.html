@@ -180,6 +180,12 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
   .filter-group{flex-wrap:wrap}
   select.filter{padding:6px 8px;font-size:.8em}
 }
+/* Pagination */
+.pagination{display:flex;justify-content:center;align-items:center;gap:15px;padding:20px;margin-top:10px}
+.pagination button{padding:8px 16px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer;font-size:.9em}
+.pagination button:hover:not(:disabled){background:#f5f5f5;border-color:#888}
+.pagination button:disabled{opacity:.4;cursor:not-allowed}
+.pagination span{color:#666;font-size:.9em}
 </style>
 </head>
 <body>
@@ -247,6 +253,8 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
 <script>
 let allCards = [], collectionCards = [], currentUser = null, userCollection = {};
 let currentGame = '', currentSort = 'added', currentList = 'inventory';
+let currentPage = 1;
+const PAGE_SIZE = 50;
 
 // List types: inventory (all owned), wishlist/tradelist are filtered views
 const listTypes = ['inventory', 'wishlist', 'tradelist'];
@@ -306,6 +314,7 @@ async function loadUserCollection(uid) {
 
 function switchList(list) {
   currentList = list;
+  currentPage = 1;
   // Update URL without reload
   const url = new URL(window.location);
   url.searchParams.set('list', list);
@@ -662,7 +671,7 @@ function renderCollection() {
           </tr>
         </thead>
         <tbody>
-          ${filtered.map(c => {
+          ${filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE).map(c => {
             const qty = getQty(c.id);
             const cond = userCollection[c.id]?.condition || 'NM';
             const lang = userCollection[c.id]?.language || 'JP';
@@ -703,17 +712,32 @@ function renderCollection() {
           }).join('')}
         </tbody>
       </table>
+      ${filtered.length > PAGE_SIZE ? `
+        <div class="pagination">
+          <button onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>← Prev</button>
+          <span>Page ${currentPage} of ${Math.ceil(filtered.length / PAGE_SIZE)}</span>
+          <button onclick="goToPage(${currentPage + 1})" ${currentPage >= Math.ceil(filtered.length / PAGE_SIZE) ? 'disabled' : ''}>Next →</button>
+        </div>
+      ` : ''}
     </div>
   `;
 }
 
+function goToPage(page) {
+  currentPage = page;
+  renderCollection();
+  document.querySelector('.card-list')?.scrollIntoView({behavior: 'smooth'});
+}
+
 function filterByGame(game) {
   currentGame = game;
+  currentPage = 1;
   renderCollection();
 }
 
 function sortBy(sort) {
   currentSort = sort;
+  currentPage = 1;
   renderCollection();
 }
 
