@@ -842,6 +842,17 @@ function exportCollection() {
 }
 
 function shareCollection() {
+function shareWishlist() {
+  const wishCards = Object.entries(userCollection).filter(([id, c]) => c.lists?.wishlist).map(([id]) => id);
+  if (!wishCards.length) { alert("Your wishlist is empty!"); return; }
+  const text = "🌟 My TCG Wishlist:\n" + wishCards.join("\n");
+  if (navigator.share) {
+    navigator.share({ title: "My TCG Wishlist", text });
+  } else {
+    navigator.clipboard.writeText(text);
+    alert("Wishlist copied to clipboard!");
+  }
+}
   const data = { cards: Object.entries(userCollection).map(([id, c]) => ({ id, qty: c.qty })) };
   const encoded = btoa(JSON.stringify(data));
   const url = location.origin + location.pathname + "?share=" + encoded;
