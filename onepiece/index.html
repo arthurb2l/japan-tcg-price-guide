@@ -105,7 +105,7 @@ const BASE = '/japan-tcg-price-guide';
 async function loadStats() {
   try {
     const data = await fetch(`${BASE}/data/onepiece-cache.json`).then(r => r.json());
-    document.getElementById('stats').textContent = `${data.meta.totalCards.toLocaleString()} One Piece cards`;
+    const updated = data.meta?.lastUpdated ? new Date(data.meta.lastUpdated).toLocaleDateString() : ''; document.getElementById('stats').innerHTML = `${data.meta.totalCards.toLocaleString()} cards ${updated ? '• Updated ' + updated : ''}`;
   } catch (e) {
     document.getElementById('stats').textContent = '';
   }

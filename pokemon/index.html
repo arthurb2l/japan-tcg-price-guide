@@ -117,7 +117,7 @@ async function loadStats() {
   try {
     const manifest = await fetch(`${BASE}/data/shards/manifest.json`).then(r => r.json());
     cardCount = Object.values(manifest.shards).reduce((sum, s) => sum + s.cards, 0);
-    document.getElementById('stats').textContent = `${cardCount.toLocaleString()} Pokemon cards`;
+    document.getElementById('stats').innerHTML = `${cardCount.toLocaleString()} cards • 67% priced`;
   } catch (e) {
     document.getElementById('stats').textContent = '';
   }
