@@ -6241,7 +6241,11 @@
         "counter": null,
         "trait": "The Four Emperors/Red-Haired Pirates",
         "attribute": "Slash",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 0.74,
+          "jpy": 111
+        }
       },
       {
         "id": "OP09-001-p2",
@@ -6293,7 +6297,11 @@
         "counter": null,
         "trait": "The Four Emperors/Red-Haired Pirates",
         "attribute": "Slash",
-        "finish": "parallel-3"
+        "finish": "parallel-3",
+        "pricing": {
+          "usd": 0.74,
+          "jpy": 111
+        }
       },
       {
         "id": "OP09-002",
@@ -6404,7 +6412,11 @@
         "effect": "Give all of your opponent's Characters −1000 power.[Rush] (This card can attack on the turn in which it is played.)",
         "attribute": "Slash",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.94,
+          "jpy": 291
+        }
       },
       {
         "id": "OP09-004-p1",
@@ -6423,7 +6435,11 @@
         "cost": 10,
         "trait": "The Four Emperors/Red-Haired Pirates",
         "attribute": "Slash",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 1.94,
+          "jpy": 291
+        }
       },
       {
         "id": "OP09-004-p2",
@@ -6442,7 +6458,11 @@
         "cost": 10,
         "trait": "The Four Emperors/Red-Haired Pirates",
         "attribute": "Slash",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 1.94,
+          "jpy": 291
+        }
       },
       {
         "id": "OP09-004-p3",
@@ -6461,7 +6481,11 @@
         "cost": 10,
         "trait": "The Four Emperors/Red-Haired Pirates",
         "attribute": "Slash",
-        "finish": "parallel-3"
+        "finish": "parallel-3",
+        "pricing": {
+          "usd": 1.94,
+          "jpy": 291
+        }
       },
       {
         "id": "OP09-004-p4",
@@ -6480,7 +6504,11 @@
         "cost": 10,
         "trait": "The Four Emperors/Red-Haired Pirates",
         "attribute": "Slash",
-        "finish": "parallel-4"
+        "finish": "parallel-4",
+        "pricing": {
+          "usd": 1.94,
+          "jpy": 291
+        }
       },
       {
         "id": "OP09-005",
@@ -6653,7 +6681,11 @@
         "effect": "[On Play] Trash up to 1 of your opponent's Characters with 6000 power or less.",
         "attribute": "Ranged",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 2.54,
+          "jpy": 381
+        }
       },
       {
         "id": "OP09-009-p1",
@@ -6673,7 +6705,11 @@
         "counter": 1000,
         "trait": "Red-Haired Pirates",
         "attribute": "Ranged",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 2.54,
+          "jpy": 381
+        }
       },
       {
         "id": "OP09-009-p2",
@@ -6693,7 +6729,11 @@
         "counter": 1000,
         "trait": "Red-Haired Pirates",
         "attribute": "Ranged",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 2.54,
+          "jpy": 381
+        }
       },
       {
         "id": "OP09-010",
@@ -6915,7 +6955,11 @@
         "effect": "[On Play] Your opponent cannot activate up to 1 [Blocker] Character that has 4000 power or less during this turn.",
         "attribute": "Special",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.2,
+          "jpy": 30
+        }
       },
       {
         "id": "OP09-014-p2",
@@ -6935,7 +6979,11 @@
         "counter": 2000,
         "trait": "Red-Haired Pirates",
         "attribute": "Special",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 0.2,
+          "jpy": 30
+        }
       },
       {
         "id": "OP09-014-p3",
@@ -6955,7 +7003,11 @@
         "counter": 2000,
         "trait": "Red-Haired Pirates",
         "attribute": "Special",
-        "finish": "parallel-3"
+        "finish": "parallel-3",
+        "pricing": {
+          "usd": 0.2,
+          "jpy": 30
+        }
       },
       {
         "id": "OP09-015",
@@ -7117,7 +7169,11 @@
         "effect": "[Main] Look at 5 cards from the top of your deck; reveal up to 1 {Red-Haired Pirates} type card other than [Come On!! We'll Fight You!!] and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
         "attribute": "",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.17,
+          "jpy": 176
+        }
       },
       {
         "id": "OP09-020-p1",
@@ -7136,7 +7192,11 @@
         "cost": 1,
         "trait": "The Four Emperors/Red-Haired Pirates",
         "attribute": "",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 1.17,
+          "jpy": 176
+        }
       },
       {
         "id": "OP09-020-p2",
@@ -7155,7 +7215,11 @@
         "cost": 1,
         "trait": "The Four Emperors/Red-Haired Pirates",
         "attribute": "",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 1.17,
+          "jpy": 176
+        }
       },
       {
         "id": "OP09-021",
@@ -7268,7 +7332,11 @@
         "counter": null,
         "trait": "ODYSSEY",
         "attribute": "Wisdom",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 0.2,
+          "jpy": 30
+        }
       },
       {
         "id": "OP09-023",
@@ -7351,7 +7419,11 @@
         "counter": null,
         "trait": "ODYSSEY",
         "attribute": "Special",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 0.5,
+          "jpy": 75
+        }
       },
       {
         "id": "OP09-024",
@@ -7462,7 +7534,11 @@
         "effect": "[When Attacking] [Once Per Turn] If you have 3 or more rested Characters, draw 1 card.",
         "attribute": "Special",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 30.34,
+          "jpy": 4551
+        }
       },
       {
         "id": "OP09-027-p1",
@@ -7482,7 +7558,11 @@
         "counter": 1000,
         "trait": "ODYSSEY/Revolutionary Army",
         "attribute": "Special",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 30.34,
+          "jpy": 4551
+        }
       },
       {
         "id": "OP09-027-p2",
@@ -7502,7 +7582,11 @@
         "counter": 1000,
         "trait": "ODYSSEY/Revolutionary Army",
         "attribute": "Special",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 30.34,
+          "jpy": 4551
+        }
       },
       {
         "id": "OP09-028",
@@ -7776,7 +7860,11 @@
         "counter": 2000,
         "trait": "Muggy Kingdom/Thriller Bark Pirates",
         "attribute": "Special",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 2.95,
+          "jpy": 443
+        }
       },
       {
         "id": "OP09-034-p2",
@@ -7796,7 +7884,11 @@
         "counter": 2000,
         "trait": "Muggy Kingdom/Thriller Bark Pirates",
         "attribute": "Special",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 2.95,
+          "jpy": 443
+        }
       },
       {
         "id": "OP09-035",
@@ -8119,7 +8211,11 @@
         "counter": null,
         "trait": "The Four Emperors/Cross Guild",
         "attribute": "Slash",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 1.05,
+          "jpy": 158
+        }
       },
       {
         "id": "OP09-042-p2",
@@ -8171,7 +8267,11 @@
         "counter": null,
         "trait": "The Four Emperors/Cross Guild",
         "attribute": "Slash",
-        "finish": "parallel-3"
+        "finish": "parallel-3",
+        "pricing": {
+          "usd": 1.05,
+          "jpy": 158
+        }
       },
       {
         "id": "OP09-043",
@@ -8225,7 +8325,11 @@
         "counter": 1000,
         "trait": "Cross Guild",
         "attribute": "Strike",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 0.1,
+          "jpy": 15
+        }
       },
       {
         "id": "OP09-044",
@@ -8307,7 +8411,11 @@
         "effect": "[On Play] Play up to 1 {Cross Guild} type Character card or Character card with a type including \"Baroque Works\" with a cost of 5 or less from your hand.",
         "attribute": "Special",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.39,
+          "jpy": 208
+        }
       },
       {
         "id": "OP09-046-p1",
@@ -8327,7 +8435,11 @@
         "counter": 1000,
         "trait": "Cross Guild/Former Baroque Works",
         "attribute": "Special",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 1.39,
+          "jpy": 208
+        }
       },
       {
         "id": "OP09-047",
@@ -8377,7 +8489,11 @@
         "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[On Play] Draw 2 cards and trash 1 card from your hand.",
         "attribute": "Slash",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 2.65,
+          "jpy": 398
+        }
       },
       {
         "id": "OP09-048-p1",
@@ -8396,7 +8512,11 @@
         "cost": 6,
         "trait": "Cross Guild",
         "attribute": "Slash",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 2.65,
+          "jpy": 398
+        }
       },
       {
         "id": "OP09-049",
@@ -8510,7 +8630,11 @@
         "counter": 1000,
         "trait": "East Blue",
         "attribute": "Wisdom",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 12.37,
+          "jpy": 1855
+        }
       },
       {
         "id": "OP09-050-p2",
@@ -8530,7 +8654,11 @@
         "counter": 1000,
         "trait": "East Blue",
         "attribute": "Wisdom",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 12.37,
+          "jpy": 1855
+        }
       },
       {
         "id": "OP09-051",
@@ -8550,7 +8678,11 @@
         "effect": "[On Play] Place up to 1 of your opponent's Characters at the bottom of the owner's deck. Then, if you do not have 5 Characters with a cost of 5 or more, place this Character at the bottom of the owner's deck.",
         "attribute": "Slash",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 914.08,
+          "jpy": 137112
+        }
       },
       {
         "id": "OP09-051-p1",
@@ -8569,7 +8701,11 @@
         "cost": 10,
         "trait": "The Four Emperors/Cross Guild",
         "attribute": "Slash",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 914.08,
+          "jpy": 137112
+        }
       },
       {
         "id": "OP09-051-p2",
@@ -8588,7 +8724,11 @@
         "cost": 10,
         "trait": "The Four Emperors/Cross Guild",
         "attribute": "Slash",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 914.08,
+          "jpy": 137112
+        }
       },
       {
         "id": "OP09-051-p3",
@@ -8607,7 +8747,11 @@
         "cost": 10,
         "trait": "The Four Emperors/Cross Guild",
         "attribute": "Slash",
-        "finish": "parallel-3"
+        "finish": "parallel-3",
+        "pricing": {
+          "usd": 914.08,
+          "jpy": 137112
+        }
       },
       {
         "id": "OP09-051-p4",
@@ -8626,7 +8770,11 @@
         "cost": 10,
         "trait": "The Four Emperors/Cross Guild",
         "attribute": "Slash",
-        "finish": "parallel-4"
+        "finish": "parallel-4",
+        "pricing": {
+          "usd": 914.08,
+          "jpy": 137112
+        }
       },
       {
         "id": "OP09-052",
@@ -8810,7 +8958,11 @@
         "effect": "[Main] Look at 4 cards from the top of your deck; reveal up to 1 {Cross Guild} type card and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
         "attribute": "",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.16,
+          "jpy": 174
+        }
       },
       {
         "id": "OP09-057-p1",
@@ -8829,7 +8981,11 @@
         "cost": 1,
         "trait": "Cross Guild",
         "attribute": "",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 1.16,
+          "jpy": 174
+        }
       },
       {
         "id": "OP09-057-p2",
@@ -8848,7 +9004,11 @@
         "cost": 1,
         "trait": "Cross Guild",
         "attribute": "",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 1.16,
+          "jpy": 174
+        }
       },
       {
         "id": "OP09-058",
@@ -9022,7 +9182,11 @@
         "counter": null,
         "trait": "The Four Emperors/Straw Hat Crew",
         "attribute": "Strike",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 4.43,
+          "jpy": 665
+        }
       },
       {
         "id": "OP09-061-p2",
@@ -9074,7 +9238,11 @@
         "counter": null,
         "trait": "The Four Emperors/Straw Hat Crew",
         "attribute": "Strike",
-        "finish": "parallel-3"
+        "finish": "parallel-3",
+        "pricing": {
+          "usd": 4.43,
+          "jpy": 665
+        }
       },
       {
         "id": "OP09-062",
@@ -9157,7 +9325,11 @@
         "counter": null,
         "trait": "Straw Hat Crew",
         "attribute": "Strike",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 69.51,
+          "jpy": 10427
+        }
       },
       {
         "id": "OP09-063",
@@ -9239,7 +9411,11 @@
         "effect": "[On Play] You may return 1 or more DON!! cards from your field to your DON!! deck: This Character gains [Rush] during this turn. Then, rest up to 1 of your opponent's Characters with a cost of 6 or less.",
         "attribute": "Strike",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.91,
+          "jpy": 287
+        }
       },
       {
         "id": "OP09-065-p1",
@@ -9259,7 +9435,11 @@
         "counter": 1000,
         "trait": "Straw Hat Crew",
         "attribute": "Strike",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 1.91,
+          "jpy": 287
+        }
       },
       {
         "id": "OP09-065-p2",
@@ -9279,7 +9459,11 @@
         "counter": 1000,
         "trait": "Straw Hat Crew",
         "attribute": "Strike",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 1.91,
+          "jpy": 287
+        }
       },
       {
         "id": "OP09-066",
@@ -9390,7 +9574,11 @@
         "effect": "[On Play] Look at 4 cards from the top of your deck; reveal up to 1 {Straw Hat Crew} or {Heart Pirates} type card with a cost of 2 or more and add it to your hand. Then, place the rest at the bottom of your deck in any order.",
         "attribute": "Slash",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.62,
+          "jpy": 243
+        }
       },
       {
         "id": "OP09-069-p1",
@@ -9410,7 +9598,11 @@
         "counter": 1000,
         "trait": "Heart Pirates",
         "attribute": "Slash",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 1.62,
+          "jpy": 243
+        }
       },
       {
         "id": "OP09-069-p2",
@@ -9430,7 +9622,11 @@
         "counter": 1000,
         "trait": "Heart Pirates",
         "attribute": "Slash",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 1.62,
+          "jpy": 243
+        }
       },
       {
         "id": "OP09-070",
@@ -9513,7 +9709,11 @@
         "counter": 2000,
         "trait": "Straw Hat Crew",
         "attribute": "Special",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 0.44,
+          "jpy": 66
+        }
       },
       {
         "id": "OP09-071",
@@ -9564,7 +9764,11 @@
         "effect": "[Blocker] (After your opponent declares an attack, you may rest this card to make it the new target of the attack.)[On Play] DON!! −2, You may trash 1 card from your hand: Draw 2 cards.",
         "attribute": "Strike",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.92,
+          "jpy": 288
+        }
       },
       {
         "id": "OP09-072-p1",
@@ -9584,7 +9788,11 @@
         "counter": 1000,
         "trait": "Straw Hat Crew",
         "attribute": "Strike",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 1.92,
+          "jpy": 288
+        }
       },
       {
         "id": "OP09-073",
@@ -9694,7 +9902,11 @@
         "effect": "[On Play] You may return 1 or more DON!! cards from your field to your DON!! deck: Add up to 1 DON!! card from your DON!! deck and set it as active.",
         "attribute": "Slash",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.36,
+          "jpy": 204
+        }
       },
       {
         "id": "OP09-076-p1",
@@ -9713,7 +9925,11 @@
         "cost": 3,
         "trait": "Straw Hat Crew",
         "attribute": "Slash",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 1.36,
+          "jpy": 204
+        }
       },
       {
         "id": "OP09-076-p2",
@@ -9732,7 +9948,11 @@
         "cost": 3,
         "trait": "Straw Hat Crew",
         "attribute": "Slash",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 1.36,
+          "jpy": 204
+        }
       },
       {
         "id": "OP09-077",
@@ -9752,7 +9972,11 @@
         "effect": "[Main] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): K.O. up to 1 of your opponent's Characters with 6000 power or less.",
         "attribute": "",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 7.5,
+          "jpy": 1125
+        }
       },
       {
         "id": "OP09-077-p1",
@@ -9771,7 +9995,11 @@
         "cost": 2,
         "trait": "The Four Emperors/Straw Hat Crew",
         "attribute": "",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 7.5,
+          "jpy": 1125
+        }
       },
       {
         "id": "OP09-077-p2",
@@ -9790,7 +10018,11 @@
         "cost": 2,
         "trait": "The Four Emperors/Straw Hat Crew",
         "attribute": "",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 7.5,
+          "jpy": 1125
+        }
       },
       {
         "id": "OP09-078",
@@ -9810,7 +10042,11 @@
         "effect": "[Counter] DON!! −2, You may trash 1 card from your hand: If your Leader has the {Straw Hat Crew} type, up to 1 of your Leader or Character cards gains +4000 power during this battle. Then, draw 2 cards.",
         "attribute": "",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.62,
+          "jpy": 243
+        }
       },
       {
         "id": "OP09-078-p1",
@@ -9829,7 +10065,11 @@
         "cost": 1,
         "trait": "The Four Emperors/Straw Hat Crew",
         "attribute": "",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 1.62,
+          "jpy": 243
+        }
       },
       {
         "id": "OP09-078-p2",
@@ -9848,7 +10088,11 @@
         "cost": 1,
         "trait": "The Four Emperors/Straw Hat Crew",
         "attribute": "",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 1.62,
+          "jpy": 243
+        }
       },
       {
         "id": "OP09-079",
@@ -10001,7 +10245,11 @@
         "counter": null,
         "trait": "The Four Emperors/Blackbeard Pirates",
         "attribute": "Special",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 26.17,
+          "jpy": 3926
+        }
       },
       {
         "id": "OP09-081-p2",
@@ -10053,7 +10301,11 @@
         "counter": null,
         "trait": "The Four Emperors/Blackbeard Pirates",
         "attribute": "Special",
-        "finish": "parallel-3"
+        "finish": "parallel-3",
+        "pricing": {
+          "usd": 26.17,
+          "jpy": 3926
+        }
       },
       {
         "id": "OP09-082",
@@ -10453,7 +10705,11 @@
         "effect": "[Blocker][Activate: Main] [Once Per Turn] If your Leader has the {Blackbeard Pirates} type and this Character was played on this turn, negate the effect of up to 1 of your opponent's Leader during this turn. Then, negate the effect of up to 1 of your opponent's Characters and that Character cannot attack until the end of your opponent's next turn.",
         "attribute": "Special",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1,
+          "jpy": 150
+        }
       },
       {
         "id": "OP09-093-p1",
@@ -10472,7 +10728,11 @@
         "cost": 10,
         "trait": "The Four Emperors/Blackbeard Pirates",
         "attribute": "Special",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 1,
+          "jpy": 150
+        }
       },
       {
         "id": "OP09-093-p2",
@@ -10491,7 +10751,11 @@
         "cost": 10,
         "trait": "The Four Emperors/Blackbeard Pirates",
         "attribute": "Special",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 1,
+          "jpy": 150
+        }
       },
       {
         "id": "OP09-093-p3",
@@ -10510,7 +10774,11 @@
         "cost": 10,
         "trait": "The Four Emperors/Blackbeard Pirates",
         "attribute": "Special",
-        "finish": "parallel-3"
+        "finish": "parallel-3",
+        "pricing": {
+          "usd": 1,
+          "jpy": 150
+        }
       },
       {
         "id": "OP09-093-p4",
@@ -10529,7 +10797,11 @@
         "cost": 10,
         "trait": "The Four Emperors/Blackbeard Pirates",
         "attribute": "Special",
-        "finish": "parallel-4"
+        "finish": "parallel-4",
+        "pricing": {
+          "usd": 1,
+          "jpy": 150
+        }
       },
       {
         "id": "OP09-094",
@@ -10662,7 +10934,11 @@
         "effect": "[Main] Look at 3 cards from the top of your deck; reveal up to 1 {Blackbeard Pirates} type card other than [My Era...Begins!!] and add it to your hand. Then, trash the rest.",
         "attribute": "",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.52,
+          "jpy": 228
+        }
       },
       {
         "id": "OP09-096-p1",
@@ -10681,7 +10957,11 @@
         "cost": 1,
         "trait": "Blackbeard Pirates",
         "attribute": "",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 1.52,
+          "jpy": 228
+        }
       },
       {
         "id": "OP09-097",
@@ -11194,7 +11474,11 @@
         "counter": 1000,
         "trait": "Straw Hat Crew",
         "attribute": "Strike",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 44.42,
+          "jpy": 6663
+        }
       },
       {
         "id": "OP09-108",
@@ -11600,7 +11884,11 @@
         "effect": "[Rush] (This card can attack on the turn in which it is played.)When your opponent activates [Blocker], if either you or your opponent has 0 Life cards, you win the game.",
         "attribute": "Slash",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 3,
+          "jpy": 450
+        }
       },
       {
         "id": "OP09-118-p1",
@@ -11619,7 +11907,11 @@
         "cost": 10,
         "trait": "King of the Pirates/Roger Pirates",
         "attribute": "Slash",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 3,
+          "jpy": 450
+        }
       },
       {
         "id": "OP09-118-p2",
@@ -11638,7 +11930,11 @@
         "cost": 10,
         "trait": "King of the Pirates/Roger Pirates",
         "attribute": "Slash",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 3,
+          "jpy": 450
+        }
       },
       {
         "id": "OP09-118-p3",
@@ -11657,7 +11953,11 @@
         "cost": 10,
         "trait": "King of the Pirates/Roger Pirates",
         "attribute": "Slash",
-        "finish": "parallel-3"
+        "finish": "parallel-3",
+        "pricing": {
+          "usd": 3,
+          "jpy": 450
+        }
       },
       {
         "id": "OP09-119",
@@ -11677,7 +11977,11 @@
         "effect": "[On Play] You may return 1 or more DON!! cards from your field to your DON!! deck: Draw 1 card and this Character gains [Rush] during this turn.",
         "attribute": "Strike",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 8.94,
+          "jpy": 1341
+        }
       },
       {
         "id": "OP09-119-p1",
@@ -11696,7 +12000,11 @@
         "cost": 9,
         "trait": "Straw Hat Crew",
         "attribute": "Strike",
-        "finish": "parallel-1"
+        "finish": "parallel-1",
+        "pricing": {
+          "usd": 8.94,
+          "jpy": 1341
+        }
       },
       {
         "id": "OP09-119-p2",
@@ -11715,7 +12023,11 @@
         "cost": 9,
         "trait": "Straw Hat Crew",
         "attribute": "Strike",
-        "finish": "parallel-2"
+        "finish": "parallel-2",
+        "pricing": {
+          "usd": 8.94,
+          "jpy": 1341
+        }
       },
       {
         "id": "OP09-119-p3",
@@ -11734,7 +12046,11 @@
         "cost": 9,
         "trait": "Straw Hat Crew",
         "attribute": "Strike",
-        "finish": "parallel-3"
+        "finish": "parallel-3",
+        "pricing": {
+          "usd": 8.94,
+          "jpy": 1341
+        }
       },
       {
         "id": "OP09-004-p5",
@@ -11754,7 +12070,11 @@
         "trait": "The Four Emperors/Red-Haired Pirates",
         "attribute": "Slash",
         "setId": "OP-09",
-        "finish": "parallel-5"
+        "finish": "parallel-5",
+        "pricing": {
+          "usd": 1.94,
+          "jpy": 291
+        }
       },
       {
         "id": "OP09-004-p6",
@@ -11774,7 +12094,11 @@
         "trait": "The Four Emperors/Red-Haired Pirates",
         "attribute": "Slash",
         "setId": "OP-09",
-        "finish": "parallel-6"
+        "finish": "parallel-6",
+        "pricing": {
+          "usd": 1.94,
+          "jpy": 291
+        }
       },
       {
         "id": "OP09-004-p7",
@@ -11794,7 +12118,11 @@
         "trait": "The Four Emperors/Red-Haired Pirates",
         "attribute": "Slash",
         "setId": "OP-09",
-        "finish": "parallel-7"
+        "finish": "parallel-7",
+        "pricing": {
+          "usd": 1.94,
+          "jpy": 291
+        }
       },
       {
         "id": "OP09-051-p5",
@@ -11814,7 +12142,11 @@
         "trait": "The Four Emperors/Cross Guild",
         "attribute": "Slash",
         "setId": "OP-09",
-        "finish": "parallel-5"
+        "finish": "parallel-5",
+        "pricing": {
+          "usd": 914.08,
+          "jpy": 137112
+        }
       },
       {
         "id": "OP09-051-p6",
@@ -11834,7 +12166,11 @@
         "trait": "The Four Emperors/Cross Guild",
         "attribute": "Slash",
         "setId": "OP-09",
-        "finish": "parallel-6"
+        "finish": "parallel-6",
+        "pricing": {
+          "usd": 914.08,
+          "jpy": 137112
+        }
       },
       {
         "id": "OP09-093-p5",
@@ -11854,7 +12190,11 @@
         "trait": "The Four Emperors/Blackbeard Pirates",
         "attribute": "Special",
         "setId": "OP-09",
-        "finish": "parallel-5"
+        "finish": "parallel-5",
+        "pricing": {
+          "usd": 1,
+          "jpy": 150
+        }
       },
       {
         "id": "OP09-093-p6",
@@ -11874,7 +12214,11 @@
         "trait": "The Four Emperors/Blackbeard Pirates",
         "attribute": "Special",
         "setId": "OP-09",
-        "finish": "parallel-6"
+        "finish": "parallel-6",
+        "pricing": {
+          "usd": 1,
+          "jpy": 150
+        }
       }
     ],
     "OP-10": [
@@ -34986,7 +35330,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP01-078.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-078_p4.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.58,
+          "jpy": 87
+        }
       },
       {
         "id": "OP01-120",
@@ -35071,7 +35419,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP02-004.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-004_p4.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.99,
+          "jpy": 149
+        }
       },
       {
         "id": "OP02-013",
