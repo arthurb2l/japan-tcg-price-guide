@@ -42,6 +42,7 @@ let allCards = [];
 let currentGame = 'pokemon';
 
 async function loadGame(game) {
+  try {
   currentGame = game;
   document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', (i===0 && game==='pokemon') || (i===1 && game==='onepiece')));
   

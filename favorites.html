@@ -26,6 +26,7 @@
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
 <script>
 async function loadFavorites() {
+  try {
   const favs = JSON.parse(localStorage.getItem("tcg_favorites") || "[]");
   if (!favs.length) {
     document.getElementById("cardGrid").innerHTML = '<div class="empty">No favorites yet.<br><br>Click ❤️ on any card to add it here.</div>';
@@ -47,6 +48,7 @@ async function loadFavorites() {
       <div class="name">${c.name}</div>
     </a>`;
   }).join('');
+  } catch(e) { document.getElementById('cardGrid').innerHTML = '<p style="color:#999;text-align:center">Error loading favorites</p>'; }
 }
 loadFavorites();
 </script>
