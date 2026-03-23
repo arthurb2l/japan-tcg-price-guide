@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Backup & Restore - Japan TCG Price Guide</title>
+  <link rel="stylesheet" href="base.css">
+  <style>
+    .container{max-width:600px;margin:0 auto;padding:20px}
+    h1{font-size:1.5em;margin-bottom:10px}
+    .subtitle{color:#666;margin-bottom:25px}
+    .section{background:#fff;border-radius:12px;padding:20px;margin-bottom:20px}
+    .section h2{font-size:1em;margin-bottom:15px}
+    .section p{font-size:.9em;color:#666;margin-bottom:15px}
+    .btn{display:block;width:100%;padding:15px;border:none;border-radius:8px;font-size:1em;cursor:pointer;margin-bottom:10px}
+    .btn-export{background:#10b981;color:#fff}
+    .btn-import{background:#3b82f6;color:#fff}
+    .btn-clear{background:#dc2626;color:#fff}
+    .stats{font-size:.85em;color:#666;margin-top:15px;padding-top:15px;border-top:1px solid #eee}
+  </style>
+</head>
+<body>
+<header id="site-header"></header>
+<div class="container">
+  <h1>💾 Backup & Restore</h1>
+  <p class="subtitle">Export all your data or restore from a backup file.</p>
+  
+  <div class="section">
+    <h2>Export Backup</h2>
+    <p>Download all your collection data, favorites, alerts, and settings.</p>
+    <button class="btn btn-export" onclick="exportBackup()">📥 Download Backup</button>
+    <div class="stats" id="stats"></div>
+  </div>
+  
+  <div class="section">
+    <h2>Restore Backup</h2>
+    <p>Upload a backup file to restore your data. This will merge with existing data.</p>
+    <input type="file" id="backupFile" accept=".json" style="display:none" onchange="importBackup(this)">
+    <button class="btn btn-import" onclick="document.getElementById('backupFile').click()">📤 Upload Backup</button>
+  </div>
+  
+  <div class="section">
+    <h2>Clear All Data</h2>
+    <p>Remove all local data. This cannot be undone!</p>
+    <button class="btn btn-clear" onclick="clearAll()">🗑️ Clear All Data</button>
+  </div>
+</div>
+<footer id="site-footer"></footer>
+<script src="/japan-tcg-price-guide/components/header.js"></script>
+<script src="/japan-tcg-price-guide/components/footer.js"></script>
+<script>
+const keys = ['tcg_inventory', 'tcg_favorites', 'tcg_alerts', 'tcg_notes', 'tcg_goals', 'tcg_recent', 'tcg_search_history', 'tcg-theme', 'op_deck', 'op_saved_decks'];
+
+function showStats() {
+  const inv = JSON.parse(localStorage.getItem('tcg_inventory') || '{}');
+  const favs = JSON.parse(localStorage.getItem('tcg_favorites') || '[]');
+  const alerts = JSON.parse(localStorage.getItem('tcg_alerts') || '{}');
+  document.getElementById('stats').innerHTML = `
+    📦 ${Object.keys(inv).length} cards in collection<br>
+    ❤️ ${favs.length} favorites<br>
+    🔔 ${Object.keys(alerts).length} price alerts
+  `;
+}
+
+function exportBackup() {
+  const data = {};
+  keys.forEach(k => {
+    const v = localStorage.getItem(k);
+    if (v) data[k] = JSON.parse(v);
+  });
+  data._exportDate = new Date().toISOString();
+  
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `tcg-backup-${new Date().toISOString().split('T')[0]}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function importBackup(input) {
+  const file = input.files[0];
+  if (!file) return;
+  
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const data = JSON.parse(e.target.result);
+      let imported = 0;
+      keys.forEach(k => {
+        if (data[k]) {
+          localStorage.setItem(k, JSON.stringify(data[k]));
+          imported++;
+        }
+      });
+      alert(`Restored ${imported} data items from backup!`);
+      showStats();
+    } catch (err) {
+      alert('Invalid backup file');
+    }
+  };
+  reader.readAsText(file);
+}
+
+function clearAll() {
+  if (!confirm('Delete ALL local data? This cannot be undone!')) return;
+  if (!confirm('Are you REALLY sure?')) return;
+  keys.forEach(k => localStorage.removeItem(k));
+  alert('All data cleared');
+  showStats();
+}
+
+showStats();
+</script>
+</body>
+</html>
