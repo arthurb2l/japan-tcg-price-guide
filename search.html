@@ -205,6 +205,41 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
       <option value="foil">All Foil (P+AA)</option>
     </select>
   </div>
+  <div class="filter-group op-filter" style="display:none">
+    <span class="filter-label">Color:</span>
+    <select class="filter" id="color-filter" onchange="applyFilters()">
+      <option value="">All</option>
+      <option value="Red">Red</option>
+      <option value="Blue">Blue</option>
+      <option value="Green">Green</option>
+      <option value="Purple">Purple</option>
+      <option value="Black">Black</option>
+      <option value="Yellow">Yellow</option>
+    </select>
+  </div>
+  <div class="filter-group op-filter" style="display:none">
+    <span class="filter-label">Type:</span>
+    <select class="filter" id="type-filter" onchange="applyFilters()">
+      <option value="">All</option>
+      <option value="LEADER">Leader</option>
+      <option value="CHARACTER">Character</option>
+      <option value="EVENT">Event</option>
+      <option value="STAGE">Stage</option>
+    </select>
+  </div>
+  <div class="filter-group op-filter" style="display:none">
+    <span class="filter-label">Cost:</span>
+    <select class="filter" id="cost-filter" onchange="applyFilters()">
+      <option value="">All</option>
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6+</option>
+    </select>
+  </div>
   <div class="filter-group">
     <span class="filter-label">Lang:</span>
     <select class="filter" id="lang-filter" onchange="setGlobalLang(this.value)">
@@ -838,35 +873,43 @@ function updateURL() {
 function filterBySet(setId) {
   document.getElementById('search').value = '';
   displayLimit = 60;
-  const gameCards = getGameCards();
-  filteredCards = setId ? gameCards.filter(c => c.setId === setId) : gameCards;
-  applyFinishFilter();
-  sortCards(document.getElementById('sort').value);
-  updateURL();
+  applyFilters();
 }
 
 function filterByFinish(finish) {
   displayLimit = 60;
-  const setId = document.getElementById('set-filter').value;
-  const gameCards = getGameCards();
-  filteredCards = setId ? gameCards.filter(c => c.setId === setId) : gameCards;
-  applyFinishFilter();
-  sortCards(document.getElementById('sort').value);
-  updateURL();
+  applyFilters();
 }
 
-function applyFinishFilter() {
+function applyFilters() {
+  const setId = document.getElementById('set-filter').value;
   const finish = document.getElementById('finish-filter')?.value;
-  if (!finish) return;
-  if (finish === 'regular') {
-    filteredCards = filteredCards.filter(c => c.finish === 'regular' || !c.finish);
-  } else if (finish === 'parallel') {
-    filteredCards = filteredCards.filter(c => c.finish?.startsWith('parallel'));
-  } else if (finish === 'alternate-art') {
-    filteredCards = filteredCards.filter(c => c.finish === 'alternate-art');
-  } else if (finish === 'foil') {
-    filteredCards = filteredCards.filter(c => c.finish && c.finish !== 'regular');
+  const color = document.getElementById('color-filter')?.value;
+  const type = document.getElementById('type-filter')?.value;
+  const cost = document.getElementById('cost-filter')?.value;
+  
+  let cards = getGameCards();
+  
+  // Set filter
+  if (setId) cards = cards.filter(c => c.setId === setId);
+  
+  // Finish filter
+  if (finish === 'regular') cards = cards.filter(c => c.finish === 'regular' || !c.finish);
+  else if (finish === 'parallel') cards = cards.filter(c => c.finish?.startsWith('parallel'));
+  else if (finish === 'alternate-art') cards = cards.filter(c => c.finish === 'alternate-art');
+  else if (finish === 'foil') cards = cards.filter(c => c.finish && c.finish !== 'regular');
+  
+  // One Piece specific filters
+  if (color) cards = cards.filter(c => c.color === color);
+  if (type) cards = cards.filter(c => c.type === type);
+  if (cost) {
+    if (cost === '6') cards = cards.filter(c => c.cost >= 6);
+    else cards = cards.filter(c => c.cost === parseInt(cost));
   }
+  
+  filteredCards = cards;
+  sortCards(document.getElementById('sort').value);
+  updateURL();
 }
 
 function sortCards(by) {
@@ -918,6 +961,15 @@ function filterByGame(game) {
   currentGame = game;
   displayLimit = 60;
   document.querySelectorAll('.game-tab').forEach(t => t.classList.toggle('active', t.dataset.game === game));
+  
+  // Show/hide One Piece specific filters
+  const isOP = game === 'onepiece';
+  document.querySelectorAll('.op-filter').forEach(el => el.style.display = isOP ? '' : 'none');
+  if (!isOP) {
+    document.getElementById('color-filter').value = '';
+    document.getElementById('type-filter').value = '';
+    document.getElementById('cost-filter').value = '';
+  }
   
   // Update set filter to only show sets from selected game
   const setFilter = document.getElementById('set-filter');
