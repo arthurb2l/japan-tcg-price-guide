@@ -314,6 +314,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
         <div id="similar-grid" style="display:flex;gap:6px;overflow-x:auto"></div>
       </div>
       <div class="modal-actions" style="display:flex;gap:10px;margin-top:15px;flex-wrap:wrap">
+        <button id="favBtn" onclick="toggleFavorite()" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">🤍 Fav</button>
         <button onclick="copyCardInfo()" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">📋 Copy</button>
         <button onclick="setAlert()" class="alert-btn" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">🔔 Set Price Alert</button>
       </div>
@@ -1172,6 +1173,9 @@ function showCard(id, isEn) {
   }
   
   showPriceHistory(card.id);
+  // Update favorite button state
+  const favs = JSON.parse(localStorage.getItem('tcg_favorites') || '[]');
+  document.getElementById('favBtn').textContent = favs.includes(card.id) ? '❤️ Fav' : '🤍 Fav';
   document.getElementById('modal').classList.add('active');
 }
 
@@ -1264,6 +1268,21 @@ document.addEventListener('keydown', e => {
 });
 
 loadCards();
+// Favorites
+function toggleFavorite() {
+  if (!currentModalCard) return;
+  const favs = JSON.parse(localStorage.getItem("tcg_favorites") || "[]");
+  const idx = favs.indexOf(currentModalCard.id);
+  if (idx >= 0) {
+    favs.splice(idx, 1);
+    document.getElementById("favBtn").textContent = "🤍 Fav";
+  } else {
+    favs.push(currentModalCard.id);
+    document.getElementById("favBtn").textContent = "❤️ Fav";
+  }
+  localStorage.setItem("tcg_favorites", JSON.stringify(favs));
+}
+
 loadPriceHistory();
 // Bulk select mode
 let bulkMode = false;
