@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Collection Goals - Japan TCG Price Guide</title>
+  <link rel="stylesheet" href="base.css">
+  <style>
+    .container{max-width:700px;margin:0 auto;padding:20px}
+    h1{font-size:1.5em;margin-bottom:20px}
+    .goal-card{background:#fff;border-radius:12px;padding:20px;margin-bottom:15px}
+    .goal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
+    .goal-title{font-weight:600}
+    .goal-delete{background:none;border:none;cursor:pointer;font-size:1.2em}
+    .goal-progress{height:8px;background:#eee;border-radius:4px;overflow:hidden;margin-bottom:10px}
+    .goal-fill{height:100%;background:linear-gradient(90deg,#10b981,#059669);border-radius:4px;transition:width .3s}
+    .goal-stats{font-size:.85em;color:#666}
+    .add-goal{background:#fff;border-radius:12px;padding:20px}
+    .add-goal input,.add-goal select{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;margin-bottom:10px}
+    .add-goal button{width:100%;padding:12px;background:#222;color:#fff;border:none;border-radius:6px;cursor:pointer}
+  </style>
+</head>
+<body>
+<header id="site-header"></header>
+<div class="container">
+  <h1>🎯 Collection Goals</h1>
+  <div id="goalsList"></div>
+  <div class="add-goal">
+    <h3 style="margin-bottom:15px">Add New Goal</h3>
+    <select id="goalType">
+      <option value="set">Complete a Set</option>
+      <option value="value">Reach Collection Value</option>
+      <option value="count">Collect X Cards</option>
+    </select>
+    <input type="text" id="goalTarget" placeholder="Set ID or target number">
+    <button onclick="addGoal()">Add Goal</button>
+  </div>
+</div>
+<footer id="site-footer"></footer>
+<script src="/japan-tcg-price-guide/components/header.js"></script>
+<script src="/japan-tcg-price-guide/components/footer.js"></script>
+<script>
+let allCards = [];
+
+async function init() {
+  const [pk, op] = await Promise.all([
+    fetch('/japan-tcg-price-guide/data/pokemon.json').then(r => r.json()),
+    fetch('/japan-tcg-price-guide/data/onepiece.json').then(r => r.json())
+  ]);
+  allCards = [...pk, ...op];
+  renderGoals();
+}
+
+function renderGoals() {
+  const goals = JSON.parse(localStorage.getItem('tcg_goals') || '[]');
+  const coll = JSON.parse(localStorage.getItem('tcg_inventory') || '{}');
+  const collIds = Object.keys(coll);
+  
+  if (!goals.length) {
+    document.getElementById('goalsList').innerHTML = '<p style="color:#666;margin-bottom:20px">No goals set yet. Add one below!</p>';
+    return;
+  }
+  
+  document.getElementById('goalsList').innerHTML = goals.map((g, i) => {
+    let current = 0, target = 0, label = '';
+    
+    if (g.type === 'set') {
+      const setCards = allCards.filter(c => c.setId === g.target);
+      target = setCards.length;
+      current = setCards.filter(c => collIds.includes(c.id)).length;
+      label = `Complete ${g.target}`;
+    } else if (g.type === 'value') {
+      target = parseFloat(g.target);
+      const getPrice = c => c.pricing?.usd || c.pricing?.tcgplayer?.normal?.marketPrice || 0;
+      current = allCards.filter(c => collIds.includes(c.id)).reduce((sum, c) => sum + getPrice(c), 0);
+      label = `Reach $${target} value`;
+    } else if (g.type === 'count') {
+      target = parseInt(g.target);
+      current = collIds.length;
+      label = `Collect ${target} cards`;
+    }
+    
+    const pct = Math.min(100, (current / target) * 100);
+    const done = pct >= 100;
+    
+    return `
+      <div class="goal-card" style="${done ? 'border:2px solid #10b981' : ''}">
+        <div class="goal-header">
+          <div class="goal-title">${done ? '✅ ' : ''}${label}</div>
+          <button class="goal-delete" onclick="deleteGoal(${i})">🗑️</button>
+        </div>
+        <div class="goal-progress"><div class="goal-fill" style="width:${pct}%"></div></div>
+        <div class="goal-stats">${current} / ${target} (${pct.toFixed(0)}%)</div>
+      </div>
+    `;
+  }).join('');
+}
+
+function addGoal() {
+  const type = document.getElementById('goalType').value;
+  const target = document.getElementById('goalTarget').value.trim();
+  if (!target) return;
+  
+  const goals = JSON.parse(localStorage.getItem('tcg_goals') || '[]');
+  goals.push({ type, target });
+  localStorage.setItem('tcg_goals', JSON.stringify(goals));
+  document.getElementById('goalTarget').value = '';
+  renderGoals();
+}
+
+function deleteGoal(idx) {
+  const goals = JSON.parse(localStorage.getItem('tcg_goals') || '[]');
+  goals.splice(idx, 1);
+  localStorage.setItem('tcg_goals', JSON.stringify(goals));
+  renderGoals();
+}
+
+init();
+</script>
+</body>
+</html>
