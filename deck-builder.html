@@ -110,6 +110,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="deck-actions">
       <button class="btn-save" onclick="saveDeck()">💾 Save</button>
       <button class="btn-share" onclick="shareDeck()">🔗 Share</button>
+      <button class="btn-share" onclick="clearDeck()" style="background:#dc2626">🗑️ Clear</button>
       <button class="btn-share" onclick="importDeckText()" style="background:#f59e0b">📥 Import</button>
       <button class="btn-share" onclick="exportDeckText()" style="background:#6366f1">📋 Copy List</button>
       <button class="btn-clear" onclick="clearDeck()">🗑️ Clear</button>
@@ -280,6 +281,12 @@ function clearDeck() {
 function saveDeck() {
   localStorage.setItem('op_deck', JSON.stringify(deck));
   alert('Deck saved!');
+}
+
+function clearDeck() {
+  if (!confirm("Clear entire deck?")) return;
+  deck = { leader: null, cards: {} };
+  renderDeck();
 }
 
 function importDeckText() {
