@@ -103,6 +103,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="curve-bars" id="curveBars"></div>
       <div class="curve-labels"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5+</span></div>
     </div>
+    <div class="color-dist" style="margin-top:15px;padding-top:15px;border-top:1px solid #eee">
+      <h3 style="font-size:.85em;color:#666;margin-bottom:8px">Colors</h3>
+      <div id="colorDist" style="display:flex;gap:5px;flex-wrap:wrap"></div>
+    </div>
     <div class="deck-actions">
       <button class="btn-save" onclick="saveDeck()">💾 Save</button>
       <button class="btn-share" onclick="shareDeck()">🔗 Share</button>
@@ -238,6 +242,18 @@ function renderDeck() {
     `<div class="curve-bar" style="height:${c/maxCost*100}%" title="${c}"></div>`
   ).join('');
   
+  // Color distribution
+  const colors = {};
+  for (const [id, qty] of cardEntries) {
+    const card = allCards.find(c => c.id === id);
+    const color = card?.color || "Unknown";
+    colors[color] = (colors[color] || 0) + qty;
+  }
+  const colorMap = {Red:"#dc2626",Blue:"#2563eb",Green:"#16a34a",Purple:"#9333ea",Black:"#1f2937",Yellow:"#eab308"};
+  document.getElementById("colorDist").innerHTML = Object.entries(colors).map(([c,n]) => 
+    `<span style="background:${colorMap[c]||"#666"};color:#fff;padding:3px 8px;border-radius:4px;font-size:.8em">${c}: ${n}</span>`
+  ).join("");
+
   // Auto-save
   localStorage.setItem('op_deck', JSON.stringify(deck));
 }
