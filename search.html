@@ -258,54 +258,59 @@ const rates = { JPY: 1, USD: 0.0067, EUR: 0.0062 };
 
 // Auth state
 let currentUser = null;
-let userCollection = {};
-let userWishlist = {};
-let userTradelist = {};
+let userCollection = {}; // Single source of truth - inventory with list flags
 
-// Collection Store (localStorage + Firestore when logged in)
+// Collection Store - Flag-based architecture (unified with collection.html)
+// Cards stored in inventory with lists.wishlist/lists.tradelist flags
 const collectionStore = {
-  _localKey(list) { return `tcg_${list}`; },
-  _local(list = 'inventory') { return JSON.parse(localStorage.getItem(this._localKey(list)) || '{}'); },
-  _saveLocal(list, data) { localStorage.setItem(this._localKey(list), JSON.stringify(data)); },
-  _getStore(list) {
-    if (list === 'wishlist') return userWishlist;
-    if (list === 'tradelist') return userTradelist;
-    return userCollection;
-  },
-  _setStore(list, data) {
-    if (list === 'wishlist') userWishlist = data;
-    else if (list === 'tradelist') userTradelist = data;
-    else userCollection = data;
-  },
+  // localStorage uses single inventory key
+  _local() { return JSON.parse(localStorage.getItem('tcg_inventory') || '{}'); },
+  _saveLocal(data) { localStorage.setItem('tcg_inventory', JSON.stringify(data)); },
   
   async add(cardId, list = 'inventory') {
+    if (!userCollection[cardId]) {
+      userCollection[cardId] = { qty: 1, addedAt: Date.now(), lists: {} };
+    }
+    if (list !== 'inventory') {
+      userCollection[cardId].lists = userCollection[cardId].lists || {};
+      userCollection[cardId].lists[list] = true;
+    }
+    
     if (currentUser) {
-      const store = this._getStore(list);
-      store[cardId] = true;
-      await db.collection('users').doc(currentUser.uid).collection(list).doc(cardId).set({ owned: true, addedAt: Date.now() });
+      await db.collection('users').doc(currentUser.uid).collection('inventory').doc(cardId).set(userCollection[cardId], { merge: true });
     } else {
-      const d = this._local(list); d[cardId] = true; this._saveLocal(list, d);
+      this._saveLocal(userCollection);
     }
     this._updateCount();
   },
   
   async remove(cardId, list = 'inventory') {
-    if (currentUser) {
-      const store = this._getStore(list);
-      delete store[cardId];
-      await db.collection('users').doc(currentUser.uid).collection(list).doc(cardId).delete();
+    if (list === 'inventory') {
+      // Remove from inventory entirely
+      delete userCollection[cardId];
+      if (currentUser) {
+        await db.collection('users').doc(currentUser.uid).collection('inventory').doc(cardId).delete();
+      }
     } else {
-      const d = this._local(list); delete d[cardId]; this._saveLocal(list, d);
+      // Just remove the list flag
+      if (userCollection[cardId]?.lists) {
+        userCollection[cardId].lists[list] = false;
+      }
+      if (currentUser && userCollection[cardId]) {
+        await db.collection('users').doc(currentUser.uid).collection('inventory').doc(cardId).update({ lists: userCollection[cardId].lists });
+      }
     }
+    if (!currentUser) this._saveLocal(userCollection);
     this._updateCount();
   },
   
   has(cardId, list = 'inventory') {
-    return currentUser ? !!this._getStore(list)[cardId] : !!this._local(list)[cardId];
+    if (list === 'inventory') return !!userCollection[cardId];
+    return !!(userCollection[cardId]?.lists?.[list]);
   },
   
   inAnyList(cardId) {
-    return this.has(cardId, 'inventory') || this.has(cardId, 'wishlist') || this.has(cardId, 'tradelist');
+    return !!userCollection[cardId];
   },
   
   async toggle(cardId, list = 'inventory') {
@@ -314,11 +319,17 @@ const collectionStore = {
   },
   
   count(list = 'inventory') {
-    return currentUser ? Object.keys(this._getStore(list)).length : Object.keys(this._local(list)).length;
+    if (list === 'inventory') return Object.keys(userCollection).length;
+    return Object.values(userCollection).filter(c => c.lists?.[list]).length;
   },
   
   getAll(list = 'inventory') {
-    return currentUser ? this._getStore(list) : this._local(list);
+    if (list === 'inventory') return userCollection;
+    const filtered = {};
+    for (const [id, card] of Object.entries(userCollection)) {
+      if (card.lists?.[list]) filtered[id] = card;
+    }
+    return filtered;
   },
   
   _updateCount() { document.getElementById('coll-count').textContent = this.count('inventory'); }
@@ -339,58 +350,90 @@ function signOut() {
 
 async function loadUserCollection(uid) {
   userCollection = {};
-  userWishlist = {};
-  userTradelist = {};
   
-  const [inv, wish, trade] = await Promise.all([
-    db.collection('users').doc(uid).collection('inventory').get(),
-    db.collection('users').doc(uid).collection('wishlist').get(),
-    db.collection('users').doc(uid).collection('tradelist').get()
-  ]);
-  
-  inv.forEach(doc => { userCollection[doc.id] = true; });
-  wish.forEach(doc => { userWishlist[doc.id] = true; });
-  trade.forEach(doc => { userTradelist[doc.id] = true; });
+  try {
+    // Load from unified inventory collection (new format with flags)
+    const invSnapshot = await db.collection('users').doc(uid).collection('inventory').get();
+    invSnapshot.forEach(doc => { 
+      userCollection[doc.id] = doc.data();
+      // Ensure lists object exists
+      if (!userCollection[doc.id].lists) userCollection[doc.id].lists = {};
+    });
+    
+    // Migration: Also check old separate collections for orphan cards
+    const [wishSnapshot, tradeSnapshot] = await Promise.all([
+      db.collection('users').doc(uid).collection('wishlist').get(),
+      db.collection('users').doc(uid).collection('tradelist').get()
+    ]);
+    
+    let migratedCount = 0;
+    const batch = db.batch();
+    
+    // Migrate wishlist orphans
+    wishSnapshot.forEach(doc => {
+      if (!userCollection[doc.id]) {
+        // Orphan card - promote to inventory with wishlist flag
+        userCollection[doc.id] = { qty: 1, addedAt: Date.now(), lists: { wishlist: true } };
+        batch.set(db.collection('users').doc(uid).collection('inventory').doc(doc.id), userCollection[doc.id]);
+        migratedCount++;
+      } else if (!userCollection[doc.id].lists?.wishlist) {
+        // Card exists but missing wishlist flag
+        userCollection[doc.id].lists = userCollection[doc.id].lists || {};
+        userCollection[doc.id].lists.wishlist = true;
+        batch.update(db.collection('users').doc(uid).collection('inventory').doc(doc.id), { lists: userCollection[doc.id].lists });
+        migratedCount++;
+      }
+    });
+    
+    // Migrate tradelist orphans
+    tradeSnapshot.forEach(doc => {
+      if (!userCollection[doc.id]) {
+        userCollection[doc.id] = { qty: 1, addedAt: Date.now(), lists: { tradelist: true } };
+        batch.set(db.collection('users').doc(uid).collection('inventory').doc(doc.id), userCollection[doc.id]);
+        migratedCount++;
+      } else if (!userCollection[doc.id].lists?.tradelist) {
+        userCollection[doc.id].lists = userCollection[doc.id].lists || {};
+        userCollection[doc.id].lists.tradelist = true;
+        batch.update(db.collection('users').doc(uid).collection('inventory').doc(doc.id), { lists: userCollection[doc.id].lists });
+        migratedCount++;
+      }
+    });
+    
+    if (migratedCount > 0) {
+      await batch.commit();
+      console.log(`Migrated ${migratedCount} cards from old format`);
+    }
+  } catch(e) {
+    console.error('Load error:', e);
+    // Fallback to localStorage
+    userCollection = collectionStore._local();
+  }
   
   collectionStore._updateCount();
   renderCards();
 }
 
 async function migrateLocalToCloud(uid) {
-  // Migrate all lists
-  const lists = ['inventory', 'wishlist', 'tradelist'];
-  let totalMigrated = 0;
+  // Migrate localStorage to cloud (unified format)
+  const local = JSON.parse(localStorage.getItem('tcg_inventory') || '{}');
+  const cardIds = Object.keys(local);
+  if (cardIds.length === 0) return;
   
-  for (const list of lists) {
-    const local = JSON.parse(localStorage.getItem(`tcg_${list}`) || '{}');
-    const cardIds = Object.keys(local);
-    if (cardIds.length === 0) continue;
-    
-    const batch = db.batch();
-    const ref = db.collection('users').doc(uid).collection(list);
-    cardIds.forEach(cardId => {
-      batch.set(ref.doc(cardId), { owned: true, addedAt: Date.now(), ...(local[cardId].qty ? {qty: local[cardId].qty} : {}) });
-    });
-    await batch.commit();
-    localStorage.removeItem(`tcg_${list}`);
-    totalMigrated += cardIds.length;
-  }
+  const batch = db.batch();
+  const ref = db.collection('users').doc(uid).collection('inventory');
   
-  // Also migrate old format
-  const oldLocal = JSON.parse(localStorage.getItem('tcg_collection') || '{}');
-  const oldIds = Object.keys(oldLocal);
-  if (oldIds.length > 0) {
-    const batch = db.batch();
-    const ref = db.collection('users').doc(uid).collection('inventory');
-    oldIds.forEach(cardId => {
-      batch.set(ref.doc(cardId), { owned: true, addedAt: Date.now() });
-    });
-    await batch.commit();
-    localStorage.removeItem('tcg_collection');
-    totalMigrated += oldIds.length;
-  }
+  cardIds.forEach(cardId => {
+    const card = local[cardId];
+    batch.set(ref.doc(cardId), {
+      qty: card.qty || 1,
+      addedAt: card.addedAt || Date.now(),
+      lists: card.lists || {}
+    }, { merge: true });
+  });
   
-  if (totalMigrated > 0) showToast(`Migrated ${totalMigrated} cards to cloud`);
+  await batch.commit();
+  localStorage.removeItem('tcg_inventory');
+  showToast(`Migrated ${cardIds.length} cards to cloud`);
 }
 
 // Auth state listener
@@ -407,8 +450,8 @@ auth.onAuthStateChanged(async user => {
       </div>`;
     // Hide "My Collection" filter for logged-in users (they use Collection page)
     collWrap.style.display = 'none';
-    // Migrate local collection if exists
-    const local = localStorage.getItem('tcg_collection');
+    // Migrate local collection if exists (unified format)
+    const local = localStorage.getItem('tcg_inventory');
     if (local && Object.keys(JSON.parse(local)).length > 0) {
       await migrateLocalToCloud(user.uid);
     }
@@ -416,7 +459,7 @@ auth.onAuthStateChanged(async user => {
     updateSaveCloudBtn();
   } else {
     currentUser = null;
-    userCollection = {};
+    userCollection = collectionStore._local();
     container.innerHTML = `
       <button class="auth-btn" onclick="signInWithGoogle()">
         <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="G">
