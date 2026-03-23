@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Deck Builder | Japan TCG Price Guide</title>
+<link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;padding:15px}
+.builder{display:grid;grid-template-columns:1fr 300px;gap:20px;max-width:1200px;margin:0 auto}
+@media(max-width:768px){.builder{grid-template-columns:1fr}}
+
+/* Search panel */
+.search-panel{background:#fff;border-radius:10px;padding:15px}
+.search-panel input{width:100%;padding:12px;border:2px solid #ddd;border-radius:8px;font-size:1em;margin-bottom:10px}
+.search-panel input:focus{border-color:#D70000;outline:none}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}
+.filters select{padding:8px;border:1px solid #ddd;border-radius:6px;font-size:.85em}
+.card-results{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:8px;max-height:500px;overflow-y:auto}
+.card-results img{width:100%;border-radius:4px;cursor:pointer;transition:transform .15s}
+.card-results img:hover{transform:scale(1.05)}
+
+/* Deck panel */
+.deck-panel{background:#fff;border-radius:10px;padding:15px;position:sticky;top:70px}
+.deck-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
+.deck-header h2{font-size:1.1em;margin:0}
+.deck-count{font-size:.9em;color:#666}
+.deck-count.valid{color:#22c55e}
+.deck-count.invalid{color:#ef4444}
+.leader-slot{background:#f5f5f5;border:2px dashed #ddd;border-radius:8px;padding:20px;text-align:center;margin-bottom:15px;min-height:120px}
+.leader-slot img{max-width:100px;border-radius:4px}
+.leader-slot.empty{color:#999}
+.deck-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;max-height:300px;overflow-y:auto}
+.deck-card{position:relative}
+.deck-card img{width:100%;border-radius:3px}
+.deck-card .qty{position:absolute;bottom:2px;right:2px;background:#222;color:#fff;font-size:.7em;padding:1px 5px;border-radius:8px}
+.deck-card .remove{position:absolute;top:0;right:0;background:rgba(0,0,0,0.7);color:#fff;border:none;width:16px;height:16px;border-radius:50%;cursor:pointer;font-size:10px;opacity:0}
+.deck-card:hover .remove{opacity:1}
+
+/* Actions */
+.deck-actions{display:flex;gap:8px;margin-top:15px;flex-wrap:wrap}
+.deck-actions button{flex:1;padding:10px;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+.btn-save{background:#22c55e;color:#fff}
+.btn-clear{background:#ef4444;color:#fff}
+.btn-share{background:#3b82f6;color:#fff}
+
+/* Cost curve */
+.cost-curve{margin-top:15px;padding-top:15px;border-top:1px solid #eee}
+.cost-curve h3{font-size:.85em;color:#666;margin-bottom:8px}
+.curve-bars{display:flex;align-items:flex-end;gap:4px;height:60px}
+.curve-bar{flex:1;background:#D70000;border-radius:2px 2px 0 0;min-height:2px}
+.curve-labels{display:flex;gap:4px;font-size:.7em;color:#666;margin-top:2px}
+.curve-labels span{flex:1;text-align:center}
+</style>
+</head>
+<body>
+<script src="/japan-tcg-price-guide/components/header.js"></script>
+
+<div class="builder">
+  <div class="search-panel">
+    <input type="text" id="search" placeholder="Search cards..." oninput="searchCards()">
+    <div class="filters">
+      <select id="colorFilter" onchange="searchCards()">
+        <option value="">All Colors</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="Purple">Purple</option>
+        <option value="Black">Black</option>
+        <option value="Yellow">Yellow</option>
+      </select>
+      <select id="costFilter" onchange="searchCards()">
+        <option value="">All Costs</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5+</option>
+      </select>
+      <select id="typeFilter" onchange="searchCards()">
+        <option value="">All Types</option>
+        <option value="Leader">Leader</option>
+        <option value="Character">Character</option>
+        <option value="Event">Event</option>
+        <option value="Stage">Stage</option>
+      </select>
+    </div>
+    <div class="card-results" id="results"></div>
+  </div>
+  
+  <div class="deck-panel">
+    <div class="deck-header">
+      <h2>🏴‍☠️ Deck</h2>
+      <span class="deck-count" id="deckCount">0/50</span>
+    </div>
+    <div class="leader-slot empty" id="leaderSlot" onclick="document.getElementById('typeFilter').value='Leader';searchCards()">
+      Click to select Leader
+    </div>
+    <div class="deck-cards" id="deckCards"></div>
+    <div class="cost-curve">
+      <h3>Cost Curve</h3>
+      <div class="curve-bars" id="curveBars"></div>
+      <div class="curve-labels"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5+</span></div>
+    </div>
+    <div class="deck-actions">
+      <button class="btn-save" onclick="saveDeck()">💾 Save</button>
+      <button class="btn-share" onclick="shareDeck()">🔗 Share</button>
+      <button class="btn-clear" onclick="clearDeck()">🗑️ Clear</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const BASE = '/japan-tcg-price-guide';
+let allCards = [];
+let deck = { leader: null, cards: {} }; // cards: { cardId: qty }
+
+async function loadCards() {
+  const data = await fetch(`${BASE}/data/onepiece-cache.json`).then(r => r.json());
+  allCards = [];
+  for (const [setId, cards] of Object.entries(data.sets)) {
+    for (const card of cards) {
+      allCards.push({ ...card, setId });
+    }
+  }
+  searchCards();
+  loadSavedDeck();
+}
+
+function searchCards() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const color = document.getElementById('colorFilter').value;
+  const cost = document.getElementById('costFilter').value;
+  const type = document.getElementById('typeFilter').value;
+  
+  let filtered = allCards.filter(c => {
+    if (q && !c.name?.toLowerCase().includes(q) && !c.id?.toLowerCase().includes(q)) return false;
+    if (color && !c.color?.includes(color)) return false;
+    if (cost) {
+      const cardCost = parseInt(c.cost) || 0;
+      if (cost === '5' && cardCost < 5) return false;
+      if (cost !== '5' && cardCost !== parseInt(cost)) return false;
+    }
+    if (type && c.type !== type) return false;
+    return true;
+  }).slice(0, 50);
+  
+  const results = document.getElementById('results');
+  results.innerHTML = filtered.map(c => {
+    const img = c.imgEn || c.imgJp || c.img || '';
+    const proxy = img.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(img)}&w=150` : img;
+    return `<img src="${proxy}" alt="${c.name}" title="${c.name} (${c.id})" onclick="addCard('${c.id}')">`;
+  }).join('');
+}
+
+function addCard(id) {
+  const card = allCards.find(c => c.id === id);
+  if (!card) return;
+  
+  if (card.type === 'Leader') {
+    deck.leader = card;
+    renderDeck();
+    return;
+  }
+  
+  // Check deck rules
+  const totalCards = Object.values(deck.cards).reduce((a,b) => a+b, 0);
+  if (totalCards >= 50) return alert('Deck is full (50 cards max)');
+  
+  const currentQty = deck.cards[id] || 0;
+  if (currentQty >= 4) return alert('Max 4 copies per card');
+  
+  // Check color matches leader
+  if (deck.leader && card.color) {
+    const leaderColors = deck.leader.color?.split('/') || [];
+    const cardColors = card.color.split('/');
+    if (!cardColors.some(c => leaderColors.includes(c))) {
+      return alert(`Card color must match leader (${deck.leader.color})`);
+    }
+  }
+  
+  deck.cards[id] = currentQty + 1;
+  renderDeck();
+}
+
+function removeCard(id) {
+  if (deck.cards[id]) {
+    deck.cards[id]--;
+    if (deck.cards[id] <= 0) delete deck.cards[id];
+    renderDeck();
+  }
+}
+
+function renderDeck() {
+  // Leader
+  const leaderSlot = document.getElementById('leaderSlot');
+  if (deck.leader) {
+    const img = deck.leader.imgEn || deck.leader.imgJp || deck.leader.img || '';
+    const proxy = img.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(img)}&w=200` : img;
+    leaderSlot.innerHTML = `<img src="${proxy}" alt="${deck.leader.name}"><div style="font-size:.8em;margin-top:5px">${deck.leader.name}</div>`;
+    leaderSlot.classList.remove('empty');
+  } else {
+    leaderSlot.innerHTML = 'Click to select Leader';
+    leaderSlot.classList.add('empty');
+  }
+  
+  // Cards
+  const deckCards = document.getElementById('deckCards');
+  const cardEntries = Object.entries(deck.cards);
+  deckCards.innerHTML = cardEntries.map(([id, qty]) => {
+    const card = allCards.find(c => c.id === id);
+    if (!card) return '';
+    const img = card.imgEn || card.imgJp || card.img || '';
+    const proxy = img.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(img)}&w=100` : img;
+    return `<div class="deck-card">
+      <img src="${proxy}" alt="${card.name}" title="${card.name}">
+      ${qty > 1 ? `<span class="qty">×${qty}</span>` : ''}
+      <button class="remove" onclick="removeCard('${id}')">×</button>
+    </div>`;
+  }).join('');
+  
+  // Count
+  const total = Object.values(deck.cards).reduce((a,b) => a+b, 0);
+  const countEl = document.getElementById('deckCount');
+  countEl.textContent = `${total}/50`;
+  countEl.className = 'deck-count ' + (total === 50 ? 'valid' : 'invalid');
+  
+  // Cost curve
+  const costs = [0,0,0,0,0,0]; // 0,1,2,3,4,5+
+  for (const [id, qty] of cardEntries) {
+    const card = allCards.find(c => c.id === id);
+    const cost = Math.min(parseInt(card?.cost) || 0, 5);
+    costs[cost] += qty;
+  }
+  const maxCost = Math.max(...costs, 1);
+  document.getElementById('curveBars').innerHTML = costs.map(c => 
+    `<div class="curve-bar" style="height:${c/maxCost*100}%" title="${c}"></div>`
+  ).join('');
+  
+  // Auto-save
+  localStorage.setItem('op_deck', JSON.stringify(deck));
+}
+
+function loadSavedDeck() {
+  try {
+    const saved = JSON.parse(localStorage.getItem('op_deck'));
+    if (saved) {
+      deck = saved;
+      renderDeck();
+    }
+  } catch(e) {}
+}
+
+function clearDeck() {
+  if (confirm('Clear deck?')) {
+    deck = { leader: null, cards: {} };
+    renderDeck();
+  }
+}
+
+function saveDeck() {
+  localStorage.setItem('op_deck', JSON.stringify(deck));
+  alert('Deck saved!');
+}
+
+function shareDeck() {
+  const data = { l: deck.leader?.id, c: deck.cards };
+  const encoded = btoa(JSON.stringify(data));
+  const url = `${location.origin}${BASE}/deck-builder.html?d=${encoded}`;
+  navigator.clipboard.writeText(url);
+  alert('Deck URL copied to clipboard!');
+}
+
+// Load shared deck from URL
+const params = new URLSearchParams(location.search);
+if (params.get('d')) {
+  try {
+    const data = JSON.parse(atob(params.get('d')));
+    deck.cards = data.c || {};
+    // Leader will be set after cards load
+    loadCards().then(() => {
+      if (data.l) deck.leader = allCards.find(c => c.id === data.l);
+      renderDeck();
+    });
+  } catch(e) { loadCards(); }
+} else {
+  loadCards();
+}
+</script>
+<footer id="site-footer"></footer>
+<script src="/japan-tcg-price-guide/components/footer.js"></script>
+</body>
+</html>
