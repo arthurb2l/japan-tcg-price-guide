@@ -111,6 +111,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="deck-actions">
       <button class="btn-save" onclick="saveDeck()">💾 Save</button>
       <button class="btn-share" onclick="shareDeck()">🔗 Share</button>
+      <button class="btn-share" onclick="saveDeckAs()" style="background:#059669">💾 Save As</button>
+      <button class="btn-share" onclick="loadSavedDecks()" style="background:#0891b2">📂 Load</button>
       <button class="btn-share" onclick="clearDeck()" style="background:#dc2626">🗑️ Clear</button>
       <button class="btn-share" onclick="importDeckText()" style="background:#f59e0b">📥 Import</button>
       <button class="btn-share" onclick="exportDeckText()" style="background:#6366f1">📋 Copy List</button>
@@ -280,6 +282,29 @@ function loadSavedDeck() {
   } catch(e) {}
 }
 
+function saveDeckAs() {
+  const name = prompt("Deck name:", deck.leader?.name || "My Deck");
+  if (!name) return;
+  const decks = JSON.parse(localStorage.getItem("op_saved_decks") || "{}");
+  decks[name] = JSON.parse(JSON.stringify(deck));
+  localStorage.setItem("op_saved_decks", JSON.stringify(decks));
+  alert(`Deck "${name}" saved!`);
+}
+
+function loadSavedDecks() {
+  const decks = JSON.parse(localStorage.getItem("op_saved_decks") || "{}");
+  const names = Object.keys(decks);
+  if (!names.length) { alert("No saved decks"); return; }
+  const choice = prompt("Saved decks:\n" + names.map((n,i) => `${i+1}. ${n}`).join("\n") + "\n\nEnter number to load:");
+  if (!choice) return;
+  const idx = parseInt(choice) - 1;
+  if (names[idx]) {
+    deck = decks[names[idx]];
+    renderDeck();
+    alert(`Loaded "${names[idx]}"`);
+  }
+}
+
 function clearDeck() {
   if (confirm('Clear deck?')) {
     deck = { leader: null, cards: {} };
@@ -290,6 +315,29 @@ function clearDeck() {
 function saveDeck() {
   localStorage.setItem('op_deck', JSON.stringify(deck));
   alert('Deck saved!');
+}
+
+function saveDeckAs() {
+  const name = prompt("Deck name:", deck.leader?.name || "My Deck");
+  if (!name) return;
+  const decks = JSON.parse(localStorage.getItem("op_saved_decks") || "{}");
+  decks[name] = JSON.parse(JSON.stringify(deck));
+  localStorage.setItem("op_saved_decks", JSON.stringify(decks));
+  alert(`Deck "${name}" saved!`);
+}
+
+function loadSavedDecks() {
+  const decks = JSON.parse(localStorage.getItem("op_saved_decks") || "{}");
+  const names = Object.keys(decks);
+  if (!names.length) { alert("No saved decks"); return; }
+  const choice = prompt("Saved decks:\n" + names.map((n,i) => `${i+1}. ${n}`).join("\n") + "\n\nEnter number to load:");
+  if (!choice) return;
+  const idx = parseInt(choice) - 1;
+  if (names[idx]) {
+    deck = decks[names[idx]];
+    renderDeck();
+    alert(`Loaded "${names[idx]}"`);
+  }
 }
 
 function clearDeck() {
