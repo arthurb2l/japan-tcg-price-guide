@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trade Calculator - Japan TCG Price Guide</title>
+  <link rel="stylesheet" href="base.css">
+  <style>
+    .container{max-width:900px;margin:0 auto;padding:20px}
+    h1{font-size:1.5em;margin-bottom:20px}
+    .trade-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:start}
+    .trade-side{background:#fff;border-radius:12px;padding:20px}
+    .trade-side h2{font-size:1em;margin-bottom:15px;color:#666}
+    .trade-cards{min-height:100px;border:2px dashed #ddd;border-radius:8px;padding:10px}
+    .trade-card{display:flex;align-items:center;gap:10px;padding:8px;background:#f5f5f5;border-radius:6px;margin-bottom:8px}
+    .trade-card img{width:40px;height:56px;object-fit:cover;border-radius:3px}
+    .trade-card .info{flex:1;font-size:.85em}
+    .trade-card .price{font-weight:600;color:#2e7d32}
+    .trade-card .remove{background:none;border:none;cursor:pointer;font-size:1.2em}
+    .trade-total{margin-top:15px;padding-top:15px;border-top:1px solid #eee;font-size:1.2em;font-weight:600}
+    .trade-vs{font-size:2em;color:#ddd;align-self:center}
+    .trade-diff{text-align:center;margin-top:20px;padding:15px;background:#fff;border-radius:12px}
+    .add-card{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;margin-top:10px}
+    @media(max-width:600px){.trade-grid{grid-template-columns:1fr}.trade-vs{display:none}}
+  </style>
+</head>
+<body>
+<header id="site-header"></header>
+<div class="container">
+  <h1>⚖️ Trade Calculator</h1>
+  <div class="trade-grid">
+    <div class="trade-side">
+      <h2>You Give</h2>
+      <div class="trade-cards" id="giveCards"></div>
+      <input type="text" class="add-card" id="giveInput" placeholder="Search card to add..." onkeyup="searchCard(this, 'give')">
+      <div id="giveSuggestions" style="max-height:150px;overflow-y:auto"></div>
+      <div class="trade-total">Total: $<span id="giveTotal">0.00</span></div>
+    </div>
+    <div class="trade-vs">⇄</div>
+    <div class="trade-side">
+      <h2>You Get</h2>
+      <div class="trade-cards" id="getCards"></div>
+      <input type="text" class="add-card" id="getInput" placeholder="Search card to add..." onkeyup="searchCard(this, 'get')">
+      <div id="getSuggestions" style="max-height:150px;overflow-y:auto"></div>
+      <div class="trade-total">Total: $<span id="getTotal">0.00</span></div>
+    </div>
+  </div>
+  <div class="trade-diff" id="tradeDiff">Add cards to compare values</div>
+</div>
+<footer id="site-footer"></footer>
+<script src="/japan-tcg-price-guide/components/header.js"></script>
+<script src="/japan-tcg-price-guide/components/footer.js"></script>
+<script>
+let allCards = [];
+const trade = { give: [], get: [] };
+
+async function init() {
+  const [pk, op] = await Promise.all([
+    fetch('/japan-tcg-price-guide/data/pokemon.json').then(r => r.json()),
+    fetch('/japan-tcg-price-guide/data/onepiece.json').then(r => r.json())
+  ]);
+  allCards = [...pk, ...op];
+}
+
+function getPrice(c) {
+  return c.pricing?.usd || c.pricing?.tcgplayer?.normal?.marketPrice || c.pricing?.tcgplayer?.holofoil?.marketPrice || 0;
+}
+
+function searchCard(input, side) {
+  const q = input.value.toLowerCase();
+  if (q.length < 2) { document.getElementById(side + 'Suggestions').innerHTML = ''; return; }
+  const matches = allCards.filter(c => c.name?.toLowerCase().includes(q) || c.id.toLowerCase().includes(q)).slice(0, 5);
+  document.getElementById(side + 'Suggestions').innerHTML = matches.map(c => 
+    `<div style="padding:8px;cursor:pointer;border-bottom:1px solid #eee" onclick="addCard('${c.id}','${side}')">${c.name} - $${getPrice(c).toFixed(2)}</div>`
+  ).join('');
+}
+
+function addCard(id, side) {
+  const card = allCards.find(c => c.id === id);
+  if (!card) return;
+  trade[side].push(card);
+  document.getElementById(side + 'Input').value = '';
+  document.getElementById(side + 'Suggestions').innerHTML = '';
+  render();
+}
+
+function removeCard(side, idx) {
+  trade[side].splice(idx, 1);
+  render();
+}
+
+function render() {
+  ['give', 'get'].forEach(side => {
+    const total = trade[side].reduce((sum, c) => sum + getPrice(c), 0);
+    document.getElementById(side + 'Total').textContent = total.toFixed(2);
+    document.getElementById(side + 'Cards').innerHTML = trade[side].map((c, i) => `
+      <div class="trade-card">
+        <img src="${c.images?.small || c.image}" alt="${c.name}">
+        <div class="info">${c.name}</div>
+        <div class="price">$${getPrice(c).toFixed(2)}</div>
+        <button class="remove" onclick="removeCard('${side}',${i})">×</button>
+      </div>
+    `).join('') || '<div style="color:#999;text-align:center;padding:20px">Drop cards here</div>';
+  });
+  
+  const giveTotal = trade.give.reduce((sum, c) => sum + getPrice(c), 0);
+  const getTotal = trade.get.reduce((sum, c) => sum + getPrice(c), 0);
+  const diff = getTotal - giveTotal;
+  
+  if (!trade.give.length && !trade.get.length) {
+    document.getElementById('tradeDiff').innerHTML = 'Add cards to compare values';
+  } else if (Math.abs(diff) < 1) {
+    document.getElementById('tradeDiff').innerHTML = '✅ <span style="color:#2e7d32">Fair trade!</span>';
+  } else if (diff > 0) {
+    document.getElementById('tradeDiff').innerHTML = `📈 You gain <span style="color:#2e7d32;font-weight:600">$${diff.toFixed(2)}</span> in value`;
+  } else {
+    document.getElementById('tradeDiff').innerHTML = `📉 You lose <span style="color:#dc2626;font-weight:600">$${Math.abs(diff).toFixed(2)}</span> in value`;
+  }
+}
+
+init();
+</script>
+</body>
+</html>
