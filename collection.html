@@ -87,6 +87,53 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
 .qty-btn{background:rgba(0,0,0,0.7);color:#fff;border:none;width:24px;height:24px;border-radius:4px;cursor:pointer;font-size:14px}
 .qty-btn:hover{background:#444}
 
+/* View toggle */
+.view-toggle{display:flex;gap:5px}
+.view-btn{background:#fff;border:1px solid #ddd;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:.8em}
+.view-btn.active{background:#222;color:#fff;border-color:#222}
+
+/* List view */
+.card-list{display:none}
+.card-list.active{display:block}
+.card-grid.hidden{display:none}
+.card-list table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+.card-list th,.card-list td{padding:10px 12px;text-align:left;border-bottom:1px solid #eee}
+.card-list th{background:#f5f5f5;font-weight:600;font-size:.85em;cursor:pointer}
+.card-list th:hover{background:#eee}
+.card-list tr:hover{background:#f9f9f9}
+.card-list img{width:40px;border-radius:3px}
+.card-list .actions{display:flex;gap:5px}
+.card-list .actions button{background:#fff;border:1px solid #ddd;padding:4px 8px;border-radius:4px;cursor:pointer;font-size:.75em}
+.card-list .actions button:hover{border-color:#888}
+
+/* Card modal */
+.card-modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px}
+.card-modal-overlay.show{display:flex}
+.card-modal{background:#fff;border-radius:12px;max-width:500px;width:100%;max-height:90vh;overflow-y:auto}
+.card-modal-header{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;border-bottom:1px solid #eee}
+.card-modal-header h3{margin:0;font-size:1.1em}
+.card-modal-close{background:none;border:none;font-size:1.5em;cursor:pointer;color:#666}
+.card-modal-body{padding:20px}
+.card-modal-img{text-align:center;margin-bottom:20px}
+.card-modal-img img{max-width:200px;border-radius:8px}
+.card-modal-field{margin-bottom:15px}
+.card-modal-field label{display:block;font-size:.85em;color:#666;margin-bottom:5px}
+.card-modal-field select,.card-modal-field input{width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:.9em}
+.card-modal-field .qty-row{display:flex;align-items:center;gap:10px}
+.card-modal-field .qty-row button{width:36px;height:36px;border:1px solid #ddd;background:#fff;border-radius:6px;font-size:1.2em;cursor:pointer}
+.card-modal-field .qty-row button:hover{background:#f5f5f5}
+.card-modal-field .qty-row span{font-size:1.2em;font-weight:600;min-width:30px;text-align:center}
+.card-modal-lists{display:flex;gap:10px;flex-wrap:wrap}
+.card-modal-lists label{display:flex;align-items:center;gap:6px;padding:8px 12px;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:.85em}
+.card-modal-lists label:has(input:checked){background:#e8f5e9;border-color:#22c55e}
+.card-modal-lists input{margin:0}
+.card-modal-actions{display:flex;gap:10px;margin-top:20px;padding-top:15px;border-top:1px solid #eee}
+.card-modal-actions button{flex:1;padding:12px;border-radius:6px;cursor:pointer;font-size:.9em}
+.card-modal-actions .save-btn{background:#22c55e;color:#fff;border:none}
+.card-modal-actions .save-btn:hover{background:#16a34a}
+.card-modal-actions .delete-btn{background:#fff;color:#ef4444;border:1px solid #ef4444}
+.card-modal-actions .delete-btn:hover{background:#fef2f2}
+
 /* Empty state */
 .empty-state{text-align:center;padding:60px 20px;color:#666}
 .empty-state .icon{font-size:4em;margin-bottom:15px}
@@ -125,6 +172,56 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
 
 <div id="content">
   <div class="loading">Loading collection...</div>
+</div>
+
+<!-- Card Detail Modal -->
+<div class="card-modal-overlay" id="card-modal" onclick="if(event.target===this)closeCardModal()">
+  <div class="card-modal">
+    <div class="card-modal-header">
+      <h3 id="modal-card-name">Card Name</h3>
+      <button class="card-modal-close" onclick="closeCardModal()">×</button>
+    </div>
+    <div class="card-modal-body">
+      <div class="card-modal-img"><img id="modal-card-img" src="" alt=""></div>
+      <div class="card-modal-field">
+        <label>Quantity</label>
+        <div class="qty-row">
+          <button onclick="modalUpdateQty(-1)">−</button>
+          <span id="modal-qty">1</span>
+          <button onclick="modalUpdateQty(1)">+</button>
+        </div>
+      </div>
+      <div class="card-modal-field">
+        <label>Condition</label>
+        <select id="modal-condition" onchange="modalUpdateField('condition',this.value)">
+          <option value="NM">Near Mint (NM)</option>
+          <option value="LP">Lightly Played (LP)</option>
+          <option value="MP">Moderately Played (MP)</option>
+          <option value="HP">Heavily Played (HP)</option>
+          <option value="DMG">Damaged (DMG)</option>
+        </select>
+      </div>
+      <div class="card-modal-field">
+        <label>Language</label>
+        <select id="modal-language" onchange="modalUpdateField('language',this.value)">
+          <option value="JP">Japanese</option>
+          <option value="EN">English</option>
+        </select>
+      </div>
+      <div class="card-modal-field">
+        <label>Lists</label>
+        <div class="card-modal-lists" id="modal-lists"></div>
+      </div>
+      <div class="card-modal-field">
+        <label>Notes</label>
+        <input type="text" id="modal-notes" placeholder="Add notes..." onchange="modalUpdateField('notes',this.value)">
+      </div>
+      <div class="card-modal-actions">
+        <button class="delete-btn" onclick="modalDeleteCard()">🗑️ Remove</button>
+        <button class="save-btn" onclick="closeCardModal()">✓ Done</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -248,6 +345,105 @@ async function cycleCondition(e, cardId) {
   renderCollection();
 }
 
+// Modal functions
+let modalCardId = null;
+let currentView = 'grid';
+
+function openCardModal(cardId) {
+  modalCardId = cardId;
+  const card = allCards.find(c => c.id === cardId);
+  const data = userCollection[cardId] || {};
+  
+  document.getElementById('modal-card-name').textContent = card?.name || cardId;
+  const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
+  const img = proxyImg(card?.imgJp) || (card?.game === 'onepiece' ? proxyImg(card?.img) : card?.image + '/low.webp') || '';
+  document.getElementById('modal-card-img').src = img;
+  document.getElementById('modal-qty').textContent = data.qty || 1;
+  document.getElementById('modal-condition').value = data.condition || 'NM';
+  document.getElementById('modal-language').value = data.language || 'JP';
+  document.getElementById('modal-notes').value = data.notes || '';
+  
+  // Show list checkboxes
+  const listsHtml = listTypes.map(list => {
+    const inList = currentList === list || (currentUser ? false : !!getLocalCollection(list)[cardId]);
+    return `<label><input type="checkbox" ${inList ? 'checked' : ''} onchange="modalToggleList('${list}',this.checked)"> ${listLabels[list]}</label>`;
+  }).join('');
+  document.getElementById('modal-lists').innerHTML = listsHtml;
+  
+  document.getElementById('card-modal').classList.add('show');
+}
+
+function closeCardModal() {
+  document.getElementById('card-modal').classList.remove('show');
+  modalCardId = null;
+}
+
+async function modalUpdateQty(delta) {
+  if (!modalCardId) return;
+  const current = userCollection[modalCardId]?.qty || 1;
+  const newQty = Math.max(1, current + delta);
+  document.getElementById('modal-qty').textContent = newQty;
+  
+  if (currentUser) {
+    userCollection[modalCardId] = {...(userCollection[modalCardId] || {}), qty: newQty};
+    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(modalCardId).update({qty: newQty});
+  } else {
+    const local = getLocalCollection(currentList);
+    local[modalCardId] = {...(local[modalCardId] || {}), qty: newQty};
+    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
+    userCollection = local;
+  }
+}
+
+async function modalUpdateField(field, value) {
+  if (!modalCardId) return;
+  if (currentUser) {
+    userCollection[modalCardId] = {...(userCollection[modalCardId] || {}), [field]: value};
+    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(modalCardId).update({[field]: value});
+  } else {
+    const local = getLocalCollection(currentList);
+    local[modalCardId] = {...(local[modalCardId] || {}), [field]: value};
+    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
+    userCollection = local;
+  }
+}
+
+async function modalToggleList(list, checked) {
+  if (!modalCardId) return;
+  if (checked) {
+    // Add to list
+    if (currentUser) {
+      await db.collection('users').doc(currentUser.uid).collection(list).doc(modalCardId).set({owned: true, addedAt: Date.now()});
+    } else {
+      const local = getLocalCollection(list);
+      local[modalCardId] = {owned: true, addedAt: Date.now()};
+      localStorage.setItem(`tcg_${list}`, JSON.stringify(local));
+    }
+  } else {
+    // Remove from list
+    if (currentUser) {
+      await db.collection('users').doc(currentUser.uid).collection(list).doc(modalCardId).delete();
+    } else {
+      const local = getLocalCollection(list);
+      delete local[modalCardId];
+      localStorage.setItem(`tcg_${list}`, JSON.stringify(local));
+    }
+  }
+}
+
+async function modalDeleteCard() {
+  if (!modalCardId) return;
+  await removeFromCollection(modalCardId);
+  closeCardModal();
+}
+
+function toggleView(view) {
+  currentView = view;
+  document.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.dataset.view === view));
+  document.querySelector('.card-grid')?.classList.toggle('hidden', view === 'list');
+  document.querySelector('.card-list')?.classList.toggle('active', view === 'list');
+}
+
 // Load all cards
 async function loadCards() {
   try {
@@ -305,7 +501,7 @@ function renderCollection() {
     </div>`;
   
   const emptyMessages = {
-    inventory: {icon: '📦', title: 'Your inventory is empty', desc: 'Start adding cards you own by clicking the + button.'},
+    inventory: {icon: '📦', title: 'Your inventory is empty', desc: 'Search for cards to add them to your collection.'},
     wishlist: {icon: '⭐', title: 'Your wishlist is empty', desc: 'Add cards you want to find at flea markets.'},
     tradelist: {icon: '🔄', title: 'Your tradelist is empty', desc: 'Add cards you have available for trade.'}
   };
@@ -317,7 +513,10 @@ function renderCollection() {
         <div class="icon">${msg.icon}</div>
         <h2>${msg.title}</h2>
         <p>${msg.desc}</p>
-        <a href="search.html" class="btn">Browse Cards</a>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+          <a href="search.html" class="btn">🔍 Search Cards</a>
+          <a href="advanced.html" class="btn" style="background:#666">⚙️ Advanced Search</a>
+        </div>
       </div>`;
     return;
   }
@@ -389,28 +588,70 @@ function renderCollection() {
           <option value="set" ${currentSort === 'set' ? 'selected' : ''}>Set</option>
         </select>
       </div>
-      <button class="export-btn" onclick="exportCollection()">📥 Export CSV</button>
+      <div class="view-toggle">
+        <button class="view-btn ${currentView === 'grid' ? 'active' : ''}" data-view="grid" onclick="toggleView('grid')">▦ Grid</button>
+        <button class="view-btn ${currentView === 'list' ? 'active' : ''}" data-view="list" onclick="toggleView('list')">☰ List</button>
+      </div>
+      <button class="export-btn" onclick="exportCollection()">📥 Export</button>
     </div>
     
-    <div class="card-grid">
+    <div class="card-grid ${currentView === 'list' ? 'hidden' : ''}">
       ${filtered.map(c => {
         const qty = getQty(c.id);
         const cond = userCollection[c.id]?.condition || 'NM';
+        const lang = userCollection[c.id]?.language || 'JP';
         return `
-        <div class="card-item" onclick="window.open('search.html?q=${encodeURIComponent(c.id)}','_blank')">
+        <div class="card-item" onclick="openCardModal('${c.id}')">
           <button class="remove-btn" onclick="event.stopPropagation();removeFromCollection('${c.id}')" title="Remove">×</button>
           ${qty > 1 ? `<span class="qty-badge">×${qty}</span>` : ''}
-          <span class="condition-badge ${cond.toLowerCase()}" onclick="cycleCondition(event,'${c.id}')" title="Click to change condition">${cond}</span>
+          <span class="condition-badge ${cond.toLowerCase()}" onclick="event.stopPropagation();cycleCondition(event,'${c.id}')" title="Click to change">${cond}</span>
           <div class="qty-controls" onclick="event.stopPropagation()">
             <button class="qty-btn" onclick="updateQuantity('${c.id}',-1)">−</button>
             <button class="qty-btn" onclick="updateQuantity('${c.id}',1)">+</button>
           </div>
           <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
           <div class="name">${c.name || c.id}</div>
-          <div class="meta">${c.setId} · ${c.rarity || '?'}</div>
+          <div class="meta">${c.setId} · ${c.rarity || '?'} · ${lang}</div>
           <div class="price">${formatPrice(getPrice(c))}${qty > 1 ? ` (×${qty})` : ''}</div>
         </div>`;
       }).join('')}
+    </div>
+    
+    <div class="card-list ${currentView === 'list' ? 'active' : ''}">
+      <table>
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th onclick="sortBy('name')">Name</th>
+            <th onclick="sortBy('set')">Set</th>
+            <th>Qty</th>
+            <th>Cond</th>
+            <th>Lang</th>
+            <th onclick="sortBy('price-high')">Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${filtered.map(c => {
+            const qty = getQty(c.id);
+            const cond = userCollection[c.id]?.condition || 'NM';
+            const lang = userCollection[c.id]?.language || 'JP';
+            return `
+            <tr onclick="openCardModal('${c.id}')" style="cursor:pointer">
+              <td><img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer"></td>
+              <td><strong>${c.name || c.id}</strong><br><small style="color:#666">${c.rarity || '?'}</small></td>
+              <td>${c.setId}</td>
+              <td>${qty}</td>
+              <td><span class="condition-badge ${cond.toLowerCase()}" style="position:static;transform:none">${cond}</span></td>
+              <td>${lang}</td>
+              <td>${formatPrice(getPrice(c))}</td>
+              <td class="actions" onclick="event.stopPropagation()">
+                <button onclick="removeFromCollection('${c.id}')">🗑️</button>
+              </td>
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
     </div>
   `;
 }
@@ -426,12 +667,13 @@ function sortBy(sort) {
 }
 
 function exportCollection() {
-  const rows = [['Card ID', 'Name', 'Set', 'Rarity', 'Game', 'Qty', 'Condition', 'Price USD', 'Total']];
+  const rows = [['Card ID', 'Name', 'Set', 'Rarity', 'Game', 'Qty', 'Condition', 'Language', 'Price USD', 'Total']];
   collectionCards.forEach(c => {
     const qty = userCollection[c.id]?.qty || 1;
     const cond = userCollection[c.id]?.condition || 'NM';
+    const lang = userCollection[c.id]?.language || 'JP';
     const price = getPrice(c);
-    rows.push([c.id, c.name || '', c.setId || '', c.rarity || '', c.game, qty, cond, price?.toFixed(2) || '', price ? (price * qty).toFixed(2) : '']);
+    rows.push([c.id, c.name || '', c.setId || '', c.rarity || '', c.game, qty, cond, lang, price?.toFixed(2) || '', price ? (price * qty).toFixed(2) : '']);
   });
   const csv = rows.map(r => r.map(v => `"${v}"`).join(',')).join('\n');
   const blob = new Blob([csv], {type: 'text/csv'});
