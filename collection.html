@@ -483,15 +483,29 @@ function toggleView(view) {
 async function inlineUpdateField(cardId, field, value) {
   if (!userCollection[cardId]) return;
   userCollection[cardId][field] = value;
-  await saveCollection();
+  
+  if (currentUser) {
+    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(cardId).update({[field]: value});
+  } else {
+    const local = getLocalCollection(currentList);
+    local[cardId] = {...(local[cardId] || {}), [field]: value};
+    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
+  }
 }
 
 async function inlineToggleList(cardId, list) {
   if (!userCollection[cardId]) return;
   if (!userCollection[cardId].lists) userCollection[cardId].lists = {};
   userCollection[cardId].lists[list] = !userCollection[cardId].lists[list];
-  await saveCollection();
-  renderCollection(); // Re-render to update icon state
+  
+  if (currentUser) {
+    await db.collection('users').doc(currentUser.uid).collection(currentList).doc(cardId).update({lists: userCollection[cardId].lists});
+  } else {
+    const local = getLocalCollection(currentList);
+    local[cardId] = {...(local[cardId] || {}), lists: userCollection[cardId].lists};
+    localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
+  }
+  renderCollection();
 }
 
 // Load all cards
