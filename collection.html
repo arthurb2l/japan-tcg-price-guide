@@ -785,6 +785,16 @@ loadCards().then(() => {
   if (authChecked) renderCollection();
 });
 
+// Fallback: if auth takes too long, render with local data
+setTimeout(() => {
+  if (!authChecked) {
+    console.log('Auth timeout, using local collection');
+    authChecked = true;
+    userCollection = getLocalCollection(currentList);
+    if (cardsLoaded) renderCollection();
+  }
+}, 3000);
+
 // Auth will call renderCollection when ready
 </script>
 
