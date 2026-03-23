@@ -49,6 +49,17 @@ footer{text-align:center;color:#999;font-size:.75em;margin-top:auto;padding-top:
 </style>
 <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');</script>
 function randomCard() {
+// Card of the Day - deterministic based on date
+(async function loadCotd() {
+  const today = new Date().toISOString().split("T")[0];
+  const seed = today.split("-").reduce((a,b) => a + parseInt(b), 0);
+  const games = ["pokemon", "onepiece"];
+  const game = games[seed % 2];
+  const res = await fetch("/japan-tcg-price-guide/data/" + game + ".json");
+  const cards = await res.json();
+  const card = cards[seed % cards.length];
+  document.getElementById("cotdCard").innerHTML = `<a href="search.html?game=${game}\&q=${encodeURIComponent(card.id)}"><img src="${card.images?.small || card.image}" style="width:100px;border-radius:6px"><div style="font-size:.8em;margin-top:8px;color:#333">${card.name}</div></a>`;
+})();
   const games = ["pokemon", "onepiece"];
   const game = games[Math.floor(Math.random() * 2)];
   location.href = "search.html?game=" + game + "\&random=1";
@@ -83,6 +94,10 @@ function randomCard() {
   <a href="donate.html">❤️ Support</a>
 </div>
 
+<div id="cotd" style="background:#fff;border-radius:12px;padding:20px;max-width:200px;margin-bottom:20px;text-align:center">
+  <div style="font-size:.9em;color:#666;margin-bottom:10px">✨ Card of the Day</div>
+  <div id="cotdCard"></div>
+</div>
 <div class="recent-cards" id="recentCards" style="display:none">
   <h3>🕐 Recently Viewed</h3>
   <div class="recent-grid" id="recentGrid"></div>
