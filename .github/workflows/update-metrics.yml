@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'data/**'
+      - 'scripts/**'
   schedule:
     - cron: '0 0 * * 0'  # Weekly Sunday midnight UTC
   workflow_dispatch:
