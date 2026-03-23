@@ -301,6 +301,8 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
         <dt>Price</dt><dd id="modal-price"></dd>
         <dt id="modal-jp-price-label" style="display:none">Japan Price</dt>
         <dd id="modal-jp-price" style="display:none"></dd>
+        <dt id="modal-history-label" style="display:none">History</dt>
+        <dd id="modal-history" style="display:none"></dd>
       </dl>
     </div>
   </div>
@@ -1119,7 +1121,44 @@ function showCard(id, isEn) {
     jpLabel.style.display = jpPrice.style.display = 'none';
   }
   
+  showPriceHistory(card.id);
   document.getElementById('modal').classList.add('active');
+}
+
+
+// Price history
+let priceHistory = null;
+async function loadPriceHistory() {
+  if (priceHistory) return;
+  try {
+    const files = await fetch(BASE + "/data/price-history/index.json").then(r => r.json());
+    priceHistory = {};
+    for (const f of files.slice(-7)) { // Last 7 days
+      const data = await fetch(BASE + "/data/price-history/" + f).then(r => r.json());
+      priceHistory[data.date] = { ...data.onepiece, ...data.pokemon };
+    }
+  } catch(e) { priceHistory = {}; }
+}
+
+function showPriceHistory(cardId) {
+  const histLabel = document.getElementById("modal-history-label");
+  const hist = document.getElementById("modal-history");
+  if (!priceHistory || Object.keys(priceHistory).length < 2) {
+    histLabel.style.display = hist.style.display = "none";
+    return;
+  }
+  const dates = Object.keys(priceHistory).sort();
+  const prices = dates.map(d => priceHistory[d][cardId]?.usd || priceHistory[d][cardId]?.eur).filter(Boolean);
+  if (prices.length < 2) {
+    histLabel.style.display = hist.style.display = "none";
+    return;
+  }
+  const first = prices[0], last = prices[prices.length-1];
+  const change = ((last - first) / first * 100).toFixed(1);
+  const arrow = change > 0 ? "↑" : change < 0 ? "↓" : "";
+  const color = change > 0 ? "#22c55e" : change < 0 ? "#ef4444" : "#666";
+  hist.innerHTML = `<span style="color:${color}">${arrow}${Math.abs(change)}% (${dates.length}d)</span>`;
+  histLabel.style.display = hist.style.display = "";
 }
 
 function closeModal() { document.getElementById('modal').classList.remove('active'); }
@@ -1169,6 +1208,7 @@ document.getElementById('modal').addEventListener('click', e => { if (e.target.i
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 loadCards();
+loadPriceHistory();
 collectionStore._updateCount(); // Initialize collection count
 </script>
 <footer id="site-footer"></footer>
