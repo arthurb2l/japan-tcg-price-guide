@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Price Photo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui; max-width: 500px; margin: 0 auto; padding: 15px; background: #f5f5f5; }
+    h1 { font-size: 1.3em; margin-bottom: 5px; }
+    .subtitle { color: #666; margin-bottom: 20px; }
+    .card { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .preview { width: 100%; max-height: 300px; object-fit: contain; border-radius: 8px; display: none; margin-bottom: 15px; }
+    .capture-btn { width: 100%; padding: 40px; border: 2px dashed #ccc; border-radius: 10px; background: #fafafa; cursor: pointer; text-align: center; }
+    .capture-btn:active { background: #f0f0f0; }
+    .capture-btn input { display: none; }
+    .capture-btn .icon { font-size: 2em; }
+    .form-group { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; font-weight: 500; font-size: .9em; }
+    input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }
+    .row { display: flex; gap: 10px; }
+    .row > * { flex: 1; }
+    .geo { font-size: .85em; color: #666; padding: 8px; background: #f0f9ff; border-radius: 6px; }
+    .geo.error { background: #fef2f2; color: #991b1b; }
+    .submit-btn { width: 100%; padding: 15px; background: #2563eb; color: #fff; border: none; border-radius: 8px; font-size: 1em; font-weight: 600; cursor: pointer; }
+    .submit-btn:disabled { background: #94a3b8; }
+    .submit-btn:active:not(:disabled) { background: #1d4ed8; }
+    .status { padding: 12px; border-radius: 8px; margin-top: 15px; display: none; }
+    .status.success { display: block; background: #d1fae5; color: #065f46; }
+    .status.error { display: block; background: #fee2e2; color: #991b1b; }
+    .status.loading { display: block; background: #e0f2fe; color: #0369a1; }
+    .recent { margin-top: 20px; }
+    .recent h3 { font-size: 1em; margin-bottom: 10px; }
+    .recent-item { display: flex; gap: 10px; padding: 10px; background: #fff; border-radius: 8px; margin-bottom: 8px; }
+    .recent-item img { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; }
+    .recent-info { flex: 1; font-size: .85em; }
+  </style>
+</head>
+<body>
+  <h1>📸 Add Price Photo</h1>
+  <p class="subtitle">Snap a price tag at flea markets</p>
+  
+  <div class="card">
+    <img id="preview" class="preview">
+    <label class="capture-btn" id="capture-area">
+      <input type="file" accept="image/*" capture="environment" id="camera" onchange="handlePhoto(this)">
+      <div class="icon">📷</div>
+      <div>Tap to take photo</div>
+    </label>
+  </div>
+  
+  <div class="card">
+    <div class="form-group">
+      <label>Card ID</label>
+      <input type="text" id="card-id" placeholder="OP01-035" autocapitalize="characters">
+    </div>
+    <div class="row">
+      <div class="form-group">
+        <label>Price (¥)</label>
+        <input type="number" id="price" placeholder="500" inputmode="numeric">
+      </div>
+      <div class="form-group">
+        <label>Condition</label>
+        <input type="text" id="condition" placeholder="NM, LP, etc" value="NM">
+      </div>
+    </div>
+    <div id="geo-status" class="geo">📍 Getting location...</div>
+  </div>
+  
+  <button class="submit-btn" id="submit-btn" onclick="submit()" disabled>Upload Price Photo</button>
+  <div id="status" class="status"></div>
+  
+  <div class="recent" id="recent-section" style="display:none">
+    <h3>Recently Added</h3>
+    <div id="recent-list"></div>
+  </div>
+
+  <script>
+    const CLOUD_NAME = 'dpprtiwvb';
+    const UPLOAD_PRESET = 'tcg_prices';
+    
+    let photoFile = null;
+    let coords = null;
+    
+    // Get geolocation on load
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        pos => {
+          coords = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+          document.getElementById('geo-status').textContent = `📍 ${coords.lat.toFixed(4)}, ${coords.lng.toFixed(4)}`;
+          checkReady();
+        },
+        err => {
+          document.getElementById('geo-status').textContent = '📍 Location unavailable (optional)';
+          document.getElementById('geo-status').classList.add('error');
+          checkReady();
+        },
+        { enableHighAccuracy: true, timeout: 10000 }
+      );
+    }
+    
+    function handlePhoto(input) {
+      const file = input.files[0];
+      if (!file) return;
+      
+      // Compress image
+      const reader = new FileReader();
+      reader.onload = e => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          const maxSize = 800;
+          let w = img.width, h = img.height;
+          if (w > h && w > maxSize) { h = h * maxSize / w; w = maxSize; }
+          else if (h > maxSize) { w = w * maxSize / h; h = maxSize; }
+          canvas.width = w;
+          canvas.height = h;
+          canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+          canvas.toBlob(blob => {
+            photoFile = blob;
+            document.getElementById('preview').src = URL.createObjectURL(blob);
+            document.getElementById('preview').style.display = 'block';
+            document.getElementById('capture-area').style.display = 'none';
+            checkReady();
+          }, 'image/jpeg', 0.7);
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+    
+    function checkReady() {
+      const cardId = document.getElementById('card-id').value.trim();
+      const price = document.getElementById('price').value;
+      document.getElementById('submit-btn').disabled = !(photoFile && cardId && price);
+    }
+    
+    document.getElementById('card-id').oninput = checkReady;
+    document.getElementById('price').oninput = checkReady;
+    
+    async function submit() {
+      const btn = document.getElementById('submit-btn');
+      const status = document.getElementById('status');
+      btn.disabled = true;
+      status.className = 'status loading';
+      status.textContent = 'Uploading...';
+      
+      try {
+        // Upload to Cloudinary
+        const formData = new FormData();
+        formData.append('file', photoFile);
+        formData.append('upload_preset', UPLOAD_PRESET);
+        formData.append('folder', 'tcg-prices');
+        
+        const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`, {
+          method: 'POST',
+          body: formData
+        });
+        
+        if (!res.ok) throw new Error('Upload failed');
+        const data = await res.json();
+        
+        // Save to local storage (will sync to JSON later)
+        const cardId = document.getElementById('card-id').value.trim().toUpperCase();
+        const price = parseInt(document.getElementById('price').value);
+        const condition = document.getElementById('condition').value.trim();
+        
+        const entry = {
+          url: data.secure_url,
+          price,
+          condition,
+          coords,
+          date: new Date().toISOString().split('T')[0],
+          addedAt: Date.now()
+        };
+        
+        // Store in localStorage
+        const photos = JSON.parse(localStorage.getItem('price-photos-pending') || '{}');
+        if (!photos[cardId]) photos[cardId] = [];
+        photos[cardId].push(entry);
+        localStorage.setItem('price-photos-pending', JSON.stringify(photos));
+        
+        status.className = 'status success';
+        status.textContent = `✓ Added ${cardId} @ ¥${price.toLocaleString()}`;
+        
+        // Show in recent
+        addToRecent(cardId, entry);
+        
+        // Reset form
+        photoFile = null;
+        document.getElementById('preview').style.display = 'none';
+        document.getElementById('capture-area').style.display = '';
+        document.getElementById('card-id').value = '';
+        document.getElementById('price').value = '';
+        document.getElementById('camera').value = '';
+        
+      } catch(e) {
+        status.className = 'status error';
+        status.textContent = 'Error: ' + e.message;
+        btn.disabled = false;
+      }
+    }
+    
+    function addToRecent(cardId, entry) {
+      const section = document.getElementById('recent-section');
+      const list = document.getElementById('recent-list');
+      section.style.display = '';
+      list.innerHTML = `
+        <div class="recent-item">
+          <img src="${entry.url}">
+          <div class="recent-info">
+            <strong>${cardId}</strong><br>
+            ¥${entry.price.toLocaleString()} · ${entry.condition}<br>
+            <small>${entry.date}</small>
+          </div>
+        </div>
+      ` + list.innerHTML;
+    }
+    
+    // Load recent from localStorage
+    const pending = JSON.parse(localStorage.getItem('price-photos-pending') || '{}');
+    Object.entries(pending).forEach(([cardId, entries]) => {
+      entries.forEach(e => addToRecent(cardId, e));
+    });
+  </script>
+</body>
+</html>

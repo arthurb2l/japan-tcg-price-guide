@@ -2,135 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin - Price Photos</title>
+  <title>Admin - Sync Price Photos</title>
   <style>
-    body { font-family: system-ui; max-width: 600px; margin: 40px auto; padding: 20px; }
-    h1 { font-size: 1.5em; }
-    .form-group { margin-bottom: 15px; }
-    label { display: block; margin-bottom: 5px; font-weight: 500; }
-    input, select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-    button { background: #2563eb; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
-    button:hover { background: #1d4ed8; }
-    .photos { margin-top: 30px; }
-    .photo-item { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; border-radius: 4px; display: flex; gap: 10px; }
-    .photo-item img { width: 80px; height: 80px; object-fit: cover; border-radius: 4px; }
-    .photo-info { flex: 1; }
-    .delete-btn { background: #dc2626; padding: 5px 10px; font-size: .8em; }
-    #status { margin-top: 10px; padding: 10px; border-radius: 4px; display: none; }
-    #status.success { display: block; background: #d1fae5; color: #065f46; }
-    #status.error { display: block; background: #fee2e2; color: #991b1b; }
+    body { font-family: system-ui; max-width: 800px; margin: 40px auto; padding: 20px; }
+    pre { background: #f5f5f5; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: .85em; }
+    button { padding: 10px 20px; background: #2563eb; color: #fff; border: none; border-radius: 6px; cursor: pointer; margin-right: 10px; }
+    .danger { background: #dc2626; }
   </style>
 </head>
 <body>
-  <h1>📸 Admin: Price Photos</h1>
-  <p>Add real Japan flea market prices for cards.</p>
+  <h1>Admin: Sync Price Photos</h1>
+  <p>Pending photos from mobile uploads are stored in localStorage. Copy the JSON below to <code>data/price-photos.json</code> and commit.</p>
   
-  <form id="add-form">
-    <div class="form-group">
-      <label>Card ID (e.g., OP01-035)</label>
-      <input type="text" id="card-id" required placeholder="OP01-035">
-    </div>
-    <div class="form-group">
-      <label>Photo URL</label>
-      <input type="url" id="photo-url" required placeholder="https://...">
-    </div>
-    <div class="form-group">
-      <label>Price (JPY)</label>
-      <input type="number" id="price" required placeholder="500">
-    </div>
-    <div class="form-group">
-      <label>Location</label>
-      <input type="text" id="location" placeholder="Ohi Racecourse Flea Market">
-    </div>
-    <div class="form-group">
-      <label>Date</label>
-      <input type="date" id="date">
-    </div>
-    <button type="submit">Add Photo</button>
-    <div id="status"></div>
-  </form>
+  <button onclick="showJSON()">Show JSON to Copy</button>
+  <button onclick="clearPending()" class="danger">Clear Pending</button>
   
-  <div class="photos">
-    <h2>Existing Photos</h2>
-    <div id="photo-list"></div>
-  </div>
+  <pre id="output">Click "Show JSON" to see pending photos</pre>
   
   <script>
-    let photos = {};
-    
-    async function loadPhotos() {
-      try {
-        const res = await fetch('data/price-photos.json');
-        const data = await res.json();
-        photos = data.photos || {};
-        renderPhotos();
-      } catch(e) { console.log('No photos yet'); }
+    function showJSON() {
+      const pending = JSON.parse(localStorage.getItem('price-photos-pending') || '{}');
+      
+      // Merge with existing format (single photo per card for now)
+      const photos = {};
+      Object.entries(pending).forEach(([cardId, entries]) => {
+        if (entries.length > 0) {
+          const latest = entries[entries.length - 1];
+          photos[cardId] = {
+            url: latest.url,
+            price: latest.price,
+            condition: latest.condition,
+            location: latest.coords ? `${latest.coords.lat.toFixed(4)}, ${latest.coords.lng.toFixed(4)}` : null,
+            date: latest.date
+          };
+        }
+      });
+      
+      document.getElementById('output').textContent = JSON.stringify({ photos }, null, 2);
     }
     
-    function renderPhotos() {
-      const list = document.getElementById('photo-list');
-      const entries = Object.entries(photos);
-      if (!entries.length) {
-        list.innerHTML = '<p style="color:#666">No photos yet.</p>';
-        return;
+    function clearPending() {
+      if (confirm('Clear all pending photos from localStorage?')) {
+        localStorage.removeItem('price-photos-pending');
+        document.getElementById('output').textContent = 'Cleared!';
       }
-      list.innerHTML = entries.map(([id, p]) => `
-        <div class="photo-item">
-          <img src="${p.url}" alt="${id}">
-          <div class="photo-info">
-            <strong>${id}</strong><br>
-            ¥${p.price?.toLocaleString() || '?'} · ${p.location || ''}<br>
-            <small>${p.date || ''}</small>
-          </div>
-          <button class="delete-btn" onclick="deletePhoto('${id}')">Delete</button>
-        </div>
-      `).join('');
     }
-    
-    document.getElementById('add-form').onsubmit = async (e) => {
-      e.preventDefault();
-      const cardId = document.getElementById('card-id').value.trim();
-      const url = document.getElementById('photo-url').value.trim();
-      const price = parseInt(document.getElementById('price').value);
-      const location = document.getElementById('location').value.trim();
-      const date = document.getElementById('date').value;
-      
-      photos[cardId] = { url, price, location, date };
-      
-      // Save to localStorage for now (admin will copy to JSON file)
-      localStorage.setItem('price-photos', JSON.stringify({ photos }));
-      
-      showStatus('Added! Copy JSON from console to data/price-photos.json', 'success');
-      console.log('=== COPY THIS TO data/price-photos.json ===');
-      console.log(JSON.stringify({ photos }, null, 2));
-      
-      renderPhotos();
-      e.target.reset();
-    };
-    
-    function deletePhoto(id) {
-      delete photos[id];
-      localStorage.setItem('price-photos', JSON.stringify({ photos }));
-      showStatus('Deleted! Copy JSON from console', 'success');
-      console.log(JSON.stringify({ photos }, null, 2));
-      renderPhotos();
-    }
-    
-    function showStatus(msg, type) {
-      const el = document.getElementById('status');
-      el.textContent = msg;
-      el.className = type;
-      setTimeout(() => el.className = '', 3000);
-    }
-    
-    // Load from localStorage if exists (for admin session persistence)
-    const saved = localStorage.getItem('price-photos');
-    if (saved) {
-      photos = JSON.parse(saved).photos || {};
-      renderPhotos();
-    }
-    loadPhotos();
   </script>
 </body>
 </html>
