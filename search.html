@@ -284,6 +284,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
         <dt>Rarity</dt><dd id="modal-rarity"></dd>
         <dt>Finish</dt><dd id="modal-finish"></dd>
         <dt id="modal-extra-label" style="display:none"></dt><dd id="modal-extra" style="display:none"></dd>
+        <dt id="modal-effect-label" style="display:none">Effect</dt><dd id="modal-effect" style="display:none;white-space:pre-wrap;font-size:.85em;line-height:1.4"></dd>
         <dt>Price</dt><dd id="modal-price"></dd>
       </dl>
     </div>
@@ -1037,17 +1038,30 @@ function showCard(id, isEn) {
   // Game-specific extra info
   const extraLabel = document.getElementById('modal-extra-label');
   const extra = document.getElementById('modal-extra');
+  const effectLabel = document.getElementById('modal-effect-label');
+  const effect = document.getElementById('modal-effect');
+  
   if (card.game === 'onepiece') {
     extraLabel.textContent = 'Details';
     const parts = [card.type, card.color, card.power ? `${card.power} PWR` : '', card.cost ? `Cost ${card.cost}` : '', card.counter ? `+${card.counter} Counter` : '', card.trait, card.attribute].filter(Boolean);
     extra.textContent = parts.join(' · ');
     extraLabel.style.display = extra.style.display = '';
+    
+    // Show effect text for One Piece cards
+    if (card.effect) {
+      effect.textContent = card.effect;
+      effectLabel.style.display = effect.style.display = '';
+    } else {
+      effectLabel.style.display = effect.style.display = 'none';
+    }
   } else if (card.hp) {
     extraLabel.textContent = 'HP';
     extra.textContent = card.hp + (card.types?.length ? ' · ' + card.types.join('/') : '');
     extraLabel.style.display = extra.style.display = '';
+    effectLabel.style.display = effect.style.display = 'none';
   } else {
     extraLabel.style.display = extra.style.display = 'none';
+    effectLabel.style.display = effect.style.display = 'none';
   }
   
   // Price with variants
