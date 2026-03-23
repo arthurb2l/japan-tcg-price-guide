@@ -1107,7 +1107,18 @@ function showCard(id, isEn) {
   }
   
   // Price with variants
-  let priceHtml = card.pricing ? formatPrice(card) : 'No price data';
+  // Multi-currency price display
+  let priceHtml = "No price data";
+  if (card.pricing) {
+    const usd = card.pricing.usd || card.pricing.tcgplayer?.normal?.marketPrice || card.pricing.tcgplayer?.holofoil?.marketPrice;
+    const eur = card.pricing.eur || card.pricing.cardmarket?.trend;
+    const jpy = usd ? Math.round(usd * 150) : (eur ? Math.round(eur * 162) : null);
+    const parts = [];
+    if (usd) parts.push("$" + usd.toFixed(2));
+    if (eur) parts.push("€" + eur.toFixed(2));
+    if (jpy) parts.push("¥" + jpy.toLocaleString());
+    priceHtml = parts.join(" · ") || "No price data";
+  }
   if (card.variants?.length > 1) {
     priceHtml += '<br><small style="color:#666">';
     priceHtml += card.variants.slice(1).map(v => `${v.label || 'Alt'}: $${v.usd?.toFixed(2) || '?'}`).join(' · ');
