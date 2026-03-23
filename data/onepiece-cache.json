@@ -31,7 +31,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP01-035.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-035_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 3.23,
+          "jpy": 485
+        }
       },
       {
         "id": "OP01-073",
@@ -58,7 +62,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP01-073.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-073_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.39,
+          "jpy": 59
+        }
       },
       {
         "id": "OP03-078",
@@ -84,7 +92,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP03-078.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-078_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.25,
+          "jpy": 188
+        }
       },
       {
         "id": "OP06-101",
@@ -113,7 +125,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-101.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-101_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 3.67,
+          "jpy": 551
+        }
       },
       {
         "id": "OP07-002",
@@ -2964,7 +2980,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP03-112.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-112_p4.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.42,
+          "jpy": 63
+        }
       },
       {
         "id": "OP08-003",
@@ -7757,7 +7777,11 @@
         "effect": "[On Play] If you have 2 or more rested Characters, none of your {ODYSSEY} or {Straw Hat Crew} type Characters can be K.O.'d by effects until the end of your opponent's next turn.",
         "attribute": "Strike",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.25,
+          "jpy": 38
+        }
       },
       {
         "id": "OP09-033-p1",
@@ -10112,7 +10136,11 @@
         "effect": "[Main] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Rest up to 1 of your opponent's Characters with a cost of 5 or less. Then, draw 1 card.",
         "attribute": "",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.04,
+          "jpy": 6
+        }
       },
       {
         "id": "OP09-079-p1",
@@ -10387,7 +10415,11 @@
         "effect": "[Activate: Main] [Once Per Turn] If your Leader has the {Blackbeard Pirates} type, this Character gains [Double Attack], [Banish] or [Blocker] until the end of your opponent's next turn.",
         "attribute": "Special",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.13,
+          "jpy": 20
+        }
       },
       {
         "id": "OP09-084-p1",
@@ -10981,7 +11013,11 @@
         "effect": "[Counter] Negate the effect of up to 1 of your opponent's Leader or Character cards and give that card −4000 power during this turn.",
         "attribute": "",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.1,
+          "jpy": 15
+        }
       },
       {
         "id": "OP09-097-p1",
@@ -11020,7 +11056,11 @@
         "effect": "[Main] If your Leader has the {Blackbeard Pirates} type, negate the effect of up to 1 of your opponent's Characters during this turn. Then, if that Character has a cost of 4 or less, K.O. it.",
         "attribute": "",
         "setId": "OP-09",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.15,
+          "jpy": 23
+        }
       },
       {
         "id": "OP09-098-p1",
@@ -22893,7 +22933,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-119.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-119_p3.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 8.94,
+          "jpy": 1341
+        }
       },
       {
         "id": "OP10-030",
@@ -22919,7 +22963,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP10-030.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP10-030_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.29,
+          "jpy": 194
+        }
       },
       {
         "id": "OP11-058",
@@ -35078,7 +35126,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP01-016.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-016_p8.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 2.57,
+          "jpy": 386
+        }
       },
       {
         "id": "OP01-024",
@@ -35132,7 +35184,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP01-029.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-029_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.5,
+          "jpy": 75
+        }
       },
       {
         "id": "OP01-033",
@@ -35190,7 +35246,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP01-041.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-041_p3.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 7.3,
+          "jpy": 1095
+        }
       },
       {
         "id": "OP01-047",
@@ -35274,7 +35334,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP01-052.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-052_p3.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.1,
+          "jpy": 15
+        }
       },
       {
         "id": "OP01-070",
@@ -35509,7 +35573,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP02-018.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-018_p4.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.25,
+          "jpy": 38
+        }
       },
       {
         "id": "OP02-089",
@@ -35592,7 +35660,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP02-099.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-099_p4.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.4,
+          "jpy": 60
+        }
       },
       {
         "id": "OP02-106",
@@ -35621,7 +35693,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP02-106.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-106_p4.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 3.29,
+          "jpy": 494
+        }
       },
       {
         "id": "OP02-114",
@@ -35676,7 +35752,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP02-117.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-117_p5.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.1,
+          "jpy": 15
+        }
       },
       {
         "id": "OP02-121",
@@ -35816,7 +35896,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP03-057.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-057_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.5,
+          "jpy": 75
+        }
       },
       {
         "id": "OP03-060",
@@ -35901,7 +35985,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP03-089.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-089_p4.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 2.78,
+          "jpy": 417
+        }
       },
       {
         "id": "OP03-094",
@@ -35928,7 +36016,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP03-094.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-094_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.09,
+          "jpy": 14
+        }
       },
       {
         "id": "OP03-108",
@@ -35984,7 +36076,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP03-110.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-110_p3.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.15,
+          "jpy": 23
+        }
       },
       {
         "id": "OP03-113",
@@ -36124,7 +36220,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP03-123.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-123_p4.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 5.24,
+          "jpy": 786
+        }
       },
       {
         "id": "OP04-029",
@@ -36178,7 +36278,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP04-031.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP04-031_p3.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 2.2,
+          "jpy": 330
+        }
       },
       {
         "id": "OP04-032",
@@ -36232,7 +36336,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP04-036.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP04-036_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.04,
+          "jpy": 6
+        }
       },
       {
         "id": "OP04-044",
@@ -36288,7 +36396,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP04-056.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP04-056_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 4.97,
+          "jpy": 746
+        }
       },
       {
         "id": "OP04-089",
@@ -36343,7 +36455,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP04-095.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP04-095_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.09,
+          "jpy": 14
+        }
       },
       {
         "id": "OP04-100",
@@ -36399,7 +36515,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP04-104.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP04-104_p3.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.58,
+          "jpy": 87
+        }
       },
       {
         "id": "OP04-112",
@@ -36453,7 +36573,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-006.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-006_p3.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.37,
+          "jpy": 206
+        }
       },
       {
         "id": "OP05-007",
@@ -36507,7 +36631,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-010.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-010_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.13,
+          "jpy": 20
+        }
       },
       {
         "id": "OP05-015",
@@ -36565,7 +36693,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-034.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-034_p3.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.14,
+          "jpy": 21
+        }
       },
       {
         "id": "OP05-043",
@@ -36592,7 +36724,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-043.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-043_p3.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.66,
+          "jpy": 99
+        }
       },
       {
         "id": "OP05-057",
@@ -36620,7 +36756,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-057.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-057_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.12,
+          "jpy": 18
+        }
       },
       {
         "id": "OP05-069",
@@ -36760,7 +36900,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-082.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-082_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.74,
+          "jpy": 261
+        }
       },
       {
         "id": "OP05-105",
@@ -36815,7 +36959,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-114.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-114_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 4.9,
+          "jpy": 735
+        }
       },
       {
         "id": "OP05-115",
@@ -36898,7 +37046,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-118.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-118_p3.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 5.05,
+          "jpy": 758
+        }
       },
       {
         "id": "OP05-119",
@@ -36930,7 +37082,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-119.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-119_p4.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 14.84,
+          "jpy": 2226
+        }
       },
       {
         "id": "OP06-003",
@@ -37012,7 +37168,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-035.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-035_p3.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 5.53,
+          "jpy": 830
+        }
       },
       {
         "id": "OP06-036",
@@ -37040,7 +37200,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-036.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-036_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1,
+          "jpy": 150
+        }
       },
       {
         "id": "OP06-038",
@@ -37121,7 +37285,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-064.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-064_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.08,
+          "jpy": 12
+        }
       },
       {
         "id": "OP06-065",
@@ -37149,7 +37317,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-065.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-065_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.1,
+          "jpy": 15
+        }
       },
       {
         "id": "OP06-066",
@@ -37204,7 +37376,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-067.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-067_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.12,
+          "jpy": 18
+        }
       },
       {
         "id": "OP06-068",
@@ -37231,7 +37407,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-068.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-068_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.3,
+          "jpy": 45
+        }
       },
       {
         "id": "OP06-069",
@@ -37287,7 +37467,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-079.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-079_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.05,
+          "jpy": 8
+        }
       },
       {
         "id": "OP06-086",
@@ -37341,7 +37525,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-091.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-091_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.25,
+          "jpy": 38
+        }
       },
       {
         "id": "OP06-100",
@@ -37369,7 +37557,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-100.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-100_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.08,
+          "jpy": 12
+        }
       },
       {
         "id": "OP06-106",
@@ -37425,7 +37617,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-110.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-110_p3.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 7.59,
+          "jpy": 1139
+        }
       },
       {
         "id": "OP06-114",
@@ -39525,7 +39721,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP02-005.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-005_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.13,
+          "jpy": 20
+        }
       },
       {
         "id": "OP02-068",
@@ -39578,7 +39778,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP03-008.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-008_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.43,
+          "jpy": 65
+        }
       },
       {
         "id": "OP03-044",
@@ -39630,7 +39834,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP03-048.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-048_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.65,
+          "jpy": 248
+        }
       },
       {
         "id": "OP03-072",
@@ -39707,7 +39915,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP04-016.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP04-016_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 2.17,
+          "jpy": 326
+        }
       },
       {
         "id": "OP04-077",
@@ -39733,7 +39945,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP04-077.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP04-077_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.09,
+          "jpy": 14
+        }
       },
       {
         "id": "OP04-083",
@@ -39788,7 +40004,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP04-096.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP04-096_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.49,
+          "jpy": 74
+        }
       },
       {
         "id": "OP05-004",
@@ -39840,7 +40060,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-021.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-021_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.5,
+          "jpy": 75
+        }
       },
       {
         "id": "OP05-030",
@@ -39920,7 +40144,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-037.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-037_r1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.29,
+          "jpy": 44
+        }
       },
       {
         "id": "OP05-052",
@@ -39946,7 +40174,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-052.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-052_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.06,
+          "jpy": 9
+        }
       },
       {
         "id": "OP05-077",
@@ -40028,7 +40260,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-097.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-097_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.1,
+          "jpy": 15
+        }
       },
       {
         "id": "OP05-102",
@@ -40081,7 +40317,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-007.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-007_r1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 2.6,
+          "jpy": 390
+        }
       },
       {
         "id": "OP06-044",
@@ -40134,7 +40374,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-047.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-047_r1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 3.35,
+          "jpy": 503
+        }
       },
       {
         "id": "OP06-049",
@@ -40215,7 +40459,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-058.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-058_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 2.89,
+          "jpy": 434
+        }
       },
       {
         "id": "OP06-059",
@@ -40270,7 +40518,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-063.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-063_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.13,
+          "jpy": 20
+        }
       },
       {
         "id": "OP06-073",
@@ -40296,7 +40548,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-073.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-073_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.09,
+          "jpy": 14
+        }
       },
       {
         "id": "OP06-076",
@@ -40349,7 +40605,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-078.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-078_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.12,
+          "jpy": 18
+        }
       },
       {
         "id": "OP06-107",
@@ -40457,7 +40717,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-119.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-119_p3.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 6.61,
+          "jpy": 992
+        }
       },
       {
         "id": "OP07-014",
@@ -40510,7 +40774,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP07-015.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-015_r1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.24,
+          "jpy": 186
+        }
       },
       {
         "id": "OP07-017",
@@ -40570,7 +40838,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP07-021.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-021_p8.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 4.98,
+          "jpy": 747
+        }
       },
       {
         "id": "OP07-026",
@@ -40622,7 +40894,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP07-029.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-029_r1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.3,
+          "jpy": 195
+        }
       },
       {
         "id": "OP07-031",
@@ -40649,7 +40925,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP07-031.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-031_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.05,
+          "jpy": 158
+        }
       },
       {
         "id": "OP07-040",
@@ -40703,7 +40983,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP07-056.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-056_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.69,
+          "jpy": 254
+        }
       },
       {
         "id": "OP07-064",
@@ -40755,7 +41039,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP07-076.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-076_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 4.8,
+          "jpy": 720
+        }
       },
       {
         "id": "OP07-107",
@@ -40810,7 +41098,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP07-109.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-109_r1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 4,
+          "jpy": 600
+        }
       },
       {
         "id": "OP07-114",
@@ -40863,7 +41155,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP07-118.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-118_r1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 3.16,
+          "jpy": 474
+        }
       },
       {
         "id": "OP07-119",
@@ -40944,7 +41240,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP08-067.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-067_r1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.59,
+          "jpy": 239
+        }
       },
       {
         "id": "OP08-074",
@@ -41048,7 +41348,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP08-099.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-099_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 4.13,
+          "jpy": 620
+        }
       },
       {
         "id": "OP08-118",
@@ -41270,7 +41574,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-027.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-027_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 30.34,
+          "jpy": 4551
+        }
       },
       {
         "id": "OP09-033",
@@ -41537,7 +41845,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-077.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-077_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 7.5,
+          "jpy": 1125
+        }
       },
       {
         "id": "OP09-078",
@@ -41590,7 +41902,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-079.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-079_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.04,
+          "jpy": 6
+        }
       },
       {
         "id": "OP09-084",
@@ -41673,7 +41989,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-093.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-093_r1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 1.34,
+          "jpy": 201
+        }
       },
       {
         "id": "OP09-096",
@@ -41725,7 +42045,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP09-097.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-097_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.1,
+          "jpy": 15
+        }
       },
       {
         "id": "OP09-098",
@@ -41777,7 +42101,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP10-011.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP10-011_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 4,
+          "jpy": 600
+        }
       },
       {
         "id": "OP10-018",
@@ -41829,7 +42157,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP10-032.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP10-032_r1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 3.25,
+          "jpy": 488
+        }
       },
       {
         "id": "OP10-046",
@@ -41881,7 +42213,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP10-079.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP10-079_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.24,
+          "jpy": 36
+        }
       },
       {
         "id": "OP10-095",
@@ -41933,7 +42269,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP10-105.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP10-105_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.04,
+          "jpy": 6
+        }
       },
       {
         "id": "OP10-108",
@@ -41985,7 +42325,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP10-109.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP10-109_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.99,
+          "jpy": 149
+        }
       },
       {
         "id": "OP10-112",
@@ -42038,7 +42382,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP10-114.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP10-114_p1.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.25,
+          "jpy": 38
+        }
       },
       {
         "id": "OP10-119",
@@ -44307,7 +44655,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP05-022.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-022_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.15,
+          "jpy": 23
+        }
       },
       {
         "id": "OP05-060",
@@ -44387,7 +44739,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-001.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-001_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.18,
+          "jpy": 27
+        }
       },
       {
         "id": "OP06-020",
@@ -44413,7 +44769,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-020.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-020_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.13,
+          "jpy": 20
+        }
       },
       {
         "id": "OP06-021",
@@ -44466,7 +44826,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-022.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-022_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.5,
+          "jpy": 75
+        }
       },
       {
         "id": "OP06-042",
@@ -44492,7 +44856,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP06-042.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP06-042_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.31,
+          "jpy": 47
+        }
       },
       {
         "id": "OP06-080",
@@ -44544,7 +44912,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP07-001.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-001_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.19,
+          "jpy": 29
+        }
       },
       {
         "id": "OP07-019",
@@ -44571,7 +44943,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP07-019.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-019_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 3.86,
+          "jpy": 579
+        }
       },
       {
         "id": "OP07-038",
@@ -44597,7 +44973,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP07-038.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-038_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.74,
+          "jpy": 111
+        }
       },
       {
         "id": "OP07-059",
@@ -44623,7 +45003,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP07-059.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-059_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 6.5,
+          "jpy": 975
+        }
       },
       {
         "id": "OP07-079",
@@ -44649,7 +45033,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP07-079.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-079_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.14,
+          "jpy": 21
+        }
       },
       {
         "id": "OP07-097",
@@ -44701,7 +45089,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP08-001.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-001_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.29,
+          "jpy": 44
+        }
       },
       {
         "id": "OP08-002",
@@ -44727,7 +45119,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP08-002.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-002_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.15,
+          "jpy": 23
+        }
       },
       {
         "id": "OP08-021",
@@ -44753,7 +45149,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP08-021.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-021_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.44,
+          "jpy": 66
+        }
       },
       {
         "id": "OP08-057",
@@ -44831,7 +45231,11 @@
         "source": "nemesis312/OnePieceTCGEngCardList",
         "imgJp": "https://www.onepiece-cardgame.com/images/cardlist/card/OP08-098.png",
         "imgEn": "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-098_p2.png?260130",
-        "finish": "regular"
+        "finish": "regular",
+        "pricing": {
+          "usd": 0.44,
+          "jpy": 66
+        }
       },
       {
         "id": "EB01-001",
