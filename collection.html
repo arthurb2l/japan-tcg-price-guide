@@ -297,13 +297,19 @@ auth.onAuthStateChanged(async user => {
       </button>`;
   }
   authChecked = true;
-  if (cardsLoaded) renderCollection();
+  renderIfReady();
 });
 
 async function loadUserCollection(uid) {
-  userCollection = {};
-  const snapshot = await db.collection('users').doc(uid).collection(currentList).get();
-  snapshot.forEach(doc => { userCollection[doc.id] = doc.data(); });
+  try {
+    userCollection = {};
+    const snapshot = await db.collection('users').doc(uid).collection(currentList).get();
+    snapshot.forEach(doc => { userCollection[doc.id] = doc.data(); });
+    console.log(`Loaded ${Object.keys(userCollection).length} cards from Firestore`);
+  } catch(e) {
+    console.error('Firestore load error:', e);
+    userCollection = getLocalCollection(currentList); // Fallback to local
+  }
 }
 
 function switchList(list) {
@@ -780,9 +786,15 @@ if (params.get('list') && listTypes.includes(params.get('list'))) {
 let cardsLoaded = false;
 let authChecked = false;
 
+function renderIfReady() {
+  if (cardsLoaded && authChecked) {
+    renderCollection();
+  }
+}
+
 loadCards().then(() => {
   cardsLoaded = true;
-  if (authChecked) renderCollection();
+  renderIfReady();
 });
 
 // Fallback: if auth takes too long, render with local data
@@ -790,12 +802,14 @@ setTimeout(() => {
   if (!authChecked) {
     console.log('Auth timeout, using local collection');
     authChecked = true;
-    userCollection = getLocalCollection(currentList);
-    if (cardsLoaded) renderCollection();
+    if (!currentUser) {
+      userCollection = getLocalCollection(currentList);
+    }
+    renderIfReady();
   }
 }, 3000);
 
-// Auth will call renderCollection when ready
+// Auth will call renderIfReady when ready
 </script>
 
 <footer id="site-footer"></footer>
