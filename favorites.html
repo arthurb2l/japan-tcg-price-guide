@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Favorites - Japan TCG Price Guide</title>
+  <link rel="stylesheet" href="base.css">
+  <style>
+    .container{max-width:900px;margin:0 auto;padding:20px}
+    h1{font-size:1.5em;margin-bottom:20px}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:10px}
+    .card-tile{background:#fff;border-radius:8px;overflow:hidden;text-decoration:none}
+    .card-tile img{width:100%;aspect-ratio:5/7;object-fit:cover}
+    .card-tile .name{padding:8px;font-size:.75em;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .empty{text-align:center;padding:40px;color:#666}
+  </style>
+</head>
+<body>
+<header id="site-header"></header>
+<div class="container">
+  <h1>❤️ My Favorites</h1>
+  <div id="cardGrid" class="card-grid"></div>
+</div>
+<footer id="site-footer"></footer>
+<script src="/japan-tcg-price-guide/components/header.js"></script>
+<script src="/japan-tcg-price-guide/components/footer.js"></script>
+<script>
+async function loadFavorites() {
+  const favs = JSON.parse(localStorage.getItem("tcg_favorites") || "[]");
+  if (!favs.length) {
+    document.getElementById("cardGrid").innerHTML = '<div class="empty">No favorites yet.<br><br>Click ❤️ on any card to add it here.</div>';
+    return;
+  }
+  
+  const [pkRes, opRes] = await Promise.all([
+    fetch('/japan-tcg-price-guide/data/pokemon.json'),
+    fetch('/japan-tcg-price-guide/data/onepiece.json')
+  ]);
+  const allCards = [...await pkRes.json(), ...await opRes.json()];
+  const cardMap = Object.fromEntries(allCards.map(c => [c.id, c]));
+  
+  document.getElementById("cardGrid").innerHTML = favs.map(id => {
+    const c = cardMap[id];
+    if (!c) return '';
+    return `<a href="search.html?game=${c.game}&q=${encodeURIComponent(id)}" class="card-tile">
+      <img src="${c.images?.small || c.image}" alt="${c.name}">
+      <div class="name">${c.name}</div>
+    </a>`;
+  }).join('');
+}
+loadFavorites();
+</script>
+</body>
+</html>
