@@ -299,6 +299,8 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
         <dt id="modal-extra-label" style="display:none"></dt><dd id="modal-extra" style="display:none"></dd>
         <dt id="modal-effect-label" style="display:none">Effect</dt><dd id="modal-effect" style="display:none;white-space:pre-wrap;font-size:.85em;line-height:1.4"></dd>
         <dt>Price</dt><dd id="modal-price"></dd>
+        <dt id="modal-jp-price-label" style="display:none">Japan Price</dt>
+        <dd id="modal-jp-price" style="display:none"></dd>
       </dl>
     </div>
   </div>
@@ -308,6 +310,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 let allCards = [], filteredCards = [], currentView = 'grid', currency = 'JPY', currentGame = 'pokemon';
 let collFilterActive = false;
 let globalLang = ''; // '', 'jp', or 'en'
+let pricePhotos = {}; // Japan price photos
 const rarityOrder = ['Common','Uncommon','Rare','Double Rare','Ultra Rare','Illustration Rare','Special Art Rare','Hyper Rare','Shiny Rare','ACE SPEC Rare',
   'C','UC','R','SR','SEC','L','SP','P','DON!!','Promo']; // One Piece rarities
 // Static rates - JPY base (primary currency for Japan tourists)
@@ -657,6 +660,13 @@ async function loadCards() {
       const opData = await opRes.json();
       opCards = Object.values(opData.sets).flat().map(c => ({...c, game: 'onepiece'}));
     } catch(e) { console.log('No One Piece data'); }
+    
+    // Load price photos
+    try {
+      const ppRes = await fetch('data/price-photos.json');
+      const ppData = await ppRes.json();
+      pricePhotos = ppData.photos || {};
+    } catch(e) { console.log('No price photos'); }
     
     allCards = [...pokemonCards, ...opCards];
     
@@ -1091,6 +1101,18 @@ function showCard(id, isEn) {
     priceHtml += '</small>';
   }
   document.getElementById('modal-price').innerHTML = priceHtml;
+  
+  // Japan price photo
+  const jpLabel = document.getElementById('modal-jp-price-label');
+  const jpPrice = document.getElementById('modal-jp-price');
+  const photo = pricePhotos[card.id];
+  if (photo) {
+    jpPrice.innerHTML = `<div style="margin-top:8px"><img src="${photo.url}" style="max-width:100%;border-radius:4px;border:1px solid #ddd"><div style="font-size:.8em;color:#666;margin-top:4px">¥${photo.price?.toLocaleString() || '?'} · ${photo.location || ''} · ${photo.date || ''}</div></div>`;
+    jpLabel.style.display = jpPrice.style.display = '';
+  } else {
+    jpLabel.style.display = jpPrice.style.display = 'none';
+  }
+  
   document.getElementById('modal').classList.add('active');
 }
 
