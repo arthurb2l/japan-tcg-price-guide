@@ -238,7 +238,7 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
       </div>
       <div class="card-modal-actions">
         <button class="delete-btn" onclick="modalDeleteCard()">🗑️ Remove</button>
-        <button class="save-btn" onclick="closeCardModal()">✓ Done</button>
+        <button class="save-btn" onclick="saveAndCloseModal()">✓ Save</button>
       </div>
     </div>
   </div>
@@ -307,6 +307,11 @@ async function loadUserCollection(uid) {
 
 function switchList(list) {
   currentList = list;
+  // Update URL without reload
+  const url = new URL(window.location);
+  url.searchParams.set('list', list);
+  history.pushState({}, '', url);
+  
   if (currentUser) {
     loadUserCollection(currentUser.uid).then(renderCollection);
   } else {
@@ -400,20 +405,27 @@ function closeCardModal() {
   modalCardId = null;
 }
 
+function saveAndCloseModal() {
+  closeCardModal();
+  renderCollection(); // Re-render to show updated values
+}
+
 async function modalUpdateQty(delta) {
   if (!modalCardId) return;
   const current = userCollection[modalCardId]?.qty || 1;
   const newQty = Math.max(1, current + delta);
   document.getElementById('modal-qty').textContent = newQty;
   
+  // Update local state first
+  if (!userCollection[modalCardId]) userCollection[modalCardId] = {};
+  userCollection[modalCardId].qty = newQty;
+  
   if (currentUser) {
-    userCollection[modalCardId] = {...(userCollection[modalCardId] || {}), qty: newQty};
     await db.collection('users').doc(currentUser.uid).collection(currentList).doc(modalCardId).update({qty: newQty});
   } else {
     const local = getLocalCollection(currentList);
     local[modalCardId] = {...(local[modalCardId] || {}), qty: newQty};
     localStorage.setItem(`tcg_${currentList}`, JSON.stringify(local));
-    userCollection = local;
   }
 }
 
@@ -750,12 +762,12 @@ if (params.get('list') && listTypes.includes(params.get('list'))) {
   currentList = params.get('list');
 }
 
+// Load local collection immediately for non-logged-in users
+userCollection = getLocalCollection(currentList);
+
 loadCards().then(() => {
-  // Wait for auth state before rendering
-  if (!currentUser) {
-    userCollection = getLocalCollection(currentList);
-    renderCollection();
-  }
+  // Render with whatever collection data we have (local or from auth)
+  renderCollection();
 });
 </script>
 
