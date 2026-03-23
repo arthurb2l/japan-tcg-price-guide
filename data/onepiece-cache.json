@@ -6836,7 +6836,11 @@
         "trait": "Red-Haired Pirates",
         "attribute": "Slash",
         "finish": "parallel-1",
-        "effect": "[Activate: Main] You may place this Character at the bottom of the owner's deck: Give up to 1 of your opponent's Characters −3000 power during this turn."
+        "effect": "[Activate: Main] You may place this Character at the bottom of the owner's deck: Give up to 1 of your opponent's Characters −3000 power during this turn.",
+        "pricing": {
+          "usd": 1.92,
+          "jpy": 288
+        }
       },
       {
         "id": "OP09-009",
@@ -8007,7 +8011,11 @@
         "trait": "ODYSSEY/Straw Hat Crew",
         "attribute": "Strike",
         "finish": "parallel-1",
-        "effect": "[On Play] If you have 2 or more rested Characters, none of your {ODYSSEY} or {Straw Hat Crew} type Characters can be K.O.'d by effects until the end of your opponent's next turn."
+        "effect": "[On Play] If you have 2 or more rested Characters, none of your {ODYSSEY} or {Straw Hat Crew} type Characters can be K.O.'d by effects until the end of your opponent's next turn.",
+        "pricing": {
+          "usd": 0.25,
+          "jpy": 38
+        }
       },
       {
         "id": "OP09-034",
@@ -10557,7 +10565,11 @@
         "trait": "The Four Emperors/Straw Hat Crew",
         "attribute": "",
         "finish": "parallel-1",
-        "effect": "[Main] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Rest up to 1 of your opponent's Characters with a cost of 5 or less. Then, draw 1 card."
+        "effect": "[Main] DON!! −2 (You may return the specified number of DON!! cards from your field to your DON!! deck.): Rest up to 1 of your opponent's Characters with a cost of 5 or less. Then, draw 1 card.",
+        "pricing": {
+          "usd": 0.04,
+          "jpy": 6
+        }
       },
       {
         "id": "OP09-080",
@@ -10852,7 +10864,11 @@
         "trait": "Blackbeard Pirates",
         "attribute": "Special",
         "finish": "parallel-1",
-        "effect": "[Activate: Main] [Once Per Turn] If your Leader has the {Blackbeard Pirates} type, this Character gains [Double Attack], [Banish] or [Blocker] until the end of your opponent's next turn."
+        "effect": "[Activate: Main] [Once Per Turn] If your Leader has the {Blackbeard Pirates} type, this Character gains [Double Attack], [Banish] or [Blocker] until the end of your opponent's next turn.",
+        "pricing": {
+          "usd": 0.13,
+          "jpy": 20
+        }
       },
       {
         "id": "OP09-085",
@@ -11046,7 +11062,11 @@
         "images": [
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-089.png?240831",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-089_p1.png?250502"
-        ]
+        ],
+        "pricing": {
+          "usd": 0.09,
+          "jpy": 14
+        }
       },
       {
         "id": "OP09-090",
@@ -11504,7 +11524,11 @@
         "trait": "Blackbeard Pirates",
         "attribute": "",
         "finish": "parallel-1",
-        "effect": "[Counter] Negate the effect of up to 1 of your opponent's Leader or Character cards and give that card −4000 power during this turn."
+        "effect": "[Counter] Negate the effect of up to 1 of your opponent's Leader or Character cards and give that card −4000 power during this turn.",
+        "pricing": {
+          "usd": 0.1,
+          "jpy": 15
+        }
       },
       {
         "id": "OP09-098",
@@ -11548,7 +11572,11 @@
         "trait": "Blackbeard Pirates",
         "attribute": "",
         "finish": "parallel-1",
-        "effect": "[Main] If your Leader has the {Blackbeard Pirates} type, negate the effect of up to 1 of your opponent's Characters during this turn. Then, if that Character has a cost of 4 or less, K.O. it."
+        "effect": "[Main] If your Leader has the {Blackbeard Pirates} type, negate the effect of up to 1 of your opponent's Characters during this turn. Then, if that Character has a cost of 4 or less, K.O. it.",
+        "pricing": {
+          "usd": 0.15,
+          "jpy": 23
+        }
       },
       {
         "id": "OP09-099",
@@ -11919,7 +11947,11 @@
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-106.png?240831",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-106_p1.png?250502",
           "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-106_p2.png?250502"
-        ]
+        ],
+        "pricing": {
+          "usd": 50.24,
+          "jpy": 7536
+        }
       },
       {
         "id": "OP09-107",
