@@ -706,6 +706,8 @@ function renderCollection() {
         <button class="view-btn ${currentView === 'list' ? 'active' : ''}" data-view="list" onclick="toggleView('list')">☰ List</button>
       </div>
       <button class="export-btn" onclick="exportCollection()">📥 Export</button>
+      <button class="export-btn" onclick="document.getElementById('importFile').click()" style="background:#3b82f6">📤 Import</button>
+      <input type="file" id="importFile" accept=".csv" style="display:none" onchange="importCollection(this)">
     </div>
     
     <div class="card-grid ${currentView === 'list' ? 'hidden' : ''}">
@@ -833,6 +835,35 @@ function exportCollection() {
   a.download = `tcg-${currentList}-${new Date().toISOString().split('T')[0]}.csv`;
   a.click();
   URL.revokeObjectURL(url);
+}
+
+async function importCollection(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const text = await file.text();
+  const lines = text.split("\n").slice(1); // Skip header
+  let imported = 0;
+  for (const line of lines) {
+    if (!line.trim()) continue;
+    const cols = line.match(/(".*?"|[^",]+)(?=,|$)/g)?.map(c => c.replace(/^"|"$/g, ""));
+    if (!cols || !cols[0]) continue;
+    const id = cols[0];
+    const qty = parseInt(cols[5]) || 1;
+    const condition = cols[6] || "NM";
+    const language = cols[7] || "JP";
+    userCollection[id] = { qty, condition, language, addedAt: Date.now() };
+    imported++;
+  }
+  if (currentUser) {
+    for (const [id, data] of Object.entries(userCollection)) {
+      await db.collection("users").doc(currentUser.uid).collection("inventory").doc(id).set(data);
+    }
+  } else {
+    localStorage.setItem("tcg_inventory", JSON.stringify(userCollection));
+  }
+  alert(`Imported ${imported} cards!`);
+  input.value = "";
+  renderCollection();
 }
 
 // Initialize
