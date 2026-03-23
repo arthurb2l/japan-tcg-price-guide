@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>New Releases - Japan TCG Price Guide</title>
+  <link rel="stylesheet" href="base.css">
+  <style>
+    .container{max-width:900px;margin:0 auto;padding:20px}
+    h1{font-size:1.5em;margin-bottom:5px}
+    .subtitle{color:#666;margin-bottom:25px}
+    .set-card{background:#fff;border-radius:12px;padding:20px;margin-bottom:15px}
+    .set-header{display:flex;align-items:center;gap:15px;margin-bottom:15px}
+    .set-logo{width:80px;height:80px;object-fit:contain;background:#f5f5f5;border-radius:8px;padding:5px}
+    .set-info h2{font-size:1.1em;margin-bottom:5px}
+    .set-info p{font-size:.85em;color:#666}
+    .set-cards{display:flex;gap:8px;overflow-x:auto;padding-bottom:5px}
+    .set-cards img{width:70px;height:98px;object-fit:cover;border-radius:4px}
+    .view-all{display:inline-block;margin-top:10px;color:#1976d2;font-size:.9em}
+  </style>
+</head>
+<body>
+<header id="site-header"></header>
+<div class="container">
+  <h1>🆕 New Releases</h1>
+  <p class="subtitle">Recently added sets and expansions</p>
+  <div id="setList"></div>
+</div>
+<footer id="site-footer"></footer>
+<script src="/japan-tcg-price-guide/components/header.js"></script>
+<script src="/japan-tcg-price-guide/components/footer.js"></script>
+<script>
+async function loadSets() {
+  const [pkRes, opRes] = await Promise.all([
+    fetch('/japan-tcg-price-guide/data/pokemon.json'),
+    fetch('/japan-tcg-price-guide/data/onepiece.json')
+  ]);
+  const pk = await pkRes.json();
+  const op = await opRes.json();
+  
+  // Group by set
+  const sets = {};
+  [...pk, ...op].forEach(c => {
+    if (!sets[c.setId]) sets[c.setId] = { id: c.setId, game: c.game, cards: [], logo: c.setLogo };
+    sets[c.setId].cards.push(c);
+  });
+  
+  // Sort by set ID (newer sets have higher numbers typically)
+  const sorted = Object.values(sets).sort((a,b) => b.id.localeCompare(a.id)).slice(0, 10);
+  
+  document.getElementById('setList').innerHTML = sorted.map(s => `
+    <div class="set-card">
+      <div class="set-header">
+        ${s.logo ? `<img src="${s.logo}" class="set-logo" alt="${s.id}">` : '<div class="set-logo" style="display:flex;align-items:center;justify-content:center;font-size:.7em;color:#999">' + s.id + '</div>'}
+        <div class="set-info">
+          <h2>${s.id}</h2>
+          <p>${s.cards.length} cards · ${s.game === 'pokemon' ? 'Pokemon' : 'One Piece'}</p>
+        </div>
+      </div>
+      <div class="set-cards">
+        ${s.cards.slice(0, 8).map(c => `<img src="${c.images?.small || c.image}" alt="${c.name}">`).join('')}
+      </div>
+      <a href="search.html?game=${s.game}&set=${encodeURIComponent(s.id)}" class="view-all">View all ${s.cards.length} cards →</a>
+    </div>
+  `).join('');
+}
+loadSets();
+</script>
+</body>
+</html>
