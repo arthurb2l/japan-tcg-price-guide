@@ -705,6 +705,7 @@ function renderCollection() {
         <button class="view-btn ${currentView === 'grid' ? 'active' : ''}" data-view="grid" onclick="toggleView('grid')">▦ Grid</button>
         <button class="view-btn ${currentView === 'list' ? 'active' : ''}" data-view="list" onclick="toggleView('list')">☰ List</button>
       </div>
+      <button class="export-btn" onclick="shareCollection()" style="background:#10b981">🔗 Share</button>
       <button class="export-btn" onclick="exportCollection()">📥 Export</button>
       <button class="export-btn" onclick="document.getElementById('importFile').click()" style="background:#3b82f6">📤 Import</button>
       <input type="file" id="importFile" accept=".csv" style="display:none" onchange="importCollection(this)">
@@ -819,6 +820,8 @@ function sortBy(sort) {
 }
 
 function exportCollection() {
+
+
   const rows = [['Card ID', 'Name', 'Set', 'Rarity', 'Game', 'Qty', 'Condition', 'Language', 'Price USD', 'Total']];
   collectionCards.forEach(c => {
     const qty = userCollection[c.id]?.qty || 1;
@@ -835,6 +838,18 @@ function exportCollection() {
   a.download = `tcg-${currentList}-${new Date().toISOString().split('T')[0]}.csv`;
   a.click();
   URL.revokeObjectURL(url);
+}
+
+function shareCollection() {
+  const data = { cards: Object.entries(userCollection).map(([id, c]) => ({ id, qty: c.qty })) };
+  const encoded = btoa(JSON.stringify(data));
+  const url = location.origin + location.pathname + "?share=" + encoded;
+  if (navigator.share) {
+    navigator.share({ title: "My TCG Collection", url });
+  } else {
+    navigator.clipboard.writeText(url);
+    alert("Share link copied to clipboard!");
+  }
 }
 
 async function importCollection(input) {
