@@ -65,6 +65,7 @@ async function loadGame(game) {
       <div class="card-price">$${getPrice(c).toFixed(2)}</div>
     </a>
   `).join('');
+  } catch(e) { document.getElementById("cardList").innerHTML = "<p>Error loading</p>"; }
 }
 
 loadGame('pokemon');

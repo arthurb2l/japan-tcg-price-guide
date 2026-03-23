@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     const res = await fetch("/japan-tcg-price-guide/data/" + game + ".json");
     const cards = await res.json();
     const card = cards[seed % cards.length];
-    cotdEl.innerHTML = `<a href="search.html?game=${game}\&q=${encodeURIComponent(card.id)}"><img src="${card.images?.small || card.image}" style="width:100px;border-radius:6px"><div style="font-size:.8em;margin-top:8px;color:#333">${card.name}</div></a>`;
+    cotdEl.innerHTML = `<a href="search.html?game=${game}\&q=${encodeURIComponent(card.id)}"><img src="${card.images?.small || card.image}" alt="${card.name}" style="width:100px;border-radius:6px"><div style="font-size:.8em;margin-top:8px;color:#333">${card.name}</div></a>`;
   } catch(e) { console.error("COTD error:", e); }
 });
 </script>

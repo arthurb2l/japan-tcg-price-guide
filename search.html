@@ -1191,7 +1191,7 @@ function showCard(id, isEn) {
   const jpPrice = document.getElementById('modal-jp-price');
   const photo = pricePhotos[card.id];
   if (photo) {
-    jpPrice.innerHTML = `<div style="margin-top:8px"><img src="${photo.url}" style="max-width:100%;border-radius:4px;border:1px solid #ddd"><div style="font-size:.8em;color:#666;margin-top:4px">¥${photo.price?.toLocaleString() || '?'} · ${photo.location || ''} · ${photo.date || ''}</div></div>`;
+    jpPrice.innerHTML = `<div style="margin-top:8px"><img src="${photo.url}" alt="Price photo" style="max-width:100%;border-radius:4px;border:1px solid #ddd"><div style="font-size:.8em;color:#666;margin-top:4px">¥${photo.price?.toLocaleString() || '?'} · ${photo.location || ''} · ${photo.date || ''}</div></div>`;
     jpLabel.style.display = jpPrice.style.display = '';
   } else {
     jpLabel.style.display = jpPrice.style.display = 'none';
