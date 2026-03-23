@@ -310,6 +310,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
         <div id="similar-grid" style="display:flex;gap:6px;overflow-x:auto"></div>
       </div>
       <div class="modal-actions" style="display:flex;gap:10px;margin-top:15px;flex-wrap:wrap">
+        <button onclick="copyCardInfo()" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">📋 Copy</button>
         <button onclick="setAlert()" class="alert-btn" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">🔔 Set Price Alert</button>
       </div>
     </div>
@@ -1264,6 +1265,15 @@ collectionStore._updateCount(); // Initialize collection count
 
 // Price Alerts
 let currentModalCard = null;
+function copyCardInfo() {
+  if (!currentModalCard) return;
+  const c = currentModalCard;
+  const price = c.pricing?.usd || c.pricing?.tcgplayer?.normal?.marketPrice || "N/A";
+  const text = `${c.name} (${c.id})\nSet: ${c.setId}\nRarity: ${c.rarity || "N/A"}\nPrice: $${typeof price === "number" ? price.toFixed(2) : price}`;
+  navigator.clipboard.writeText(text);
+  alert("Card info copied!");
+}
+
 function setAlert() {
   if (!currentModalCard) return;
   const price = currentModalCard.pricing?.usd || currentModalCard.pricing?.tcgplayer?.normal?.marketPrice;
