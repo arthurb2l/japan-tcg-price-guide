@@ -51,7 +51,7 @@ async function loadData() {
     document.getElementById('list').innerHTML = top20.map((c, i) => `
       <a href="${BASE}/search.html?game=onepiece&q=${encodeURIComponent(c.id)}" class="card-row">
         <span class="rank">#${i+1}</span>
-        <img src="${c.image || ''}" alt="${c.name}" class="card-img" loading="lazy">
+        <img src="${c.img || ''}" alt="${c.name}" class="card-img" loading="lazy">
         <div class="card-info">
           <div class="card-name">${c.name}</div>
           <div class="card-set">${c.id} · ${c.setId}</div>
