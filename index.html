@@ -49,12 +49,6 @@ footer{text-align:center;color:#999;font-size:.75em;margin-top:auto;padding-top:
 </style>
 <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');</script>
 <script>
-function randomCard() {
-  const games = ["pokemon", "onepiece"];
-  const game = games[Math.floor(Math.random() * 2)];
-  location.href = "search.html?game=" + game + "\&random=1";
-}
-
 // Card of the Day - runs after DOM loaded
 document.addEventListener("DOMContentLoaded", async function() {
   const cotdEl = document.getElementById("cotdCard");
@@ -121,7 +115,6 @@ document.addEventListener("DOMContentLoaded", async function() {
 </div>
 
 <a href="test-ocr.html" class="scan-btn" title="Scan Card">📷</a>
-<button onclick="randomCard()" class="scan-btn" title="Random Card" style="background:#6366f1">🎲</button>
 
 <div class="install-prompt" id="install" onclick="installPWA()">
   📱 Install App for Offline Use
