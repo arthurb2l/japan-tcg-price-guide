@@ -79,7 +79,7 @@ body.nav-open { overflow: hidden; }
 /* Search bar */
 .header-search {
   flex: 1;
-  max-width: 300px;
+  max-width: 320px;
   display: flex;
   align-items: center;
   background: #f5f5f5;
@@ -87,11 +87,21 @@ body.nav-open { overflow: hidden; }
   height: 38px;
   overflow: hidden;
 }
+.header-search .game-select {
+  border: none;
+  background: transparent;
+  padding: 8px 4px 8px 10px;
+  font-size: 0.8em;
+  color: #555;
+  cursor: pointer;
+  outline: none;
+  flex-shrink: 0;
+}
 .header-search input {
   flex: 1;
   border: none;
   background: transparent;
-  padding: 8px 12px;
+  padding: 8px 8px;
   font-size: 0.9em;
   outline: none;
   min-width: 0;
@@ -103,6 +113,7 @@ body.nav-open { overflow: hidden; }
   cursor: pointer;
   font-size: 0.9em;
   color: #666;
+  flex-shrink: 0;
 }
 .header-search button:hover { color: #222; }
 
@@ -169,6 +180,7 @@ body.nav-open { overflow: hidden; }
   padding: 8px;
   line-height: 1;
   color: #333;
+  flex-shrink: 0;
 }
 
 /* Mobile nav - slide from left */
@@ -262,30 +274,32 @@ body.nav-open { overflow: hidden; }
 @media (max-width: 768px) {
   .site-header-inner {
     height: 52px;
-    padding: 0 12px;
-    gap: 8px;
+    padding: 0 10px;
+    gap: 6px;
   }
   
   .burger-btn { display: block; }
   .nav-links { display: none; }
   .header-user { display: none; }
-  
-  /* Hide logo text on mobile, keep emoji */
-  .logo-text { display: none; }
   .site-logo { display: none; }
   
-  /* Search takes all remaining space */
+  /* Search: game dropdown + input + button */
   .header-search {
     flex: 1;
     max-width: none;
-    height: 36px;
+    height: 38px;
+  }
+  .header-search .game-select {
+    padding: 8px 2px 8px 8px;
+    font-size: 0.75em;
+    max-width: 80px;
   }
   .header-search input { 
-    padding: 6px 10px; 
+    padding: 8px 6px; 
     font-size: 0.9em; 
   }
   .header-search button { 
-    padding: 6px 10px;
+    padding: 8px 10px;
   }
 }
 
@@ -293,36 +307,4 @@ body.nav-open { overflow: hidden; }
 @media print {
   .site-header, .mobile-nav, .mobile-nav-overlay { display: none !important; }
   body { padding-top: 0; }
-}
-
-/* Mobile search in drawer */
-.mobile-search-section {
-  display: flex;
-  gap: 8px;
-  padding: 12px 15px;
-  border-bottom: 1px solid #eee;
-  background: #f9f9f9;
-}
-.mobile-search-section select {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 0.9em;
-  background: #fff;
-}
-.mobile-search-section input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px 0 0 6px;
-  font-size: 0.9em;
-  min-width: 0;
-}
-.mobile-search-section button {
-  padding: 10px 12px;
-  background: #222;
-  color: #fff;
-  border: none;
-  border-radius: 0 6px 6px 0;
-  cursor: pointer;
 }
