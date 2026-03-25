@@ -19,7 +19,6 @@
   gap: 10px;
 }
 
-/* Add body padding to account for fixed header */
 body { padding-top: 56px; }
 
 .site-logo {
@@ -51,7 +50,6 @@ body { padding-top: 56px; }
 .nav-link:hover { background: #f5f5f5; color: #222; }
 .nav-link.active { background: #222; color: #fff; }
 
-/* Game dropdown */
 .nav-dropdown { position: relative; }
 .nav-dropdown > .nav-link::after { content: ' ▾'; }
 .nav-dropdown-content {
@@ -77,7 +75,7 @@ body { padding-top: 56px; }
 }
 .nav-dropdown-content a:hover { background: #f5f5f5; }
 
-/* Search bar */
+/* Search bar with game toggle */
 .header-search {
   flex: 1;
   max-width: 350px;
@@ -88,15 +86,23 @@ body { padding-top: 56px; }
   padding: 0 5px 0 0;
   height: 40px;
 }
-.header-search select {
-  border: none;
-  background: transparent;
-  padding: 8px 5px 8px 12px;
-  font-size: 0.85em;
-  color: #555;
-  cursor: pointer;
-  outline: none;
+.game-toggle {
+  display: flex;
+  padding: 0 5px 0 8px;
+  gap: 2px;
 }
+.game-btn {
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  opacity: 0.4;
+  transition: opacity 0.15s;
+}
+.game-btn.active { opacity: 1; }
+.game-btn:hover { opacity: 0.8; }
 .header-search input {
   flex: 1;
   border: none;
@@ -106,8 +112,8 @@ body { padding-top: 56px; }
   outline: none;
   min-width: 60px;
 }
-.header-search button {
-  background: #222;
+.header-search button[type="submit"] {
+  background: #666;
   color: #fff;
   border: none;
   width: 32px;
@@ -120,7 +126,7 @@ body { padding-top: 56px; }
   justify-content: center;
   flex-shrink: 0;
 }
-.header-search button:hover { background: #444; }
+.header-search button[type="submit"]:hover { background: #444; }
 
 /* User section */
 .header-user {
@@ -129,7 +135,7 @@ body { padding-top: 56px; }
   flex-shrink: 0;
 }
 .login-btn {
-  background: #222;
+  background: #666;
   color: #fff;
   border: none;
   padding: 8px 14px;
@@ -139,7 +145,6 @@ body { padding-top: 56px; }
   white-space: nowrap;
 }
 .login-btn:hover { background: #444; }
-.theme-toggle { background: none; border: none; font-size: 1.2em; cursor: pointer; padding: 5px; }
 
 .user-avatar {
   width: 32px;
@@ -191,74 +196,97 @@ body { padding-top: 56px; }
 .mobile-nav {
   display: none;
   position: fixed;
-  top: 56px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: #fff;
-  z-index: 999;
+  z-index: 1001;
   overflow-y: auto;
-  padding: 15px;
+  padding: 0;
 }
 .mobile-nav.open { display: block; }
+.mobile-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+}
+.mobile-nav-header button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 5px;
+}
 .mobile-nav a {
   display: block;
-  padding: 15px;
+  padding: 15px 20px;
   color: #222;
   text-decoration: none;
   font-size: 1.1em;
   border-bottom: 1px solid #eee;
 }
 .mobile-nav a:hover { background: #f5f5f5; }
-.mobile-nav .sub { padding-left: 30px; font-size: 1em; color: #555; }
+.mobile-nav .sub { padding-left: 40px; font-size: 1em; color: #555; }
+.mobile-nav-login {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+}
+.mobile-nav-login button {
+  width: 100%;
+  padding: 12px;
+  background: #666;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+}
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .site-header-inner {
-    height: 56px;
-    padding: 0 10px;
-    gap: 8px;
+    height: 52px;
+    padding: 0 8px;
+    gap: 6px;
   }
   
-  /* Show burger, hide desktop nav */
-  .burger-btn { display: block; }
+  .burger-btn { display: block; flex-shrink: 0; }
   .nav-links { display: none; }
+  .site-logo { font-size: 0.9em; padding: 4px 6px; }
   
-  /* Logo smaller */
-  .site-logo { font-size: 0.95em; padding: 5px; }
+  /* Hide login on mobile header - it's in burger menu */
+  .header-user { display: none; }
   
-  /* Search takes remaining space */
+  /* Search compact */
   .header-search {
     flex: 1;
     max-width: none;
     height: 36px;
-    margin: 0 5px;
   }
-  .header-search select { 
-    padding: 6px 2px 6px 10px; 
-    font-size: 0.8em;
-    max-width: 75px;
-  }
+  .game-toggle { padding: 0 4px 0 6px; }
+  .game-btn { padding: 3px 5px; font-size: 0.9em; }
   .header-search input { 
     padding: 6px 8px; 
-    font-size: 0.9em; 
+    font-size: 0.85em; 
   }
-  .header-search button { 
+  .header-search button[type="submit"] { 
     width: 28px; 
     height: 28px; 
-    font-size: 0.8em; 
-  }
-  
-  /* Sign in compact */
-  .login-btn { 
-    padding: 6px 10px; 
     font-size: 0.75em; 
   }
-  .user-avatar { width: 28px; height: 28px; }
 }
 
-/* Very small screens */
 @media (max-width: 380px) {
   .site-logo { display: none; }
-  .header-search select { max-width: 65px; }
+}
+
+/* Print */
+@media print {
+  .site-header, .mobile-nav { display: none !important; }
+  body { padding-top: 0; }
 }

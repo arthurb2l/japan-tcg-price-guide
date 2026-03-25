@@ -4,11 +4,9 @@
   const isPokemon = path.includes('/pokemon/');
   const isOnePiece = path.includes('/onepiece/');
   const isCollection = path.includes('collection');
-  const isDonate = path.includes('donate');
   const base = '/japan-tcg-price-guide/';
   
-  const savedGame = localStorage.getItem('tcg_game');
-  let searchGame = savedGame || (isPokemon ? 'pokemon' : (isOnePiece ? 'onepiece' : 'pokemon'));
+  const savedGame = localStorage.getItem('tcg_game') || 'pokemon';
   
   const headerHTML = `
     <header class="site-header">
@@ -22,7 +20,6 @@
             <div class="nav-dropdown-content">
               <a href="${base}search.html?game=pokemon">🔍 Search</a>
               <a href="${base}pokemon/sets/">Sets</a>
-              <a href="${base}pokemon/cheat-sheet.html">Cheat Sheet</a>
             </div>
           </div>
           <div class="nav-dropdown">
@@ -31,18 +28,17 @@
               <a href="${base}search.html?game=onepiece">🔍 Search</a>
               <a href="${base}onepiece/sets/">Sets</a>
               <a href="${base}deck-builder.html">🃏 Deck Builder</a>
-              <a href="${base}onepiece/cheat-sheet.html">Cheat Sheet</a>
             </div>
           </div>
           <a href="${base}collection.html" class="nav-link ${isCollection ? 'active' : ''}">📦 Collection</a>
         </nav>
         
         <form class="header-search" onsubmit="headerSearch(event)">
-          <select id="headerGameSelect" onchange="saveGamePref(this.value)">
-            <option value="pokemon" ${searchGame === 'pokemon' ? 'selected' : ''}>Pokémon</option>
-            <option value="onepiece" ${searchGame === 'onepiece' ? 'selected' : ''}>One Piece</option>
-          </select>
-          <input type="text" id="headerSearchInput" placeholder="Search...">
+          <div class="game-toggle">
+            <button type="button" class="game-btn ${savedGame === 'pokemon' ? 'active' : ''}" onclick="setGame('pokemon')" title="Pokémon">🟡</button>
+            <button type="button" class="game-btn ${savedGame === 'onepiece' ? 'active' : ''}" onclick="setGame('onepiece')" title="One Piece">🔴</button>
+          </div>
+          <input type="text" id="headerSearchInput" placeholder="Search cards...">
           <button type="submit">🔍</button>
         </form>
         
@@ -53,6 +49,11 @@
     </header>
     
     <nav class="mobile-nav" id="mobileNav">
+      <div class="mobile-nav-header">
+        <span>Menu</span>
+        <button onclick="toggleMobileNav()">✕</button>
+      </div>
+      <a href="${base}">🏠 Home</a>
       <a href="${base}pokemon/">🟡 Pokémon</a>
       <a href="${base}search.html?game=pokemon" class="sub">Search Cards</a>
       <a href="${base}pokemon/sets/" class="sub">Browse Sets</a>
@@ -60,11 +61,12 @@
       <a href="${base}search.html?game=onepiece" class="sub">Search Cards</a>
       <a href="${base}onepiece/sets/" class="sub">Browse Sets</a>
       <a href="${base}deck-builder.html" class="sub">Deck Builder</a>
-      <a href="${base}trade.html" class="sub">Trade Calculator</a>
-      <a href="${base}alerts.html" class="sub">Price Alerts</a>
-      <a href="${base}favorites.html" class="sub">Favorites</a>
       <a href="${base}collection.html">📦 My Collection</a>
-      <a href="${base}donate.html">❤️ Support</a>
+      <a href="${base}favorites.html" class="sub">Favorites</a>
+      <a href="${base}alerts.html" class="sub">Price Alerts</a>
+      <div class="mobile-nav-login" id="mobileNavLogin">
+        <button onclick="headerLogin()">Sign In</button>
+      </div>
     </nav>
   `;
   
@@ -81,20 +83,24 @@
     document.head.appendChild(link);
   }
   
+  let currentGame = savedGame;
+  
   window.toggleMobileNav = function() {
     document.getElementById('mobileNav').classList.toggle('open');
   };
   
-  window.saveGamePref = function(game) {
+  window.setGame = function(game) {
+    currentGame = game;
     localStorage.setItem('tcg_game', game);
+    document.querySelectorAll('.game-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.title.toLowerCase().includes(game));
+    });
   };
   
   window.headerSearch = function(e) {
     e.preventDefault();
     const q = document.getElementById('headerSearchInput').value.trim();
-    const game = document.getElementById('headerGameSelect').value;
-    localStorage.setItem('tcg_game', game);
-    if (q) window.location.href = `${base}search.html?q=${encodeURIComponent(q)}&game=${game}`;
+    if (q) window.location.href = `${base}search.html?q=${encodeURIComponent(q)}&game=${currentGame}`;
   };
   
   window.headerLogin = function() {
@@ -105,6 +111,7 @@
   
   window.updateHeaderUser = function(user) {
     const container = document.getElementById('headerUser');
+    const mobileLogin = document.getElementById('mobileNavLogin');
     if (user) {
       container.innerHTML = `
         <div class="user-dropdown">
@@ -115,8 +122,10 @@
           </div>
         </div>
       `;
+      if (mobileLogin) mobileLogin.innerHTML = `<button onclick="headerLogout()">Sign Out</button>`;
     } else {
       container.innerHTML = `<button class="login-btn" onclick="headerLogin()">Sign In</button>`;
+      if (mobileLogin) mobileLogin.innerHTML = `<button onclick="headerLogin()">Sign In</button>`;
     }
   };
   
@@ -142,4 +151,3 @@
     if (e.target.tagName === 'A') document.getElementById('mobileNav').classList.remove('open');
   });
 })();
-
