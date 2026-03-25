@@ -272,7 +272,7 @@ body.nav-open { overflow: hidden; }
   
   /* Hide logo text on mobile, keep emoji */
   .logo-text { display: none; }
-  .site-logo { padding: 5px; font-size: 1.2em; }
+  .site-logo { display: none; }
   
   /* Search takes all remaining space */
   .header-search {
@@ -293,4 +293,36 @@ body.nav-open { overflow: hidden; }
 @media print {
   .site-header, .mobile-nav, .mobile-nav-overlay { display: none !important; }
   body { padding-top: 0; }
+}
+
+/* Mobile search in drawer */
+.mobile-search-section {
+  display: flex;
+  gap: 8px;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  background: #f9f9f9;
+}
+.mobile-search-section select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9em;
+  background: #fff;
+}
+.mobile-search-section input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px 0 0 6px;
+  font-size: 0.9em;
+  min-width: 0;
+}
+.mobile-search-section button {
+  padding: 10px 12px;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
 }

@@ -45,6 +45,16 @@
     </header>
     
     <nav class="mobile-nav" id="mobileNav">
+      <div class="mobile-search-section">
+        <select id="mobileGameSelect" onchange="localStorage.setItem('tcg_game', this.value)">
+          <option value="pokemon" ${savedGame === 'pokemon' ? 'selected' : ''}>Pokémon</option>
+          <option value="onepiece" ${savedGame === 'onepiece' ? 'selected' : ''}>One Piece</option>
+        </select>
+        <form onsubmit="mobileSearch(event)" style="flex:1;display:flex">
+          <input type="text" id="mobileSearchInput" placeholder="Search...">
+          <button type="submit">🔍</button>
+        </form>
+      </div>
       <div class="mobile-nav-header">
         <span>Menu</span>
         <button onclick="toggleMobileNav()" aria-label="Close">✕</button>
@@ -88,6 +98,13 @@
   };
   
   window.headerSearch = function(e) {
+
+  window.mobileSearch = function(e) {
+    e.preventDefault();
+    const q = document.getElementById('mobileSearchInput').value.trim();
+    const game = document.getElementById('mobileGameSelect').value;
+    if (q) window.location.href = `${base}search.html?q=${encodeURIComponent(q)}&game=${game}`;
+  };
     e.preventDefault();
     const q = document.getElementById('headerSearchInput').value.trim();
     // On homepage, search both - otherwise use saved preference
