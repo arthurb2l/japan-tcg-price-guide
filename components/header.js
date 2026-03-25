@@ -16,7 +16,7 @@
         
         <nav class="nav-links">
           <div class="nav-dropdown">
-            <a href="${base}pokemon/" class="nav-link ${isPokemon ? 'active' : ''}">Pokémon</a>
+            <a href="${base}pokemon/" class="nav-link ${isPokemon ? 'active' : ''}">Pokemon</a>
             <div class="nav-dropdown-content">
               <a href="${base}search.html?game=pokemon">🔍 Search</a>
               <a href="${base}pokemon/sets/">Sets</a>
@@ -35,7 +35,7 @@
         
         <form class="header-search" onsubmit="headerSearch(event)">
           <select id="headerGameSelect" class="game-select">
-            <option value="pokemon" ${savedGame === 'pokemon' ? 'selected' : ''}>Pokémon</option>
+            <option value="pokemon" ${savedGame === 'pokemon' ? 'selected' : ''}>Pokemon</option>
             <option value="onepiece" ${savedGame === 'onepiece' ? 'selected' : ''}>One Piece</option>
           </select>
           <input type="text" id="headerSearchInput" placeholder="Search...">
@@ -54,7 +54,7 @@
         <button onclick="toggleMobileNav()" aria-label="Close">✕</button>
       </div>
       <a href="${base}">🏠 Home</a>
-      <div class="mobile-nav-section">Pokémon</div>
+      <div class="mobile-nav-section">Pokemon</div>
       <a href="${base}search.html?game=pokemon" class="sub">🔍 Search Cards</a>
       <a href="${base}pokemon/sets/" class="sub">📚 Browse Sets</a>
       <div class="mobile-nav-section">One Piece</div>
