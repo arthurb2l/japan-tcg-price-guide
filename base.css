@@ -31,18 +31,6 @@ h1,h2,h3{margin:15px 0 10px}
   .footer-legal p{margin:5px 0}
 }
 
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  :root { --bg: #1a1a1a; --card: #2a2a2a; --text: #e0e0e0; --muted: #888; --border: #444; }
-}
-[data-theme="dark"] {
-  --bg: #1a1a1a; --card: #2a2a2a; --text: #e0e0e0; --muted: #888; --border: #444;
-}
-[data-theme="light"] {
-  --bg: #f5f5f5; --card: #fff; --text: #222; --muted: #666; --border: #ddd;
-}
-body { background: var(--bg, #f5f5f5); color: var(--text, #222); }
-
 /* Print Styles */
 @media print {
   header, footer, .filters, .search-bar, button { display: none !important; }
@@ -50,35 +38,4 @@ body { background: var(--bg, #f5f5f5); color: var(--text, #222); }
   .card-tile { display: inline-block; width: 80px; margin: 5px; page-break-inside: avoid; }
   .card-tile img { width: 100%; }
   body { background: #fff; }
-}
-
-/* Dark mode card backgrounds */
-[data-theme="dark"] .card-tile,
-[data-theme="dark"] .stat-card,
-[data-theme="dark"] .alert-card,
-[data-theme="dark"] .goal-card,
-[data-theme="dark"] .trade-side,
-[data-theme="dark"] .version,
-[data-theme="dark"] .section,
-[data-theme="dark"] .set-card,
-[data-theme="dark"] .grade,
-[data-theme="dark"] .rarity,
-[data-theme="dark"] .whats-new,
-[data-theme="dark"] .recent-cards,
-[data-theme="dark"] #cotd {
-  background: var(--card);
-  color: var(--text);
-}
-
-[data-theme="dark"] .modal-content {
-  background: var(--card);
-  color: var(--text);
-}
-
-[data-theme="dark"] input,
-[data-theme="dark"] select,
-[data-theme="dark"] textarea {
-  background: var(--bg);
-  color: var(--text);
-  border-color: var(--border);
 }
