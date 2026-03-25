@@ -12,7 +12,7 @@
     <header class="site-header">
       <div class="site-header-inner">
         <button class="burger-btn" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
-        <a href="${base}" class="site-logo">🎴 TCG</a>
+        <a href="${base}" class="site-logo">🎴 <span class="logo-text">TCG</span></a>
         
         <nav class="nav-links">
           <div class="nav-dropdown">
@@ -34,12 +34,8 @@
         </nav>
         
         <form class="header-search" onsubmit="headerSearch(event)">
-          <div class="game-toggle">
-            <button type="button" class="game-btn ${savedGame === 'pokemon' ? 'active' : ''}" onclick="setGame('pokemon')" title="Pokémon">🟡</button>
-            <button type="button" class="game-btn ${savedGame === 'onepiece' ? 'active' : ''}" onclick="setGame('onepiece')" title="One Piece">🔴</button>
-          </div>
           <input type="text" id="headerSearchInput" placeholder="Search cards...">
-          <button type="submit">🔍</button>
+          <button type="submit" aria-label="Search">🔍</button>
         </form>
         
         <div class="header-user" id="headerUser">
@@ -51,23 +47,25 @@
     <nav class="mobile-nav" id="mobileNav">
       <div class="mobile-nav-header">
         <span>Menu</span>
-        <button onclick="toggleMobileNav()">✕</button>
+        <button onclick="toggleMobileNav()" aria-label="Close">✕</button>
       </div>
       <a href="${base}">🏠 Home</a>
-      <a href="${base}pokemon/">🟡 Pokémon</a>
-      <a href="${base}search.html?game=pokemon" class="sub">Search Cards</a>
-      <a href="${base}pokemon/sets/" class="sub">Browse Sets</a>
-      <a href="${base}onepiece/">🔴 One Piece</a>
-      <a href="${base}search.html?game=onepiece" class="sub">Search Cards</a>
-      <a href="${base}onepiece/sets/" class="sub">Browse Sets</a>
-      <a href="${base}deck-builder.html" class="sub">Deck Builder</a>
+      <div class="mobile-nav-section">Pokémon</div>
+      <a href="${base}search.html?game=pokemon" class="sub">🔍 Search Cards</a>
+      <a href="${base}pokemon/sets/" class="sub">📚 Browse Sets</a>
+      <div class="mobile-nav-section">One Piece</div>
+      <a href="${base}search.html?game=onepiece" class="sub">🔍 Search Cards</a>
+      <a href="${base}onepiece/sets/" class="sub">📚 Browse Sets</a>
+      <a href="${base}deck-builder.html" class="sub">🃏 Deck Builder</a>
+      <div class="mobile-nav-divider"></div>
       <a href="${base}collection.html">📦 My Collection</a>
-      <a href="${base}favorites.html" class="sub">Favorites</a>
-      <a href="${base}alerts.html" class="sub">Price Alerts</a>
+      <a href="${base}favorites.html">⭐ Favorites</a>
+      <a href="${base}alerts.html">🔔 Price Alerts</a>
       <div class="mobile-nav-login" id="mobileNavLogin">
         <button onclick="headerLogin()">Sign In</button>
       </div>
     </nav>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="toggleMobileNav()"></div>
   `;
   
   document.body.insertAdjacentHTML('afterbegin', headerHTML);
@@ -83,24 +81,19 @@
     document.head.appendChild(link);
   }
   
-  let currentGame = savedGame;
-  
   window.toggleMobileNav = function() {
     document.getElementById('mobileNav').classList.toggle('open');
-  };
-  
-  window.setGame = function(game) {
-    currentGame = game;
-    localStorage.setItem('tcg_game', game);
-    document.querySelectorAll('.game-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.title.toLowerCase().includes(game));
-    });
+    document.getElementById('mobileNavOverlay').classList.toggle('open');
+    document.body.classList.toggle('nav-open');
   };
   
   window.headerSearch = function(e) {
     e.preventDefault();
     const q = document.getElementById('headerSearchInput').value.trim();
-    if (q) window.location.href = `${base}search.html?q=${encodeURIComponent(q)}&game=${currentGame}`;
+    // On homepage, search both - otherwise use saved preference
+    const isHome = path === base || path === base + 'index.html';
+    const game = isHome ? 'all' : (localStorage.getItem('tcg_game') || 'pokemon');
+    if (q) window.location.href = `${base}search.html?q=${encodeURIComponent(q)}&game=${game}`;
   };
   
   window.headerLogin = function() {
@@ -148,6 +141,10 @@
   
   // Close mobile nav on link click
   document.getElementById('mobileNav').addEventListener('click', e => {
-    if (e.target.tagName === 'A') document.getElementById('mobileNav').classList.remove('open');
+    if (e.target.tagName === 'A') {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.getElementById('mobileNavOverlay').classList.remove('open');
+      document.body.classList.remove('nav-open');
+    }
   });
 })();
