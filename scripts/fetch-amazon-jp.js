@@ -23,19 +23,23 @@ const DELAY_MS = 3000; // Delay between requests to avoid rate limiting
 const MAX_CARDS = 50;
 
 async function fetchAmazonJPPrice(page, cardId, cardName) {
-  const query = encodeURIComponent(`${cardId} ワンピース カードゲーム`);
-  const url = `https://www.amazon.co.jp/s?k=${query}`;
+  const query = encodeURIComponent(`${cardId} ワンピースカード シングル`);
+  const url = `https://www.amazon.co.jp/s?k=${query}&rh=p_36%3A-50000`;
   
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
     await new Promise(r => setTimeout(r, 2000));
     
-    // Extract first result price
-    const price = await page.evaluate(() => {
-      const priceEl = document.querySelector('.a-price-whole');
-      if (priceEl) return parseInt(priceEl.textContent.replace(/,/g, ''));
+    // Extract prices, skip pack/box MSRPs
+    const packPrices = [220, 550, 990, 1320, 1650, 1980, 3300, 5280, 5500, 9900];
+    const price = await page.evaluate((skipPrices) => {
+      const els = document.querySelectorAll('.a-price-whole');
+      for (const el of els) {
+        const p = parseInt(el.textContent.replace(/,/g, ''));
+        if (p > 0 && !skipPrices.includes(p)) return p;
+      }
       return null;
-    });
+    }, packPrices);
     
     if (price && price > 0) {
       console.log(`  ✅ ${cardId}: ¥${price.toLocaleString()}`);
@@ -71,7 +75,7 @@ async function main() {
     // Default: top 50 most valuable cards
     const allCards = Object.values(data.sets).flat();
     allCards.sort((a, b) => (b.pricing?.usd || 0) - (a.pricing?.usd || 0));
-    targetIds = allCards.slice(0, MAX_CARDS).map(c => c.id);
+    targetIds = allCards.filter(c => !c.id.includes("-p") && !c.id.includes("-aa")).slice(0, MAX_CARDS).map(c => c.id);
     console.log(`Fetching top ${MAX_CARDS} cards by value...`);
   }
   
