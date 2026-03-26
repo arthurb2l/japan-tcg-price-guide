@@ -1,0 +1,41 @@
+{
+  "lastUpdated": "2026-03-26",
+  "japan": {
+    "online": [
+      { "name": "Yuyu-tei (遊々亭)", "url": "https://yuyu-tei.jp", "tcg": ["pokemon", "onepiece"], "type": "shop", "features": ["buy", "sell"], "notes": "Largest JP card shop. Buy/sell prices. Reliable condition grading." },
+      { "name": "Card Rush (カードラッシュ)", "url": "https://www.cardrush.jp", "tcg": ["pokemon", "onepiece"], "type": "shop", "features": ["buy", "sell"], "notes": "Major JP shop in Akihabara. Good buy prices." },
+      { "name": "Mercari JP", "url": "https://jp.mercari.com", "tcg": ["pokemon", "onepiece"], "type": "marketplace", "features": ["buy", "sell"], "notes": "Secondhand marketplace. Best for real market prices. Sold listings = actual value." },
+      { "name": "Yahoo Auctions JP", "url": "https://auctions.yahoo.co.jp", "tcg": ["pokemon", "onepiece"], "type": "auction", "features": ["buy", "sell"], "notes": "JP auction site. Good for rare cards. Completed auctions = real prices." },
+      { "name": "Suruga-ya (駿河屋)", "url": "https://www.suruga-ya.jp", "tcg": ["pokemon", "onepiece"], "type": "shop", "features": ["buy", "sell"], "notes": "Retro/hobby shop. Sometimes has deals on older sets." },
+      { "name": "Amazon JP", "url": "https://www.amazon.co.jp", "tcg": ["pokemon", "onepiece"], "type": "marketplace", "features": ["buy"], "notes": "Mixed sellers. Prices vary wildly. Check seller ratings." },
+      { "name": "Magi (マギ)", "url": "https://magi.camp", "tcg": ["pokemon", "onepiece"], "type": "marketplace", "features": ["buy", "sell"], "notes": "Card-specific trading app. Popular in JP TCG community." },
+      { "name": "Hareruya 2 (晴れる屋2)", "url": "https://www.hareruya2.com", "tcg": ["onepiece"], "type": "shop", "features": ["buy", "sell"], "notes": "One Piece specialist. Reliable prices." },
+      { "name": "Bigweb", "url": "https://www.bigweb.co.jp", "tcg": ["pokemon", "onepiece"], "type": "shop", "features": ["buy", "sell"], "notes": "Large online card shop." },
+      { "name": "Rakuten", "url": "https://www.rakuten.co.jp", "tcg": ["pokemon", "onepiece"], "type": "marketplace", "features": ["buy"], "notes": "Multiple sellers. Points system can make deals better." }
+    ],
+    "physical": [
+      { "name": "Hard-Off / Hobby-Off", "type": "chain", "notes": "Recycle shops. Best for finding underpriced cards. Check junk bins." },
+      { "name": "Book-Off", "type": "chain", "notes": "Sometimes has TCG sections. Hit or miss." },
+      { "name": "Flea Markets (フリマ)", "type": "event", "notes": "Best deals. Sellers often don't know card values." },
+      { "name": "Pokemon Center", "type": "official", "notes": "MSRP sealed product only. Lottery for popular sets." },
+      { "name": "Card shops (Akihabara/Ikebukuro)", "type": "district", "notes": "Card Rush, Yellow Submarine, Amenity Dream, etc." }
+    ]
+  },
+  "worldwide": {
+    "pokemon": [
+      { "name": "TCGPlayer", "url": "https://www.tcgplayer.com", "region": "US", "type": "marketplace", "notes": "Largest US marketplace. Market price = best benchmark for EN cards." },
+      { "name": "Cardmarket", "url": "https://www.cardmarket.com", "region": "EU", "type": "marketplace", "notes": "Largest EU marketplace. Trend price = good benchmark." },
+      { "name": "PriceCharting", "url": "https://www.pricecharting.com", "region": "WW", "type": "aggregator", "notes": "Aggregates sold prices from eBay. Best for historical data." },
+      { "name": "eBay", "url": "https://www.ebay.com", "region": "WW", "type": "auction", "notes": "Global. Use sold/completed listings for real prices." },
+      { "name": "TCGdex", "url": "https://tcgdex.dev", "region": "WW", "type": "api", "notes": "Free API. Card data + some pricing. Our current Pokemon data source." }
+    ],
+    "onepiece": [
+      { "name": "TCGPlayer", "url": "https://www.tcgplayer.com", "region": "US", "type": "marketplace", "notes": "Growing OP section. EN cards mainly." },
+      { "name": "Cardmarket", "url": "https://www.cardmarket.com", "region": "EU", "type": "marketplace", "notes": "Good for JP cards sold in EU." },
+      { "name": "PriceCharting", "url": "https://www.pricecharting.com", "region": "WW", "type": "aggregator", "notes": "Separate JP and EN price tracking. Best historical data." },
+      { "name": "limitlesstcg", "url": "https://onepiece.limitlesstcg.com", "region": "WW", "type": "database", "notes": "Card database with prices. Our current OP data source." },
+      { "name": "onepiece.gg", "url": "https://onepiece.gg", "region": "WW", "type": "database", "notes": "Guides, tier lists, card database." },
+      { "name": "eBay", "url": "https://www.ebay.com", "region": "WW", "type": "auction", "notes": "Best for rare JP cards internationally." }
+    ]
+  }
+}
