@@ -79,9 +79,7 @@
     const link = document.createElement('link');
     link.id = 'header-css';
     link.rel = 'stylesheet';
-    link.href = (path.includes('/pokemon/') || path.includes('/onepiece/')) 
-      ? '../components/header.css' 
-      : '/japan-tcg-price-guide/components/header.css';
+    link.href = '/japan-tcg-price-guide/components/header.css';
     document.head.appendChild(link);
   }
   

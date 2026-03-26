@@ -57,7 +57,9 @@ const db = firebase.firestore();
 .list-tab .count{font-size:.8em;opacity:.8;margin-left:5px}
 
 /* Filters */
-.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center;justify-content:space-between}
+.filter-left{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.filter-right{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .filter-group{display:flex;align-items:center;gap:6px}
 .filter-label{font-size:.8em;color:#666}
 select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:.85em}
@@ -682,34 +684,36 @@ function renderCollection() {
     </div>
     
     <div class="filters">
-      <div class="filter-group">
-        <span class="filter-label">Game:</span>
-        <select class="filter" id="game-filter" onchange="filterByGame(this.value)">
-          <option value="">All Games</option>
-          <option value="pokemon" ${currentGame === 'pokemon' ? 'selected' : ''}>Pokemon</option>
-          <option value="onepiece" ${currentGame === 'onepiece' ? 'selected' : ''}>One Piece</option>
-        </select>
+      <div class="filter-left">
+        <div class="filter-group">
+          <span class="filter-label">Game:</span>
+          <select class="filter" id="game-filter" onchange="filterByGame(this.value)">
+            <option value="">All Games</option>
+            <option value="pokemon" ${currentGame === 'pokemon' ? 'selected' : ''}>Pokemon</option>
+            <option value="onepiece" ${currentGame === 'onepiece' ? 'selected' : ''}>One Piece</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Sort:</span>
+          <select class="filter" id="sort-filter" onchange="sortBy(this.value)">
+            <option value="added" ${currentSort === 'added' ? 'selected' : ''}>Recently Added</option>
+            <option value="name" ${currentSort === 'name' ? 'selected' : ''}>Name</option>
+            <option value="price-high" ${currentSort === 'price-high' ? 'selected' : ''}>Price: High → Low</option>
+            <option value="price-low" ${currentSort === 'price-low' ? 'selected' : ''}>Price: Low → High</option>
+            <option value="set" ${currentSort === 'set' ? 'selected' : ''}>Set</option>
+          </select>
+        </div>
+        <div class="view-toggle">
+          <button class="view-btn ${currentView === 'grid' ? 'active' : ''}" data-view="grid" onclick="toggleView('grid')">▦ Grid</button>
+          <button class="view-btn ${currentView === 'list' ? 'active' : ''}" data-view="list" onclick="toggleView('list')">☰ List</button>
+        </div>
       </div>
-      <div class="filter-group">
-        <span class="filter-label">Sort:</span>
-        <select class="filter" id="sort-filter" onchange="sortBy(this.value)">
-          <option value="added" ${currentSort === 'added' ? 'selected' : ''}>Recently Added</option>
-          <option value="name" ${currentSort === 'name' ? 'selected' : ''}>Name</option>
-          <option value="price-high" ${currentSort === 'price-high' ? 'selected' : ''}>Price: High → Low</option>
-          <option value="price-low" ${currentSort === 'price-low' ? 'selected' : ''}>Price: Low → High</option>
-          <option value="set" ${currentSort === 'set' ? 'selected' : ''}>Set</option>
-        </select>
+      <div class="filter-right">
+        <a href="backup.html" class="export-btn" style="text-decoration:none">💾 Backup</a>
+        <a href="stats.html" class="export-btn" style="text-decoration:none">📊 Stats</a>
+        <button class="export-btn" onclick="shareCollection()" style="background:#10b981">🔗 Share</button>
+        <button class="export-btn" onclick="exportCollection()">📥 Export</button>
       </div>
-      <div class="view-toggle">
-        <button class="view-btn ${currentView === 'grid' ? 'active' : ''}" data-view="grid" onclick="toggleView('grid')">▦ Grid</button>
-        <button class="view-btn ${currentView === 'list' ? 'active' : ''}" data-view="list" onclick="toggleView('list')">☰ List</button>
-      </div>
-      <a href="backup.html" class="export-btn" style="text-decoration:none">💾 Backup</a>
-      <a href="stats.html" class="export-btn" style="text-decoration:none">📊 Stats</a>
-      <button class="export-btn" onclick="shareCollection()" style="background:#10b981">🔗 Share</button>
-      <button class="export-btn" onclick="exportCollection()">📥 Export</button>
-      <button class="export-btn" onclick="document.getElementById('importFile').click()" style="background:#3b82f6">📤 Import</button>
-      <input type="file" id="importFile" accept=".csv" style="display:none" onchange="importCollection(this)">
     </div>
     
     <div class="card-grid ${currentView === 'list' ? 'hidden' : ''}">

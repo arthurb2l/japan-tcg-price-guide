@@ -108,15 +108,22 @@ function installPWA() {
   }
 }
 // Load recently viewed cards
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", async function() {
 const recentIds = JSON.parse(localStorage.getItem("tcg_recent") || "[]").slice(0,6);
-if (recentIds.length) {
-  document.getElementById("recentCards").style.display = "block";
-  document.getElementById("recentGrid").innerHTML = recentIds.map(id => {
-    const game = id.match(/^[A-Z]{2,3}[0-9]/) ? "onepiece" : "pokemon";
-    return `<a href="search.html?game=${game}\&q=${encodeURIComponent(id)}"><div style="width:60px;height:84px;background:#eee;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.6em;color:#999">${id}</div></a>`;
-  }).join("");
+if (!recentIds.length) return;
+document.getElementById("recentCards").style.display = "block";
+// Build image URL from card ID
+function cardImg(id) {
+  if (id.includes('DON')) return `/japan-tcg-price-guide/onepiece/images/don/${id}.png`;
+  if (id.match(/^(OP|ST|EB|PRB)/)) return `https://www.onepiece-cardgame.com/images/cardlist/card/${id}.png`;
+  return `https://assets.tcgdex.net/en/${id.split('-')[0].toLowerCase()}/${id.split('-').slice(0,1).join('')}/${id.split('-').pop()}/low.webp`;
 }
+function proxyImg(url) { return url.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url; }
+document.getElementById("recentGrid").innerHTML = recentIds.map(id => {
+  const game = id.match(/^(OP|ST|EB|DON|PRB)/) ? "onepiece" : "pokemon";
+  const src = proxyImg(cardImg(id));
+  return `<a href="search.html?game=${game}&q=${encodeURIComponent(id)}"><img src="${src}" alt="${id}" style="width:60px;height:84px;border-radius:4px;object-fit:cover;background:#eee" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div style=\\'width:60px;height:84px;background:#eee;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.55em;color:#999\\'>${id}</div>')"></a>`;
+}).join("");
 });
 </script>
 <div class="whats-new" style="margin-top:30px">
