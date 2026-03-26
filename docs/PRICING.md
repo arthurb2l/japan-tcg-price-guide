@@ -135,3 +135,33 @@ Static rates (updated manually):
 - [ ] Find free One Piece price source
 - [ ] Add price history/trends
 - [ ] Show "last updated" timestamp per card
+
+---
+
+## Price Source Reference
+
+### Japan Domestic (for future integration #128-130)
+
+| Source | URL | TCG | Type | Notes |
+|--------|-----|-----|------|-------|
+| Yuyu-tei (遊々亭) | yuyu-tei.jp | Both | Shop | Buy/sell prices. Reliable condition grading |
+| Card Rush (カードラッシュ) | cardrush.jp | Both | Shop | Major Akihabara shop. Good buy prices |
+| Mercari JP | jp.mercari.com | Both | Marketplace | Sold listings = real market value |
+| Yahoo Auctions JP | auctions.yahoo.co.jp | Both | Auction | Good for rare cards |
+| Suruga-ya (駿河屋) | suruga-ya.jp | Both | Shop | Retro/hobby. Deals on older sets |
+| Amazon JP | amazon.co.jp | Both | Marketplace | Mixed sellers, prices vary |
+| Magi (マギ) | magi.camp | Both | App | Card-specific trading app |
+| Hareruya 2 (晴れる屋2) | hareruya2.com | OP | Shop | One Piece specialist |
+| Bigweb | bigweb.co.jp | Both | Shop | Large online card shop |
+| Rakuten | rakuten.co.jp | Both | Marketplace | Points system |
+
+### Worldwide (current + potential)
+
+| Source | URL | TCG | Status | Notes |
+|--------|-----|-----|--------|-------|
+| TCGdex | tcgdex.dev | PKM | ✅ Active | Free API. Our Pokemon source |
+| limitlesstcg | limitlesstcg.com | OP | ✅ Active | Our One Piece source |
+| TCGPlayer | tcgplayer.com | Both | 🔗 Links only | US marketplace |
+| Cardmarket | cardmarket.com | Both | 🔗 Links only | EU marketplace |
+| PriceCharting | pricecharting.com | Both | 🔗 Links only | Best historical data |
+| eBay | ebay.com | Both | 🔗 Links only | Global auction |
