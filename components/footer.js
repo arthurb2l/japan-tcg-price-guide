@@ -11,6 +11,12 @@ const footerLinks = {
     { text: "Legal", href: "/japan-tcg-price-guide/legal.html" },
     { text: "Changelog", href: "/japan-tcg-price-guide/changelog.html" }
   ],
+  tools: [
+    { text: "New Releases", href: "/japan-tcg-price-guide/new-releases.html" },
+    { text: "Trade Calculator", href: "/japan-tcg-price-guide/trade.html" },
+    { text: "Collection Goals", href: "/japan-tcg-price-guide/goals.html" },
+    { text: "Site Metrics", href: "/japan-tcg-price-guide/metrics.html" }
+  ],
   more: [
     { text: "API Docs", href: "/japan-tcg-price-guide/api.html" },
     { text: "Donate", href: "/japan-tcg-price-guide/donate.html" },
