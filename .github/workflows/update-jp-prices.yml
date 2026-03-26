@@ -1,0 +1,38 @@
+name: Update JP Prices
+on:
+  schedule:
+    - cron: '0 2 * * 1' # Weekly Monday 2am UTC (11am JST)
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm install puppeteer
+      
+      - name: Fetch Amazon JP prices
+        run: node scripts/fetch-amazon-jp.js
+        continue-on-error: true
+      
+      - name: Fetch Mercari JP prices
+        run: node scripts/fetch-mercari-jp.js
+        continue-on-error: true
+      
+      - name: Fetch Yuyu-tei prices
+        run: node scripts/fetch-yuyutei.js
+        continue-on-error: true
+      
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "📈 Weekly JP price update [skip ci]"
+          git push
