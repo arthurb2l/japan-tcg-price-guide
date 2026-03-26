@@ -39,3 +39,18 @@ h1,h2,h3{margin:15px 0 10px}
   .card-tile img { width: 100%; }
   body { background: #fff; }
 }
+
+/* Shared layout components */
+.container{max-width:900px;margin:0 auto;padding:20px}
+.breadcrumb{margin-bottom:15px;font-size:.9em}
+.subtitle{color:#666;margin-bottom:20px}
+
+/* Set page components (used across 12+ pages) */
+.hero{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin:15px 0}
+.hero img{width:180px;border-radius:8px;border:2px solid #222}
+.hero-info{flex:1;min-width:200px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:10px 0}
+.stat{background:#fff;padding:10px;border-radius:6px;text-align:center;border:1px solid #ddd}
+.stat-label{color:#666;font-size:.75em}
+.stat-value{color:#EE1515;font-size:1.1em;font-weight:bold}
+.set-h2{color:#fff;background:#EE1515;padding:8px 12px;border-radius:4px;margin:20px 0 10px}

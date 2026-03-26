@@ -72,7 +72,7 @@ async function loadSets() {
       const setEntries = Object.entries(sets).sort((a, b) => b[0].localeCompare(a[0]));
       if (!setEntries.length) continue;
       
-      html += `<div class="era"><h2>${eraName}</h2><div class="sets-grid">`;
+      html += `<div class="era"><h2 class="set-h2">${eraName}</h2><div class="sets-grid">`;
       
       for (const [setId, cards] of setEntries) {
         const setName = cards[0]?.set || cards[0]?.setName || setId;
