@@ -83,6 +83,13 @@
     link.href = '/japan-tcg-price-guide/components/header.css';
     document.head.appendChild(link);
   }
+  // Favicon
+  if (!document.querySelector('link[rel="icon"]')) {
+    const ico = document.createElement('link');
+    ico.rel = 'icon';
+    ico.href = '/japan-tcg-price-guide/favicon.svg';
+    document.head.appendChild(ico);
+  }
   
   window.toggleMobileNav = function() {
     document.getElementById('mobileNav').classList.toggle('open');
