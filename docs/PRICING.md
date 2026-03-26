@@ -165,3 +165,53 @@ Static rates (updated manually):
 | Cardmarket | cardmarket.com | Both | 🔗 Links only | EU marketplace |
 | PriceCharting | pricecharting.com | Both | 🔗 Links only | Best historical data |
 | eBay | ebay.com | Both | 🔗 Links only | Global auction |
+
+---
+
+## Pricing Strategy: Learnings from OP01-120 Manual Test (2026-03-26)
+
+### Key Finding: JP vs EN Price Gap
+The same card (OP01-120 Shanks SEC) has wildly different prices depending on market:
+- **EN international (limitlesstcg/TCGPlayer):** $7.95 → ¥1,193
+- **JP domestic (PriceCharting JP):** $2.66 → ¥399
+- **JP floor (eBay sold):** $0.99-$1.14 → ¥149-171
+
+Our previous source (limitlesstcg) was **3x overpriced** for JP cards because it indexes on EN/international demand.
+
+### Decision: Use Floor Pricing
+For a flea market price guide, **floor price** is the right index:
+- Users need to know "is this a deal?" → compare against the cheapest available
+- Floor = lowest reliable sold price (exclude obvious outliers like $0.99 auction starts)
+- PriceCharting JP ungraded is the best proxy for floor (aggregates eBay JP sold listings)
+
+### Price Source Priority (for automation)
+1. **PriceCharting JP** — best for JP cards, sold-listing based, high volume
+2. **Mercari JP sold** — most realistic JP domestic price (if we can scrape)
+3. **Cardmarket trend** — good EU benchmark, sometimes cheaper than US
+4. **limitlesstcg** — current source, EN-biased, use as ceiling/reference only
+5. **TCGPlayer** — US retail, highest prices, least relevant for JP flea market
+
+### Display Strategy
+- **Tile:** Show floor price (lowest source)
+- **Modal:** Show all sources with floor highlighted
+- **Color coding:** Green = below floor (great deal), Red = above ceiling
+
+### Data Model for Multi-Source (when automated)
+```json
+{
+  "pricing": {
+    "floor": 399,
+    "sources": {
+      "pricecharting_jp": { "usd": 2.66, "jpy": 399, "updated": "2026-03-26", "volume": "1/day" },
+      "limitlesstcg": { "usd": 7.95, "jpy": 1193, "updated": "2026-03-22" },
+      "cardmarket": { "eur": 1.90, "jpy": 310, "updated": "2026-03-26" }
+    }
+  }
+}
+```
+
+### Automation Requirements
+- PriceCharting has an API ($6/month pro, or scrape free pages)
+- Need separate JP and EN price tracking per card
+- Daily snapshot should capture floor from all sources
+- Flag cards where JP price < 50% of EN price (arbitrage opportunities for users)
