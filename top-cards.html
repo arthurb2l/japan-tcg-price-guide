@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Most Valuable Cards - Japan TCG Price Guide</title>
+  <title>Most Valuable Cards - PokePiece</title>
   <link rel="stylesheet" href="base.css">
   <style>
     .container{max-width:900px;margin:0 auto;padding:20px}
@@ -62,7 +62,7 @@ async function loadGame(game) {
         <div class="card-name">${c.name}</div>
         <div class="card-set">${c.setId} · ${c.rarity || ''}</div>
       </div>
-      <div class="card-price">$${getPrice(c).toFixed(2)}</div>
+      <div class="card-price">¥${Math.round(getPrice(c) * 150).toLocaleString()}</div>
     </a>
   `).join('');
   } catch(e) { document.getElementById("cardList").innerHTML = "<p>Error loading</p>"; }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Best Pokémon Commons | Japan TCG Price Guide</title>
+<title>Best Pokémon Commons | PokePiece</title>
 <link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
 <style>
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;padding:15px}
@@ -17,13 +17,13 @@ h1{font-size:1.5em;margin-bottom:5px}
 .card-info{flex:1}
 .card-name{font-weight:600;margin-bottom:2px}
 .card-set{font-size:.8em;color:#666}
-.card-price{font-weight:bold;color:#f9a825;font-size:1.1em}
+.card-price{font-weight:bold;color:#EE1515;font-size:1.1em}
 </style>
 </head>
 <body>
 <script src="/japan-tcg-price-guide/components/header.js"></script>
 
-<h1>🟡 Best Pokémon Commons</h1>
+<h1>⚡ Best Pokémon Commons</h1>
 <p class="subtitle">Top 20 common cards by market value</p>
 
 <div id="list" class="card-list">Loading...</div>
@@ -33,35 +33,39 @@ const BASE = '/japan-tcg-price-guide';
 
 async function loadData() {
   try {
-    const shards = ['sv','swsh','sm','xy','bw','dp','ex','vintage'];
+    const shards = ['sv','swsh','sm','xy','bw','dp','ex'];
     const commons = [];
-    
+
     for (const s of shards) {
-      const data = await fetch(`${BASE}/data/shards/${s}.json`).then(r => r.json());
-      for (const [setId, cards] of Object.entries(data.sets)) {
-        for (const card of cards) {
-          const price = card.pricing?.eur || card.pricing?.usd;
-          if (card.rarity === 'Common' && price > 0) {
-            commons.push({ ...card, setId, price, img: card.images?.small });
+      try {
+        const data = await fetch(`${BASE}/data/shards/${s}.json`).then(r => r.json());
+        for (const [setId, cards] of Object.entries(data.sets)) {
+          for (const card of cards) {
+            const price = card.pricing?.usd || card.pricing?.eur;
+            if (card.rarity === 'Common' && price > 0) {
+              commons.push({ ...card, setId, price });
+            }
           }
         }
-      }
+      } catch(e) {}
     }
-    
+
     commons.sort((a,b) => b.price - a.price);
     const top20 = commons.slice(0, 20);
-    
-    document.getElementById('list').innerHTML = top20.map((c, i) => `
+
+    document.getElementById('list').innerHTML = top20.map((c, i) => {
+      const img = c.image ? c.image + '/low.webp' : '';
+      return `
       <a href="${BASE}/search.html?game=pokemon&q=${encodeURIComponent(c.id)}" class="card-row">
         <span class="rank">#${i+1}</span>
-        <img src="${c.img || ''}" alt="${c.name}" class="card-img" loading="lazy">
+        <img src="${img}" alt="${c.name}" class="card-img" loading="lazy" onerror="this.style.display='none'">
         <div class="card-info">
           <div class="card-name">${c.name}</div>
-          <div class="card-set">${c.id} · ${c.setId}</div>
+          <div class="card-set">${c.id} · ${c.set || c.setId}</div>
         </div>
         <span class="card-price">¥${Math.round(c.price * 150).toLocaleString()}</span>
-      </a>
-    `).join('');
+      </a>`;
+    }).join('');
   } catch(e) {
     document.getElementById('list').innerHTML = '<p style="color:#999">Error loading data</p>';
   }

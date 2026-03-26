@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Collection Stats - Japan TCG Price Guide</title>
+  <title>Collection Stats - PokePiece</title>
   <link rel="stylesheet" href="base.css">
   <style>
     .container{max-width:800px;margin:0 auto;padding:20px}
@@ -66,7 +66,7 @@ async function loadStats() {
     <div class="stats-grid">
       <div class="stat-card"><div class="value">${totalCards}</div><div class="label">Total Cards</div></div>
       <div class="stat-card"><div class="value">${ids.length}</div><div class="label">Unique Cards</div></div>
-      <div class="stat-card"><div class="value" style="color:#2e7d32">$${totalValue.toFixed(0)}</div><div class="label">Est. Value</div></div>
+      <div class="stat-card"><div class="value" style="color:#2e7d32">¥${Math.round(totalValue * 150).toLocaleString()}</div><div class="label">Est. Value</div></div>
       <div class="stat-card"><div class="value" style="color:#EE1515">${pkCount}</div><div class="label">Pokemon</div></div>
       <div class="stat-card"><div class="value" style="color:#E4002B">${opCount}</div><div class="label">One Piece</div></div>
     </div>

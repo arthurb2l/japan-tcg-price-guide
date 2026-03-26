@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Card Search - Japan TCG Price Guide</title>
+<title>Card Search - PokePiece</title>
 <meta name="description" content="Search 22,000+ Pokemon and One Piece TCG cards with prices. Free offline price guide for finding deals at Japanese flea markets.">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#EE1515">
@@ -630,8 +630,7 @@ function formatPrice(card) {
     if (card.pricing.usd) {
       if (currency === 'USD') return '$' + card.pricing.usd.toFixed(2) + trend;
       if (currency === 'EUR') return '€' + (card.pricing.eur || card.pricing.usd * 0.92).toFixed(2);
-      if (currency === 'JPY') return '¥' + Math.round(card.pricing.usd * 150).toLocaleString() + trend;
-      return '$' + card.pricing.usd.toFixed(2) + trend;
+      return '¥' + Math.round(card.pricing.usd * 150).toLocaleString() + trend;
     }
     // TCGdex format (Pokemon)
     const tcg = card.pricing.tcgplayer;
@@ -640,8 +639,7 @@ function formatPrice(card) {
     if (currency === 'USD' && tcg?.holofoil?.marketPrice) return '$' + tcg.holofoil.marketPrice.toFixed(2);
     if (cm?.trend) {
       if (currency === 'EUR') return '€' + cm.trend.toFixed(2);
-      if (currency === 'JPY') return '¥' + Math.round(cm.trend * 162).toLocaleString();
-      return '$' + (cm.trend * 1.08).toFixed(2);
+      return '¥' + Math.round(cm.trend * 162).toLocaleString();
     }
   }
   return '-';
@@ -1149,7 +1147,7 @@ function showCard(id, isEn) {
   }
   if (card.variants?.length > 1) {
     priceHtml += '<br><small style="color:#666">';
-    priceHtml += card.variants.slice(1).map(v => `${v.label || 'Alt'}: $${v.usd?.toFixed(2) || '?'}`).join(' · ');
+    priceHtml += card.variants.slice(1).map(v => `${v.label || 'Alt'}: ¥${v.usd ? Math.round(v.usd * 150).toLocaleString() : '?'}`).join(' · ');
     priceHtml += '</small>';
   }
   document.getElementById('modal-price').innerHTML = priceHtml;
