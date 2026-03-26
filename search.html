@@ -951,7 +951,9 @@ function applyFilters() {
   const cost = document.getElementById('cost-filter')?.value;
   const power = document.getElementById('power-filter')?.value;
   
-  let cards = getGameCards();
+  // Only reset to all cards if no search query active
+  const query = document.getElementById('search').value.trim();
+  let cards = query ? filteredCards : getGameCards();
   
   // Set filter
   if (setId) cards = cards.filter(c => c.setId === setId);
