@@ -64,7 +64,6 @@
       <div class="mobile-nav-divider"></div>
       <a href="${base}collection.html">📦 My Collection</a>
       <a href="${base}favorites.html">⭐ Favorites</a>
-      <a href="${base}alerts.html">🔔 Price Alerts</a>
       <a href="${base}settings.html">⚙️ Settings</a>
       <div class="mobile-nav-login" id="mobileNavLogin">
         <button onclick="headerLogin()">Sign In</button>

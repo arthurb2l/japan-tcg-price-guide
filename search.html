@@ -310,7 +310,6 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
         <button id="favBtn" onclick="toggleFavorite()" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">🤍 Fav</button>
         <button onclick="copyCardInfo()" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">📋 Copy</button>
         <button onclick="editNote()" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">📝 Note</button>
-        <button onclick="setAlert()" class="alert-btn" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">🔔 Set Price Alert</button>
       </div>
     </div>
   </div>
@@ -1367,24 +1366,6 @@ function copyCardInfo() {
   alert("Card info copied!");
 }
 
-function setAlert() {
-  if (!currentModalCard) return;
-  const jpy = getMedianJpy(currentModalCard);
-  if (!jpy) { alert("No price data for this card"); return; }
-  const target = prompt(`Current: ¥${jpy.toLocaleString()}\nAlert when price drops below (¥):`, Math.round(jpy * 0.8));
-  if (!target) return;
-  const alerts = JSON.parse(localStorage.getItem("tcg_alerts") || "{}");
-  alerts[currentModalCard.id] = { targetJpy: parseInt(target), currentJpy: jpy, name: currentModalCard.name, setDate: Date.now() };
-  localStorage.setItem("tcg_alerts", JSON.stringify(alerts));
-  alert(`Alert set! You'll be notified when ${currentModalCard.name} drops below ¥${parseInt(target).toLocaleString()}`);
-}
-
-// Check alerts on load
-(function checkAlerts() {
-  const alerts = JSON.parse(localStorage.getItem("tcg_alerts") || "{}");
-  if (!Object.keys(alerts).length) return;
-  // Will check against loaded cards after search
-})();
 </script>
 <footer id="site-footer"></footer>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
