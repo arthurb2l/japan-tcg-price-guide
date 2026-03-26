@@ -31,7 +31,7 @@ function renderFooter() {
     <div class="footer-legal">
       <p>Card images © The Pokémon Company, Bandai. Not produced by or endorsed by these companies.</p>
       <p>Price data via TCGdex/Cardmarket. No guarantee of accuracy.</p>
-      <p>© 2026 Japan TCG Price Guide. Code: <a href="https://github.com/arthurb2l/japan-tcg-price-guide/blob/main/LICENSE">MIT License</a></p>
+      <p>© 2026 PokePiece. Code: <a href="https://github.com/arthurb2l/japan-tcg-price-guide/blob/main/LICENSE">MIT License</a></p>
     </div>
   `;
 }

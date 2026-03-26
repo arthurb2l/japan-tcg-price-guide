@@ -144,7 +144,7 @@
   
   <div class="form-row">
     <div class="form-group">
-      <label>Price Range (USD)</label>
+      <label>Price Range (JPY)</label>
       <div class="price-range">
         <input type="number" id="priceMin" placeholder="Min" step="0.01" min="0">
         <span>to</span>
@@ -350,7 +350,7 @@ function renderResults() {
   const getImg = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || '';
   const formatPrice = c => {
     const p = getPrice(c);
-    return p !== null ? '$' + p.toFixed(2) : '-';
+    return p !== null ? '¥' + Math.round(p * 150).toLocaleString() : '-';
   };
   const finishBadge = c => {
     if (!c.finish || c.finish === 'regular') return '';

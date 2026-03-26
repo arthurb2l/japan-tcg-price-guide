@@ -82,8 +82,8 @@ function renderAlert(a, hit) {
       <div class="alert-info">
         <div class="alert-name">${hit ? '✅ ' : ''}${a.name}</div>
         <div class="alert-prices">
-          Target: <span class="alert-target">$${a.target?.toFixed(2)}</span> · 
-          Current: <span class="alert-current ${a.current <= a.target ? 'below' : 'above'}">$${a.current?.toFixed(2) || '?'}</span>
+          Target: <span class="alert-target">¥${a.target ? Math.round(a.target * 150).toLocaleString() : "?"}</span> · 
+          Current: <span class="alert-current ${a.current <= a.target ? 'below' : 'above'}">¥${a.current ? Math.round(a.current * 150).toLocaleString() : "?"}</span>
         </div>
       </div>
       <button class="alert-delete" onclick="deleteAlert('${a.id}')" title="Remove alert">🗑️</button>

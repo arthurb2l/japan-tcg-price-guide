@@ -172,13 +172,6 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 </div>
 
 <div class="filters">
-  <div class="quick-filters" style="display:flex;gap:8px;margin-bottom:15px;flex-wrap:wrap">
-    <button onclick="quickFilter('Charizard')" style="padding:6px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:.8em">🔥 Charizard</button>
-    <button onclick="quickFilter('Pikachu')" style="padding:6px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:.8em">⚡ Pikachu</button>
-    <button onclick="quickFilter('Luffy')" style="padding:6px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:.8em">🏴‍☠️ Luffy</button>
-    <button onclick="quickFilter('SAR')" style="padding:6px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:.8em">✨ SAR</button>
-    <button onclick="quickFilter('Leader')" style="padding:6px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:.8em">👑 Leaders</button>
-  </div>
   <div class="filter-group">
     <span class="filter-label">View:</span>
     <button class="filter-btn active" data-view="grid" onclick="setView('grid')">Images</button>
@@ -202,11 +195,6 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
       <option value="set">Set</option>
       <option value="rarity">Rarity</option>
     </select>
-  </div>
-  <div class="filter-group">
-    <button id="bulkBtn" onclick="toggleBulkMode()" style="padding:6px 12px;border:1px solid #ddd;border-radius:4px;background:#fff;cursor:pointer;font-size:.85em">☑️ Select</button>
-    <button onclick="window.print()" style="padding:6px 12px;border:1px solid #ddd;border-radius:4px;background:#fff;cursor:pointer;font-size:.85em">🖨️ Print</button>
-    <button id="bulkAddBtn" onclick="bulkAdd()" style="display:none;padding:6px 12px;border:none;border-radius:4px;background:#10b981;color:#fff;cursor:pointer;font-size:.85em">Add Selected</button>
   </div>
   <div class="filter-group">
     <span class="filter-label">Finish:</span>

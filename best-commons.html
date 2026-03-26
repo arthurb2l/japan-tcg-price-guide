@@ -56,7 +56,7 @@ async function loadData() {
           <div class="card-name">${c.name}</div>
           <div class="card-set">${c.id} · ${c.setId}</div>
         </div>
-        <span class="card-price">$${c.price.toFixed(2)}</span>
+        <span class="card-price">¥${Math.round(c.price * 150).toLocaleString()}</span>
       </a>
     `).join('');
   } catch(e) {

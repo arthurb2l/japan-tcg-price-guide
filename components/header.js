@@ -12,7 +12,7 @@
     <header class="site-header">
       <div class="site-header-inner">
         <button class="burger-btn" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
-        <a href="${base}" class="site-logo">🎴 <span class="logo-text">TCG</span></a>
+        <a href="${base}" class="site-logo">🎴 <span class="logo-text">PokePiece</span></a>
         
         <nav class="nav-links">
           <div class="nav-dropdown">

@@ -1,6 +1,6 @@
 {
-  "name": "Japan TCG Price Guide",
-  "short_name": "TCG Prices",
+  "name": "PokePiece - Japan TCG Price Guide",
+  "short_name": "PokePiece",
   "description": "Pokemon & One Piece card prices for Japan flea markets",
   "start_url": "/japan-tcg-price-guide/",
   "display": "standalone",

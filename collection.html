@@ -655,7 +655,7 @@ function renderCollection() {
   
   const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
   const getImg = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || '';
-  const formatPrice = p => p !== null ? '$' + p.toFixed(2) : '-';
+  const formatPrice = p => p !== null ? '¥' + Math.round(p * 150).toLocaleString() : '-';
   
   content.innerHTML = tabsHtml + `
     <div class="stats-row">
@@ -676,7 +676,7 @@ function renderCollection() {
         <div class="label">One Piece</div>
       </div>
       <div class="stat-card">
-        <div class="value">$${totalValue.toFixed(2)}</div>
+        <div class="value">¥${Math.round(totalValue * 150).toLocaleString()}</div>
         <div class="label">Est. Value</div>
       </div>
     </div>
@@ -823,7 +823,7 @@ function sortBy(sort) {
 function exportCollection() {
 
 
-  const rows = [['Card ID', 'Name', 'Set', 'Rarity', 'Game', 'Qty', 'Condition', 'Language', 'Price USD', 'Total']];
+  const rows = [['Card ID', 'Name', 'Set', 'Rarity', 'Game', 'Qty', 'Condition', 'Language', 'Price JPY', 'Total']];
   collectionCards.forEach(c => {
     const qty = userCollection[c.id]?.qty || 1;
     const cond = userCollection[c.id]?.condition || 'NM';

@@ -267,7 +267,7 @@ function renderDeck() {
     const card = allCards.find(c => c.id === id);
     value += (card?.pricing?.usd || 0) * qty;
   }
-  document.getElementById("deckValue").textContent = value > 0 ? `$${value.toFixed(2)}` : "";
+  document.getElementById("deckValue").textContent = value > 0 ? `¥${Math.round(value * 150).toLocaleString()}` : "";
   // Auto-save
   localStorage.setItem('op_deck', JSON.stringify(deck));
 }
