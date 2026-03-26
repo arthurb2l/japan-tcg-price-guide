@@ -1,17 +1,54 @@
 # Pricing Data Sources
 
-## Current Coverage
+## Current Coverage (2026-03-27)
 
-| Game | Cards | With Prices | Coverage | Source |
-|------|-------|-------------|----------|--------|
-| Pokemon | 27,984 | 1,031 | 3.7% | TCGdex (free) |
-| One Piece | 2,274 | 0 | 0% | Pending (#76) |
+| Game | Cards | JP-Verified | Bulk Est. | No Price | Source |
+|------|-------|-------------|-----------|----------|--------|
+| One Piece | 2,827 | 178 | 2,537 | 112 | PriceCharting JP + 0.7x bulk |
+| Pokemon | 27,984 | 1,031 | — | ~27,000 | TCGdex (EN prices) |
 
-## Roadmap
+### One Piece JP Price Verification by Set
 
-1. **#76** - Add One Piece prices via one-piece-api.com (HIGH)
-2. **#77** - Complete Pokemon price coverage (MEDIUM)
-3. **#78** - Long-term infrastructure: validation, history, trends (LOW)
+| Set | Code | Top Card | JP Price |
+|-----|------|----------|----------|
+| Romance Dawn | OP01 | Nami Manga | ¥70,995 |
+| Paramount War | OP02 | Ace Manga | ¥68,416 |
+| Pillars of Strength | OP03 | Sogeking Manga | ¥53,212 |
+| Kingdoms of Intrigue | OP04 | Sabo Manga | ¥55,276 |
+| Awakening of the New Era | OP05 | Luffy Alt Art | ¥14,323 |
+| Wings of the Captain | OP06 | Zoro Manga | ¥158,472 |
+| 500 Years in the Future | OP07 | Boa Hancock Manga | ¥111,973 |
+| Two Legends | OP08 | Rayleigh Manga | ¥54,375 |
+| Emperors in the New World | OP09 | Roger Manga | ¥474,031 |
+| Royal Blood | OP10 | Law Manga | ¥51,750 |
+| Fist of Divine Speed | OP11 | Luffy Manga | ¥84,423 |
+| Legacy of the Master | OP12 | Bonney Manga | ¥57,024 |
+| Carrying on His Will | OP13 | Ace Red Manga | ¥272,617 |
+| Azure Sea's Seven | OP14 | Mihawk Manga | ¥69,610 |
+| Memorial Collection | EB01 | Chopper Manga | ¥100,050 |
+| Anime 25th Collection | EB02 | Luffy Manga | ¥104,541 |
+| Heroines Edition | EB03 | Uta Manga | ¥103,273 |
+| Egghead Crisis | EB04 | Koby Manga | ¥89,811 |
+
+### Pricing Strategy
+- **Floor pricing**: Use lowest reliable source, not median
+- **JP domestic target**: Not EN international prices
+- **Bulk cards**: 0.7x discount applied to EN PriceCharting prices as JP estimate
+- **Commons**: All reset to ¥50 floor (no hidden gem commons in JP market)
+- **UC parallels**: Real flea market hidden gems, need individual verification
+
+### Automated Scripts
+- `scripts/fetch-amazon-jp.js` — Works for base cards only (variants return wrong prices)
+- `scripts/fetch-mercari-jp.js` — Untested
+- `scripts/fetch-yuyutei.js` — Untested
+- `.github/workflows/update-jp-prices.yml` — Weekly auto-update (needs script refinement)
+
+## Remaining Work
+1. Run Amazon JP script on ~2,000 base cards (replace 0.7x estimates)
+2. Test Mercari JP + Yuyu-tei scripts
+3. Pokemon deep JP price check (same treatment as OP)
+4. UC parallel spot-checks from Amazon JP
+5. 112 cards with no price (promos, tournament prizes)
 
 ---
 
