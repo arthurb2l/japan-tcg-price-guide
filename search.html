@@ -517,15 +517,16 @@ auth.onAuthStateChanged(async user => {
   const collWrap = document.getElementById('coll-filter-wrap');
   if (user) {
     currentUser = user;
-    document.getElementById("fab").style.display = "block";
-    container.innerHTML = `
+    const fab = document.getElementById("fab");
+    if (fab) fab.style.display = "block";
+    if (container) container.innerHTML = `
       <div class="user-info">
         <img src="${user.photoURL || ''}" alt="" referrerpolicy="no-referrer">
         <span>${user.displayName || user.email}</span>
         <button class="signout-btn" onclick="signOut()">Sign out</button>
       </div>`;
     // Hide "My Collection" filter for logged-in users (they use Collection page)
-    collWrap.style.display = 'none';
+    if (collWrap) collWrap.style.display = 'none';
     // Migrate local collection if exists (unified format)
     const local = localStorage.getItem('tcg_inventory');
     if (local && Object.keys(JSON.parse(local)).length > 0) {
@@ -536,7 +537,7 @@ auth.onAuthStateChanged(async user => {
   } else {
     currentUser = null;
     userCollection = collectionStore._local();
-    container.innerHTML = `
+    if (container) container.innerHTML = `
       <button class="auth-btn" onclick="signInWithGoogle()">
         <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="G">
         Sign in
@@ -713,11 +714,11 @@ async function loadCards() {
       const card = gameCards[Math.floor(Math.random() * gameCards.length)];
       showCard(card.id);
       filteredCards = gameCards;
-      applyFinishFilter();
+      applyFilters();
       renderCards();
     } else {
       filteredCards = getGameCards();
-      applyFinishFilter();
+      applyFilters();
       renderCards();
     }
     updateStats();
@@ -911,7 +912,7 @@ function doSearch() {
   }
   
   document.getElementById('set-filter').value = '';
-  applyFinishFilter();
+  applyFilters();
   sortCards(document.getElementById('sort').value);
   updateURL();
 }
