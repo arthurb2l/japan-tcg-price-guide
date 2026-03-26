@@ -90,13 +90,24 @@ select{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:.9em}
   </div>
   <div class="setting-row">
     <div>
-      <div class="setting-label">Card View</div>
-      <div class="setting-desc">Default view in search/collection</div>
+      <div class="setting-label">Search View</div>
+      <div class="setting-desc">Default view on search page</div>
     </div>
-    <select id="s-view" onchange="saveSetting('view',this.value)">
+    <select id="s-searchView" onchange="saveSetting('searchView',this.value)">
+      <option value="grid">Grid</option>
+      <option value="full">Full</option>
+      <option value="checklist">Checklist</option>
+      <option value="text">Text</option>
+    </select>
+  </div>
+  <div class="setting-row">
+    <div>
+      <div class="setting-label">Collection View</div>
+      <div class="setting-desc">Default view on collection page</div>
+    </div>
+    <select id="s-collectionView" onchange="saveSetting('collectionView',this.value)">
       <option value="grid">Grid</option>
       <option value="list">List</option>
-      <option value="full">Full</option>
     </select>
   </div>
 </div>
@@ -135,7 +146,8 @@ function loadSettings() {
   document.getElementById('s-game').value = s.game || localStorage.getItem('tcg_game') || 'pokemon';
   document.getElementById('s-currency').value = s.currency || localStorage.getItem('tcg-currency') || 'JPY';
   document.getElementById('s-language').value = s.language || 'jp';
-  document.getElementById('s-view').value = s.view || 'grid';
+  document.getElementById('s-searchView').value = s.searchView || 'grid';
+  document.getElementById('s-collectionView').value = s.collectionView || 'list';
 }
 
 auth.onAuthStateChanged(async user => {

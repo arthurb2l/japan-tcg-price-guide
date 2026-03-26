@@ -391,7 +391,8 @@ async function cycleCondition(e, cardId) {
 
 // Modal functions
 let modalCardId = null;
-let currentView = 'list';
+const _cs = JSON.parse(localStorage.getItem('tcg_settings') || '{}');
+let currentView = _cs.collectionView || 'list';
 let currentSortCol = 'name';
 let currentSortDir = 'asc';
 
@@ -493,6 +494,7 @@ async function modalDeleteCard() {
 
 function toggleView(view) {
   currentView = view;
+  const s = JSON.parse(localStorage.getItem('tcg_settings') || '{}'); s.collectionView = view; localStorage.setItem('tcg_settings', JSON.stringify(s));
   document.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.dataset.view === view));
   document.querySelector('.card-grid')?.classList.toggle('hidden', view === 'list');
   document.querySelector('.card-list')?.classList.toggle('active', view === 'list');

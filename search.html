@@ -321,7 +321,8 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 </div>
 
 <script>
-let allCards = [], filteredCards = [], currentView = 'grid', currency = 'JPY', currentGame = 'pokemon';
+const _s = JSON.parse(localStorage.getItem('tcg_settings') || '{}');
+let allCards = [], filteredCards = [], currentView = _s.searchView || 'grid', currency = 'JPY', currentGame = 'pokemon';
 let collFilterActive = false;
 let currentModalCard = null; // Currently displayed card in modal
 let globalLang = ''; // '', 'jp', or 'en'
@@ -1012,6 +1013,7 @@ function sortCards(by) {
 
 function setView(view) {
   currentView = view;
+  const s = JSON.parse(localStorage.getItem('tcg_settings') || '{}'); s.searchView = view; localStorage.setItem('tcg_settings', JSON.stringify(s));
   document.querySelectorAll('[data-view]').forEach(b => b.classList.toggle('active', b.dataset.view === view));
   const grid = document.getElementById('results');
   grid.className = 'card-grid' + (view !== 'grid' ? ' ' + view : '');
@@ -1291,6 +1293,7 @@ document.addEventListener('keydown', e => {
 });
 
 loadCards();
+if (currentView !== 'grid') setView(currentView);
 // Populate search suggestions from history
 const hist = JSON.parse(localStorage.getItem("tcg_search_history") || "[]");
 // Favorites
