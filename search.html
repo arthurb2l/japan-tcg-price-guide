@@ -1361,22 +1361,22 @@ collectionStore._updateCount(); // Initialize collection count
 function copyCardInfo() {
   if (!currentModalCard) return;
   const c = currentModalCard;
-  const price = c.pricing?.usd || c.pricing?.tcgplayer?.normal?.marketPrice || "N/A";
-  const text = `${c.name} (${c.id})\nSet: ${c.setId}\nRarity: ${c.rarity || "N/A"}\nPrice: $${typeof price === "number" ? price.toFixed(2) : price}`;
+  const jpy = getMedianJpy(c);
+  const text = `${c.name} (${c.id})\nSet: ${c.setId}\nRarity: ${c.rarity || "N/A"}\nPrice: ¥${jpy ? jpy.toLocaleString() : "N/A"}`;
   navigator.clipboard.writeText(text);
   alert("Card info copied!");
 }
 
 function setAlert() {
   if (!currentModalCard) return;
-  const price = currentModalCard.pricing?.usd || currentModalCard.pricing?.tcgplayer?.normal?.marketPrice;
-  if (!price) { alert("No price data for this card"); return; }
-  const target = prompt(`Current: $${price.toFixed(2)}\nAlert when price drops below:`, (price * 0.8).toFixed(2));
+  const jpy = getMedianJpy(currentModalCard);
+  if (!jpy) { alert("No price data for this card"); return; }
+  const target = prompt(`Current: ¥${jpy.toLocaleString()}\nAlert when price drops below (¥):`, Math.round(jpy * 0.8));
   if (!target) return;
   const alerts = JSON.parse(localStorage.getItem("tcg_alerts") || "{}");
-  alerts[currentModalCard.id] = { target: parseFloat(target), setPrice: price, name: currentModalCard.name, setDate: Date.now() };
+  alerts[currentModalCard.id] = { targetJpy: parseInt(target), currentJpy: jpy, name: currentModalCard.name, setDate: Date.now() };
   localStorage.setItem("tcg_alerts", JSON.stringify(alerts));
-  alert(`Alert set! You will be notified when ${currentModalCard.name} drops below $${target}`);
+  alert(`Alert set! You'll be notified when ${currentModalCard.name} drops below ¥${parseInt(target).toLocaleString()}`);
 }
 
 // Check alerts on load
