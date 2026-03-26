@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-91JR7LD30P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-91JR7LD30P');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Settings | PokePiece</title>
+<link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+<script>
+firebase.initializeApp({
+  apiKey: "AIzaSyCLzia4937bSBbjsT0JUY-PAgnzygTYj1s",
+  authDomain: "japan-tcg-price-guide.firebaseapp.com",
+  projectId: "japan-tcg-price-guide",
+  storageBucket: "japan-tcg-price-guide.firebasestorage.app",
+  messagingSenderId: "1034858029314",
+  appId: "1:1034858029314:web:b162b211614d6fb3f5e21b"
+});
+const auth = firebase.auth();
+const db = firebase.firestore();
+</script>
+<style>
+body{max-width:600px}
+h1{font-size:1.5em;margin-bottom:5px}
+.settings-card{background:#fff;border-radius:10px;padding:20px;margin:15px 0;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
+.settings-card h2{font-size:1em;margin-bottom:15px;color:#666}
+.setting-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f0f0f0}
+.setting-row:last-child{border-bottom:none}
+.setting-label{font-weight:500}
+.setting-desc{font-size:.8em;color:#888;margin-top:2px}
+select{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:.9em}
+.save-msg{color:#16a34a;font-size:.85em;opacity:0;transition:opacity .3s}
+.save-msg.show{opacity:1}
+.user-card{display:flex;align-items:center;gap:12px;padding:15px;background:#fff;border-radius:10px;margin:15px 0;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
+.user-card img{width:40px;height:40px;border-radius:50%}
+.user-card .name{font-weight:600}
+.user-card .email{font-size:.85em;color:#666}
+.guest-msg{background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:12px;font-size:.85em;color:#92400e;margin:15px 0}
+</style>
+</head>
+<body>
+<script src="/japan-tcg-price-guide/components/header.js"></script>
+
+<h1>⚙️ Settings</h1>
+<p class="subtitle">Preferences are saved automatically</p>
+
+<div id="user-status"></div>
+
+<div class="settings-card">
+  <h2>🎴 Display</h2>
+  <div class="setting-row">
+    <div>
+      <div class="setting-label">Default Game</div>
+      <div class="setting-desc">Which TCG to show first</div>
+    </div>
+    <select id="s-game" onchange="saveSetting('game',this.value)">
+      <option value="pokemon">Pokemon</option>
+      <option value="onepiece">One Piece</option>
+    </select>
+  </div>
+  <div class="setting-row">
+    <div>
+      <div class="setting-label">Default Currency</div>
+      <div class="setting-desc">For prices across the site</div>
+    </div>
+    <select id="s-currency" onchange="saveSetting('currency',this.value)">
+      <option value="JPY">¥ JPY</option>
+      <option value="USD">$ USD</option>
+      <option value="EUR">€ EUR</option>
+    </select>
+  </div>
+  <div class="setting-row">
+    <div>
+      <div class="setting-label">Card Language</div>
+      <div class="setting-desc">Preferred card image language</div>
+    </div>
+    <select id="s-language" onchange="saveSetting('language',this.value)">
+      <option value="jp">Japanese</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+  <div class="setting-row">
+    <div>
+      <div class="setting-label">Card View</div>
+      <div class="setting-desc">Default view in search/collection</div>
+    </div>
+    <select id="s-view" onchange="saveSetting('view',this.value)">
+      <option value="grid">Grid</option>
+      <option value="list">List</option>
+      <option value="full">Full</option>
+    </select>
+  </div>
+</div>
+
+<span class="save-msg" id="save-msg">✓ Saved</span>
+
+<script>
+const SETTINGS_KEY = 'tcg_settings';
+
+function getSettings() {
+  return JSON.parse(localStorage.getItem(SETTINGS_KEY) || '{}');
+}
+
+function saveSetting(key, value) {
+  const s = getSettings();
+  s[key] = value;
+  localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
+
+  // Also update legacy keys for backward compatibility
+  if (key === 'currency') localStorage.setItem('tcg-currency', value);
+  if (key === 'game') localStorage.setItem('tcg_game', value);
+
+  // Save to Firestore if logged in
+  if (auth.currentUser) {
+    db.collection('users').doc(auth.currentUser.uid).set({ settings: s }, { merge: true });
+  }
+
+  // Flash save message
+  const msg = document.getElementById('save-msg');
+  msg.classList.add('show');
+  setTimeout(() => msg.classList.remove('show'), 1500);
+}
+
+function loadSettings() {
+  const s = getSettings();
+  document.getElementById('s-game').value = s.game || localStorage.getItem('tcg_game') || 'pokemon';
+  document.getElementById('s-currency').value = s.currency || localStorage.getItem('tcg-currency') || 'JPY';
+  document.getElementById('s-language').value = s.language || 'jp';
+  document.getElementById('s-view').value = s.view || 'grid';
+}
+
+auth.onAuthStateChanged(async user => {
+  const el = document.getElementById('user-status');
+  if (user) {
+    el.innerHTML = `<div class="user-card">
+      <img src="${user.photoURL || ''}" referrerpolicy="no-referrer">
+      <div><div class="name">${user.displayName || 'User'}</div><div class="email">${user.email}</div></div>
+    </div>`;
+    // Load settings from Firestore
+    try {
+      const doc = await db.collection('users').doc(user.uid).get();
+      if (doc.exists && doc.data().settings) {
+        const cloud = doc.data().settings;
+        localStorage.setItem(SETTINGS_KEY, JSON.stringify(cloud));
+        loadSettings();
+      }
+    } catch(e) {}
+  } else {
+    el.innerHTML = `<div class="guest-msg">👤 Not signed in — settings saved locally in your browser.</div>`;
+  }
+});
+
+loadSettings();
+</script>
+<footer id="site-footer"></footer>
+<script src="/japan-tcg-price-guide/components/footer.js"></script>
+</body>
+</html>

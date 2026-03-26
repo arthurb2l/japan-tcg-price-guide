@@ -654,7 +654,8 @@ function setCurrency(c) {
 
 async function loadCards() {
   // Load saved currency
-  const saved = localStorage.getItem('tcg-currency');
+  const settings = JSON.parse(localStorage.getItem('tcg_settings') || '{}');
+  const saved = settings.currency || localStorage.getItem('tcg-currency');
   if (saved) { currency = saved; document.getElementById('currency').value = saved; }
   
   try {
