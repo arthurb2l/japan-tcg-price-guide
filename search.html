@@ -166,8 +166,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 
 <div class="search-header">
   <div class="search-row">
-    <input type="text" class="search-box" id="search" list="searchSuggestions" placeholder="Search cards by name, set, or ID...">
-    <datalist id="searchSuggestions"></datalist>
+    <input type="text" class="search-box" id="search" placeholder="Search cards by name, set, or ID...">
     <button class="search-btn" onclick="doSearch()">Search</button>
   </div>
 </div>
@@ -690,6 +689,7 @@ async function loadCards() {
     } catch(e) { console.log('No price photos'); }
     
     allCards = [...pokemonCards, ...opCards];
+    console.log(`Loaded ${allCards.length} cards (${pokemonCards.length} PKM + ${opCards.length} OP)`);
     
     // Populate set filter (respects game filter)
     // Check URL params
@@ -1278,7 +1278,7 @@ function quickAddMode() {
 
 // Events
 document.getElementById('search').addEventListener('input', doSearch);
-document.getElementById('search').addEventListener('keydown', e => { if (e.key === 'Enter') e.preventDefault(); });
+document.getElementById('search').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); doSearch(); } });
 document.getElementById('modal').addEventListener('click', e => { if (e.target.id === 'modal') closeModal(); });
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
@@ -1291,7 +1291,6 @@ document.addEventListener('keydown', e => {
 loadCards();
 // Populate search suggestions from history
 const hist = JSON.parse(localStorage.getItem("tcg_search_history") || "[]");
-document.getElementById("searchSuggestions").innerHTML = hist.map(h => `<option value="${h}">`).join("");
 // Favorites
 // Card Notes
 function editNote() {
