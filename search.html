@@ -322,6 +322,24 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 
 <script>
 const _s = JSON.parse(localStorage.getItem('tcg_settings') || '{}');
+
+function getPriceSources(c) {
+  if (!c.pricing) return [];
+  const s = [];
+  if (c.pricing.usd) s.push({ jpy: Math.round(c.pricing.usd * 150) });
+  if (c.pricing.tcgplayer?.normal?.marketPrice) s.push({ jpy: Math.round(c.pricing.tcgplayer.normal.marketPrice * 150) });
+  else if (c.pricing.tcgplayer?.holofoil?.marketPrice) s.push({ jpy: Math.round(c.pricing.tcgplayer.holofoil.marketPrice * 150) });
+  if (c.pricing.cardmarket?.trend) s.push({ jpy: Math.round(c.pricing.cardmarket.trend * 162) });
+  if (c.pricing.amazonjp?.jpy) s.push({ jpy: c.pricing.amazonjp.jpy });
+  if (c.pricing.mercari?.jpy) s.push({ jpy: c.pricing.mercari.jpy });
+  return s;
+}
+function getMedianJpy(c) {
+  const s = getPriceSources(c);
+  if (!s.length) return 0;
+  const jpys = s.map(x => x.jpy).sort((a,b) => a - b);
+  return jpys.length >= 3 ? jpys[Math.floor(jpys.length / 2)] : Math.round(jpys.reduce((a,b) => a+b, 0) / jpys.length);
+}
 let allCards = [], filteredCards = [], currentView = _s.searchView || 'grid', currency = 'JPY', currentGame = 'pokemon';
 let collFilterActive = false;
 let currentModalCard = null; // Currently displayed card in modal
@@ -621,30 +639,13 @@ async function saveToCloud() {
 }
 
 function formatPrice(card) {
-  if (card.pricing) {
-    // Simple USD format (One Piece, DON cards, etc.)
-    // Trend indicator
-    let trend = "";
-    if (card.pricing.eurTrend && card.pricing.eur) {
-      if (card.pricing.eurTrend > card.pricing.eur * 1.05) trend = " ↑";
-      else if (card.pricing.eurTrend < card.pricing.eur * 0.95) trend = " ↓";
-    }
-    if (card.pricing.usd) {
-      if (currency === 'USD') return '$' + card.pricing.usd.toFixed(2) + trend;
-      if (currency === 'EUR') return '€' + (card.pricing.eur || card.pricing.usd * 0.92).toFixed(2);
-      return '¥' + Math.round(card.pricing.usd * 150).toLocaleString() + trend;
-    }
-    // TCGdex format (Pokemon)
-    const tcg = card.pricing.tcgplayer;
-    const cm = card.pricing.cardmarket;
-    if (currency === 'USD' && tcg?.normal?.marketPrice) return '$' + tcg.normal.marketPrice.toFixed(2);
-    if (currency === 'USD' && tcg?.holofoil?.marketPrice) return '$' + tcg.holofoil.marketPrice.toFixed(2);
-    if (cm?.trend) {
-      if (currency === 'EUR') return '€' + cm.trend.toFixed(2);
-      return '¥' + Math.round(cm.trend * 162).toLocaleString();
-    }
-  }
-  return '-';
+  const jpy = getMedianJpy(card);
+  if (!jpy) return '-';
+  const srcCount = getPriceSources(card).length;
+  const indicator = srcCount > 1 ? ` <span style="font-size:.7em;color:#888">📊${srcCount}</span>` : '';
+  if (currency === 'USD') return '$' + (jpy / 150).toFixed(2) + indicator;
+  if (currency === 'EUR') return '€' + (jpy / 162).toFixed(2) + indicator;
+  return '¥' + jpy.toLocaleString() + indicator;
 }
 
 function setCurrency(c) {
@@ -982,13 +983,7 @@ function applyFilters() {
 }
 
 function sortCards(by) {
-  const getPrice = c => {
-    if (c.pricing?.usd) return c.pricing.usd;
-    if (c.pricing?.tcgplayer?.normal?.marketPrice) return c.pricing.tcgplayer.normal.marketPrice;
-    if (c.pricing?.tcgplayer?.holofoil?.marketPrice) return c.pricing.tcgplayer.holofoil.marketPrice;
-    if (c.pricing?.cardmarket?.trend) return c.pricing.cardmarket.trend * 1.08;
-    return 0;
-  };
+  const getPrice = c => getMedianJpy(c);
   // Sort by full ID with numeric comparison for the number part
   const sortById = (a, b) => (a.id || '').localeCompare(b.id || '', undefined, {numeric: true});
   const finishOrder = ['regular','parallel-1','parallel-2','parallel-3','parallel-4','parallel-5','parallel-6','parallel-7','alternate-art'];
@@ -1140,23 +1135,27 @@ function showCard(id, isEn) {
     effectLabel.style.display = effect.style.display = 'none';
   }
   
-  // Price with variants
-  // Multi-currency price display
+  // Price with sources
   let priceHtml = "No price data";
   if (card.pricing) {
-    const usd = card.pricing.usd || card.pricing.tcgplayer?.normal?.marketPrice || card.pricing.tcgplayer?.holofoil?.marketPrice;
-    const eur = card.pricing.eur || card.pricing.cardmarket?.trend;
-    const jpy = usd ? Math.round(usd * 150) : (eur ? Math.round(eur * 162) : null);
-    const parts = [];
-    if (usd) parts.push("$" + usd.toFixed(2));
-    if (eur) parts.push("€" + eur.toFixed(2));
-    if (jpy) parts.push("¥" + jpy.toLocaleString());
-    priceHtml = parts.join(" · ") || "No price data";
-  }
-  if (card.variants?.length > 1) {
-    priceHtml += '<br><small style="color:#666">';
-    priceHtml += card.variants.slice(1).map(v => `${v.label || 'Alt'}: ¥${v.usd ? Math.round(v.usd * 150).toLocaleString() : '?'}`).join(' · ');
-    priceHtml += '</small>';
+    const sources = [];
+    if (card.pricing.usd) sources.push({ name: 'limitlesstcg', jpy: Math.round(card.pricing.usd * 150), raw: '$' + card.pricing.usd.toFixed(2) });
+    if (card.pricing.tcgplayer?.normal?.marketPrice) sources.push({ name: 'TCGPlayer', jpy: Math.round(card.pricing.tcgplayer.normal.marketPrice * 150), raw: '$' + card.pricing.tcgplayer.normal.marketPrice.toFixed(2) });
+    if (card.pricing.tcgplayer?.holofoil?.marketPrice) sources.push({ name: 'TCGPlayer (holo)', jpy: Math.round(card.pricing.tcgplayer.holofoil.marketPrice * 150), raw: '$' + card.pricing.tcgplayer.holofoil.marketPrice.toFixed(2) });
+    if (card.pricing.cardmarket?.trend) sources.push({ name: 'Cardmarket', jpy: Math.round(card.pricing.cardmarket.trend * 162), raw: '€' + card.pricing.cardmarket.trend.toFixed(2) });
+    if (card.pricing.amazonjp?.jpy) sources.push({ name: 'Amazon JP', jpy: card.pricing.amazonjp.jpy, raw: '¥' + card.pricing.amazonjp.jpy.toLocaleString() });
+    if (card.pricing.mercari?.jpy) sources.push({ name: 'Mercari', jpy: card.pricing.mercari.jpy, raw: '¥' + card.pricing.mercari.jpy.toLocaleString() });
+    
+    if (sources.length) {
+      const jpys = sources.map(s => s.jpy).sort((a,b) => a - b);
+      const median = jpys.length >= 3 ? jpys[Math.floor(jpys.length / 2)] : Math.round(jpys.reduce((a,b) => a+b, 0) / jpys.length);
+      priceHtml = `<div style="font-size:1.1em;font-weight:bold;margin-bottom:6px">¥${median.toLocaleString()} <span style="font-size:.7em;color:#888;font-weight:normal">${sources.length > 1 ? (jpys.length >= 3 ? 'median' : 'avg') + ' · ' + sources.length + ' sources' : sources[0].name}</span></div>`;
+      priceHtml += sources.map(s => {
+        const diff = s.jpy - median;
+        const color = sources.length > 1 ? (diff <= 0 ? '#16a34a' : '#dc2626') : '#666';
+        return `<div style="font-size:.85em;padding:2px 0"><span style="color:#888;width:100px;display:inline-block">${s.name}</span> <span style="font-weight:500">¥${s.jpy.toLocaleString()}</span> <span style="font-size:.8em;color:${color}">${s.raw}</span></div>`;
+      }).join('');
+    }
   }
   document.getElementById('modal-price').innerHTML = priceHtml;
   // External links
@@ -1168,6 +1167,8 @@ function showCard(id, isEn) {
     links.push('<a href="https://onepiece.gg/cards/' + card.id + '" target="_blank" style="color:#1976d2">onepiece.gg</a>');
     links.push('<a href="https://www.tcgplayer.com/search/one-piece-card-game/product?q=' + encodeURIComponent(card.name) + '" target="_blank" style="color:#1976d2">TCGPlayer</a>');
   }
+  links.push('<a href="https://www.amazon.co.jp/s?k=' + encodeURIComponent(card.id + ' カード') + '" target="_blank" style="color:#1976d2">Amazon JP</a>');
+  links.push('<a href="https://jp.mercari.com/search?keyword=' + encodeURIComponent(card.id) + '" target="_blank" style="color:#1976d2">Mercari</a>');
   document.getElementById('modal-links').innerHTML = links.join(' · ');
   // Similar cards from same set
   const similar = allCards.filter(c => c.setId === card.setId && c.id !== card.id).slice(0, 6);
