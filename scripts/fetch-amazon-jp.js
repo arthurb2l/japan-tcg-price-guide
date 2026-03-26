@@ -20,7 +20,7 @@ const path = require('path');
 
 // Config
 const DELAY_MS = 3000; // Delay between requests to avoid rate limiting
-const MAX_CARDS = 50;
+const MAX_CARDS = 200;
 
 async function fetchAmazonJPPrice(page, cardId, cardName) {
   const query = encodeURIComponent(`${cardId} ワンピースカード シングル`);
