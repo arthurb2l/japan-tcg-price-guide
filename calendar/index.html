@@ -150,6 +150,7 @@ h1 { text-align: center; color: #222; font-size: 1.6em; margin: 15px 0 5px; }
 </div>
 <div id="detailTags"></div>
 <p id="detailDesc" style="margin-top:8px;font-size:0.9em;color:#666;"></p>
+<p id="detailLink" style="margin-top:10px;display:none"></p>
 </div>
 
 <div class="upcoming">
@@ -180,12 +181,12 @@ const releases = [
   { date: '2026-01-31', name: 'Munikus Zero', jp: 'ムニキスゼロ', tcg: 'pokemon', type: 'booster', price: '¥180/pack' },
   { date: '2026-03-14', name: 'Ninja Spinner', jp: 'ニンジャスピナー', tcg: 'pokemon', type: 'booster', price: '¥180/pack' },
   // Abyss Eye lottery period
-  { date: '2026-03-27', name: '🎟️ Abyss Eye Lottery Opens', jp: 'アビスアイ 抽選受付開始', tcg: 'pokemon', type: 'lottery', price: '-', desc: 'Pokemon Center Online lottery application opens' },
-  { date: '2026-04-03', name: '🎟️ Abyss Eye Lottery Closes', jp: 'アビスアイ 抽選受付終了', tcg: 'pokemon', type: 'lottery', price: '-', desc: 'Last day to apply for Pokemon Center lottery' },
+  { date: '2026-03-27', name: '🎟️ Abyss Eye Lottery Opens', jp: 'アビスアイ 抽選受付開始', tcg: 'pokemon', type: 'lottery', price: '-', desc: 'Pokemon Center Online lottery application opens', link: 'https://www.pokemoncenter-online.com/' },
+  { date: '2026-04-03', name: '🎟️ Abyss Eye Lottery Closes', jp: 'アビスアイ 抽選受付終了', tcg: 'pokemon', type: 'lottery', price: '-', desc: 'Last day to apply for Pokemon Center lottery', link: 'https://www.pokemoncenter-online.com/' },
   { date: '2026-04-18', name: 'Abyss Eye', jp: 'アビスアイ', tcg: 'pokemon', type: 'booster', price: '¥180/pack', desc: 'Release day' },
   // Storm Emeralda lottery period
-  { date: '2026-05-29', name: '🎟️ Storm Emeralda Lottery Opens', jp: 'ストームエメラルダ 抽選受付開始', tcg: 'pokemon', type: 'lottery', price: '-', desc: 'Pokemon Center Online lottery application opens' },
-  { date: '2026-06-05', name: '🎟️ Storm Emeralda Lottery Closes', jp: 'ストームエメラルダ 抽選受付終了', tcg: 'pokemon', type: 'lottery', price: '-', desc: 'Last day to apply for Pokemon Center lottery' },
+  { date: '2026-05-29', name: '🎟️ Storm Emeralda Lottery Opens', jp: 'ストームエメラルダ 抽選受付開始', tcg: 'pokemon', type: 'lottery', price: '-', desc: 'Pokemon Center Online lottery application opens', link: 'https://www.pokemoncenter-online.com/' },
+  { date: '2026-06-05', name: '🎟️ Storm Emeralda Lottery Closes', jp: 'ストームエメラルダ 抽選受付終了', tcg: 'pokemon', type: 'lottery', price: '-', desc: 'Last day to apply for Pokemon Center lottery', link: 'https://www.pokemoncenter-online.com/' },
   { date: '2026-06-13', name: 'Storm Emeralda', jp: 'ストームエメラルダ', tcg: 'pokemon', type: 'booster', price: '¥180/pack', desc: 'Release day' },
   { date: '2026-10-01', name: 'Celebration Collection', jp: 'セレブレーションコレクション', tcg: 'pokemon', type: 'special', price: 'TBA', desc: '30th Anniversary special set' },
 ];
@@ -256,6 +257,9 @@ function showDetail(date, name) {
   document.getElementById('detailPrice').textContent = r.price;
   document.getElementById('detailTags').innerHTML = `<span class="detail-tag ${r.tcg}">${r.tcg === 'pokemon' ? 'Pokemon' : 'One Piece'}</span> <span class="detail-tag ${r.type}">${r.type}</span>`;
   document.getElementById('detailDesc').textContent = r.desc || '';
+  const linkEl = document.getElementById('detailLink');
+  if (r.link) { linkEl.innerHTML = `<a href="${r.link}" target="_blank" rel="noopener" style="color:#EE1515;font-weight:bold">🔗 Open Link</a>`; linkEl.style.display = 'block'; }
+  else { linkEl.style.display = 'none'; }
   const panel = document.getElementById('detailPanel');
   panel.classList.add('active');
   panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -287,6 +291,7 @@ renderCalendar();
 updateCountdown();
 setInterval(updateCountdown, 60000);
 </script>
+</div>
 <footer id="site-footer"></footer>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
 </body>

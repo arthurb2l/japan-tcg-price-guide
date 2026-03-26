@@ -35,15 +35,25 @@ const proxy = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?
 async function loadData() {
   try {
     const data = await fetch(`${BASE}/data/onepiece-cache.json`).then(r => r.json());
+    const allCards = Object.values(data.sets).flat();
     const commons = [];
 
-    for (const [setId, cards] of Object.entries(data.sets)) {
-      for (const card of cards) {
-        const price = card.pricing?.usd;
-        if (card.rarity === 'C' && price > 0) {
-          commons.push({ ...card, setId, price });
-        }
-      }
+    // Build price map to detect suspicious duplicates
+    const priceByBase = {};
+    for (const card of allCards) {
+      const base = card.id.split('-p')[0];
+      if (!priceByBase[base]) priceByBase[base] = new Set();
+      if (card.pricing?.usd > 0) priceByBase[base].add(card.pricing.usd);
+    }
+
+    for (const card of allCards) {
+      const price = card.pricing?.usd;
+      if (card.rarity !== 'C' || !price || price <= 0) continue;
+      // Skip if all variants of this card have identical price (bad data)
+      const base = card.id.split('-p')[0];
+      const uniquePrices = priceByBase[base];
+      if (uniquePrices && uniquePrices.size === 1 && allCards.filter(c => c.id.startsWith(base)).length > 1) continue;
+      commons.push({ ...card, price });
     }
 
     commons.sort((a,b) => b.price - a.price);

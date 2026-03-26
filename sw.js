@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tcg-v2';
+const CACHE_NAME = 'tcg-v3';
 const OFFLINE_URLS = [
   '/japan-tcg-price-guide/',
   '/japan-tcg-price-guide/index.html',
