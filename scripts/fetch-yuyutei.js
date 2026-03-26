@@ -25,7 +25,7 @@ async function fetchYuyuteiPrice(page, cardId) {
   
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
-    await page.waitForTimeout(2000);
+    await new Promise(r => setTimeout(r, 2000));
     
     // Extract sell price (retail) and buy price (buylist)
     const prices = await page.evaluate(() => {

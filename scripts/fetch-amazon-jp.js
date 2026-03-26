@@ -28,7 +28,7 @@ async function fetchAmazonJPPrice(page, cardId, cardName) {
   
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
-    await page.waitForTimeout(2000);
+    await new Promise(r => setTimeout(r, 2000));
     
     // Extract first result price
     const price = await page.evaluate(() => {

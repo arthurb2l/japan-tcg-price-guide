@@ -25,7 +25,7 @@ async function fetchMercariPrice(page, cardId) {
   
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
-    await page.waitForTimeout(3000);
+    await new Promise(r => setTimeout(r, 3000));
     
     // Extract prices from sold listings
     const prices = await page.evaluate(() => {
