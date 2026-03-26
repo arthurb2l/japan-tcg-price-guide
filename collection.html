@@ -257,6 +257,14 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
         <div class="card-modal-lists" id="modal-lists"></div>
       </div>
       <div class="card-modal-field">
+        <label>Purchase Price (¥ JPY)</label>
+        <input type="number" id="modal-purchase-price" placeholder="e.g. 500" min="0" onchange="modalUpdateField('purchasePrice',Number(this.value)||0)">
+      </div>
+      <div class="card-modal-field" id="modal-roi-field" style="display:none">
+        <label>ROI</label>
+        <span id="modal-roi" style="font-weight:bold;font-size:1.1em"></span>
+      </div>
+      <div class="card-modal-field">
         <label>Notes</label>
         <input type="text" id="modal-notes" placeholder="Add notes..." onchange="modalUpdateField('notes',this.value)">
       </div>
@@ -400,6 +408,22 @@ function openCardModal(cardId) {
   document.getElementById('modal-condition').value = data.condition || 'NM';
   document.getElementById('modal-language').value = data.language || 'JP';
   document.getElementById('modal-notes').value = data.notes || '';
+  
+  // Purchase price & ROI
+  const ppInput = document.getElementById('modal-purchase-price');
+  ppInput.value = data.purchasePrice || '';
+  const card2 = allCards.find(c => c.id === cardId);
+  const marketJpy = getPrice(card2) ? Math.round(getPrice(card2) * 150) : null;
+  const roiField = document.getElementById('modal-roi-field');
+  const roiSpan = document.getElementById('modal-roi');
+  if (data.purchasePrice && marketJpy) {
+    const roi = marketJpy - data.purchasePrice;
+    roiSpan.textContent = `¥${roi >= 0 ? '+' : ''}${roi.toLocaleString()} (${roi >= 0 ? '+' : ''}${Math.round(roi / data.purchasePrice * 100)}%)`;
+    roiSpan.style.color = roi >= 0 ? '#16a34a' : '#dc2626';
+    roiField.style.display = '';
+  } else {
+    roiField.style.display = 'none';
+  }
   
   // Show list checkboxes
   const listsHtml = listTypes.map(list => {
@@ -654,6 +678,8 @@ function renderCollection() {
   const pokemonCount = collectionCards.filter(c => c.game === 'pokemon').reduce((sum, c) => sum + getQty(c.id), 0);
   const opCount = collectionCards.filter(c => c.game === 'onepiece').reduce((sum, c) => sum + getQty(c.id), 0);
   const totalValue = collectionCards.reduce((sum, c) => sum + (getPrice(c) || 0) * getQty(c.id), 0);
+  const totalCost = collectionCards.reduce((sum, c) => sum + (userCollection[c.id]?.purchasePrice || 0) * getQty(c.id), 0);
+  const totalROI = totalCost > 0 ? Math.round(totalValue * 150) - totalCost : null;
   
   const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
   const getImg = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || '';
@@ -680,7 +706,11 @@ function renderCollection() {
       <div class="stat-card">
         <div class="value">¥${Math.round(totalValue * 150).toLocaleString()}</div>
         <div class="label">Est. Value</div>
-      </div>
+      </div>${totalROI !== null ? `
+      <div class="stat-card">
+        <div class="value" style="color:${totalROI >= 0 ? '#16a34a' : '#dc2626'}">¥${totalROI >= 0 ? '+' : ''}${totalROI.toLocaleString()}</div>
+        <div class="label">Total ROI</div>
+      </div>` : ''}
     </div>
     
     <div class="filters">
@@ -733,7 +763,12 @@ function renderCollection() {
           <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
           <div class="name">${c.name || c.id}</div>
           <div class="meta">${c.setId} · ${c.rarity || '?'} · ${lang}</div>
-          <div class="price">${formatPrice(getPrice(c))}${qty > 1 ? ` (×${qty})` : ''}</div>
+          <div class="price">${formatPrice(getPrice(c))}${qty > 1 ? ` (×${qty})` : ''}${(() => {
+            const pp = userCollection[c.id]?.purchasePrice;
+            if (!pp || !getPrice(c)) return '';
+            const roi = Math.round(getPrice(c) * 150) - pp;
+            return ` <span style="font-size:.75em;color:${roi >= 0 ? '#16a34a' : '#dc2626'}">${roi >= 0 ? '+' : ''}¥${roi.toLocaleString()}</span>`;
+          })()}</div>
         </div>`;
       }).join('')}
     </div>
@@ -827,13 +862,15 @@ function sortBy(sort) {
 function exportCollection() {
 
 
-  const rows = [['Card ID', 'Name', 'Set', 'Rarity', 'Game', 'Qty', 'Condition', 'Language', 'Price JPY', 'Total']];
+  const rows = [['Card ID', 'Name', 'Set', 'Rarity', 'Game', 'Qty', 'Condition', 'Language', 'Price JPY', 'Total', 'Purchase Price', 'ROI']];
   collectionCards.forEach(c => {
     const qty = userCollection[c.id]?.qty || 1;
     const cond = userCollection[c.id]?.condition || 'NM';
     const lang = userCollection[c.id]?.language || 'JP';
     const price = getPrice(c);
-    rows.push([c.id, c.name || '', c.setId || '', c.rarity || '', c.game, qty, cond, lang, price?.toFixed(2) || '', price ? (price * qty).toFixed(2) : '']);
+    const pp = userCollection[c.id]?.purchasePrice || '';
+    const roi = pp && price ? Math.round(price * 150) - pp : '';
+    rows.push([c.id, c.name || '', c.setId || '', c.rarity || '', c.game, qty, cond, lang, price?.toFixed(2) || '', price ? (price * qty).toFixed(2) : '', pp, roi]);
   });
   const csv = rows.map(r => r.map(v => `"${v}"`).join(',')).join('\n');
   const blob = new Blob([csv], {type: 'text/csv'});
