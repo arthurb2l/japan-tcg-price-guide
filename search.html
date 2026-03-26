@@ -306,10 +306,6 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
         <dt id="modal-history-label" style="display:none">History</dt>
         <dd id="modal-history" style="display:none"></dd>
       </dl>
-      <div id="similar-cards" style="margin-top:15px;display:none">
-        <div style="font-size:.85em;color:#666;margin-bottom:8px">More from this set:</div>
-        <div id="similar-grid" style="display:flex;gap:6px;overflow-x:auto"></div>
-      </div>
       <div class="modal-actions" style="display:flex;gap:10px;margin-top:15px;flex-wrap:wrap">
         <button id="favBtn" onclick="toggleFavorite()" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">🤍 Fav</button>
         <button onclick="copyCardInfo()" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">📋 Copy</button>
@@ -1171,15 +1167,6 @@ function showCard(id, isEn) {
   links.push('<a href="https://jp.mercari.com/search?keyword=' + encodeURIComponent(card.id) + '" target="_blank" style="color:#1976d2">Mercari</a>');
   document.getElementById('modal-links').innerHTML = links.join(' · ');
   // Similar cards from same set
-  const similar = allCards.filter(c => c.setId === card.setId && c.id !== card.id).slice(0, 6);
-  const simDiv = document.getElementById("similar-cards");
-  const simGrid = document.getElementById("similar-grid");
-  if (similar.length) {
-    simDiv.style.display = "block";
-    simGrid.innerHTML = similar.map(c => `<img src="${c.images?.small || c.image}" style="width:45px;height:63px;object-fit:cover;border-radius:3px;cursor:pointer" onclick="showCard('${c.id}')">`).join("");
-  } else {
-    simDiv.style.display = "none";
-  }
   
   // Japan price photo
   const jpLabel = document.getElementById('modal-jp-price-label');
