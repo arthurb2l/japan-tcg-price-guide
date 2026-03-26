@@ -329,11 +329,11 @@ function getPriceSources(c) {
   if (c.pricing.mercari?.jpy) s.push({ jpy: c.pricing.mercari.jpy });
   return s;
 }
-function getMedianJpy(c) {
+function getFloorJpy(c) {
   const s = getPriceSources(c);
   if (!s.length) return 0;
   const jpys = s.map(x => x.jpy).sort((a,b) => a - b);
-  return jpys.length >= 3 ? jpys[Math.floor(jpys.length / 2)] : Math.round(jpys.reduce((a,b) => a+b, 0) / jpys.length);
+  return jpys[0]; // floor = lowest source
 }
 let allCards = [], filteredCards = [], currentView = _s.searchView || 'grid', currency = 'JPY', currentGame = 'pokemon';
 let collFilterActive = false;
@@ -634,7 +634,7 @@ async function saveToCloud() {
 }
 
 function formatPrice(card) {
-  const jpy = getMedianJpy(card);
+  const jpy = getFloorJpy(card);
   if (!jpy) return '-';
   const srcCount = getPriceSources(card).length;
   const indicator = srcCount > 1 ? ` <span style="font-size:.7em;color:#888">📊${srcCount}</span>` : '';
@@ -978,7 +978,7 @@ function applyFilters() {
 }
 
 function sortCards(by) {
-  const getPrice = c => getMedianJpy(c);
+  const getPrice = c => getFloorJpy(c);
   // Sort by full ID with numeric comparison for the number part
   const sortById = (a, b) => (a.id || '').localeCompare(b.id || '', undefined, {numeric: true});
   const finishOrder = ['regular','parallel-1','parallel-2','parallel-3','parallel-4','parallel-5','parallel-6','parallel-7','alternate-art'];
@@ -1143,10 +1143,10 @@ function showCard(id, isEn) {
     
     if (sources.length) {
       const jpys = sources.map(s => s.jpy).sort((a,b) => a - b);
-      const median = jpys.length >= 3 ? jpys[Math.floor(jpys.length / 2)] : Math.round(jpys.reduce((a,b) => a+b, 0) / jpys.length);
-      priceHtml = `<div style="font-size:1.1em;font-weight:bold;margin-bottom:6px">¥${median.toLocaleString()} <span style="font-size:.7em;color:#888;font-weight:normal">${sources.length > 1 ? (jpys.length >= 3 ? 'median' : 'avg') + ' · ' + sources.length + ' sources' : sources[0].name}</span></div>`;
+      const floor = jpys[0]; // lowest source
+      priceHtml = `<div style="font-size:1.1em;font-weight:bold;margin-bottom:6px">¥${floor.toLocaleString()} <span style="font-size:.7em;color:#888;font-weight:normal">${sources.length > 1 ? 'floor' + ' · ' + sources.length + ' sources' : sources[0].name}</span></div>`;
       priceHtml += sources.map(s => {
-        const diff = s.jpy - median;
+        const diff = s.jpy - floor;
         const color = sources.length > 1 ? (diff <= 0 ? '#16a34a' : '#dc2626') : '#666';
         return `<div style="font-size:.85em;padding:2px 0"><span style="color:#888;width:100px;display:inline-block">${s.name}</span> <span style="font-weight:500">¥${s.jpy.toLocaleString()}</span> <span style="font-size:.8em;color:${color}">${s.raw}</span></div>`;
       }).join('');
@@ -1360,7 +1360,7 @@ collectionStore._updateCount(); // Initialize collection count
 function copyCardInfo() {
   if (!currentModalCard) return;
   const c = currentModalCard;
-  const jpy = getMedianJpy(c);
+  const jpy = getFloorJpy(c);
   const text = `${c.name} (${c.id})\nSet: ${c.setId}\nRarity: ${c.rarity || "N/A"}\nPrice: ¥${jpy ? jpy.toLocaleString() : "N/A"}`;
   navigator.clipboard.writeText(text);
   alert("Card info copied!");
