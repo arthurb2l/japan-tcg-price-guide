@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="350" viewBox="0 0 250 350">
+<rect width="250" height="350" rx="12" fill="#1a237e"/>
+<rect x="8" y="8" width="234" height="334" rx="8" fill="none" stroke="#ffd54f" stroke-width="2"/>
+<text x="125" y="160" text-anchor="middle" fill="#ffd54f" font-family="sans-serif" font-size="20" font-weight="bold">DON!!</text>
+<text x="125" y="190" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="12">Image Coming Soon</text>
+</svg>
