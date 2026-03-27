@@ -1164,6 +1164,8 @@ function showCard(id, isEn) {
   }
   links.push('<a href="https://www.amazon.co.jp/s?k=' + encodeURIComponent(card.id + ' カード') + '" target="_blank" style="color:#1976d2">Amazon JP</a>');
   links.push('<a href="https://jp.mercari.com/search?keyword=' + encodeURIComponent(card.id) + '" target="_blank" style="color:#1976d2">Mercari</a>');
+  const reportUrl = 'https://github.com/arthurb2l/japan-tcg-price-guide/issues/new?title=' + encodeURIComponent('[Card Report] ' + card.id + ' ' + card.name) + '&body=' + encodeURIComponent('**Card:** ' + card.id + ' — ' + card.name + '\n**Set:** ' + (card.set || card.setId || '') + '\n**Issue type:** (pick one)\n- [ ] Wrong image\n- [ ] Wrong price\n- [ ] Wrong rarity (shown: ' + (card.rarity || 'none') + ')\n- [ ] Missing variant\n- [ ] Wrong name/metadata\n- [ ] Other\n\n**Details:**\n') + '&labels=card-report';
+  links.push('<a href="' + reportUrl + '" target="_blank" style="color:#d32f2f" title="Report wrong data">⚠️ Report</a>');
   document.getElementById('modal-links').innerHTML = links.join(' · ');
   // Similar cards from same set
   
