@@ -371,11 +371,11 @@ select{width:100%;margin-top:4px;font-size:12px;padding:2px}
 <button class="btn-ok" onclick="markCard('DON-EB03-UTA-GOLD','ok')">✅ OK</button>
 <button class="btn-flag" onclick="markCard('DON-EB03-UTA-GOLD','flagged')">🔴 Flag</button>
 <button class="btn-skip" onclick="markCard('DON-EB03-UTA-GOLD','pending')">⬜ Skip</button>
-</div></div><div class="card placeholder" id="card-DON-EB04" data-status="pending">
-<img src="onepiece/images/card-back.png" onerror="this.style.background='#f44';this.alt='BROKEN'" loading="lazy" onclick="this.parentElement.querySelector('textarea').focus()">
+</div></div><div class="card" id="card-DON-EB04" data-status="pending">
+<img src="onepiece/images/don/DON-EB04.png" onerror="this.style.background='#f44';this.alt='BROKEN'" loading="lazy" onclick="this.parentElement.querySelector('textarea').focus()">
 <div class="id">DON-EB04</div>
 <div class="name">DON!! Card (EB-04 Egghead Crisis)</div>
-<div class="price">¥100 ⚠️ NEEDS IMAGE</div>
+<div class="price">¥100</div>
 <select onchange="setIssue('DON-EB04',this.value)">
 <option value="">-- Issue type --</option>
 <option value="wrong_image">🖼️ Wrong image</option>
@@ -3186,8 +3186,6 @@ select{width:100%;margin-top:4px;font-size:12px;padding:2px}
 </div></div></div>
 <script>
 const results = JSON.parse(localStorage.getItem('don_audit') || '{}');
-
-// Restore saved state
 document.querySelectorAll('.card').forEach(el => {
   const id = el.id.replace('card-','');
   if (results[id]) {
@@ -3197,7 +3195,6 @@ document.querySelectorAll('.card').forEach(el => {
   }
 });
 updateStats();
-
 function markCard(id, status) {
   if (!results[id]) results[id] = {};
   results[id].status = status;
@@ -3207,36 +3204,21 @@ function markCard(id, status) {
   if (status !== 'pending') el.classList.add(status);
   save(); updateStats();
 }
-function saveNote(id, note) {
-  if (!results[id]) results[id] = {};
-  results[id].note = note;
-  save();
-}
-function setIssue(id, issue) {
-  if (!results[id]) results[id] = {};
-  results[id].issue = issue;
-  if (issue) markCard(id, 'flagged');
-  save();
-}
+function saveNote(id, note) { if (!results[id]) results[id] = {}; results[id].note = note; save(); }
+function setIssue(id, issue) { if (!results[id]) results[id] = {}; results[id].issue = issue; if (issue) markCard(id, 'flagged'); save(); }
 function save() { localStorage.setItem('don_audit', JSON.stringify(results)); }
 function updateStats() {
   const all = document.querySelectorAll('.card').length;
   const ok = document.querySelectorAll('.card.ok').length;
   const flagged = document.querySelectorAll('.card.flagged').length;
-  document.getElementById('stats').innerHTML = `<b>${ok}✅ ${flagged}🔴 ${all-ok-flagged}⬜</b> of ${all} cards`;
+  document.getElementById('stats').innerHTML = '<b>'+ok+'✅ '+flagged+'🔴 '+(all-ok-flagged)+'⬜</b> of '+all+' cards';
 }
-function filterCards(f) {
-  document.querySelectorAll('.card').forEach(el => {
-    el.style.display = (f === 'all' || el.dataset.status === f) ? '' : 'none';
-  });
-}
+function filterCards(f) { document.querySelectorAll('.card').forEach(el => { el.style.display = (f === 'all' || el.dataset.status === f) ? '' : 'none'; }); }
 function exportResults() {
   let out = 'DON AUDIT RESULTS\n';
   for (const [id, r] of Object.entries(results)) {
     if (r.status === 'ok') continue;
-    if (r.status === 'flagged' || r.note || r.issue) {
-      out += `${id}: ${r.issue||'no-type'} | ${r.note||'no note'}\n`;
-    }
+    if (r.status === 'flagged' || r.note || r.issue) out += id+': '+(r.issue||'no-type')+' | '+(r.note||'no note')+'\n';
   }
   navigator.clipboard.writeText(out).then(() => alert('Copied to clipboard!'));
 }
