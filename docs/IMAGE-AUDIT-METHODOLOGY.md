@@ -78,3 +78,27 @@ This same methodology works for any card set:
 - Some PDFs have variable cards-per-page (not always 3×3)
 - Gold/foil cards may render differently than physical appearance
 - Some DON cards are event/region exclusives not in any PDF
+
+## CMYK Conversion Breakthrough
+
+The key discovery: PDF-embedded CMYK images have **inverted** channel values (255 = 0% ink, 0 = 100% ink).
+
+### Working Formula
+```python
+arr = 255 - np.array(cmyk_image)  # INVERT first
+c, m, y, k = arr[:,:,0], arr[:,:,1], arr[:,:,2], arr[:,:,3]
+r = (255 * (1 - c/255) * (1 - k/255)).astype(np.uint8)
+g = (255 * (1 - m/255) * (1 - k/255)).astype(np.uint8)
+b = (255 * (1 - y/255) * (1 - k/255)).astype(np.uint8)
+```
+
+### What Failed
+- `PIL.Image.convert('RGB')` — doesn't handle inverted CMYK
+- `ImageMagick convert -colorspace sRGB` — same issue
+- `pdftoppm` page rendering + grid cropping — correct colors but card positions vary per page, cropping unreliable
+
+### What Works
+1. `pdfimages` to extract individual CMYK cards (perfectly cropped)
+2. Invert all CMYK channels (255 - value)
+3. Apply standard CMYK→RGB formula
+4. Filter out page backgrounds by size (cards ~377x525, backgrounds ~1701x2386)
