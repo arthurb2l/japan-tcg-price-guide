@@ -1,0 +1,2231 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>DON PDF Mapping</title>
+<style>
+body{font-family:sans-serif;max-width:1400px;margin:0 auto;padding:20px}
+.instructions{background:#f5f5f5;border:1px solid #ddd;border-radius:8px;padding:16px;margin-bottom:16px;font-size:13px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.card{border:1px solid #ddd;border-radius:8px;padding:6px;text-align:center;font-size:11px}
+.card img{width:100%;border-radius:4px}
+.card .idx{color:#fff;background:#333;display:inline-block;padding:1px 6px;border-radius:3px;font-size:10px}
+.correct{border:3px solid #4caf50;background:#e8f5e9}
+.wrong{border:3px solid #f44336;background:#ffebee}
+.noted{border:3px solid #1976d2;background:#e3f2fd}
+textarea{width:100%;height:35px;font-size:10px;border:1px solid #ccc;border-radius:3px;padding:3px;margin-top:3px;resize:vertical}
+.actions{display:flex;gap:3px;margin-top:3px}
+.actions button{flex:1;padding:4px;font-size:10px;border:none;border-radius:3px;cursor:pointer;font-weight:bold}
+.btn-ok{background:#4caf50;color:#fff}
+.btn-wrong{background:#f44336;color:#fff}
+.btn-save{background:#1976d2;color:#fff}
+#toolbar{position:sticky;top:0;background:#fff;padding:8px 0;border-bottom:2px solid #333;z-index:10;margin-bottom:12px}
+#stats{font-size:14px;margin-bottom:6px}
+</style></head><body>
+<h1>DON PDF Mapping — Proper Colors (270 cards)</h1>
+<div class="instructions">
+<h2>Instructions</h2>
+<ol>
+<li>Open the <a href="https://www.onepiece-cardgame.com/pdf/don-cardlist.pdf" target="_blank">Official PDF</a> side by side</li>
+<li>Cards are in PDF page order (left→right, top→bottom)</li>
+<li>Type the Japanese text from below the image in the PDF</li>
+<li>Click <b style="color:#1976d2">📝 Save</b></li>
+</ol>
+</div>
+<div id="toolbar">
+<div id="stats"></div>
+<button onclick="exportMapping()" style="padding:8px 16px;font-size:13px;background:#333;color:#fff;border:none;border-radius:4px;cursor:pointer">📋 Export Results</button>
+</div><div class="grid"><div class="card" id="card-0" data-status="pending">
+<div class="idx">#1</div>
+<img src="onepiece/images/don/_pdf_rendered/card-001.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(0,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(0,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(0,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(0,'noted')">📝</button>
+</div></div><div class="card" id="card-1" data-status="pending">
+<div class="idx">#2</div>
+<img src="onepiece/images/don/_pdf_rendered/card-002.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(1,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(1,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(1,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(1,'noted')">📝</button>
+</div></div><div class="card" id="card-2" data-status="pending">
+<div class="idx">#3</div>
+<img src="onepiece/images/don/_pdf_rendered/card-003.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(2,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(2,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(2,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(2,'noted')">📝</button>
+</div></div><div class="card" id="card-3" data-status="pending">
+<div class="idx">#4</div>
+<img src="onepiece/images/don/_pdf_rendered/card-004.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(3,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(3,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(3,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(3,'noted')">📝</button>
+</div></div><div class="card" id="card-4" data-status="pending">
+<div class="idx">#5</div>
+<img src="onepiece/images/don/_pdf_rendered/card-005.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(4,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(4,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(4,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(4,'noted')">📝</button>
+</div></div><div class="card" id="card-5" data-status="pending">
+<div class="idx">#6</div>
+<img src="onepiece/images/don/_pdf_rendered/card-006.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(5,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(5,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(5,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(5,'noted')">📝</button>
+</div></div><div class="card" id="card-6" data-status="pending">
+<div class="idx">#7</div>
+<img src="onepiece/images/don/_pdf_rendered/card-007.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(6,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(6,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(6,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(6,'noted')">📝</button>
+</div></div><div class="card" id="card-7" data-status="pending">
+<div class="idx">#8</div>
+<img src="onepiece/images/don/_pdf_rendered/card-008.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(7,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(7,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(7,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(7,'noted')">📝</button>
+</div></div><div class="card" id="card-8" data-status="pending">
+<div class="idx">#9</div>
+<img src="onepiece/images/don/_pdf_rendered/card-009.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(8,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(8,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(8,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(8,'noted')">📝</button>
+</div></div><div class="card" id="card-9" data-status="pending">
+<div class="idx">#10</div>
+<img src="onepiece/images/don/_pdf_rendered/card-010.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(9,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(9,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(9,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(9,'noted')">📝</button>
+</div></div><div class="card" id="card-10" data-status="pending">
+<div class="idx">#11</div>
+<img src="onepiece/images/don/_pdf_rendered/card-011.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(10,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(10,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(10,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(10,'noted')">📝</button>
+</div></div><div class="card" id="card-11" data-status="pending">
+<div class="idx">#12</div>
+<img src="onepiece/images/don/_pdf_rendered/card-012.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(11,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(11,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(11,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(11,'noted')">📝</button>
+</div></div><div class="card" id="card-12" data-status="pending">
+<div class="idx">#13</div>
+<img src="onepiece/images/don/_pdf_rendered/card-013.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(12,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(12,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(12,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(12,'noted')">📝</button>
+</div></div><div class="card" id="card-13" data-status="pending">
+<div class="idx">#14</div>
+<img src="onepiece/images/don/_pdf_rendered/card-014.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(13,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(13,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(13,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(13,'noted')">📝</button>
+</div></div><div class="card" id="card-14" data-status="pending">
+<div class="idx">#15</div>
+<img src="onepiece/images/don/_pdf_rendered/card-015.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(14,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(14,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(14,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(14,'noted')">📝</button>
+</div></div><div class="card" id="card-15" data-status="pending">
+<div class="idx">#16</div>
+<img src="onepiece/images/don/_pdf_rendered/card-016.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(15,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(15,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(15,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(15,'noted')">📝</button>
+</div></div><div class="card" id="card-16" data-status="pending">
+<div class="idx">#17</div>
+<img src="onepiece/images/don/_pdf_rendered/card-017.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(16,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(16,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(16,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(16,'noted')">📝</button>
+</div></div><div class="card" id="card-17" data-status="pending">
+<div class="idx">#18</div>
+<img src="onepiece/images/don/_pdf_rendered/card-018.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(17,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(17,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(17,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(17,'noted')">📝</button>
+</div></div><div class="card" id="card-18" data-status="pending">
+<div class="idx">#19</div>
+<img src="onepiece/images/don/_pdf_rendered/card-019.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(18,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(18,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(18,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(18,'noted')">📝</button>
+</div></div><div class="card" id="card-19" data-status="pending">
+<div class="idx">#20</div>
+<img src="onepiece/images/don/_pdf_rendered/card-020.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(19,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(19,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(19,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(19,'noted')">📝</button>
+</div></div><div class="card" id="card-20" data-status="pending">
+<div class="idx">#21</div>
+<img src="onepiece/images/don/_pdf_rendered/card-021.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(20,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(20,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(20,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(20,'noted')">📝</button>
+</div></div><div class="card" id="card-21" data-status="pending">
+<div class="idx">#22</div>
+<img src="onepiece/images/don/_pdf_rendered/card-022.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(21,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(21,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(21,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(21,'noted')">📝</button>
+</div></div><div class="card" id="card-22" data-status="pending">
+<div class="idx">#23</div>
+<img src="onepiece/images/don/_pdf_rendered/card-023.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(22,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(22,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(22,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(22,'noted')">📝</button>
+</div></div><div class="card" id="card-23" data-status="pending">
+<div class="idx">#24</div>
+<img src="onepiece/images/don/_pdf_rendered/card-024.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(23,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(23,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(23,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(23,'noted')">📝</button>
+</div></div><div class="card" id="card-24" data-status="pending">
+<div class="idx">#25</div>
+<img src="onepiece/images/don/_pdf_rendered/card-025.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(24,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(24,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(24,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(24,'noted')">📝</button>
+</div></div><div class="card" id="card-25" data-status="pending">
+<div class="idx">#26</div>
+<img src="onepiece/images/don/_pdf_rendered/card-026.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(25,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(25,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(25,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(25,'noted')">📝</button>
+</div></div><div class="card" id="card-26" data-status="pending">
+<div class="idx">#27</div>
+<img src="onepiece/images/don/_pdf_rendered/card-027.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(26,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(26,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(26,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(26,'noted')">📝</button>
+</div></div><div class="card" id="card-27" data-status="pending">
+<div class="idx">#28</div>
+<img src="onepiece/images/don/_pdf_rendered/card-028.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(27,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(27,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(27,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(27,'noted')">📝</button>
+</div></div><div class="card" id="card-28" data-status="pending">
+<div class="idx">#29</div>
+<img src="onepiece/images/don/_pdf_rendered/card-029.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(28,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(28,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(28,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(28,'noted')">📝</button>
+</div></div><div class="card" id="card-29" data-status="pending">
+<div class="idx">#30</div>
+<img src="onepiece/images/don/_pdf_rendered/card-030.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(29,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(29,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(29,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(29,'noted')">📝</button>
+</div></div><div class="card" id="card-30" data-status="pending">
+<div class="idx">#31</div>
+<img src="onepiece/images/don/_pdf_rendered/card-031.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(30,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(30,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(30,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(30,'noted')">📝</button>
+</div></div><div class="card" id="card-31" data-status="pending">
+<div class="idx">#32</div>
+<img src="onepiece/images/don/_pdf_rendered/card-032.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(31,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(31,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(31,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(31,'noted')">📝</button>
+</div></div><div class="card" id="card-32" data-status="pending">
+<div class="idx">#33</div>
+<img src="onepiece/images/don/_pdf_rendered/card-033.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(32,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(32,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(32,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(32,'noted')">📝</button>
+</div></div><div class="card" id="card-33" data-status="pending">
+<div class="idx">#34</div>
+<img src="onepiece/images/don/_pdf_rendered/card-034.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(33,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(33,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(33,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(33,'noted')">📝</button>
+</div></div><div class="card" id="card-34" data-status="pending">
+<div class="idx">#35</div>
+<img src="onepiece/images/don/_pdf_rendered/card-035.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(34,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(34,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(34,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(34,'noted')">📝</button>
+</div></div><div class="card" id="card-35" data-status="pending">
+<div class="idx">#36</div>
+<img src="onepiece/images/don/_pdf_rendered/card-036.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(35,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(35,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(35,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(35,'noted')">📝</button>
+</div></div><div class="card" id="card-36" data-status="pending">
+<div class="idx">#37</div>
+<img src="onepiece/images/don/_pdf_rendered/card-037.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(36,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(36,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(36,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(36,'noted')">📝</button>
+</div></div><div class="card" id="card-37" data-status="pending">
+<div class="idx">#38</div>
+<img src="onepiece/images/don/_pdf_rendered/card-038.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(37,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(37,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(37,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(37,'noted')">📝</button>
+</div></div><div class="card" id="card-38" data-status="pending">
+<div class="idx">#39</div>
+<img src="onepiece/images/don/_pdf_rendered/card-039.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(38,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(38,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(38,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(38,'noted')">📝</button>
+</div></div><div class="card" id="card-39" data-status="pending">
+<div class="idx">#40</div>
+<img src="onepiece/images/don/_pdf_rendered/card-040.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(39,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(39,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(39,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(39,'noted')">📝</button>
+</div></div><div class="card" id="card-40" data-status="pending">
+<div class="idx">#41</div>
+<img src="onepiece/images/don/_pdf_rendered/card-041.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(40,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(40,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(40,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(40,'noted')">📝</button>
+</div></div><div class="card" id="card-41" data-status="pending">
+<div class="idx">#42</div>
+<img src="onepiece/images/don/_pdf_rendered/card-042.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(41,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(41,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(41,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(41,'noted')">📝</button>
+</div></div><div class="card" id="card-42" data-status="pending">
+<div class="idx">#43</div>
+<img src="onepiece/images/don/_pdf_rendered/card-043.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(42,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(42,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(42,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(42,'noted')">📝</button>
+</div></div><div class="card" id="card-43" data-status="pending">
+<div class="idx">#44</div>
+<img src="onepiece/images/don/_pdf_rendered/card-044.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(43,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(43,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(43,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(43,'noted')">📝</button>
+</div></div><div class="card" id="card-44" data-status="pending">
+<div class="idx">#45</div>
+<img src="onepiece/images/don/_pdf_rendered/card-045.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(44,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(44,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(44,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(44,'noted')">📝</button>
+</div></div><div class="card" id="card-45" data-status="pending">
+<div class="idx">#46</div>
+<img src="onepiece/images/don/_pdf_rendered/card-046.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(45,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(45,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(45,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(45,'noted')">📝</button>
+</div></div><div class="card" id="card-46" data-status="pending">
+<div class="idx">#47</div>
+<img src="onepiece/images/don/_pdf_rendered/card-047.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(46,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(46,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(46,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(46,'noted')">📝</button>
+</div></div><div class="card" id="card-47" data-status="pending">
+<div class="idx">#48</div>
+<img src="onepiece/images/don/_pdf_rendered/card-048.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(47,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(47,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(47,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(47,'noted')">📝</button>
+</div></div><div class="card" id="card-48" data-status="pending">
+<div class="idx">#49</div>
+<img src="onepiece/images/don/_pdf_rendered/card-049.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(48,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(48,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(48,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(48,'noted')">📝</button>
+</div></div><div class="card" id="card-49" data-status="pending">
+<div class="idx">#50</div>
+<img src="onepiece/images/don/_pdf_rendered/card-050.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(49,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(49,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(49,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(49,'noted')">📝</button>
+</div></div><div class="card" id="card-50" data-status="pending">
+<div class="idx">#51</div>
+<img src="onepiece/images/don/_pdf_rendered/card-051.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(50,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(50,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(50,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(50,'noted')">📝</button>
+</div></div><div class="card" id="card-51" data-status="pending">
+<div class="idx">#52</div>
+<img src="onepiece/images/don/_pdf_rendered/card-052.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(51,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(51,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(51,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(51,'noted')">📝</button>
+</div></div><div class="card" id="card-52" data-status="pending">
+<div class="idx">#53</div>
+<img src="onepiece/images/don/_pdf_rendered/card-053.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(52,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(52,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(52,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(52,'noted')">📝</button>
+</div></div><div class="card" id="card-53" data-status="pending">
+<div class="idx">#54</div>
+<img src="onepiece/images/don/_pdf_rendered/card-054.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(53,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(53,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(53,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(53,'noted')">📝</button>
+</div></div><div class="card" id="card-54" data-status="pending">
+<div class="idx">#55</div>
+<img src="onepiece/images/don/_pdf_rendered/card-055.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(54,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(54,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(54,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(54,'noted')">📝</button>
+</div></div><div class="card" id="card-55" data-status="pending">
+<div class="idx">#56</div>
+<img src="onepiece/images/don/_pdf_rendered/card-056.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(55,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(55,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(55,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(55,'noted')">📝</button>
+</div></div><div class="card" id="card-56" data-status="pending">
+<div class="idx">#57</div>
+<img src="onepiece/images/don/_pdf_rendered/card-057.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(56,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(56,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(56,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(56,'noted')">📝</button>
+</div></div><div class="card" id="card-57" data-status="pending">
+<div class="idx">#58</div>
+<img src="onepiece/images/don/_pdf_rendered/card-058.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(57,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(57,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(57,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(57,'noted')">📝</button>
+</div></div><div class="card" id="card-58" data-status="pending">
+<div class="idx">#59</div>
+<img src="onepiece/images/don/_pdf_rendered/card-059.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(58,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(58,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(58,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(58,'noted')">📝</button>
+</div></div><div class="card" id="card-59" data-status="pending">
+<div class="idx">#60</div>
+<img src="onepiece/images/don/_pdf_rendered/card-060.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(59,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(59,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(59,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(59,'noted')">📝</button>
+</div></div><div class="card" id="card-60" data-status="pending">
+<div class="idx">#61</div>
+<img src="onepiece/images/don/_pdf_rendered/card-061.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(60,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(60,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(60,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(60,'noted')">📝</button>
+</div></div><div class="card" id="card-61" data-status="pending">
+<div class="idx">#62</div>
+<img src="onepiece/images/don/_pdf_rendered/card-062.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(61,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(61,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(61,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(61,'noted')">📝</button>
+</div></div><div class="card" id="card-62" data-status="pending">
+<div class="idx">#63</div>
+<img src="onepiece/images/don/_pdf_rendered/card-063.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(62,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(62,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(62,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(62,'noted')">📝</button>
+</div></div><div class="card" id="card-63" data-status="pending">
+<div class="idx">#64</div>
+<img src="onepiece/images/don/_pdf_rendered/card-064.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(63,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(63,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(63,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(63,'noted')">📝</button>
+</div></div><div class="card" id="card-64" data-status="pending">
+<div class="idx">#65</div>
+<img src="onepiece/images/don/_pdf_rendered/card-065.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(64,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(64,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(64,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(64,'noted')">📝</button>
+</div></div><div class="card" id="card-65" data-status="pending">
+<div class="idx">#66</div>
+<img src="onepiece/images/don/_pdf_rendered/card-066.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(65,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(65,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(65,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(65,'noted')">📝</button>
+</div></div><div class="card" id="card-66" data-status="pending">
+<div class="idx">#67</div>
+<img src="onepiece/images/don/_pdf_rendered/card-067.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(66,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(66,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(66,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(66,'noted')">📝</button>
+</div></div><div class="card" id="card-67" data-status="pending">
+<div class="idx">#68</div>
+<img src="onepiece/images/don/_pdf_rendered/card-068.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(67,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(67,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(67,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(67,'noted')">📝</button>
+</div></div><div class="card" id="card-68" data-status="pending">
+<div class="idx">#69</div>
+<img src="onepiece/images/don/_pdf_rendered/card-069.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(68,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(68,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(68,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(68,'noted')">📝</button>
+</div></div><div class="card" id="card-69" data-status="pending">
+<div class="idx">#70</div>
+<img src="onepiece/images/don/_pdf_rendered/card-070.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(69,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(69,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(69,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(69,'noted')">📝</button>
+</div></div><div class="card" id="card-70" data-status="pending">
+<div class="idx">#71</div>
+<img src="onepiece/images/don/_pdf_rendered/card-071.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(70,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(70,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(70,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(70,'noted')">📝</button>
+</div></div><div class="card" id="card-71" data-status="pending">
+<div class="idx">#72</div>
+<img src="onepiece/images/don/_pdf_rendered/card-072.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(71,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(71,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(71,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(71,'noted')">📝</button>
+</div></div><div class="card" id="card-72" data-status="pending">
+<div class="idx">#73</div>
+<img src="onepiece/images/don/_pdf_rendered/card-073.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(72,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(72,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(72,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(72,'noted')">📝</button>
+</div></div><div class="card" id="card-73" data-status="pending">
+<div class="idx">#74</div>
+<img src="onepiece/images/don/_pdf_rendered/card-074.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(73,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(73,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(73,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(73,'noted')">📝</button>
+</div></div><div class="card" id="card-74" data-status="pending">
+<div class="idx">#75</div>
+<img src="onepiece/images/don/_pdf_rendered/card-075.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(74,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(74,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(74,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(74,'noted')">📝</button>
+</div></div><div class="card" id="card-75" data-status="pending">
+<div class="idx">#76</div>
+<img src="onepiece/images/don/_pdf_rendered/card-076.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(75,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(75,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(75,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(75,'noted')">📝</button>
+</div></div><div class="card" id="card-76" data-status="pending">
+<div class="idx">#77</div>
+<img src="onepiece/images/don/_pdf_rendered/card-077.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(76,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(76,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(76,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(76,'noted')">📝</button>
+</div></div><div class="card" id="card-77" data-status="pending">
+<div class="idx">#78</div>
+<img src="onepiece/images/don/_pdf_rendered/card-078.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(77,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(77,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(77,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(77,'noted')">📝</button>
+</div></div><div class="card" id="card-78" data-status="pending">
+<div class="idx">#79</div>
+<img src="onepiece/images/don/_pdf_rendered/card-079.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(78,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(78,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(78,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(78,'noted')">📝</button>
+</div></div><div class="card" id="card-79" data-status="pending">
+<div class="idx">#80</div>
+<img src="onepiece/images/don/_pdf_rendered/card-080.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(79,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(79,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(79,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(79,'noted')">📝</button>
+</div></div><div class="card" id="card-80" data-status="pending">
+<div class="idx">#81</div>
+<img src="onepiece/images/don/_pdf_rendered/card-081.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(80,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(80,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(80,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(80,'noted')">📝</button>
+</div></div><div class="card" id="card-81" data-status="pending">
+<div class="idx">#82</div>
+<img src="onepiece/images/don/_pdf_rendered/card-082.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(81,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(81,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(81,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(81,'noted')">📝</button>
+</div></div><div class="card" id="card-82" data-status="pending">
+<div class="idx">#83</div>
+<img src="onepiece/images/don/_pdf_rendered/card-083.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(82,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(82,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(82,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(82,'noted')">📝</button>
+</div></div><div class="card" id="card-83" data-status="pending">
+<div class="idx">#84</div>
+<img src="onepiece/images/don/_pdf_rendered/card-084.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(83,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(83,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(83,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(83,'noted')">📝</button>
+</div></div><div class="card" id="card-84" data-status="pending">
+<div class="idx">#85</div>
+<img src="onepiece/images/don/_pdf_rendered/card-085.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(84,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(84,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(84,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(84,'noted')">📝</button>
+</div></div><div class="card" id="card-85" data-status="pending">
+<div class="idx">#86</div>
+<img src="onepiece/images/don/_pdf_rendered/card-086.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(85,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(85,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(85,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(85,'noted')">📝</button>
+</div></div><div class="card" id="card-86" data-status="pending">
+<div class="idx">#87</div>
+<img src="onepiece/images/don/_pdf_rendered/card-087.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(86,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(86,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(86,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(86,'noted')">📝</button>
+</div></div><div class="card" id="card-87" data-status="pending">
+<div class="idx">#88</div>
+<img src="onepiece/images/don/_pdf_rendered/card-088.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(87,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(87,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(87,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(87,'noted')">📝</button>
+</div></div><div class="card" id="card-88" data-status="pending">
+<div class="idx">#89</div>
+<img src="onepiece/images/don/_pdf_rendered/card-089.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(88,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(88,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(88,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(88,'noted')">📝</button>
+</div></div><div class="card" id="card-89" data-status="pending">
+<div class="idx">#90</div>
+<img src="onepiece/images/don/_pdf_rendered/card-090.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(89,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(89,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(89,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(89,'noted')">📝</button>
+</div></div><div class="card" id="card-90" data-status="pending">
+<div class="idx">#91</div>
+<img src="onepiece/images/don/_pdf_rendered/card-091.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(90,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(90,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(90,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(90,'noted')">📝</button>
+</div></div><div class="card" id="card-91" data-status="pending">
+<div class="idx">#92</div>
+<img src="onepiece/images/don/_pdf_rendered/card-092.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(91,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(91,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(91,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(91,'noted')">📝</button>
+</div></div><div class="card" id="card-92" data-status="pending">
+<div class="idx">#93</div>
+<img src="onepiece/images/don/_pdf_rendered/card-093.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(92,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(92,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(92,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(92,'noted')">📝</button>
+</div></div><div class="card" id="card-93" data-status="pending">
+<div class="idx">#94</div>
+<img src="onepiece/images/don/_pdf_rendered/card-094.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(93,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(93,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(93,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(93,'noted')">📝</button>
+</div></div><div class="card" id="card-94" data-status="pending">
+<div class="idx">#95</div>
+<img src="onepiece/images/don/_pdf_rendered/card-095.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(94,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(94,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(94,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(94,'noted')">📝</button>
+</div></div><div class="card" id="card-95" data-status="pending">
+<div class="idx">#96</div>
+<img src="onepiece/images/don/_pdf_rendered/card-096.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(95,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(95,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(95,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(95,'noted')">📝</button>
+</div></div><div class="card" id="card-96" data-status="pending">
+<div class="idx">#97</div>
+<img src="onepiece/images/don/_pdf_rendered/card-097.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(96,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(96,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(96,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(96,'noted')">📝</button>
+</div></div><div class="card" id="card-97" data-status="pending">
+<div class="idx">#98</div>
+<img src="onepiece/images/don/_pdf_rendered/card-098.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(97,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(97,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(97,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(97,'noted')">📝</button>
+</div></div><div class="card" id="card-98" data-status="pending">
+<div class="idx">#99</div>
+<img src="onepiece/images/don/_pdf_rendered/card-099.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(98,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(98,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(98,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(98,'noted')">📝</button>
+</div></div><div class="card" id="card-99" data-status="pending">
+<div class="idx">#100</div>
+<img src="onepiece/images/don/_pdf_rendered/card-100.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(99,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(99,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(99,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(99,'noted')">📝</button>
+</div></div><div class="card" id="card-100" data-status="pending">
+<div class="idx">#101</div>
+<img src="onepiece/images/don/_pdf_rendered/card-101.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(100,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(100,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(100,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(100,'noted')">📝</button>
+</div></div><div class="card" id="card-101" data-status="pending">
+<div class="idx">#102</div>
+<img src="onepiece/images/don/_pdf_rendered/card-102.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(101,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(101,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(101,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(101,'noted')">📝</button>
+</div></div><div class="card" id="card-102" data-status="pending">
+<div class="idx">#103</div>
+<img src="onepiece/images/don/_pdf_rendered/card-103.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(102,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(102,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(102,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(102,'noted')">📝</button>
+</div></div><div class="card" id="card-103" data-status="pending">
+<div class="idx">#104</div>
+<img src="onepiece/images/don/_pdf_rendered/card-104.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(103,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(103,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(103,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(103,'noted')">📝</button>
+</div></div><div class="card" id="card-104" data-status="pending">
+<div class="idx">#105</div>
+<img src="onepiece/images/don/_pdf_rendered/card-105.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(104,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(104,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(104,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(104,'noted')">📝</button>
+</div></div><div class="card" id="card-105" data-status="pending">
+<div class="idx">#106</div>
+<img src="onepiece/images/don/_pdf_rendered/card-106.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(105,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(105,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(105,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(105,'noted')">📝</button>
+</div></div><div class="card" id="card-106" data-status="pending">
+<div class="idx">#107</div>
+<img src="onepiece/images/don/_pdf_rendered/card-107.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(106,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(106,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(106,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(106,'noted')">📝</button>
+</div></div><div class="card" id="card-107" data-status="pending">
+<div class="idx">#108</div>
+<img src="onepiece/images/don/_pdf_rendered/card-108.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(107,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(107,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(107,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(107,'noted')">📝</button>
+</div></div><div class="card" id="card-108" data-status="pending">
+<div class="idx">#109</div>
+<img src="onepiece/images/don/_pdf_rendered/card-109.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(108,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(108,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(108,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(108,'noted')">📝</button>
+</div></div><div class="card" id="card-109" data-status="pending">
+<div class="idx">#110</div>
+<img src="onepiece/images/don/_pdf_rendered/card-110.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(109,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(109,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(109,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(109,'noted')">📝</button>
+</div></div><div class="card" id="card-110" data-status="pending">
+<div class="idx">#111</div>
+<img src="onepiece/images/don/_pdf_rendered/card-111.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(110,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(110,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(110,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(110,'noted')">📝</button>
+</div></div><div class="card" id="card-111" data-status="pending">
+<div class="idx">#112</div>
+<img src="onepiece/images/don/_pdf_rendered/card-112.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(111,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(111,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(111,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(111,'noted')">📝</button>
+</div></div><div class="card" id="card-112" data-status="pending">
+<div class="idx">#113</div>
+<img src="onepiece/images/don/_pdf_rendered/card-113.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(112,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(112,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(112,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(112,'noted')">📝</button>
+</div></div><div class="card" id="card-113" data-status="pending">
+<div class="idx">#114</div>
+<img src="onepiece/images/don/_pdf_rendered/card-114.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(113,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(113,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(113,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(113,'noted')">📝</button>
+</div></div><div class="card" id="card-114" data-status="pending">
+<div class="idx">#115</div>
+<img src="onepiece/images/don/_pdf_rendered/card-115.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(114,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(114,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(114,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(114,'noted')">📝</button>
+</div></div><div class="card" id="card-115" data-status="pending">
+<div class="idx">#116</div>
+<img src="onepiece/images/don/_pdf_rendered/card-116.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(115,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(115,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(115,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(115,'noted')">📝</button>
+</div></div><div class="card" id="card-116" data-status="pending">
+<div class="idx">#117</div>
+<img src="onepiece/images/don/_pdf_rendered/card-117.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(116,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(116,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(116,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(116,'noted')">📝</button>
+</div></div><div class="card" id="card-117" data-status="pending">
+<div class="idx">#118</div>
+<img src="onepiece/images/don/_pdf_rendered/card-118.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(117,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(117,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(117,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(117,'noted')">📝</button>
+</div></div><div class="card" id="card-118" data-status="pending">
+<div class="idx">#119</div>
+<img src="onepiece/images/don/_pdf_rendered/card-119.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(118,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(118,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(118,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(118,'noted')">📝</button>
+</div></div><div class="card" id="card-119" data-status="pending">
+<div class="idx">#120</div>
+<img src="onepiece/images/don/_pdf_rendered/card-120.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(119,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(119,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(119,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(119,'noted')">📝</button>
+</div></div><div class="card" id="card-120" data-status="pending">
+<div class="idx">#121</div>
+<img src="onepiece/images/don/_pdf_rendered/card-121.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(120,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(120,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(120,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(120,'noted')">📝</button>
+</div></div><div class="card" id="card-121" data-status="pending">
+<div class="idx">#122</div>
+<img src="onepiece/images/don/_pdf_rendered/card-122.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(121,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(121,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(121,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(121,'noted')">📝</button>
+</div></div><div class="card" id="card-122" data-status="pending">
+<div class="idx">#123</div>
+<img src="onepiece/images/don/_pdf_rendered/card-123.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(122,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(122,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(122,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(122,'noted')">📝</button>
+</div></div><div class="card" id="card-123" data-status="pending">
+<div class="idx">#124</div>
+<img src="onepiece/images/don/_pdf_rendered/card-124.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(123,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(123,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(123,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(123,'noted')">📝</button>
+</div></div><div class="card" id="card-124" data-status="pending">
+<div class="idx">#125</div>
+<img src="onepiece/images/don/_pdf_rendered/card-125.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(124,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(124,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(124,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(124,'noted')">📝</button>
+</div></div><div class="card" id="card-125" data-status="pending">
+<div class="idx">#126</div>
+<img src="onepiece/images/don/_pdf_rendered/card-126.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(125,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(125,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(125,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(125,'noted')">📝</button>
+</div></div><div class="card" id="card-126" data-status="pending">
+<div class="idx">#127</div>
+<img src="onepiece/images/don/_pdf_rendered/card-127.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(126,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(126,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(126,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(126,'noted')">📝</button>
+</div></div><div class="card" id="card-127" data-status="pending">
+<div class="idx">#128</div>
+<img src="onepiece/images/don/_pdf_rendered/card-128.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(127,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(127,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(127,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(127,'noted')">📝</button>
+</div></div><div class="card" id="card-128" data-status="pending">
+<div class="idx">#129</div>
+<img src="onepiece/images/don/_pdf_rendered/card-129.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(128,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(128,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(128,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(128,'noted')">📝</button>
+</div></div><div class="card" id="card-129" data-status="pending">
+<div class="idx">#130</div>
+<img src="onepiece/images/don/_pdf_rendered/card-130.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(129,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(129,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(129,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(129,'noted')">📝</button>
+</div></div><div class="card" id="card-130" data-status="pending">
+<div class="idx">#131</div>
+<img src="onepiece/images/don/_pdf_rendered/card-131.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(130,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(130,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(130,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(130,'noted')">📝</button>
+</div></div><div class="card" id="card-131" data-status="pending">
+<div class="idx">#132</div>
+<img src="onepiece/images/don/_pdf_rendered/card-132.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(131,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(131,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(131,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(131,'noted')">📝</button>
+</div></div><div class="card" id="card-132" data-status="pending">
+<div class="idx">#133</div>
+<img src="onepiece/images/don/_pdf_rendered/card-133.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(132,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(132,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(132,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(132,'noted')">📝</button>
+</div></div><div class="card" id="card-133" data-status="pending">
+<div class="idx">#134</div>
+<img src="onepiece/images/don/_pdf_rendered/card-134.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(133,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(133,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(133,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(133,'noted')">📝</button>
+</div></div><div class="card" id="card-134" data-status="pending">
+<div class="idx">#135</div>
+<img src="onepiece/images/don/_pdf_rendered/card-135.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(134,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(134,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(134,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(134,'noted')">📝</button>
+</div></div><div class="card" id="card-135" data-status="pending">
+<div class="idx">#136</div>
+<img src="onepiece/images/don/_pdf_rendered/card-136.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(135,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(135,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(135,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(135,'noted')">📝</button>
+</div></div><div class="card" id="card-136" data-status="pending">
+<div class="idx">#137</div>
+<img src="onepiece/images/don/_pdf_rendered/card-137.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(136,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(136,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(136,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(136,'noted')">📝</button>
+</div></div><div class="card" id="card-137" data-status="pending">
+<div class="idx">#138</div>
+<img src="onepiece/images/don/_pdf_rendered/card-138.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(137,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(137,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(137,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(137,'noted')">📝</button>
+</div></div><div class="card" id="card-138" data-status="pending">
+<div class="idx">#139</div>
+<img src="onepiece/images/don/_pdf_rendered/card-139.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(138,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(138,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(138,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(138,'noted')">📝</button>
+</div></div><div class="card" id="card-139" data-status="pending">
+<div class="idx">#140</div>
+<img src="onepiece/images/don/_pdf_rendered/card-140.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(139,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(139,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(139,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(139,'noted')">📝</button>
+</div></div><div class="card" id="card-140" data-status="pending">
+<div class="idx">#141</div>
+<img src="onepiece/images/don/_pdf_rendered/card-141.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(140,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(140,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(140,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(140,'noted')">📝</button>
+</div></div><div class="card" id="card-141" data-status="pending">
+<div class="idx">#142</div>
+<img src="onepiece/images/don/_pdf_rendered/card-142.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(141,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(141,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(141,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(141,'noted')">📝</button>
+</div></div><div class="card" id="card-142" data-status="pending">
+<div class="idx">#143</div>
+<img src="onepiece/images/don/_pdf_rendered/card-143.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(142,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(142,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(142,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(142,'noted')">📝</button>
+</div></div><div class="card" id="card-143" data-status="pending">
+<div class="idx">#144</div>
+<img src="onepiece/images/don/_pdf_rendered/card-144.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(143,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(143,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(143,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(143,'noted')">📝</button>
+</div></div><div class="card" id="card-144" data-status="pending">
+<div class="idx">#145</div>
+<img src="onepiece/images/don/_pdf_rendered/card-145.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(144,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(144,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(144,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(144,'noted')">📝</button>
+</div></div><div class="card" id="card-145" data-status="pending">
+<div class="idx">#146</div>
+<img src="onepiece/images/don/_pdf_rendered/card-146.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(145,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(145,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(145,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(145,'noted')">📝</button>
+</div></div><div class="card" id="card-146" data-status="pending">
+<div class="idx">#147</div>
+<img src="onepiece/images/don/_pdf_rendered/card-147.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(146,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(146,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(146,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(146,'noted')">📝</button>
+</div></div><div class="card" id="card-147" data-status="pending">
+<div class="idx">#148</div>
+<img src="onepiece/images/don/_pdf_rendered/card-148.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(147,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(147,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(147,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(147,'noted')">📝</button>
+</div></div><div class="card" id="card-148" data-status="pending">
+<div class="idx">#149</div>
+<img src="onepiece/images/don/_pdf_rendered/card-149.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(148,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(148,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(148,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(148,'noted')">📝</button>
+</div></div><div class="card" id="card-149" data-status="pending">
+<div class="idx">#150</div>
+<img src="onepiece/images/don/_pdf_rendered/card-150.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(149,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(149,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(149,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(149,'noted')">📝</button>
+</div></div><div class="card" id="card-150" data-status="pending">
+<div class="idx">#151</div>
+<img src="onepiece/images/don/_pdf_rendered/card-151.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(150,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(150,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(150,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(150,'noted')">📝</button>
+</div></div><div class="card" id="card-151" data-status="pending">
+<div class="idx">#152</div>
+<img src="onepiece/images/don/_pdf_rendered/card-152.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(151,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(151,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(151,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(151,'noted')">📝</button>
+</div></div><div class="card" id="card-152" data-status="pending">
+<div class="idx">#153</div>
+<img src="onepiece/images/don/_pdf_rendered/card-153.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(152,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(152,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(152,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(152,'noted')">📝</button>
+</div></div><div class="card" id="card-153" data-status="pending">
+<div class="idx">#154</div>
+<img src="onepiece/images/don/_pdf_rendered/card-154.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(153,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(153,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(153,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(153,'noted')">📝</button>
+</div></div><div class="card" id="card-154" data-status="pending">
+<div class="idx">#155</div>
+<img src="onepiece/images/don/_pdf_rendered/card-155.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(154,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(154,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(154,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(154,'noted')">📝</button>
+</div></div><div class="card" id="card-155" data-status="pending">
+<div class="idx">#156</div>
+<img src="onepiece/images/don/_pdf_rendered/card-156.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(155,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(155,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(155,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(155,'noted')">📝</button>
+</div></div><div class="card" id="card-156" data-status="pending">
+<div class="idx">#157</div>
+<img src="onepiece/images/don/_pdf_rendered/card-157.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(156,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(156,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(156,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(156,'noted')">📝</button>
+</div></div><div class="card" id="card-157" data-status="pending">
+<div class="idx">#158</div>
+<img src="onepiece/images/don/_pdf_rendered/card-158.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(157,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(157,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(157,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(157,'noted')">📝</button>
+</div></div><div class="card" id="card-158" data-status="pending">
+<div class="idx">#159</div>
+<img src="onepiece/images/don/_pdf_rendered/card-159.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(158,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(158,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(158,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(158,'noted')">📝</button>
+</div></div><div class="card" id="card-159" data-status="pending">
+<div class="idx">#160</div>
+<img src="onepiece/images/don/_pdf_rendered/card-160.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(159,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(159,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(159,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(159,'noted')">📝</button>
+</div></div><div class="card" id="card-160" data-status="pending">
+<div class="idx">#161</div>
+<img src="onepiece/images/don/_pdf_rendered/card-161.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(160,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(160,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(160,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(160,'noted')">📝</button>
+</div></div><div class="card" id="card-161" data-status="pending">
+<div class="idx">#162</div>
+<img src="onepiece/images/don/_pdf_rendered/card-162.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(161,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(161,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(161,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(161,'noted')">📝</button>
+</div></div><div class="card" id="card-162" data-status="pending">
+<div class="idx">#163</div>
+<img src="onepiece/images/don/_pdf_rendered/card-163.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(162,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(162,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(162,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(162,'noted')">📝</button>
+</div></div><div class="card" id="card-163" data-status="pending">
+<div class="idx">#164</div>
+<img src="onepiece/images/don/_pdf_rendered/card-164.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(163,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(163,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(163,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(163,'noted')">📝</button>
+</div></div><div class="card" id="card-164" data-status="pending">
+<div class="idx">#165</div>
+<img src="onepiece/images/don/_pdf_rendered/card-165.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(164,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(164,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(164,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(164,'noted')">📝</button>
+</div></div><div class="card" id="card-165" data-status="pending">
+<div class="idx">#166</div>
+<img src="onepiece/images/don/_pdf_rendered/card-166.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(165,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(165,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(165,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(165,'noted')">📝</button>
+</div></div><div class="card" id="card-166" data-status="pending">
+<div class="idx">#167</div>
+<img src="onepiece/images/don/_pdf_rendered/card-167.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(166,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(166,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(166,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(166,'noted')">📝</button>
+</div></div><div class="card" id="card-167" data-status="pending">
+<div class="idx">#168</div>
+<img src="onepiece/images/don/_pdf_rendered/card-168.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(167,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(167,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(167,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(167,'noted')">📝</button>
+</div></div><div class="card" id="card-168" data-status="pending">
+<div class="idx">#169</div>
+<img src="onepiece/images/don/_pdf_rendered/card-169.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(168,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(168,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(168,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(168,'noted')">📝</button>
+</div></div><div class="card" id="card-169" data-status="pending">
+<div class="idx">#170</div>
+<img src="onepiece/images/don/_pdf_rendered/card-170.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(169,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(169,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(169,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(169,'noted')">📝</button>
+</div></div><div class="card" id="card-170" data-status="pending">
+<div class="idx">#171</div>
+<img src="onepiece/images/don/_pdf_rendered/card-171.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(170,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(170,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(170,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(170,'noted')">📝</button>
+</div></div><div class="card" id="card-171" data-status="pending">
+<div class="idx">#172</div>
+<img src="onepiece/images/don/_pdf_rendered/card-172.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(171,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(171,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(171,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(171,'noted')">📝</button>
+</div></div><div class="card" id="card-172" data-status="pending">
+<div class="idx">#173</div>
+<img src="onepiece/images/don/_pdf_rendered/card-173.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(172,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(172,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(172,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(172,'noted')">📝</button>
+</div></div><div class="card" id="card-173" data-status="pending">
+<div class="idx">#174</div>
+<img src="onepiece/images/don/_pdf_rendered/card-174.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(173,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(173,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(173,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(173,'noted')">📝</button>
+</div></div><div class="card" id="card-174" data-status="pending">
+<div class="idx">#175</div>
+<img src="onepiece/images/don/_pdf_rendered/card-175.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(174,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(174,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(174,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(174,'noted')">📝</button>
+</div></div><div class="card" id="card-175" data-status="pending">
+<div class="idx">#176</div>
+<img src="onepiece/images/don/_pdf_rendered/card-176.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(175,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(175,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(175,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(175,'noted')">📝</button>
+</div></div><div class="card" id="card-176" data-status="pending">
+<div class="idx">#177</div>
+<img src="onepiece/images/don/_pdf_rendered/card-177.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(176,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(176,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(176,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(176,'noted')">📝</button>
+</div></div><div class="card" id="card-177" data-status="pending">
+<div class="idx">#178</div>
+<img src="onepiece/images/don/_pdf_rendered/card-178.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(177,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(177,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(177,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(177,'noted')">📝</button>
+</div></div><div class="card" id="card-178" data-status="pending">
+<div class="idx">#179</div>
+<img src="onepiece/images/don/_pdf_rendered/card-179.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(178,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(178,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(178,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(178,'noted')">📝</button>
+</div></div><div class="card" id="card-179" data-status="pending">
+<div class="idx">#180</div>
+<img src="onepiece/images/don/_pdf_rendered/card-180.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(179,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(179,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(179,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(179,'noted')">📝</button>
+</div></div><div class="card" id="card-180" data-status="pending">
+<div class="idx">#181</div>
+<img src="onepiece/images/don/_pdf_rendered/card-181.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(180,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(180,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(180,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(180,'noted')">📝</button>
+</div></div><div class="card" id="card-181" data-status="pending">
+<div class="idx">#182</div>
+<img src="onepiece/images/don/_pdf_rendered/card-182.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(181,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(181,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(181,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(181,'noted')">📝</button>
+</div></div><div class="card" id="card-182" data-status="pending">
+<div class="idx">#183</div>
+<img src="onepiece/images/don/_pdf_rendered/card-183.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(182,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(182,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(182,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(182,'noted')">📝</button>
+</div></div><div class="card" id="card-183" data-status="pending">
+<div class="idx">#184</div>
+<img src="onepiece/images/don/_pdf_rendered/card-184.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(183,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(183,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(183,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(183,'noted')">📝</button>
+</div></div><div class="card" id="card-184" data-status="pending">
+<div class="idx">#185</div>
+<img src="onepiece/images/don/_pdf_rendered/card-185.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(184,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(184,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(184,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(184,'noted')">📝</button>
+</div></div><div class="card" id="card-185" data-status="pending">
+<div class="idx">#186</div>
+<img src="onepiece/images/don/_pdf_rendered/card-186.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(185,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(185,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(185,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(185,'noted')">📝</button>
+</div></div><div class="card" id="card-186" data-status="pending">
+<div class="idx">#187</div>
+<img src="onepiece/images/don/_pdf_rendered/card-187.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(186,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(186,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(186,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(186,'noted')">📝</button>
+</div></div><div class="card" id="card-187" data-status="pending">
+<div class="idx">#188</div>
+<img src="onepiece/images/don/_pdf_rendered/card-188.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(187,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(187,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(187,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(187,'noted')">📝</button>
+</div></div><div class="card" id="card-188" data-status="pending">
+<div class="idx">#189</div>
+<img src="onepiece/images/don/_pdf_rendered/card-189.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(188,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(188,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(188,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(188,'noted')">📝</button>
+</div></div><div class="card" id="card-189" data-status="pending">
+<div class="idx">#190</div>
+<img src="onepiece/images/don/_pdf_rendered/card-190.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(189,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(189,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(189,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(189,'noted')">📝</button>
+</div></div><div class="card" id="card-190" data-status="pending">
+<div class="idx">#191</div>
+<img src="onepiece/images/don/_pdf_rendered/card-191.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(190,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(190,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(190,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(190,'noted')">📝</button>
+</div></div><div class="card" id="card-191" data-status="pending">
+<div class="idx">#192</div>
+<img src="onepiece/images/don/_pdf_rendered/card-192.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(191,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(191,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(191,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(191,'noted')">📝</button>
+</div></div><div class="card" id="card-192" data-status="pending">
+<div class="idx">#193</div>
+<img src="onepiece/images/don/_pdf_rendered/card-193.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(192,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(192,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(192,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(192,'noted')">📝</button>
+</div></div><div class="card" id="card-193" data-status="pending">
+<div class="idx">#194</div>
+<img src="onepiece/images/don/_pdf_rendered/card-194.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(193,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(193,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(193,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(193,'noted')">📝</button>
+</div></div><div class="card" id="card-194" data-status="pending">
+<div class="idx">#195</div>
+<img src="onepiece/images/don/_pdf_rendered/card-195.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(194,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(194,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(194,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(194,'noted')">📝</button>
+</div></div><div class="card" id="card-195" data-status="pending">
+<div class="idx">#196</div>
+<img src="onepiece/images/don/_pdf_rendered/card-196.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(195,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(195,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(195,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(195,'noted')">📝</button>
+</div></div><div class="card" id="card-196" data-status="pending">
+<div class="idx">#197</div>
+<img src="onepiece/images/don/_pdf_rendered/card-197.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(196,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(196,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(196,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(196,'noted')">📝</button>
+</div></div><div class="card" id="card-197" data-status="pending">
+<div class="idx">#198</div>
+<img src="onepiece/images/don/_pdf_rendered/card-198.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(197,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(197,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(197,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(197,'noted')">📝</button>
+</div></div><div class="card" id="card-198" data-status="pending">
+<div class="idx">#199</div>
+<img src="onepiece/images/don/_pdf_rendered/card-199.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(198,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(198,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(198,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(198,'noted')">📝</button>
+</div></div><div class="card" id="card-199" data-status="pending">
+<div class="idx">#200</div>
+<img src="onepiece/images/don/_pdf_rendered/card-200.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(199,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(199,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(199,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(199,'noted')">📝</button>
+</div></div><div class="card" id="card-200" data-status="pending">
+<div class="idx">#201</div>
+<img src="onepiece/images/don/_pdf_rendered/card-201.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(200,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(200,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(200,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(200,'noted')">📝</button>
+</div></div><div class="card" id="card-201" data-status="pending">
+<div class="idx">#202</div>
+<img src="onepiece/images/don/_pdf_rendered/card-202.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(201,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(201,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(201,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(201,'noted')">📝</button>
+</div></div><div class="card" id="card-202" data-status="pending">
+<div class="idx">#203</div>
+<img src="onepiece/images/don/_pdf_rendered/card-203.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(202,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(202,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(202,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(202,'noted')">📝</button>
+</div></div><div class="card" id="card-203" data-status="pending">
+<div class="idx">#204</div>
+<img src="onepiece/images/don/_pdf_rendered/card-204.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(203,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(203,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(203,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(203,'noted')">📝</button>
+</div></div><div class="card" id="card-204" data-status="pending">
+<div class="idx">#205</div>
+<img src="onepiece/images/don/_pdf_rendered/card-205.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(204,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(204,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(204,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(204,'noted')">📝</button>
+</div></div><div class="card" id="card-205" data-status="pending">
+<div class="idx">#206</div>
+<img src="onepiece/images/don/_pdf_rendered/card-206.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(205,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(205,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(205,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(205,'noted')">📝</button>
+</div></div><div class="card" id="card-206" data-status="pending">
+<div class="idx">#207</div>
+<img src="onepiece/images/don/_pdf_rendered/card-207.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(206,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(206,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(206,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(206,'noted')">📝</button>
+</div></div><div class="card" id="card-207" data-status="pending">
+<div class="idx">#208</div>
+<img src="onepiece/images/don/_pdf_rendered/card-208.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(207,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(207,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(207,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(207,'noted')">📝</button>
+</div></div><div class="card" id="card-208" data-status="pending">
+<div class="idx">#209</div>
+<img src="onepiece/images/don/_pdf_rendered/card-209.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(208,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(208,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(208,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(208,'noted')">📝</button>
+</div></div><div class="card" id="card-209" data-status="pending">
+<div class="idx">#210</div>
+<img src="onepiece/images/don/_pdf_rendered/card-210.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(209,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(209,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(209,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(209,'noted')">📝</button>
+</div></div><div class="card" id="card-210" data-status="pending">
+<div class="idx">#211</div>
+<img src="onepiece/images/don/_pdf_rendered/card-211.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(210,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(210,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(210,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(210,'noted')">📝</button>
+</div></div><div class="card" id="card-211" data-status="pending">
+<div class="idx">#212</div>
+<img src="onepiece/images/don/_pdf_rendered/card-212.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(211,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(211,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(211,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(211,'noted')">📝</button>
+</div></div><div class="card" id="card-212" data-status="pending">
+<div class="idx">#213</div>
+<img src="onepiece/images/don/_pdf_rendered/card-213.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(212,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(212,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(212,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(212,'noted')">📝</button>
+</div></div><div class="card" id="card-213" data-status="pending">
+<div class="idx">#214</div>
+<img src="onepiece/images/don/_pdf_rendered/card-214.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(213,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(213,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(213,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(213,'noted')">📝</button>
+</div></div><div class="card" id="card-214" data-status="pending">
+<div class="idx">#215</div>
+<img src="onepiece/images/don/_pdf_rendered/card-215.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(214,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(214,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(214,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(214,'noted')">📝</button>
+</div></div><div class="card" id="card-215" data-status="pending">
+<div class="idx">#216</div>
+<img src="onepiece/images/don/_pdf_rendered/card-216.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(215,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(215,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(215,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(215,'noted')">📝</button>
+</div></div><div class="card" id="card-216" data-status="pending">
+<div class="idx">#217</div>
+<img src="onepiece/images/don/_pdf_rendered/card-217.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(216,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(216,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(216,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(216,'noted')">📝</button>
+</div></div><div class="card" id="card-217" data-status="pending">
+<div class="idx">#218</div>
+<img src="onepiece/images/don/_pdf_rendered/card-218.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(217,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(217,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(217,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(217,'noted')">📝</button>
+</div></div><div class="card" id="card-218" data-status="pending">
+<div class="idx">#219</div>
+<img src="onepiece/images/don/_pdf_rendered/card-219.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(218,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(218,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(218,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(218,'noted')">📝</button>
+</div></div><div class="card" id="card-219" data-status="pending">
+<div class="idx">#220</div>
+<img src="onepiece/images/don/_pdf_rendered/card-220.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(219,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(219,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(219,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(219,'noted')">📝</button>
+</div></div><div class="card" id="card-220" data-status="pending">
+<div class="idx">#221</div>
+<img src="onepiece/images/don/_pdf_rendered/card-221.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(220,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(220,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(220,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(220,'noted')">📝</button>
+</div></div><div class="card" id="card-221" data-status="pending">
+<div class="idx">#222</div>
+<img src="onepiece/images/don/_pdf_rendered/card-222.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(221,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(221,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(221,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(221,'noted')">📝</button>
+</div></div><div class="card" id="card-222" data-status="pending">
+<div class="idx">#223</div>
+<img src="onepiece/images/don/_pdf_rendered/card-223.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(222,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(222,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(222,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(222,'noted')">📝</button>
+</div></div><div class="card" id="card-223" data-status="pending">
+<div class="idx">#224</div>
+<img src="onepiece/images/don/_pdf_rendered/card-224.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(223,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(223,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(223,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(223,'noted')">📝</button>
+</div></div><div class="card" id="card-224" data-status="pending">
+<div class="idx">#225</div>
+<img src="onepiece/images/don/_pdf_rendered/card-225.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(224,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(224,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(224,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(224,'noted')">📝</button>
+</div></div><div class="card" id="card-225" data-status="pending">
+<div class="idx">#226</div>
+<img src="onepiece/images/don/_pdf_rendered/card-226.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(225,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(225,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(225,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(225,'noted')">📝</button>
+</div></div><div class="card" id="card-226" data-status="pending">
+<div class="idx">#227</div>
+<img src="onepiece/images/don/_pdf_rendered/card-227.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(226,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(226,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(226,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(226,'noted')">📝</button>
+</div></div><div class="card" id="card-227" data-status="pending">
+<div class="idx">#228</div>
+<img src="onepiece/images/don/_pdf_rendered/card-228.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(227,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(227,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(227,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(227,'noted')">📝</button>
+</div></div><div class="card" id="card-228" data-status="pending">
+<div class="idx">#229</div>
+<img src="onepiece/images/don/_pdf_rendered/card-229.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(228,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(228,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(228,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(228,'noted')">📝</button>
+</div></div><div class="card" id="card-229" data-status="pending">
+<div class="idx">#230</div>
+<img src="onepiece/images/don/_pdf_rendered/card-230.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(229,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(229,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(229,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(229,'noted')">📝</button>
+</div></div><div class="card" id="card-230" data-status="pending">
+<div class="idx">#231</div>
+<img src="onepiece/images/don/_pdf_rendered/card-231.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(230,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(230,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(230,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(230,'noted')">📝</button>
+</div></div><div class="card" id="card-231" data-status="pending">
+<div class="idx">#232</div>
+<img src="onepiece/images/don/_pdf_rendered/card-232.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(231,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(231,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(231,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(231,'noted')">📝</button>
+</div></div><div class="card" id="card-232" data-status="pending">
+<div class="idx">#233</div>
+<img src="onepiece/images/don/_pdf_rendered/card-233.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(232,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(232,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(232,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(232,'noted')">📝</button>
+</div></div><div class="card" id="card-233" data-status="pending">
+<div class="idx">#234</div>
+<img src="onepiece/images/don/_pdf_rendered/card-234.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(233,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(233,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(233,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(233,'noted')">📝</button>
+</div></div><div class="card" id="card-234" data-status="pending">
+<div class="idx">#235</div>
+<img src="onepiece/images/don/_pdf_rendered/card-235.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(234,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(234,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(234,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(234,'noted')">📝</button>
+</div></div><div class="card" id="card-235" data-status="pending">
+<div class="idx">#236</div>
+<img src="onepiece/images/don/_pdf_rendered/card-236.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(235,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(235,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(235,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(235,'noted')">📝</button>
+</div></div><div class="card" id="card-236" data-status="pending">
+<div class="idx">#237</div>
+<img src="onepiece/images/don/_pdf_rendered/card-237.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(236,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(236,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(236,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(236,'noted')">📝</button>
+</div></div><div class="card" id="card-237" data-status="pending">
+<div class="idx">#238</div>
+<img src="onepiece/images/don/_pdf_rendered/card-238.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(237,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(237,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(237,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(237,'noted')">📝</button>
+</div></div><div class="card" id="card-238" data-status="pending">
+<div class="idx">#239</div>
+<img src="onepiece/images/don/_pdf_rendered/card-239.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(238,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(238,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(238,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(238,'noted')">📝</button>
+</div></div><div class="card" id="card-239" data-status="pending">
+<div class="idx">#240</div>
+<img src="onepiece/images/don/_pdf_rendered/card-240.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(239,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(239,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(239,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(239,'noted')">📝</button>
+</div></div><div class="card" id="card-240" data-status="pending">
+<div class="idx">#241</div>
+<img src="onepiece/images/don/_pdf_rendered/card-241.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(240,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(240,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(240,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(240,'noted')">📝</button>
+</div></div><div class="card" id="card-241" data-status="pending">
+<div class="idx">#242</div>
+<img src="onepiece/images/don/_pdf_rendered/card-242.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(241,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(241,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(241,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(241,'noted')">📝</button>
+</div></div><div class="card" id="card-242" data-status="pending">
+<div class="idx">#243</div>
+<img src="onepiece/images/don/_pdf_rendered/card-243.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(242,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(242,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(242,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(242,'noted')">📝</button>
+</div></div><div class="card" id="card-243" data-status="pending">
+<div class="idx">#244</div>
+<img src="onepiece/images/don/_pdf_rendered/card-244.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(243,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(243,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(243,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(243,'noted')">📝</button>
+</div></div><div class="card" id="card-244" data-status="pending">
+<div class="idx">#245</div>
+<img src="onepiece/images/don/_pdf_rendered/card-245.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(244,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(244,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(244,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(244,'noted')">📝</button>
+</div></div><div class="card" id="card-245" data-status="pending">
+<div class="idx">#246</div>
+<img src="onepiece/images/don/_pdf_rendered/card-246.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(245,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(245,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(245,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(245,'noted')">📝</button>
+</div></div><div class="card" id="card-246" data-status="pending">
+<div class="idx">#247</div>
+<img src="onepiece/images/don/_pdf_rendered/card-247.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(246,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(246,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(246,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(246,'noted')">📝</button>
+</div></div><div class="card" id="card-247" data-status="pending">
+<div class="idx">#248</div>
+<img src="onepiece/images/don/_pdf_rendered/card-248.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(247,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(247,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(247,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(247,'noted')">📝</button>
+</div></div><div class="card" id="card-248" data-status="pending">
+<div class="idx">#249</div>
+<img src="onepiece/images/don/_pdf_rendered/card-249.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(248,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(248,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(248,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(248,'noted')">📝</button>
+</div></div><div class="card" id="card-249" data-status="pending">
+<div class="idx">#250</div>
+<img src="onepiece/images/don/_pdf_rendered/card-250.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(249,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(249,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(249,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(249,'noted')">📝</button>
+</div></div><div class="card" id="card-250" data-status="pending">
+<div class="idx">#251</div>
+<img src="onepiece/images/don/_pdf_rendered/card-251.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(250,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(250,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(250,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(250,'noted')">📝</button>
+</div></div><div class="card" id="card-251" data-status="pending">
+<div class="idx">#252</div>
+<img src="onepiece/images/don/_pdf_rendered/card-252.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(251,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(251,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(251,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(251,'noted')">📝</button>
+</div></div><div class="card" id="card-252" data-status="pending">
+<div class="idx">#253</div>
+<img src="onepiece/images/don/_pdf_rendered/card-253.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(252,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(252,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(252,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(252,'noted')">📝</button>
+</div></div><div class="card" id="card-253" data-status="pending">
+<div class="idx">#254</div>
+<img src="onepiece/images/don/_pdf_rendered/card-254.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(253,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(253,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(253,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(253,'noted')">📝</button>
+</div></div><div class="card" id="card-254" data-status="pending">
+<div class="idx">#255</div>
+<img src="onepiece/images/don/_pdf_rendered/card-255.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(254,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(254,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(254,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(254,'noted')">📝</button>
+</div></div><div class="card" id="card-255" data-status="pending">
+<div class="idx">#256</div>
+<img src="onepiece/images/don/_pdf_rendered/card-256.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(255,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(255,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(255,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(255,'noted')">📝</button>
+</div></div><div class="card" id="card-256" data-status="pending">
+<div class="idx">#257</div>
+<img src="onepiece/images/don/_pdf_rendered/card-257.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(256,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(256,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(256,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(256,'noted')">📝</button>
+</div></div><div class="card" id="card-257" data-status="pending">
+<div class="idx">#258</div>
+<img src="onepiece/images/don/_pdf_rendered/card-258.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(257,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(257,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(257,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(257,'noted')">📝</button>
+</div></div><div class="card" id="card-258" data-status="pending">
+<div class="idx">#259</div>
+<img src="onepiece/images/don/_pdf_rendered/card-259.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(258,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(258,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(258,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(258,'noted')">📝</button>
+</div></div><div class="card" id="card-259" data-status="pending">
+<div class="idx">#260</div>
+<img src="onepiece/images/don/_pdf_rendered/card-260.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(259,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(259,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(259,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(259,'noted')">📝</button>
+</div></div><div class="card" id="card-260" data-status="pending">
+<div class="idx">#261</div>
+<img src="onepiece/images/don/_pdf_rendered/card-261.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(260,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(260,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(260,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(260,'noted')">📝</button>
+</div></div><div class="card" id="card-261" data-status="pending">
+<div class="idx">#262</div>
+<img src="onepiece/images/don/_pdf_rendered/card-262.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(261,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(261,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(261,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(261,'noted')">📝</button>
+</div></div><div class="card" id="card-262" data-status="pending">
+<div class="idx">#263</div>
+<img src="onepiece/images/don/_pdf_rendered/card-263.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(262,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(262,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(262,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(262,'noted')">📝</button>
+</div></div><div class="card" id="card-263" data-status="pending">
+<div class="idx">#264</div>
+<img src="onepiece/images/don/_pdf_rendered/card-264.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(263,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(263,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(263,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(263,'noted')">📝</button>
+</div></div><div class="card" id="card-264" data-status="pending">
+<div class="idx">#265</div>
+<img src="onepiece/images/don/_pdf_rendered/card-265.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(264,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(264,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(264,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(264,'noted')">📝</button>
+</div></div><div class="card" id="card-265" data-status="pending">
+<div class="idx">#266</div>
+<img src="onepiece/images/don/_pdf_rendered/card-266.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(265,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(265,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(265,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(265,'noted')">📝</button>
+</div></div><div class="card" id="card-266" data-status="pending">
+<div class="idx">#267</div>
+<img src="onepiece/images/don/_pdf_rendered/card-267.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(266,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(266,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(266,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(266,'noted')">📝</button>
+</div></div><div class="card" id="card-267" data-status="pending">
+<div class="idx">#268</div>
+<img src="onepiece/images/don/_pdf_rendered/card-268.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(267,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(267,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(267,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(267,'noted')">📝</button>
+</div></div><div class="card" id="card-268" data-status="pending">
+<div class="idx">#269</div>
+<img src="onepiece/images/don/_pdf_rendered/card-269.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(268,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(268,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(268,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(268,'noted')">📝</button>
+</div></div><div class="card" id="card-269" data-status="pending">
+<div class="idx">#270</div>
+<img src="onepiece/images/don/_pdf_rendered/card-270.png" loading="lazy">
+<textarea placeholder="Paste PDF Japanese text here" oninput="saveNote(269,this.value)"></textarea>
+<div class="actions">
+<button class="btn-ok" onclick="mark(269,'correct')">✅</button>
+<button class="btn-wrong" onclick="mark(269,'wrong')">❌</button>
+<button class="btn-save" onclick="mark(269,'noted')">📝</button>
+</div></div></div><script>
+const m=JSON.parse(localStorage.getItem('don_pdf_rendered_v1')||'{}');
+document.querySelectorAll('.card').forEach(el=>{
+  const i=el.id.replace('card-','');
+  if(m[i]){
+    if(m[i].status&&m[i].status!=='pending'){el.classList.add(m[i].status);el.dataset.status=m[i].status;}
+    if(m[i].note)el.querySelector('textarea').value=m[i].note;
+  }
+});
+updateStats();
+function mark(i,status){
+  if(!m[i])m[i]={};m[i].status=status;
+  m[i].note=document.querySelector('#card-'+i+' textarea').value;
+  const el=document.getElementById('card-'+i);
+  el.classList.remove('correct','wrong','noted');
+  if(status!=='pending')el.classList.add(status);
+  el.dataset.status=status;save();updateStats();
+}
+function saveNote(i,v){if(!m[i])m[i]={};m[i].note=v;save();}
+function save(){localStorage.setItem('don_pdf_rendered_v1',JSON.stringify(m));}
+function updateStats(){
+  const a=document.querySelectorAll('.card').length;
+  const o=document.querySelectorAll('.correct').length;
+  const w=document.querySelectorAll('.wrong').length;
+  const n=document.querySelectorAll('.noted').length;
+  document.getElementById('stats').innerHTML=o+' ✅ | '+w+' ❌ | '+n+' 📝 | '+(a-o-w-n)+' pending — of '+a;
+}
+function exportMapping(){
+  let out='DON PDF MAPPING ('+document.querySelectorAll('.card').length+')\n';
+  document.querySelectorAll('.card').forEach(el=>{
+    const i=el.id.replace('card-','');
+    const note=el.querySelector('textarea')?.value||'';
+    const status=el.dataset.status;
+    if(status!=='pending'||note)out+='#'+(parseInt(i)+1)+': '+(status==='correct'?'✅':status==='wrong'?'❌':'📝')+' | '+note+'\n';
+  });
+  navigator.clipboard.writeText(out).then(()=>alert('Copied!'));
+}
+</script></body></html>
