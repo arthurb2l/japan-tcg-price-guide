@@ -35,4 +35,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
           git diff --staged --quiet || git commit -m "📈 Weekly JP price update [skip ci]"
-          git push
+          git pull --rebase origin main || true
+          git push || echo "Push failed, skipping"

@@ -44,5 +44,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Auto-update sitemap [skip ci]"
-            git push
+            git pull --rebase origin main || true
+          git push || echo "Push failed, skipping"
           fi
