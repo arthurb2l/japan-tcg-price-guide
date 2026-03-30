@@ -4,22 +4,27 @@ Reference document for card image extraction, mapping, and auditing across all T
 
 ## Extraction Methods (Ranked by Quality)
 
-### ✅ Method 1: pdftoppm (BEST — use this)
-Renders PDF pages as RGB images, then crop individual cards.
-- **Output:** RGB PNG, correct colors, high resolution
-- **Command:** `pdftoppm -png -r 300 input.pdf output_prefix`
-- **Post-process:** Crop individual cards from rendered pages using grid positions
-- **Why it works:** Renders through the PDF engine which handles CMYK→RGB properly
+### ✅ Method 1: pdfimages + Inverted CMYK→RGB (BEST — use this)
+Extracts perfectly-cropped individual card images, then converts colors.
+- **Step 1:** `pdfimages -j input.pdf output_prefix` — extracts raw CMYK JPEGs
+- **Step 2:** Filter by size (cards ~377x525, discard page backgrounds ~1701x2386)
+- **Step 3:** Apply inverted CMYK→RGB formula (see below)
+- **Output:** Perfectly cropped RGB PNGs with correct colors
+- **Why it works:** pdfimages gives exact card boundaries; the CMYK inversion fixes colors
 
-### ❌ Method 2: pdfimages (DO NOT USE for display)
-Extracts raw embedded images from PDF.
+### ❌ Method 2: pdftoppm (correct colors, bad cropping)
+Renders full PDF pages as RGB images.
+- **Command:** `pdftoppm -png -r 300 input.pdf output_prefix`
+- **Problem:** Card positions vary per page — automated grid cropping is unreliable
+- **Colors are correct** but you'd need manual cropping or complex contour detection
+- **Use only for:** Visual reference, not automated extraction
+
+### ❌ Method 3: pdfimages without CMYK fix (DO NOT USE)
+Raw extraction without color conversion.
 - **Output:** CMYK JPEG — browsers display as black/white or wrong colors
-- **Problem:** One Piece card PDFs use CMYK color space for print
-- **Use only for:** Backup/archival of raw data, not for display
 - **Conversion attempts that failed:**
-  - Pillow `img.convert('RGB')` — washed out colors
-  - ImageMagick `convert -colorspace sRGB` — still wrong
-  - Manual CMYK inversion `255-C, 255-M, 255-Y` — slightly better but still off
+  - Pillow `img.convert('RGB')` — doesn't handle inverted CMYK
+  - ImageMagick `convert -colorspace sRGB` — same issue
   - Pillow with ICC profiles — no embedded profiles in these PDFs
 
 ### ⚠️ Method 3: Web scraping (fallback)
