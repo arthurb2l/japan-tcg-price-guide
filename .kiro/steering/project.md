@@ -63,6 +63,10 @@ inclusion: always
 - `.github/workflows/update-metrics.yml` — auto-updates card counts
 
 ## Current Focus
-- DON card image audit: mapping 261 PDF images → 176 card IDs
-- Progress tracked in `onepiece/images/audit/don-mapping-progress.json`
-- Audit page: `onepiece/images/audit/don-audit.html`
+- One Piece card completeness audit: ~1,014 missing variant cards across all sets
+- Only EB-02 and OP-01 are at 100% vs official JP site
+- OP-09 and OP-14 have EN-only cards mixed in (need cleanup)
+- EB-04 and OP-15 have 0 cards (not imported yet)
+- PRB-01/PRB-02 are heavily incomplete (premium boosters have many reprints+variants)
+- Source of truth: `onepiece-cardgame.com/cardlist/` (JP site, POST with series ID)
+- **CRITICAL:** Never mix EN and JP card lists — JP official site is the only source
