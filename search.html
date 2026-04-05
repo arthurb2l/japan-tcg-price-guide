@@ -1102,14 +1102,15 @@ function showCard(id, isEn, uid) {
   document.getElementById('modal-rarity').textContent = card.rarity || '-';
   
   // Finish label
-  const finishLabel = f => {
+  const finishLabel = (f, c) => {
+    if (c && c.variant) return c.variant;
     if (!f) return '?';
     if (f === 'regular') return 'Regular';
     if (f === 'alternate-art') return 'Alternate Art';
     if (f.startsWith('parallel')) return f.replace('parallel-','Parallel ');
     return f;
   };
-  document.getElementById('modal-finish').textContent = finishLabel(card.finish);
+  document.getElementById('modal-finish').textContent = finishLabel(card.finish, card);
   
   // Hide flip button in modal (flip is on tiles only)
   document.getElementById('flip-btn').style.display = 'none';
