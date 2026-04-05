@@ -44,7 +44,10 @@ inclusion: always
 
 ## One Piece Card List Methodology
 - **Source of truth:** `onepiece-cardgame.com/cardlist/` (POST with `series=<id>`)
-- **Variant pattern:** `CARD-ID_p1`, `_p2` etc. = parallel/alternate art versions
+- **Variant pattern:** Official site uses suffixes on card IDs:
+  - `_p1`, `_p2`, `_p3` = parallel/alternate art versions (type varies per card)
+  - `_r1` = reprint in premium booster sets
+  - A card can appear across multiple sets (e.g. EB02-061 in EB-02 AND PRB-02 with different `_p` numbers)
 - **Script:** `node scripts/fetch-op-official-cardlist.js <series_id> --dry-run`
 - **Series IDs:** Found in the `<select>` dropdown on the official card list page
 - **Always check official site** before assuming a set is complete — variants are easily missed
