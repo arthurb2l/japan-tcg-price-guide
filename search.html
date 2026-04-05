@@ -861,7 +861,7 @@ function renderCards() {
         ${collBtn(c)}${flipBtn(c)}
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>
-        <div class="set">${c.id}${variant(c)}</div>
+        <div class="set">${c.id} · ${c.setId || c.set}${variant(c)}</div>
         ${c.pricing ? '<div class="price">' + formatPrice(c) + '</div>' : ''}
       </div>
     `).join('');
