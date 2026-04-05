@@ -49,10 +49,10 @@ inclusion: always
 - **Series IDs:** Found in the `<select>` dropdown on the official card list page
 - **Always check official site** before assuming a set is complete — variants are easily missed
 - **Variant naming:** Each parallel must have a `variant` field with a human-readable name:
-  - `_p1` on EB cards = typically "Alternate Art"
-  - `_p2`+ on leader reprints = "SP" (Special)
-  - Cross-reference pricecharting.com for exact variant names (Manga, Alt Art, SP, etc.)
-- **Price cross-reference:** Use pricecharting slug pattern: `name-variant-cardid` (e.g. `monkeydluffy-manga-eb02-061`)
+  - `_p` suffix numbers do NOT indicate a consistent variant type — must be visually verified
+  - Common OP variant types: Regular, Extended Art (full bleed), Manga (B&W), SP (Special), Alternate Art
+  - Cross-reference pricecharting.com for variant names AND visually confirm which `_p` image matches which name
+  - Price cross-reference slug pattern: `name-variant-cardid` (e.g. `monkeydluffy-manga-eb02-061`)
 - **Image mapping:** Each variant gets its own image URL: `{base_url}/{CARD-ID}_p{N}.png`
 
 ## Autonomous Agents
