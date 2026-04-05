@@ -63,9 +63,11 @@ jobs:
                       console.log(`⚠️ API error: ${json.error}`);
                       resolve(null);
                     } else {
-                      resolve(json.data?.[0]?.prices?.market || null);
+                      const price = json.data?.[0]?.prices?.market || null;
+                      if (!price) console.log(`⚠️ No price in response: ${JSON.stringify(json).slice(0, 200)}`);
+                      resolve(price);
                     }
-                  } catch (e) { resolve(null); }
+                  } catch (e) { console.log(`⚠️ Parse error: ${e.message}`); resolve(null); }
                 });
               }).on('error', () => resolve(null));
             });
