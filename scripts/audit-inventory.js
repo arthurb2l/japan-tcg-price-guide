@@ -25,25 +25,49 @@ function auditCards(cards, setId, game) {
   const noRarity = cards.filter(c => !c.rarity).length;
   const noPrice = cards.filter(c => {
     const p = c.pricing || {};
-    return !p.jpy && !p.tcgplayer && !p.cardmarket;
+    return !p.jpy && !p.usd && !p.tcgplayer && !p.cardmarket;
   }).length;
   const ids = cards.map(c => c.id).filter(Boolean);
-  const dupes = ids.length - new Set(ids).size;
+  const uniqueIds = [...new Set(ids)];
+  const finishes = [...new Set(cards.map(c => c.finish || 'regular'))];
+  const hasVariants = finishes.length > 1 || cards.some(c => c.finish === 'alternate-art');
+  const variantCount = cards.filter(c => c.finish && c.finish !== 'regular').length;
+  const setPrefix = setId.replace(/^.*\//, '').replace(/-$/, '');
+  
+  // Check sequential completeness per prefix
+  const prefixes = [...new Set(uniqueIds.map(id => id.split('-')[0]))];
+  let missingNums = [];
+  for (const pfx of prefixes) {
+    const nums = uniqueIds.filter(id => id.startsWith(pfx + '-')).map(id => parseInt(id.split('-')[1])).filter(n => !isNaN(n));
+    if (!nums.length) continue;
+    const maxN = Math.max(...nums);
+    const minN = Math.min(...nums);
+    // Only flag gaps within the range we have (not from 1 to max for reprints)
+    const isReprint = pfx !== setPrefix;
+    if (!isReprint) {
+      for (let n = 1; n <= maxN; n++) {
+        if (!nums.includes(n)) missingNums.push(`${pfx}-${String(n).padStart(3,'0')}`);
+      }
+    }
+  }
+  
   const verified = cards.filter(c => c._audit?.verified).length;
   const humanVerified = cards.filter(c => c._audit?.verifiedBy === 'human').length;
 
   const score = Math.max(0, Math.round(
-    100 - (noName/t*20) - (noImg/t*30) - (noRarity/t*20) - (noPrice/t*15) - (dupes/t*15)
+    100 - (noName/t*20) - (noImg/t*30) - (noRarity/t*20) - (noPrice/t*15) - (missingNums.length*2)
   ));
 
   return {
-    setId, game, total: t, score,
+    setId, game, total: t, uniqueCards: uniqueIds.length, score,
     images: t - noImg, rarity: t - noRarity, prices: t - noPrice,
-    verified, humanVerified, dupes,
+    verified, humanVerified, finishes, variantCount,
+    missingNums: missingNums.length ? missingNums.map(n => `${setPrefix}-${String(n).padStart(3,'0')}`) : [],
     issues: [
       noName && `${noName} no name`, noImg && `${noImg} no image`,
       noRarity && `${noRarity} no rarity`, noPrice && `${noPrice} no price`,
-      dupes && `${dupes} dupe IDs`
+      missingNums.length && `${missingNums.length} gaps in numbering`,
+      !hasVariants && game === 'onepiece' && t < 80 && 'no variants (may be incomplete)',
     ].filter(Boolean)
   };
 }
@@ -87,7 +111,9 @@ if (jsonOut) {
       const icon = r.score >= 95 ? '✅' : r.score >= 70 ? '⚠️' : '❌';
       const issues = r.issues.length ? r.issues.join(', ') : 'clean';
       const hv = r.humanVerified ? ` [${r.humanVerified} human✓]` : '';
-      console.log(`  ${icon} ${r.setId.padEnd(18)} ${String(r.total).padStart(4)} cards  ${String(r.score).padStart(3)}%  ${issues}${hv}`);
+      const vars = r.variantCount ? ` (${r.variantCount} variants)` : '';
+      console.log(`  ${icon} ${r.setId.padEnd(18)} ${String(r.total).padStart(4)} cards  ${String(r.score).padStart(3)}%  ${issues}${hv}${vars}`);
+      if (r.missingNums.length && r.missingNums.length <= 5) console.log(`     ↳ missing: ${r.missingNums.join(', ')}`);
     }
   }
 }
