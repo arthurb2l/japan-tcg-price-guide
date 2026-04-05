@@ -664,7 +664,7 @@ async function loadCards() {
         fetch(`data/shards/${s.file}`).then(r => r.json())
       );
       const shards = await Promise.all(shardPromises);
-      pokemonCards = shards.flatMap(s => Object.values(s.sets).flat()).map(c => ({...c, game: 'pokemon'}));
+      pokemonCards = shards.flatMap(s => Object.values(s.sets).flat()).map(c => ({...c, setId: c.setId || c.set, game: 'pokemon'}));
     } catch(e) {
       // Fallback to monolithic
       const pokemonRes = await fetch('data/brain-cache.json');
