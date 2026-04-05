@@ -36,10 +36,18 @@ inclusion: always
 - Never use `pdftoppm` for card cropping (grid positions unreliable)
 
 ## Scripts
-- `scripts/audit-inventory.js` — health scores
+- `scripts/audit-inventory.js` — health scores (variants, gaps, prices)
 - `scripts/validate-prices.js` — price anomaly detection
 - `scripts/fetch-pokemon-prices.js` — TCGdex price fetcher
 - `scripts/fetch-pokemon-metadata.js` — TCGdex rarity+image fetcher
+- `scripts/fetch-op-official-cardlist.js` — One Piece card list from official site (POST scraper)
+
+## One Piece Card List Methodology
+- **Source of truth:** `onepiece-cardgame.com/cardlist/` (POST with `series=<id>`)
+- **Variant pattern:** `CARD-ID_p1`, `_p2` etc. = parallel/alternate art versions
+- **Script:** `node scripts/fetch-op-official-cardlist.js <series_id> --dry-run`
+- **Series IDs:** Found in the `<select>` dropdown on the official card list page
+- **Always check official site** before assuming a set is complete — variants are easily missed
 
 ## Autonomous Agents
 - `.github/workflows/update-sitemap.yml` — auto-generates sitemap

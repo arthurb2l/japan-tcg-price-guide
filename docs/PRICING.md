@@ -38,9 +38,11 @@
 - **UC parallels**: Real flea market hidden gems, need individual verification
 
 ### Automated Scripts
+- `scripts/fetch-pokemon-prices.js` — TCGdex price fetcher (Pokemon only)
 - `scripts/fetch-amazon-jp.js` — Works for base cards only (variants return wrong prices)
 - `scripts/fetch-mercari-jp.js` — Untested
-- `scripts/fetch-yuyutei.js` — Untested
+- `scripts/fetch-yuyutei.js` — Untested (One Piece only)
+- `scripts/fetch-op-official-cardlist.js` — Official site card list scraper (One Piece)
 - `.github/workflows/update-jp-prices.yml` — Weekly auto-update (needs script refinement)
 
 ## Remaining Work
@@ -85,8 +87,8 @@ TCGdex aggregates prices from:
 
 ### Fetching Prices
 ```bash
-# Fetch 1000 cards (run multiple times for full coverage)
-cd /mnt/c/q/Pokemon && node scripts/fetch-prices.js 1000
+# Fetch 1000 Pokemon cards from TCGdex
+cd /mnt/c/q/Pokemon && node scripts/fetch-pokemon-prices.js sv 1000
 ```
 
 The script:
@@ -120,8 +122,8 @@ The script:
 
 ### Fetching Prices
 ```bash
-# Requires RAPIDAPI_KEY environment variable
-cd /mnt/c/q/Pokemon && node scripts/fetch-onepiece-prices.js 100
+# One Piece: scrape card list from official site, then price via PriceCharting
+cd /mnt/c/q/Pokemon && node scripts/fetch-op-official-cardlist.js <series_id> --dry-run
 ```
 
 ### Challenges
