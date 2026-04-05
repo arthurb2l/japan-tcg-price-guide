@@ -805,6 +805,7 @@ function renderCards() {
   
   const isFoil = c => c.finish && c.finish !== 'regular' ? ' foil' : '';
   const finishLabel = c => {
+    if (c.variant) return c.variant;
     if (!c.finish) return '?';
     if (c.finish === 'regular') return 'Regular';
     if (c.finish === 'alternate-art') return 'Alt Art';
