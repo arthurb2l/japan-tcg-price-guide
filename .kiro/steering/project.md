@@ -18,10 +18,11 @@ inclusion: always
 - Always `git fetch origin main && git rebase origin/main` before push
 
 ## Data Model
-- One Piece: `data/onepiece-cache.json` (single file, ~2800 cards)
+- One Piece: `data/onepiece-cache.json` (single file, ~3,861 cards across 21 sets + ST/DON/PROMO)
 - Pokemon: `data/shards/*.json` (split by era: bw, dp, ex, sm, sv, swsh, vintage, xy)
 - Pricing: `{jpy, usd, source, updated}` — JPY floor price is authoritative
 - Audit: `{verified, source, priceConfidence}` on every card
+- Variants: `{finish, variant}` — finish = technical type (parallel-1), variant = human name (Manga)
 
 ## Key Rules
 - **Floor pricing** — always use lowest reliable JP domestic price, not median
@@ -63,10 +64,8 @@ inclusion: always
 - `.github/workflows/update-metrics.yml` — auto-updates card counts
 
 ## Current Focus
-- One Piece card completeness audit: ~1,014 missing variant cards across all sets
-- Only EB-02 and OP-01 are at 100% vs official JP site
-- OP-09 and OP-14 have EN-only cards mixed in (need cleanup)
-- EB-04 and OP-15 have 0 cards (not imported yet)
-- PRB-01/PRB-02 are heavily incomplete (premium boosters have many reprints+variants)
-- Source of truth: `onepiece-cardgame.com/cardlist/` (JP site, POST with series ID)
+- One Piece: 17/21 sets match official JP counts exactly (3,861 cards total)
+- ~1,361 newly imported cards need prices (variant cards mostly)
+- Variant `variant` field needs human-readable names for all sets (only EB-02 done)
+- Pokemon: SV6a added (94 cards with prices), search `setId` normalization fixed
 - **CRITICAL:** Never mix EN and JP card lists — JP official site is the only source
