@@ -705,8 +705,19 @@ async function loadCards() {
       document.getElementById('search').value = params.get('q');
       doSearch();
     } else if (params.get('set')) {
-      document.getElementById('set-filter').value = params.get('set');
-      filterBySet(params.get('set'));
+      const setParam = params.get('set');
+      const setFilter = document.getElementById('set-filter');
+      const hasOption = [...setFilter.options].some(o => o.value === setParam);
+      console.log('Set filter debug:', {setParam, hasOption, optionCount: setFilter.options.length, currentValue: setFilter.value});
+      if (hasOption) {
+        setFilter.value = setParam;
+        filterBySet(setParam);
+      } else {
+        console.warn('Set not found in dropdown:', setParam);
+        filteredCards = getGameCards().filter(c => c.setId === setParam);
+        sortCards(document.getElementById('sort').value);
+        updateURL();
+      }
     } else if (params.get('random')) {
       const gameCards = getGameCards();
       const card = gameCards[Math.floor(Math.random() * gameCards.length)];
