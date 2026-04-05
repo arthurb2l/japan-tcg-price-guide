@@ -688,6 +688,7 @@ async function loadCards() {
     } catch(e) { console.log('No price photos'); }
     
     allCards = [...pokemonCards, ...opCards];
+    allCards.forEach((c, i) => c._uid = i);
     console.log(`Loaded ${allCards.length} cards (${pokemonCards.length} PKM + ${opCards.length} OP)`);
     
     // Populate set filter (respects game filter)
@@ -821,7 +822,7 @@ function renderCards() {
         <span class="rarity" onclick="sortCards('rarity')">Rarity ▼</span>
         <span class="price" onclick="sortCards('price-high')">Price ▼</span>
       </div>` + cards.map(c => `
-      <div class="card-item${owned(c)}" onclick="showCard('${c.id}')">
+      <div class="card-item${owned(c)}" onclick="showCard('${c.id}',false,${c._uid})">
         <img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <span class="name">${c.name}${jpName(c)}</span>
         <span class="set">${c.set || c.setId}</span>
@@ -833,7 +834,7 @@ function renderCards() {
     `).join('');
   } else if (currentView === 'text') {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item${owned(c)}" onclick="showCard('${c.id}')">
+      <div class="card-item${owned(c)}" onclick="showCard('${c.id}',false,${c._uid})">
         <div class="name">${c.name}${jpName(c)}${c.pricing ? ' · ' + formatPrice(c) : ''}</div>
         <div class="set">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown rarity'}${variant(c)} · ${finishLabel(c)}</div>
         <div class="details">${c.types ? 'Type: ' + c.types.join(', ') : ''} ${c.hp ? '· HP: ' + c.hp : ''}</div>
@@ -841,7 +842,7 @@ function renderCards() {
     `).join('');
   } else if (currentView === 'full') {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item${owned(c)}${isFoil(c)}" onclick="if(!toggleCardSelect('${c.id}',this))showCardFromTile(this,'${c.id}')">
+      <div class="card-item${owned(c)}${isFoil(c)}" onclick="if(!toggleCardSelect('${c.id}',this))showCardFromTile(this,'${c.id}',${c._uid})">
         ${collBtn(c)}${flipBtn(c)}
         <img src="${getImgHigh(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <div class="info">
@@ -855,7 +856,7 @@ function renderCards() {
     `).join('');
   } else {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item${owned(c)}${isFoil(c)}" onclick="if(!toggleCardSelect('${c.id}',this))showCardFromTile(this,'${c.id}')">
+      <div class="card-item${owned(c)}${isFoil(c)}" onclick="if(!toggleCardSelect('${c.id}',this))showCardFromTile(this,'${c.id}',${c._uid})">
         ${collBtn(c)}${flipBtn(c)}
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>
@@ -1078,14 +1079,14 @@ function filterByGame(game) {
 let currentCard = null;
 let showingJp = true;
 
-function showCard(id, isEn) {
+function showCard(id, isEn, uid) {
   // Track recently viewed
-  currentModalCard = allCards.find(c => c.id === id);
+  const card = uid !== undefined ? allCards.find(c => c._uid === uid) : allCards.find(c => c.id === id);
+  currentModalCard = card;
   const recent = JSON.parse(localStorage.getItem("tcg_recent") || "[]");
   const filtered = recent.filter(r => r !== id).slice(0, 19);
   filtered.unshift(id);
   localStorage.setItem("tcg_recent", JSON.stringify(filtered));
-  const card = allCards.find(c => c.id === id);
   if (!card) return;
   currentCard = card;
   
@@ -1260,10 +1261,10 @@ function flipTile(e, btn) {
   btn.textContent = isJp ? 'JP' : 'EN';
 }
 
-function showCardFromTile(tile, id) {
+function showCardFromTile(tile, id, uid) {
   const flipBtn = tile.querySelector('.flip-tile');
   const isEn = flipBtn && flipBtn.textContent === 'JP';
-  showCard(id, isEn);
+  showCard(id, isEn, uid);
 }
 
 function clearSearch() {
