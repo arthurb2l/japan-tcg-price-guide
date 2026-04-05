@@ -48,6 +48,12 @@ inclusion: always
 - **Script:** `node scripts/fetch-op-official-cardlist.js <series_id> --dry-run`
 - **Series IDs:** Found in the `<select>` dropdown on the official card list page
 - **Always check official site** before assuming a set is complete — variants are easily missed
+- **Variant naming:** Each parallel must have a `variant` field with a human-readable name:
+  - `_p1` on EB cards = typically "Alternate Art"
+  - `_p2`+ on leader reprints = "SP" (Special)
+  - Cross-reference pricecharting.com for exact variant names (Manga, Alt Art, SP, etc.)
+- **Price cross-reference:** Use pricecharting slug pattern: `name-variant-cardid` (e.g. `monkeydluffy-manga-eb02-061`)
+- **Image mapping:** Each variant gets its own image URL: `{base_url}/{CARD-ID}_p{N}.png`
 
 ## Autonomous Agents
 - `.github/workflows/update-sitemap.yml` — auto-generates sitemap
