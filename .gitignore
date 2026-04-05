@@ -1,1 +1,12 @@
 node_modules/
+
+# Private task management (local only)
+BACKLOG.md
+ARCHIVE.md
+
+# DON card processing artifacts (not used by site)
+onepiece/images/don/_pdf_cards/
+onepiece/images/don/_pdf_cards_rgb/
+onepiece/images/don/_pdf_rendered/
+onepiece/images/don/_originals/
+onepiece/images/don/_pdf_extract/
