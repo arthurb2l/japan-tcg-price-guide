@@ -63,9 +63,10 @@ jobs:
                       console.log(`⚠️ API error: ${json.error}`);
                       resolve(null);
                     } else {
-                      const price = json.data?.[0]?.prices?.market || null;
-                      if (!price) console.log(`⚠️ No price in response: ${JSON.stringify(json).slice(0, 200)}`);
-                      resolve(price);
+                      const d = json.data;
+                      const price = Array.isArray(d) ? d[0]?.prices?.market : (d?.prices?.market || d?.latestPrice?.market);
+                      if (!price) console.log(`⚠️ No price found. Keys: ${d ? Object.keys(d).join(',') : 'null'}`);
+                      resolve(price || null);
                     }
                   } catch (e) { console.log(`⚠️ Parse error: ${e.message}`); resolve(null); }
                 });
