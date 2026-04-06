@@ -1404,7 +1404,12 @@ function copyCardInfo() {
   if (!currentModalCard) return;
   const c = currentModalCard;
   const jpy = getFloorJpy(c);
-  const text = `${c.name} (${c.id})\nSet: ${c.setId}\nRarity: ${c.rarity || "N/A"}\nPrice: ¥${jpy ? jpy.toLocaleString() : "N/A"}`;
+  const sfx = (!c.finish || c.finish === 'regular') ? '' : (function(f) {
+    const m = f.match(/^(parallel|reprint|alternate)[-_]?(\d+)?/);
+    if (!m) return '';
+    return '·' + (m[1]==='parallel'?'P':m[1]==='reprint'?'R':'AA') + (m[2]||'');
+  })(c.finish);
+  const text = `${c.name} (${c.id}${sfx}) [${c.finish||'regular'}]\nSet: ${c.setId || c.set}\nRarity: ${c.rarity || "N/A"}\nPrice: ¥${jpy ? jpy.toLocaleString() : "N/A"}\nRef: ${c.id}${sfx}@${c.setId||c.set}#${c._uid||''}`;
   navigator.clipboard.writeText(text);
   alert("Card info copied!");
 }
