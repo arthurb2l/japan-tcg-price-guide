@@ -54,6 +54,7 @@ body{padding:15px}
 </style>
 </head>
 <body>
+<script src="components/normalize-card.js"></script>
 <script src="/japan-tcg-price-guide/components/header.js"></script>
 
 <div class="builder">
@@ -131,7 +132,7 @@ async function loadCards() {
   allCards = [];
   for (const [setId, cards] of Object.entries(data.sets)) {
     for (const card of cards) {
-      allCards.push({ ...card, setId });
+      allCards.push({ ...normalizeOPCard(card), setId });
     }
   }
   searchCards();

@@ -7,6 +7,7 @@
 <meta name="description" content="View and manage your Pokemon and One Piece card collection. Track your cards, see total value, and export your collection.">
 <link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
 <!-- Firebase -->
+<script src="components/normalize-card.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
@@ -545,7 +546,7 @@ async function loadCards() {
     let opCards = [];
     try {
       const data = await fetch('data/onepiece-cache.json').then(r => r.json());
-      opCards = Object.values(data.sets).flat().map(c => ({...c, game: 'onepiece'}));
+      opCards = Object.values(data.sets).flat().map(c => ({...normalizeOPCard(c), game: 'onepiece'}));
     } catch(e) {}
     
     allCards = [...pokemonCards, ...opCards];
