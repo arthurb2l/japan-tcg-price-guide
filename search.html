@@ -805,6 +805,13 @@ function renderCards() {
   };
   
   const isFoil = c => c.finish && c.finish !== 'regular' ? ' foil' : '';
+  const getFinishSuffix = c => {
+    if (!c.finish || c.finish === 'regular') return '';
+    const m = c.finish.match(/^(parallel|reprint|alternate)[-_]?(\d+)?/);
+    if (!m) return '';
+    const p = m[1] === 'parallel' ? 'P' : m[1] === 'reprint' ? 'R' : 'AA';
+    return '·' + p + (m[2] || '');
+  };
   const finishLabel = c => {
     if (c.variant) return c.variant;
     if (!c.finish) return '?';
@@ -828,7 +835,7 @@ function renderCards() {
         <img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <span class="name">${c.name}${jpName(c)}</span>
         <span class="set">${c.set || c.setId}</span>
-        <span class="id">${c.id}</span>
+        <span class="id">${c.id}${getFinishSuffix(c)}</span>
         <span class="finish">${finishLabel(c)}</span>
         <span class="rarity">${c.rarity || '-'}</span>
         <span class="price">${formatPrice(c)}</span>
@@ -838,7 +845,7 @@ function renderCards() {
     grid.innerHTML = cards.map(c => `
       <div class="card-item${owned(c)}" onclick="showCard('${c.id}',false,${c._uid})">
         <div class="name">${c.name}${jpName(c)}${c.pricing ? ' · ' + formatPrice(c) : ''}</div>
-        <div class="set">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown rarity'}${variant(c)} · ${finishLabel(c)}</div>
+        <div class="set">${c.set || c.setId} · ${c.id}${getFinishSuffix(c)} · ${c.rarity || 'Unknown rarity'}${variant(c)} · ${finishLabel(c)}</div>
         <div class="details">${c.types ? 'Type: ' + c.types.join(', ') : ''} ${c.hp ? '· HP: ' + c.hp : ''}</div>
       </div>
     `).join('');
@@ -849,7 +856,7 @@ function renderCards() {
         <img src="${getImgHigh(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <div class="info">
           <div class="name">${c.name}${jpName(c)}</div>
-          <div class="meta">${c.set || c.setId} · ${c.id} · ${c.rarity || 'Unknown'}${variant(c)} · ${finishLabel(c)}</div>
+          <div class="meta">${c.set || c.setId} · ${c.id}${getFinishSuffix(c)} · ${c.rarity || 'Unknown'}${variant(c)} · ${finishLabel(c)}</div>
           ${c.types ? '<div class="types">' + c.types.map(t => '<span class="type-badge">' + t + '</span>').join('') + '</div>' : ''}
           ${c.hp ? '<div class="meta">HP: ' + c.hp + '</div>' : ''}
           ${c.pricing ? '<div class="price">' + formatPrice(c) + '</div>' : ''}
@@ -862,7 +869,7 @@ function renderCards() {
         ${collBtn(c)}${flipBtn(c)}
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>
-        <div class="set">${c.id}${c.id.replace('-','').toLowerCase().startsWith((c.setId||c.set||'').replace('-','').toLowerCase()) ? '' : ' · '+(c.setId||c.set)}${variant(c)}</div>
+        <div class="set">${c.id}${getFinishSuffix(c)}${c.id.replace('-','').toLowerCase().startsWith((c.setId||c.set||'').replace('-','').toLowerCase()) ? '' : ' · '+(c.setId||c.set)}${variant(c)}</div>
         ${c.pricing ? '<div class="price">' + formatPrice(c) + '</div>' : ''}
       </div>
     `).join('');
@@ -899,13 +906,18 @@ function doSearch() {
   filteredCards = gameCards.filter(c => {
     const idNorm = c.id?.toLowerCase().replace(/-/g, '');
     const queryNorm = query.replace(/[\s-]/g, '');
+    const finish = c.finish || '';
+    const suffixMatch = query.match(/[·.]?p(\d+)$/) ? finish === 'parallel-' + query.match(/[·.]?p(\d+)$/i)[1] :
+                        query.match(/[·.]?r(\d+)$/) ? finish === 'reprint-' + query.match(/[·.]?r(\d+)$/i)[1] :
+                        query.match(/[·.]?aa$/) ? (finish === 'alternate-art' || finish === 'parallel-1') : false;
     return c.name?.toLowerCase().includes(query) ||
       c.id?.toLowerCase().includes(query) ||
       c.id?.toLowerCase().includes(normalizedQuery) ||
       idNorm?.includes(queryNorm) ||
       c.localId?.toLowerCase().includes(query) ||
       c.set?.toLowerCase().includes(query) ||
-      c.setId?.toLowerCase().includes(query);
+      c.setId?.toLowerCase().includes(query) ||
+      suffixMatch;
   });
   
   // Smart switch: if no results in current game, check other game
@@ -1099,7 +1111,13 @@ function showCard(id, isEn, uid) {
   document.getElementById('modal-img').src = getImg(card);
   document.getElementById('modal-name').textContent = card.name + (card.nameJp ? ' ' + card.nameJp : '');
   document.getElementById('modal-set').textContent = card.set || card.setId;
-  document.getElementById('modal-id').textContent = card.id;
+  document.getElementById('modal-id').textContent = card.id + (function(c) {
+    if (!c.finish || c.finish === 'regular') return '';
+    const m = c.finish.match(/^(parallel|reprint|alternate)[-_]?(\d+)?/);
+    if (!m) return '';
+    const p = m[1] === 'parallel' ? 'P' : m[1] === 'reprint' ? 'R' : 'AA';
+    return '·' + p + (m[2] || '');
+  })(card);
   document.getElementById('modal-rarity').textContent = card.rarity || '-';
   
   // Finish label
