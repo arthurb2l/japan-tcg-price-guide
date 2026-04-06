@@ -81,6 +81,7 @@
 </head>
 <body>
 
+<script src="components/normalize-card.js"></script>
 <script src="/japan-tcg-price-guide/components/header.js"></script>
 
 <h1 class="page-title">Advanced Search</h1>
@@ -218,7 +219,7 @@ async function loadCards() {
     let opCards = [];
     try {
       const data = await fetch('data/onepiece-cache.json').then(r => r.json());
-      opCards = Object.values(data.sets).flat().map(c => ({...c, game: 'onepiece'}));
+      opCards = Object.values(data.sets).flat().map(c => ({...normalizeOPCard(c), game: 'onepiece'}));
     } catch(e) {}
     
     allCards = [...pokemonCards, ...opCards];

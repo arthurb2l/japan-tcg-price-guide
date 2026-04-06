@@ -40,6 +40,7 @@ h1{font-size:1.5em;margin-bottom:5px}
 </style>
 </head>
 <body>
+<script src="../components/normalize-card.js"></script>
 <script src="/japan-tcg-price-guide/components/header.js"></script>
 
 <h1>🏴‍☠️ Best One Piece Commons</h1>
@@ -72,7 +73,7 @@ let lbIdx = 0;
 async function loadData() {
   try {
     const data = await fetch(`${BASE}/data/onepiece-cache.json`).then(r => r.json());
-    const allCards = Object.values(data.sets).flat();
+    const allCards = Object.values(data.sets).flat().map(normalizeOPCard);
 
     const priceByBase = {};
     for (const card of allCards) {
