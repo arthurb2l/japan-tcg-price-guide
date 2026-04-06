@@ -12,6 +12,7 @@ function normalizeOPCard(c) {
     ...c,
     name: lang(c.name),
     nameJp: c.name?.en && c.name?.jp ? c.name.jp : null,
+    setId: c.setId || c.set,
     color: lang(c.color),
     trait: lang(c.trait),
     effect: lang(c.effect),
