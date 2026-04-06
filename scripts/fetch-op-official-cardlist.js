@@ -235,10 +235,14 @@ function updateCache(newCards, seriesList) {
     cache = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
   }
 
-  // Group new cards by set
+  // Normalize set IDs: "OP07" → "OP-07", "EB01" → "EB-01", etc.
+  const normalizeSetId = (id) => id.replace(/^(OP|EB|ST|PRB)(\d)/, '$1-$2');
+
+  // Group new cards by normalized set
   const bySet = {};
   for (const card of newCards) {
-    const setId = card.set;
+    const setId = normalizeSetId(card.set);
+    card.set = setId;
     if (!bySet[setId]) bySet[setId] = [];
     bySet[setId].push(card);
   }
@@ -250,22 +254,24 @@ function updateCache(newCards, seriesList) {
     const existing = cache.sets[setId];
 
     for (const card of cards) {
-      const key = card.officialId;
-      const idx = existing.findIndex(c => c.officialId === key || (c.id === card.id && c.finish === card.finish));
+      // Match by officialId first, then by id+finish
+      const idx = existing.findIndex(c =>
+        c.officialId === card.officialId ||
+        (c.id === card.id && c.finish === card.finish) ||
+        (c.id === card.id && !c.officialId && c.finish === card.finish)
+      );
 
       if (idx >= 0) {
-        // Merge: preserve pricing, update card data with language-specific fields
-        const old = existing[idx];
-        const merged = migrateCard(old, card, lang);
-        existing[idx] = merged;
+        existing[idx] = migrateCard(existing[idx], card, lang);
         updated++;
       } else {
-        // New card
         existing.push(toNewSchema(card, lang));
         added++;
       }
     }
-    preserved += existing.filter(c => !cards.find(nc => nc.officialId === c.officialId)).length;
+    preserved += existing.filter(c => !cards.find(nc =>
+      nc.officialId === c.officialId || (nc.id === c.id && nc.finish === c.finish)
+    )).length;
   }
 
   // Update meta
@@ -322,39 +328,69 @@ function toNewSchema(card, cardLang) {
 }
 
 function migrateCard(old, fresh, cardLang) {
-  // Preserve existing pricing
-  const pricing = old.pricing || {
-    sources: {},
-    computed: { jpy: old.pricing?.jpy || null, usd: old.pricing?.usd || null, eur: null, krw: null, cny: null, thb: null },
-    method: old.pricing?.source || null,
-    primarySource: null,
-    updated: old.pricing?.updated || null,
-  };
+  // --- Migrate old flat pricing to new schema ---
+  let pricing;
+  const op = old.pricing || {};
 
-  // Migrate old flat pricing to new schema if needed
-  if (pricing.jpy !== undefined && !pricing.computed) {
+  if (op.sources) {
+    // Already new schema — just preserve
+    pricing = op;
+  } else {
+    // Old flat schema: { jpy, usd, source, updated, original_en }
+    const srcName = op.source && op.source !== 'pending' ? op.source.split('-')[0] : null;
     pricing = {
-      sources: pricing.source ? { [pricing.source.split('-')[0]]: { jpy: pricing.jpy, usd: pricing.usd, updated: pricing.updated } } : {},
-      computed: { jpy: pricing.jpy || null, usd: pricing.usd || null, eur: null, krw: null, cny: null, thb: null },
-      method: pricing.source || null,
-      primarySource: pricing.source ? pricing.source.split('-')[0] : null,
-      updated: pricing.updated || null,
+      sources: {},
+      computed: {
+        jpy: op.jpy || null,
+        usd: op.usd || null,
+        eur: null, krw: null, cny: null, thb: null,
+      },
+      method: op.source || null,
+      primarySource: srcName,
+      updated: op.updated || null,
     };
+    if (srcName && (op.usd || op.jpy)) {
+      pricing.sources[srcName] = {};
+      if (op.original_en) pricing.sources[srcName].usd = op.original_en;
+      if (op.usd) pricing.sources[srcName].usd = pricing.sources[srcName].usd || op.usd;
+      if (op.jpy) pricing.sources[srcName].jpy = op.jpy;
+      pricing.sources[srcName].updated = op.updated || null;
+    }
   }
 
-  // Helper to merge language fields
-  const mergeLang = (oldVal, newVal) => {
-    if (typeof oldVal === 'object' && oldVal !== null && !Array.isArray(oldVal) && 'jp' in oldVal) {
-      // Already new schema
-      const merged = { ...oldVal };
-      merged[cardLang] = newVal;
-      return merged;
+  // --- Helper: merge a field into per-language object ---
+  const isLangObj = (v) => v && typeof v === 'object' && !Array.isArray(v) && ('jp' in v || 'en' in v);
+  const EMPTY_LANG = { jp: null, en: null, fr: null, cn: null, kr: null, th: null };
+
+  const mergeLang = (oldVal, newVal, fieldName) => {
+    if (isLangObj(oldVal)) {
+      // Already migrated — just set the new language
+      return { ...oldVal, [cardLang]: newVal };
     }
-    // Old flat field → migrate
-    const obj = { jp: null, en: null, fr: null, cn: null, kr: null, th: null };
-    if (cardLang === 'jp') { obj.jp = newVal; obj.en = oldVal; }
-    else if (cardLang === 'en') { obj.en = newVal; obj.jp = oldVal; }
-    else { obj[cardLang] = newVal; }
+    // Old flat value — figure out which language it was
+    const obj = { ...EMPTY_LANG };
+    obj[cardLang] = newVal;
+    if (oldVal != null) {
+      // Old data: if source was EN repo, old value is EN; if official-jp, old value is JP
+      const oldSource = old.source || old._audit?.source || '';
+      if (oldSource.includes('nemesis312') || oldSource === 'ai-generated') {
+        obj.en = obj.en || oldVal;
+      } else {
+        obj.jp = obj.jp || oldVal;
+      }
+    }
+    return obj;
+  };
+
+  // --- Merge image field ---
+  const mergeImg = () => {
+    if (isLangObj(old.img)) {
+      return { ...old.img, [cardLang]: fresh.img };
+    }
+    const obj = { ...EMPTY_LANG };
+    obj[cardLang] = fresh.img;
+    obj.jp = obj.jp || old.imgJp || null;
+    obj.en = obj.en || old.imgEn || (Array.isArray(old.images) && old.images[0]) || null;
     return obj;
   };
 
@@ -364,24 +400,28 @@ function migrateCard(old, fresh, cardLang) {
     set: fresh.set,
     rarity: fresh.rarity || old.rarity,
     type: fresh.type || old.type,
-    name: mergeLang(old.name, fresh.name),
-    life: fresh.life ?? old.life ?? null,
-    cost: fresh.cost ?? old.cost ?? null,
-    attribute: mergeLang(old.attribute, fresh.attribute),
+    name: mergeLang(old.name, fresh.name, 'name'),
+    life: fresh.type === 'LEADER' ? (fresh.life ?? old.life ?? null) : null,
+    cost: fresh.type !== 'LEADER' ? (fresh.cost ?? old.cost ?? null) : null,
+    attribute: mergeLang(old.attribute, fresh.attribute, 'attribute'),
     power: fresh.power ?? old.power ?? null,
     counter: fresh.counter ?? old.counter ?? null,
-    color: mergeLang(old.color, fresh.color),
-    blockIcon: fresh.blockIcon ?? old.blockIcon ?? null,
-    trait: mergeLang(old.trait, fresh.trait),
-    effect: mergeLang(old.effect, fresh.effect),
-    trigger: mergeLang(old.trigger, fresh.trigger),
-    sourceInfo: mergeLang(old.sourceInfo, fresh.sourceInfo),
+    color: mergeLang(old.color, fresh.color, 'color'),
+    blockIcon: fresh.blockIcon ?? old.blockIcon ?? old.block ?? null,
+    trait: mergeLang(old.trait, fresh.trait, 'trait'),
+    effect: mergeLang(old.effect, fresh.effect, 'effect'),
+    trigger: mergeLang(old.trigger, fresh.trigger, 'trigger'),
+    sourceInfo: mergeLang(old.sourceInfo, fresh.sourceInfo, 'sourceInfo'),
     finish: fresh.finish || old.finish,
-    img: mergeLang(old.img || old.imgJp || old.imgEn, fresh.img),
+    img: mergeImg(),
     pricing,
     popularity: old.popularity || null,
     tags: old.tags || [],
-    _meta: { source: 'official', fetchedAt: new Date().toISOString(), verified: old._audit?.verified || old._meta?.verified || false },
+    _meta: {
+      source: 'official',
+      fetchedAt: new Date().toISOString(),
+      verified: old._audit?.verified || old._meta?.verified || false,
+    },
   };
 }
 
