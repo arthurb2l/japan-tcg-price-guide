@@ -3,9 +3,13 @@
  * Handles both old (flat) and new (per-language) schemas transparently.
  */
 function normalizeOPCard(c) {
-  const lang = (v) => typeof v === 'object' && v !== null && !Array.isArray(v) && ('en' in v || 'jp' in v) ? (v.en || v.jp || null) : v;
-  const langJp = (v) => typeof v === 'object' && v !== null && !Array.isArray(v) && 'jp' in v ? v.jp : null;
-  if (typeof c.name !== 'object' || c.name === null || !('jp' in c.name || 'en' in c.name)) return c; // already flat
+  try {
+    const lang = (v) => typeof v === 'object' && v !== null && !Array.isArray(v) && ('en' in v || 'jp' in v) ? (v.en || v.jp || null) : v;
+    const langJp = (v) => typeof v === 'object' && v !== null && !Array.isArray(v) && 'jp' in v ? v.jp : null;
+    if (typeof c.name !== 'object' || c.name === null || !('jp' in c.name || 'en' in c.name)) {
+      // Old flat schema — just ensure setId exists
+      return { ...c, setId: c.setId || c.set };
+    }
   const p = c.pricing || {};
   const computed = p.computed || {};
   return {
@@ -24,4 +28,5 @@ function normalizeOPCard(c) {
     imgEn: typeof c.img === 'object' ? c.img?.en : c.imgEn,
     pricing: p.computed ? { jpy: computed.jpy, usd: computed.usd, source: p.method, updated: p.updated } : p,
   };
+  } catch(e) { return { ...c, setId: c.setId || c.set }; }
 }
