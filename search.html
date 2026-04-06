@@ -1006,7 +1006,15 @@ function applyFilters() {
 function sortCards(by) {
   const getPrice = c => getFloorJpy(c);
   // Sort by full ID with numeric comparison for the number part
-  const sortById = (a, b) => (a.id || '').localeCompare(b.id || '', undefined, {numeric: true});
+  const sortById = (a, b) => {
+    const baseA = (a.id || '').replace(/[-_]\d+$/, ''), baseB = (b.id || '').replace(/[-_]\d+$/, '');
+    const numA = parseInt((a.id || '').match(/-(\d+)/)?.[1] || '0'), numB = parseInt((b.id || '').match(/-(\d+)/)?.[1] || '0');
+    if (numA !== numB) return numA - numB;
+    const fa = finishOrder.indexOf(a.finish) === -1 ? 99 : finishOrder.indexOf(a.finish);
+    const fb = finishOrder.indexOf(b.finish) === -1 ? 99 : finishOrder.indexOf(b.finish);
+    if (fa !== fb) return fa - fb;
+    return (a.id || '').localeCompare(b.id || '', undefined, {numeric: true});
+  };
   const finishOrder = ['regular','parallel-1','parallel-2','parallel-3','parallel-4','parallel-5','parallel-6','parallel-7','alternate-art'];
   filteredCards.sort((a, b) => {
     if (by === 'name') return (a.name || '').localeCompare(b.name || '');
