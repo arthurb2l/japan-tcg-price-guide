@@ -1135,7 +1135,7 @@ function showCard(id, isEn, uid) {
   document.getElementById('modal-title').textContent = card.name;
   document.getElementById('modal-img').src = getImg(card);
   document.getElementById('modal-name').textContent = card.name + (card.nameJp ? ' ' + card.nameJp : '');
-  document.getElementById('modal-set').textContent = card.set || card.setId;
+  document.getElementById('modal-set').textContent = card.setId || card.set;
   document.getElementById('modal-id').textContent = card.id + (function(c) {
     if (!c.finish || c.finish === 'regular') return '';
     const m = c.finish.match(/^(parallel|reprint|alternate)[-_]?(\d+)?/);
