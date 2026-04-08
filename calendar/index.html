@@ -55,7 +55,9 @@ h1 { text-align: center; color: #222; font-size: 1.6em; margin: 15px 0 5px; }
 .release-dot:hover { opacity: 0.8; }
 
 /* Detail panel */
-.detail-panel { display: none; }
+.detail-panel { background: #fff; border-radius: 8px; padding: 15px; margin-top: 15px; display: none; border: 2px solid #999; }
+.detail-panel.active { display: block; }
+.detail-panel .detail-tag-past { background: #f3f4f6; color: #666; border-color: #999; display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 0.75em; border: 1px solid; margin-right: 4px; }
 .detail-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
 .detail-title { font-size: 1.1em; font-weight: bold; color: #222; }
 .detail-close { background: none; border: none; color: #666; font-size: 1.5em; cursor: pointer; line-height: 1; }
@@ -275,16 +277,35 @@ function filterReleases(filter) {
   updateCountdown();
 }
 function showDetail(date, name) {
-  // Find matching upcoming item and toggle it
-  const items = document.querySelectorAll('.upcoming-item');
-  for (const item of items) {
-    if (item.dataset.date === date && item.dataset.name === name) {
-      const idx = item.id.replace('upcoming-', '');
-      toggleUpcoming(parseInt(idx));
-      item.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      return;
+  const today = new Date().toISOString().split('T')[0];
+  // Future events: scroll to and expand in upcoming list
+  if (date >= today) {
+    const items = document.querySelectorAll('.upcoming-item');
+    for (const item of items) {
+      if (item.dataset.date === date && item.dataset.name === name) {
+        const idx = item.id.replace('upcoming-', '');
+        toggleUpcoming(parseInt(idx));
+        item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
     }
   }
+  // Past events: show in detail panel below calendar
+  const r = releases.find(x => x.date === date && x.name === name);
+  if (!r) return;
+  const d = new Date(r.date);
+  document.getElementById('detailTitle').textContent = r.name;
+  document.getElementById('detailJp').textContent = r.jp;
+  document.getElementById('detailDate').textContent = `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+  document.getElementById('detailPrice').textContent = r.price;
+  document.getElementById('detailTags').innerHTML = `<span class="detail-tag-past">Past</span> <span class="detail-tag ${r.tcg}">${r.tcg === 'pokemon' ? 'Pokemon' : 'One Piece'}</span> <span class="detail-tag ${r.type}">${r.type}</span>`;
+  document.getElementById('detailDesc').textContent = r.desc || '';
+  const linkEl = document.getElementById('detailLink');
+  if (r.link) { linkEl.innerHTML = `<a href="${r.link}" target="_blank" rel="noopener" style="color:#EE1515;font-weight:bold">🔗 Open Link</a>`; linkEl.style.display = 'block'; }
+  else { linkEl.style.display = 'none'; }
+  const panel = document.getElementById('detailPanel');
+  panel.classList.add('active');
+  panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 function toggleUpcoming(idx) {
   const item = document.getElementById('upcoming-' + idx);
