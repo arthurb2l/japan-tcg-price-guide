@@ -742,14 +742,22 @@ async function loadCards() {
 let displayLimit = 60;
 
 function updateStats() {
-  let total = filteredCards.length;
+  let cards = filteredCards;
   if (collFilterActive) {
     const coll = collectionStore.getAll();
-    total = filteredCards.filter(c => coll[c.id]).length;
+    cards = cards.filter(c => coll[c.id]);
   }
+  const total = cards.length;
   const showing = Math.min(total, displayLimit);
+  const activeSet = document.getElementById('set-filter')?.value || '';
+  let label = total + ' cards';
+  if (activeSet) {
+    const native = cards.filter(c => c.id.replace('-','').toLowerCase().startsWith(activeSet.replace('-','').toLowerCase())).length;
+    const reprints = total - native;
+    if (reprints > 0) label = native + ' cards + ' + reprints + ' reprints';
+  }
   document.getElementById('stats').textContent = 
-    total + ' cards' + (total > displayLimit ? ` (showing ${showing})` : '');
+    label + (total > displayLimit ? ` (showing ${showing})` : '');
   document.getElementById('show-more-container').style.display = 
     total > displayLimit ? 'block' : 'none';
 }
@@ -821,6 +829,10 @@ function renderCards() {
     return c.finish;
   };
   
+  const activeSet = document.getElementById('set-filter')?.value || '';
+  const isReprint = c => activeSet && !c.id.replace('-','').toLowerCase().startsWith(activeSet.replace('-','').toLowerCase());
+  const reprintLabel = c => isReprint(c) ? `<div class="set" style="color:#e67e22;font-size:.65em">Reprint: ${activeSet}</div>` : '';
+
   if (currentView === 'checklist') {
     grid.innerHTML = `<div class="card-item header">
         <span></span>
@@ -869,7 +881,8 @@ function renderCards() {
         ${collBtn(c)}${flipBtn(c)}
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>
-        <div class="set">${c.id}${getFinishSuffix(c)}${c.id.replace('-','').toLowerCase().startsWith((c.setId||c.set||'').replace('-','').toLowerCase()) ? '' : ' · '+(c.setId||c.set)}${variant(c)}</div>
+        <div class="set">${c.id}${getFinishSuffix(c)}${variant(c)}</div>
+        ${reprintLabel(c)}
         ${c.pricing ? '<div class="price">' + formatPrice(c) + '</div>' : ''}
       </div>
     `).join('');
