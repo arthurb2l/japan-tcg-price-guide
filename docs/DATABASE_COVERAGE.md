@@ -67,3 +67,15 @@ curl -s "https://api.tcgdex.net/v2/en/sets" | jq -r '.[] | "\(.id): \(.name)"'
 - ✅ <3MB: Optimal for mobile
 - ⚠️ 3-5MB: Acceptable, monitor performance
 - 🔴 >5MB: Implement sharding (#71)
+
+## Combo Set Policy (EN-only combined releases)
+
+**Decision (2026-04-09, #140):** Delete combo sets, keep JP sets as source of truth.
+
+**Background:** Bandai EN sometimes merges JP booster + extra booster into one product (e.g., OP-14-EB04 = OP-14 + EB-04). These combo sets contain 100% duplicate cards from their JP source sets.
+
+**Rules for future combo sets:**
+1. Do NOT add combo set codes to our data — they are EN packaging, not distinct card sets
+2. All cards belong to their JP set (OP-XX, EB-XX, ST-XX, etc.)
+3. If EN pricing references combo set codes, handle via mapping in pricing infrastructure (#78)
+4. Treasure rare reprints from older sets stay in their original set
