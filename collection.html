@@ -272,6 +272,20 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
       <div class="card-modal-actions">
         <button class="delete-btn" onclick="modalDeleteCard()">🗑️ Remove</button>
         <button class="save-btn" onclick="saveAndCloseModal()">✓ Save</button>
+        <button onclick="toggleReportForm()" style="flex:1;padding:12px;border:1px solid #f5c6cb;border-radius:6px;background:#fff3f3;cursor:pointer;color:#d32f2f;font-size:.9em">⚠️ Report</button>
+      </div>
+      <div id="report-form" style="display:none;margin-top:12px;padding:12px;background:#fef9f9;border:1px solid #f5c6cb;border-radius:6px">
+        <select id="report-type" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px;margin-bottom:8px">
+          <option value="">Select issue type…</option>
+          <option value="wrong_image">Wrong Image</option>
+          <option value="wrong_price">Wrong Price</option>
+          <option value="wrong_rarity">Wrong Rarity</option>
+          <option value="missing_variant">Missing Variant</option>
+          <option value="wrong_name">Wrong Name</option>
+          <option value="other">Other</option>
+        </select>
+        <input id="report-comment" type="text" placeholder="Details (optional)" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:4px;margin-bottom:8px;box-sizing:border-box">
+        <button onclick="submitReport()" style="width:100%;padding:10px;background:#d32f2f;color:#fff;border:none;border-radius:4px;cursor:pointer;font-weight:bold">Submit Report</button>
       </div>
     </div>
   </div>
@@ -439,7 +453,53 @@ function openCardModal(cardId) {
 
 function closeCardModal() {
   document.getElementById('card-modal').classList.remove('show');
+  document.getElementById('report-form').style.display='none';
   modalCardId = null;
+}
+
+// Card error reporting
+function toggleReportForm() {
+  const f = document.getElementById('report-form');
+  f.style.display = f.style.display === 'none' ? 'block' : 'none';
+  if (f.style.display === 'block') { document.getElementById('report-type').value = ''; document.getElementById('report-comment').value = ''; }
+}
+function getDeviceId() {
+  let id = localStorage.getItem('tcg_device_id');
+  if (!id) { id = crypto.randomUUID(); localStorage.setItem('tcg_device_id', id); }
+  return id;
+}
+function checkRateLimit() {
+  const now = Date.now(), key = 'tcg_report_times';
+  let times = JSON.parse(localStorage.getItem(key) || '[]').filter(t => now - t < 3600000);
+  if (times.length >= 5) return false;
+  times.push(now);
+  localStorage.setItem(key, JSON.stringify(times));
+  return true;
+}
+function showReportToast(msg, isError) {
+  const t = document.createElement('div');
+  t.textContent = msg;
+  Object.assign(t.style, {position:'fixed',bottom:'20px',left:'50%',transform:'translateX(-50%)',background:isError?'#d32f2f':'#16a34a',color:'#fff',padding:'12px 20px',borderRadius:'8px',fontSize:'.9em',zIndex:'2000',transition:'opacity .5s',fontWeight:'500'});
+  document.body.appendChild(t);
+  setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 500); }, 3000);
+}
+async function submitReport() {
+  const type = document.getElementById('report-type').value;
+  if (!type) { showReportToast('Please select an issue type', true); return; }
+  if (!checkRateLimit()) { showReportToast('Too many reports — try again later', true); return; }
+  if (!modalCardId) return;
+  const card = userCollection[modalCardId] || {};
+  try {
+    await db.collection('card-reports').add({
+      cardId: modalCardId, cardName: card.name || modalCardId,
+      game: card.game || 'unknown', set: card.set || '',
+      issueType: type, comment: document.getElementById('report-comment').value || '',
+      reportedAt: firebase.firestore.FieldValue.serverTimestamp(),
+      deviceId: getDeviceId(), status: 'open'
+    });
+    document.getElementById('report-form').style.display = 'none';
+    showReportToast('✅ Report received — thanks for helping improve the guide!');
+  } catch(e) { console.error('Report failed:', e); showReportToast('Failed to submit — please try again', true); }
 }
 
 function saveAndCloseModal() {
