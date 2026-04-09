@@ -1300,7 +1300,7 @@ function closeModal() { document.getElementById('modal').classList.remove('activ
 function toggleReportForm() {
   const f = document.getElementById('report-form');
   f.style.display = f.style.display === 'none' ? 'block' : 'none';
-  if (f.style.display === 'block') { document.getElementById('report-type').value = ''; document.getElementById('report-comment').value = ''; }
+  if (f.style.display === 'block') { document.getElementById('report-type').value = ''; document.getElementById('report-comment').value = ''; f.scrollIntoView({behavior:'smooth',block:'nearest'}); }
 }
 function getDeviceId() {
   let id = localStorage.getItem('tcg_device_id');
