@@ -77,6 +77,19 @@ body.nav-open { overflow: hidden; }
 .nav-dropdown-content a:hover { background: #f5f5f5; }
 
 /* Search bar */
+.game-toggle {
+  background: none;
+  border: none;
+  padding: 6px 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+.game-toggle:hover { background: #e8e8e8; }
+.game-toggle img { display: block; }
 .header-search {
   flex: 1;
   max-width: 320px;
@@ -86,16 +99,6 @@ body.nav-open { overflow: hidden; }
   border-radius: 8px;
   height: 38px;
   overflow: hidden;
-}
-.header-search .game-select {
-  border: none;
-  background: transparent;
-  padding: 8px 4px 8px 10px;
-  font-size: 0.8em;
-  color: #555;
-  cursor: pointer;
-  outline: none;
-  flex-shrink: 0;
 }
 .header-search input {
   flex: 1;
@@ -280,8 +283,8 @@ body.nav-open { overflow: hidden; }
   
   .burger-btn { display: block; }
   .nav-links { display: none; }
-  .header-user { display: none; }
-  .site-logo { display: none; }
+  .site-logo .logo-text { display: none; }
+  .site-logo { padding: 5px; }
   
   /* Search: game dropdown + input + button */
   .header-search {
@@ -289,10 +292,8 @@ body.nav-open { overflow: hidden; }
     max-width: none;
     height: 38px;
   }
-  .header-search .game-select {
-    padding: 8px 2px 8px 8px;
-    font-size: 0.75em;
-    max-width: 80px;
+  .header-search .game-toggle {
+    padding: 6px;
   }
   .header-search input { 
     padding: 8px 6px; 
