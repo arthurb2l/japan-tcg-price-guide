@@ -92,7 +92,7 @@ body.nav-open { overflow: hidden; }
 .game-toggle:hover { background: #e8e8e8; }
 .game-toggle img { display: block; }
 .game-arrow { font-size: 0.6em; color: #888; }
-.game-picker { position: relative; flex-shrink: 0; display: flex; align-items: stretch; }
+.game-picker { position: relative; flex-shrink: 0; display: flex; height: 100%; }
 .game-dropdown {
   display: none;
   position: absolute;
@@ -369,13 +369,14 @@ body.nav-open { overflow: hidden; }
   background: #fff;
   border: none;
   border-right: 1px solid #eee;
-  padding: 0 10px;
+  padding: 0 12px;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 4px;
   flex-shrink: 0;
   border-radius: 10px 0 0 10px;
+  height: 100%;
 }
 .search-overlay .game-arrow { font-size: 0.6em; color: #888; }
 .search-overlay input {
