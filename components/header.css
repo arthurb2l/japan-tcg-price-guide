@@ -316,8 +316,7 @@ body.nav-open { overflow: hidden; }
   .nav-links { display: none; }
   .header-user { display: none; }
   
-  .site-logo .logo-text { display: none; }
-  .site-logo { padding: 4px; font-size: 1.3em; }
+  .site-logo { padding: 4px; font-size: 1em; flex: 1; text-align: center; }
   
   /* Hide full search bar on mobile — replaced by search icon + overlay */
   .header-search { display: none; }
@@ -363,7 +362,6 @@ body.nav-open { overflow: hidden; }
   display: flex;
   background: #fff;
   border-radius: 10px;
-  overflow: hidden;
   height: 48px;
 }
 .search-overlay .game-toggle {
