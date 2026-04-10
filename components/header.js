@@ -137,13 +137,28 @@
     updateHeaderUser(null);
   };
   
-  // Check auth state
+  // Check auth state + admin badge
+  const ADMIN_UIDS = ['kkECBly8lgVnrw9flUBouBMzjEh2'];
   setTimeout(() => {
     if (typeof currentUser !== 'undefined' && currentUser) {
       updateHeaderUser(currentUser);
     } else if (typeof auth !== 'undefined' && auth.onAuthStateChanged) {
       auth.onAuthStateChanged(user => {
-        if (user) updateHeaderUser({ picture: user.photoURL, name: user.displayName });
+        if (user) {
+          updateHeaderUser({ picture: user.photoURL, name: user.displayName });
+          if (ADMIN_UIDS.includes(user.uid) && typeof db !== 'undefined') {
+            db.collection('card-reports').where('status', '==', 'open').get().then(snap => {
+              if (snap.size > 0) {
+                const badge = document.createElement('a');
+                badge.href = base + 'admin/reports.html';
+                badge.style.cssText = 'background:#d32f2f;color:#fff;padding:2px 8px;border-radius:10px;font-size:.75em;margin-left:8px;text-decoration:none';
+                badge.textContent = '⚠️ ' + snap.size;
+                badge.title = snap.size + ' open report(s)';
+                document.querySelector('.nav-links')?.appendChild(badge);
+              }
+            }).catch(() => {});
+          }
+        }
       });
     }
   }, 100);
