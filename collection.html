@@ -195,9 +195,14 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
   .stat-card{padding:10px;min-width:70px}
   .stat-card .value{font-size:1.1em}
   .stat-card .label{font-size:.65em}
-  .filters{gap:8px}
-  .filter-group{flex-wrap:wrap}
-  select.filter{padding:6px 8px;font-size:.8em}
+  .filters{flex-direction:column;gap:10px}
+  .filter-left{width:100%;gap:8px}
+  .filter-right{width:100%;justify-content:flex-start;gap:8px}
+  .filter-group{flex:1;min-width:0}
+  .filter-group select.filter{width:100%}
+  .filter-label{display:none}
+  .export-btn{padding:8px 12px;font-size:.8em;flex:1;text-align:center}
+  select.filter{padding:8px;font-size:.85em}
 }
 /* Pagination */
 .pagination{display:flex;justify-content:center;align-items:center;gap:15px;padding:20px;margin-top:10px}
