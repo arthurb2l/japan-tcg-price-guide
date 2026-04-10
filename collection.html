@@ -649,9 +649,9 @@ function renderCollection() {
         </button>
       `).join('')}
       <span style="flex:1"></span>
-      <a href="backup.html" class="util-btn" style="text-decoration:none" title="Backup">💾</a>
-      <button class="util-btn" onclick="shareCollection()" title="Share">🔗</button>
-      <button class="util-btn" onclick="exportCollection()" title="Export">📥</button>
+      <a href="backup.html" class="util-btn" style="text-decoration:none" title="Backup">💾 Backup</a>
+      <button class="util-btn" onclick="shareCollection()" title="Share">🔗 Share</button>
+      <button class="util-btn" onclick="exportCollection()" title="Export">📥 Export</button>
     </div>`;
   
   const emptyMessages = {
@@ -807,7 +807,8 @@ function renderCollection() {
           </select>
         </div>
         <div class="view-toggle">
-          <button class="view-btn active" onclick="toggleView(currentView === 'grid' ? 'list' : 'grid')">${currentView === 'grid' ? '▦ Grid' : '☰ List'}</button>
+          <button class="view-btn ${currentView === 'grid' ? 'active' : ''}" data-view="grid" onclick="toggleView('grid')">▦ Grid</button>
+          <button class="view-btn ${currentView === 'list' ? 'active' : ''}" data-view="list" onclick="toggleView('list')">☰ List</button>
         </div>
       </div>
     </div>
