@@ -48,11 +48,34 @@
           <button type="submit" aria-label="Search">🔍</button>
         </form>
         
+        <button class="mobile-search-btn" onclick="openSearchOverlay()" aria-label="Search">🔍</button>
+        <div class="mobile-avatar-wrap" id="mobileAvatarWrap" onclick="toggleMobileNav()"></div>
+        
         <div class="header-user" id="headerUser">
           <button class="login-btn" onclick="headerLogin()">Sign In</button>
         </div>
       </div>
     </header>
+    
+    <div class="search-overlay" id="searchOverlay">
+      <button class="search-overlay-close" onclick="closeSearchOverlay()">✕</button>
+      <div class="search-overlay-inner">
+        <form onsubmit="headerSearch(event)">
+          <div class="game-picker" id="gamePickerOverlay">
+            <button type="button" class="game-toggle" onclick="document.getElementById('gameDropdownOverlay').classList.toggle('show')" aria-label="Switch game">
+              <img id="headerGameIconOverlay" src="${savedGame === 'onepiece' ? base + 'onepiece/favicon.svg' : base + 'favicon.svg'}" alt="" width="20" height="20">
+              <span class="game-arrow">▾</span>
+            </button>
+            <div class="game-dropdown" id="gameDropdownOverlay">
+              <button type="button" onclick="selectHeaderGame('pokemon')"><img src="${base}favicon.svg" width="16" height="16" alt=""> Pokemon</button>
+              <button type="button" onclick="selectHeaderGame('onepiece')"><img src="${base}onepiece/favicon.svg" width="16" height="16" alt=""> One Piece</button>
+            </div>
+          </div>
+          <input type="text" id="headerSearchInputOverlay" placeholder="Search cards...">
+          <button type="submit">🔍</button>
+        </form>
+      </div>
+    </div>
     
     <nav class="mobile-nav" id="mobileNav">
       <div class="mobile-nav-header">
@@ -102,22 +125,30 @@
     document.body.classList.toggle('nav-open');
   };
   
+  window.openSearchOverlay = function() {
+    document.getElementById('searchOverlay').classList.add('active');
+    setTimeout(() => document.getElementById('headerSearchInputOverlay')?.focus(), 100);
+  };
+  window.closeSearchOverlay = function() {
+    document.getElementById('searchOverlay').classList.remove('active');
+  };
+  
   let _headerGame = savedGame;
   window.selectHeaderGame = function(game) {
     _headerGame = game;
     localStorage.setItem('tcg_game', game);
-    document.getElementById('headerGameIcon').src = game === 'onepiece' ? base + 'onepiece/favicon.svg' : base + 'favicon.svg';
-    document.getElementById('gameDropdown').classList.remove('show');
-    document.querySelectorAll('.game-dropdown button').forEach(b => b.classList.remove('active'));
-    document.querySelector(`.game-dropdown button[onclick*="${game}"]`)?.classList.add('active');
+    // Update both desktop and overlay icons
+    document.querySelectorAll('#headerGameIcon, #headerGameIconOverlay').forEach(el => {
+      el.src = game === 'onepiece' ? base + 'onepiece/favicon.svg' : base + 'favicon.svg';
+    });
+    document.querySelectorAll('.game-dropdown').forEach(d => d.classList.remove('show'));
   };
-  // Close game dropdown on outside click
-  document.addEventListener('click', e => { if (!e.target.closest('.game-picker')) document.getElementById('gameDropdown')?.classList.remove('show'); });
+  document.addEventListener('click', e => { if (!e.target.closest('.game-picker')) document.querySelectorAll('.game-dropdown').forEach(d => d.classList.remove('show')); });
   
   window.headerSearch = function(e) {
     e.preventDefault();
-    const q = document.getElementById('headerSearchInput').value.trim();
-    if (q) window.location.href = `${base}search.html?q=${encodeURIComponent(q)}&game=${_headerGame}`;
+    const q = (document.getElementById('headerSearchInput')?.value || document.getElementById('headerSearchInputOverlay')?.value || '').trim();
+    if (q) { closeSearchOverlay(); window.location.href = `${base}search.html?q=${encodeURIComponent(q)}&game=${_headerGame}`; }
   };
   
   window.headerLogin = function() {
@@ -160,9 +191,13 @@
           <a href="${base}settings.html" style="display:block;padding:10px 0;color:#222;text-decoration:none">⚙️ Settings</a>
           <button onclick="headerLogout()" style="width:100%;padding:12px;background:#222;color:#fff;border:none;border-radius:8px;font-size:1em;cursor:pointer;margin-top:8px">Sign Out</button>`;
       }
+      const mobileAvatar = document.getElementById('mobileAvatarWrap');
+      if (mobileAvatar) mobileAvatar.innerHTML = `<img src="${user.picture || ''}" class="mobile-avatar" referrerpolicy="no-referrer">`;
     } else {
       container.innerHTML = `<button class="login-btn" onclick="headerLogin()">Sign In</button>`;
       if (mobileLogin) mobileLogin.innerHTML = `<button onclick="headerLogin()">Sign In</button>`;
+      const mobileAvatar = document.getElementById('mobileAvatarWrap');
+      if (mobileAvatar) mobileAvatar.innerHTML = '';
     }
   };
   

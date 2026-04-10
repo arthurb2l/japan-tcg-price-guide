@@ -309,30 +309,89 @@ body.nav-open { overflow: hidden; }
   .site-header-inner {
     height: 52px;
     padding: 0 10px;
-    gap: 6px;
+    gap: 8px;
   }
   
   .burger-btn { display: block; }
   .nav-links { display: none; }
   .header-user { display: none; }
-  .site-logo { display: none; }
   
-  /* Search: game dropdown + input + button */
-  .header-search {
-    flex: 1;
-    max-width: none;
-    height: 38px;
+  .site-logo .logo-text { display: none; }
+  .site-logo { padding: 4px; font-size: 1.3em; }
+  
+  /* Hide full search bar on mobile — replaced by search icon + overlay */
+  .header-search { display: none; }
+  
+  .mobile-search-btn { 
+    display: flex;
+    background: none; border: none; font-size: 1.2em; cursor: pointer; 
+    padding: 8px; color: #555; flex-shrink: 0;
   }
-  .header-search .game-toggle {
-    padding: 6px;
+  .mobile-avatar {
+    width: 28px; height: 28px; border-radius: 50%; cursor: pointer; flex-shrink: 0;
   }
-  .header-search input { 
-    padding: 8px 6px; 
-    font-size: 0.9em; 
-  }
-  .header-search button { 
-    padding: 8px 10px;
-  }
+  .mobile-avatar-wrap { display: block; flex-shrink: 0; }
+}
+@media (min-width: 769px) {
+  .mobile-search-btn { display: none; }
+  .mobile-avatar-wrap { display: none; }
+}
+
+/* Search overlay (mobile) */
+.search-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 1100;
+  padding: 20px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.search-overlay.active { display: flex; }
+.search-overlay-inner {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 60px;
+}
+.search-overlay-close {
+  position: absolute;
+  top: 15px; right: 15px;
+  background: none; border: none; color: #fff; font-size: 1.5em; cursor: pointer;
+}
+.search-overlay form {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 48px;
+}
+.search-overlay .game-toggle {
+  background: #f5f5f5;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.search-overlay .game-arrow { font-size: 0.6em; color: #888; }
+.search-overlay input {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  font-size: 1em;
+  outline: none;
+  min-width: 0;
+}
+.search-overlay button[type="submit"] {
+  background: #EE1515;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 1em;
 }
 
 /* Print */
