@@ -112,6 +112,17 @@ select{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:.9em}
   </div>
 </div>
 
+<div class="settings-card" id="admin-section" style="display:none;border-color:#d32f2f">
+  <h2>🔒 Admin</h2>
+  <div class="setting-row">
+    <div>
+      <div class="setting-label">Card Reports</div>
+      <div class="setting-desc">Review and resolve user-submitted card error reports</div>
+    </div>
+    <a href="/japan-tcg-price-guide/admin/reports.html" style="padding:8px 16px;background:#d32f2f;color:#fff;border-radius:6px;text-decoration:none;font-size:.85em">Open Dashboard</a>
+  </div>
+</div>
+
 <span class="save-msg" id="save-msg">✓ Saved</span>
 
 <script>
@@ -150,6 +161,7 @@ function loadSettings() {
   document.getElementById('s-collectionView').value = s.collectionView || 'list';
 }
 
+const ADMIN_UIDS = ['kkECBly8lgVnrw9flUBouBMzjEh2'];
 auth.onAuthStateChanged(async user => {
   const el = document.getElementById('user-status');
   if (user) {
@@ -157,6 +169,7 @@ auth.onAuthStateChanged(async user => {
       <img src="${user.photoURL || ''}" referrerpolicy="no-referrer">
       <div><div class="name">${user.displayName || 'User'}</div><div class="email">${user.email}</div></div>
     </div>`;
+    if (ADMIN_UIDS.includes(user.uid)) document.getElementById('admin-section').style.display = '';
     // Load settings from Firestore
     try {
       const doc = await db.collection('users').doc(user.uid).get();
