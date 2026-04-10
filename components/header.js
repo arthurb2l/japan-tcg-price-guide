@@ -34,10 +34,9 @@
         </nav>
         
         <form class="header-search" onsubmit="headerSearch(event)">
-          <select id="headerGameSelect" class="game-select">
-            <option value="pokemon" ${savedGame === 'pokemon' ? 'selected' : ''}>Pokemon</option>
-            <option value="onepiece" ${savedGame === 'onepiece' ? 'selected' : ''}>One Piece</option>
-          </select>
+          <button type="button" id="headerGameToggle" class="game-toggle" onclick="toggleHeaderGame()" aria-label="Switch game">
+            <img id="headerGameIcon" src="${savedGame === 'onepiece' ? base + 'onepiece/favicon.svg' : base + 'favicon.svg'}" alt="" width="20" height="20">
+          </button>
           <input type="text" id="headerSearchInput" placeholder="Search...">
           <button type="submit" aria-label="Search">🔍</button>
         </form>
@@ -96,12 +95,18 @@
     document.body.classList.toggle('nav-open');
   };
   
+  let _headerGame = savedGame;
+  window.toggleHeaderGame = function() {
+    _headerGame = _headerGame === 'pokemon' ? 'onepiece' : 'pokemon';
+    localStorage.setItem('tcg_game', _headerGame);
+    document.getElementById('headerGameIcon').src = _headerGame === 'onepiece' ? base + 'onepiece/favicon.svg' : base + 'favicon.svg';
+  };
+  
   window.headerSearch = function(e) {
     e.preventDefault();
     const q = document.getElementById('headerSearchInput').value.trim();
-    const game = document.getElementById('headerGameSelect').value;
-    localStorage.setItem('tcg_game', game);
-    if (q) window.location.href = `${base}search.html?q=${encodeURIComponent(q)}&game=${game}`;
+    localStorage.setItem('tcg_game', _headerGame);
+    if (q) window.location.href = `${base}search.html?q=${encodeURIComponent(q)}&game=${_headerGame}`;
   };
   
   window.headerLogin = function() {
