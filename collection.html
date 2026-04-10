@@ -56,6 +56,8 @@ const db = firebase.firestore();
 .list-tab.wishlist.active{border-color:#f59e0b;background:#f59e0b}
 .list-tab.tradelist.active{border-color:#3b82f6;background:#3b82f6}
 .list-tab .count{font-size:.8em;opacity:.8;margin-left:5px}
+.util-btn{padding:8px 12px;border:1px solid #ddd;border-radius:8px;background:#fff;cursor:pointer;font-size:.9em;display:inline-flex;align-items:center}
+.util-btn:hover{background:#f5f5f5;border-color:#888}
 
 /* Filters */
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center;justify-content:space-between}
@@ -197,12 +199,11 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
   .stat-card .label{font-size:.65em}
   .filters{flex-direction:column;gap:10px}
   .filter-left{width:100%;gap:8px}
-  .filter-right{width:100%;justify-content:flex-start;gap:8px}
   .filter-group{flex:1;min-width:0}
   .filter-group select.filter{width:100%}
   .filter-label{display:none}
-  .export-btn{padding:8px 12px;font-size:.8em;flex:1;text-align:center}
   select.filter{padding:8px;font-size:.85em}
+  .util-btn{padding:6px 10px;font-size:.85em}
 }
 /* Pagination */
 .pagination{display:flex;justify-content:center;align-items:center;gap:15px;padding:20px;margin-top:10px}
@@ -647,6 +648,10 @@ function renderCollection() {
           ${listLabels[list]}<span class="count">(${getListCount(list)})</span>
         </button>
       `).join('')}
+      <span style="flex:1"></span>
+      <a href="backup.html" class="util-btn" style="text-decoration:none" title="Backup">💾</a>
+      <button class="util-btn" onclick="shareCollection()" title="Share">🔗</button>
+      <button class="util-btn" onclick="exportCollection()" title="Export">📥</button>
     </div>`;
   
   const emptyMessages = {
@@ -802,15 +807,8 @@ function renderCollection() {
           </select>
         </div>
         <div class="view-toggle">
-          <button class="view-btn ${currentView === 'grid' ? 'active' : ''}" data-view="grid" onclick="toggleView('grid')">▦ Grid</button>
-          <button class="view-btn ${currentView === 'list' ? 'active' : ''}" data-view="list" onclick="toggleView('list')">☰ List</button>
+          <button class="view-btn active" onclick="toggleView(currentView === 'grid' ? 'list' : 'grid')">${currentView === 'grid' ? '▦ Grid' : '☰ List'}</button>
         </div>
-      </div>
-      <div class="filter-right">
-        <a href="backup.html" class="export-btn" style="text-decoration:none">💾 Backup</a>
-        <a href="stats.html" class="export-btn" style="text-decoration:none">📊 Stats</a>
-        <button class="export-btn" onclick="shareCollection()" style="background:#10b981">🔗 Share</button>
-        <button class="export-btn" onclick="exportCollection()">📥 Export</button>
       </div>
     </div>
     
