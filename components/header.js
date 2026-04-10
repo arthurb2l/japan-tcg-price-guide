@@ -114,16 +114,25 @@
     const container = document.getElementById('headerUser');
     const mobileLogin = document.getElementById('mobileNavLogin');
     if (user) {
+      const isAdmin = ADMIN_UIDS.includes(user.uid || '');
+      const adminLink = isAdmin ? `<a href="${base}admin/reports.html" id="admin-reports-link">⚠️ Reports</a>` : '';
       container.innerHTML = `
         <div class="user-dropdown">
-          <img src="${user.picture || ''}" alt="" class="user-avatar" referrerpolicy="no-referrer">
+          <img src="${user.picture || ''}" alt="" class="user-avatar" referrerpolicy="no-referrer"${isAdmin ? ' style="outline:2px solid #d32f2f;outline-offset:1px"' : ''}>
           <div class="user-dropdown-content">
             <a href="${base}collection.html">My Collection</a>
             <a href="${base}settings.html">Settings</a>
+            ${adminLink}
             <button onclick="headerLogout()">Sign Out</button>
           </div>
         </div>
       `;
+      if (isAdmin && typeof db !== 'undefined') {
+        db.collection('card-reports').where('status','==','open').get().then(snap => {
+          const el = document.getElementById('admin-reports-link');
+          if (el && snap.size > 0) el.innerHTML = '⚠️ Reports <span style="background:#d32f2f;color:#fff;padding:1px 6px;border-radius:8px;font-size:.75em;margin-left:4px">' + snap.size + '</span>';
+        }).catch(() => {});
+      }
       if (mobileLogin) mobileLogin.innerHTML = `<button onclick="headerLogout()">Sign Out</button>`;
     } else {
       container.innerHTML = `<button class="login-btn" onclick="headerLogin()">Sign In</button>`;
@@ -139,33 +148,12 @@
   
   // Check auth state + admin badge
   const ADMIN_UIDS = ['kkECBly8lgVnrw9flUBouBMzjEh2'];
-  let _adminReportCount = 0;
   setTimeout(() => {
     if (typeof currentUser !== 'undefined' && currentUser) {
       updateHeaderUser(currentUser);
     } else if (typeof auth !== 'undefined' && auth.onAuthStateChanged) {
       auth.onAuthStateChanged(user => {
-        if (user) {
-          updateHeaderUser({ picture: user.photoURL, name: user.displayName });
-          if (ADMIN_UIDS.includes(user.uid) && typeof db !== 'undefined') {
-            db.collection('card-reports').where('status', '==', 'open').get().then(snap => {
-              _adminReportCount = snap.size;
-              if (snap.size > 0) {
-                // Add red dot on avatar
-                const avatar = document.querySelector('.user-avatar');
-                if (avatar) { avatar.style.outline = '2px solid #d32f2f'; avatar.style.outlineOffset = '1px'; }
-              }
-              // Add Reports link to dropdown
-              const dropdown = document.querySelector('.user-dropdown-content');
-              if (dropdown) {
-                const link = document.createElement('a');
-                link.href = base + 'admin/reports.html';
-                link.innerHTML = '⚠️ Reports' + (snap.size > 0 ? ' <span style="background:#d32f2f;color:#fff;padding:1px 6px;border-radius:8px;font-size:.75em;margin-left:4px">' + snap.size + '</span>' : '');
-                dropdown.insertBefore(link, dropdown.querySelector('button'));
-              }
-            }).catch(() => {});
-          }
-        }
+        if (user) updateHeaderUser({ picture: user.photoURL, name: user.displayName, uid: user.uid });
       });
     }
   }, 100);
