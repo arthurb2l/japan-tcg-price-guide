@@ -130,7 +130,6 @@ body.nav-open { overflow: hidden; }
   background: #f5f5f5;
   border-radius: 8px;
   height: 38px;
-  overflow: hidden;
 }
 .header-search input {
   flex: 1;
