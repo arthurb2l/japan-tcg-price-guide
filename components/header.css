@@ -92,7 +92,7 @@ body.nav-open { overflow: hidden; }
 .game-toggle:hover { background: #e8e8e8; }
 .game-toggle img { display: block; }
 .game-arrow { font-size: 0.6em; color: #888; }
-.game-picker { position: relative; flex-shrink: 0; }
+.game-picker { position: relative; flex-shrink: 0; display: flex; align-items: stretch; }
 .game-dropdown {
   display: none;
   position: absolute;
