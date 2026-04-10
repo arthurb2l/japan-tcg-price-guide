@@ -139,6 +139,7 @@
   
   // Check auth state + admin badge
   const ADMIN_UIDS = ['kkECBly8lgVnrw9flUBouBMzjEh2'];
+  let _adminReportCount = 0;
   setTimeout(() => {
     if (typeof currentUser !== 'undefined' && currentUser) {
       updateHeaderUser(currentUser);
@@ -148,13 +149,19 @@
           updateHeaderUser({ picture: user.photoURL, name: user.displayName });
           if (ADMIN_UIDS.includes(user.uid) && typeof db !== 'undefined') {
             db.collection('card-reports').where('status', '==', 'open').get().then(snap => {
+              _adminReportCount = snap.size;
               if (snap.size > 0) {
-                const badge = document.createElement('a');
-                badge.href = base + 'admin/reports.html';
-                badge.style.cssText = 'background:#d32f2f;color:#fff;padding:2px 8px;border-radius:10px;font-size:.75em;margin-left:8px;text-decoration:none';
-                badge.textContent = '⚠️ ' + snap.size;
-                badge.title = snap.size + ' open report(s)';
-                document.querySelector('.nav-links')?.appendChild(badge);
+                // Add red dot on avatar
+                const avatar = document.querySelector('.user-avatar');
+                if (avatar) { avatar.style.outline = '2px solid #d32f2f'; avatar.style.outlineOffset = '1px'; }
+              }
+              // Add Reports link to dropdown
+              const dropdown = document.querySelector('.user-dropdown-content');
+              if (dropdown) {
+                const link = document.createElement('a');
+                link.href = base + 'admin/reports.html';
+                link.innerHTML = '⚠️ Reports' + (snap.size > 0 ? ' <span style="background:#d32f2f;color:#fff;padding:1px 6px;border-radius:8px;font-size:.75em;margin-left:4px">' + snap.size + '</span>' : '');
+                dropdown.insertBefore(link, dropdown.querySelector('button'));
               }
             }).catch(() => {});
           }
