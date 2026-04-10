@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Reports | PokePiece</title>
+<link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+<script>
+firebase.initializeApp({
+  apiKey: "AIzaSyCLzia4937bSBbjsT0JUY-PAgnzygTYj1s",
+  authDomain: "japan-tcg-price-guide.firebaseapp.com",
+  projectId: "japan-tcg-price-guide",
+  storageBucket: "japan-tcg-price-guide.firebasestorage.app",
+  messagingSenderId: "726498037498",
+  appId: "1:726498037498:web:3b3b3b3b3b3b3b3b3b3b3b"
+});
+const auth = firebase.auth();
+const db = firebase.firestore();
+</script>
+<style>
+.denied{text-align:center;padding:60px 20px;color:#666}
+.report-card{background:#fff;border:1px solid #ddd;border-radius:8px;padding:15px;margin:10px 0;display:flex;gap:15px;align-items:flex-start}
+.report-card .type{background:#fee;color:#d32f2f;padding:3px 8px;border-radius:4px;font-size:.75em;font-weight:600;white-space:nowrap}
+.report-card .info{flex:1}
+.report-card .card-link{color:#1976d2;text-decoration:none;font-weight:600}
+.report-card .card-link:hover{text-decoration:underline}
+.report-card .comment{color:#666;font-size:.85em;margin-top:4px}
+.report-card .date{color:#999;font-size:.75em}
+.resolve-btn{background:#22c55e;color:#fff;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:.85em;white-space:nowrap}
+.resolve-btn:hover{background:#16a34a}
+.empty{text-align:center;padding:40px;color:#888;font-size:1.1em}
+.stats{display:flex;gap:15px;margin-bottom:20px}
+.stat{background:#fff;border:1px solid #ddd;border-radius:8px;padding:12px 20px;text-align:center}
+.stat-num{font-size:1.5em;font-weight:bold;color:#d32f2f}
+.stat-label{font-size:.75em;color:#666}
+.tab-row{display:flex;gap:5px;margin-bottom:15px}
+.tab{padding:8px 16px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer;font-size:.85em}
+.tab.active{background:#d32f2f;color:#fff;border-color:#d32f2f}
+</style>
+</head>
+<body>
+<script src="/japan-tcg-price-guide/components/header.js"></script>
+<h1>⚠️ Admin Reports</h1>
+<div id="loading" style="text-align:center;padding:40px;color:#666">Checking access...</div>
+<div id="denied" class="denied" style="display:none">
+  <h2>🔒 Access Denied</h2>
+  <p>You need admin access to view this page.</p>
+  <button onclick="auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())" style="padding:10px 20px;background:#1976d2;color:#fff;border:none;border-radius:6px;cursor:pointer">Sign in with Google</button>
+</div>
+<div id="dashboard" style="display:none">
+  <div class="stats">
+    <div class="stat"><div class="stat-num" id="open-count">0</div><div class="stat-label">Open</div></div>
+    <div class="stat"><div class="stat-num" id="resolved-count" style="color:#22c55e">0</div><div class="stat-label">Resolved</div></div>
+  </div>
+  <div class="tab-row">
+    <button class="tab active" id="tab-open" onclick="showTab('open')">Open</button>
+    <button class="tab" id="tab-resolved" onclick="showTab('resolved')">Resolved</button>
+  </div>
+  <div id="reports"></div>
+</div>
+<script>
+const ADMIN_UIDS = ['kkECBly8lgVnrw9flUBouBMzjEh2'];
+const BASE = '/japan-tcg-price-guide';
+let allReports = [], currentTab = 'open';
+
+auth.onAuthStateChanged(user => {
+  document.getElementById('loading').style.display = 'none';
+  if (!user || !ADMIN_UIDS.includes(user.uid)) {
+    document.getElementById('denied').style.display = 'block';
+    document.getElementById('dashboard').style.display = 'none';
+    return;
+  }
+  document.getElementById('denied').style.display = 'none';
+  document.getElementById('dashboard').style.display = 'block';
+  loadReports();
+});
+
+async function loadReports() {
+  const snap = await db.collection('card-reports').orderBy('reportedAt', 'asc').get();
+  allReports = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+  updateStats();
+  renderReports();
+}
+
+function updateStats() {
+  document.getElementById('open-count').textContent = allReports.filter(r => r.status === 'open').length;
+  document.getElementById('resolved-count').textContent = allReports.filter(r => r.status === 'resolved').length;
+}
+
+function showTab(tab) {
+  currentTab = tab;
+  document.getElementById('tab-open').className = 'tab' + (tab === 'open' ? ' active' : '');
+  document.getElementById('tab-resolved').className = 'tab' + (tab === 'resolved' ? ' active' : '');
+  renderReports();
+}
+
+function renderReports() {
+  const filtered = allReports.filter(r => r.status === currentTab);
+  const el = document.getElementById('reports');
+  if (!filtered.length) { el.innerHTML = '<div class="empty">' + (currentTab === 'open' ? 'No open reports 🎉' : 'No resolved reports yet') + '</div>'; return; }
+  el.innerHTML = filtered.map(r => {
+    const date = r.reportedAt?.toDate ? r.reportedAt.toDate().toLocaleDateString() : '?';
+    const typeLabel = (r.issueType || '').replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const action = r.status === 'open'
+      ? `<button class="resolve-btn" onclick="resolve('${r.id}')">✅ Resolve</button>`
+      : '<span style="color:#22c55e;font-size:.85em">✅ Resolved</span>';
+    return `<div class="report-card">
+      <span class="type">${typeLabel}</span>
+      <div class="info">
+        <a class="card-link" href="${BASE}/search.html?q=${encodeURIComponent(r.cardId)}" target="_blank">${r.cardId}</a> — ${r.cardName || ''}
+        ${r.comment ? `<div class="comment">"${r.comment}"</div>` : ''}
+        <div class="date">${date}</div>
+      </div>
+      ${action}
+    </div>`;
+  }).join('');
+}
+
+async function resolve(id) {
+  await db.collection('card-reports').doc(id).update({ status: 'resolved' });
+  const r = allReports.find(x => x.id === id);
+  if (r) r.status = 'resolved';
+  updateStats();
+  renderReports();
+}
+</script>
+</body>
+</html>
