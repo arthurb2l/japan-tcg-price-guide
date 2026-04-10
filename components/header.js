@@ -36,12 +36,12 @@
         <form class="header-search" onsubmit="headerSearch(event)">
           <div class="game-picker" id="gamePicker">
             <button type="button" class="game-toggle" onclick="document.getElementById('gameDropdown').classList.toggle('show')" aria-label="Switch game">
-              <img id="headerGameIcon" src="${savedGame === 'onepiece' ? base + 'onepiece/favicon.svg' : base + 'favicon.svg'}" alt="" width="18" height="18">
+              <img id="headerGameIcon" src="${savedGame === 'onepiece' ? base + 'onepiece/icon.png' : base + 'favicon.svg'}" alt="" width="18" height="18">
               <span class="game-arrow">▾</span>
             </button>
             <div class="game-dropdown" id="gameDropdown">
               <button type="button" onclick="selectHeaderGame('pokemon')" class="${savedGame === 'pokemon' ? 'active' : ''}"><img src="${base}favicon.svg" width="16" height="16" alt=""> Pokemon</button>
-              <button type="button" onclick="selectHeaderGame('onepiece')" class="${savedGame === 'onepiece' ? 'active' : ''}"><img src="${base}onepiece/favicon.svg" width="16" height="16" alt=""> One Piece</button>
+              <button type="button" onclick="selectHeaderGame('onepiece')" class="${savedGame === 'onepiece' ? 'active' : ''}"><img src="${base}onepiece/icon.png" width="16" height="16" alt=""> One Piece</button>
             </div>
           </div>
           <input type="text" id="headerSearchInput" placeholder="Search...">
@@ -63,12 +63,12 @@
         <form onsubmit="headerSearch(event)">
           <div class="game-picker" id="gamePickerOverlay">
             <button type="button" class="game-toggle" onclick="document.getElementById('gameDropdownOverlay').classList.toggle('show')" aria-label="Switch game">
-              <img id="headerGameIconOverlay" src="${savedGame === 'onepiece' ? base + 'onepiece/favicon.svg' : base + 'favicon.svg'}" alt="" width="20" height="20">
+              <img id="headerGameIconOverlay" src="${savedGame === 'onepiece' ? base + 'onepiece/icon.png' : base + 'favicon.svg'}" alt="" width="20" height="20">
               <span class="game-arrow">▾</span>
             </button>
             <div class="game-dropdown" id="gameDropdownOverlay">
               <button type="button" onclick="selectHeaderGame('pokemon')"><img src="${base}favicon.svg" width="16" height="16" alt=""> Pokemon</button>
-              <button type="button" onclick="selectHeaderGame('onepiece')"><img src="${base}onepiece/favicon.svg" width="16" height="16" alt=""> One Piece</button>
+              <button type="button" onclick="selectHeaderGame('onepiece')"><img src="${base}onepiece/icon.png" width="16" height="16" alt=""> One Piece</button>
             </div>
           </div>
           <input type="text" id="headerSearchInputOverlay" placeholder="Search cards...">
@@ -139,7 +139,7 @@
     localStorage.setItem('tcg_game', game);
     // Update both desktop and overlay icons
     document.querySelectorAll('#headerGameIcon, #headerGameIconOverlay').forEach(el => {
-      el.src = game === 'onepiece' ? base + 'onepiece/favicon.svg' : base + 'favicon.svg';
+      el.src = game === 'onepiece' ? base + 'onepiece/icon.png' : base + 'favicon.svg';
     });
     document.querySelectorAll('.game-dropdown').forEach(d => d.classList.remove('show'));
   };
