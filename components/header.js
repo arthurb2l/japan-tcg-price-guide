@@ -34,9 +34,16 @@
         </nav>
         
         <form class="header-search" onsubmit="headerSearch(event)">
-          <button type="button" id="headerGameToggle" class="game-toggle" onclick="toggleHeaderGame()" aria-label="Switch game">
-            <img id="headerGameIcon" src="${savedGame === 'onepiece' ? base + 'onepiece/favicon.svg' : base + 'favicon.svg'}" alt="" width="20" height="20">
-          </button>
+          <div class="game-picker" id="gamePicker">
+            <button type="button" class="game-toggle" onclick="document.getElementById('gameDropdown').classList.toggle('show')" aria-label="Switch game">
+              <img id="headerGameIcon" src="${savedGame === 'onepiece' ? base + 'onepiece/favicon.svg' : base + 'favicon.svg'}" alt="" width="18" height="18">
+              <span class="game-arrow">▾</span>
+            </button>
+            <div class="game-dropdown" id="gameDropdown">
+              <button type="button" onclick="selectHeaderGame('pokemon')" class="${savedGame === 'pokemon' ? 'active' : ''}"><img src="${base}favicon.svg" width="16" height="16" alt=""> Pokemon</button>
+              <button type="button" onclick="selectHeaderGame('onepiece')" class="${savedGame === 'onepiece' ? 'active' : ''}"><img src="${base}onepiece/favicon.svg" width="16" height="16" alt=""> One Piece</button>
+            </div>
+          </div>
           <input type="text" id="headerSearchInput" placeholder="Search...">
           <button type="submit" aria-label="Search">🔍</button>
         </form>
@@ -96,16 +103,20 @@
   };
   
   let _headerGame = savedGame;
-  window.toggleHeaderGame = function() {
-    _headerGame = _headerGame === 'pokemon' ? 'onepiece' : 'pokemon';
-    localStorage.setItem('tcg_game', _headerGame);
-    document.getElementById('headerGameIcon').src = _headerGame === 'onepiece' ? base + 'onepiece/favicon.svg' : base + 'favicon.svg';
+  window.selectHeaderGame = function(game) {
+    _headerGame = game;
+    localStorage.setItem('tcg_game', game);
+    document.getElementById('headerGameIcon').src = game === 'onepiece' ? base + 'onepiece/favicon.svg' : base + 'favicon.svg';
+    document.getElementById('gameDropdown').classList.remove('show');
+    document.querySelectorAll('.game-dropdown button').forEach(b => b.classList.remove('active'));
+    document.querySelector(`.game-dropdown button[onclick*="${game}"]`)?.classList.add('active');
   };
+  // Close game dropdown on outside click
+  document.addEventListener('click', e => { if (!e.target.closest('.game-picker')) document.getElementById('gameDropdown')?.classList.remove('show'); });
   
   window.headerSearch = function(e) {
     e.preventDefault();
     const q = document.getElementById('headerSearchInput').value.trim();
-    localStorage.setItem('tcg_game', _headerGame);
     if (q) window.location.href = `${base}search.html?q=${encodeURIComponent(q)}&game=${_headerGame}`;
   };
   
@@ -138,7 +149,17 @@
           if (el && snap.size > 0) el.innerHTML = '⚠️ Reports <span style="background:#d32f2f;color:#fff;padding:1px 6px;border-radius:8px;font-size:.75em;margin-left:4px">' + snap.size + '</span>';
         }).catch(() => {});
       }
-      if (mobileLogin) mobileLogin.innerHTML = `<button onclick="headerLogout()">Sign Out</button>`;
+      if (mobileLogin) {
+        const mobileAdmin = isAdmin ? `<a href="${base}admin/reports.html" style="display:block;padding:10px 0;color:#d32f2f;text-decoration:none">⚠️ Reports</a>` : '';
+        mobileLogin.innerHTML = `
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <img src="${user.picture || ''}" style="width:32px;height:32px;border-radius:50%" referrerpolicy="no-referrer">
+            <span style="font-size:.9em">${user.name || 'User'}</span>
+          </div>
+          ${mobileAdmin}
+          <a href="${base}settings.html" style="display:block;padding:10px 0;color:#222;text-decoration:none">⚙️ Settings</a>
+          <button onclick="headerLogout()" style="width:100%;padding:12px;background:#222;color:#fff;border:none;border-radius:8px;font-size:1em;cursor:pointer;margin-top:8px">Sign Out</button>`;
+      }
     } else {
       container.innerHTML = `<button class="login-btn" onclick="headerLogin()">Sign In</button>`;
       if (mobileLogin) mobileLogin.innerHTML = `<button onclick="headerLogin()">Sign In</button>`;

@@ -80,16 +80,48 @@ body.nav-open { overflow: hidden; }
 .game-toggle {
   background: none;
   border: none;
-  padding: 6px 8px;
+  padding: 4px 6px;
   cursor: pointer;
   flex-shrink: 0;
   display: flex;
   align-items: center;
+  gap: 2px;
   border-radius: 6px;
   transition: background 0.15s;
 }
 .game-toggle:hover { background: #e8e8e8; }
 .game-toggle img { display: block; }
+.game-arrow { font-size: 0.6em; color: #888; }
+.game-picker { position: relative; flex-shrink: 0; }
+.game-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 1001;
+  padding: 4px 0;
+  min-width: 140px;
+}
+.game-dropdown.show { display: block; }
+.game-dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85em;
+  color: #333;
+  text-align: left;
+}
+.game-dropdown button:hover { background: #f5f5f5; }
+.game-dropdown button.active { font-weight: 600; background: #f0f0f0; }
 .header-search {
   flex: 1;
   max-width: 320px;
@@ -283,8 +315,8 @@ body.nav-open { overflow: hidden; }
   
   .burger-btn { display: block; }
   .nav-links { display: none; }
-  .site-logo .logo-text { display: none; }
-  .site-logo { padding: 5px; }
+  .header-user { display: none; }
+  .site-logo { display: none; }
   
   /* Search: game dropdown + input + button */
   .header-search {
