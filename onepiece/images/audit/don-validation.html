@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>DON Card Validation</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:system-ui;background:#1a1a2e;color:#eee;margin:0;padding:20px}
+h1{text-align:center;margin:10px 0}
+.tabs{display:flex;gap:8px;justify-content:center;margin:15px 0}
+.tab{padding:8px 16px;border-radius:6px;cursor:pointer;background:#16213e;border:1px solid #333}
+.tab.active{background:#e94560;border-color:#e94560}
+.panel{display:none}.panel.active{display:block}
+.stats{text-align:center;font-size:.95em;margin:10px;color:#aaa}
+
+/* Card grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,200px);gap:10px;justify-content:center}
+.card{background:#16213e;border-radius:8px;padding:6px;text-align:center;position:relative}
+.card img{width:185px;height:260px;object-fit:contain;border-radius:4px;background:#0a0a1a}
+.card .id{font-weight:bold;font-size:.8em;margin:4px 0 2px;color:#e94560}
+.card .name{font-size:.7em;color:#aaa}
+.card.missing{border:2px solid #e94560}
+.card .badge{position:absolute;top:4px;right:4px;font-size:1.2em;cursor:pointer;background:rgba(0,0,0,.6);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center}
+.card.flagged{border:2px solid #ff0}
+.card.ok{border:2px solid #0f0}
+
+/* PDF pages */
+.pdf-grid{display:flex;flex-direction:column;align-items:center;gap:20px}
+.pdf-grid img{max-width:100%;border:1px solid #333;border-radius:4px}
+.pdf-label{font-size:.9em;color:#aaa;margin-top:5px}
+
+.legend{text-align:center;margin:10px;font-size:.85em;color:#888}
+</style></head><body>
+
+<h1>🃏 DON Card Audit Tool</h1>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('cards')">Card Grid (162 mapped)</div>
+  <div class="tab" onclick="showTab('missing')">Missing (14)</div>
+  <div class="tab" onclick="showTab('pdf')">PDF Reference</div>
+</div>
+
+<div class="legend">Click ✅ = correct | Click ❌ = wrong mapping | Yellow border = flagged for review</div>
+
+<div id="cards" class="panel active"></div>
+<div id="missing" class="panel"></div>
+<div id="pdf" class="panel">
+  <div class="stats">Official Bandai DON Card List PDF — 28 pages. Use as reference for validation.</div>
+  <div class="pdf-grid" id="pdf-grid"></div>
+</div>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function toggleCard(el) {
+  const card = el.closest('.card');
+  if (card.classList.contains('ok')) {
+    card.classList.remove('ok');
+    card.classList.add('flagged');
+    el.textContent = '❌';
+  } else if (card.classList.contains('flagged')) {
+    card.classList.remove('flagged');
+    el.textContent = '🔍';
+  } else {
+    card.classList.add('ok');
+    el.textContent = '✅';
+  }
+  saveState();
+  updateStats();
+}
+
+function saveState() {
+  const state = {};
+  document.querySelectorAll('.card[data-id]').forEach(c => {
+    if (c.classList.contains('ok')) state[c.dataset.id] = 'ok';
+    else if (c.classList.contains('flagged')) state[c.dataset.id] = 'flagged';
+  });
+  localStorage.setItem('don-audit', JSON.stringify(state));
+}
+
+function loadState() {
+  try {
+    const state = JSON.parse(localStorage.getItem('don-audit') || '{}');
+    Object.entries(state).forEach(([id, s]) => {
+      const card = document.querySelector(`.card[data-id="${id}"]`);
+      if (card) {
+        card.classList.add(s);
+        const badge = card.querySelector('.badge');
+        if (badge) badge.textContent = s === 'ok' ? '✅' : '❌';
+      }
+    });
+  } catch {}
+}
+
+function updateStats() {
+  const total = document.querySelectorAll('#cards .card').length;
+  const ok = document.querySelectorAll('#cards .card.ok').length;
+  const flagged = document.querySelectorAll('#cards .card.flagged').length;
+  const unchecked = total - ok - flagged;
+  document.getElementById('card-stats').textContent = 
+    `${ok} ✅ correct | ${flagged} ❌ wrong | ${unchecked} unchecked / ${total} total`;
+}
+
+// Load card data
+fetch('../../data/onepiece-cache.json').then(r=>r.json()).then(data => {
+  const cards = [];
+  const missing = [];
+  for (const [sid, setCards] of Object.entries(data.sets)) {
+    for (const c of setCards) {
+      if (c.rarity === 'DON' || c.rarity === 'DON!!' || c.id.startsWith('DON-')) {
+        if (c.image) cards.push(c);
+        else missing.push(c);
+      }
+    }
+  }
+  
+  cards.sort((a,b) => a.id.localeCompare(b.id));
+  missing.sort((a,b) => a.id.localeCompare(b.id));
+  
+  // Render mapped cards
+  const grid = document.getElementById('cards');
+  grid.innerHTML = `<div class="stats" id="card-stats">${cards.length} mapped cards — click badge to validate</div><div class="grid">` +
+    cards.map(c => {
+      const rel = c.image.replace('onepiece/images/don/', '../don/');
+      return `<div class="card" data-id="${c.id}">
+        <div class="badge" onclick="toggleCard(this)">🔍</div>
+        <img src="${rel}" alt="${c.id}">
+        <div class="id">${c.id}</div>
+        <div class="name">${c.name || '?'}</div>
+      </div>`;
+    }).join('') + '</div>';
+  
+  // Render missing
+  const mgrid = document.getElementById('missing');
+  mgrid.innerHTML = `<div class="stats">${missing.length} cards with no image</div><div class="grid">` +
+    missing.map(c => `<div class="card missing">
+      <div style="width:185px;height:260px;background:#e94560;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:2em">❌</div>
+      <div class="id">${c.id}</div>
+      <div class="name">${c.name || '?'}</div>
+    </div>`).join('') + '</div>';
+  
+  loadState();
+  updateStats();
+});
+
+// Load PDF pages
+const pdfGrid = document.getElementById('pdf-grid');
+for (let i = 1; i <= 28; i++) {
+  pdfGrid.innerHTML += `<div><div class="pdf-label">Page ${i}</div><img src="pdf-pages/page-${i}.jpg" loading="lazy"></div>`;
+}
+</script>
+</body></html>
