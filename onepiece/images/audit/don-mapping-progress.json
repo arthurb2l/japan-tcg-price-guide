@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "lastUpdated": "2026-04-12T00:36:00+09:00",
+  "version": 4,
+  "lastUpdated": "2026-04-12T10:37:00+09:00",
   "totalImages": 261,
   "mapped": 176,
   "mapping": {
@@ -15,12 +15,12 @@
     "don-017.png": "DON-PINK",
     "don-020.png": "DON-TEAL",
     "don-022.png": "DON-TEAL",
-    "don-024.png": "PRB01-DON-Ace",
+    "don-024.png": "DON-BRONZE",
     "don-026.png": "PRB01-DON-Ace-GOLD",
     "don-028.png": "DON-3DTEXT",
     "don-030.png": "PRB01-DON-Big-Mom-GOLD",
     "don-032.png": "PRB01-DON-Crocodile",
-    "don-034.png": "PRB01-DON-Crocodile-GOLD",
+    "don-034.png": "PRB01-DON-Luffy",
     "don-036.png": "PRB01-DON-Donquixote-Doflamingo",
     "don-041.png": "PRB01-DON-Enel",
     "don-043.png": "PRB01-DON-Enel-GOLD",
