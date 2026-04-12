@@ -1618,7 +1618,7 @@ else if(pre&&pre.cardId){sel.value=pre.cardId;el.classList.add('auto-mapped');m[
 if(saved&&saved.note)ta.value=saved.note;
 });
 save();updateStats();
-function onSel(i,v){if(!m[i])m[i]={};m[i].cardId=v;m[i].auto=false;m[i].vetted=true;var el=document.getElementById('card-'+i);sty(el,v);el.dataset.vetted='true';save();updateStats();}
+function onSel(i,v){if(!m[i])m[i]={};m[i].cardId=v;m[i].auto=false;if(!_restoring)m[i].vetted=true;var el=document.getElementById('card-'+i);sty(el,v);el.dataset.vetted='true';save();updateStats();}
 function onNote(i,v){if(!m[i])m[i]={};m[i].note=v;save();}
 function sty(el,v){el.classList.remove('mapped','auto-mapped','new-card','duplicate','not-card');
 if(v==='NEW')el.classList.add('new-card');else if(v==='DUPLICATE')el.classList.add('duplicate');
@@ -1701,9 +1701,9 @@ function updateDropdowns(){
   });
 }
 // Run after page load and after each selection
-var origOnSel=onSel;
+var _restoring=true;var origOnSel=onSel;
 onSel=function(i,v){origOnSel(i,v);updateDropdowns();};
-setTimeout(function(){
+setTimeout(function(){_restoring=false;
   updateDropdowns();
   // Restore vetted state from localStorage
   var stored=JSON.parse(localStorage.getItem(K)||'{}');
@@ -1713,7 +1713,7 @@ setTimeout(function(){
       if(el)el.dataset.vetted='true';
     }
   }
-},500);
+_restoring=false;},800);
 </script>
 <div id="pdfPanel" style="display:none;position:fixed;right:0;top:0;width:400px;height:100vh;background:#222;overflow-y:auto;z-index:100;padding:10px;border-left:3px solid #e94560">
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
