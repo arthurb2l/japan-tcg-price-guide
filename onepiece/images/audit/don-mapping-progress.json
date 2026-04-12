@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "lastUpdated": "2026-04-12T10:37:00+09:00",
   "totalImages": 261,
   "mapped": 176,
@@ -22,7 +22,7 @@
     "don-032.png": "DON-NIKA",
     "don-034.png": "DON-OP01-ALT",
     "don-036.png": "PRB01-DON-Donquixote-Doflamingo",
-    "don-041.png": "PRB01-DON-Enel",
+    "don-041.png": "UNSURE",
     "don-043.png": "PRB01-DON-Enel-GOLD",
     "don-045.png": "PRB01-DON-Eustass-Kid",
     "don-047.png": "PRB01-DON-Eustass-Kid-GOLD",
@@ -180,7 +180,7 @@
     "don-408.png": "DON-EB03-UTA-GOLD",
     "don-556.png": "DON-KUMAMOTO-CHOPPER",
     "don-558.png": "DON-KUMAMOTO-ROBIN",
-    "don-039.png": "DON-OP03-ALT"
+    "don-039.png": "UNSURE"
   },
   "unmappedDbCards": [
     "DON-PURPLE",
