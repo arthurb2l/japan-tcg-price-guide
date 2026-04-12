@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "lastUpdated": "2026-04-12T10:37:00+09:00",
   "totalImages": 261,
   "mapped": 176,
@@ -19,18 +19,18 @@
     "don-026.png": "PRB01-DON-Ace-GOLD",
     "don-028.png": "DON-3DTEXT",
     "don-030.png": "PRB01-DON-Big-Mom-GOLD",
-    "don-032.png": "PRB01-DON-Crocodile",
-    "don-034.png": "PRB01-DON-Luffy",
+    "don-032.png": "DON-NIKA",
+    "don-034.png": "DON-OP01-ALT",
     "don-036.png": "PRB01-DON-Donquixote-Doflamingo",
     "don-041.png": "PRB01-DON-Enel",
     "don-043.png": "PRB01-DON-Enel-GOLD",
     "don-045.png": "PRB01-DON-Eustass-Kid",
     "don-047.png": "PRB01-DON-Eustass-Kid-GOLD",
-    "don-049.png": "PRB01-DON-Gecko-Moria",
+    "don-049.png": "PRB01-DON-Whitebeard",
     "don-051.png": "PRB01-DON-Gecko-Moria-GOLD",
-    "don-053.png": "PRB01-DON-Hody-Jones",
-    "don-055.png": "PRB01-DON-Hody-Jones-GOLD",
-    "don-058.png": "PRB01-DON-Iceberg",
+    "don-053.png": "DON-GOLD-TEXT",
+    "don-055.png": "DON-CS2023-ALT",
+    "don-058.png": "DON-GAO2024",
     "don-060.png": "PRB01-DON-Iceberg-GOLD",
     "don-062.png": "PRB01-DON-Ivankov",
     "don-064.png": "DON-2ND-ANNIVERSARY",
@@ -204,5 +204,7 @@
     "DON-KUMAMOTO-FRANKY",
     "DON-KUMAMOTO-BROOK",
     "DON-KUMAMOTO-KUMAMON"
-  ]
+  ],
+  "last_updated": "2026-04-13",
+  "notes": {}
 }
