@@ -1604,19 +1604,18 @@ body{font-family:sans-serif;max-width:1500px;margin:0 auto;padding:20px;backgrou
 <textarea placeholder="Notes / search results / JP text" oninput="onNote(260,this.value)"></textarea>
 </div></div>
 <script>
-// Load vetted state from arthur-vetted.json (embedded)
+// Hard reset: clear ALL vetted flags. Arthur will re-vet manually.
 (function(){
   var K='don-audit-v3';
   var d=JSON.parse(localStorage.getItem(K)||'{}');
-  var arthurVetted=["don-001.png", "don-003.png", "don-005.png", "don-007.png", "don-009.png", "don-011.png", "don-013.png", "don-015.png", "don-017.png", "don-020.png", "don-022.png", "don-024.png", "don-026.png", "don-028.png", "don-030.png", "don-032.png", "don-034.png", "don-036.png", "don-039.png", "don-064.png", "don-072.png", "don-282.png", "don-284.png", "don-286.png", "don-288.png", "don-292.png", "don-294.png", "don-296.png", "don-298.png", "don-300.png", "don-302.png", "don-304.png", "don-308.png", "don-312.png", "don-314.png", "don-316.png", "don-320.png", "don-322.png", "don-324.png", "don-326.png", "don-328.png", "don-332.png", "don-334.png", "don-336.png", "don-338.png", "don-340.png", "don-342.png", "don-556.png", "don-558.png"];
-  // Reset all vetted flags, then set only Arthur's confirmed ones
-  var migKey='vetted-reset-v2';
+  var migKey='vetted-hard-reset-v3';
   if(!localStorage.getItem(migKey)){
-    for(var i in d)delete d[i].vetted;
-    // Map filename to card index
-    var cards=document.querySelectorAll('.card');
-    var fnameToIdx={};
-    cards.forEach(function(c){fnameToIdx[c.dataset.fname]=c.id.replace('card-','');});
+    for(var i in d){delete d[i].vetted;delete d[i].confirmed;}
+    localStorage.setItem(K,JSON.stringify(d));
+    localStorage.setItem(migKey,'done');
+    console.log('Hard reset: all vetted flags cleared');
+  }
+})();
     arthurVetted.forEach(function(fn){
       var idx=fnameToIdx[fn];
       if(idx!==undefined){
