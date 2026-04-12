@@ -1671,6 +1671,37 @@ function confirmAuto(i){
   if(btn)btn.style.display='none';
   save();updateStats();
 }
+
+function updateDropdowns(){
+  // Collect all currently selected values
+  var used={};
+  document.querySelectorAll('.card select').forEach(function(sel){
+    if(sel.value && sel.value!=='NEW' && sel.value!=='DUPLICATE' && sel.value!=='NOT_A_CARD' && sel.value!=='UNSURE'){
+      if(!used[sel.value])used[sel.value]=[];
+      used[sel.value].push(sel);
+    }
+  });
+  // For each dropdown, mark already-used options
+  document.querySelectorAll('.card select').forEach(function(sel){
+    var card=sel.closest('.card');
+    var isMapped=card.classList.contains('mapped');
+    Array.from(sel.options).forEach(function(opt){
+      if(!opt.value || opt.value==='NEW' || opt.value==='DUPLICATE' || opt.value==='NOT_A_CARD' || opt.value==='UNSURE')return;
+      var usedBy=used[opt.value];
+      if(usedBy && usedBy.length>0 && usedBy.indexOf(sel)===-1){
+        opt.style.color='#999';
+        opt.textContent=opt.value+' ✓';
+      } else {
+        opt.style.color='';
+        opt.textContent=opt.value;
+      }
+    });
+  });
+}
+// Run after page load and after each selection
+var origOnSel=onSel;
+onSel=function(i,v){origOnSel(i,v);updateDropdowns();};
+setTimeout(updateDropdowns,500);
 </script>
 <div id="pdfPanel" style="display:none;position:fixed;right:0;top:0;width:400px;height:100vh;background:#222;overflow-y:auto;z-index:100;padding:10px;border-left:3px solid #e94560">
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
