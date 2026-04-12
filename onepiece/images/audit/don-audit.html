@@ -7,8 +7,8 @@ BUTTONS (top bar):
   📋 Export    → exportMapping() → reads input[list].value from each card, copies to clipboard
   All          → showOnly('all') → shows all cards
   ✅ Mapped    → showOnly('mapped') → cards with .mapped class
-  👁️ Vetted   → showOnly('vetted') → cards with data-vetted="true"
-  ⏳ To Review → showOnly('todo') → cards WITHOUT data-vetted="true"
+  👁️ Vetted   → REMOVED (nothing sets vetted flag)
+  ⏳ To Review → showOnly('todo') → cards with empty/UNSURE input
   ❓ Unsure    → showOnly('unsure') → cards where input[list].value === 'UNSURE'
 
 PER-CARD ELEMENTS:
@@ -76,7 +76,6 @@ body{font-family:sans-serif;max-width:1500px;margin:0 auto;padding:20px;backgrou
 <button class="btn" style="background:#333;color:#fff" onclick="exportMapping()">📋 Export</button>
 <button class="btn" style="background:#666;color:#fff" onclick="showOnly('all')">All</button>
 <button class="btn" style="background:#4caf50;color:#fff" onclick="showOnly('mapped')">✅ Mapped</button>
-<button class="btn" style="background:#2196f3;color:#fff" onclick="showOnly('vetted')">👁️ Vetted</button>
 <button class="btn" style="background:#e91e63;color:#fff" onclick="showOnly('todo')">⏳ To Review</button>
 <button class="btn" style="background:#9c27b0;color:#fff" onclick="showOnly('unsure')">❓ Unsure</button>
 <span id="flabel" style="font-size:11px;color:#666;margin-left:6px"></span>
@@ -1677,7 +1676,7 @@ else if(f==='unmapped')el.style.display=(!el.classList.contains('mapped')&&!el.c
 else if(f==='auto')el.style.display=el.dataset.auto==='true'?'':'none';
 else if(f==='mapped')el.style.display=el.classList.contains('mapped')?'':'none';
 else if(f==='vetted')el.style.display=el.dataset.vetted==='true'?'':'none';
-else if(f==='todo')el.style.display=el.dataset.vetted!=='true'?'':'none';
+else if(f==='todo'){var inp=el.querySelector('input[list]');el.style.display=(!inp||!inp.value||inp.value==='UNSURE')?'':'none';}
 else if(f==='unsure'){var s=el.querySelector('input[list]');el.style.display=(s&&s.value==='UNSURE')?'':'none';}
 else if(f==='pending')el.style.display=(!el.classList.contains('mapped')&&!el.classList.contains('duplicate')&&!el.classList.contains('not-card')&&!el.classList.contains('new-card'))?'':'none';
 });document.getElementById('flabel').textContent=f==='all'?'':'('+f+')';}
