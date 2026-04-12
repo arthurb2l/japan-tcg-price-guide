@@ -1,4 +1,47 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>DON Card Mapping Audit</title>
+<!DOCTYPE html>
+<!--
+FEATURE REGISTRY — don-audit.html
+Check this list before ANY change to avoid breaking features.
+
+BUTTONS (top bar):
+  📋 Export    → exportMapping() → reads input[list].value from each card, copies to clipboard
+  All          → showOnly('all') → shows all cards
+  ✅ Mapped    → showOnly('mapped') → cards with .mapped class
+  👁️ Vetted   → showOnly('vetted') → cards with data-vetted="true"
+  ⏳ To Review → showOnly('todo') → cards WITHOUT data-vetted="true"
+  ❓ Unsure    → showOnly('unsure') → cards where input[list].value === 'UNSURE'
+
+PER-CARD ELEMENTS:
+  #N           → card position number
+  AUTO tag     → data-auto="true" attribute (original auto-match)
+  diff=X       → pixel difference confidence score
+  Auto: XXX    → blue label showing auto-matched card ID
+  ✅ XXX       → green label showing current mapping (set by JS on load)
+  <input>      → searchable text input with datalist (card-list), onchange→onSel()
+  🔍 Search    → searchCard() → Google Image Search for selected card
+  <textarea>   → notes, onchange→onNote()
+
+JS FUNCTIONS:
+  onSel(i,v)       → saves mapping to localStorage, updates card styling
+  onNote(i,v)      → saves note to localStorage
+  sty(el,v)        → sets CSS class based on value (mapped/new-card/duplicate/not-card)
+  save()           → writes m{} to localStorage key 'don-audit-v3'
+  updateStats()    → updates stats display
+  showOnly(f)      → filter cards by category
+  exportMapping()  → generates text export, copies to clipboard
+  searchCard(btn)  → opens Google Image Search for card's input value
+  vetCard(btn)     → marks card as vetted (CURRENTLY UNUSED — no button calls it)
+  confirmAuto(i)   → old confirm function (CURRENTLY UNUSED — no button calls it)
+
+DATA:
+  localStorage key: 'don-audit-v3'
+  Each entry: {cardId, auto, note, vetted?, confirmed?}
+  Pre-select map: embedded JSON in setTimeout block
+  Datalist: <datalist id="card-list"> with all card IDs
+
+CRITICAL: When changing input type (select→input), update ALL querySelector('select') refs!
+-->
+<html><head><meta charset="utf-8"><title>DON Card Mapping Audit</title>
 <style>
 body{font-family:sans-serif;max-width:1500px;margin:0 auto;padding:20px;background:#f9f9f9}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:8px}
@@ -1611,7 +1654,7 @@ const m=JSON.parse(localStorage.getItem(K)||'{}');
 document.querySelectorAll('.card').forEach(el=>{
 const i=el.id.replace('card-','');
 const saved=m[i], pre=PREFILL[i];
-const sel=el.querySelector('select'), ta=el.querySelector('textarea');
+const sel=el.querySelector('input[list]'), ta=el.querySelector('textarea');
 if(saved&&saved.cardId){sel.value=saved.cardId;sty(el,saved.cardId);}
 else if(pre&&pre.cardId){sel.value=pre.cardId;el.classList.add('auto-mapped');m[i]={cardId:pre.cardId,auto:true};}
 if(saved&&saved.note)ta.value=saved.note;
@@ -1635,12 +1678,12 @@ else if(f==='auto')el.style.display=el.dataset.auto==='true'?'':'none';
 else if(f==='mapped')el.style.display=el.classList.contains('mapped')?'':'none';
 else if(f==='vetted')el.style.display=el.dataset.vetted==='true'?'':'none';
 else if(f==='todo')el.style.display=el.dataset.vetted!=='true'?'':'none';
-else if(f==='unsure'){var s=el.querySelector('select');el.style.display=(s&&s.value==='UNSURE')?'':'none';}
+else if(f==='unsure'){var s=el.querySelector('input[list]');el.style.display=(s&&s.value==='UNSURE')?'':'none';}
 else if(f==='pending')el.style.display=(!el.classList.contains('mapped')&&!el.classList.contains('duplicate')&&!el.classList.contains('not-card')&&!el.classList.contains('new-card'))?'':'none';
 });document.getElementById('flabel').textContent=f==='all'?'':'('+f+')';}
 function exportMapping(){let out='DON CARD MAPPING\n================\n';const used={};
 document.querySelectorAll('.card').forEach(el=>{const i=el.id.replace('card-',''),fn=el.dataset.fname,
-sel=el.querySelector('select').value,note=el.querySelector('textarea').value,auto=el.classList.contains('auto-mapped');
+sel=el.querySelector('input[list]').value,note=el.querySelector('textarea').value,auto=el.classList.contains('auto-mapped');
 if(sel||note){const lb=sel==='NEW'?'NEW: '+note:sel==='DUPLICATE'?'DUPE: '+note:sel||'(no selection)';
 out+='#'+(parseInt(i)+1)+' | '+fn+' | '+lb+(auto?' [AUTO]':'')+(note&&sel!=='NEW'?' | note: '+note:'')+'\n';
 if(sel&&!['NEW','DUPLICATE','NOT_A_CARD',''].includes(sel)){if(used[sel])used[sel].push(parseInt(i)+1);else used[sel]=[parseInt(i)+1];}}});
@@ -1652,7 +1695,7 @@ out+='\nUNMAPPED DB CARDS:\n';const allM=new Set(Object.values(m).map(v=>v.cardI
 navigator.clipboard.writeText(out).then(()=>alert('Copied!'));}
 
 function searchCard(btn){
-  var sel=btn.closest('.card').querySelector('select');
+  var sel=btn.closest('.card').querySelector('input[list]');
   var q=sel.value||'DON card One Piece';
   window.open('https://www.google.com/search?tbm=isch&q='+encodeURIComponent(q+' DON card One Piece TCG'),'_blank');
 }
@@ -1660,7 +1703,7 @@ function searchCard(btn){
 function confirmAuto(i){
   if(!m[i])m[i]={};
   var el=document.getElementById('card-'+i);
-  var sel=el.querySelector('select');
+  var sel=el.querySelector('input[list]');
   // Keep the current auto-matched value
   m[i].confirmed=true;
   m[i].cardId=sel.value||m[i].cardId;
@@ -1676,7 +1719,7 @@ function confirmAuto(i){
 
 function vetCard(btn){
   var card=btn.closest('.card');
-  var sel=card.querySelector('select');
+  var sel=card.querySelector('input[list]');
   var idx=card.id.replace('card-','');
   if(!sel.value){alert('Select a card ID first');return;}
   if(!m[idx])m[idx]={};
