@@ -36,6 +36,7 @@ body{font-family:sans-serif;max-width:1500px;margin:0 auto;padding:20px;backgrou
 <button class="btn" style="background:#4caf50;color:#fff" onclick="showOnly('mapped')">✅ Mapped</button>
 <button class="btn" style="background:#9c27b0;color:#fff" onclick="showOnly('unsure')">❓ Unsure</button>
 <button class="btn" style="background:#e91e63;color:#fff" onclick="showOnly('pending')">⏳ Pending</button>
+<button class="btn" style="background:#2196f3;color:#fff" onclick="showOnly('vetted')">👁️ Vetted</button>
 <span id="flabel" style="font-size:11px;color:#666;margin-left:6px"></span>
 </div><div class="grid" id="grid"><div class="card auto-mapped" data-auto="true" id="card-0" data-fname="don-001.png">
 <div class="idx">#1</div> <span class="auto-tag">AUTO</span> <button class="btn" style="background:#4caf50;color:#fff;font-size:9px;padding:1px 5px" onclick="confirmAuto(0)">✅ OK</button> <span class="conf">diff=7.0</span>
@@ -1617,11 +1618,11 @@ else if(pre&&pre.cardId){sel.value=pre.cardId;el.classList.add('auto-mapped');m[
 if(saved&&saved.note)ta.value=saved.note;
 });
 save();updateStats();
-function onSel(i,v){if(!m[i])m[i]={};m[i].cardId=v;m[i].auto=false;sty(document.getElementById('card-'+i),v);save();updateStats();}
+function onSel(i,v){if(!m[i])m[i]={};m[i].cardId=v;m[i].auto=false;m[i].vetted=true;var el=document.getElementById('card-'+i);sty(el,v);el.dataset.vetted='true';save();updateStats();}
 function onNote(i,v){if(!m[i])m[i]={};m[i].note=v;save();}
 function sty(el,v){el.classList.remove('mapped','auto-mapped','new-card','duplicate','not-card');
 if(v==='NEW')el.classList.add('new-card');else if(v==='DUPLICATE')el.classList.add('duplicate');
-else if(v==='NOT_A_CARD')el.classList.add('not-card');else if(v)el.classList.add('mapped');}
+else if(v==='NOT_A_CARD')el.classList.add('not-card');else if(v)el.classList.add('mapped');el.dataset.vetted='true';}
 function save(){localStorage.setItem(K,JSON.stringify(m));}
 function updateStats(){const t=document.querySelectorAll('.card').length,
 mp=document.querySelectorAll('.mapped').length,am=document.querySelectorAll('.auto-mapped').length,
@@ -1634,6 +1635,7 @@ else if(f==='unmapped')el.style.display=(!el.classList.contains('mapped')&&!el.c
 else if(f==='auto')el.style.display=el.dataset.auto==='true'?'':'none';
 else if(f==='mapped')el.style.display=el.classList.contains('mapped')?'':'none';
 else if(f==='unsure'){var s=el.querySelector('select');el.style.display=(s&&s.value==='UNSURE')?'':'none';}
+else if(f==='vetted')el.style.display=el.dataset.vetted==='true'?'':'none';
 else if(f==='pending')el.style.display=(!el.classList.contains('mapped')&&!el.classList.contains('duplicate')&&!el.classList.contains('not-card')&&!el.classList.contains('new-card'))?'':'none';
 });document.getElementById('flabel').textContent=f==='all'?'':'('+f+')';}
 function exportMapping(){let out='DON CARD MAPPING\n================\n';const used={};
@@ -1660,10 +1662,10 @@ function confirmAuto(i){
   var el=document.getElementById('card-'+i);
   var sel=el.querySelector('select');
   // Keep the current auto-matched value
-  m[i].confirmed=true;
+  m[i].confirmed=true;m[i].vetted=true;
   m[i].cardId=sel.value||m[i].cardId;
   el.classList.remove('auto-mapped');
-  el.classList.add('mapped');
+  el.classList.add('mapped');el.dataset.vetted='true';
   el.querySelector('.auto-tag').textContent='CONFIRMED';
   el.querySelector('.auto-tag').style.background='#4caf50';
   // Hide the OK button
@@ -1701,7 +1703,17 @@ function updateDropdowns(){
 // Run after page load and after each selection
 var origOnSel=onSel;
 onSel=function(i,v){origOnSel(i,v);updateDropdowns();};
-setTimeout(updateDropdowns,500);
+setTimeout(function(){
+  updateDropdowns();
+  // Restore vetted state from localStorage
+  var stored=JSON.parse(localStorage.getItem(K)||'{}');
+  for(var i in stored){
+    if(stored[i].vetted){
+      var el=document.getElementById('card-'+i);
+      if(el)el.dataset.vetted='true';
+    }
+  }
+},500);
 </script>
 <div id="pdfPanel" style="display:none;position:fixed;right:0;top:0;width:400px;height:100vh;background:#222;overflow-y:auto;z-index:100;padding:10px;border-left:3px solid #e94560">
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
