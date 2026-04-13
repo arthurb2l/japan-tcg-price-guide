@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "lastUpdated": "2026-04-12T10:37:00+09:00",
   "totalImages": 261,
   "mapped": 176,
@@ -164,7 +164,7 @@
     "don-354.png": "DON-OP06-SHANKS",
     "don-372.png": "DON-OP11-LUFFY-GEAR5",
     "don-378.png": "DON-OP09-YAMATO",
-    "don-380.png": "DON-OP12-ZORO",
+    "don-380.png": "PRB02-DON-Sanji",
     "don-382.png": "DON-OP13-SHANKS",
     "don-384.png": "DON-OP13-SHANKS-GOLD",
     "don-386.png": "DON-EB02",
@@ -181,7 +181,19 @@
     "don-556.png": "DON-KUMAMOTO-CHOPPER",
     "don-558.png": "DON-KUMAMOTO-ROBIN",
     "don-039.png": "UNSURE",
-    "don-432.png": "UNSURE"
+    "don-432.png": "PRB02-DON-Pudding",
+    "don-356.png": "PRB02-DON-Marco",
+    "don-418.png": "DUPLICATE",
+    "don-544.png": "DON-3RD-ANNIVERSARY",
+    "don-546.png": "DON-KUMAMOTO-LUFFY",
+    "don-548.png": "DON-KUMAMOTO-SANJI",
+    "don-552.png": "DON-KUMAMOTO-ZORO",
+    "don-554.png": "DON-KUMAMOTO-USOPP",
+    "don-562.png": "DON-KUMAMOTO-BROOK",
+    "don-564.png": "DON-KUMAMOTO-NAMI",
+    "don-566.png": "DON-KUMAMOTO-FRANKY",
+    "don-560.png": "DON-KUMAMOTO-JINBE",
+    "don-436.png": "PRB02-DON-Kalgara"
   },
   "unmappedDbCards": [
     "DON-PURPLE",
