@@ -180,7 +180,8 @@
     "don-408.png": "DON-EB03-UTA-GOLD",
     "don-556.png": "DON-KUMAMOTO-CHOPPER",
     "don-558.png": "DON-KUMAMOTO-ROBIN",
-    "don-039.png": "UNSURE"
+    "don-039.png": "UNSURE",
+    "don-432.png": "UNSURE"
   },
   "unmappedDbCards": [
     "DON-PURPLE",
@@ -206,5 +207,7 @@
     "DON-KUMAMOTO-KUMAMON"
   ],
   "last_updated": "2026-04-13",
-  "notes": {}
+  "notes": {
+    "don-432.png": "Arthur searched \"sanji\" \u2014 results show PRB02-DON-Pudding (\u30b7\u30e3\u30fc\u30ed\u30c3\u30c8\u30fb\u30d7\u30ea\u30f3)"
+  }
 }
