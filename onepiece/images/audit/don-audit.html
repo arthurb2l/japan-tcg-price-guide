@@ -1664,7 +1664,7 @@ function onSel(i,v){if(!m[i])m[i]={};m[i].cardId=v;m[i].auto=false;sty(document.
 function onNote(i,v){if(!m[i])m[i]={};m[i].note=v;save();}
 function sty(el,v){el.classList.remove('mapped','auto-mapped','new-card','duplicate','not-card');
 if(v==='NEW')el.classList.add('new-card');else if(v==='DUPLICATE')el.classList.add('duplicate');
-else if(v==='NOT_A_CARD')el.classList.add('not-card');else if(v)el.classList.add('mapped');}
+else if(v==='NOT_A_CARD')el.classList.add('not-card');else if(v&&v!=='UNSURE')el.classList.add('mapped');}
 function save(){localStorage.setItem(K,JSON.stringify(m));}
 function updateStats(){const t=document.querySelectorAll('.card').length,
 mp=document.querySelectorAll('.mapped').length,am=document.querySelectorAll('.auto-mapped').length,
@@ -1716,7 +1716,7 @@ window.addEventListener('load',function(){
   document.querySelectorAll('.card').forEach(function(card){
     var fname=card.dataset.fname;
     var inp=card.querySelector('input[list="card-list"]');
-    if(map[fname] && inp){
+    if(map[fname] && inp && map[fname]!=='UNSURE' && map[fname]!=='DUPLICATE'){
       inp.value=map[fname];
       var lbl=document.createElement('div');
       lbl.style.cssText='font-size:10px;color:#4caf50;font-weight:bold;margin-bottom:2px';
