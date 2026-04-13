@@ -1,0 +1,36 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users can only read/write their own data
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+      
+      match /{subcollection}/{docId} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+
+    // Inventory — user's card collection
+    match /inventory/{uid}/{docId=**} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // Wishlist — user's wanted cards
+    match /wishlist/{uid}/{docId=**} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // Tradelist — user's cards for trade
+    match /tradelist/{uid}/{docId=**} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // Card reports — anyone can create (anonymous reporting), only admin can read/update
+    match /card-reports/{reportId} {
+      allow create: if true;
+      allow read, update: if request.auth != null 
+        && request.auth.uid == 'kkECBly8lgVnrw9flUBouBMzjEh2';
+    }
+  }
+}
