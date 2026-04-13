@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <!--
-FEATURE REGISTRY — don-audit.html
+FEATURE REGISTRY — don-audit.html (Updated 2026-04-13)
 Check this list before ANY change to avoid breaking features.
 
 BUTTONS (top bar):
   📋 Export    → exportMapping() → reads input[list].value from each card, copies to clipboard
   All          → showOnly('all') → shows all cards
   ✅ Mapped    → showOnly('mapped') → cards with .mapped class
-  👁️ Vetted   → REMOVED (nothing sets vetted flag)
-  ⏳ To Review → showOnly('todo') → cards with empty/UNSURE input
+  ⏳ To Review → showOnly('todo') → cards with empty/UNSURE input value
   ❓ Unsure    → showOnly('unsure') → cards where input[list].value === 'UNSURE'
 
 PER-CARD ELEMENTS:
   #N           → card position number
   AUTO tag     → data-auto="true" attribute (original auto-match)
   diff=X       → pixel difference confidence score
-  Auto: XXX    → blue label showing auto-matched card ID
-  ✅ XXX       → green label showing current mapping (set by JS on load)
+  Auto: XXX    → blue label showing auto-matched card ID (from don-mapping-progress.json)
+  ✅ XXX       → green label showing current mapping (set by JS on load from preselect map)
   <input>      → searchable text input with datalist (card-list), onchange→onSel()
   🔍 Search    → searchCard() → Google Image Search for selected card
   <textarea>   → notes, onchange→onNote()
 
-JS FUNCTIONS:
-  onSel(i,v)       → saves mapping to localStorage, updates card styling
+JS FUNCTIONS (active):
+  onSel(i,v)       → saves mapping to localStorage, updates card styling via sty()
   onNote(i,v)      → saves note to localStorage
-  sty(el,v)        → sets CSS class based on value (mapped/new-card/duplicate/not-card)
+  sty(el,v)        → sets CSS class: mapped/new-card/duplicate/not-card
   save()           → writes m{} to localStorage key 'don-audit-v3'
   updateStats()    → updates stats display
-  showOnly(f)      → filter cards by category
+  showOnly(f)      → filter: all/mapped/todo/unsure
   exportMapping()  → generates text export, copies to clipboard
-  searchCard(btn)  → opens Google Image Search for card's input value
-  vetCard(btn)     → marks card as vetted (CURRENTLY UNUSED — no button calls it)
-  confirmAuto(i)   → old confirm function (CURRENTLY UNUSED — no button calls it)
+  searchCard(btn)  → opens Google Image Search — uses btn.closest('.card').querySelector('input[list]')
 
 DATA:
   localStorage key: 'don-audit-v3'
-  Each entry: {cardId, auto, note, vetted?, confirmed?}
-  Pre-select map: embedded JSON in setTimeout block
-  Datalist: <datalist id="card-list"> with all card IDs
+  Each entry: {cardId, auto, note}
+  Pre-select map: embedded JSON in setTimeout block (synced from don-mapping-progress.json)
+  Datalist: <datalist id="card-list"> shared, all 185 card IDs
+  Unmapped list in export: dynamically from embedded array of all DB card IDs
 
-CRITICAL: When changing input type (select→input), update ALL querySelector('select') refs!
+CRITICAL RULES:
+  - Input elements are <input type="text" list="card-list"> NOT <select>
+  - All querySelector refs must use 'input[list]' not 'select'
+  - When adding new cards: update datalist + preselect map + unmapped array
 -->
 <html><head><meta charset="utf-8"><title>DON Card Mapping Audit</title>
 <style>
@@ -1690,7 +1691,7 @@ out+='\nDUPLICATE ASSIGNMENTS:\n';let hd=false;
 for(const[id,nums]of Object.entries(used)){if(nums.length>1){out+='  '+id+' → #'+nums.join(', #')+'\n';hd=true;}}
 if(!hd)out+='  (none)\n';
 out+='\nUNMAPPED DB CARDS:\n';const allM=new Set(Object.values(m).map(v=>v.cardId).filter(Boolean));
-["DON-GOLD", "DON-SILVER", "DON-RED", "DON-YELLOW", "DON-BLUE", "DON-PURPLE", "DON-GREEN", "DON-ORANGE", "DON-PINK", "DON-TEAL", "DON-BRONZE", "PRB01-DON-Ace", "PRB01-DON-Ace-GOLD", "PRB01-DON-Big-Mom", "PRB01-DON-Big-Mom-GOLD", "PRB01-DON-Crocodile", "PRB01-DON-Crocodile-GOLD", "PRB01-DON-Donquixote-Doflamingo", "PRB01-DON-Donquixote-Doflamingo-GOLD", "PRB01-DON-Enel", "PRB01-DON-Enel-GOLD", "PRB01-DON-Eustass-Kid", "PRB01-DON-Eustass-Kid-GOLD", "PRB01-DON-Gecko-Moria", "PRB01-DON-Gecko-Moria-GOLD", "PRB01-DON-Hody-Jones", "PRB01-DON-Hody-Jones-GOLD", "PRB01-DON-Iceberg", "PRB01-DON-Iceberg-GOLD", "PRB01-DON-Ivankov", "PRB01-DON-Ivankov-GOLD", "PRB01-DON-Kaido", "PRB01-DON-Kaido-GOLD", "PRB01-DON-Katakuri", "PRB01-DON-Katakuri-GOLD", "PRB01-DON-King", "PRB01-DON-King-GOLD", "PRB01-DON-Luffy", "PRB01-DON-Luffy-GOLD", "PRB01-DON-Magellan", "PRB01-DON-Magellan-GOLD", "PRB01-DON-Oden", "PRB01-DON-Oden-GOLD", "PRB01-DON-Perona", "PRB01-DON-Perona-GOLD", "PRB01-DON-Queen", "PRB01-DON-Queen-GOLD", "PRB01-DON-Rebecca", "PRB01-DON-Rebecca-GOLD", "PRB01-DON-Reiju", "PRB01-DON-Reiju-GOLD", "PRB01-DON-Rob-Lucci", "PRB01-DON-Rob-Lucci-GOLD", "PRB01-DON-Rosinante", "PRB01-DON-Rosinante-GOLD", "PRB01-DON-Sabo", "PRB01-DON-Sabo-GOLD", "PRB01-DON-Sakazuki", "PRB01-DON-Sakazuki-GOLD", "PRB01-DON-Trafalgar-Law", "PRB01-DON-Trafalgar-Law-GOLD", "PRB01-DON-Uta", "PRB01-DON-Uta-GOLD", "PRB01-DON-Vivi", "PRB01-DON-Vivi-GOLD", "PRB01-DON-Whitebeard", "PRB01-DON-Whitebeard-GOLD", "PRB01-DON-Yamato", "PRB01-DON-Yamato-GOLD", "PRB01-DON-Zoro", "PRB01-DON-Zoro-GOLD", "PRB02-DON-Marco", "PRB02-DON-Marco-GOLD", "PRB02-DON-Bonney", "PRB02-DON-Bonney-GOLD", "PRB02-DON-Dragon", "PRB02-DON-Dragon-GOLD", "PRB02-DON-Boa-Hancock", "PRB02-DON-Boa-Hancock-GOLD", "PRB02-DON-Gear-5-Luffy", "PRB02-DON-Gear-5-Luffy-GOLD", "PRB02-DON-Rob-Lucci", "PRB02-DON-Rob-Lucci-GOLD", "PRB02-DON-Shanks", "PRB02-DON-Shanks-GOLD", "PRB02-DON-Hannyabal", "PRB02-DON-Hannyabal-GOLD", "PRB02-DON-Koby", "PRB02-DON-Koby-GOLD", "PRB02-DON-Teach", "PRB02-DON-Teach-GOLD", "PRB02-DON-Buggy", "PRB02-DON-Buggy-GOLD", "PRB02-DON-Smoker", "PRB02-DON-Smoker-GOLD", "PRB02-DON-Jinbe", "PRB02-DON-Jinbe-GOLD", "PRB02-DON-Yamato", "PRB02-DON-Yamato-GOLD", "PRB02-DON-Carrot", "PRB02-DON-Carrot-GOLD", "PRB02-DON-Pudding", "PRB02-DON-Pudding-GOLD", "PRB02-DON-Vegapunk", "PRB02-DON-Vegapunk-GOLD", "PRB02-DON-Lim", "PRB02-DON-Lim-GOLD", "PRB02-DON-Caesar-Clown", "PRB02-DON-Caesar-Clown-GOLD", "PRB02-DON-Foxy", "PRB02-DON-Foxy-GOLD", "PRB02-DON-Shirahoshi", "PRB02-DON-Shirahoshi-GOLD", "PRB02-DON-Sugar", "PRB02-DON-Sugar-GOLD", "PRB02-DON-Kalgara", "PRB02-DON-Kalgara-GOLD", "PRB02-DON-Kyros", "PRB02-DON-Kyros-GOLD", "PRB02-DON-Gear-4-Luffy", "PRB02-DON-Gear-4-Luffy-GOLD", "PRB02-DON-Nami", "PRB02-DON-Nami-GOLD", "PRB02-DON-Usopp", "PRB02-DON-Usopp-GOLD", "PRB02-DON-Chopper", "PRB02-DON-Chopper-GOLD", "PRB02-DON-Sanji", "PRB02-DON-Sanji-GOLD", "PRB02-DON-Robin", "PRB02-DON-Robin-GOLD", "DON-CS2023", "DON-CS2024", "DON-GEAR5", "DON-3DTEXT", "DON-YAMATO-1ST", "DON-LUFFY-1ST", "DON-OP14", "DON-OP14-GOLD", "DON-OP05-LUFFY-VS-KAIDO", "DON-OP06-SHANKS", "DON-OP07-LUFFY", "DON-OP07-BOA", "DON-OP09-YAMATO", "DON-OP11-LUFFY-GEAR5", "DON-OP12-ZORO", "DON-OP13-SHANKS", "DON-OP13-SHANKS-GOLD", "DON-EB02", "DON-EB03-HEROINES", "DON-EB03-HEROINES-GOLD", "DON-EB03-NAMI", "DON-EB03-NAMI-GOLD", "DON-EB03-ROBIN", "DON-EB03-ROBIN-GOLD", "DON-EB03-BOA", "DON-EB03-BOA-GOLD", "DON-EB03-UTA", "DON-EB03-UTA-GOLD", "DON-STANDARD", "DON-OP08-UNKNOWN", "DON-OP10-UNKNOWN", "DON-OP14-UNKNOWN", "DON-EB04", "DON-2ND-ANNIVERSARY", "DON-3RD-ANNIVERSARY", "DON-KUMAMOTO-LUFFY", "DON-KUMAMOTO-ZORO", "DON-KUMAMOTO-NAMI", "DON-KUMAMOTO-USOPP", "DON-KUMAMOTO-SANJI", "DON-KUMAMOTO-CHOPPER", "DON-KUMAMOTO-ROBIN", "DON-KUMAMOTO-FRANKY", "DON-KUMAMOTO-BROOK", "DON-KUMAMOTO-KUMAMON"].forEach(id=>{if(!allM.has(id))out+='  '+id+'\n';});
+["DON-2ND-ANNIVERSARY", "DON-3DTEXT", "DON-3RD-ANNIVERSARY", "DON-BLUE", "DON-BRONZE", "DON-CS2023", "DON-CS2023-LUFFY", "DON-CS2024", "DON-EB02", "DON-EB03-BOA", "DON-EB03-BOA-GOLD", "DON-EB03-HEROINES", "DON-EB03-HEROINES-GOLD", "DON-EB03-NAMI", "DON-EB03-NAMI-GOLD", "DON-EB03-ROBIN", "DON-EB03-ROBIN-GOLD", "DON-EB03-UTA", "DON-EB03-UTA-GOLD", "DON-EB04", "DON-GAO2024", "DON-GEAR5", "DON-GOLD", "DON-GOLD-TEXT", "DON-GREEN", "DON-KUMAMOTO-BROOK", "DON-KUMAMOTO-CHOPPER", "DON-KUMAMOTO-FRANKY", "DON-KUMAMOTO-KUMAMON", "DON-KUMAMOTO-LUFFY", "DON-KUMAMOTO-NAMI", "DON-KUMAMOTO-ROBIN", "DON-KUMAMOTO-SANJI", "DON-KUMAMOTO-USOPP", "DON-KUMAMOTO-ZORO", "DON-LUFFY-1ST", "DON-NIKA", "DON-OP01-LUFFY-PIRATE-KING", "DON-OP03-SANJI-BARATIE", "DON-OP04-VIVI-FAREWELL", "DON-OP05-KAIDO-UPPERCUT", "DON-OP05-LUFFY-VS-KAIDO", "DON-OP06-SHANKS", "DON-OP07-BOA", "DON-OP07-LUFFY", "DON-OP08-UNKNOWN", "DON-OP09-YAMATO", "DON-OP10-UNKNOWN", "DON-OP11-LUFFY-GEAR5", "DON-OP12-ZORO", "DON-OP13-SHANKS", "DON-OP13-SHANKS-GOLD", "DON-OP14", "DON-OP14-GOLD", "DON-OP14-UNKNOWN", "DON-ORANGE", "DON-PINK", "DON-PURPLE", "DON-RED", "DON-SILVER", "DON-STANDARD", "DON-STORAGEBOX-LUFFY", "DON-TEAL", "DON-YAMATO-1ST", "DON-YELLOW", "PRB01-DON-Ace", "PRB01-DON-Ace-GOLD", "PRB01-DON-Big-Mom", "PRB01-DON-Big-Mom-GOLD", "PRB01-DON-Crocodile", "PRB01-DON-Crocodile-GOLD", "PRB01-DON-Donquixote-Doflamingo", "PRB01-DON-Donquixote-Doflamingo-GOLD", "PRB01-DON-Enel", "PRB01-DON-Enel-GOLD", "PRB01-DON-Eustass-Kid", "PRB01-DON-Eustass-Kid-GOLD", "PRB01-DON-Gecko-Moria", "PRB01-DON-Gecko-Moria-GOLD", "PRB01-DON-Hody-Jones", "PRB01-DON-Hody-Jones-GOLD", "PRB01-DON-Iceberg", "PRB01-DON-Iceberg-GOLD", "PRB01-DON-Ivankov", "PRB01-DON-Ivankov-GOLD", "PRB01-DON-Kaido", "PRB01-DON-Kaido-GOLD", "PRB01-DON-Katakuri", "PRB01-DON-Katakuri-GOLD", "PRB01-DON-King", "PRB01-DON-King-GOLD", "PRB01-DON-Luffy", "PRB01-DON-Luffy-GOLD", "PRB01-DON-Magellan", "PRB01-DON-Magellan-GOLD", "PRB01-DON-Oden", "PRB01-DON-Oden-GOLD", "PRB01-DON-Perona", "PRB01-DON-Perona-GOLD", "PRB01-DON-Queen", "PRB01-DON-Queen-GOLD", "PRB01-DON-Rebecca", "PRB01-DON-Rebecca-GOLD", "PRB01-DON-Reiju", "PRB01-DON-Reiju-GOLD", "PRB01-DON-Rob-Lucci", "PRB01-DON-Rob-Lucci-GOLD", "PRB01-DON-Rosinante", "PRB01-DON-Rosinante-GOLD", "PRB01-DON-Sabo", "PRB01-DON-Sabo-GOLD", "PRB01-DON-Sakazuki", "PRB01-DON-Sakazuki-GOLD", "PRB01-DON-Trafalgar-Law", "PRB01-DON-Trafalgar-Law-GOLD", "PRB01-DON-Uta", "PRB01-DON-Uta-GOLD", "PRB01-DON-Vivi", "PRB01-DON-Vivi-GOLD", "PRB01-DON-Whitebeard", "PRB01-DON-Whitebeard-GOLD", "PRB01-DON-Yamato", "PRB01-DON-Yamato-GOLD", "PRB01-DON-Zoro", "PRB01-DON-Zoro-GOLD", "PRB02-DON-Boa-Hancock", "PRB02-DON-Boa-Hancock-GOLD", "PRB02-DON-Bonney", "PRB02-DON-Bonney-GOLD", "PRB02-DON-Buggy", "PRB02-DON-Buggy-GOLD", "PRB02-DON-Caesar-Clown", "PRB02-DON-Caesar-Clown-GOLD", "PRB02-DON-Carrot", "PRB02-DON-Carrot-GOLD", "PRB02-DON-Chopper", "PRB02-DON-Chopper-GOLD", "PRB02-DON-Dragon", "PRB02-DON-Dragon-GOLD", "PRB02-DON-Foxy", "PRB02-DON-Foxy-GOLD", "PRB02-DON-Gear-4-Luffy", "PRB02-DON-Gear-4-Luffy-GOLD", "PRB02-DON-Gear-5-Luffy", "PRB02-DON-Gear-5-Luffy-GOLD", "PRB02-DON-Hannyabal", "PRB02-DON-Hannyabal-GOLD", "PRB02-DON-Jinbe", "PRB02-DON-Jinbe-GOLD", "PRB02-DON-Kalgara", "PRB02-DON-Kalgara-GOLD", "PRB02-DON-Koby", "PRB02-DON-Koby-GOLD", "PRB02-DON-Kyros", "PRB02-DON-Kyros-GOLD", "PRB02-DON-Lim", "PRB02-DON-Lim-GOLD", "PRB02-DON-Marco", "PRB02-DON-Marco-GOLD", "PRB02-DON-Nami", "PRB02-DON-Nami-GOLD", "PRB02-DON-Pudding", "PRB02-DON-Pudding-GOLD", "PRB02-DON-Rob-Lucci", "PRB02-DON-Rob-Lucci-GOLD", "PRB02-DON-Robin", "PRB02-DON-Robin-GOLD", "PRB02-DON-Sanji", "PRB02-DON-Sanji-GOLD", "PRB02-DON-Shanks", "PRB02-DON-Shanks-GOLD", "PRB02-DON-Shirahoshi", "PRB02-DON-Shirahoshi-GOLD", "PRB02-DON-Smoker", "PRB02-DON-Smoker-GOLD", "PRB02-DON-Sugar", "PRB02-DON-Sugar-GOLD", "PRB02-DON-Teach", "PRB02-DON-Teach-GOLD", "PRB02-DON-Usopp", "PRB02-DON-Usopp-GOLD", "PRB02-DON-Vegapunk", "PRB02-DON-Vegapunk-GOLD", "PRB02-DON-Yamato", "PRB02-DON-Yamato-GOLD"].forEach(id=>{if(!allM.has(id))out+='  '+id+'\n';});
 navigator.clipboard.writeText(out).then(()=>alert('Copied!'));}
 
 function searchCard(btn){
@@ -1699,28 +1700,7 @@ function searchCard(btn){
   window.open('https://www.google.com/search?tbm=isch&q='+encodeURIComponent(q+' DON card One Piece TCG'),'_blank');
 }
 
-function confirmAuto(i){
-  if(!m[i])m[i]={};
-  var el=document.getElementById('card-'+i);
-  var sel=el.querySelector('input[list]');
-  // Keep the current auto-matched value
-  m[i].confirmed=true;
-  m[i].cardId=sel.value||m[i].cardId;
-  el.classList.remove('auto-mapped');
-  el.classList.add('mapped');
-  el.querySelector('.auto-tag').textContent='CONFIRMED';
-  el.querySelector('.auto-tag').style.background='#4caf50';
-  // Hide the OK button
-  var btn=el.querySelector('button[onclick^="confirmAuto"]');
-  if(btn)btn.style.display='none';
-  save();updateStats();
-}
 
-function vetCard(btn){
-  var card=btn.closest('.card');
-  var sel=card.querySelector('input[list]');
-  var idx=card.id.replace('card-','');
-  if(!sel.value){alert('Select a card ID first');return;}
   if(!m[idx])m[idx]={};
   m[idx].vetted=true;
   m[idx].cardId=sel.value;
@@ -1731,19 +1711,6 @@ function vetCard(btn){
   save();updateStats();
 }
 
-setTimeout(function(){
-  var K='don-audit-v3';
-  var d=JSON.parse(localStorage.getItem(K)||'{}');
-  for(var i in d){
-    if(d[i].vetted){
-      var el=document.getElementById('card-'+i);
-      if(el){el.dataset.vetted='true';el.style.outline='3px solid #4caf50';
-        var btn=el.querySelector('button[onclick^="vetCard"]');
-        if(btn){btn.textContent='✅ Done';btn.disabled=true;}
-      }
-    }
-  }
-},600);
 
 
 // Show current mapping on each card + pre-fill search input
