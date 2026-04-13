@@ -20,6 +20,9 @@ const path = require('path');
 const SITES = {
   jp: { host: 'www.onepiece-cardgame.com', prefix: '55' },
   en: { host: 'en.onepiece-cardgame.com', prefix: '56' },
+  fr: { host: 'fr.onepiece-cardgame.com', prefix: '622' },
+  tc: { host: 'asia-tc.onepiece-cardgame.com', prefix: '554' },
+  th: { host: 'asia-th.onepiece-cardgame.com', prefix: '563' },
 };
 
 const args = process.argv.slice(2);
