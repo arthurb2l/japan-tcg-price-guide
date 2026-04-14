@@ -68,8 +68,9 @@ def load_db():
             jp = name.get('jp','') if isinstance(name,dict) else ''
             rarity = c.get('rarity','')
             key = f"{cid}|{finish}"
+            usd = c.get('pricing',{}).get('computed',{}).get('usd')
             cards[key] = {
-                'id': cid, 'finish': finish, 'jpy': jpy,
+                'id': cid, 'finish': finish, 'jpy': jpy, 'usd': usd,
                 'name': en or jp, 'rarity': rarity, 'set': setid
             }
     return data, cards
@@ -297,6 +298,21 @@ def find_bundles(deals):
             })
     return bundles
 
+
+def _arb_html(d):
+    """Generate arbitrage info HTML for a deal."""
+    usd_sell = d.get('usd')
+    if not usd_sell or usd_sell < 1: return ''
+    jpy_cost = d['total']
+    usd_cost = jpy_cost / 150  # JPY to USD
+    shipping_us = 7  # ~$7 small packet JP→US
+    platform_fee = usd_sell * 0.15  # TCGplayer/eBay 15%
+    net_profit = usd_sell - usd_cost - shipping_us - platform_fee
+    margin = net_profit / usd_sell if usd_sell > 0 else 0
+    if margin < 0.05: return ''  # not worth showing
+    color = '#16a34a' if margin >= 0.20 else '#888'
+    return f'<p style="margin:2px 0;font-size:11px;color:{color}">🌐 US sell: ${usd_sell:.0f} → net ${net_profit:.0f} profit ({margin:.0%} margin after fees+ship)</p>'
+
 # --------------- Email ---------------
 
 def build_email(deals, issues_fixed, issues):
@@ -325,6 +341,7 @@ def build_email(deals, issues_fixed, issues):
     <span style="color:#16a34a;font-weight:bold;margin-left:6px">-{pct:.0f}%</span></p>
   <p style="margin:2px 0;color:#888;font-size:11px">{d['source']}: ¥{d['price']:,} + ¥{d['shipping']:,} ship</p>
   <p style="margin:6px 0"><a href="{d.get('url','#')}" style="color:#D70000;font-size:13px;font-weight:bold">Buy →</a></p>
+  {_arb_html(d)}
 </div>"""
     else:
         html += '<p style="color:#888;text-align:center;padding:30px">No deals today meeting criteria.</p>'
