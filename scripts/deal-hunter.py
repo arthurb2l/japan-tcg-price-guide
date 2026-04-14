@@ -22,6 +22,35 @@ SHIPPING = {
     "cardrush": {"flat": 200},
 }
 
+BUDGET_DAILY = 2000
+BUDGET_WEEKLY = 10000
+DEAL_THRESHOLD = 0.70
+MIN_MARKET_VALUE = 200
+
+WATCHLIST_FILE = os.path.join(DATA_DIR, 'deal-hunter-watchlist.json')
+
+def load_watchlist():
+    try:
+        with open(WATCHLIST_FILE) as f:
+            return json.load(f).get('watchlist', [])
+    except:
+        return []
+
+def load_ledger():
+    try:
+        with open(LEDGER_FILE) as f:
+            ledger = json.load(f)
+        ws = ledger.get('week_start','')
+        if ws and (date.today() - date.fromisoformat(ws)).days >= 7:
+            ledger = {'week_start': str(date.today()), 'spent': 0, 'purchases': []}
+        return ledger
+    except:
+        return {'week_start': str(date.today()), 'spent': 0, 'purchases': []}
+
+def save_ledger(ledger):
+    with open(LEDGER_FILE, 'w') as f:
+        json.dump(ledger, f, indent=2)
+
 # --------------- Market DB ---------------
 
 def load_db():
@@ -200,15 +229,25 @@ def fix_pricing_issues(data, issues):
 # --------------- Deal Finding ---------------
 
 def find_deals(db_cards):
-    """Scan Amazon for cards ¥500-¥10,000 regular finish."""
+    """Scan sources for watchlist cards first, then top valuable."""
+    # Build candidate pool
     candidates = {}
     for key, c in db_cards.items():
         if c['finish'] != 'regular' or not c['jpy']: continue
-        if c['jpy'] < 500 or c['jpy'] > 10000: continue
+        if c['jpy'] < 200: continue
         if c['id'] not in candidates or c['jpy'] > candidates[c['id']]['jpy']:
             candidates[c['id']] = c
 
-    sorted_cards = sorted(candidates.values(), key=lambda x: -x['jpy'])[:20]
+    # Watchlist cards first (priority)
+    watchlist = load_watchlist()
+    watch_ids = {w['id'] for w in watchlist}
+    priority = [candidates[cid] for cid in watch_ids if cid in candidates]
+
+    # Then top valuable (excluding watchlist, already scanned)
+    rest = [c for c in candidates.values() if c['id'] not in watch_ids and c['jpy'] >= 500]
+    rest.sort(key=lambda x: -x['jpy'])
+
+    sorted_cards = priority + rest[:max(0, 20 - len(priority))]
     deals = []
 
     for card in sorted_cards:
@@ -233,9 +272,14 @@ def build_email(deals, issues_fixed, issues):
     today = date.today().strftime('%Y-%m-%d')
     day = date.today().strftime('%a %b %d')
 
+    ledger = load_ledger()
+    spent = ledger.get('spent', 0)
+    remaining = BUDGET_WEEKLY - spent
+
     html = f"""<html><body style="font-family:system-ui,sans-serif;max-width:600px;margin:0 auto;padding:20px;background:#f9f9f9">
 <h2 style="color:#D70000">🏴‍☠️ OP Deal Hunter — {day}</h2>
-<p style="color:#666;font-size:13px">Scanned: Card Rush + Suruga-ya + Amazon JP · Budget: ¥10,000/week</p>
+<p style="color:#666;font-size:13px">Sources: Card Rush · Suruga-ya · Amazon JP</p>
+<p style="color:#666;font-size:13px">💰 Budget: ¥{spent:,} spent / ¥{BUDGET_WEEKLY:,} weekly (¥{remaining:,} left) · Daily cap: ¥{BUDGET_DAILY:,}</p>
 <hr style="border:1px solid #eee">
 """
     # Deals section
@@ -243,7 +287,7 @@ def build_email(deals, issues_fixed, issues):
         for i, d in enumerate(deals):
             pct = d['score']*100
             html += f"""<div style="background:#fff;border-radius:10px;padding:14px;margin:10px 0;border-left:4px solid {'#D70000' if pct>=30 else '#f59e0b'}">
-  <h3 style="margin:0 0 4px;font-size:15px">{'🔥' if pct>=30 else '💰'} {d['name']}</h3>
+  <h3 style="margin:0 0 4px;font-size:15px">{'🔥' if pct>=30 else '💰'} {d['name']}{'  ⭐' if d['id'] in [w['id'] for w in load_watchlist()] else ''}</h3>
   <p style="margin:2px 0;color:#888;font-size:12px">{d['id']} · {d['set']} · {d['rarity']}</p>
   <p style="margin:6px 0"><span style="color:#D70000;font-weight:bold;font-size:17px">¥{d['total']:,}</span>
     <span style="color:#888;text-decoration:line-through;margin-left:6px">¥{d['market']:,}</span>
@@ -330,6 +374,10 @@ def main():
     subject = f"🏴‍☠️ {len(deals)} OP deal{'s' if len(deals)!=1 else ''} — {day}" if deals else f"🏴‍☠️ No OP deals — {day}"
 
     html = build_email(deals, fixed, issues)
+    
+    # Save ledger
+    ledger = load_ledger()
+    save_ledger(ledger)
 
     # Save locally
     outfile = os.path.join(DATA_DIR, f"deal-hunter-{date.today()}.html")

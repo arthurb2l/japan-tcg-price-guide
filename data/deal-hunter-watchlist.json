@@ -1,0 +1,15 @@
+{
+  "description": "Cards to monitor for deals. Add card IDs you want, max_price is optional threshold.",
+  "watchlist": [
+    {"id": "OP09-004", "note": "Shanks SEC — want for collection"},
+    {"id": "OP13-119", "note": "Ace SEC"},
+    {"id": "OP08-118", "note": "Rayleigh SEC"},
+    {"id": "OP07-051", "note": "Boa Hancock SR"},
+    {"id": "OP12-014", "note": "Boa Hancock SR"},
+    {"id": "OP13-042", "note": "Edward Newgate SR"},
+    {"id": "OP09-001", "note": "Shanks Leader"},
+    {"id": "OP11-041", "note": "Nami Leader"},
+    {"id": "OP12-030", "note": "Mihawk SR"},
+    {"id": "OP08-105", "note": "Jewelry Bonney SR"}
+  ]
+}
