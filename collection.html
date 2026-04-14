@@ -308,7 +308,7 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
 
 <script>
 let allCards = [], collectionCards = [], currentUser = null, userCollection = {};
-let currentGame = localStorage.getItem('collection-tcg') || '', currentSort = 'added', currentList = 'inventory';
+let currentGame = localStorage.getItem('collection-tcg') || 'onepiece', currentSort = 'added', currentList = 'inventory';
 let currentPage = 1;
 const PAGE_SIZE = 50;
 
@@ -777,6 +777,19 @@ function renderCollection() {
   const formatPrice = p => p !== null ? '¥' + Math.round(p * 150).toLocaleString() : '-';
   
   content.innerHTML = tabsHtml + `
+    <div class="tcg-selector">
+      <button class="tcg-btn ${currentGame === 'pokemon' ? 'active pk' : ''}" onclick="filterByGame('pokemon')">
+        <span class="tcg-icon">⚡</span>
+        <span class="tcg-label">Pokemon</span>
+        <span class="tcg-count">${collectionCards.filter(c=>c.game==='pokemon').reduce((s,c)=>s+getQty(c.id),0)} cards</span>
+      </button>
+      <button class="tcg-btn ${currentGame === 'onepiece' ? 'active op' : ''}" onclick="filterByGame('onepiece')">
+        <span class="tcg-icon">🏴‍☠️</span>
+        <span class="tcg-label">One Piece</span>
+        <span class="tcg-count">${collectionCards.filter(c=>c.game==='onepiece').reduce((s,c)=>s+getQty(c.id),0)} cards</span>
+      </button>
+    </div>
+    
     <div class="stats-row">
       <div class="stat-card total">
         <div class="value">${totalCards}</div>
@@ -786,13 +799,9 @@ function renderCollection() {
         <div class="value">${collectionCards.length}</div>
         <div class="label">Unique Cards</div>
       </div>
-      <div class="stat-card pokemon">
-        <div class="value">${pokemonCount}</div>
-        <div class="label">Pokemon</div>
-      </div>
-      <div class="stat-card onepiece">
-        <div class="value">${opCount}</div>
-        <div class="label">One Piece</div>
+      <div class="stat-card">
+        <div class="value">${collectionCards.length}</div>
+        <div class="label">Unique</div>
       </div>
       <div class="stat-card">
         <div class="value">¥${Math.round(totalValue * 150).toLocaleString()}</div>
@@ -806,11 +815,7 @@ function renderCollection() {
     
     <div class="filters">
       <div class="filter-left">
-        <div class="seg-ctrl">
-          <button class="seg ${currentGame === '' ? 'on' : ''}" onclick="filterByGame('')">All</button>
-          <button class="seg ${currentGame === 'pokemon' ? 'on pk' : ''}" onclick="filterByGame('pokemon')">Pokemon</button>
-          <button class="seg ${currentGame === 'onepiece' ? 'on op' : ''}" onclick="filterByGame('onepiece')">One Piece</button>
-        </div>
+
         <div class="filter-group">
           <span class="filter-label">Sort:</span>
           <select class="filter" id="sort-filter" onchange="sortBy(this.value)">
@@ -1067,7 +1072,7 @@ function searchAddCard(q){
   _addDebounce=setTimeout(function(){
     var lq=q.toLowerCase();
     // Filter by selected TCG
-    var pool=currentGame?allCards.filter(function(c){return c.game===currentGame}):allCards;
+    var pool=allCards.filter(function(c){return c.game===currentGame});
     // Search by name or ID
     var matches=pool.filter(function(c){
       var name=(typeof c.name==='object'?(c.name.en||c.name.jp||''):(c.name||'')).toLowerCase();
