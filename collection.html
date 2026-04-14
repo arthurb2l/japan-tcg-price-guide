@@ -266,8 +266,15 @@ select.filter{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size
         <div class="card-modal-lists" id="modal-lists"></div>
       </div>
       <div class="card-modal-field">
-        <label>Purchase Price (¥ JPY)</label>
-        <input type="number" id="modal-purchase-price" placeholder="e.g. 500" min="0" onchange="modalUpdateField('purchasePrice',Number(this.value)||0)">
+        <label>Purchase Price</label>
+        <div style="display:flex;gap:6px">
+          <select id="modal-currency" style="width:70px;padding:8px;border:1px solid #ddd;border-radius:6px" onchange="modalUpdateField('currency',this.value)">
+            <option value="JPY">¥</option>
+            <option value="USD">$</option>
+            <option value="EUR">€</option>
+          </select>
+          <input type="number" id="modal-purchase-price" placeholder="e.g. 500" min="0" style="flex:1" onchange="modalUpdateField('purchasePrice',Number(this.value)||0)">
+        </div>
       </div>
       <div class="card-modal-field" id="modal-roi-field" style="display:none">
         <label>ROI</label>
@@ -306,8 +313,10 @@ let currentPage = 1;
 const PAGE_SIZE = 50;
 
 // List types: inventory (all owned), wishlist/tradelist are filtered views
-const listTypes = ['inventory', 'wishlist', 'tradelist', 'sets'];
-const listLabels = {inventory: '📦 Inventory', wishlist: '⭐ Wishlist', tradelist: '🔄 Tradelist', sets: '📊 Sets'};
+const listTypes = ['inventory', 'wishlist', 'tradelist'];
+const tabTypes = ['inventory', 'wishlist', 'tradelist', 'sets'];
+const tabLabels = {inventory: '📦 Inventory', wishlist: '⭐ Wishlist', tradelist: '🔄 Tradelist', sets: '📊 Sets'};
+const listLabels = {inventory: '📦 Inventory', wishlist: '⭐ Wishlist', tradelist: '🔄 Tradelist'};
 
 // Auth functions
 function signInWithGoogle() {
@@ -432,6 +441,7 @@ function openCardModal(cardId) {
   document.getElementById('modal-condition').value = data.condition || 'NM';
   document.getElementById('modal-language').value = data.language || 'JP';
   document.getElementById('modal-notes').value = data.notes || '';
+  document.getElementById('modal-currency').value = data.currency || localStorage.getItem('tcg_default_currency') || 'JPY';
   
   // Purchase price & ROI
   const ppInput = document.getElementById('modal-purchase-price');
@@ -645,9 +655,9 @@ function renderCollection() {
   
   const tabsHtml = `
     <div class="list-tabs">
-      ${listTypes.map(list => `
+      ${tabTypes.map(list => `
         <button class="list-tab ${list} ${currentList === list ? 'active' : ''}" onclick="switchList('${list}')">
-          ${listLabels[list]}<span class="count">(${getListCount(list)})</span>
+          ${tabLabels[list]}<span class="count">(${getListCount(list)})</span>
         </button>
       `).join('')}
     </div>
@@ -852,7 +862,6 @@ function renderCollection() {
             <th class="desktop-col" style="width:55px">Lang</th>
             <th class="desktop-col" style="width:50px">Lists</th>
             <th style="width:30px"></th>
-            <th style="width:30px"></th>
           </tr>
         </thead>
         <tbody>
@@ -865,7 +874,7 @@ function renderCollection() {
             return `
             <tr>
               <td onclick="openCardModal('${c.id}')"><img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer"></td>
-              <td onclick="openCardModal('${c.id}')"><strong>${c.name || c.id}</strong><br><small style="color:#888">${c.id}${c.rarity ? ' · '+c.rarity : ''}</small></td>
+              <td onclick="openCardModal('${c.id}')"><strong>${c.name || c.id}</strong><br><a href="search.html?game=${c.game}&q=${c.id}" class="card-id-link" onclick="event.stopPropagation()">${c.id}</a>${c.rarity ? ' <small style="color:#aaa">· '+c.rarity+'</small>' : ''}</td>
               <td onclick="openCardModal('${c.id}')">${formatPrice(getPrice(c))}</td>
               <td onclick="event.stopPropagation()">
                 <div class="qty-cell">
@@ -891,7 +900,6 @@ function renderCollection() {
                   <span class="list-icon ${inTrade ? 'active' : ''}" onclick="inlineToggleList('${c.id}','tradelist')" title="Tradelist">🔄</span>
                 </div>
               </td>
-              <td onclick="event.stopPropagation()"><a href="${c.game==='onepiece'?'onepiece/':'pokemon/'}?card=${c.id}" class="detail-link" title="Card details">ℹ️</a></td>
               <td onclick="event.stopPropagation()"><button class="delete-btn" onclick="removeFromCollection('${c.id}')" title="Remove">🗑️</button></td>
             </tr>`;
           }).join('')}
@@ -1004,7 +1012,7 @@ async function importCollection(input) {
 
 // Initialize
 const params = new URLSearchParams(location.search);
-if (params.get('list') && listTypes.includes(params.get('list'))) {
+if (params.get('list') && tabTypes.includes(params.get('list'))) {
   currentList = params.get('list');
 }
 
