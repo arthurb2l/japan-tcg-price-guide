@@ -82,6 +82,37 @@ def search_amazon(card_id, max_results=5):
     except:
         return []
 
+
+# --------------- Card Rush Scraper ---------------
+
+def search_cardrush(card_id, max_results=5):
+    """Search Card Rush OP for a card. Returns listings with variant info."""
+    url = f"https://www.cardrush-op.jp/product-list?keyword={quote_plus(card_id)}"
+    req = Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
+    try:
+        html = urlopen(req, timeout=15).read().decode('utf-8', errors='ignore')
+        raw = re.findall(
+            r'href="(https?://www\.cardrush-op\.jp/product/\d+)"[^>]*>\s*'
+            r'(?:<[^>]*>)*\s*(.*?)(\d{1,3}(?:,\d{3})*)円',
+            html, re.DOTALL
+        )
+        results = []
+        for link, content, price in raw[:max_results]:
+            texts = [t.strip() for t in re.findall(r'>([^<]+)<', content) if t.strip()]
+            title = ' '.join(texts)[:80] if texts else card_id
+            p = int(price.replace(',',''))
+            is_parallel = any(k in title for k in ['パラレル','SP','コミック','金背景','銀背景','手配書'])
+            if p < 30 or 'デッキ販売' in title: continue  # skip decks
+            results.append({
+                'source': 'Card Rush', 'title': title,
+                'price': p, 'shipping': SHIPPING['cardrush']['flat'],
+                'total': p + SHIPPING['cardrush']['flat'],
+                'url': link, 'is_parallel': is_parallel
+            })
+        return results
+    except:
+        return []
+
 # --------------- Pricing Issue Detection ---------------
 
 def detect_pricing_issues(db_cards):
@@ -149,13 +180,16 @@ def find_deals(db_cards):
 
     for card in sorted_cards:
         time.sleep(1)
-        listings = search_amazon(card['id'], 3)
-        for l in listings:
-            if l['is_parallel']: continue  # skip parallels
-            score = (card['jpy'] - l['total']) / card['jpy'] if card['jpy'] > 0 else 0
-            if 0.15 <= score <= 0.75:
-                deals.append({**card, **l, 'market': card['jpy'], 'score': score})
-                break
+        # Search both Amazon and Card Rush
+        for search_fn in [search_cardrush, search_amazon]:
+            listings = search_fn(card['id'], 3)
+            for l in listings:
+                if l['is_parallel']: continue
+                score = (card['jpy'] - l['total']) / card['jpy'] if card['jpy'] > 0 else 0
+                if 0.15 <= score <= 0.75:
+                    deals.append({**card, **l, 'market': card['jpy'], 'score': score})
+                    break
+            time.sleep(0.5)
 
     deals.sort(key=lambda d: -d['score'])
     return deals[:5]
@@ -168,7 +202,7 @@ def build_email(deals, issues_fixed, issues):
 
     html = f"""<html><body style="font-family:system-ui,sans-serif;max-width:600px;margin:0 auto;padding:20px;background:#f9f9f9">
 <h2 style="color:#D70000">🏴‍☠️ OP Deal Hunter — {day}</h2>
-<p style="color:#666;font-size:13px">Scanned: Amazon JP · Budget: ¥10,000/week</p>
+<p style="color:#666;font-size:13px">Scanned: Card Rush + Amazon JP · Budget: ¥10,000/week</p>
 <hr style="border:1px solid #eee">
 """
     # Deals section
