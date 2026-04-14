@@ -258,13 +258,42 @@ def find_deals(db_cards):
             for l in listings:
                 if l['is_parallel']: continue
                 score = (card['jpy'] - l['total']) / card['jpy'] if card['jpy'] > 0 else 0
-                if 0.15 <= score <= 0.75:
+                # Owned cards need a higher deal ratio (30% vs 15%)
+            owned = {w['id'] for w in load_watchlist() if w.get('owned')}
+            min_score = 0.30 if card['id'] in owned else 0.15
+            if min_score <= score <= 0.75:
                     deals.append({**card, **l, 'market': card['jpy'], 'score': score})
                     break
             time.sleep(0.5)
 
     deals.sort(key=lambda d: -d['score'])
     return deals[:5]
+
+
+# --------------- Bundle Optimization ---------------
+
+def find_bundles(deals):
+    """Group deals by source. If 2+ cards from same source, shipping is shared."""
+    by_source = {}
+    for d in deals:
+        src = d['source']
+        if src not in by_source: by_source[src] = []
+        by_source[src].append(d)
+    
+    bundles = []
+    for src, items in by_source.items():
+        if len(items) < 2: continue
+        ship = items[0]['shipping']  # flat rate per source
+        individual_total = sum(i['price'] + ship for i in items)
+        bundle_total = sum(i['price'] for i in items) + ship  # one shipping
+        savings = individual_total - bundle_total
+        if savings > 0:
+            bundles.append({
+                'source': src, 'cards': items, 'shipping': ship,
+                'bundle_total': bundle_total, 'individual_total': individual_total,
+                'savings': savings
+            })
+    return bundles
 
 # --------------- Email ---------------
 
@@ -297,6 +326,18 @@ def build_email(deals, issues_fixed, issues):
 </div>"""
     else:
         html += '<p style="color:#888;text-align:center;padding:30px">No deals today meeting criteria.</p>'
+
+    # Bundle section
+    bundles = find_bundles(deals)
+    if bundles:
+        html += '<hr style="border:1px solid #eee">'
+        for b in bundles:
+            cards_str = ', '.join(d['id'] for d in b['cards'])
+            html += f'''<div style="background:#e8f5e9;border-radius:10px;padding:12px;margin:10px 0">
+  <h3 style="margin:0 0 4px;font-size:14px">📦 Bundle: {b["source"]}</h3>
+  <p style="margin:2px 0;font-size:12px;color:#444">{cards_str}</p>
+  <p style="margin:4px 0;font-size:13px">Buy together: <strong>¥{b["bundle_total"]:,}</strong> (save ¥{b["savings"]:,} on shipping)</p>
+</div>'''
 
     # Pricing fixes section
     if issues:
