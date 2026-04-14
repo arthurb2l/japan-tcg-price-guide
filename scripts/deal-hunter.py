@@ -98,6 +98,7 @@ def search_amazon(card_id, max_results=5):
             # Find a reasonable price
             for p in prices:
                 if p < 30: continue
+            # Skip sold out (品切れ/在庫なし in nearby HTML)
                 ship = 0 if p >= SHIPPING['amazon']['free_above'] else SHIPPING['amazon']['flat']
                 results.append({
                     'source': 'Amazon JP', 'title': label[:80],
@@ -161,6 +162,7 @@ def search_surugaya(card_id, max_results=5):
         for item_id, name, price in items[:max_results]:
             p = int(price)
             if p < 30: continue
+            # Skip sold out (品切れ/在庫なし in nearby HTML)
             # Only include if card_id is in the name
             if card_id.replace('-','') not in name.replace('-','').replace(' ',''): continue
             is_parallel = any(k in name for k in ['パラレル','SP','コミック','金背景','銀背景','手配書'])
