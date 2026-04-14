@@ -113,6 +113,39 @@ def search_cardrush(card_id, max_results=5):
     except:
         return []
 
+
+# --------------- Suruga-ya Scraper ---------------
+
+def search_surugaya(card_id, max_results=5):
+    """Search Suruga-ya for a card. Extracts from embedded JS product data."""
+    url = f"https://www.suruga-ya.jp/search?category=&search_word={quote_plus(card_id)}&restrict%5B%5D=categorygroup_6"
+    req = Request(url, headers={'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ja-JP'})
+    try:
+        html = urlopen(req, timeout=15).read().decode('utf-8', errors='ignore')
+        items = re.findall(
+            r"item_id:\s*common\.htmlDecode\('([^']+)'\).*?"
+            r"item_name:\s*common\.htmlDecode\('([^']+)'\).*?"
+            r"price:\s*(\d+)",
+            html, re.DOTALL
+        )
+        results = []
+        for item_id, name, price in items[:max_results]:
+            p = int(price)
+            if p < 30: continue
+            # Only include if card_id is in the name
+            if card_id.replace('-','') not in name.replace('-','').replace(' ',''): continue
+            is_parallel = any(k in name for k in ['パラレル','SP','コミック','金背景','銀背景','手配書'])
+            results.append({
+                'source': 'Suruga-ya', 'title': name[:80],
+                'price': p, 'shipping': SHIPPING['surugaya']['flat'],
+                'total': p + SHIPPING['surugaya']['flat'],
+                'url': f"https://www.suruga-ya.jp/product/detail/{item_id}",
+                'is_parallel': is_parallel
+            })
+        return results
+    except:
+        return []
+
 # --------------- Pricing Issue Detection ---------------
 
 def detect_pricing_issues(db_cards):
@@ -181,7 +214,7 @@ def find_deals(db_cards):
     for card in sorted_cards:
         time.sleep(1)
         # Search both Amazon and Card Rush
-        for search_fn in [search_cardrush, search_amazon]:
+        for search_fn in [search_cardrush, search_surugaya, search_amazon]:
             listings = search_fn(card['id'], 3)
             for l in listings:
                 if l['is_parallel']: continue
@@ -202,7 +235,7 @@ def build_email(deals, issues_fixed, issues):
 
     html = f"""<html><body style="font-family:system-ui,sans-serif;max-width:600px;margin:0 auto;padding:20px;background:#f9f9f9">
 <h2 style="color:#D70000">🏴‍☠️ OP Deal Hunter — {day}</h2>
-<p style="color:#666;font-size:13px">Scanned: Card Rush + Amazon JP · Budget: ¥10,000/week</p>
+<p style="color:#666;font-size:13px">Scanned: Card Rush + Suruga-ya + Amazon JP · Budget: ¥10,000/week</p>
 <hr style="border:1px solid #eee">
 """
     # Deals section
