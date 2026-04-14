@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scan Card | PokePiece</title>
+<link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
+<style>
+body{margin:0;background:#111;color:#fff;font-family:system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column}
+.top-bar{display:flex;align-items:center;padding:12px 16px;gap:12px;background:#000}
+.top-bar a{color:#fff;text-decoration:none;font-size:1.4em}
+.top-bar h1{font-size:1em;margin:0;flex:1}
+.tcg-pick{display:flex;justify-content:center;gap:12px;padding:16px}
+.tcg-pick button{padding:10px 24px;border:2px solid #444;border-radius:8px;background:none;color:#fff;font-size:1em;cursor:pointer}
+.tcg-pick button.active{border-color:#4CAF50;background:#4CAF5022}
+.tcg-pick button.pokemon.active{border-color:#EE1515;background:#EE151522}
+.tcg-pick button.onepiece.active{border-color:#D70000;background:#D7000022}
+.camera-wrap{position:relative;flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#000}
+video{width:100%;max-height:60vh;object-fit:cover}
+canvas{display:none}
+.guide{position:absolute;border:2px solid #4CAF50;border-radius:4px;pointer-events:none}
+.guide-num{width:140px;height:36px;bottom:18%;left:8%}
+.guide-label{position:absolute;color:#4CAF50;font-size:10px;bottom:-16px;left:0;white-space:nowrap}
+.controls{display:flex;justify-content:center;gap:16px;padding:16px}
+.snap-btn{width:64px;height:64px;border-radius:50%;border:3px solid #fff;background:none;cursor:pointer;position:relative}
+.snap-btn::after{content:'';position:absolute;inset:4px;border-radius:50%;background:#fff}
+.snap-btn:active::after{background:#ccc}
+.result{padding:16px;display:none}
+.result.show{display:block}
+.result-card{background:#222;border-radius:12px;padding:16px;display:flex;gap:16px;align-items:flex-start}
+.result-card img{width:100px;border-radius:6px}
+.result-info h3{margin:0 0 4px;font-size:1.1em}
+.result-info p{margin:2px 0;color:#aaa;font-size:.85em}
+.result-info .price{color:#4CAF50;font-size:1.2em;font-weight:bold;margin-top:8px}
+.result-info .no-match{color:#ff5252}
+.ocr-raw{color:#666;font-size:.75em;margin-top:12px;word-break:break-all}
+.retry-btn{display:block;margin:12px auto;padding:10px 24px;background:#333;color:#fff;border:none;border-radius:8px;font-size:.9em;cursor:pointer}
+.loading{text-align:center;padding:20px;display:none}
+.loading.show{display:block}
+.loading .spinner{display:inline-block;width:24px;height:24px;border:3px solid #444;border-top-color:#4CAF50;border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.deal-input{margin-top:12px;display:flex;gap:8px;align-items:center}
+.deal-input input{background:#333;border:1px solid #555;color:#fff;padding:6px 10px;border-radius:6px;width:100px;font-size:.9em}
+.deal-input .verdict{font-weight:bold;font-size:.9em}
+.deal-input .verdict.good{color:#4CAF50}
+.deal-input .verdict.bad{color:#ff5252}
+.deal-input .verdict.fair{color:#FFC107}
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <a href="index.html">←</a>
+  <h1>📷 Scan Card</h1>
+</div>
+
+<div class="tcg-pick">
+  <button class="pokemon" onclick="pickTcg('pokemon')">⚡ Pokemon</button>
+  <button class="onepiece" onclick="pickTcg('onepiece')">🏴‍☠️ One Piece</button>
+</div>
+
+<div class="camera-wrap" id="cam-wrap">
+  <video id="vid" autoplay playsinline></video>
+  <canvas id="cvs"></canvas>
+  <div class="guide guide-num"><span class="guide-label">Card number ↑</span></div>
+</div>
+
+<div class="controls">
+  <button class="snap-btn" id="snap" onclick="capture()" title="Capture"></button>
+</div>
+
+<div class="loading" id="loading">
+  <div class="spinner"></div>
+  <p>Reading card number…</p>
+</div>
+
+<div class="result" id="result">
+  <div class="result-card" id="result-card"></div>
+  <div class="ocr-raw" id="ocr-raw"></div>
+  <div class="deal-input" id="deal-box" style="display:none">
+    <span>Shop price: ¥</span>
+    <input type="number" id="shop-price" placeholder="0" oninput="checkDeal()">
+    <span class="verdict" id="verdict"></span>
+  </div>
+  <button class="retry-btn" onclick="retry()">Scan Another</button>
+</div>
+
+<script>
+var tcg=localStorage.getItem('scan-tcg')||'';
+var stream=null,worker=null,cardDb=null,matched=null;
+
+// TCG selection
+function pickTcg(t){
+  tcg=t;localStorage.setItem('scan-tcg',t);
+  document.querySelectorAll('.tcg-pick button').forEach(b=>b.classList.remove('active'));
+  document.querySelector('.tcg-pick .'+t).classList.add('active');
+  loadDb();startCam();
+}
+if(tcg){document.querySelector('.tcg-pick .'+tcg).classList.add('active');loadDb();startCam();}
+
+// Camera
+function startCam(){
+  if(stream)return;
+  navigator.mediaDevices.getUserMedia({video:{facingMode:'environment',width:{ideal:1280}}})
+    .then(s=>{stream=s;document.getElementById('vid').srcObject=s;})
+    .catch(e=>alert('Camera error: '+e.message));
+}
+
+// Load card DB
+function loadDb(){
+  if(cardDb&&cardDb._tcg===tcg)return;
+  var url=tcg==='onepiece'
+    ?'/japan-tcg-price-guide/data/onepiece-cache.json'
+    :'/japan-tcg-price-guide/data/shards/sv.json';
+  fetch(url).then(r=>r.json()).then(d=>{
+    var cards=[];
+    if(d.sets){
+      Object.values(d.sets).forEach(s=>{if(Array.isArray(s))s.forEach(c=>cards.push(c));});
+    }else if(Array.isArray(d)){
+      cards=d;
+    }
+    cardDb=cards;cardDb._tcg=tcg;
+    // For pokemon, load all shards
+    if(tcg==='pokemon'){
+      var shards=['bw','dp','ex','sm','sv','swsh','vintage','xy'];
+      var loaded=0;cards.length=0;
+      shards.forEach(sh=>{
+        fetch('/japan-tcg-price-guide/data/shards/'+sh+'.json').then(r=>r.json()).then(arr=>{
+          if(Array.isArray(arr))arr.forEach(c=>cards.push(c));
+          loaded++;if(loaded===shards.length){cardDb=cards;cardDb._tcg=tcg;}
+        });
+      });
+    }
+  });
+}
+
+// Capture
+function capture(){
+  var vid=document.getElementById('vid'),cvs=document.getElementById('cvs');
+  cvs.width=vid.videoWidth;cvs.height=vid.videoHeight;
+  var ctx=cvs.getContext('2d');ctx.drawImage(vid,0,0);
+  // Crop bottom-left region where card number typically is
+  var cw=cvs.width,ch=cvs.height;
+  var cx=0,cy=Math.floor(ch*0.7),cWidth=Math.floor(cw*0.5),cHeight=Math.floor(ch*0.3);
+  var crop=ctx.getImageData(cx,cy,cWidth,cHeight);
+  var tmp=document.createElement('canvas');tmp.width=cWidth;tmp.height=cHeight;
+  tmp.getContext('2d').putImageData(crop,0,0);
+  runOcr(tmp);
+}
+
+// OCR with Tesseract.js (lazy load)
+function runOcr(canvas){
+  document.getElementById('loading').classList.add('show');
+  document.getElementById('result').classList.remove('show');
+  if(!window.Tesseract){
+    var s=document.createElement('script');
+    s.src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js';
+    s.onload=function(){doOcr(canvas);};
+    document.head.appendChild(s);
+  }else{doOcr(canvas);}
+}
+
+function doOcr(canvas){
+  Tesseract.recognize(canvas,'eng',{logger:function(){}}).then(function(r){
+    document.getElementById('loading').classList.remove('show');
+    var txt=r.data.text.trim();
+    document.getElementById('ocr-raw').textContent='OCR: '+txt;
+    matchCard(txt);
+  }).catch(function(e){
+    document.getElementById('loading').classList.remove('show');
+    showNoMatch('OCR failed: '+e.message,'');
+  });
+}
+
+// Match card number
+function matchCard(raw){
+  if(!cardDb||!cardDb.length)return showNoMatch('Card database not loaded','');
+  // Try to extract card number patterns
+  var patterns=[
+    /([A-Z]{2,3}\d{1,2})-(\d{2,3})/i,       // OP01-001, ST-01-001
+    /([A-Z]-\d{3})/i,                          // P-001
+    /(\d{3})\s*\/\s*(\d{3})/,                  // 001/190 (pokemon)
+    /([A-Z]{2,4}\d{1,2}[a-z]?)\s+(\d{3})/i,   // SV4a 001
+  ];
+  var cardNum=null;
+  for(var i=0;i<patterns.length;i++){
+    var m=raw.match(patterns[i]);
+    if(m){cardNum=m[0].replace(/\s+/g,'');break;}
+  }
+  if(!cardNum)return showNoMatch('Could not parse card number',raw);
+
+  // Fuzzy match against DB
+  var best=null,bestScore=0;
+  var norm=cardNum.toUpperCase().replace(/[^A-Z0-9\/-]/g,'');
+  cardDb.forEach(function(c){
+    if(!c.id)return;
+    var cid=c.id.toUpperCase().replace(/[^A-Z0-9\/-]/g,'');
+    if(cid===norm){best=c;bestScore=1;return;}
+    // Partial match
+    if(norm.length>3&&cid.indexOf(norm)>=0&&bestScore<0.9){best=c;bestScore=0.9;}
+    if(norm.length>3&&norm.indexOf(cid)>=0&&bestScore<0.8){best=c;bestScore=0.8;}
+  });
+
+  if(best&&bestScore>=0.8){
+    matched=best;
+    showMatch(best,bestScore,raw);
+  }else{
+    showNoMatch('No match for: '+cardNum,raw);
+  }
+}
+
+function showMatch(card,confidence,raw){
+  var name=typeof card.name==='object'?(card.name.en||card.name.jp||''):card.name||'';
+  var img=typeof card.img==='object'?(card.img.en||card.img.jp||card.image||''):(card.image||card.img||'');
+  var price=card.pricing?card.pricing.computed:null;
+  var jpy=price?price.jpy:null;
+  var set=card.set||'';
+  var rarity=card.rarity||'';
+
+  var html='';
+  if(img)html+='<img src="'+img+'" alt="'+card.id+'">';
+  html+='<div class="result-info">';
+  html+='<h3>'+card.id+'</h3>';
+  html+='<p>'+name+'</p>';
+  html+='<p>'+set+(rarity?' · '+rarity:'')+'</p>';
+  if(jpy)html+='<p class="price">¥'+jpy.toLocaleString()+'</p>';
+  else html+='<p style="color:#888">No price data</p>';
+  html+='<p style="color:#666;font-size:.75em">Confidence: '+(confidence*100).toFixed(0)+'%</p>';
+  html+='</div>';
+
+  document.getElementById('result-card').innerHTML=html;
+  document.getElementById('result').classList.add('show');
+  if(jpy)document.getElementById('deal-box').style.display='flex';
+  else document.getElementById('deal-box').style.display='none';
+
+  logMatch(card.id,confidence,raw,true);
+}
+
+function showNoMatch(msg,raw){
+  matched=null;
+  document.getElementById('result-card').innerHTML='<div class="result-info"><p class="no-match">'+msg+'</p><p style="margin-top:8px"><a href="search.html'+(raw?'?q='+encodeURIComponent(raw):'')+'" style="color:#4CAF50">Search manually →</a></p></div>';
+  document.getElementById('result').classList.add('show');
+  document.getElementById('deal-box').style.display='none';
+  logMatch(null,0,raw,false);
+}
+
+// Deal check
+function checkDeal(){
+  if(!matched||!matched.pricing||!matched.pricing.computed)return;
+  var market=matched.pricing.computed.jpy;if(!market)return;
+  var shop=parseInt(document.getElementById('shop-price').value)||0;
+  if(!shop)return;
+  var v=document.getElementById('verdict');
+  var ratio=shop/market;
+  if(ratio<=0.7){v.textContent='🔥 Great deal!';v.className='verdict good';}
+  else if(ratio<=1.0){v.textContent='👍 Fair price';v.className='verdict fair';}
+  else{v.textContent='👎 Overpriced';v.className='verdict bad';}
+}
+
+function retry(){
+  document.getElementById('result').classList.remove('show');
+  matched=null;
+  document.getElementById('shop-price').value='';
+  document.getElementById('verdict').textContent='';
+}
+
+// Firebase logging
+function logMatch(cardId,confidence,raw,success){
+  try{
+    if(!firebase.apps.length)firebase.initializeApp({apiKey:"AIzaSyBx5m2k2NYQOmNMIzBMfpJXnk8AF3K3VYE",authDomain:"japan-tcg-price-guide.firebaseapp.com",projectId:"japan-tcg-price-guide"});
+    var db=firebase.firestore();
+    db.collection('card-recognition-logs').add({
+      timestamp:new Date().toISOString(),
+      tcgType:tcg,
+      rawOcrText:raw||'',
+      matchedCardId:cardId,
+      confidence:confidence,
+      matched:success,
+      userAgent:navigator.userAgent
+    });
+  }catch(e){}
+}
+</script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+</body>
+</html>
