@@ -18,7 +18,7 @@ EMAIL_FROM = "abrejon@amazon.com"
 
 SHIPPING = {
     "amazon": {"free_above": 2000, "flat": 410},
-    "surugaya": {"flat": 440},
+    "surugaya": {"flat": 440, "free_above": 1500},
     "cardrush": {"flat": 200},
 }
 
@@ -169,8 +169,8 @@ def search_surugaya(card_id, max_results=5):
             is_parallel = any(k in name for k in ['パラレル','SP','コミック','金背景','銀背景','手配書'])
             results.append({
                 'source': 'Suruga-ya', 'title': name[:80],
-                'price': p, 'shipping': SHIPPING['surugaya']['flat'],
-                'total': p + SHIPPING['surugaya']['flat'],
+                'price': p, 'shipping': 0 if p >= SHIPPING['surugaya']['free_above'] else SHIPPING['surugaya']['flat'],
+                'total': p + (0 if p >= SHIPPING['surugaya']['free_above'] else SHIPPING['surugaya']['flat']),
                 'url': f"https://www.suruga-ya.jp/product/detail/{item_id}",
                 'is_parallel': is_parallel
             })
@@ -355,7 +355,7 @@ def build_email(deals, issues_fixed, issues):
             html += f'''<div style="background:#e8f5e9;border-radius:10px;padding:12px;margin:10px 0">
   <h3 style="margin:0 0 4px;font-size:14px">📦 Bundle: {b["source"]}</h3>
   <p style="margin:2px 0;font-size:12px;color:#444">{cards_str}</p>
-  <p style="margin:4px 0;font-size:13px">Buy together: <strong>¥{b["bundle_total"]:,}</strong> (save ¥{b["savings"]:,} on shipping)</p>
+  <p style="margin:4px 0;font-size:13px">Buy together: <strong>¥{b["bundle_total"]:,}</strong> (save ¥{b["savings"]:,} on shipping){' · 🚚 FREE shipping!' if b["source"]=='Suruga-ya' and sum(d["price"] for d in b["cards"])>=1500 else ''}</p>
 </div>'''
 
     # Pricing fixes section
