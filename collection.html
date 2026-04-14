@@ -239,6 +239,21 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
 
 <div class="page-header">
   <h1 class="page-title">📦 My Collection</h1>
+  <button class="util-btn add-btn" onclick="toggleAddCard()">＋ Add Card</button>
+</div>
+
+<div class="tcg-selector" id="tcg-selector">
+  <button class="tcg-btn" data-tcg="pokemon" onclick="filterByGame('pokemon')">
+    ⚡ <span class="tcg-label">Pokemon</span>
+  </button>
+  <button class="tcg-btn" data-tcg="onepiece" onclick="filterByGame('onepiece')">
+    🏴‍☠️ <span class="tcg-label">One Piece</span>
+  </button>
+</div>
+
+<div class="add-card-bar" id="add-card-bar" style="display:none">
+  <input type="text" id="add-card-input" placeholder="Type card name or ID…" oninput="searchAddCard(this.value)" autocomplete="off">
+  <div class="add-suggestions" id="add-suggestions"></div>
 </div>
 
 <div id="content">
@@ -373,6 +388,7 @@ auth.onAuthStateChanged(async user => {
   }
   authChecked = true;
   renderIfReady();
+  updateTcgSelector();
 });
 
 async function loadUserCollection(uid) {
@@ -680,15 +696,11 @@ function renderCollection() {
       `).join('')}
     </div>
     <div class="util-row">
-      <button class="util-btn add-btn" onclick="toggleAddCard()">＋ Add Card</button>
       <a href="backup.html" class="util-btn" style="text-decoration:none">💾 Backup</a>
       <button class="util-btn" onclick="shareCollection()">🔗 Share</button>
       <button class="util-btn" onclick="exportCollection()">📥 Export</button>
     </div>
-    <div class="add-card-bar" id="add-card-bar" style="display:none">
-      <input type="text" id="add-card-input" placeholder="Type card name or ID…" oninput="searchAddCard(this.value)" autocomplete="off">
-      <div class="add-suggestions" id="add-suggestions"></div>
-    </div>`;
+`;
   
   const emptyMessages = {
     inventory: {icon: '📦', title: 'Your inventory is empty', desc: 'Search for cards to add them to your collection.'},
@@ -795,15 +807,6 @@ function renderCollection() {
   const formatPrice = p => p !== null ? '¥' + Math.round(p * 150).toLocaleString() : '-';
   
   content.innerHTML = tabsHtml + `
-    <div class="tcg-selector">
-      <button class="tcg-btn ${currentGame === 'pokemon' ? 'active pk' : ''}" onclick="filterByGame('pokemon')">
-        ⚡ <span class="tcg-label">Pokemon</span> <span class="tcg-count">(${collectionCards.filter(c=>c.game==='pokemon').reduce((s,c)=>s+getQty(c.id),0)})</span>
-      </button>
-      <button class="tcg-btn ${currentGame === 'onepiece' ? 'active op' : ''}" onclick="filterByGame('onepiece')">
-        🏴‍☠️ <span class="tcg-label">One Piece</span> <span class="tcg-count">(${collectionCards.filter(c=>c.game==='onepiece').reduce((s,c)=>s+getQty(c.id),0)})</span>
-      </button>
-    </div>
-    
     <div class="stats-row">
       <div class="stat-card total">
         <div class="value">${totalCards}</div>
@@ -950,7 +953,17 @@ function filterByGame(game) {
   currentGame = game;
   localStorage.setItem('collection-tcg', game);
   currentPage = 1;
+  updateTcgSelector();
   renderCollection();
+}
+
+function updateTcgSelector() {
+  document.querySelectorAll('.tcg-btn').forEach(function(b) {
+    var t = b.dataset.tcg;
+    b.classList.toggle('active', t === currentGame);
+    b.classList.toggle('pk', t === 'pokemon' && t === currentGame);
+    b.classList.toggle('op', t === 'onepiece' && t === currentGame);
+  });
 }
 
 function sortBy(sort) {
