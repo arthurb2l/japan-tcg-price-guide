@@ -10,3 +10,6 @@ onepiece/images/don/_pdf_cards_rgb/
 onepiece/images/don/_pdf_rendered/
 onepiece/images/don/_originals/
 onepiece/images/don/_pdf_extract/
+
+# Deal hunter daily reports
+data/deal-hunter-*.html
