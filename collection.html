@@ -243,12 +243,8 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
 </div>
 
 <div class="tcg-selector" id="tcg-selector">
-  <button class="tcg-btn" data-tcg="pokemon" onclick="filterByGame('pokemon')">
-    ⚡ <span class="tcg-label">Pokemon</span>
-  </button>
-  <button class="tcg-btn" data-tcg="onepiece" onclick="filterByGame('onepiece')">
-    🏴‍☠️ <span class="tcg-label">One Piece</span>
-  </button>
+  <button class="tcg-btn" data-tcg="pokemon" onclick="filterByGame('pokemon')">⚡ Pokemon</button>
+  <button class="tcg-btn" data-tcg="onepiece" onclick="filterByGame('onepiece')">🏴‍☠️ One Piece</button>
 </div>
 
 <div class="add-card-bar" id="add-card-bar" style="display:none">
@@ -960,9 +956,11 @@ function filterByGame(game) {
 function updateTcgSelector() {
   document.querySelectorAll('.tcg-btn').forEach(function(b) {
     var t = b.dataset.tcg;
-    b.classList.toggle('active', t === currentGame);
-    b.classList.toggle('pk', t === 'pokemon' && t === currentGame);
-    b.classList.toggle('op', t === 'onepiece' && t === currentGame);
+    b.classList.remove('active','pk','op');
+    if (t === currentGame) {
+      b.classList.add('active');
+      if (t === 'onepiece') b.classList.add('op');
+    }
   });
 }
 
