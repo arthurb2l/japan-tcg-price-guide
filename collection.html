@@ -662,9 +662,14 @@ function renderCollection() {
       `).join('')}
     </div>
     <div class="util-row">
-      <a href="backup.html" class="util-btn" style="text-decoration:none">💾 Backup</a>
-      <button class="util-btn" onclick="shareCollection()">🔗 Share</button>
-      <button class="util-btn" onclick="exportCollection()">📥 Export</button>
+      <button class="util-btn add-btn" onclick="toggleAddCard()">＋ Add Card</button>
+      <a href="backup.html" class="util-btn" style="text-decoration:none">💾</a>
+      <button class="util-btn" onclick="shareCollection()">🔗</button>
+      <button class="util-btn" onclick="exportCollection()">📥</button>
+    </div>
+    <div class="add-card-bar" id="add-card-bar" style="display:none">
+      <input type="text" id="add-card-input" placeholder="Type card name or ID…" oninput="searchAddCard(this.value)" autocomplete="off">
+      <div class="add-suggestions" id="add-suggestions"></div>
     </div>`;
   
   const emptyMessages = {
@@ -801,10 +806,10 @@ function renderCollection() {
     
     <div class="filters">
       <div class="filter-left">
-        <div class="tcg-tabs">
-          <button class="tcg-tab ${currentGame === '' ? 'active' : ''}" onclick="filterByGame('')">All <span class="cnt">(${collectionCards.length})</span></button>
-          <button class="tcg-tab pokemon ${currentGame === 'pokemon' ? 'active' : ''}" onclick="filterByGame('pokemon')">⚡ Pokemon <span class="cnt">(${collectionCards.filter(c=>c.game==='pokemon').length})</span></button>
-          <button class="tcg-tab onepiece ${currentGame === 'onepiece' ? 'active' : ''}" onclick="filterByGame('onepiece')">🏴‍☠️ One Piece <span class="cnt">(${collectionCards.filter(c=>c.game==='onepiece').length})</span></button>
+        <div class="seg-ctrl">
+          <button class="seg ${currentGame === '' ? 'on' : ''}" onclick="filterByGame('')">All</button>
+          <button class="seg ${currentGame === 'pokemon' ? 'on pk' : ''}" onclick="filterByGame('pokemon')">Pokemon</button>
+          <button class="seg ${currentGame === 'onepiece' ? 'on op' : ''}" onclick="filterByGame('onepiece')">One Piece</button>
         </div>
         <div class="filter-group">
           <span class="filter-label">Sort:</span>
@@ -1046,6 +1051,66 @@ setTimeout(() => {
 </script>
 
 <footer id="site-footer"></footer>
-<script src="/japan-tcg-price-guide/components/footer.js"></script>
+<script src="/japan-tcg-price-guide/components/footer.js">
+function toggleAddCard(){
+  var bar=document.getElementById('add-card-bar');
+  var vis=bar.style.display!=='none';
+  bar.style.display=vis?'none':'block';
+  if(!vis){document.getElementById('add-card-input').focus();document.getElementById('add-card-input').value='';document.getElementById('add-suggestions').classList.remove('show');}
+}
+
+var _addDebounce;
+function searchAddCard(q){
+  clearTimeout(_addDebounce);
+  var el=document.getElementById('add-suggestions');
+  if(q.length<2){el.classList.remove('show');return;}
+  _addDebounce=setTimeout(function(){
+    var lq=q.toLowerCase();
+    // Filter by selected TCG
+    var pool=currentGame?allCards.filter(function(c){return c.game===currentGame}):allCards;
+    // Search by name or ID
+    var matches=pool.filter(function(c){
+      var name=(typeof c.name==='object'?(c.name.en||c.name.jp||''):(c.name||'')).toLowerCase();
+      var id=(c.id||'').toLowerCase();
+      return name.indexOf(lq)>=0||id.indexOf(lq)>=0;
+    }).slice(0,15);
+    if(!matches.length){el.innerHTML='<div class="add-sug" style="color:#888;cursor:default">No cards found</div>';el.classList.add('show');return;}
+    var proxyImg=function(url){return url&&url.includes('onepiece-cardgame.com')?'https://wsrv.nl/?url='+encodeURIComponent(url):url;};
+    el.innerHTML=matches.map(function(c){
+      var name=typeof c.name==='object'?(c.name.en||c.name.jp||''):(c.name||'');
+      var img=proxyImg(typeof c.img==='object'?(c.img.jp||c.img.en||''):'')|| (c.game!=='onepiece'&&c.image?c.image+'/low.webp':'');
+      var price=getPrice(c);
+      var pStr=price?'¥'+Math.round(price*150).toLocaleString():'';
+      return '<div class="add-sug" onclick="quickAdd(\''+c.id.replace(/'/g,"\\'")+'\')">'
+        +(img?'<img src="'+img+'" alt="" referrerpolicy="no-referrer">':'')
+        +'<span class="s-name">'+name+'<br><small>'+c.id+(c.rarity?' · '+c.rarity:'')+'</small></span>'
+        +'<span class="s-price">'+pStr+'</span></div>';
+    }).join('');
+    el.classList.add('show');
+  },150);
+}
+
+async function quickAdd(cardId){
+  if(userCollection[cardId]){
+    // Already in collection — increment qty
+    await updateQuantity(cardId,1);
+  }else{
+    userCollection[cardId]={qty:1,condition:'NM',language:'JP',addedAt:new Date().toISOString()};
+    if(currentUser){
+      await db.collection('users').doc(currentUser.uid).collection('inventory').doc(cardId).set(userCollection[cardId]);
+    }else{
+      localStorage.setItem('tcg_inventory',JSON.stringify(userCollection));
+    }
+  }
+  document.getElementById('add-card-input').value='';
+  document.getElementById('add-suggestions').classList.remove('show');
+  renderCollection();
+}
+
+// Close suggestions on outside click
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.add-card-bar'))document.getElementById('add-suggestions')?.classList.remove('show');
+});
+</script>
 </body>
 </html>
