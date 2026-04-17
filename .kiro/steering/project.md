@@ -8,7 +8,7 @@ inclusion: always
 - **Repo:** arthurb2l/japan-tcg-price-guide
 - **Live:** https://arthurb2l.github.io/japan-tcg-price-guide/
 - **Hosting:** GitHub Pages (NOT Vercel)
-- **Path:** /mnt/c/q/Pokemon/
+- **Path:** /mnt/c/q/projects/pokemon/
 
 ## Deployment
 - GitHub Pages deploys from `main` branch automatically
@@ -69,3 +69,16 @@ inclusion: always
 - Variant `variant` field needs human-readable names for all sets (only EB-02 done)
 - Pokemon: SV6a added (94 cards with prices), search `setId` normalization fixed
 - **CRITICAL:** Never mix EN and JP card lists — JP official site is the only source
+
+## Deal Hunter — pricing pipeline safety (learned 2026-04-17)
+- **Sanity filter is mandatory** — drop listings <20% of DB price BEFORE consensus. Without it, damaged/sold-out/wrong-card listings poison the pool.
+- **Guardrails before root-cause fix** — when a data pipeline corrupts its own store, ship overrides/blocklist/flip-guards IMMEDIATELY to stop damage, then fix the real bug.
+- **Consensus requires 3+ sources** (not 2). Two noisy scrapers agreeing on a bad match is trivially common.
+- **Flip-guard** — if a card was corrected within 7 days in the opposite direction, require 4+ sources + >50% divergence to flip it. Cheap ping-pong detector.
+- **Every correction logged** to `data/deal-hunter-correction-history.jsonl` so patterns are visible.
+- **JP retailers don't use `_p1/_p2` suffixes in listings** — those are internal Bandai IDs. Matching must use exact card ID + keyword heuristics for variant classification.
+- **Files:** `data/deal-hunter-overrides.json` (manual locks), `data/deal-hunter-blocklist.json` (time-boxed exclusions)
+
+## UI debugging heuristic (learned 2026-04-17)
+- Before debugging visual inconsistency between similar components, grep for CSS rules matching each class name across all files. A component with ZERO matching rules is using browser defaults — this is almost always the root cause, not cascade or specificity issues.
+- Stale tickets (>2 weeks old) need current-state audit before starting. Post a Status+Evidence table to the issue — don't trust the original problem list.
