@@ -1,0 +1,4 @@
+{
+  "_README": "Manually verified prices. Format: {\"CARD-ID\": {\"price\": 70000, \"reason\": \"why locked\"}}. These override the consensus DB and are never auto-corrected.",
+  "OP03-122": {"price": 70000, "reason": "Sogeking chase card — scrapers repeatedly matched sold-out/wrong listings at ¥650"}
+}
