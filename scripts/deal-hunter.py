@@ -28,6 +28,45 @@ DEAL_THRESHOLD = 0.70
 MIN_MARKET_VALUE = 200
 
 WATCHLIST_FILE = os.path.join(DATA_DIR, 'deal-hunter-watchlist.json')
+OVERRIDES_FILE = os.path.join(DATA_DIR, 'deal-hunter-overrides.json')
+BLOCKLIST_FILE = os.path.join(DATA_DIR, 'deal-hunter-blocklist.json')
+HISTORY_FILE = os.path.join(DATA_DIR, 'deal-hunter-correction-history.jsonl')
+
+
+def _load_json(path, default):
+    try:
+        with open(path) as f: return json.load(f)
+    except: return default
+
+def load_overrides():
+    """Manual price locks: {card_id: {price, reason}}. Skip correction + use this price."""
+    return {k: v for k, v in _load_json(OVERRIDES_FILE, {}).items() if not k.startswith('_')}
+
+def load_blocklist():
+    """Excluded cards: {card_id: {until: 'YYYY-MM-DD', reason}}. Skipped from scan."""
+    raw = {k: v for k, v in _load_json(BLOCKLIST_FILE, {}).items() if not k.startswith('_')}
+    today = date.today().isoformat()
+    return {cid: v for cid, v in raw.items() if v.get('until', '9999-12-31') >= today}
+
+def recent_correction_dirs(days=7):
+    """Return {card_id: last_direction} from history within N days. direction: +1 up, -1 down."""
+    if not os.path.exists(HISTORY_FILE): return {}
+    cutoff = (date.today() - __import__('datetime').timedelta(days=days)).isoformat()
+    dirs = {}
+    try:
+        with open(HISTORY_FILE) as f:
+            for line in f:
+                try: e = json.loads(line)
+                except: continue
+                if e.get('date', '') < cutoff: continue
+                dirs[e['id']] = 1 if e['new'] > e['old'] else -1
+    except: pass
+    return dirs
+
+def append_history(corrections):
+    with open(HISTORY_FILE, 'a') as f:
+        for c in corrections:
+            f.write(json.dumps({'date': date.today().isoformat(), **c}) + '\n')
 
 def load_watchlist():
     try:
@@ -178,99 +217,126 @@ def search_surugaya(card_id, max_results=5):
     except:
         return []
 
-# --------------- Pricing Issue Detection ---------------
+# --------------- Consensus Pricing & Deal Finding ---------------
 
-def detect_pricing_issues(db_cards):
-    """Find cards where regular finish has suspiciously high price (likely parallel price leak)."""
-    issues = []
-    by_id = {}
-    for key, c in db_cards.items():
-        cid = c['id']
-        if cid not in by_id: by_id[cid] = []
-        by_id[cid].append(c)
+def scrape_all_sources(card_id):
+    """Scrape all sources for a card, return regular-finish listings."""
+    all_listings = []
+    for search_fn in [search_cardrush, search_surugaya, search_amazon]:
+        listings = search_fn(card_id, 3)
+        for l in listings:
+            if not l['is_parallel']:
+                all_listings.append(l)
+        time.sleep(0.8)
+    return all_listings
 
-    for cid, variants in by_id.items():
-        regular = [v for v in variants if v['finish'] == 'regular' and v['jpy']]
-        parallels = [v for v in variants if 'parallel' in v['finish'] and v['jpy']]
-        if not regular or not parallels: continue
+def consensus_price(listings):
+    """Median total price from 3+ sources = consensus. Returns None if < 3 sources."""
+    if len(listings) < 3:
+        return None
+    totals = sorted(l['total'] for l in listings)
+    mid = len(totals) // 2
+    return totals[mid] if len(totals) % 2 else (totals[mid-1] + totals[mid]) // 2
 
-        reg_price = regular[0]['jpy']
-        par_prices = [p['jpy'] for p in parallels]
+def correct_db_price(data, card_id, new_price, old_price):
+    """Update cache when consensus disagrees with DB. Returns True if corrected."""
+    for setid, cards in data['sets'].items():
+        if not isinstance(cards, list): continue
+        for c in cards:
+            if c.get('id') == card_id and c.get('finish') == 'regular':
+                c.setdefault('pricing', {}).setdefault('computed', {})['jpy'] = new_price
+                c['pricing']['method'] = 'consensus-corrected'
+                c['pricing']['corrected_from'] = old_price
+                c['pricing']['updated'] = date.today().isoformat()
+                return True
+    return False
 
-        # Flag: regular price == highest parallel price (likely copied, not real)
-        if reg_price > 5000 and reg_price == max(par_prices):
-            issues.append({
-                'id': cid, 'name': regular[0]['name'], 'rarity': regular[0]['rarity'],
-                'set': regular[0]['set'],
-                'regular_price': reg_price, 'parallel_prices': par_prices,
-                'issue': f"Regular ¥{reg_price:,} == parallel max — likely inflated"
-            })
-
-    return issues
-
-def fix_pricing_issues(data, issues):
-    """For flagged cards, estimate regular price from rarity."""
-    rarity_estimates = {
-        'L': 50, 'C': 30, 'UC': 30, 'R': 80, 'SR': 300,
-        'SEC': 2000, 'SP': 500, 'P': 200
-    }
-    fixed = 0
-    for issue in issues:
-        est = rarity_estimates.get(issue['rarity'], 100)
-        for setid, cards in data['sets'].items():
-            if not isinstance(cards, list): continue
-            for c in cards:
-                if c.get('id') == issue['id'] and c.get('finish') == 'regular':
-                    old = c.get('pricing',{}).get('computed',{}).get('jpy')
-                    if old and old > est * 10:  # only fix if wildly off
-                        c['pricing']['computed']['jpy'] = est
-                        c['pricing']['method'] = 'deal-hunter-corrected'
-                        c['pricing']['updated'] = date.today().isoformat()
-                        fixed += 1
-    return fixed
-
-# --------------- Deal Finding ---------------
-
-def find_deals(db_cards):
-    """Scan sources for watchlist cards first, then top valuable."""
+def find_deals(db_cards, data):
+    """Consensus-based deal finding. Scrape multiple sources, compare against each other."""
     # Build candidate pool
     candidates = {}
     for key, c in db_cards.items():
         if c['finish'] != 'regular' or not c['jpy']: continue
-        if c['jpy'] < 200: continue
+        if c['jpy'] < MIN_MARKET_VALUE: continue
         if c['id'] not in candidates or c['jpy'] > candidates[c['id']]['jpy']:
             candidates[c['id']] = c
 
-    # Watchlist cards first (priority)
     watchlist = load_watchlist()
     watch_ids = {w['id'] for w in watchlist}
-    priority = [candidates[cid] for cid in watch_ids if cid in candidates]
+    owned = {w['id'] for w in watchlist if w.get('owned')}
+    overrides = load_overrides()
+    blocklist = load_blocklist()
+    recent_dirs = recent_correction_dirs(days=7)
 
-    # Then top valuable (excluding watchlist, already scanned)
+    # Exclude blocklisted cards from scan entirely
+    for bid in blocklist: candidates.pop(bid, None)
+
+    # Watchlist first, then top valuable
+    priority = [candidates[cid] for cid in watch_ids if cid in candidates]
     rest = [c for c in candidates.values() if c['id'] not in watch_ids and c['jpy'] >= 500]
     rest.sort(key=lambda x: -x['jpy'])
-
     sorted_cards = priority + rest[:max(0, 20 - len(priority))]
+
     deals = []
+    corrections = []
 
     for card in sorted_cards:
-        time.sleep(1)
-        # Search both Amazon and Card Rush
-        for search_fn in [search_cardrush, search_surugaya, search_amazon]:
-            listings = search_fn(card['id'], 3)
-            for l in listings:
-                if l['is_parallel']: continue
-                score = (card['jpy'] - l['total']) / card['jpy'] if card['jpy'] > 0 else 0
-                # Owned cards need a higher deal ratio (30% vs 15%)
-            owned = {w['id'] for w in load_watchlist() if w.get('owned')}
-            min_score = 0.30 if card['id'] in owned else 0.15
-            if min_score <= score <= 0.75:
-                    deals.append({**card, **l, 'market': card['jpy'], 'score': score})
-                    break
-            time.sleep(0.5)
+        listings = scrape_all_sources(card['id'])
+        if not listings:
+            continue
+
+        market = consensus_price(listings)
+        db_price = card['jpy']
+
+        # Override: use manual locked price as truth, skip correction
+        if card['id'] in overrides:
+            true_price = overrides[card['id']].get('price', db_price)
+        else:
+            # Correct DB only if consensus exists AND divergence >30% AND not ping-ponging
+            if market and abs(market - db_price) / max(db_price, 1) > 0.30:
+                new_dir = 1 if market > db_price else -1
+                last_dir = recent_dirs.get(card['id'])
+                # Flip-guard: if we corrected this card within 7d in opposite direction, require stronger evidence
+                ping_pong = last_dir is not None and last_dir != new_dir
+                strong_evidence = ping_pong and (len(listings) >= 4 and abs(market - db_price) / max(db_price, 1) > 0.50)
+                if not ping_pong or strong_evidence:
+                    corrections.append({
+                        'id': card['id'], 'name': card['name'], 'rarity': card['rarity'],
+                        'set': card['set'], 'old': db_price, 'new': market,
+                        'sources': len(listings)
+                    })
+                    correct_db_price(data, card['id'], market, db_price)
+                else:
+                    print(f"   ⏸  Skipped flip: {card['id']} {card['name'][:25]} ¥{db_price:,}→¥{market:,} (ping-pong, needs stronger evidence)")
+            true_price = market or db_price
+
+        # Find cheapest listing that's a real deal vs consensus
+        for l in sorted(listings, key=lambda x: x['total']):
+            if true_price <= MIN_MARKET_VALUE:
+                break
+            discount = (true_price - l['total']) / true_price
+            min_discount = 0.30 if card['id'] in owned else 0.15
+            if min_discount <= discount <= 0.75:
+                deals.append({
+                    **card, **l,
+                    'market': true_price, 'db_price': db_price,
+                    'score': discount
+                })
+                break
+
+        time.sleep(0.5)
+
+    # Save corrected DB if any fixes
+    if corrections:
+        with open(CACHE_FILE, 'w') as f:
+            json.dump(data, f, separators=(',', ':'))
+        append_history(corrections)
+        print(f"   📝 {len(corrections)} DB prices corrected via consensus:")
+        for c in corrections:
+            print(f"      {c['id']} {c['name'][:25]}: ¥{c['old']:,} → ¥{c['new']:,}")
 
     deals.sort(key=lambda d: -d['score'])
-    return deals[:5]
+    return deals[:5], corrections
 
 
 # --------------- Bundle Optimization ---------------
@@ -315,7 +381,7 @@ def _arb_html(d):
 
 # --------------- Email ---------------
 
-def build_email(deals, issues_fixed, issues):
+def build_email(deals, corrections):
     today = date.today().strftime('%Y-%m-%d')
     day = date.today().strftime('%a %b %d')
 
@@ -358,17 +424,19 @@ def build_email(deals, issues_fixed, issues):
   <p style="margin:4px 0;font-size:13px">Buy together: <strong>¥{b["bundle_total"]:,}</strong> (save ¥{b["savings"]:,} on shipping){' · 🚚 FREE shipping!' if b["source"]=='Suruga-ya' and sum(d["price"] for d in b["cards"])>=1500 else ''}</p>
 </div>'''
 
-    # Pricing fixes section
-    if issues:
+    # DB corrections section
+    if corrections:
         html += f"""<hr style="border:1px solid #eee">
-<h3 style="font-size:14px;color:#444">🔧 Pricing Issues Detected & Fixed ({issues_fixed})</h3>
+<h3 style="font-size:14px;color:#444">📝 DB Prices Corrected ({len(corrections)})</h3>
+<p style="font-size:11px;color:#888;margin:0 0 8px">💡 To lock a price: edit <code>data/deal-hunter-overrides.json</code>. To skip a card: edit <code>data/deal-hunter-blocklist.json</code>.</p>
 <table style="width:100%;font-size:12px;border-collapse:collapse">
-<tr style="background:#f5f5f5"><th style="padding:4px 8px;text-align:left">Card</th><th>Was</th><th>Issue</th></tr>"""
-        for iss in issues[:10]:
+<tr style="background:#f5f5f5"><th style="padding:4px 8px;text-align:left">Card</th><th>Was</th><th>Now</th><th>Sources</th></tr>"""
+        for c in corrections[:10]:
             html += f"""<tr style="border-bottom:1px solid #eee">
-  <td style="padding:4px 8px">{iss['id']} {iss['name'][:20]}</td>
-  <td style="padding:4px 8px;color:#D70000">¥{iss['regular_price']:,}</td>
-  <td style="padding:4px 8px;color:#888;font-size:11px">{iss['issue'][:50]}</td>
+  <td style="padding:4px 8px">{c['id']} {c['name'][:20]}</td>
+  <td style="padding:4px 8px;color:#D70000">¥{c['old']:,}</td>
+  <td style="padding:4px 8px;color:#16a34a">¥{c['new']:,}</td>
+  <td style="padding:4px 8px;color:#888">{c.get('sources','?')}</td>
 </tr>"""
         html += '</table>'
 
@@ -407,33 +475,15 @@ def main():
     data, db_cards = load_db()
     print(f"   {len(db_cards)} card variants loaded")
 
-    print("🔍 Detecting pricing issues...")
-    issues = detect_pricing_issues(db_cards)
-    print(f"   {len(issues)} issues found")
-    for iss in issues[:5]:
-        print(f"   ⚠️ {iss['id']} {iss['name'][:25]} — {iss['issue']}")
-
-    print("🔧 Fixing pricing...")
-    fixed = fix_pricing_issues(data, issues)
-    if fixed:
-        with open(CACHE_FILE, 'w') as f:
-            json.dump(data, f, separators=(',',':'))
-        print(f"   ✅ {fixed} prices corrected in DB")
-    else:
-        print(f"   No fixes needed")
-
-    # Reload after fixes
-    data, db_cards = load_db()
-
-    print("🌐 Scanning Amazon JP...")
-    deals = find_deals(db_cards)
-    print(f"   {len(deals)} deals found")
+    print("🌐 Scanning sources & building consensus prices...")
+    deals, corrections = find_deals(db_cards, data)
+    print(f"   {len(deals)} deals found, {len(corrections)} DB prices corrected")
 
     # Build and send email
     day = date.today().strftime('%a %b %d')
     subject = f"🏴‍☠️ {len(deals)} OP deal{'s' if len(deals)!=1 else ''} — {day}" if deals else f"🏴‍☠️ No OP deals — {day}"
 
-    html = build_email(deals, fixed, issues)
+    html = build_email(deals, corrections)
     
     # Save ledger
     ledger = load_ledger()

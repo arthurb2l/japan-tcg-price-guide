@@ -1,0 +1,3 @@
+{
+  "_README": "Cards excluded from scan. Format: {\"CARD-ID\": {\"until\": \"YYYY-MM-DD\", \"reason\": \"why\"}}. Entries past `until` date are ignored."
+}
