@@ -1,3 +1,4 @@
 {
-  "_README": "Cards excluded from scan. Format: {\"CARD-ID\": {\"until\": \"YYYY-MM-DD\", \"reason\": \"why\"}}. Entries past `until` date are ignored."
+  "_README": "Cards excluded from scan. Format: {\"CARD-ID\": {\"until\": \"YYYY-MM-DD\", \"reason\": \"why\"}}. Entries past `until` date are ignored.",
+  "ST21-014": {"until": "2026-05-17", "reason": "Scraper returned ¥113,200 (clearly wrong variant match). Block 30d pending variant detection fix."}
 }
