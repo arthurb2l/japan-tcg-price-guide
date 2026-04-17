@@ -68,6 +68,32 @@ def append_history(corrections):
         for c in corrections:
             f.write(json.dumps({'date': date.today().isoformat(), **c}) + '\n')
 
+
+# --------------- Shared variant matching ---------------
+
+# Matches: OP02-001, ST21-014_p1, EB02-061_p2, PRB01-001_p3, P-078
+CARD_ID_RE = re.compile(r'\b((?:OP|ST|EB|PRB|P)[-\s]?\d{2,3}(?:-\d{3})?)(?:[_\s]?(p\d))?\b', re.IGNORECASE)
+SOLD_OUT_MARKERS = ['売り切れ', '在庫なし', '品切れ', 'SOLD OUT', '販売終了', '完売']
+
+def match_variant(title, target_id):
+    r"""Extract Bandai card ID from listing title and classify as regular/parallel/no-match.
+    Returns (is_match: bool, is_parallel: bool).
+    Matches listing to target_id only if:
+      - title contains target_id exactly
+      - _p\d suffix (or lack of) determines regular vs parallel
+    """
+    norm_title = title.upper().replace(' ', '').replace('　', '')
+    norm_target = target_id.upper().replace(' ', '')
+    if norm_target not in norm_title:
+        return False, False
+    # Look for _p\d suffix right after the target ID
+    pattern = re.compile(re.escape(norm_target) + r'[_\s]?(P\d)', re.IGNORECASE)
+    is_parallel = bool(pattern.search(norm_title))
+    return True, is_parallel
+
+def is_sold_out(text):
+    return any(m in text for m in SOLD_OUT_MARKERS)
+
 def load_watchlist():
     try:
         with open(WATCHLIST_FILE) as f:
@@ -131,14 +157,12 @@ def search_amazon(card_id, max_results=5):
 
         results = []
         for label in labels:
-            if card_id not in label: continue
-            # Detect variant from title
-            is_parallel = any(k in label for k in ['パラレル','SEC','コミック','スーパーレア','金枠','ホイル'])
-            is_regular = not is_parallel
+            is_match, is_parallel = match_variant(label, card_id)
+            if not is_match: continue
+            if is_sold_out(label): continue
             # Find a reasonable price
             for p in prices:
                 if p < 30: continue
-            # Skip sold out (品切れ/在庫なし in nearby HTML)
                 ship = 0 if p >= SHIPPING['amazon']['free_above'] else SHIPPING['amazon']['flat']
                 results.append({
                     'source': 'Amazon JP', 'title': label[:80],
@@ -167,18 +191,21 @@ def search_cardrush(card_id, max_results=5):
             html, re.DOTALL
         )
         results = []
-        for link, content, price in raw[:max_results]:
+        for link, content, price in raw[:max_results*2]:
             texts = [t.strip() for t in re.findall(r'>([^<]+)<', content) if t.strip()]
             title = ' '.join(texts)[:80] if texts else card_id
             p = int(price.replace(',',''))
-            is_parallel = any(k in title for k in ['パラレル','SP','コミック','金背景','銀背景','手配書'])
             if p < 30 or 'デッキ販売' in title: continue  # skip decks
+            if is_sold_out(title) or is_sold_out(content): continue
+            is_match, is_parallel = match_variant(title, card_id)
+            if not is_match: continue
             results.append({
                 'source': 'Card Rush', 'title': title,
                 'price': p, 'shipping': SHIPPING['cardrush']['flat'],
                 'total': p + SHIPPING['cardrush']['flat'],
                 'url': link, 'is_parallel': is_parallel
             })
+            if len(results) >= max_results: break
         return results
     except:
         return []
@@ -199,13 +226,12 @@ def search_surugaya(card_id, max_results=5):
             html, re.DOTALL
         )
         results = []
-        for item_id, name, price in items[:max_results]:
+        for item_id, name, price in items[:max_results*2]:
             p = int(price)
             if p < 30: continue
-            # Skip sold out (品切れ/在庫なし in nearby HTML)
-            # Only include if card_id is in the name
-            if card_id.replace('-','') not in name.replace('-','').replace(' ',''): continue
-            is_parallel = any(k in name for k in ['パラレル','SP','コミック','金背景','銀背景','手配書'])
+            if is_sold_out(name): continue
+            is_match, is_parallel = match_variant(name, card_id)
+            if not is_match: continue
             results.append({
                 'source': 'Suruga-ya', 'title': name[:80],
                 'price': p, 'shipping': 0 if p >= SHIPPING['surugaya']['free_above'] else SHIPPING['surugaya']['flat'],
@@ -213,6 +239,7 @@ def search_surugaya(card_id, max_results=5):
                 'url': f"https://www.suruga-ya.jp/product/detail/{item_id}",
                 'is_parallel': is_parallel
             })
+            if len(results) >= max_results: break
         return results
     except:
         return []
