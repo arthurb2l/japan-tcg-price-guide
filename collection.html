@@ -344,7 +344,7 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
 
 <script>
 let allCards = [], collectionCards = [], currentUser = null, userCollection = {};
-let currentGame = localStorage.getItem('collection-tcg') || 'onepiece', currentSort = 'added', currentList = 'inventory';
+let currentGame = localStorage.getItem('collection-tcg') || null, currentSort = 'added', currentList = 'inventory';
 let currentPage = 1;
 const PAGE_SIZE = 50;
 
@@ -1063,6 +1063,12 @@ let authChecked = false;
 
 function renderIfReady() {
   if (cardsLoaded && authChecked) {
+    if (!currentGame) {
+      var op = 0, pk = 0;
+      for (var id in userCollection) { var c = allCards.find(a => a.id === id); if (c) c.game === 'onepiece' ? op++ : pk++; }
+      currentGame = pk > op ? 'pokemon' : 'onepiece';
+      updateTcgSelector();
+    }
     renderCollection();
   }
 }
