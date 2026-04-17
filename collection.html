@@ -68,15 +68,21 @@ const db = firebase.firestore();
 
 /* List tabs */
 .list-tabs{display:flex;gap:5px;margin-bottom:20px;flex-wrap:wrap}
-.list-tab{padding:8px 14px;border:1px solid var(--border);border-radius:var(--r-md);background:var(--card);cursor:pointer;font-size:.85em;font-weight:500;transition:all .15s}
+.list-tab{padding:8px 14px;border:1px solid var(--border);border-radius:var(--r-md);background:var(--card);cursor:pointer;font-size:.85em;font-weight:500;transition:all .15s;line-height:1.2}
 .list-tab:hover{border-color:var(--g4)}
 .list-tab.active{border-color:var(--pk);background:var(--pk);color:#fff}
 .list-tab.wishlist.active{border-color:var(--warn);background:var(--warn)}
 .list-tab.tradelist.active{border-color:#3b82f6;background:#3b82f6}
 .list-tab .count{font-size:.8em;opacity:.8;margin-left:5px}
-.util-btn{padding:8px 14px;border:1px solid var(--border);border-radius:var(--r-md);background:var(--card);cursor:pointer;font-size:.85em;display:inline-flex;align-items:center;gap:4px}
+.util-btn{padding:8px 14px;border:1px solid var(--border);border-radius:var(--r-md);background:var(--card);cursor:pointer;font-size:.85em;font-weight:500;display:inline-flex;align-items:center;gap:4px;line-height:1.2;text-decoration:none;color:inherit;font-family:inherit}
 .util-btn:hover{background:var(--g6);border-color:var(--g4)}
 .util-row{display:flex;gap:8px;margin-bottom:15px;flex-wrap:wrap}
+
+/* TCG selector — same visual as list-tab for consistency */
+.tcg-selector{display:flex;gap:5px;margin-bottom:20px;flex-wrap:wrap}
+.tcg-btn{padding:8px 14px;border:1px solid var(--border);border-radius:var(--r-md);background:var(--card);cursor:pointer;font-size:.85em;font-weight:500;transition:all .15s;line-height:1.2;font-family:inherit;color:inherit}
+.tcg-btn:hover{border-color:var(--g4)}
+.tcg-btn.active{border-color:var(--pk);background:var(--pk);color:#fff}
 
 /* Filters */
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center;justify-content:space-between}
