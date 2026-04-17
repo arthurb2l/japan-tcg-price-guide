@@ -78,17 +78,28 @@ SOLD_OUT_MARKERS = ['売り切れ', '在庫なし', '品切れ', 'SOLD OUT', '�
 def match_variant(title, target_id):
     r"""Extract Bandai card ID from listing title and classify as regular/parallel/no-match.
     Returns (is_match: bool, is_parallel: bool).
-    Matches listing to target_id only if:
-      - title contains target_id exactly
-      - _p\d suffix (or lack of) determines regular vs parallel
+    
+    JP retailers don't use _p1/_p2 suffixes (those are internal Bandai IDs).
+    So we match by exact card ID, then classify variant via keyword heuristics on title.
     """
     norm_title = title.upper().replace(' ', '').replace('　', '')
     norm_target = target_id.upper().replace(' ', '')
     if norm_target not in norm_title:
         return False, False
-    # Look for _p\d suffix right after the target ID
-    pattern = re.compile(re.escape(norm_target) + r'[_\s]?(P\d)', re.IGNORECASE)
-    is_parallel = bool(pattern.search(norm_title))
+    # Variant keywords: Japanese + English + symbols used on JP card shop listings
+    parallel_markers = [
+        'パラレル', 'PARALLEL',  # parallel (most common)
+        'コミック', 'MANGA', '漫画',  # manga variant
+        'アルトアート', 'ALTART', 'ALT ART', 'EXTENDED', 'フルアート',  # alt art / full bleed
+        'SP', 'スペシャル',  # special
+        'シークレット', 'SECRET', 'SEC',  # secret rare
+        '金枠', '銀枠', '金背景', '銀背景',  # gold/silver frame/bg
+        '手配書', 'WANTED',  # wanted poster variant
+        'ホイル', 'FOIL',  # foil
+        '再録', 'REPRINT',  # reprints (premium booster editions)
+        'プレミアム', 'PREMIUM',
+    ]
+    is_parallel = any(m in title.upper() for m in parallel_markers) or any(m in title for m in parallel_markers)
     return True, is_parallel
 
 def is_sold_out(text):
@@ -312,8 +323,13 @@ def find_deals(db_cards, data):
         if not listings:
             continue
 
-        market = consensus_price(listings)
         db_price = card['jpy']
+        # Drop obvious garbage: listings <20% of DB price are likely damaged/sold-out/wrong-card
+        listings = [l for l in listings if l['total'] >= db_price * 0.20]
+        if not listings:
+            continue
+
+        market = consensus_price(listings)
 
         # Override: use manual locked price as truth, skip correction
         if card['id'] in overrides:
