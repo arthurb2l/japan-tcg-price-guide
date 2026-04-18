@@ -223,12 +223,18 @@
     "don-518.png": "DON-EB03-UTA-GOLD",
     "don-478.png": "PRB02-DON-Vegapunk-GOLD",
     "don-540.png": "DON-OP15-EGGHEAD",
-    "don-542.png": "DON-OP15-EGGHEAD-GOLD"
+    "don-542.png": "DON-OP15-EGGHEAD-GOLD",
+    "don-348.png": "PRB02-DON-Teach",
+    "don-358.png": "PRB02-DON-Dragon",
+    "don-368.png": "PRB02-DON-Rob-Lucci",
+    "don-448.png": "DUPE",
+    "don-486.png": "PRB02-DON-Dragon-GOLD",
+    "don-508.png": "PRB02-DON-Rob-Lucci-GOLD"
   },
   "stats": {
     "total_images": 261,
-    "mapped": 204,
-    "dupes": 11,
-    "unmapped_db": 20
+    "mapped": 210,
+    "dupes": 12,
+    "unmapped_db": 19
   }
 }
