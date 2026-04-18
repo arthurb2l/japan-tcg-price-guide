@@ -239,11 +239,18 @@
     "don-454.png": "PRB02-DON-Bonney-GOLD",
     "don-538.png": "DON-CHINA-2ND-ANNIVERSARY",
     "don-568.png": "DON-EB01-SKYPIEA",
-    "don-572.png": "DON-EB01-SKYPIEA-GOLD"
+    "don-572.png": "DON-EB01-SKYPIEA-GOLD",
+    "don-360.png": "PRB02-DON-Gear-4-Luffy",
+    "don-362.png": "PRB02-DON-Gear-5-Luffy",
+    "don-364.png": "PRB02-DON-Yamato",
+    "don-488.png": "PRB02-DON-Gear-4-Luffy-GOLD",
+    "don-504.png": "PRB02-DON-Yamato-GOLD",
+    "don-526.png": "DON-EB03-HEROINES",
+    "don-528.png": "DON-EB03-HEROINES-GOLD"
   },
   "stats": {
     "total_images": 261,
-    "mapped": 220,
+    "mapped": 227,
     "dupes": 12,
     "unmapped_db": 18
   }
