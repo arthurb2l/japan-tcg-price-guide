@@ -59,7 +59,7 @@ const db = firebase.firestore();
 
 /* Stats cards */
 .stats-row{display:flex;gap:8px;margin-bottom:15px;flex-wrap:wrap}
-.stat-card{background:var(--card);border-radius:var(--r-md);padding:10px 14px;text-align:center;box-shadow:var(--shadow-sm);flex:1;min-width:0}
+.stat-card{background:var(--card);border-radius:var(--r-md);padding:10px 14px;text-align:center;box-shadow:var(--shadow-sm);flex:1 1 calc(33% - 8px);min-width:90px}
 .stat-card .value{font-size:1.1em;font-weight:700;color:var(--g1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .stat-card .label{font-size:.75em;color:var(--g3);margin-top:2px}
 .stat-card.total .value{color:var(--success)}
@@ -1113,7 +1113,8 @@ setTimeout(() => {
 </script>
 
 <footer id="site-footer"></footer>
-<script src="/japan-tcg-price-guide/components/footer.js">
+<script src="/japan-tcg-price-guide/components/footer.js"></script>
+<script>
 function toggleAddCard(){
   var bar=document.getElementById('add-card-bar');
   var vis=bar.style.display!=='none';
