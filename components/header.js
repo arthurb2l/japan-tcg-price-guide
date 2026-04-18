@@ -49,9 +49,9 @@
         </form>
         
         <button class="mobile-search-btn" onclick="openSearchOverlay()" aria-label="Search">🔍</button>
-        <div class="mobile-avatar-wrap" id="mobileAvatarWrap" onclick="toggleMobileNav()"></div>
+        <div class="mobile-avatar-wrap" id="mobileAvatarWrap" onclick="toggleMobileNav()" style="opacity:0;transition:opacity .2s"></div>
         
-        <div class="header-user" id="headerUser">
+        <div class="header-user" id="headerUser" style="opacity:0;transition:opacity .2s">
           <button class="login-btn" onclick="headerLogin()">Sign In</button>
         </div>
       </div>
@@ -160,6 +160,7 @@
   window.updateHeaderUser = function(user) {
     const container = document.getElementById('headerUser');
     const mobileLogin = document.getElementById('mobileNavLogin');
+    container.style.opacity='1';
     if (user) {
       const isAdmin = ADMIN_UIDS.includes(user.uid || '');
       const adminLink = isAdmin ? `<a href="${base}admin/reports.html" id="admin-reports-link">⚠️ Reports</a>` : '';
@@ -192,12 +193,12 @@
           <button onclick="headerLogout()" style="width:100%;padding:12px;background:#222;color:#fff;border:none;border-radius:8px;font-size:1em;cursor:pointer;margin-top:8px">Sign Out</button>`;
       }
       const mobileAvatar = document.getElementById('mobileAvatarWrap');
-      if (mobileAvatar) mobileAvatar.innerHTML = `<img src="${user.picture || ''}" class="mobile-avatar" referrerpolicy="no-referrer">`;
+      if (mobileAvatar) { mobileAvatar.innerHTML = `<img src="${user.picture || ''}" class="mobile-avatar" referrerpolicy="no-referrer">`; mobileAvatar.style.opacity='1'; }
     } else {
       container.innerHTML = `<button class="login-btn" onclick="headerLogin()">Sign In</button>`;
       if (mobileLogin) mobileLogin.innerHTML = `<button onclick="headerLogin()">Sign In</button>`;
       const mobileAvatar = document.getElementById('mobileAvatarWrap');
-      if (mobileAvatar) mobileAvatar.innerHTML = '';
+      if (mobileAvatar) { mobileAvatar.innerHTML = ''; mobileAvatar.style.opacity='1'; }
     }
   };
   
