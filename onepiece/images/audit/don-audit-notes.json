@@ -196,12 +196,36 @@
     "don-562.png": "DON-KUMAMOTO-BROOK",
     "don-564.png": "DON-KUMAMOTO-NAMI",
     "don-566.png": "DON-KUMAMOTO-FRANKY",
-    "don-344.png": "PRB02-DON-Vegapunk"
+    "don-344.png": "PRB02-DON-Vegapunk",
+    "don-346.png": "PRB02-DON-Boa-Hancock",
+    "don-352.png": "DON-OP05-LUFFY-VS-KAIDO",
+    "don-354.png": "DON-OP06-SHANKS",
+    "don-356.png": "PRB02-DON-Marco",
+    "don-372.png": "DON-OP11-LUFFY-GEAR5",
+    "don-378.png": "DON-OP09-YAMATO",
+    "don-380.png": "PRB02-DON-Sanji",
+    "don-382.png": "DON-OP13-SHANKS",
+    "don-384.png": "DON-OP13-SHANKS-GOLD",
+    "don-386.png": "DON-EB02",
+    "don-388.png": "DON-EB03-HEROINES",
+    "don-392.png": "DON-EB03-HEROINES-GOLD",
+    "don-394.png": "DON-EB03-NAMI",
+    "don-396.png": "DON-EB03-NAMI-GOLD",
+    "don-398.png": "DON-EB03-ROBIN",
+    "don-400.png": "DON-EB03-ROBIN-GOLD",
+    "don-402.png": "DON-EB03-BOA",
+    "don-404.png": "DON-EB03-BOA-GOLD",
+    "don-406.png": "DON-EB03-UTA",
+    "don-408.png": "DON-EB03-UTA-GOLD",
+    "don-414.png": "PRB02-DON-Boa-Hancock",
+    "don-480.png": "PRB02-DON-Boa-Hancock-GOLD",
+    "don-500.png": "DON-EB03-UTA",
+    "don-518.png": "DON-EB03-UTA-GOLD"
   },
   "stats": {
     "total_images": 261,
-    "mapped": 177,
+    "mapped": 201,
     "dupes": 10,
-    "unmapped_db": 22
+    "unmapped_db": 21
   }
 }
