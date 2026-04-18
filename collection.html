@@ -64,6 +64,14 @@ const db = firebase.firestore();
 .stat-card .label{font-size:.75em;color:var(--g3);margin-top:2px}
 .stat-card.total .value{color:var(--success)}
 
+/* Set completion */
+.set-progress{display:flex;flex-direction:column;gap:8px}
+.set-row{display:flex;align-items:center;gap:12px;background:var(--card);padding:10px 14px;border-radius:var(--r-md);box-shadow:var(--shadow-sm)}
+.set-name{font-weight:600;font-size:.85em;min-width:100px}
+.set-bar{flex:1;height:8px;background:var(--g5);border-radius:4px;overflow:hidden}
+.set-bar div{height:100%;border-radius:4px;transition:width .3s}
+.set-pct{font-size:.8em;color:var(--g3);white-space:nowrap;min-width:90px;text-align:right}
+
 /* Add-card */
 .add-card-bar{margin-bottom:15px}
 .add-card-bar input{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r-md);font-size:.9em;box-sizing:border-box}
@@ -734,22 +742,21 @@ function renderCollection() {
   
   // Sets completion view
   if (currentList === "sets") {
+    const game = currentGame || 'onepiece';
     const setStats = {};
-    // Count owned cards per set
     for (const id of Object.keys(userCollection)) {
       const card = allCards.find(c => c.id === id);
-      if (!card) continue;
+      if (!card || card.game !== game) continue;
       const setId = card.setId || card.set || "unknown";
       if (!setStats[setId]) setStats[setId] = { owned: 0, total: 0, game: card.game };
       setStats[setId].owned++;
     }
-    // Count total cards per set
     for (const card of allCards) {
+      if (card.game !== game) continue;
       const setId = card.setId || card.set || "unknown";
       if (!setStats[setId]) setStats[setId] = { owned: 0, total: 0, game: card.game };
       setStats[setId].total++;
     }
-    // Sort by completion %
     const sets = Object.entries(setStats)
       .filter(([,s]) => s.owned > 0)
       .sort((a,b) => (b[1].owned/b[1].total) - (a[1].owned/a[1].total));
@@ -758,7 +765,7 @@ function renderCollection() {
       <div class="set-progress">
         ${sets.length ? sets.map(([setId, s]) => {
           const pct = Math.round(s.owned / s.total * 100);
-          const color = s.game === "pokemon" ? "#EE1515" : "#D70000";
+          const color = pct >= 75 ? '#16a34a' : pct >= 25 ? '#f59e0b' : '#ef4444';
           return `<div class="set-row">
             <div class="set-name">${setId}</div>
             <div class="set-bar"><div style="width:${pct}%;background:${color}"></div></div>
