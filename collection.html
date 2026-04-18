@@ -794,6 +794,10 @@ function renderCollection() {
   
   // Calculate stats - scoped to current TCG filter
   const getQty = id => userCollection[id]?.qty || 1;
+  const userCurrency = localStorage.getItem('tcg-currency') || 'JPY';
+  const fxRate = userCurrency === 'USD' ? 1 : 150;
+  const cSymbol = userCurrency === 'USD' ? '$' : '¥';
+  const formatPrice = p => p !== null ? cSymbol + Math.round(p * fxRate).toLocaleString() : '-';
   const statsCards = currentGame ? collectionCards.filter(c => c.game === currentGame) : collectionCards;
   const totalCards = statsCards.reduce((sum, c) => sum + getQty(c.id), 0);
   const totalValue = statsCards.reduce((sum, c) => sum + (getPrice(c) || 0) * getQty(c.id), 0);
@@ -807,10 +811,6 @@ function renderCollection() {
   
   const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
   const getImg = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || '';
-  const userCurrency = localStorage.getItem('tcg-currency') || 'JPY';
-  const fxRate = userCurrency === 'USD' ? 1 : 150;
-  const cSymbol = userCurrency === 'USD' ? '$' : '¥';
-  const formatPrice = p => p !== null ? cSymbol + Math.round(p * fxRate).toLocaleString() : '-';
   
   content.innerHTML = tabsHtml + `
     <div class="stats-row">
