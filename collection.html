@@ -156,7 +156,9 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
 .card-modal-close{background:none;border:none;font-size:1.5em;cursor:pointer;color:var(--g3)}
 .card-modal-body{padding:20px}
 .card-modal-img{text-align:center;margin-bottom:20px}
-.card-modal-img img{max-width:200px;border-radius:var(--r-md)}
+.card-modal-img img{max-width:200px;border-radius:var(--r-md);cursor:zoom-in}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:10000;display:flex;align-items:center;justify-content:center;cursor:zoom-out}
+.lightbox img{max-width:90vw;max-height:90vh;border-radius:var(--r-md)}
 .card-modal-field{margin-bottom:15px}
 .card-modal-field label{display:block;font-size:.85em;color:var(--g3);margin-bottom:5px}
 .card-modal-field select,.card-modal-field input{width:100%;padding:10px;border:1px solid var(--border);border-radius:var(--r-md);font-size:.9em}
@@ -267,7 +269,7 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
       <button class="card-modal-close" onclick="closeCardModal()">×</button>
     </div>
     <div class="card-modal-body">
-      <div class="card-modal-img"><img id="modal-card-img" src="" alt=""></div>
+      <div class="card-modal-img"><img id="modal-card-img" src="" alt="" onclick="openLightbox(this.src)"></div>
       <div class="card-modal-field">
         <label>Quantity</label>
         <div class="qty-row">
@@ -506,6 +508,15 @@ function closeCardModal() {
   document.getElementById('card-modal').classList.remove('show');
   document.getElementById('report-form').style.display='none';
   modalCardId = null;
+}
+
+function openLightbox(src) {
+  const hiRes = src.replace('/low.webp', '/high.png');
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.onclick = () => lb.remove();
+  lb.innerHTML = `<img src="${hiRes}" alt="">`;
+  document.body.appendChild(lb);
 }
 
 // Card error reporting
