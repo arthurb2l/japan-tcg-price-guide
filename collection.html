@@ -58,12 +58,10 @@ const db = firebase.firestore();
 .signout-btn:hover{color:var(--pk)}
 
 /* Stats cards */
-.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;margin-bottom:25px}
-.stat-card{background:var(--card);border-radius:var(--r-lg);padding:20px;text-align:center;box-shadow:var(--shadow-sm)}
-.stat-card .value{font-size:2em;font-weight:700;color:var(--g1)}
-.stat-card .label{font-size:.85em;color:var(--g3);margin-top:5px}
-.stat-card.pokemon .value{color:var(--pk)}
-.stat-card.onepiece .value{color:var(--op)}
+.stats-row{display:flex;gap:8px;margin-bottom:15px;flex-wrap:wrap}
+.stat-card{background:var(--card);border-radius:var(--r-md);padding:10px 14px;text-align:center;box-shadow:var(--shadow-sm);flex:1;min-width:0}
+.stat-card .value{font-size:1.1em;font-weight:700;color:var(--g1);white-space:nowrap}
+.stat-card .label{font-size:.75em;color:var(--g3);margin-top:2px}
 .stat-card.total .value{color:var(--success)}
 
 /* List tabs */
@@ -220,9 +218,7 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
   .card-list .qty-btn{width:28px;height:28px;font-size:.85em}
   .card-list .cond-select,.card-list .lang-select{padding:6px 8px;font-size:.8em}
   .card-list .list-icon{width:28px;height:28px;font-size:.7em}
-  .stats-row{display:flex;gap:8px;overflow-x:auto;margin-bottom:15px}
-  .stat-card{padding:10px 14px;min-width:0;flex:1;border-radius:var(--r-md)}
-  .stat-card .value{font-size:1.1em}
+  .stat-card .value{font-size:1em}
   .stat-card .label{font-size:.7em}
   .filters{flex-direction:column;gap:10px}
   .filter-left{width:100%;gap:8px}
@@ -796,14 +792,16 @@ function renderCollection() {
   else if (currentSort === 'set') filtered.sort((a, b) => (a.setId || '').localeCompare(b.setId || '') || (a.id || '').localeCompare(b.id || ''));
   // 'added' - keep original order (most recent first for Firestore)
   
-  // Calculate stats - account for quantities
+  // Calculate stats - scoped to current TCG filter
   const getQty = id => userCollection[id]?.qty || 1;
-  const totalCards = collectionCards.reduce((sum, c) => sum + getQty(c.id), 0);
-  const pokemonCount = collectionCards.filter(c => c.game === 'pokemon').reduce((sum, c) => sum + getQty(c.id), 0);
-  const opCount = collectionCards.filter(c => c.game === 'onepiece').reduce((sum, c) => sum + getQty(c.id), 0);
-  const totalValue = collectionCards.reduce((sum, c) => sum + (getPrice(c) || 0) * getQty(c.id), 0);
-  const totalCost = collectionCards.reduce((sum, c) => sum + (userCollection[c.id]?.purchasePrice || 0) * getQty(c.id), 0);
-  const totalROI = totalCost > 0 ? Math.round(totalValue * 150) - totalCost : null;
+  const statsCards = currentGame ? collectionCards.filter(c => c.game === currentGame) : collectionCards;
+  const totalCards = statsCards.reduce((sum, c) => sum + getQty(c.id), 0);
+  const totalValue = statsCards.reduce((sum, c) => sum + (getPrice(c) || 0) * getQty(c.id), 0);
+  const totalCost = statsCards.reduce((sum, c) => sum + (userCollection[c.id]?.purchasePrice || 0) * getQty(c.id), 0);
+  const estValueJpy = Math.round(totalValue * 150);
+  const costJpy = Math.round(totalCost);
+  const roiJpy = costJpy > 0 ? estValueJpy - costJpy : null;
+  const roiPct = costJpy > 0 ? Math.round((roiJpy / costJpy) * 100) : null;
   
   const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
   const getImg = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || '';
@@ -811,25 +809,25 @@ function renderCollection() {
   
   content.innerHTML = tabsHtml + `
     <div class="stats-row">
-      <div class="stat-card total">
+      <div class="stat-card">
         <div class="value">${totalCards}</div>
         <div class="label">Total Cards</div>
       </div>
       <div class="stat-card">
-        <div class="value">${collectionCards.length}</div>
-        <div class="label">Unique Cards</div>
-      </div>
-      <div class="stat-card">
-        <div class="value">${collectionCards.length}</div>
+        <div class="value">${statsCards.length}</div>
         <div class="label">Unique</div>
       </div>
       <div class="stat-card">
-        <div class="value">¥${Math.round(totalValue * 150).toLocaleString()}</div>
+        <div class="value">¥${estValueJpy.toLocaleString()}</div>
         <div class="label">Est. Value</div>
-      </div>${totalROI !== null ? `
+      </div>${costJpy > 0 ? `
       <div class="stat-card">
-        <div class="value" style="color:${totalROI >= 0 ? '#16a34a' : '#dc2626'}">¥${totalROI >= 0 ? '+' : ''}${totalROI.toLocaleString()}</div>
-        <div class="label">Total ROI</div>
+        <div class="value">¥${costJpy.toLocaleString()}</div>
+        <div class="label">Purchase Value</div>
+      </div>
+      <div class="stat-card">
+        <div class="value" style="color:${roiJpy >= 0 ? '#16a34a' : '#dc2626'}">¥${roiJpy >= 0 ? '+' : ''}${roiJpy.toLocaleString()} (${roiPct >= 0 ? '+' : ''}${roiPct}%)</div>
+        <div class="label">ROI</div>
       </div>` : ''}
     </div>
     
