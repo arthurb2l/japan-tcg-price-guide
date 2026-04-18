@@ -60,7 +60,7 @@ const db = firebase.firestore();
 /* Stats cards */
 .stats-row{display:flex;gap:8px;margin-bottom:15px;flex-wrap:wrap}
 .stat-card{background:var(--card);border-radius:var(--r-md);padding:10px 14px;text-align:center;box-shadow:var(--shadow-sm);flex:1;min-width:0}
-.stat-card .value{font-size:1.1em;font-weight:700;color:var(--g1);white-space:nowrap}
+.stat-card .value{font-size:1.1em;font-weight:700;color:var(--g1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .stat-card .label{font-size:.75em;color:var(--g3);margin-top:2px}
 .stat-card.total .value{color:var(--success)}
 
@@ -797,10 +797,12 @@ function renderCollection() {
   const statsCards = currentGame ? collectionCards.filter(c => c.game === currentGame) : collectionCards;
   const totalCards = statsCards.reduce((sum, c) => sum + getQty(c.id), 0);
   const totalValue = statsCards.reduce((sum, c) => sum + (getPrice(c) || 0) * getQty(c.id), 0);
-  const totalCost = statsCards.reduce((sum, c) => sum + (userCollection[c.id]?.purchasePrice || 0) * getQty(c.id), 0);
   const estValueJpy = Math.round(totalValue * 150);
-  const costJpy = Math.round(totalCost);
-  const roiJpy = costJpy > 0 ? estValueJpy - costJpy : null;
+  // ROI: only count cards that have a purchase price entered
+  const pricedCards = statsCards.filter(c => (userCollection[c.id]?.purchasePrice || 0) > 0);
+  const costJpy = pricedCards.reduce((sum, c) => sum + userCollection[c.id].purchasePrice * getQty(c.id), 0);
+  const pricedValueJpy = Math.round(pricedCards.reduce((sum, c) => sum + (getPrice(c) || 0) * getQty(c.id), 0) * 150);
+  const roiJpy = costJpy > 0 ? pricedValueJpy - costJpy : null;
   const roiPct = costJpy > 0 ? Math.round((roiJpy / costJpy) * 100) : null;
   
   const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
@@ -826,8 +828,8 @@ function renderCollection() {
         <div class="label">Purchase Value</div>
       </div>
       <div class="stat-card">
-        <div class="value" style="color:${roiJpy >= 0 ? '#16a34a' : '#dc2626'}">¥${roiJpy >= 0 ? '+' : ''}${roiJpy.toLocaleString()} (${roiPct >= 0 ? '+' : ''}${roiPct}%)</div>
-        <div class="label">ROI</div>
+        <div class="value" style="color:${roiJpy >= 0 ? '#16a34a' : '#dc2626'}">¥${roiJpy >= 0 ? '+' : ''}${roiJpy.toLocaleString()}</div>
+        <div class="label" style="color:${roiJpy >= 0 ? '#16a34a' : '#dc2626'}">${roiPct >= 0 ? '+' : ''}${roiPct}% ROI</div>
       </div>` : ''}
     </div>
     
