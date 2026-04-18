@@ -1,15 +1,15 @@
 {
-  "generated": "2026-04-18T15:25:43.166Z",
+  "generated": "2026-04-18T15:32:47.361Z",
   "pokemon": {
     "totalCards": 28078,
     "setsCount": 246
   },
   "onepiece": {
-    "totalCards": 6098,
+    "totalCards": 6099,
     "setsCount": 55
   },
   "totals": {
-    "cards": 34176,
+    "cards": 34177,
     "sets": 301
   }
 }
