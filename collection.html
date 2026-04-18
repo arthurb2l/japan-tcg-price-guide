@@ -64,6 +64,9 @@ const db = firebase.firestore();
 .stat-card .label{font-size:.75em;color:var(--g3);margin-top:2px}
 .stat-card.total .value{color:var(--success)}
 
+/* Add-card suggestions */
+.add-sug.highlighted{background:var(--g6);outline:2px solid var(--pk)}
+
 /* List tabs */
 .list-tabs{display:flex;gap:5px;margin-bottom:20px;flex-wrap:wrap}
 .list-tab{padding:8px 14px;border:1px solid var(--border);border-radius:var(--r-md);background:var(--card);cursor:pointer;font-size:.85em;font-weight:500;transition:all .15s;line-height:1.2}
@@ -1139,11 +1142,14 @@ function searchAddCard(q){
       var name=typeof c.name==='object'?(c.name.en||c.name.jp||''):(c.name||'');
       var img=proxyImg(typeof c.img==='object'?(c.img.jp||c.img.en||''):'')|| (c.game!=='onepiece'&&c.image?c.image+'/low.webp':'');
       var price=getPrice(c);
-      var pStr=price?'¥'+Math.round(price*150).toLocaleString():'';
+      var cur=localStorage.getItem('tcg-currency')||'JPY';
+      var rate=cur==='USD'?1:150;var sym=cur==='USD'?'$':'¥';
+      var pStr=price?sym+Math.round(price*rate).toLocaleString():'';
+      var owned=userCollection[c.id]?'<span style="background:#16a34a;color:#fff;font-size:.7em;padding:2px 6px;border-radius:4px;margin-left:6px">owned ×'+((userCollection[c.id].qty||1))+'</span>':'';
       return '<div class="add-sug" onclick="quickAdd(\''+c.id.replace(/'/g,"\\'")+'\')">'
         +(img?'<img src="'+img+'" alt="" referrerpolicy="no-referrer">':'')
         +'<span class="s-name">'+name+'<br><small>'+c.id+(c.rarity?' · '+c.rarity:'')+'</small></span>'
-        +'<span class="s-price">'+pStr+'</span></div>';
+        +'<span class="s-price">'+pStr+owned+'</span></div>';
     }).join('');
     el.classList.add('show');
   },150);
@@ -1169,6 +1175,16 @@ async function quickAdd(cardId){
 // Close suggestions on outside click
 document.addEventListener('click',function(e){
   if(!e.target.closest('.add-card-bar'))document.getElementById('add-suggestions')?.classList.remove('show');
+});
+
+// Keyboard nav for add-card suggestions
+document.getElementById('add-card-input').addEventListener('keydown',function(e){
+  var items=document.querySelectorAll('.add-sug');
+  if(!items.length)return;
+  var cur=[].indexOf.call(items,document.querySelector('.add-sug.highlighted'));
+  if(e.key==='ArrowDown'){e.preventDefault();items.forEach(function(i){i.classList.remove('highlighted')});cur=Math.min(cur+1,items.length-1);items[cur].classList.add('highlighted');items[cur].scrollIntoView({block:'nearest'});}
+  else if(e.key==='ArrowUp'){e.preventDefault();items.forEach(function(i){i.classList.remove('highlighted')});cur=Math.max(cur-1,0);items[cur].classList.add('highlighted');items[cur].scrollIntoView({block:'nearest'});}
+  else if(e.key==='Enter'&&cur>=0){e.preventDefault();items[cur].click();}
 });
 </script>
 </body>
