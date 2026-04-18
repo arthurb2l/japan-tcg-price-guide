@@ -229,11 +229,15 @@
     "don-368.png": "PRB02-DON-Rob-Lucci",
     "don-448.png": "DUPE",
     "don-486.png": "PRB02-DON-Dragon-GOLD",
-    "don-508.png": "PRB02-DON-Rob-Lucci-GOLD"
+    "don-508.png": "PRB02-DON-Rob-Lucci-GOLD",
+    "don-374.png": "PRB02-DON-Carrot",
+    "don-438.png": "PRB02-DON-Carrot-GOLD",
+    "don-446.png": "PRB02-DON-Caesar-Clown-GOLD",
+    "don-484.png": "PRB02-DON-Marco-GOLD"
   },
   "stats": {
     "total_images": 261,
-    "mapped": 210,
+    "mapped": 214,
     "dupes": 12,
     "unmapped_db": 19
   }
