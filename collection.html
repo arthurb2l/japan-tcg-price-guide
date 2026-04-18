@@ -1152,7 +1152,7 @@ function searchAddCard(q){
     var proxyImg=function(url){return url&&url.includes('onepiece-cardgame.com')?'https://wsrv.nl/?url='+encodeURIComponent(url):url;};
     el.innerHTML=matches.map(function(c){
       var name=typeof c.name==='object'?(c.name.en||c.name.jp||''):(c.name||'');
-      var img=proxyImg(typeof c.img==='object'?(c.img.jp||c.img.en||''):'')|| (c.game!=='onepiece'&&c.image?c.image+'/low.webp':'');
+      var img=proxyImg(c.imgJp||c.img||(c.image?c.image+'/low.webp':''))||'';
       var price=getPrice(c);
       var cur=localStorage.getItem('tcg-currency')||'JPY';
       var rate=cur==='USD'?1:150;var sym=cur==='USD'?'$':'¥';
