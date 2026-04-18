@@ -822,6 +822,11 @@ function renderCollection() {
   else if (currentSort === 'price-high') filtered.sort((a, b) => (getPrice(b) || 0) - (getPrice(a) || 0));
   else if (currentSort === 'price-low') filtered.sort((a, b) => (getPrice(a) || 999999) - (getPrice(b) || 999999));
   else if (currentSort === 'set') filtered.sort((a, b) => (a.setId || '').localeCompare(b.setId || '') || (a.id || '').localeCompare(b.id || ''));
+  else if (currentSort === 'roi') filtered.sort((a, b) => {
+    const roiA = userCollection[a.id]?.purchasePrice ? ((getPrice(a)||0)*fxRate - userCollection[a.id].purchasePrice) / userCollection[a.id].purchasePrice : -Infinity;
+    const roiB = userCollection[b.id]?.purchasePrice ? ((getPrice(b)||0)*fxRate - userCollection[b.id].purchasePrice) / userCollection[b.id].purchasePrice : -Infinity;
+    return roiB - roiA;
+  });
   // 'added' - keep original order (most recent first for Firestore)
   
   // Calculate stats - scoped to current TCG filter
@@ -881,6 +886,7 @@ function renderCollection() {
             <option value="price-high" ${currentSort === 'price-high' ? 'selected' : ''}>Price: High → Low</option>
             <option value="price-low" ${currentSort === 'price-low' ? 'selected' : ''}>Price: Low → High</option>
             <option value="set" ${currentSort === 'set' ? 'selected' : ''}>Set</option>
+            <option value="roi" ${currentSort === 'roi' ? 'selected' : ''}>ROI: High → Low</option>
           </select>
         </div>
         <div class="view-toggle">
