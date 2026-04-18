@@ -195,12 +195,13 @@
     "don-560.png": "DON-KUMAMOTO-JINBE",
     "don-562.png": "DON-KUMAMOTO-BROOK",
     "don-564.png": "DON-KUMAMOTO-NAMI",
-    "don-566.png": "DON-KUMAMOTO-FRANKY"
+    "don-566.png": "DON-KUMAMOTO-FRANKY",
+    "don-344.png": "PRB02-DON-Vegapunk"
   },
   "stats": {
     "total_images": 261,
-    "mapped": 176,
-    "dupes": 7,
-    "unmapped_db": 23
+    "mapped": 177,
+    "dupes": 10,
+    "unmapped_db": 22
   }
 }
