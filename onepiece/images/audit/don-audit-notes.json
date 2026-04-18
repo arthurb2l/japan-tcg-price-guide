@@ -233,12 +233,18 @@
     "don-374.png": "PRB02-DON-Carrot",
     "don-438.png": "PRB02-DON-Carrot-GOLD",
     "don-446.png": "PRB02-DON-Caesar-Clown-GOLD",
-    "don-484.png": "PRB02-DON-Marco-GOLD"
+    "don-484.png": "PRB02-DON-Marco-GOLD",
+    "don-444.png": "PRB02-DON-Sanji-GOLD",
+    "don-452.png": "PRB02-DON-Shanks-GOLD",
+    "don-454.png": "PRB02-DON-Bonney-GOLD",
+    "don-538.png": "DON-CHINA-2ND-ANNIVERSARY",
+    "don-568.png": "DON-EB01-SKYPIEA",
+    "don-572.png": "DON-EB01-SKYPIEA-GOLD"
   },
   "stats": {
     "total_images": 261,
-    "mapped": 214,
+    "mapped": 220,
     "dupes": 12,
-    "unmapped_db": 19
+    "unmapped_db": 18
   }
 }
