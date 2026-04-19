@@ -99,7 +99,6 @@
     "don-022.png": "DON-TEAL",
     "don-292.png": "DON-YAMATO-1ST",
     "don-013.png": "DON-YELLOW",
-    "don-386.png": "DON-EB02",
     "don-026.png": "PRB01-DON-Ace-GOLD",
     "don-030.png": "PRB01-DON-Big-Mom-GOLD",
     "don-036.png": "PRB01-DON-Donquixote-Doflamingo",
@@ -271,12 +270,11 @@
     "don-448.png": "DUPE",
     "don-512.png": "DON-EB03-HEROINES-NAMI",
     "don-520.png": "DON-EB03-HEROINES-NAMI-GOLD",
-    "don-322.png": "DON-EB03-HEROINES",
-    "don-388.png": "DON-EB03-HEROINES",
     "don-324.png": "DON-EB03-HEROINES-GOLD",
     "don-392.png": "DON-EB03-HEROINES-GOLD",
     "don-326.png": "DUPE",
-    "don-394.png": "PRB02-DON-Jinbe"
+    "don-394.png": "PRB02-DON-Jinbe",
+    "don-528.png": "DON-EB03-HEROINES-GOLD"
   },
   "stats": {
     "total_images": 261,
