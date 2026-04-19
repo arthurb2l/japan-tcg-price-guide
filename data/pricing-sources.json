@@ -1,0 +1,146 @@
+{
+  "_comment": "Source registry for pricing infrastructure. See issue #78.",
+  "sources": {
+    "surugaya": {
+      "name": "駿河屋",
+      "url": "https://www.suruga-ya.jp",
+      "region": "JP",
+      "type": "marketplace",
+      "rank": 1,
+      "tier": "S",
+      "languages": ["jp"],
+      "shipping": {"flat": 440, "free_above": 1500},
+      "markup_tendency": "low",
+      "scraper": "deal-hunter.py:search_surugaya",
+      "notes": "Multi-store marketplace. Use floor price."
+    },
+    "yuyutei": {
+      "name": "遊々亭",
+      "url": "https://yuyu-tei.jp",
+      "region": "JP",
+      "type": "retailer",
+      "rank": 2,
+      "tier": "A",
+      "languages": ["jp"],
+      "shipping": {"flat": 300},
+      "markup_tendency": "low-medium",
+      "scraper": "price-scan.py:search_yuyutei",
+      "notes": "Single-price retailer. Good market indicator."
+    },
+    "cardrush": {
+      "name": "カードラッシュ",
+      "url": "https://www.cardrush-onepiece.jp",
+      "region": "JP",
+      "type": "retailer",
+      "rank": 3,
+      "tier": "A",
+      "languages": ["jp"],
+      "shipping": {"flat": 200},
+      "markup_tendency": "medium",
+      "scraper": "deal-hunter.py:search_cardrush",
+      "notes": "Specialist OP card shop."
+    },
+    "mercari": {
+      "name": "メルカリ",
+      "url": "https://mercari.com/jp",
+      "region": "JP",
+      "type": "p2p",
+      "rank": 4,
+      "tier": "C",
+      "languages": ["jp"],
+      "shipping": {"flat": 175},
+      "markup_tendency": "variable",
+      "scraper": "fetch-mercari-jp.js",
+      "notes": "P2P — use median of recent sold. High variance."
+    },
+    "amazon_jp": {
+      "name": "Amazon JP",
+      "url": "https://amazon.co.jp",
+      "region": "JP",
+      "type": "marketplace",
+      "rank": 5,
+      "tier": "B",
+      "languages": ["jp"],
+      "shipping": {"flat": 410, "free_above": 2000},
+      "markup_tendency": "medium-high",
+      "scraper": "fetch-amazon-jp.js",
+      "notes": "Marketplace sellers. Often higher than specialist shops."
+    },
+    "rarity": {
+      "name": "Rarity (one-piece-rarity.com)",
+      "url": "https://one-piece-rarity.com",
+      "region": "JP",
+      "type": "aggregator",
+      "rank": 3,
+      "tier": "B",
+      "languages": ["jp", "en"],
+      "markup_tendency": "medium",
+      "scraper": "built-in",
+      "notes": "Currently our primary source. Estimates based on rarity/set."
+    },
+    "cardmarket": {
+      "name": "Cardmarket",
+      "url": "https://www.cardmarket.com",
+      "region": "EU",
+      "type": "marketplace",
+      "rank": 1,
+      "tier": "S",
+      "languages": ["en", "fr", "de", "es", "it"],
+      "shipping": {"varies": true},
+      "markup_tendency": "low",
+      "scraper": null,
+      "notes": "EU gold standard. Trend price = market consensus."
+    },
+    "tcgplayer": {
+      "name": "TCGPlayer",
+      "url": "https://www.tcgplayer.com",
+      "region": "NA",
+      "type": "marketplace",
+      "rank": 1,
+      "tier": "S",
+      "languages": ["en"],
+      "shipping": {"varies": true},
+      "markup_tendency": "low",
+      "scraper": null,
+      "notes": "NA gold standard. Market price = weighted recent sales."
+    },
+    "pricecharting": {
+      "name": "PriceCharting",
+      "url": "https://www.pricecharting.com",
+      "region": "NA",
+      "type": "aggregator",
+      "rank": 2,
+      "tier": "B",
+      "languages": ["en"],
+      "markup_tendency": "medium",
+      "scraper": "built-in",
+      "notes": "Aggregates eBay sales. Skews international/graded."
+    }
+  },
+  "regions": {
+    "JP": {
+      "currency": "jpy",
+      "primary_sources": ["surugaya", "yuyutei", "cardrush"],
+      "secondary_sources": ["mercari", "amazon_jp", "rarity"],
+      "weight_formula": "1/rank"
+    },
+    "NA": {
+      "currency": "usd",
+      "primary_sources": ["tcgplayer"],
+      "secondary_sources": ["pricecharting"],
+      "weight_formula": "1/rank"
+    },
+    "EU": {
+      "currency": "eur",
+      "primary_sources": ["cardmarket"],
+      "secondary_sources": [],
+      "weight_formula": "1/rank"
+    }
+  },
+  "confidence": {
+    "high": "3+ sources, <7 days old",
+    "medium": "2 sources, <14 days old",
+    "low": "1 source or >14 days old",
+    "none": "0 sources"
+  }
+}
