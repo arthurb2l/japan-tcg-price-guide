@@ -255,12 +255,21 @@
     "don-460.png": "PRB02-DON-Jinbe-GOLD",
     "don-462.png": "PRB02-DON-Smoker-GOLD",
     "don-464.png": "PRB02-DON-Chopper-GOLD",
-    "don-466.png": "PRB02-DON-Nami-GOLD"
+    "don-466.png": "PRB02-DON-Nami-GOLD",
+    "don-468.png": "PRB02-DON-Robin-GOLD",
+    "don-472.png": "PRB02-DON-Buggy-GOLD",
+    "don-474.png": "PRB02-DON-Hannyabal-GOLD",
+    "don-476.png": "PRB02-DON-Foxy-GOLD",
+    "don-482.png": "PRB02-DON-Teach-GOLD",
+    "don-494.png": "DON-OPDAY-2025",
+    "don-502.png": "PRB02-DON-Gear-5-Luffy-GOLD",
+    "don-506.png": "PRB02-DON-Lim-GOLD",
+    "don-536.png": "DON-EN-2ND-ANNIVERSARY"
   },
   "stats": {
     "total_images": 261,
-    "mapped": 236,
+    "mapped": 245,
     "dupes": 12,
-    "unmapped_db": 18
+    "unmapped_db": 17
   }
 }
