@@ -33,7 +33,7 @@
     "don-516.png": "DON-EB03-HEROINES-BOA",
     "don-524.png": "DON-EB03-HEROINES-BOA-GOLD",
     "don-526.png": "DON-EB03-HEROINES",
-    "don-328.png": "DON-EB03-HEROINES-NAMI-GOLD",
+    "don-328.png": "PRB02-DON-Smoker",
     "don-396.png": "DON-EB03-HEROINES-NAMI-GOLD",
     "don-332.png": "DON-EB03-HEROINES-ROBIN",
     "don-398.png": "DON-EB03-HEROINES-ROBIN",
@@ -271,7 +271,15 @@
     "don-424.png": "DUPE",
     "don-426.png": "DUPE",
     "don-428.png": "DUPE",
-    "don-448.png": "DUPE"
+    "don-448.png": "DUPE",
+    "don-512.png": "DON-EB03-HEROINES-NAMI",
+    "don-520.png": "DON-EB03-HEROINES-NAMI-GOLD",
+    "don-322.png": "DON-EB03-HEROINES",
+    "don-388.png": "DON-EB03-HEROINES",
+    "don-324.png": "DON-EB03-HEROINES-GOLD",
+    "don-392.png": "DON-EB03-HEROINES-GOLD",
+    "don-326.png": "DON-EB03-NAMI",
+    "don-394.png": "DON-EB03-NAMI"
   },
   "stats": {
     "total_images": 261,
