@@ -1657,7 +1657,7 @@ const i=el.id.replace('card-','');
 const saved=m[i], pre=PREFILL[i];
 const sel=el.querySelector('input[list]'), ta=el.querySelector('textarea');
 if(saved&&saved.cardId){sel.value=saved.cardId;sty(el,saved.cardId);}
-else if(pre&&pre.cardId && !(map[fname]==='')){sel.value=pre.cardId;el.classList.add('auto-mapped');m[i]={cardId:pre.cardId,auto:true};}
+else if(pre&&pre.cardId){sel.value=pre.cardId;el.classList.add('auto-mapped');m[i]={cardId:pre.cardId,auto:true};}
 if(saved&&saved.note)ta.value=saved.note;
 });
 save();updateStats();
@@ -1741,7 +1741,7 @@ window.addEventListener('load',function(){
       inp.parentNode.insertBefore(lbl,inp);
       // Sync to m{} so export sees pre-filled values
       var idx=card.id.replace('card-','');
-      if(!m[idx])m[idx]={cardId:map[fname],auto:true};
+      m[idx]={cardId:map[fname],auto:true};
       sty(card,map[fname]);
     }
   });
