@@ -264,11 +264,17 @@
     "don-494.png": "DON-OPDAY-2025",
     "don-502.png": "PRB02-DON-Gear-5-Luffy-GOLD",
     "don-506.png": "PRB02-DON-Lim-GOLD",
-    "don-536.png": "DON-EN-2ND-ANNIVERSARY"
+    "don-536.png": "DON-EN-2ND-ANNIVERSARY",
+    "don-512.png": "DON-EB03-NAMI",
+    "don-514.png": "DON-EB03-ROBIN",
+    "don-516.png": "DON-EB03-BOA",
+    "don-520.png": "DON-EB03-NAMI-GOLD",
+    "don-522.png": "DON-EB03-ROBIN-GOLD",
+    "don-524.png": "DON-EB03-BOA-GOLD"
   },
   "stats": {
     "total_images": 261,
-    "mapped": 245,
+    "mapped": 251,
     "dupes": 12,
     "unmapped_db": 17
   }
