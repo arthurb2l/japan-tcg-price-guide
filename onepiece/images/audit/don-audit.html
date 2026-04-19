@@ -1700,7 +1700,7 @@ document.getElementById('flabel').textContent='(grouped by name)';
 function exportMapping(){let out='DON CARD MAPPING\n================\n';const used={};
 document.querySelectorAll('.card').forEach(el=>{const i=el.id.replace('card-',''),fn=el.dataset.fname,
 sel=el.querySelector('input[list]').value,note=el.querySelector('textarea').value,auto=el.classList.contains('auto-mapped');
-if(sel||note){const lb=sel==='NEW'?'NEW: '+note:sel==='DUPLICATE'?'DUPE: '+note:sel||'(no selection)';
+{const lb=sel==='NEW'?'NEW: '+note:sel==='DUPLICATE'?'DUPE: '+note:sel||'(no selection)';
 out+='#'+(parseInt(i)+1)+' | '+fn+' | '+lb+(auto?' [AUTO]':'')+(note&&sel!=='NEW'?' | note: '+note:'')+'\n';
 if(sel&&!['NEW','DUPLICATE','NOT_A_CARD',''].includes(sel)){if(used[sel])used[sel].push(parseInt(i)+1);else used[sel]=[parseInt(i)+1];}}});
 out+='\nDUPLICATE ASSIGNMENTS:\n';let hd=false;
