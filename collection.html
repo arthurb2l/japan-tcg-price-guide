@@ -344,6 +344,7 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
       </div>
       <div class="card-modal-actions">
         <button class="delete-btn" onclick="modalDeleteCard()">🗑️ Remove</button>
+        <button onclick="modalCopyDetails()" style="flex:1;padding:12px;border:1px solid var(--border);border-radius:var(--r-md);background:var(--card);cursor:pointer;font-size:.9em">📋 Copy</button>
         <button class="save-btn" onclick="saveAndCloseModal()">✓ Save</button>
         <button onclick="toggleReportForm()" style="flex:1;padding:12px;border:1px solid #f5c6cb;border-radius:var(--r-md);background:var(--card)3f3;cursor:pointer;color:var(--danger);font-size:.9em">⚠️ Report</button>
       </div>
@@ -633,6 +634,22 @@ async function modalToggleList(list, checked) {
   }
 }
 
+function modalCopyDetails() {
+  if (!modalCardId) return;
+  const card = allCards.find(c => c.id === modalCardId);
+  const data = userCollection[modalCardId] || {};
+  const name = card?.name || modalCardId;
+  const set = card?.set || 'unknown';
+  const rarity = card?.rarity || '';
+  const finish = card?.finish || 'regular';
+  const price = getPrice(card) ? `¥${Math.round(getPrice(card)*150).toLocaleString()}` : 'N/A';
+  const text = `${name} (${modalCardId}) [${finish}]\nSet: ${set}\nRarity: ${rarity}\nPrice: ${price}\nRef: ${modalCardId}@${set}`;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = event.target.closest('button');
+    const orig = btn.textContent; btn.textContent = '✓ Copied!';
+    setTimeout(() => btn.textContent = orig, 1200);
+  });
+}
 async function modalDeleteCard() {
   if (!modalCardId) return;
   await removeFromCollection(modalCardId);
