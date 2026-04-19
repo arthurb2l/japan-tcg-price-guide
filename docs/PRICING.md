@@ -88,7 +88,7 @@ TCGdex aggregates prices from:
 ### Fetching Prices
 ```bash
 # Fetch 1000 Pokemon cards from TCGdex
-cd /mnt/c/q/Pokemon && node scripts/fetch-pokemon-prices.js sv 1000
+cd /mnt/c/q/projects/pokemon && node scripts/fetch-pokemon-prices.js sv 1000
 ```
 
 The script:
@@ -123,7 +123,7 @@ The script:
 ### Fetching Prices
 ```bash
 # One Piece: scrape card list from official site, then price via PriceCharting
-cd /mnt/c/q/Pokemon && node scripts/fetch-op-official-cardlist.js <series_id> --dry-run
+cd /mnt/c/q/projects/pokemon && node scripts/fetch-op-official-cardlist.js <series_id> --dry-run
 ```
 
 ### Challenges

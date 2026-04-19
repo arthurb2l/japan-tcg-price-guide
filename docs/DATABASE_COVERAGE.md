@@ -3,7 +3,7 @@
 ## Quick Stats
 Run this to get current stats:
 ```bash
-cd /mnt/c/q/Pokemon && cat data/brain-cache.json | jq '{
+cd /mnt/c/q/projects/pokemon && cat data/brain-cache.json | jq '{
   total: [.sets[][]] | length,
   priced: [.sets[][] | select(.price.eur != null)] | length,
   sets: (.sets | keys | length),

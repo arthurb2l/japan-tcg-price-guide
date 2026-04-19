@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Deal Hunter — daily scan of JP retailers, fix pricing issues, email top deals.
 Run: python3 scripts/deal-hunter.py
-Cron: 0 1 * * * /mnt/c/q/Pokemon/scripts/deal-hunter.sh  (10am JST = 1am UTC)
+Cron: 0 1 * * * /mnt/c/q/projects/pokemon/scripts/deal-hunter.sh  (10am JST = 1am UTC)
 """
 
 import json, re, time, os, subprocess, sys
