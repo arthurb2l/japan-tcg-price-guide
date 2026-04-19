@@ -246,11 +246,20 @@
     "don-488.png": "PRB02-DON-Gear-4-Luffy-GOLD",
     "don-504.png": "PRB02-DON-Yamato-GOLD",
     "don-526.png": "DON-EB03-HEROINES",
-    "don-528.png": "DON-EB03-HEROINES-GOLD"
+    "don-528.png": "DON-EB03-HEROINES-GOLD",
+    "don-366.png": "PRB02-DON-Lim",
+    "don-434.png": "PRB02-DON-Usopp-GOLD",
+    "don-442.png": "PRB02-DON-Koby-GOLD",
+    "don-456.png": "PRB02-DON-Sugar-GOLD",
+    "don-458.png": "PRB02-DON-Shirahoshi-GOLD",
+    "don-460.png": "PRB02-DON-Jinbe-GOLD",
+    "don-462.png": "PRB02-DON-Smoker-GOLD",
+    "don-464.png": "PRB02-DON-Chopper-GOLD",
+    "don-466.png": "PRB02-DON-Nami-GOLD"
   },
   "stats": {
     "total_images": 261,
-    "mapped": 227,
+    "mapped": 236,
     "dupes": 12,
     "unmapped_db": 18
   }
