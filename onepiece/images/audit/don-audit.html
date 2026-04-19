@@ -1657,7 +1657,7 @@ const i=el.id.replace('card-','');
 const saved=m[i], pre=PREFILL[i];
 const sel=el.querySelector('input[list]'), ta=el.querySelector('textarea');
 if(saved&&saved.cardId){sel.value=saved.cardId;sty(el,saved.cardId);}
-else if(pre&&pre.cardId && !(fname in map)){sel.value=pre.cardId;el.classList.add('auto-mapped');m[i]={cardId:pre.cardId,auto:true};}
+else if(pre&&pre.cardId && !(map[fname]==='')){sel.value=pre.cardId;el.classList.add('auto-mapped');m[i]={cardId:pre.cardId,auto:true};}
 if(saved&&saved.note)ta.value=saved.note;
 });
 save();updateStats();
