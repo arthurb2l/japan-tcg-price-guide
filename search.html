@@ -1250,7 +1250,14 @@ function showCard(id, isEn, uid) {
         priceHtml += jp.map(s => {
           const stockDot = s.stock ? '<span style="color:#4caf50">●</span>' : '<span style="color:#ccc">○</span>';
           const isFloor = s.jpy === floor;
-          return `<div style="font-size:.85em;padding:1px 0;${isFloor?'font-weight:600':''}"><span style="display:inline-block;width:110px;color:#444">${s.name}</span> ¥${s.jpy.toLocaleString()} ${stockDot}</div>`;
+          const searchQ = encodeURIComponent(card.id);
+          let url = '#';
+          if (s.name === '駿河屋') url = `https://www.suruga-ya.jp/search?category=&search_word=${searchQ}&restrict%5B%5D=categorygroup_6`;
+          else if (s.name === '遊々亭') url = `https://yuyu-tei.jp/sell/opc/s/search?search_word=${searchQ}`;
+          else if (s.name === 'カードラッシュ') url = `https://www.cardrush-op.jp/product-list?keyword=${searchQ}`;
+          else if (s.name === 'Amazon JP') url = `https://www.amazon.co.jp/s?k=${encodeURIComponent(card.id + ' ワンピースカード')}`;
+          else if (s.name === 'メルカリ') url = `https://jp.mercari.com/search?keyword=${searchQ}`;
+          return `<div style="font-size:.85em;padding:1px 0;${isFloor?'font-weight:600':''}"><a href="${url}" target="_blank" style="color:#1976d2;text-decoration:none;display:inline-block;width:110px">${s.name}</a> ¥${s.jpy.toLocaleString()} ${stockDot}</div>`;
         }).join('');
       }
       // NA
