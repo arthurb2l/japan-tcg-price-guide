@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="/japan-tcg-price-guide/base.css">
 <!-- Firebase -->
 <script src="components/normalize-card.js"></script>
+<script src="/japan-tcg-price-guide/components/price-utils.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
@@ -725,21 +726,7 @@ async function loadCards() {
   }
 }
 
-function getPrice(c) {
-  // JP floor from new v2 sources
-  if (c.pricing?.sources) {
-    const jpys = Object.values(c.pricing.sources).map(s => s?.jpy).filter(Boolean);
-    if (jpys.length) return Math.min(...jpys) / 150; // return as USD equivalent for legacy compat
-  }
-  // Computed JPY fallback
-  if (c.pricing?.computed?.jpy) return c.pricing.computed.jpy / 150;
-  // Legacy formats
-  if (c.pricing?.usd) return c.pricing.usd;
-  if (c.pricing?.tcgplayer?.normal?.marketPrice) return c.pricing.tcgplayer.normal.marketPrice;
-  if (c.pricing?.tcgplayer?.holofoil?.marketPrice) return c.pricing.tcgplayer.holofoil.marketPrice;
-  if (c.pricing?.cardmarket?.trend) return c.pricing.cardmarket.trend * 1.08;
-  return null;
-}
+function getPrice(c) { return getFloorUsd(c) || null; }
 
 function renderCollection() {
   const content = document.getElementById('content');

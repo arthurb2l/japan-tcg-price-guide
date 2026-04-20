@@ -87,6 +87,7 @@ canvas{display:none}
 .deal-strip .verdict.bad{color:#ff5252}
 .deal-strip .verdict.fair{color:#FFC107}
 </style>
+<script src="/japan-tcg-price-guide/components/price-utils.js"></script>
 </head>
 <body>
 
@@ -278,7 +279,7 @@ function showStrip(card){
   var name=typeof card.name==='object'?(card.name.en||card.name.jp||''):(card.name||'');
   var img=typeof card.img==='object'?(card.img.jp||card.img.en||''):(card.image||card.img||'');
   var price=card.pricing?card.pricing.computed:null;
-  var jpy=price?price.jpy:null;
+  var jpy=getFloorJpy(card) || (price?price.jpy:null);
   var set=card.set||'';var rarity=card.rarity||'';var finish=card.finish||'';
 
   var h='';

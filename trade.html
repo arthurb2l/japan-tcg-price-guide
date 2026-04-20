@@ -56,6 +56,7 @@
 </div>
 <footer id="site-footer"></footer>
 <script src="/japan-tcg-price-guide/components/header.js"></script>
+<script src="/japan-tcg-price-guide/components/price-utils.js"></script>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
 <script>
 let allCards = [];
@@ -69,11 +70,7 @@ async function init() {
   allCards = [...pk, ...op];
 }
 
-function getPrice(c) {
-  if (c.pricing?.sources) { const j=Object.values(c.pricing.sources).map(s=>s?.jpy).filter(Boolean); if(j.length) return Math.min(...j)/150; }
-  if (c.pricing?.computed?.jpy) return c.pricing.computed.jpy/150;
-  return c.pricing?.usd || c.pricing?.tcgplayer?.normal?.marketPrice || c.pricing?.tcgplayer?.holofoil?.marketPrice || 0;
-}
+function getPrice(c) { return getFloorUsd(c) || 0; }
 
 function searchCard(input, side) {
   const q = input.value.toLowerCase();
