@@ -1,0 +1,141 @@
+[
+  {
+    "date": "2026-04-20",
+    "scanned": 5,
+    "updated": 0,
+    "results": [
+      {
+        "card": "OP04-083",
+        "set": "PRB-02",
+        "old_jpy": 15300,
+        "new_jpy": 140,
+        "sources": [
+          "surugaya",
+          "yuyutei"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "card": "PRB02-014",
+        "set": "PRB-02",
+        "old_jpy": 12999,
+        "new_jpy": 107,
+        "sources": [
+          "surugaya",
+          "yuyutei"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "card": "OP06-119",
+        "set": "PRB-02",
+        "old_jpy": 12000,
+        "new_jpy": 173,
+        "sources": [
+          "surugaya",
+          "yuyutei"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "card": "PRB02-006",
+        "set": "PRB-02",
+        "old_jpy": 4580,
+        "new_jpy": 233,
+        "sources": [
+          "surugaya",
+          "yuyutei"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "card": "OP09-004",
+        "set": "PRB-02",
+        "old_jpy": 3280,
+        "new_jpy": 87,
+        "sources": [
+          "surugaya",
+          "yuyutei"
+        ],
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "date": "2026-04-20",
+    "scanned": 10,
+    "updated": 0,
+    "results": [
+      {
+        "card": "OP04-083",
+        "set": "PRB-02",
+        "old": 15300,
+        "new": 193,
+        "confidence": "medium"
+      },
+      {
+        "card": "PRB02-014",
+        "set": "PRB-02",
+        "old": 12999,
+        "new": 260,
+        "confidence": "medium"
+      },
+      {
+        "card": "OP06-119",
+        "set": "PRB-02",
+        "old": 12000,
+        "new": 340,
+        "confidence": "medium"
+      },
+      {
+        "card": "PRB02-006",
+        "set": "PRB-02",
+        "old": 4580,
+        "new": 553,
+        "confidence": "medium"
+      },
+      {
+        "card": "OP09-004",
+        "set": "PRB-02",
+        "old": 3280,
+        "new": 147,
+        "confidence": "medium"
+      },
+      {
+        "card": "ST15-002",
+        "set": "PRB-02",
+        "old": 2500,
+        "new": 147,
+        "confidence": "medium"
+      },
+      {
+        "card": "ST16-004",
+        "set": "PRB-02",
+        "old": 2500,
+        "new": 147,
+        "confidence": "medium"
+      },
+      {
+        "card": "OP07-064",
+        "set": "PRB-02",
+        "old": 2130,
+        "new": 193,
+        "confidence": "medium"
+      },
+      {
+        "card": "PRB02-008",
+        "set": "PRB-02",
+        "old": 1999,
+        "new": 327,
+        "confidence": "medium"
+      },
+      {
+        "card": "PRB02-012",
+        "set": "PRB-02",
+        "old": 1555,
+        "new": 327,
+        "confidence": "medium"
+      }
+    ]
+  }
+]
