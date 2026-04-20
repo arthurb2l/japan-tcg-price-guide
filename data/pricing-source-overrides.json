@@ -1,0 +1,5 @@
+{
+  "_comment": "User overrides for source accuracy. Flag sources as inaccurate for specific cards. Scanner will reduce weight or exclude flagged sources.",
+  "_usage": "Add entries manually or via CLI: python3 scripts/price-scan.py --flag CARD_ID SOURCE REASON",
+  "flags": {}
+}
