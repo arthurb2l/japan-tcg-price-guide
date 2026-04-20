@@ -660,11 +660,9 @@ async function saveToCloud() {
 function formatPrice(card) {
   const jpy = getFloorJpy(card);
   if (!jpy) return '-';
-  const srcCount = getPriceSources(card).length;
-  const indicator = srcCount > 1 ? ` <span style="font-size:.7em;color:#888">📊${srcCount}</span>` : '';
-  if (currency === 'USD') return '$' + (jpy / 150).toFixed(2) + indicator;
-  if (currency === 'EUR') return '€' + (jpy / 162).toFixed(2) + indicator;
-  return '¥' + jpy.toLocaleString() + indicator;
+  if (currency === 'USD') return '$' + (jpy / 150).toFixed(2);
+  if (currency === 'EUR') return '€' + (jpy / 162).toFixed(2);
+  return '¥' + jpy.toLocaleString();
 }
 
 function setCurrency(c) {
@@ -1214,23 +1212,63 @@ function showCard(id, isEn, uid) {
   // Price with sources
   let priceHtml = "No price data";
   if (card.pricing) {
-    const sources = [];
-    if (card.pricing.usd) sources.push({ name: 'limitlesstcg', jpy: Math.round(card.pricing.usd * 150), raw: '$' + card.pricing.usd.toFixed(2) });
-    if (card.pricing.tcgplayer?.normal?.marketPrice) sources.push({ name: 'TCGPlayer', jpy: Math.round(card.pricing.tcgplayer.normal.marketPrice * 150), raw: '$' + card.pricing.tcgplayer.normal.marketPrice.toFixed(2) });
-    if (card.pricing.tcgplayer?.holofoil?.marketPrice) sources.push({ name: 'TCGPlayer (holo)', jpy: Math.round(card.pricing.tcgplayer.holofoil.marketPrice * 150), raw: '$' + card.pricing.tcgplayer.holofoil.marketPrice.toFixed(2) });
-    if (card.pricing.cardmarket?.trend) sources.push({ name: 'Cardmarket', jpy: Math.round(card.pricing.cardmarket.trend * 162), raw: '€' + card.pricing.cardmarket.trend.toFixed(2) });
-    if (card.pricing.amazonjp?.jpy) sources.push({ name: 'Amazon JP', jpy: card.pricing.amazonjp.jpy, raw: '¥' + card.pricing.amazonjp.jpy.toLocaleString() });
-    if (card.pricing.mercari?.jpy) sources.push({ name: 'Mercari', jpy: card.pricing.mercari.jpy, raw: '¥' + card.pricing.mercari.jpy.toLocaleString() });
-    
-    if (sources.length) {
-      const jpys = sources.map(s => s.jpy).sort((a,b) => a - b);
-      const floor = jpys[0]; // lowest source
-      priceHtml = `<div style="font-size:1.1em;font-weight:bold;margin-bottom:6px">¥${floor.toLocaleString()} <span style="font-size:.7em;color:#888;font-weight:normal">${sources.length > 1 ? 'floor' + ' · ' + sources.length + ' sources' : sources[0].name}</span></div>`;
-      priceHtml += sources.map(s => {
-        const diff = s.jpy - floor;
-        const color = sources.length > 1 ? (diff <= 0 ? '#16a34a' : '#dc2626') : '#666';
-        return `<div style="font-size:.85em;padding:2px 0"><span style="color:#888;width:100px;display:inline-block">${s.name}</span> <span style="font-weight:500">¥${s.jpy.toLocaleString()}</span> <span style="font-size:.8em;color:${color}">${s.raw}</span></div>`;
-      }).join('');
+    const jp = [], na = [], eu = [];
+    // JP sources (new v2 format)
+    if (card.pricing.sources) {
+      const srcNames = {surugaya:'駿河屋',yuyutei:'遊々亭',cardrush:'カードラッシュ',mercari:'メルカリ',amazonjp:'Amazon JP',rarity:'Rarity'};
+      for (const [src, data] of Object.entries(card.pricing.sources)) {
+        if (data?.jpy) jp.push({name: srcNames[src]||src, jpy: data.jpy, stock: data.in_stock !== false});
+      }
+    }
+    // Legacy JP sources
+    if (card.pricing.amazonjp?.jpy && !jp.find(s=>s.name==='Amazon JP')) jp.push({name:'Amazon JP', jpy:card.pricing.amazonjp.jpy, stock:true});
+    if (card.pricing.mercari?.jpy && !jp.find(s=>s.name==='メルカリ')) jp.push({name:'メルカリ', jpy:card.pricing.mercari.jpy, stock:true});
+    // NA sources
+    if (card.pricing.usd) na.push({name:'limitlesstcg', raw:'$'+card.pricing.usd.toFixed(2)});
+    if (card.pricing.tcgplayer?.normal?.marketPrice) na.push({name:'TCGPlayer', raw:'$'+card.pricing.tcgplayer.normal.marketPrice.toFixed(2)});
+    else if (card.pricing.tcgplayer?.holofoil?.marketPrice) na.push({name:'TCGPlayer', raw:'$'+card.pricing.tcgplayer.holofoil.marketPrice.toFixed(2)});
+    // EU sources
+    if (card.pricing.cardmarket?.trend) eu.push({name:'Cardmarket', raw:'€'+card.pricing.cardmarket.trend.toFixed(2)});
+
+    // Compute floor and reference from JP sources
+    const jpPrices = jp.map(s=>s.jpy).sort((a,b)=>a-b);
+    const floor = jpPrices[0] || 0;
+    const reference = jpPrices.length > 1 ? Math.round(jpPrices.reduce((a,b)=>a+b,0)/jpPrices.length) : floor;
+    const buyBack = card.pricing.regional?.JP?.buy || null;
+
+    if (floor) {
+      priceHtml = `<div style="margin-bottom:10px">`;
+      priceHtml += `<div style="font-size:1.2em;font-weight:bold;color:#2e7d32">Best Price: ¥${floor.toLocaleString()}</div>`;
+      if (reference && reference !== floor) priceHtml += `<div style="font-size:.9em;color:#666">Market: ¥${reference.toLocaleString()}</div>`;
+      if (buyBack) priceHtml += `<div style="font-size:.85em;color:#888">Buy-back: ¥${buyBack.toLocaleString()}</div>`;
+      priceHtml += `</div>`;
+
+      // JP sources list
+      if (jp.length) {
+        priceHtml += `<div style="font-size:.8em;color:#555;margin-bottom:2px">🇯🇵 Japan</div>`;
+        jp.sort((a,b)=>a.jpy-b.jpy);
+        priceHtml += jp.map(s => {
+          const stockDot = s.stock ? '<span style="color:#4caf50">●</span>' : '<span style="color:#ccc">○</span>';
+          const isFloor = s.jpy === floor;
+          return `<div style="font-size:.85em;padding:1px 0;${isFloor?'font-weight:600':''}"><span style="display:inline-block;width:110px;color:#444">${s.name}</span> ¥${s.jpy.toLocaleString()} ${stockDot}</div>`;
+        }).join('');
+      }
+      // NA
+      if (na.length) {
+        priceHtml += `<div style="font-size:.8em;color:#555;margin-top:8px;margin-bottom:2px">🇺🇸 NA</div>`;
+        priceHtml += na.map(s => `<div style="font-size:.85em;padding:1px 0"><span style="display:inline-block;width:110px;color:#444">${s.name}</span> ${s.raw}</div>`).join('');
+      }
+      // EU
+      if (eu.length) {
+        priceHtml += `<div style="font-size:.8em;color:#555;margin-top:8px;margin-bottom:2px">🇪🇺 EU</div>`;
+        priceHtml += eu.map(s => `<div style="font-size:.85em;padding:1px 0"><span style="display:inline-block;width:110px;color:#444">${s.name}</span> ${s.raw}</div>`).join('');
+      }
+      // Updated date
+      const updated = card.pricing.updated || card.pricing.regional?.JP?.updated;
+      if (updated) priceHtml += `<div style="font-size:.75em;color:#aaa;margin-top:8px">Updated: ${updated}</div>`;
+    } else if (na.length || eu.length) {
+      // No JP data but have international
+      priceHtml = (na.length ? na.map(s=>`${s.name}: ${s.raw}`).join(' · ') : '') + (eu.length ? ' · ' + eu.map(s=>`${s.name}: ${s.raw}`).join(' · ') : '');
     }
   }
   document.getElementById('modal-price').innerHTML = priceHtml;
