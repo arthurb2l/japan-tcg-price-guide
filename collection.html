@@ -719,6 +719,14 @@ async function loadCards() {
 }
 
 function getPrice(c) {
+  // JP floor from new v2 sources
+  if (c.pricing?.sources) {
+    const jpys = Object.values(c.pricing.sources).map(s => s?.jpy).filter(Boolean);
+    if (jpys.length) return Math.min(...jpys) / 150; // return as USD equivalent for legacy compat
+  }
+  // Computed JPY fallback
+  if (c.pricing?.computed?.jpy) return c.pricing.computed.jpy / 150;
+  // Legacy formats
   if (c.pricing?.usd) return c.pricing.usd;
   if (c.pricing?.tcgplayer?.normal?.marketPrice) return c.pricing.tcgplayer.normal.marketPrice;
   if (c.pricing?.tcgplayer?.holofoil?.marketPrice) return c.pricing.tcgplayer.holofoil.marketPrice;
