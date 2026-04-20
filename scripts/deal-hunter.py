@@ -353,11 +353,25 @@ def find_deals(db_cards, data):
                     print(f"   ⏸  Skipped flip: {card['id']} {card['name'][:25]} ¥{db_price:,}→¥{market:,} (ping-pong, needs stronger evidence)")
             true_price = market or db_price
 
-        # Find cheapest listing that's a real deal vs consensus
+        # Use floor price from new pricing file if available
+        floor_price = None
+        try:
+            import os as _os
+            _pf = _os.path.join(DATA_DIR, 'prices', 'onepiece-current.json')
+            if _os.path.exists(_pf):
+                with open(_pf) as _f:
+                    _pd = json.load(_f)
+                _cp = _pd.get('prices', {}).get(card['id'], {}).get('variants', {}).get('normal', {})
+                floor_price = _cp.get('floor')
+        except:
+            pass
+        compare_price = floor_price or true_price
+
+        # Find cheapest listing that's a real deal vs FLOOR price
         for l in sorted(listings, key=lambda x: x['total']):
-            if true_price <= MIN_MARKET_VALUE:
+            if compare_price <= MIN_MARKET_VALUE:
                 break
-            discount = (true_price - l['total']) / true_price
+            discount = (compare_price - l['total']) / compare_price
             min_discount = 0.30 if card['id'] in owned else 0.15
             if min_discount <= discount <= 0.75:
                 deals.append({
