@@ -343,6 +343,14 @@ function getPriceSources(c) {
   if (c.pricing.cardmarket?.trend) s.push({ jpy: Math.round(c.pricing.cardmarket.trend * 162) });
   if (c.pricing.amazonjp?.jpy) s.push({ jpy: c.pricing.amazonjp.jpy });
   if (c.pricing.mercari?.jpy) s.push({ jpy: c.pricing.mercari.jpy });
+  // Regional JP sources (new v2 pricing)
+  if (c.pricing.sources) {
+    for (const [src, data] of Object.entries(c.pricing.sources)) {
+      if (data?.jpy) s.push({ jpy: data.jpy, source: src });
+    }
+  }
+  // Fallback: computed.jpy
+  if (!s.length && c.pricing.computed?.jpy) s.push({ jpy: c.pricing.computed.jpy });
   return s;
 }
 function getFloorJpy(c) {
