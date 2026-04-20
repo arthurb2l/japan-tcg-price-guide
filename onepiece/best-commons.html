@@ -73,6 +73,16 @@ h1{font-size:1.5em;margin-bottom:5px}
 
 <script>
 const BASE = '/japan-tcg-price-guide';
+function getFloorUsd(c) {
+  if (c.pricing?.sources) {
+    const jpys = Object.values(c.pricing.sources).map(s => s?.jpy).filter(Boolean);
+    if (jpys.length) return Math.min(...jpys) / 150;
+  }
+  if (c.pricing?.computed?.jpy) return c.pricing.computed.jpy / 150;
+  if (c.pricing?.jpy) return c.pricing.jpy / 150;
+  return c.pricing?.usd || 0;
+}
+
 const proxy = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
 let cards = [];
 let lbIdx = 0;
@@ -86,12 +96,12 @@ async function loadData() {
     for (const card of allCards) {
       const base = card.id.split('-p')[0];
       if (!priceByBase[base]) priceByBase[base] = new Set();
-      if (card.pricing?.usd > 0) priceByBase[base].add(card.pricing.usd);
+      if (getFloorUsd(card) > 0) priceByBase[base].add(card.pricing.usd);
     }
 
     const commons = [];
     for (const card of allCards) {
-      const price = card.pricing?.usd;
+      const price = getFloorUsd(card);
       if (card.rarity !== 'C' || !price || price <= 0) continue;
       const base = card.id.split('-p')[0];
       const uniquePrices = priceByBase[base];
