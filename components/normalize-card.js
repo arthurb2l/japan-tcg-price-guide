@@ -26,7 +26,7 @@ function normalizeOPCard(c) {
     img: typeof c.img === 'object' ? (c.img?.jp || c.img?.en) : c.img,
     imgJp: typeof c.img === 'object' ? c.img?.jp : (c.imgJp || c.img),
     imgEn: typeof c.img === 'object' ? c.img?.en : c.imgEn,
-    pricing: p.computed ? { jpy: computed.jpy, usd: computed.usd, source: p.method, updated: p.updated } : p,
+    pricing: p.sources ? p : (p.computed ? { jpy: computed.jpy, usd: computed.usd, source: p.method, updated: p.updated } : p),
   };
   } catch(e) { return { ...c, setId: c.setId || c.set }; }
 }
