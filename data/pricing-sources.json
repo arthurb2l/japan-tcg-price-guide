@@ -8,11 +8,20 @@
       "type": "marketplace",
       "rank": 1,
       "tier": "S",
-      "languages": ["jp"],
-      "shipping": {"flat": 440, "free_above": 1500},
+      "languages": [
+        "jp"
+      ],
+      "shipping": {
+        "flat": 440,
+        "free_above": 1500
+      },
       "markup_tendency": "low",
       "scraper": "deal-hunter.py:search_surugaya",
-      "notes": "Multi-store marketplace. Use floor price."
+      "notes": "Multi-store marketplace. Use floor price.",
+      "stock_detection": "implicit",
+      "stock_reliability": "high",
+      "accuracy_score": 1.0,
+      "accuracy_notes": "Only shows in-stock items. Price = current asking price."
     },
     "yuyutei": {
       "name": "遊々亭",
@@ -21,11 +30,19 @@
       "type": "retailer",
       "rank": 2,
       "tier": "A",
-      "languages": ["jp"],
-      "shipping": {"flat": 300},
+      "languages": [
+        "jp"
+      ],
+      "shipping": {
+        "flat": 300
+      },
       "markup_tendency": "low-medium",
       "scraper": "price-scan.py:search_yuyutei",
-      "notes": "Single-price retailer. Good market indicator."
+      "notes": "Single-price retailer. Good market indicator.",
+      "stock_detection": "explicit",
+      "stock_reliability": "high",
+      "accuracy_score": 1.0,
+      "accuracy_notes": "Shows ◯ (in stock) / × (out of stock). OOS prices still accurate (discount model by condition)."
     },
     "cardrush": {
       "name": "カードラッシュ",
@@ -34,11 +51,19 @@
       "type": "retailer",
       "rank": 3,
       "tier": "A",
-      "languages": ["jp"],
-      "shipping": {"flat": 200},
+      "languages": [
+        "jp"
+      ],
+      "shipping": {
+        "flat": 200
+      },
       "markup_tendency": "medium",
       "scraper": "deal-hunter.py:search_cardrush",
-      "notes": "Specialist OP card shop."
+      "notes": "Specialist OP card shop.",
+      "stock_detection": "explicit",
+      "stock_reliability": "high",
+      "accuracy_score": 0.9,
+      "accuracy_notes": "Shows 品切れ for OOS. Prices may lag market by 1-2 days."
     },
     "mercari": {
       "name": "メルカリ",
@@ -47,11 +72,19 @@
       "type": "p2p",
       "rank": 4,
       "tier": "C",
-      "languages": ["jp"],
-      "shipping": {"flat": 175},
+      "languages": [
+        "jp"
+      ],
+      "shipping": {
+        "flat": 175
+      },
       "markup_tendency": "variable",
       "scraper": "fetch-mercari-jp.js",
-      "notes": "P2P — use median of recent sold. High variance."
+      "notes": "P2P — use median of recent sold. High variance.",
+      "stock_detection": "implicit",
+      "stock_reliability": "high",
+      "accuracy_score": 0.85,
+      "accuracy_notes": "Sold listings = actual transactions. Active listings may be overpriced (asking != selling)."
     },
     "amazon_jp": {
       "name": "Amazon JP",
@@ -60,11 +93,20 @@
       "type": "marketplace",
       "rank": 5,
       "tier": "B",
-      "languages": ["jp"],
-      "shipping": {"flat": 410, "free_above": 2000},
+      "languages": [
+        "jp"
+      ],
+      "shipping": {
+        "flat": 410,
+        "free_above": 2000
+      },
       "markup_tendency": "medium-high",
       "scraper": "fetch-amazon-jp.js",
-      "notes": "Marketplace sellers. Often higher than specialist shops."
+      "notes": "Marketplace sellers. Often higher than specialist shops.",
+      "stock_detection": "explicit",
+      "stock_reliability": "medium",
+      "accuracy_score": 0.7,
+      "accuracy_notes": "Marketplace sellers. Some stale listings from inactive sellers. Higher markup."
     },
     "rarity": {
       "name": "Rarity (one-piece-rarity.com)",
@@ -73,10 +115,17 @@
       "type": "aggregator",
       "rank": 3,
       "tier": "B",
-      "languages": ["jp", "en"],
+      "languages": [
+        "jp",
+        "en"
+      ],
       "markup_tendency": "medium",
       "scraper": "built-in",
-      "notes": "Currently our primary source. Estimates based on rarity/set."
+      "notes": "Currently our primary source. Estimates based on rarity/set.",
+      "stock_detection": "none",
+      "stock_reliability": "low",
+      "accuracy_score": 0.5,
+      "accuracy_notes": "Estimates based on rarity/set. Not real market data. Placeholder only."
     },
     "cardmarket": {
       "name": "Cardmarket",
@@ -85,11 +134,23 @@
       "type": "marketplace",
       "rank": 1,
       "tier": "S",
-      "languages": ["en", "fr", "de", "es", "it"],
-      "shipping": {"varies": true},
+      "languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it"
+      ],
+      "shipping": {
+        "varies": true
+      },
       "markup_tendency": "low",
       "scraper": null,
-      "notes": "EU gold standard. Trend price = market consensus."
+      "notes": "EU gold standard. Trend price = market consensus.",
+      "stock_detection": "explicit",
+      "stock_reliability": "high",
+      "accuracy_score": 1.0,
+      "accuracy_notes": "Trend price based on actual sales. Very accurate for EU market."
     },
     "tcgplayer": {
       "name": "TCGPlayer",
@@ -98,11 +159,19 @@
       "type": "marketplace",
       "rank": 1,
       "tier": "S",
-      "languages": ["en"],
-      "shipping": {"varies": true},
+      "languages": [
+        "en"
+      ],
+      "shipping": {
+        "varies": true
+      },
       "markup_tendency": "low",
       "scraper": null,
-      "notes": "NA gold standard. Market price = weighted recent sales."
+      "notes": "NA gold standard. Market price = weighted recent sales.",
+      "stock_detection": "explicit",
+      "stock_reliability": "high",
+      "accuracy_score": 1.0,
+      "accuracy_notes": "Market price from recent sales. Gold standard for NA."
     },
     "pricecharting": {
       "name": "PriceCharting",
@@ -111,28 +180,48 @@
       "type": "aggregator",
       "rank": 2,
       "tier": "B",
-      "languages": ["en"],
+      "languages": [
+        "en"
+      ],
       "markup_tendency": "medium",
       "scraper": "built-in",
-      "notes": "Aggregates eBay sales. Skews international/graded."
+      "notes": "Aggregates eBay sales. Skews international/graded.",
+      "stock_detection": "none",
+      "stock_reliability": "low",
+      "accuracy_score": 0.6,
+      "accuracy_notes": "Aggregates eBay completed sales. Skews international/graded. Often stale for JP market."
     }
   },
   "regions": {
     "JP": {
       "currency": "jpy",
-      "primary_sources": ["surugaya", "yuyutei", "cardrush"],
-      "secondary_sources": ["mercari", "amazon_jp", "rarity"],
+      "primary_sources": [
+        "surugaya",
+        "yuyutei",
+        "cardrush"
+      ],
+      "secondary_sources": [
+        "mercari",
+        "amazon_jp",
+        "rarity"
+      ],
       "weight_formula": "1/rank"
     },
     "NA": {
       "currency": "usd",
-      "primary_sources": ["tcgplayer"],
-      "secondary_sources": ["pricecharting"],
+      "primary_sources": [
+        "tcgplayer"
+      ],
+      "secondary_sources": [
+        "pricecharting"
+      ],
       "weight_formula": "1/rank"
     },
     "EU": {
       "currency": "eur",
-      "primary_sources": ["cardmarket"],
+      "primary_sources": [
+        "cardmarket"
+      ],
       "secondary_sources": [],
       "weight_formula": "1/rank"
     }
@@ -142,5 +231,30 @@
     "medium": "2 sources, <14 days old",
     "low": "1 source or >14 days old",
     "none": "0 sources"
+  },
+  "accuracy_framework": {
+    "description": "Source accuracy scores (0-1) reflect how closely the price represents true current market value.",
+    "factors": [
+      "Stock status: in-stock prices > out-of-stock prices (OOS may be stale)",
+      "Transaction type: completed sales > asking prices",
+      "Freshness: recently updated > old listings",
+      "Specificity: exact card match > fuzzy search results"
+    ],
+    "scoring_rules": {
+      "in_stock_verified": "Full accuracy_score applied",
+      "out_of_stock_but_reliable": "accuracy_score × 0.8 (e.g., Yuyutei OOS still accurate)",
+      "out_of_stock_unknown_freshness": "accuracy_score × 0.5",
+      "stale_data_over_30_days": "accuracy_score × 0.3"
+    },
+    "user_override": {
+      "description": "User can flag a source as inaccurate for specific cards. Stored in overrides file.",
+      "file": "data/pricing-source-overrides.json",
+      "schema": {
+        "card_id": {
+          "source": "reason",
+          "flagged_date": "YYYY-MM-DD"
+        }
+      }
+    }
   }
 }

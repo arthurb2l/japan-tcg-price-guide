@@ -75,18 +75,33 @@ def search_yuyutei(card_id):
     except Exception as e:
         return {'error': str(e)}
 
-    # Sell prices
+    # Sell prices with stock status
     pattern = (
         r'<span[^>]*class="d-block border[^"]*"[^>]*>\s*' + re.escape(card_id) + r'\s*</span>'
         r'.*?<h4[^>]*>([^<]+)</h4>\s*</a>\s*<strong[^>]*>\s*(\d+)\s*円'
+        r'.*?在庫\s*:\s*\n?\s*(◯|×|○|✕|△)'
     )
     results = []
     for match in re.finditer(pattern, html, re.DOTALL):
-        name, price = match.groups()
+        name, price, stock = match.groups()
         name = name.strip()
         is_parallel = 'パラレル' in name or 'スーパーパラレル' in name
+        in_stock = stock in ('◯', '○', '△')
         results.append({'price': int(price), 'name': name, 'variant': 'parallel' if is_parallel else 'normal',
-                       'type': 'sell', 'url': url})
+                       'type': 'sell', 'in_stock': in_stock, 'url': url})
+
+    # Fallback: pattern without stock (in case page structure varies)
+    if not results:
+        pattern_no_stock = (
+            r'<span[^>]*class="d-block border[^"]*"[^>]*>\s*' + re.escape(card_id) + r'\s*</span>'
+            r'.*?<h4[^>]*>([^<]+)</h4>\s*</a>\s*<strong[^>]*>\s*(\d+)\s*円'
+        )
+        for match in re.finditer(pattern_no_stock, html, re.DOTALL):
+            name, price = match.groups()
+            name = name.strip()
+            is_parallel = 'パラレル' in name or 'スーパーパラレル' in name
+            results.append({'price': int(price), 'name': name, 'variant': 'parallel' if is_parallel else 'normal',
+                           'type': 'sell', 'in_stock': None, 'url': url})
 
     # Buy prices (separate URL)
     buy_url = f"https://yuyu-tei.jp/buy/opc/s/search?search_word={quote_plus(card_id)}"
@@ -166,38 +181,48 @@ RANKS = {'surugaya': 1, 'yuyutei': 1.5, 'cardrush': 3, 'hareruya': 2, 'mercari':
 
 def compute_prices(source_data):
     """Compute reference_price and floor_price from source data.
-    source_data: {'surugaya': {'sell': 90}, 'yuyutei': {'sell': 220, 'buy': 150}, ...}
+    source_data: {'surugaya': {'sell': 90, 'in_stock': True}, 'yuyutei': {'sell': 220, 'buy': 150, 'in_stock': True}, ...}
+    Floor uses ONLY in-stock prices. Reference uses all but penalizes OOS.
     """
     sell_prices = {src: d['sell'] for src, d in source_data.items() if d.get('sell')}
     buy_prices = {src: d['buy'] for src, d in source_data.items() if d.get('buy')}
+    in_stock_sells = {src: d['sell'] for src, d in source_data.items() if d.get('sell') and d.get('in_stock') is not False}
 
     if not sell_prices:
         return None
 
-    # Reference price: volume-adjusted weighted average
+    # Reference price: volume-adjusted weighted average (OOS gets 0.5x weight)
     weighted_sum = 0
     weight_total = 0
     for src, price in sell_prices.items():
         rank = RANKS.get(src, 5)
         listings = source_data[src].get('listings', 1)
         weight = (1.0 / rank) * log(1 + listings)
+        # Penalize OOS sources
+        if source_data[src].get('in_stock') is False:
+            weight *= 0.5
         weighted_sum += price * weight
         weight_total += weight
 
     reference_price = round(weighted_sum / weight_total) if weight_total else None
-    floor_price = min(sell_prices.values())
+
+    # Floor = cheapest IN-STOCK price (fall back to any price if nothing in stock)
+    floor_price = min(in_stock_sells.values()) if in_stock_sells else min(sell_prices.values())
     buy_price = max(buy_prices.values()) if buy_prices else None
 
-    # Confidence: 0-1 numeric
-    n_sources = len(sell_prices)
-    confidence = min(1.0, n_sources / 3)
+    # Confidence: based on in-stock sources
+    n_in_stock = len(in_stock_sells)
+    n_total = len(sell_prices)
+    confidence = min(1.0, n_in_stock / 3) if n_in_stock else min(0.5, n_total / 3)
 
     return {
         'reference': reference_price,
         'floor': floor_price,
+        'floor_in_stock': bool(in_stock_sells),
         'buy': buy_price,
         'spread_pct': round((reference_price - buy_price) / reference_price * 100, 1) if buy_price and reference_price else None,
-        'sources_count': n_sources,
+        'sources_count': n_total,
+        'in_stock_sources': n_in_stock,
         'confidence': round(confidence, 2)
     }
 
@@ -244,10 +269,25 @@ def scan_card(card_id, sources_to_use=None):
             sell_listings = [r for r in variant_listings if r.get('type', 'sell') == 'sell']
             buy_listings = [r for r in variant_listings if r.get('type') == 'buy']
 
-            if sell_listings:
+            # Prefer in-stock prices for floor; track OOS separately
+            in_stock_sells = [r for r in sell_listings if r.get('in_stock') is not False]
+            oos_sells = [r for r in sell_listings if r.get('in_stock') is False]
+
+            if in_stock_sells:
+                floor = min(r['price'] for r in in_stock_sells)
+                variants[variant_type][src_name]['sell'] = floor
+                variants[variant_type][src_name]['listings'] = len(in_stock_sells)
+                variants[variant_type][src_name]['in_stock'] = True
+            elif oos_sells:
+                floor = min(r['price'] for r in oos_sells)
+                variants[variant_type][src_name]['sell'] = floor
+                variants[variant_type][src_name]['listings'] = len(oos_sells)
+                variants[variant_type][src_name]['in_stock'] = False
+            elif sell_listings:
                 floor = min(r['price'] for r in sell_listings)
                 variants[variant_type][src_name]['sell'] = floor
                 variants[variant_type][src_name]['listings'] = len(sell_listings)
+
             if buy_listings:
                 best_buy = max(r['price'] for r in buy_listings)
                 variants[variant_type][src_name]['buy'] = best_buy
@@ -288,6 +328,8 @@ def main():
     parser.add_argument('--source', help='Only use specific source')
     parser.add_argument('--dry-run', action='store_true')
     parser.add_argument('--min-value', type=int, default=0, help='Only scan cards worth >= this')
+    parser.add_argument('--save-every', type=int, default=20, help='Save progress every N cards')
+    parser.add_argument('--resume', action='store_true', help='Skip cards already scanned today')
     args = parser.parse_args()
 
     # Load prices file
@@ -347,6 +389,17 @@ def main():
 
         fail_count = 0
         for sid, cid, current_ref in cards_to_scan:
+            # Resume: skip cards already scanned today with fresh source data
+            if args.resume and cid in price_data.get('prices', {}):
+                existing = price_data['prices'][cid]
+                variants = existing.get('variants', {})
+                has_fresh = any(
+                    any(s in v.get('sources', {}) for s in ['surugaya', 'yuyutei', 'cardrush'])
+                    for v in variants.values()
+                )
+                if has_fresh and existing.get('updated') == today:
+                    continue
+
             print(f"[{scanned+1}/{len(cards_to_scan)}] {cid} (current ref: ¥{current_ref})")
             result = scan_card(cid, sources_to_use)
             scanned += 1
@@ -369,6 +422,14 @@ def main():
                 if fail_count >= 5 and scanned > 5:
                     print("⚠️  5 consecutive failures — possible scraper breakage. Stopping.")
                     break
+
+            # Incremental save
+            if not args.dry_run and updated > 0 and updated % args.save_every == 0:
+                price_data['_meta']['updated'] = today
+                price_data['_meta']['total_cards'] = len(price_data['prices'])
+                with open(PRICES_FILE, 'w') as f:
+                    json.dump(price_data, f, ensure_ascii=False, separators=(',', ':'))
+                print(f"  💾 Progress saved ({updated} cards)\n")
 
     # Save
     if not args.dry_run and updated > 0:
