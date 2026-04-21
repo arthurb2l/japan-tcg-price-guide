@@ -1,39 +1,83 @@
-name: Update JP Prices
+name: Update JP Prices (v2)
 on:
   schedule:
     - cron: '0 2 * * 1' # Weekly Monday 2am UTC (11am JST)
+    - cron: '0 2 * * 4' # Weekly Thursday 2am UTC (11am JST)
   workflow_dispatch: # Manual trigger
 
 jobs:
-  update-prices:
+  scan-prices:
     runs-on: ubuntu-latest
+    timeout-minutes: 180 # 3 hours max
     steps:
       - uses: actions/checkout@v4
-      
-      - uses: actions/setup-node@v4
+
+      - uses: actions/setup-python@v5
         with:
-          node-version: '20'
-      
-      - name: Install dependencies
-        run: npm install puppeteer
-      
-      - name: Fetch Amazon JP prices
-        run: node scripts/fetch-amazon-jp.js
-        continue-on-error: true
-      
-      - name: Fetch Mercari JP prices
-        run: node scripts/fetch-mercari-jp.js
-        continue-on-error: true
-      
-      - name: Fetch Yuyu-tei prices
-        run: node scripts/fetch-yuyutei.js
-        continue-on-error: true
-      
+          python-version: '3.12'
+
+      - name: Run price scanner (3 JP sources)
+        run: |
+          mkdir -p data/prices/history
+          python3 scripts/price-scan.py --resume --save-every 20
+        timeout-minutes: 150
+
+      - name: Sync prices back to cache (for website)
+        run: |
+          python3 << 'EOF'
+          import json
+          from datetime import date
+
+          with open('data/onepiece-cache.json') as f: cache = json.load(f)
+          with open('data/prices/onepiece-current.json') as f: prices = json.load(f)
+
+          today = date.today().isoformat()
+          updated = 0
+
+          for sid, cards in cache['sets'].items():
+              for card in cards:
+                  cid = card.get('id', '')
+                  pdata = prices.get('prices', {}).get(cid)
+                  if not pdata or 'variants' not in pdata:
+                      continue
+                  normal = pdata.get('variants', {}).get('normal', {})
+                  if not normal or not normal.get('sources'):
+                      continue
+                  sources = {}
+                  for src, sdata in normal.get('sources', {}).items():
+                      sources[src] = {'jpy': sdata.get('sell'), 'updated': today}
+                  floor = normal.get('floor') or normal.get('reference')
+                  if not floor:
+                      continue
+                  card['pricing'] = {
+                      'sources': sources,
+                      'computed': {'jpy': floor, 'usd': None, 'eur': None},
+                      'regional': {
+                          'JP': {
+                              'jpy': floor,
+                              'floor': normal.get('floor'),
+                              'reference': normal.get('reference'),
+                              'buy': normal.get('buy'),
+                              'confidence': normal.get('confidence'),
+                              'sources': list(sources.keys()),
+                              'updated': today
+                          }
+                      },
+                      'method': 'regional_floor',
+                      'updated': today
+                  }
+                  updated += 1
+
+          with open('data/onepiece-cache.json', 'w') as f:
+              json.dump(cache, f, ensure_ascii=False, separators=(',', ':'))
+          print(f'Synced {updated} cards from prices file to cache')
+          EOF
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --staged --quiet || git commit -m "📈 Weekly JP price update [skip ci]"
+          git diff --staged --quiet || git commit -m "📈 JP price scan: $(date +%Y-%m-%d) [skip ci]"
           git pull --rebase origin main || true
           git push || echo "Push failed, skipping"
