@@ -8651,6 +8651,49 @@
         "price_tier": "special",
         "verified": "2026-04-22"
       }
+    },
+    "OP09-106": {
+      "base": {
+        "type": "normal",
+        "description": "illust:M.miyokura, Olvia with rifle, fire bg",
+        "verified": "2026-04-22"
+      },
+      "_p1": {
+        "type": "promo",
+        "description": "illust:Nico-Tine, looking up, fire bg, NOT FOR SALE (JP)",
+        "price_tier": "special",
+        "verified": "2026-04-22"
+      },
+      "_p2": {
+        "type": "promo_star",
+        "description": "Same Nico-Tine art, star rarity border (JP)",
+        "price_tier": "special",
+        "verified": "2026-04-22"
+      },
+      "_p3": {
+        "type": "promo_offline_champ",
+        "description": "EN, OFFLINE REGIONALS Champion, NOT FOR SALE",
+        "price_tier": "special",
+        "verified": "2026-04-22"
+      },
+      "_p4": {
+        "type": "promo_online",
+        "description": "EN, ONLINE REGIONALS, NOT FOR SALE",
+        "price_tier": "special",
+        "verified": "2026-04-22"
+      },
+      "_p5": {
+        "type": "promo_online_finalist",
+        "description": "EN, ONLINE REGIONALS FINALIST, NOT FOR SALE",
+        "price_tier": "special",
+        "verified": "2026-04-22"
+      },
+      "_p6": {
+        "type": "promo_online_champ",
+        "description": "EN, ONLINE REGIONALS Champion, NOT FOR SALE",
+        "price_tier": "special",
+        "verified": "2026-04-22"
+      }
     }
   }
 }
