@@ -8552,6 +8552,105 @@
         "price_tier": "low",
         "verified": "2026-04-22"
       }
+    },
+    "ST07-010": {
+      "base": {
+        "type": "normal",
+        "description": "Regular art",
+        "verified": "2026-04-22",
+        "method": "auto-2variant"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Parallel art",
+        "price_tier": "high",
+        "verified": "2026-04-22",
+        "method": "auto-2variant"
+      }
+    },
+    "ST02-007": {
+      "base": {
+        "type": "normal",
+        "description": "Close-up face, pouting, pink hair",
+        "verified": "2026-04-22"
+      },
+      "_p1": {
+        "type": "promo",
+        "description": "illust:Nijihayashi, eating meat, blue sky, NOT FOR SALE",
+        "price_tier": "special",
+        "verified": "2026-04-22"
+      },
+      "_p2": {
+        "type": "normal_foil",
+        "description": "Same close-up face as base, foil variant",
+        "price_tier": "low",
+        "verified": "2026-04-22"
+      },
+      "_p3": {
+        "type": "parallel_sp",
+        "description": "Full body standing, gold/purple mandala bg, SP",
+        "price_tier": "high",
+        "verified": "2026-04-22"
+      },
+      "_p4": {
+        "type": "normal_reprint",
+        "description": "Same close-up face, green tint border (OP-08 reprint)",
+        "price_tier": "low",
+        "verified": "2026-04-22"
+      },
+      "_p5": {
+        "type": "promo2",
+        "description": "illust:Hashimoto, eating pizza/food, NOT FOR SALE",
+        "price_tier": "special",
+        "verified": "2026-04-22"
+      },
+      "_r1": {
+        "type": "reprint",
+        "description": "Same as base (reprint 1)",
+        "verified": "2026-04-22"
+      },
+      "_r2": {
+        "type": "reprint",
+        "description": "Same as base (reprint 2)",
+        "verified": "2026-04-22"
+      }
+    },
+    "OP13-118": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Anderson, fire punch action, SEC",
+        "verified": "2026-04-22"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Smiling Luffy, straw hat, red shirt, clean/map bg",
+        "price_tier": "mid",
+        "verified": "2026-04-22"
+      },
+      "_p2": {
+        "type": "manga_sp",
+        "description": "Same smiling art, manga panels bg (grey/green)",
+        "price_tier": "high",
+        "verified": "2026-04-22"
+      },
+      "_p3": {
+        "type": "manga_sp_alt",
+        "description": "Same smiling art, manga panels bg (red/pink)",
+        "price_tier": "high",
+        "verified": "2026-04-22"
+      },
+      "_p4": {
+        "type": "parallel_theme",
+        "description": "WANTED poster, sepia, DEAD OR ALIVE, SP",
+        "price_tier": "ultra",
+        "verified": "2026-04-22"
+      },
+      "_p5": {
+        "type": "promo",
+        "description": "illust:Makitoshi, fire punch, CHAMPIONSHIP 25-26, NOT FOR SALE",
+        "price_tier": "special",
+        "verified": "2026-04-22"
+      }
     }
   }
 }
