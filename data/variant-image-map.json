@@ -269,6 +269,70 @@
         "price_tier": "high",
         "verified": "2026-04-21"
       }
+    },
+    "EB02-010": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Takeshi Maenami, Gear 3 punch, purple/green bg",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Katsumi Ishizuka, shirtless, straw hat, red bg",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      },
+      "_p2": {
+        "type": "normal_alt",
+        "description": "illust:Studio Vigor, reaching forward, teal/orange bg (JP)",
+        "price_tier": "mid",
+        "verified": "2026-04-21"
+      },
+      "_p3": {
+        "type": "normal_alt_en",
+        "description": "Same Studio Vigor art, English text version",
+        "price_tier": "mid",
+        "verified": "2026-04-21"
+      }
+    },
+    "OP15-116": {
+      "base": {
+        "type": "normal",
+        "description": "ゴムゴムの黄金回転弾, regular art",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Parallel manga art",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
+    },
+    "OP12-037": {
+      "base": {
+        "type": "normal",
+        "description": "鬼気九刀流阿修羅抜剣亡者戯, regular art",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Parallel manga art",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
+    },
+    "OP11-080": {
+      "base": {
+        "type": "normal",
+        "description": "ギア2, regular art",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Parallel manga art",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
     }
   }
 }
