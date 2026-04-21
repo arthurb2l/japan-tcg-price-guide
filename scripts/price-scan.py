@@ -25,18 +25,26 @@ HISTORY_DIR = os.path.join(DATA_DIR, 'prices', 'history')
 SOURCES_FILE = os.path.join(DATA_DIR, 'pricing-sources.json')
 
 UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-MAX_RETRIES = 3
+MAX_RETRIES = 2
+_blocked_sources = set()  # sources returning 403, skip for rest of run
 
-def _fetch(url, delay_range=(2.0, 4.0)):
-    """Fetch URL with random delay, retry, and backoff."""
+def _fetch(url, delay_range=(3.0, 6.0), source_name=None):
+    """Fetch URL with random delay, retry, and 403 handling."""
+    if source_name and source_name in _blocked_sources:
+        raise Exception(f'{source_name} blocked (403 earlier), skipping')
     for attempt in range(MAX_RETRIES):
         try:
             time.sleep(random.uniform(*delay_range))
             req = Request(url, headers={'User-Agent': UA, 'Accept-Language': 'ja-JP'})
             return urlopen(req, timeout=15).read().decode('utf-8', errors='ignore')
         except Exception as e:
+            if '403' in str(e):
+                if source_name:
+                    _blocked_sources.add(source_name)
+                    print(f"    🚫 {source_name} returned 403 — skipping for rest of run")
+                raise e
             if attempt < MAX_RETRIES - 1:
-                time.sleep(2 ** attempt)
+                time.sleep(3 * (attempt + 1))
             else:
                 raise e
 
@@ -46,7 +54,7 @@ def search_surugaya(card_id):
     """Surugaya: multi-store marketplace. Embedded JS data."""
     url = f"https://www.suruga-ya.jp/search?category=&search_word={quote_plus(card_id)}&restrict%5B%5D=categorygroup_6"
     try:
-        html = _fetch(url)
+        html = _fetch(url, source_name='surugaya')
     except Exception as e:
         return {'error': str(e)}
 
@@ -71,7 +79,7 @@ def search_yuyutei(card_id):
     """Yuyutei: single-price retailer. Captures sell price. Buy price from separate page."""
     url = f"https://yuyu-tei.jp/sell/opc/s/search?search_word={quote_plus(card_id)}"
     try:
-        html = _fetch(url)
+        html = _fetch(url, source_name='yuyutei')
     except Exception as e:
         return {'error': str(e)}
 
@@ -106,7 +114,7 @@ def search_yuyutei(card_id):
     # Buy prices (separate URL)
     buy_url = f"https://yuyu-tei.jp/buy/opc/s/search?search_word={quote_plus(card_id)}"
     try:
-        buy_html = _fetch(buy_url, delay_range=(1.5, 3.0))
+        buy_html = _fetch(buy_url, delay_range=(1.5, 3.0), source_name='yuyutei')
         for match in re.finditer(pattern.replace('/sell/', '/buy/'), buy_html, re.DOTALL):
             name, price = match.groups()
             name = name.strip()
@@ -123,7 +131,7 @@ def search_cardrush(card_id):
     """Card Rush: specialist OP retailer."""
     url = f"https://www.cardrush-op.jp/product-list?keyword={quote_plus(card_id)}"
     try:
-        html = _fetch(url)
+        html = _fetch(url, source_name='cardrush')
     except Exception as e:
         return {'error': str(e)}
 
@@ -153,7 +161,7 @@ def search_hareruya(card_id):
     """Hareruya: major JP retailer."""
     url = f"https://www.hareruyamtg.com/ja/products/search?keyword={quote_plus(card_id)}&category=onepiece"
     try:
-        html = _fetch(url)
+        html = _fetch(url, source_name='hareruya')
     except Exception as e:
         return {'error': str(e)}
 
@@ -231,6 +239,11 @@ def compute_prices(source_data):
 
 def scan_card(card_id, sources_to_use=None):
     """Scan one card across all JP sources. Returns structured pricing."""
+    # Strip variant suffixes for shop search (shops list by base ID)
+    base_id = re.sub(r'[-_](p\d+|aa|r\d+)$', '', card_id)
+    is_variant = base_id != card_id
+    variant_type_hint = 'parallel' if is_variant else None
+
     scanners = {
         'surugaya': search_surugaya,
         'yuyutei': search_yuyutei,
@@ -244,7 +257,7 @@ def scan_card(card_id, sources_to_use=None):
     variants = {}  # {'normal': {src: {sell, buy, listings}}, 'parallel': {...}}
 
     for src_name, search_fn in sorted(scanners.items(), key=lambda x: RANKS.get(x[0], 99)):
-        result = search_fn(card_id)
+        result = search_fn(base_id)
         if 'error' in result:
             print(f"  ⚠️  {src_name}: {result['error']}")
             continue

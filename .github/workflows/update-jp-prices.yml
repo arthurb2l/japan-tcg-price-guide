@@ -21,6 +21,7 @@ jobs:
           mkdir -p data/prices/history
           python3 scripts/price-scan.py --resume --save-every 20
         timeout-minutes: 150
+        continue-on-error: true
 
       - name: Sync prices back to cache (for website)
         run: |
