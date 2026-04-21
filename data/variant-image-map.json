@@ -8694,6 +8694,64 @@
         "price_tier": "special",
         "verified": "2026-04-22"
       }
+    },
+    "OP09-020": {
+      "base": {
+        "type": "normal",
+        "description": "Red-Haired Pirates crew, manga art, gold frame (JP)",
+        "verified": "2026-04-22"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Same art, foil/texture variant",
+        "price_tier": "mid",
+        "verified": "2026-04-22"
+      },
+      "_p2": {
+        "type": "manga_sp",
+        "description": "Same art, red/pink tint, manga SP style",
+        "price_tier": "high",
+        "verified": "2026-04-22"
+      },
+      "_r1": {
+        "type": "reprint",
+        "description": "Same art (reprint)",
+        "verified": "2026-04-22"
+      },
+      "_r2": {
+        "type": "normal_en",
+        "description": "Same art, English text",
+        "verified": "2026-04-22"
+      }
+    },
+    "OP09-057": {
+      "base": {
+        "type": "normal",
+        "description": "Cross Guild trio (Buggy/Crocodile/Mihawk), manga art, gold frame",
+        "verified": "2026-04-22"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Same art, foil variant",
+        "price_tier": "mid",
+        "verified": "2026-04-22"
+      },
+      "_p2": {
+        "type": "parallel_sp",
+        "description": "Same art, holographic/silver bg, CROSS GUILD text, SP",
+        "price_tier": "high",
+        "verified": "2026-04-22"
+      },
+      "_r1": {
+        "type": "reprint",
+        "description": "Same art (reprint)",
+        "verified": "2026-04-22"
+      },
+      "_r2": {
+        "type": "reprint",
+        "description": "Same art (reprint 2)",
+        "verified": "2026-04-22"
+      }
     }
   }
 }
