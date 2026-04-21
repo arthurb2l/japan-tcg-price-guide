@@ -187,6 +187,43 @@
         "price_tier": "high",
         "verified": "2026-04-21"
       }
+    },
+    "ST26-005": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Yosuke Adachi, laughing with barrel, purple bg",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel_sp",
+        "description": "illust:Bashikou, red/gold outfit, devil fruit pattern bg, SP",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
+    },
+    "OP09-078": {
+      "base": {
+        "type": "normal",
+        "description": "Gear 5 Luffy giant punch, manga art, gold frame",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Same art as base, foil/texture variant",
+        "price_tier": "low",
+        "verified": "2026-04-21"
+      },
+      "_p2": {
+        "type": "parallel_sp",
+        "description": "Pastel pink/purple bg, stylized manga art, 巨人!!! text, SP",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      },
+      "_r1": {
+        "type": "reprint",
+        "description": "Same as base (reprint)",
+        "verified": "2026-04-21"
+      }
     }
   }
 }
