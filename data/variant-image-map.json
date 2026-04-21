@@ -333,6 +333,90 @@
         "price_tier": "high",
         "verified": "2026-04-21"
       }
+    },
+    "ST18-005": {
+      "base": {
+        "type": "normal",
+        "description": "ポートガス・D・エース, regular art",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "ポートガス・D・エース, parallel art",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
+    },
+    "EB04-001": {
+      "base": {
+        "type": "normal",
+        "description": "EB04 Leader, regular art",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "EB04 Leader, parallel art",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
+    },
+    "OP14-096": {
+      "base": {
+        "type": "normal",
+        "description": "OP14 card, regular art",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "OP14 card, parallel art",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
+    },
+    "OP01-003": {
+      "base": {
+        "type": "normal",
+        "description": "OP01 card, regular art",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "OP01 card, parallel art",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
+    },
+    "OP10-065": {
+      "base": {
+        "type": "normal",
+        "description": "OP10 card, regular art",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "OP10 card, parallel art",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
+    },
+    "ST18-004": {
+      "base": {
+        "type": "normal",
+        "description": "illust:eihi kaneda, Zoro smirking with sword, purple bg",
+        "verified": "2026-04-22"
+      },
+      "_p1": {
+        "type": "parallel_sp",
+        "description": "illust:Hashimoto, action pose, purple lightning, SP (JP)",
+        "price_tier": "high",
+        "verified": "2026-04-22"
+      },
+      "_p2": {
+        "type": "parallel_sp_en",
+        "description": "Same Hashimoto art, English text version",
+        "price_tier": "high",
+        "verified": "2026-04-22"
+      }
     }
   }
 }
