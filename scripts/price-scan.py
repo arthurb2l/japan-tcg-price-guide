@@ -69,9 +69,11 @@ def search_surugaya(card_id):
         p = int(price)
         if p < 30 or not name.startswith(card_id):
             continue
-        is_parallel = 'パラレル' in name
+        variant, condition, is_graded = classify_variant(name)
+        if is_graded or condition not in ('NM', 'LP'):
+            continue
         results.append({'price': p, 'name': name[:80], 'url': f"https://www.suruga-ya.jp/product/detail/{item_id}",
-                       'variant': 'parallel' if is_parallel else 'normal'})
+                       'variant': variant})
     return {'results': results, 'source': 'surugaya'}
 
 
@@ -93,9 +95,11 @@ def search_yuyutei(card_id):
     for match in re.finditer(pattern, html, re.DOTALL):
         name, price, stock = match.groups()
         name = name.strip()
-        is_parallel = 'パラレル' in name or 'スーパーパラレル' in name
+        variant, condition, is_graded = classify_variant(name)
         in_stock = stock in ('◯', '○', '△')
-        results.append({'price': int(price), 'name': name, 'variant': 'parallel' if is_parallel else 'normal',
+        if is_graded:
+            continue
+        results.append({'price': int(price), 'name': name, 'variant': variant,
                        'type': 'sell', 'in_stock': in_stock, 'url': url})
 
     # Fallback: pattern without stock (in case page structure varies)
@@ -107,8 +111,8 @@ def search_yuyutei(card_id):
         for match in re.finditer(pattern_no_stock, html, re.DOTALL):
             name, price = match.groups()
             name = name.strip()
-            is_parallel = 'パラレル' in name or 'スーパーパラレル' in name
-            results.append({'price': int(price), 'name': name, 'variant': 'parallel' if is_parallel else 'normal',
+            variant, _, _ = classify_variant(name)
+            results.append({'price': int(price), 'name': name, 'variant': variant,
                            'type': 'sell', 'in_stock': None, 'url': url})
 
     # Buy prices (separate URL)
@@ -118,8 +122,8 @@ def search_yuyutei(card_id):
         for match in re.finditer(pattern.replace('/sell/', '/buy/'), buy_html, re.DOTALL):
             name, price = match.groups()
             name = name.strip()
-            is_parallel = 'パラレル' in name
-            results.append({'price': int(price), 'name': name, 'variant': 'parallel' if is_parallel else 'normal',
+            variant, _, _ = classify_variant(name)
+            results.append({'price': int(price), 'name': name, 'variant': variant,
                            'type': 'buy', 'url': buy_url})
     except:
         pass  # buy page may not exist for all cards
@@ -127,8 +131,46 @@ def search_yuyutei(card_id):
     return {'results': results, 'source': 'yuyutei'}
 
 
+def classify_variant(title):
+    """Classify a listing title into a specific variant type.
+    Returns (variant, condition, is_graded).
+    Variant: normal, parallel, parallel_theme, manga_sp, serial
+    Condition: NM, LP, MP, HP, DMG
+    """
+    # Graded — exclude from ungraded pricing
+    is_graded = any(m in title for m in ['PSA', 'BGS', 'CGC', 'ARS', 'ACE', '鑑定済'])
+
+    # Condition
+    condition = 'NM'
+    if '状態C' in title or '状態D' in title:
+        condition = 'HP'
+    elif '状態B' in title:
+        condition = 'MP'
+    elif '状態A-' in title:
+        condition = 'LP'
+
+    # Variant (check most specific first)
+    if 'シリアル' in title:
+        return 'serial', condition, is_graded
+    # Manga super parallel: requires 漫画背景 (manga background) + パラレル, or SP rarity
+    if '漫画背景' in title and 'パラレル' in title:
+        return 'manga_sp', condition, is_graded
+    if 'SP】' in title and 'パラレル' in title:
+        return 'manga_sp', condition, is_graded
+    # Themed parallel: has specific background (海賊旗, etc.) or 漫画絵 without 漫画背景
+    if 'パラレル' in title and ('海賊旗' in title or ('漫画絵' in title and '漫画背景' not in title)):
+        return 'parallel_theme', condition, is_graded
+    # Generic parallel
+    if 'パラレル' in title or 'PARALLEL' in title.upper():
+        return 'parallel', condition, is_graded
+    if 'コミック' in title or 'MANGA' in title.upper():
+        return 'manga_sp', condition, is_graded
+
+    return 'normal', condition, is_graded
+
+
 def search_cardrush(card_id):
-    """Card Rush: specialist OP retailer."""
+    """Card Rush: specialist OP retailer. Best source for variant classification."""
     url = f"https://www.cardrush-op.jp/product-list?keyword={quote_plus(card_id)}"
     try:
         html = _fetch(url, source_name='cardrush')
@@ -140,20 +182,21 @@ def search_cardrush(card_id):
         r'(?:<[^>]*>)*\s*(.*?)(\d{1,3}(?:,\d{3})*)円',
         html, re.DOTALL
     )
-    parallel_markers = ['パラレル', 'PARALLEL', 'コミック', 'MANGA', 'シークレット', 'SECRET',
-                        'SP', 'スペシャル', 'ホイル', 'FOIL', 'プレミアム']
     results = []
     for link, content, price in raw:
         texts = [t.strip() for t in re.findall(r'>([^<]+)<', content) if t.strip()]
-        title = ' '.join(texts)[:100]
+        title = ' '.join(texts)[:150]
         if card_id.upper() not in title.upper().replace(' ', '').replace('　', ''):
             continue
         p = int(price.replace(',', ''))
         if p < 30 or 'デッキ' in title or '品切れ' in title or 'SOLDOUT' in title.upper():
             continue
-        is_parallel = any(m in title for m in parallel_markers)
+        variant, condition, is_graded = classify_variant(title)
+        # Skip graded and non-NM for pricing (they distort the market)
+        if is_graded or condition not in ('NM', 'LP'):
+            continue
         results.append({'price': p, 'name': title, 'url': link,
-                       'variant': 'parallel' if is_parallel else 'normal'})
+                       'variant': variant, 'condition': condition})
     return {'results': results, 'source': 'cardrush'}
 
 
@@ -268,7 +311,7 @@ def scan_card(card_id, sources_to_use=None):
             continue
 
         # Group by variant
-        for variant_type in ['normal', 'parallel']:
+        for variant_type in ['normal', 'parallel', 'parallel_theme', 'manga_sp', 'serial']:
             variant_listings = [r for r in listings if r['variant'] == variant_type]
             if not variant_listings:
                 continue
