@@ -35,37 +35,36 @@ jobs:
           today = date.today().isoformat()
           updated = 0
 
+          import re as _re
+          VORDER = ['parallel', 'parallel_theme', 'manga_sp']
           for sid, cards in cache['sets'].items():
               for card in cards:
                   cid = card.get('id', '')
-                  pdata = prices.get('prices', {}).get(cid)
-                  if not pdata or 'variants' not in pdata:
-                      continue
-                  normal = pdata.get('variants', {}).get('normal', {})
-                  if not normal or not normal.get('sources'):
-                      continue
-                  sources = {}
-                  for src, sdata in normal.get('sources', {}).items():
-                      sources[src] = {'jpy': sdata.get('sell'), 'updated': today}
-                  floor = normal.get('floor') or normal.get('reference')
-                  if not floor:
-                      continue
+                  finish = card.get('finish', 'regular')
+                  base_id = _re.sub(r'[-_](p\d+|aa|r\d+)$', '', cid)
+                  pdata = prices.get('prices', {}).get(base_id, {})
+                  if not pdata.get('variants'): continue
+                  variants = pdata['variants']
+                  if finish == 'regular' or finish.startswith('reprint'):
+                      vdata = variants.get('normal', {})
+                  elif finish.startswith('parallel') or finish in ('alternate-art', 'holo'):
+                      pnum = 1
+                      m = _re.search(r'parallel-(\d+)', finish)
+                      if m: pnum = int(m.group(1))
+                      pvars = [(variants[v]['floor'], v) for v in VORDER if v in variants and variants[v].get('floor')]
+                      pvars.sort()
+                      idx = min(pnum - 1, len(pvars) - 1) if pvars else -1
+                      vdata = variants.get(pvars[idx][1], {}) if idx >= 0 else variants.get('normal', {})
+                  else:
+                      vdata = variants.get('normal', {})
+                  floor = vdata.get('floor') or vdata.get('reference')
+                  if not floor or not vdata.get('sources'): continue
+                  sources = {src: {'jpy': s.get('sell'), 'updated': today} for src, s in vdata.get('sources', {}).items()}
                   card['pricing'] = {
                       'sources': sources,
                       'computed': {'jpy': floor, 'usd': None, 'eur': None},
-                      'regional': {
-                          'JP': {
-                              'jpy': floor,
-                              'floor': normal.get('floor'),
-                              'reference': normal.get('reference'),
-                              'buy': normal.get('buy'),
-                              'confidence': normal.get('confidence'),
-                              'sources': list(sources.keys()),
-                              'updated': today
-                          }
-                      },
-                      'method': 'regional_floor',
-                      'updated': today
+                      'regional': {'JP': {'jpy': floor, 'floor': vdata.get('floor'), 'reference': vdata.get('reference'), 'confidence': vdata.get('confidence'), 'sources': list(sources.keys()), 'updated': today}},
+                      'method': 'variant_mapped', 'updated': today
                   }
                   updated += 1
 
