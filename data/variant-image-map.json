@@ -224,6 +224,51 @@
         "description": "Same as base (reprint)",
         "verified": "2026-04-21"
       }
+    },
+    "ST21-001": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Hokusyu, Gear 5 jumping, full color, red bg",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Same Hokusyu art, B&W manga style (白黒版), compass/map bg",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      },
+      "_p2": {
+        "type": "normal_manga",
+        "description": "Close-up face, manga art, tongue out, grinning, red bg",
+        "price_tier": "mid",
+        "verified": "2026-04-21"
+      }
+    },
+    "OP13-031": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Morechand, Law with sword, green bg",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel_sp",
+        "description": "illust:Hasemoto, hand forward, devil fruit swirl, pink/red bg, SP",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
+    },
+    "OP15-077": {
+      "base": {
+        "type": "normal",
+        "description": "Lightning dragon, manga art, gold frame, 雷龍!!! text",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Same dragon zoomed in, white/blue bg, detailed manga art",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
     }
   }
 }
