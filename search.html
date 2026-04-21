@@ -342,6 +342,329 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 <script>
 const _s = JSON.parse(localStorage.getItem('tcg_settings') || '{}');
 
+function getPriceSources(c) {
+  if (!c.pricing) return [];
+  const s = [];
+  if (c.pricing.usd) s.push({ jpy: Math.round(c.pricing.usd * 150) });
+  if (c.pricing.tcgplayer?.normal?.marketPrice) s.push({ jpy: Math.round(c.pricing.tcgplayer.normal.marketPrice * 150) });
+  else if (c.pricing.tcgplayer?.holofoil?.marketPrice) s.push({ jpy: Math.round(c.pricing.tcgplayer.holofoil.marketPrice * 150) });
+  if (c.pricing.cardmarket?.trend) s.push({ jpy: Math.round(c.pricing.cardmarket.trend * 162) });
+  if (c.pricing.amazonjp?.jpy) s.push({ jpy: c.pricing.amazonjp.jpy });
+  if (c.pricing.mercari?.jpy) s.push({ jpy: c.pricing.mercari.jpy });
+  // Regional JP sources (new v2 pricing)
+  if (c.pricing.sources) {
+    for (const [src, data] of Object.entries(c.pricing.sources)) {
+      if (data?.jpy) s.push({ jpy: data.jpy, source: src });
+    }
+  }
+  // Fallback: computed.jpy
+  if (!s.length && c.pricing.computed?.jpy) s.push({ jpy: c.pricing.computed.jpy });
+  return s;
+}
+function getFloorJpy(c) {
+  const s = getPriceSources(c);
+  if (!s.length) return 0;
+  const jpys = s.map(x => x.jpy).sort((a,b) => a - b);
+  return jpys[0]; // floor = lowest source
+}
+let allCards = [], filteredCards = [], currentView = _s.searchView || 'grid', currency = 'JPY', currentGame = 'pokemon';
+let collFilterActive = false;
+let currentModalCard = null; // Currently displayed card in modal
+let globalLang = ''; // '', 'jp', or 'en'
+let pricePhotos = {}; // Japan price photos
+const rarityOrder = ['Common','Uncommon','Rare','Double Rare','Ultra Rare','Illustration Rare','Special Art Rare','Hyper Rare','Shiny Rare','ACE SPEC Rare',
+  'C','UC','R','SR','SEC','L','SP','P','DON!!','Promo']; // One Piece rarities
+// Static rates - JPY base (primary currency for Japan tourists)
+const rates = { JPY: 1, USD: 0.0067, EUR: 0.0062 };
+
+// Auth state
+let currentUser = null;
+let userCollection = {}; // Single source of truth - inventory with list flags
+
+// Collection Store - Flag-based architecture (unified with collection.html)
+// Cards stored in inventory with lists.wishlist/lists.tradelist flags
+const collectionStore = {
+  // localStorage uses single inventory key
+  _local() { return JSON.parse(localStorage.getItem('tcg_inventory') || '{}'); },
+  _saveLocal(data) { localStorage.setItem('tcg_inventory', JSON.stringify(data)); },
+  
+  async add(cardId, list = 'inventory') {
+    if (!userCollection[cardId]) {
+      userCollection[cardId] = { qty: 1, addedAt: Date.now(), lists: {} };
+    }
+    if (list !== 'inventory') {
+      userCollection[cardId].lists = userCollection[cardId].lists || {};
+      userCollection[cardId].lists[list] = true;
+    }
+    
+    if (currentUser) {
+      await db.collection('users').doc(currentUser.uid).collection('inventory').doc(cardId).set(userCollection[cardId], { merge: true });
+    } else {
+      this._saveLocal(userCollection);
+    }
+    this._updateCount();
+  },
+  
+  async remove(cardId, list = 'inventory') {
+    if (list === 'inventory') {
+      // Remove from inventory entirely
+      delete userCollection[cardId];
+      if (currentUser) {
+        await db.collection('users').doc(currentUser.uid).collection('inventory').doc(cardId).delete();
+      }
+    } else {
+      // Just remove the list flag
+      if (userCollection[cardId]?.lists) {
+        userCollection[cardId].lists[list] = false;
+      }
+      if (currentUser && userCollection[cardId]) {
+        await db.collection('users').doc(currentUser.uid).collection('inventory').doc(cardId).update({ lists: userCollection[cardId].lists });
+      }
+    }
+    if (!currentUser) this._saveLocal(userCollection);
+    this._updateCount();
+  },
+  
+  has(cardId, list = 'inventory') {
+    if (list === 'inventory') return !!userCollection[cardId];
+    return !!(userCollection[cardId]?.lists?.[list]);
+  },
+  
+  inAnyList(cardId) {
+    return !!userCollection[cardId];
+  },
+  
+  async toggle(cardId, list = 'inventory') {
+    this.has(cardId, list) ? await this.remove(cardId, list) : await this.add(cardId, list);
+    return this.has(cardId, list);
+  },
+  
+  count(list = 'inventory') {
+    if (list === 'inventory') return Object.keys(userCollection).length;
+    return Object.values(userCollection).filter(c => c.lists?.[list]).length;
+  },
+  
+  getAll(list = 'inventory') {
+    if (list === 'inventory') return userCollection;
+    const filtered = {};
+    for (const [id, card] of Object.entries(userCollection)) {
+      if (card.lists?.[list]) filtered[id] = card;
+    }
+    return filtered;
+  },
+  
+  _updateCount() { document.getElementById('coll-count').textContent = this.count('inventory'); }
+};
+
+// Auth functions
+function signInWithGoogle() {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  auth.signInWithPopup(provider).catch(err => {
+    console.error('Sign in error:', err);
+    showToast('Sign in failed');
+  });
+}
+
+function signOut() {
+  auth.signOut();
+}
+
+async function loadUserCollection(uid) {
+  userCollection = {};
+  
+  try {
+    // Load from unified inventory collection (new format with flags)
+    const invSnapshot = await db.collection('users').doc(uid).collection('inventory').get();
+    invSnapshot.forEach(doc => { 
+      userCollection[doc.id] = doc.data();
+      // Ensure lists object exists
+      if (!userCollection[doc.id].lists) userCollection[doc.id].lists = {};
+    });
+    
+    // Migration: Also check old separate collections for orphan cards
+    const [wishSnapshot, tradeSnapshot] = await Promise.all([
+      db.collection('users').doc(uid).collection('wishlist').get(),
+      db.collection('users').doc(uid).collection('tradelist').get()
+    ]);
+    
+    let migratedCount = 0;
+    const batch = db.batch();
+    
+    // Migrate wishlist orphans
+    wishSnapshot.forEach(doc => {
+      if (!userCollection[doc.id]) {
+        // Orphan card - promote to inventory with wishlist flag
+        userCollection[doc.id] = { qty: 1, addedAt: Date.now(), lists: { wishlist: true } };
+        batch.set(db.collection('users').doc(uid).collection('inventory').doc(doc.id), userCollection[doc.id]);
+        migratedCount++;
+      } else if (!userCollection[doc.id].lists?.wishlist) {
+        // Card exists but missing wishlist flag
+        userCollection[doc.id].lists = userCollection[doc.id].lists || {};
+        userCollection[doc.id].lists.wishlist = true;
+        batch.update(db.collection('users').doc(uid).collection('inventory').doc(doc.id), { lists: userCollection[doc.id].lists });
+        migratedCount++;
+      }
+    });
+    
+    // Migrate tradelist orphans
+    tradeSnapshot.forEach(doc => {
+      if (!userCollection[doc.id]) {
+        userCollection[doc.id] = { qty: 1, addedAt: Date.now(), lists: { tradelist: true } };
+        batch.set(db.collection('users').doc(uid).collection('inventory').doc(doc.id), userCollection[doc.id]);
+        migratedCount++;
+      } else if (!userCollection[doc.id].lists?.tradelist) {
+        userCollection[doc.id].lists = userCollection[doc.id].lists || {};
+        userCollection[doc.id].lists.tradelist = true;
+        batch.update(db.collection('users').doc(uid).collection('inventory').doc(doc.id), { lists: userCollection[doc.id].lists });
+        migratedCount++;
+      }
+    });
+    
+    if (migratedCount > 0) {
+      await batch.commit();
+      console.log(`Migrated ${migratedCount} cards from old format`);
+    }
+  } catch(e) {
+    console.error('Load error:', e);
+    // Fallback to localStorage
+    userCollection = collectionStore._local();
+  }
+  
+  collectionStore._updateCount();
+  renderCards();
+}
+
+async function migrateLocalToCloud(uid) {
+  // Migrate localStorage to cloud (unified format)
+  const local = JSON.parse(localStorage.getItem('tcg_inventory') || '{}');
+  const cardIds = Object.keys(local);
+  if (cardIds.length === 0) return;
+  
+  const batch = db.batch();
+  const ref = db.collection('users').doc(uid).collection('inventory');
+  
+  cardIds.forEach(cardId => {
+    const card = local[cardId];
+    batch.set(ref.doc(cardId), {
+      qty: card.qty || 1,
+      addedAt: card.addedAt || Date.now(),
+      lists: card.lists || {}
+    }, { merge: true });
+  });
+  
+  await batch.commit();
+  localStorage.removeItem('tcg_inventory');
+  showToast(`Migrated ${cardIds.length} cards to cloud`);
+}
+
+// Auth state listener
+auth.onAuthStateChanged(async user => {
+  const container = document.getElementById('auth-container');
+  const collWrap = document.getElementById('coll-filter-wrap');
+  if (user) {
+    currentUser = user;
+    const fab = document.getElementById("fab");
+    if (fab) fab.style.display = "block";
+    if (container) container.innerHTML = `
+      <div class="user-info">
+        <img src="${user.photoURL || ''}" alt="" referrerpolicy="no-referrer">
+        <span>${user.displayName || user.email}</span>
+        <button class="signout-btn" onclick="signOut()">Sign out</button>
+      </div>`;
+    // Hide "My Collection" filter for logged-in users (they use Collection page)
+    if (collWrap) collWrap.style.display = 'none';
+    // Migrate local collection if exists (unified format)
+    const local = localStorage.getItem('tcg_inventory');
+    if (local && Object.keys(JSON.parse(local)).length > 0) {
+      await migrateLocalToCloud(user.uid);
+    }
+    await loadUserCollection(user.uid);
+    updateSaveCloudBtn();
+  } else {
+    currentUser = null;
+    userCollection = collectionStore._local();
+    if (container) container.innerHTML = `
+      <button class="auth-btn" onclick="signInWithGoogle()">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="G">
+        Sign in
+      </button>`;
+    collectionStore._updateCount();
+    renderCards();
+    updateSaveCloudBtn();
+  }
+});
+
+async function toggleCollection(e, cardId, list = 'inventory') {
+  e.stopPropagation();
+  const owned = await collectionStore.toggle(cardId, list);
+  const item = e.target.closest('.card-item');
+  item.classList.toggle('owned', collectionStore.inAnyList(cardId));
+  const listNames = {inventory: 'Inventory', wishlist: 'Wishlist', tradelist: 'Tradelist'};
+  showToast(owned ? `✓ Added to ${listNames[list]}` : `✗ Removed from ${listNames[list]}`);
+  if (collFilterActive && !collectionStore.inAnyList(cardId)) item.style.display = 'none';
+}
+
+async function addToList(e, cardId, list) {
+  e.stopPropagation();
+  await collectionStore.add(cardId, list);
+  const item = e.target.closest('.card-item');
+  if (item) item.classList.add('owned');
+  const listNames = {inventory: 'Inventory', wishlist: 'Wishlist', tradelist: 'Tradelist'};
+  showToast(`✓ Added to ${listNames[list]}`);
+  hideListMenu();
+}
+
+function showListMenu(e, cardId) {
+  e.stopPropagation();
+  hideListMenu();
+  const menu = document.createElement('div');
+  menu.id = 'list-menu';
+  menu.className = 'list-menu';
+  menu.innerHTML = `
+    <div onclick="addToList(event,'${cardId}','inventory')">📦 Inventory</div>
+    <div onclick="addToList(event,'${cardId}','wishlist')">⭐ Wishlist</div>
+    <div onclick="addToList(event,'${cardId}','tradelist')">🔄 Tradelist</div>
+  `;
+  const rect = e.target.getBoundingClientRect();
+  menu.style.top = (rect.bottom + 5) + 'px';
+  menu.style.left = (rect.left - 50) + 'px';
+  document.body.appendChild(menu);
+  setTimeout(() => document.addEventListener('click', hideListMenu, {once: true}), 10);
+}
+
+function hideListMenu() {
+  const menu = document.getElementById('list-menu');
+  if (menu) menu.remove();
+}
+
+function showToast(msg) {
+  const t = document.getElementById('coll-toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 1500);
+}
+
+function toggleCollFilter() {
+  collFilterActive = !collFilterActive;
+  document.getElementById('coll-filter').classList.toggle('active', collFilterActive);
+  displayLimit = 60; // Reset limit when toggling
+  renderCards();
+  updateStats();
+  updateSaveCloudBtn();
+}
+
+function updateSaveCloudBtn() {
+  const btn = document.getElementById('save-cloud-btn');
+  const count = collectionStore.count();
+  // Show if: not logged in AND has collection AND viewing collection
+  btn.style.display = (!currentUser && count > 0 && collFilterActive) ? 'inline-block' : 'none';
+}
+
+async function saveToCloud() {
+  await signInWithGoogle();
+  // Migration happens automatically in onAuthStateChanged
+}
+
 function formatPrice(card) {
   const jpy = getFloorJpy(card);
   if (!jpy) return '-';
