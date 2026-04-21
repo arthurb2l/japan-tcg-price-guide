@@ -1,0 +1,160 @@
+{
+  "_comment": "Visually verified mapping: Bandai _pN suffix → variant type. Each entry is confirmed by comparing Bandai images with Card Rush listing images.",
+  "_schema": {
+    "card_id": {
+      "_pN": {
+        "type": "normal|parallel|parallel_theme|manga_sp|serial",
+        "description": "Art description from Card Rush",
+        "price_tier": "approximate price range",
+        "verified": "date verified"
+      }
+    }
+  },
+  "mappings": {
+    "OP01-120": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Makitoshi, action pose drawing sword",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel_theme",
+        "description": "Smiling, pirate flag/SHANKS text background",
+        "price_tier": "mid",
+        "verified": "2026-04-21"
+      },
+      "_p2": {
+        "type": "manga_sp",
+        "description": "Smiling, manga panels background",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      },
+      "_p4": {
+        "type": "serial",
+        "description": "Sword drawn, ONE PIECE CARD text, serial number",
+        "price_tier": "ultra",
+        "verified": "2026-04-21"
+      },
+      "_p5": {
+        "type": "parallel",
+        "description": "illust:lack, smirking in coat, red background",
+        "price_tier": "low",
+        "verified": "2026-04-21"
+      }
+    },
+    "ST17-004": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Misa Matoki, action pose, pink/purple bg",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Peach Momoko, portrait with snake, white bg",
+        "price_tier": "mid",
+        "verified": "2026-04-21"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "illust:Peach Momoko, compass/golden frame bg",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
+    },
+    "OP09-051": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Studio Vigor, laughing, stage lights",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:KISUKE, grinning, circus tent bg",
+        "price_tier": "low",
+        "verified": "2026-04-21"
+      },
+      "_p2": {
+        "type": "manga_sp",
+        "description": "Manga panels bg, manga art style, red cape",
+        "price_tier": "ultra",
+        "verified": "2026-04-21"
+      },
+      "_p3": {
+        "type": "parallel_theme",
+        "description": "WANTED poster, sepia, DEAD OR ALIVE",
+        "price_tier": "mid",
+        "verified": "2026-04-21"
+      },
+      "_p4": {
+        "type": "normal_alt",
+        "description": "illust:Anderson, crying with Cross Guild crew",
+        "price_tier": "low",
+        "verified": "2026-04-21"
+      },
+      "_p5": {
+        "type": "parallel_sp_gold",
+        "description": "Red cape, gold/diamond frame, confetti, SP",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      },
+      "_p6": {
+        "type": "parallel_sp_silver",
+        "description": "Red cape, blue/silver diamond frame, confetti, SP",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      },
+      "_r1": {
+        "type": "reprint",
+        "description": "Same as base (reprint)",
+        "verified": "2026-04-21"
+      }
+    },
+    "OP04-083": {
+      "base": {
+        "type": "normal",
+        "description": "illust:BISAI, fire fist, dark bg",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Standing, colorful cosmic/nebula bg",
+        "price_tier": "low",
+        "verified": "2026-04-21"
+      },
+      "_p2": {
+        "type": "manga_sp",
+        "description": "Manga panels bg, manga art, no logo",
+        "price_tier": "ultra",
+        "verified": "2026-04-21"
+      },
+      "_p3": {
+        "type": "manga_sp_logo",
+        "description": "Manga panels bg, manga art, different panels",
+        "price_tier": "ultra",
+        "verified": "2026-04-21"
+      },
+      "_p4": {
+        "type": "promo",
+        "description": "illust:Yoshika Adachi, with young Ace/Luffy, NOT FOR SALE",
+        "price_tier": "special",
+        "verified": "2026-04-21"
+      },
+      "_p5": {
+        "type": "parallel_sp",
+        "description": "Compass/golden frame, 2nd Anniversary ONE PIECE CARD GAME",
+        "price_tier": "mid",
+        "verified": "2026-04-21"
+      },
+      "_r1": {
+        "type": "reprint",
+        "description": "Reprint of base",
+        "verified": "2026-04-21"
+      },
+      "_r2": {
+        "type": "reprint_alt",
+        "description": "Reprint alt",
+        "verified": "2026-04-21"
+      }
+    }
+  }
+}
