@@ -299,6 +299,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
     <div class="modal-body">
       <div style="position:relative">
         <img id="modal-img" src="" alt="" referrerpolicy="no-referrer">
+        <div id="modal-img-disclaimer" style="display:none;font-size:.75em;color:#e65100;background:#fff3e0;padding:4px 8px;border-radius:4px;margin-top:4px;text-align:center"></div>
         <button id="flip-btn" onclick="flipCard()" style="display:none;position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,0.7);color:#fff;border:none;padding:6px 12px;border-radius:5px;cursor:pointer;font-size:.8em">🔄 EN</button>
       </div>
       <dl class="card-details">
@@ -1163,6 +1164,16 @@ function showCard(id, isEn, uid) {
   
   document.getElementById('modal-title').textContent = card.name;
   document.getElementById('modal-img').src = getImg(card);
+  // Show disclaimer if image is a fallback (base art for a variant card)
+  const imgDisclaimer = document.getElementById('modal-img-disclaimer');
+  if (imgDisclaimer) {
+    if (card._image_fallback && card.finish && card.finish !== 'regular') {
+      imgDisclaimer.style.display = '';
+      imgDisclaimer.textContent = '⚠️ Image shows regular art — variant image not yet available';
+    } else {
+      imgDisclaimer.style.display = 'none';
+    }
+  }
   document.getElementById('modal-name').textContent = card.name + (card.nameJp ? ' ' + card.nameJp : '');
   document.getElementById('modal-set').textContent = card.setId || card.set;
   document.getElementById('modal-id').textContent = card.id + (function(c) {
