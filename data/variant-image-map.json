@@ -8472,6 +8472,86 @@
         "verified": "2026-04-22",
         "method": "auto-single-parallel"
       }
+    },
+    "OP15-118": {
+      "base": {
+        "type": "normal",
+        "description": "illust:AKIRA EGAWA, lightning, gold/purple bg, SEC",
+        "verified": "2026-04-22"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Makitoshi, lightning attack, blue/teal bg",
+        "price_tier": "mid",
+        "verified": "2026-04-22"
+      },
+      "_p2": {
+        "type": "manga_sp",
+        "description": "Manga panels bg, staff pose, manga art style",
+        "price_tier": "high",
+        "verified": "2026-04-22"
+      }
+    },
+    "OP01-121": {
+      "base": {
+        "type": "normal",
+        "description": "Yamato with club, purple clouds, gold frame, SEC",
+        "verified": "2026-04-22"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Berry Verrine, dynamic action, pink/colorful bg",
+        "price_tier": "mid",
+        "verified": "2026-04-22"
+      },
+      "_p2": {
+        "type": "parallel_sp",
+        "description": "illust:OKINOKINO-S, standing with staff, red/floral bg, SP",
+        "price_tier": "high",
+        "verified": "2026-04-22"
+      },
+      "_p3": {
+        "type": "parallel_theme",
+        "description": "illust:Hashimbo, smiling, cherry blossoms bg (JP)",
+        "price_tier": "mid",
+        "verified": "2026-04-22"
+      },
+      "_p4": {
+        "type": "parallel_theme_en",
+        "description": "Same Hashimbo cherry blossom art, English text",
+        "price_tier": "mid",
+        "verified": "2026-04-22"
+      },
+      "_r1": {
+        "type": "reprint",
+        "description": "Same as base (reprint)",
+        "verified": "2026-04-22"
+      }
+    },
+    "OP01-001": {
+      "base": {
+        "type": "normal",
+        "description": "Zoro standing, green robe, sword on shoulder, red bg",
+        "verified": "2026-04-22"
+      },
+      "_p1": {
+        "type": "manga_sp",
+        "description": "Zoro in black, sword in mouth, manga/ink style, grey bg",
+        "price_tier": "high",
+        "verified": "2026-04-22"
+      },
+      "_p2": {
+        "type": "parallel",
+        "description": "Zoro close-up face, intense look, red bg with map",
+        "price_tier": "mid",
+        "verified": "2026-04-22"
+      },
+      "_p3": {
+        "type": "normal_alt",
+        "description": "Zoro with swords, dark/serious, red compass bg",
+        "price_tier": "low",
+        "verified": "2026-04-22"
+      }
     }
   }
 }
