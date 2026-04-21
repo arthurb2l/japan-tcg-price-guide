@@ -155,6 +155,38 @@
         "description": "Reprint alt",
         "verified": "2026-04-21"
       }
+    },
+    "ST30-001": {
+      "base": {
+        "type": "normal",
+        "description": "Color art, Luffy & Ace fist bump, green/red bg",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "B&W manga style (白黒版), white bg with compass lines",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
+    },
+    "ST16-001": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Yosuke Adachi, performing on stage, wings, concert bg",
+        "verified": "2026-04-21"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Samei Ikusa, close-up portrait, blue outfit, music notes bg",
+        "price_tier": "mid",
+        "verified": "2026-04-21"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "illust:Samei Ikusa, compass/golden ornate frame bg",
+        "price_tier": "high",
+        "verified": "2026-04-21"
+      }
     }
   }
 }
