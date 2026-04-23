@@ -8752,6 +8752,246 @@
         "description": "Same art (reprint 2)",
         "verified": "2026-04-22"
       }
+    },
+    "EB04-061": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Matsumoto Akira, Gear 5 white hair, gold/rainbow holo border",
+        "verified": "2026-04-23"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Minato Sashima, Gear 5 grinning, different art",
+        "price_tier": "¥5,280",
+        "verified": "2026-04-23"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "Purple/pink manga bg, ONE PIECE text overlay, NOT FOR SALE, power 0000/0000",
+        "price_tier": "promo",
+        "verified": "2026-04-23"
+      }
+    },
+    "OP02-099": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Imaizuya, standing pose, fire fist, cape",
+        "verified": "2026-04-23"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Anderson, fist punch forward, action pose",
+        "verified": "2026-04-23"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "illust:DAIKI, portrait close-up, hat, rose, SP art",
+        "verified": "2026-04-23"
+      },
+      "_p3": {
+        "type": "reprint_en",
+        "description": "English version of base art (same illust:Imaizuya)",
+        "verified": "2026-04-23"
+      },
+      "_p4": {
+        "type": "tournament",
+        "description": "Explosion bg, Championship 2023 stamp, NOT FOR SALE",
+        "price_tier": "promo",
+        "verified": "2026-04-23"
+      },
+      "_p5": {
+        "type": "parallel",
+        "description": "illust:S-KINOKO, magma fist forward",
+        "price_tier": "¥450",
+        "verified": "2026-04-23"
+      },
+      "_r1": {
+        "type": "reprint",
+        "description": "Same art as base (Imaizuya)",
+        "verified": "2026-04-23"
+      }
+    },
+    "ST13-003": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Hokuyuu, Luffy action pose, gold/yellow bg",
+        "verified": "2026-04-23"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Same Hokuyuu art, black & white/desaturated, map bg",
+        "price_tier": "¥5,930",
+        "verified": "2026-04-23"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "Luffy in BVB Dortmund soccer kit, EN text, NOT FOR SALE, collab promo",
+        "price_tier": "¥89,800",
+        "verified": "2026-04-23"
+      }
+    },
+    "ST03-004": {
+      "base": {
+        "type": "normal",
+        "description": "Moria grinning, icy blue bg, simple art",
+        "verified": "2026-04-23"
+      },
+      "_p1": {
+        "type": "reprint",
+        "description": "illust:touge369, full body, Thriller Bark ship bg, relief/textured",
+        "price_tier": "¥280",
+        "verified": "2026-04-23"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "illust:Anderson, full body, Japanese pattern (和柄) gold/blue ornate border, SP",
+        "price_tier": "¥3,980",
+        "verified": "2026-04-23"
+      },
+      "_p3": {
+        "type": "reprint",
+        "description": "Same art as base, foil variant",
+        "verified": "2026-04-23"
+      },
+      "_p4": {
+        "type": "parallel",
+        "description": "illust:touge369, full body with bats, blue aura, alt art reprint",
+        "verified": "2026-04-23"
+      },
+      "_r1": {
+        "type": "reprint",
+        "description": "Same art as base",
+        "verified": "2026-04-23"
+      }
+    },
+    "OP09-013": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Anderson, Yasopp grinning, star cape, blue sky bg",
+        "verified": "2026-04-23"
+      },
+      "_p1": {
+        "type": "parallel_theme",
+        "description": "illust:Bashikou, dark red/black bg, stars, SP",
+        "price_tier": "¥3,980",
+        "verified": "2026-04-23"
+      },
+      "_p2": {
+        "type": "reprint_en",
+        "description": "Same Bashikou SP art, English text",
+        "verified": "2026-04-23"
+      },
+      "_r1": {
+        "type": "reprint",
+        "description": "Same art as base",
+        "verified": "2026-04-23"
+      }
+    },
+    "EB01-023": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Hisashi Fujiwara, Weevil close-up hand/face, red sky bg",
+        "verified": "2026-04-23"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:S-KINOKO, full body with Miss Buckin, swinging weapon",
+        "price_tier": "¥680",
+        "verified": "2026-04-23"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "illust:Bashikou, full body on ship, fire/destruction bg, Miss Buckin, SP",
+        "price_tier": "¥3,480",
+        "verified": "2026-04-23"
+      }
+    },
+    "OP06-001": {
+      "base": {
+        "type": "normal",
+        "description": "Uta with wings, anime illustration, TV animation credit",
+        "price_tier": "¥20,800",
+        "verified": "2026-04-23"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Sunohara, close-up face, smiling, different art",
+        "price_tier": "¥4,130",
+        "verified": "2026-04-23"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "Same base art with gold text/foil treatment",
+        "verified": "2026-04-23"
+      }
+    },
+    "OP06-022": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Yuki Hayashi, Yamato flexing, anime illustration, green/colorful bg",
+        "verified": "2026-04-23"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Sunohara, close-up portrait, smiling",
+        "price_tier": "¥2,780",
+        "verified": "2026-04-23"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "Same base art, different border/foil treatment",
+        "verified": "2026-04-23"
+      },
+      "_p3": {
+        "type": "parallel",
+        "description": "illust:DAI-XT., dynamic pose with club, colorful splatter bg",
+        "price_tier": "¥180",
+        "verified": "2026-04-23"
+      },
+      "_p4": {
+        "type": "parallel",
+        "description": "Standing pose with club over shoulder, looking back, rainbow/gradient border",
+        "verified": "2026-04-23"
+      }
+    },
+    "EB01-043": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Amano Yoichi, Spandine with golden den-den mushi, action pose",
+        "verified": "2026-04-23"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:BISAI, full body, dark bg with fire/chains",
+        "price_tier": "¥480",
+        "verified": "2026-04-23"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "illust:BISAI, same art, compass/ornate gold/teal border",
+        "price_tier": "¥4,980",
+        "verified": "2026-04-23"
+      },
+      "_p3": {
+        "type": "tournament",
+        "description": "EN, BISAI art, Offline Regionals 25-26 Champion stamp, NOT FOR SALE",
+        "verified": "2026-04-23"
+      },
+      "_p4": {
+        "type": "tournament",
+        "description": "EN, BISAI art, Online Regionals 25-26 stamp, NOT FOR SALE",
+        "verified": "2026-04-23"
+      },
+      "_p5": {
+        "type": "tournament",
+        "description": "EN, BISAI art, Online Regionals 25-26 Finalist stamp, NOT FOR SALE",
+        "verified": "2026-04-23"
+      },
+      "_p6": {
+        "type": "tournament",
+        "description": "EN, BISAI art, Online Regionals 25-26 Champion stamp, NOT FOR SALE",
+        "verified": "2026-04-23"
+      }
     }
   }
 }
