@@ -8992,6 +8992,133 @@
         "description": "EN, BISAI art, Online Regionals 25-26 Champion stamp, NOT FOR SALE",
         "verified": "2026-04-23"
       }
+    },
+    "EB03-053": {
+      "base": {
+        "type": "normal",
+        "description": "illust:sho, Nami with Clima-Tact, swirly blue bg",
+        "price_tier": "¥1,580",
+        "verified": "2026-04-24"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:kou takase, sitting pose, sky/tangerine bg",
+        "price_tier": "¥5,030",
+        "verified": "2026-04-24"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "illust:Nanase Urako, portrait, orange/tarot pattern bg, SP",
+        "price_tier": "¥49,800",
+        "verified": "2026-04-24"
+      }
+    },
+    "OP07-038": {
+      "base": {
+        "type": "normal",
+        "description": "Hancock anime illustration, blue bg, TV animation credit",
+        "verified": "2026-04-24"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Bashikou, sitting with snake + Gorgon sisters, purple/sparkle bg",
+        "price_tier": "¥6,980",
+        "verified": "2026-04-24"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "Same base anime art, map/compass bg overlay",
+        "verified": "2026-04-24"
+      }
+    },
+    "OP06-118": {
+      "base": {
+        "type": "normal",
+        "description": "illust:NIJIMAARC, Zoro action pose with swords",
+        "price_tier": "¥740",
+        "verified": "2026-04-24"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Midori Matsuda, standing shirtless front-facing, TV animation",
+        "price_tier": "¥4,580",
+        "verified": "2026-04-24"
+      },
+      "_p2": {
+        "type": "manga_sp",
+        "description": "Manga art, speech bubbles, manga panels bg",
+        "price_tier": "¥218,000",
+        "verified": "2026-04-24"
+      },
+      "_p3": {
+        "type": "manga_sp",
+        "description": "Same manga art as _p2, likely different print/language",
+        "verified": "2026-04-24"
+      },
+      "_p4": {
+        "type": "tournament",
+        "description": "Same base NIJIMAARC art, 2nd Anniversary stamp, compass bg",
+        "verified": "2026-04-24"
+      },
+      "_r1": {
+        "type": "reprint",
+        "description": "Same manga art as _p2/_p3",
+        "verified": "2026-04-24"
+      },
+      "_r2": {
+        "type": "parallel_theme",
+        "description": "Same base NIJIMAARC art, compass bg, foil treatment",
+        "price_tier": "¥6,980",
+        "verified": "2026-04-24"
+      }
+    },
+    "OP12-034": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Nakamaru, chibi Perona with crown, ghost/Thriller Bark bg",
+        "price_tier": "¥780",
+        "verified": "2026-04-24"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:sacanahen, sparkly portrait with ghosts",
+        "price_tier": "¥2,980",
+        "verified": "2026-04-24"
+      },
+      "_p2": {
+        "type": "tournament",
+        "description": "illust:Bashikou, EN text, 3rd Anniversary stamp, with ghosts",
+        "verified": "2026-04-24"
+      }
+    },
+    "OP02-001": {
+      "base": {
+        "type": "normal",
+        "description": "illust:BISAI, Whitebeard action pose with bisento",
+        "price_tier": "¥80",
+        "verified": "2026-04-24"
+      },
+      "_p1": {
+        "type": "manga_sp",
+        "description": "Manga-style close-up face portrait",
+        "price_tier": "¥2,330",
+        "verified": "2026-04-24"
+      },
+      "_p2": {
+        "type": "reprint_en",
+        "description": "EN text, same BISAI art, different border",
+        "verified": "2026-04-24"
+      },
+      "_p3": {
+        "type": "parallel",
+        "description": "illust:Anderson, seated on throne with bisento, alt art",
+        "verified": "2026-04-24"
+      },
+      "_p4": {
+        "type": "parallel_theme",
+        "description": "Same BISAI art, map/compass bg",
+        "verified": "2026-04-24"
+      }
     }
   }
 }
