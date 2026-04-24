@@ -11,7 +11,7 @@ function _resolveOPImg(c, lang) {
   if (raw) return raw;
   // No URL — construct from card ID + finish if parallel/reprint
   const finish = c.finish || '';
-  const id = c.officialId || c.id || '';
+  const id = c.id || '';
   if (!id) return null;
   const m = finish.match(/^(parallel)-?(\d+)$/);
   if (m) {
