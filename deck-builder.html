@@ -135,12 +135,13 @@ let deck = { leader: null, cards: {} }; // cards: { cardId: qty }
 
 async function loadCards() {
   const data = await fetch(`${BASE}/data/onepiece-cache.json`).then(r => r.json());
-  allCards = [];
+  const raw = [];
   for (const [setId, cards] of Object.entries(data.sets)) {
     for (const card of cards) {
-      allCards.push({ ...normalizeOPCard(card), setId });
+      raw.push({ ...normalizeOPCard(card), setId });
     }
   }
+  allCards = deduplicateOPCards(raw);
   searchCards();
   loadSavedDeck();
 }

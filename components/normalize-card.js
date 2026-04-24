@@ -55,3 +55,27 @@ function normalizeOPCard(c) {
   };
   } catch(e) { return { ...c, setId: c.setId || c.set }; }
 }
+
+/**
+ * Deduplicate OP cards: merge entries with same id + finish.
+ * Keeps richest data from each duplicate (JP img from one, EN img from other, etc.)
+ */
+function deduplicateOPCards(cards) {
+  const map = new Map();
+  for (const c of cards) {
+    const key = `${c.id || ''}|${c.finish || ''}`;
+    const existing = map.get(key);
+    if (!existing) { map.set(key, c); continue; }
+    // Merge: fill nulls from the new entry
+    if (!existing.imgJp && c.imgJp) existing.imgJp = c.imgJp;
+    if (!existing.imgEn && c.imgEn) existing.imgEn = c.imgEn;
+    if (!existing.img && c.img) existing.img = c.img;
+    if (!existing.nameJp && c.nameJp) existing.nameJp = c.nameJp;
+    if (!existing.name && c.name) existing.name = c.name;
+    // Prefer entry with pricing
+    const ep = existing.pricing || {};
+    const cp = c.pricing || {};
+    if ((!ep.jpy && !ep.sources) && (cp.jpy || cp.sources)) existing.pricing = cp;
+  }
+  return [...map.values()];
+}
