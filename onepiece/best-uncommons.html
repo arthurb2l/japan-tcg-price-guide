@@ -88,7 +88,7 @@ let lbIdx = 0;
 async function loadData() {
   try {
     const data = await fetch(`${BASE}/data/onepiece-cache.json`).then(r => r.json());
-    const allCards = Object.values(data.sets).flat().map(normalizeOPCard);
+    const allCards = deduplicateOPCards(Object.values(data.sets).flat().map(normalizeOPCard));
 
     const priceByBase = {};
     for (const card of allCards) {

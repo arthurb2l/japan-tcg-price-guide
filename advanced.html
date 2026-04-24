@@ -226,7 +226,7 @@ async function loadCards() {
     let opCards = [];
     try {
       const data = await fetch('data/onepiece-cache.json').then(r => r.json());
-      opCards = Object.values(data.sets).flat().map(c => ({...normalizeOPCard(c), game: 'onepiece'}));
+      opCards = deduplicateOPCards(Object.values(data.sets).flat().map(c => ({...normalizeOPCard(c), game: 'onepiece'})));
     } catch(e) {}
     
     allCards = [...pokemonCards, ...opCards];
