@@ -72,21 +72,23 @@ footer{text-align:center;color:#999;font-size:.75em;margin-top:auto;padding-top:
 <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');</script>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<main id="main-content">
 <script src="/japan-tcg-price-guide/components/header.js"></script>
 
-<h1>🇯🇵 PokePiece</h1>
+<h1><span aria-hidden="true">🇯🇵</span> PokePiece</h1>
 <p class="subtitle">Find underpriced cards at Japanese flea markets, Hard-Off & recycle shops. Works offline.</p>
 
 <div class="cards">
   <a href="pokemon/" class="card pokemon">
     <div class="icon">⚡</div>
-    <h2>Pokemon TCG</h2>
+    <span class="card-title" role="heading" aria-level="2">Pokemon TCG</span>
     <p>27,900+ cards · 67% priced</p>
   </a>
   
   <a href="onepiece/" class="card onepiece">
     <div class="icon">🏴‍☠️</div>
-    <h2>One Piece TCG</h2>
+    <span class="card-title" role="heading" aria-level="2">One Piece TCG</span>
     <p>2,270+ cards · 96% priced</p>
   </a>
 </div>
@@ -104,9 +106,9 @@ footer{text-align:center;color:#999;font-size:.75em;margin-top:auto;padding-top:
 
 
 
-<div class="install-prompt" id="install" onclick="installPWA()">
-  📱 Install App for Offline Use
-</div>
+<button class="install-prompt" id="install" onclick="installPWA()" aria-label="Install app for offline use">
+  <span aria-hidden="true">📱</span> Install App for Offline Use
+</button>
 
 
 <script>
@@ -128,7 +130,7 @@ function installPWA() {
 }
 </script>
 <div class="whats-new" style="margin-top:30px">
-  <h3>🆕 What's New</h3>
+  <h2><span aria-hidden="true">🆕</span> What's New</h2>
   <ul>
     <li><strong>Deck Builder</strong> - Build \& share One Piece decks</li>
     <li><strong>Set Completion</strong> - Track your collection progress</li>
@@ -137,6 +139,7 @@ function installPWA() {
   </ul>
 </div>
 
+</main>
 <footer id="site-footer"></footer>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
 </body>
