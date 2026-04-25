@@ -9252,6 +9252,262 @@
         "price_tier": "¥2,580",
         "verified": "2026-04-25"
       }
+    },
+    "OP07-051": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Hagane Tsurugi, Hancock with snake/dragon",
+        "price_tier": "¥6,980",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Akira Kano, heart pose with flowers",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "manga_sp",
+        "description": "Manga art, sitting with snakes, speech bubbles",
+        "price_tier": "¥108,000",
+        "verified": "2026-04-25"
+      },
+      "_p3": {
+        "type": "parallel_theme",
+        "description": "illust:Sunohara, seated, hearts bg, SP",
+        "verified": "2026-04-25"
+      },
+      "_p4": {
+        "type": "parallel",
+        "description": "illust:Hashimoto Q, festival/matsuri style",
+        "verified": "2026-04-25"
+      },
+      "_p5": {
+        "type": "parallel",
+        "description": "illust:otton, sitting with snake, relaxed pose",
+        "price_tier": "¥49,800",
+        "verified": "2026-04-25"
+      }
+    },
+    "OP13-120": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Hashimoto Q, Sabo fire action",
+        "price_tier": "¥780",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel_theme",
+        "description": "Standing with pipe, pirate flag bg, manga art",
+        "price_tier": "¥3,480",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "manga_sp",
+        "description": "Same standing art, grey/blue manga panels bg",
+        "verified": "2026-04-25"
+      },
+      "_p3": {
+        "type": "manga_sp",
+        "description": "Same standing art, RED manga panels bg, red parallel",
+        "price_tier": "¥348,000",
+        "verified": "2026-04-25"
+      },
+      "_p4": {
+        "type": "parallel_theme",
+        "description": "WANTED poster style, DEAD OR ALIVE",
+        "price_tier": "¥9,980",
+        "verified": "2026-04-25"
+      },
+      "_p5": {
+        "type": "tournament",
+        "description": "illust:tetsuya, fire pose, Championship 25-26 stamp, NOT FOR SALE",
+        "verified": "2026-04-25"
+      }
+    },
+    "ST21-014": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Hokuyuu, Luffy relaxing arms behind head, green bg",
+        "price_tier": "¥118,000",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Same Hokuyuu art, full-art/borderless treatment",
+        "price_tier": "¥3,980",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "ONE PIECE Magazine cover style, manga sketch, red bg, NOT FOR SALE",
+        "verified": "2026-04-25"
+      }
+    },
+    "OP02-013": {
+      "base": {
+        "type": "normal",
+        "description": "Ace compass bg manga art",
+        "price_tier": "¥6,980",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "Red bg manga art parallel",
+        "price_tier": "¥3,980",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "illust:Tacchan, 和柄/Japanese pattern SP",
+        "price_tier": "¥14,800",
+        "verified": "2026-04-25"
+      },
+      "_p3": {
+        "type": "manga_sp",
+        "description": "Manga bg manga art, left logo, PRB01 version",
+        "price_tier": "¥248,000",
+        "verified": "2026-04-25"
+      },
+      "_p4": {
+        "type": "reprint_en",
+        "description": "EN version",
+        "verified": "2026-04-25"
+      },
+      "_p5": {
+        "type": "parallel",
+        "description": "Additional variant",
+        "verified": "2026-04-25"
+      },
+      "_r1": {
+        "type": "reprint",
+        "description": "Reprint",
+        "verified": "2026-04-25"
+      }
+    },
+    "OP12-118": {
+      "base": {
+        "type": "normal",
+        "description": "Jewelry Bonney SEC",
+        "price_tier": "¥2,580",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Hashimoto Q, parallel",
+        "price_tier": "¥3,230",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "manga_sp",
+        "description": "Manga bg manga art SP",
+        "price_tier": "¥69,800",
+        "verified": "2026-04-25"
+      }
+    },
+    "OP14-119": {
+      "base": {
+        "type": "normal",
+        "description": "Dracule Mihawk SEC",
+        "price_tier": "¥880",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:AKIRA EGAWA, parallel",
+        "price_tier": "¥2,180",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "manga_sp",
+        "description": "Manga bg manga art SP",
+        "price_tier": "¥84,800",
+        "verified": "2026-04-25"
+      }
+    },
+    "OP12-020": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Makitoshi, Zoro Leader",
+        "price_tier": "¥10,800",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:otton, parallel",
+        "price_tier": "¥3,980",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "reprint_en",
+        "description": "EN version",
+        "verified": "2026-04-25"
+      },
+      "_p3": {
+        "type": "serial",
+        "description": "Japan serial",
+        "price_tier": "¥378,000",
+        "verified": "2026-04-25"
+      },
+      "_p4": {
+        "type": "parallel",
+        "description": "Additional variant",
+        "verified": "2026-04-25"
+      }
+    },
+    "OP09-118": {
+      "base": {
+        "type": "normal",
+        "description": "Gol D. Roger SEC",
+        "price_tier": "¥880",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel_theme",
+        "description": "Pirate flag bg manga art",
+        "price_tier": "¥4,480",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "WANTED poster SP",
+        "price_tier": "¥11,800",
+        "verified": "2026-04-25"
+      },
+      "_p3": {
+        "type": "manga_sp",
+        "description": "Gold manga bg manga art SP",
+        "price_tier": "¥598,000",
+        "verified": "2026-04-25"
+      }
+    },
+    "OP07-019": {
+      "base": {
+        "type": "normal",
+        "description": "illust:DAI-XT., Jewelry Bonney Leader",
+        "price_tier": "¥80",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Ryuda, parallel",
+        "price_tier": "¥2,030",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "reprint_en",
+        "description": "EN version",
+        "verified": "2026-04-25"
+      },
+      "_p3": {
+        "type": "parallel",
+        "description": "Additional variant",
+        "verified": "2026-04-25"
+      },
+      "_p4": {
+        "type": "parallel",
+        "description": "Additional variant",
+        "verified": "2026-04-25"
+      }
     }
   }
 }
