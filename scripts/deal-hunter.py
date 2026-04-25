@@ -92,12 +92,20 @@ def match_variant(title, target_id):
         'コミック', 'MANGA', '漫画',  # manga variant
         'アルトアート', 'ALTART', 'ALT ART', 'EXTENDED', 'フルアート',  # alt art / full bleed
         'SP', 'スペシャル',  # special
-        'シークレット', 'SECRET', 'SEC',  # secret rare
-        '金枠', '銀枠', '金背景', '銀背景',  # gold/silver frame/bg
+        'シークレット', 'SECRET',  # secret rare (removed 'SEC' — false positives on card IDs)
+        '金枠', '銀枠', '金背景', '銀背景', '金色',  # gold/silver frame/bg
         '手配書', 'WANTED',  # wanted poster variant
         'ホイル', 'FOIL',  # foil
         '再録', 'REPRINT',  # reprints (premium booster editions)
         'プレミアム', 'PREMIUM',
+        'コンパス', '和柄', 'タロット',  # compass bg, Japanese pattern, tarot
+        'シリアル', 'SERIAL',  # serial numbered
+        'レリーフ',  # relief/textured
+        '白黒', 'モノクロ',  # black & white
+        'ドルトムント', 'BVB',  # Dortmund collab
+        'チャンピオンシップ', 'CHAMPIONSHIP', 'リージョナル', 'REGIONAL',  # tournament
+        '非売品',  # not for sale / promo
+        '/P】', '【L/P】', '【SR/P】', '【SEC/P】', '【R/P】',  # rarity/P suffix
     ]
     is_parallel = any(m in title.upper() for m in parallel_markers) or any(m in title for m in parallel_markers)
     return True, is_parallel
@@ -324,8 +332,17 @@ def find_deals(db_cards, data):
             continue
 
         db_price = card['jpy']
-        # Drop obvious garbage: listings <20% of DB price are likely damaged/sold-out/wrong-card
-        listings = [l for l in listings if l['total'] >= db_price * 0.20]
+        # Drop variant mismatches: if listing is <40% of DB price, likely a different variant
+        # Also drop listings >3x DB price — likely graded/special/bundle
+        listings = [l for l in listings if db_price * 0.40 <= l['total'] <= db_price * 3.0]
+        # IQR outlier rejection: if 3+ listings, drop anything >2x IQR below Q1
+        if len(listings) >= 3:
+            totals = sorted(l['total'] for l in listings)
+            q1 = totals[len(totals)//4]
+            q3 = totals[3*len(totals)//4]
+            iqr = q3 - q1
+            floor = q1 - 2 * max(iqr, q1 * 0.15)
+            listings = [l for l in listings if l['total'] >= floor]
         if not listings:
             continue
 
