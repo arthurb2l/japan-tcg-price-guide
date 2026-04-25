@@ -3,14 +3,25 @@
   "short_name": "PokePiece",
   "description": "Pokemon & One Piece card prices for Japan flea markets",
   "start_url": "/japan-tcg-price-guide/",
+  "scope": "/japan-tcg-price-guide/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#EE1515",
   "icons": [
     {
-      "src": "favicon.svg",
+      "src": "/japan-tcg-price-guide/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
+    },
+    {
+      "src": "/japan-tcg-price-guide/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/japan-tcg-price-guide/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }
