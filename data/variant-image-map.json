@@ -9119,6 +9119,139 @@
         "description": "Same BISAI art, map/compass bg",
         "verified": "2026-04-24"
       }
+    },
+    "OP14-112": {
+      "base": {
+        "type": "normal",
+        "description": "illust:sho, Hancock with snake, colorful bg",
+        "price_tier": "¥380",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:PENEKOR, portrait close-up",
+        "price_tier": "¥4,480",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "Seated, red/Japanese pattern bg, SP",
+        "verified": "2026-04-25"
+      }
+    },
+    "OP11-041": {
+      "base": {
+        "type": "normal",
+        "description": "Nami anime illustration, map bg, TV animation, no-star",
+        "price_tier": "¥11,800",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:otton, close-up portrait with Clima-Tact, with-star",
+        "price_tier": "¥4,780",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "reprint_en",
+        "description": "EN text, same otton art",
+        "verified": "2026-04-25"
+      }
+    },
+    "OP09-061": {
+      "base": {
+        "type": "normal",
+        "description": "Gear 5 Luffy laughing, anime illustration, illust:Midori Matsuda",
+        "price_tier": "¥34,800",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "manga_sp",
+        "description": "Manga close-up face, laughing",
+        "price_tier": "¥6,480",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "parallel",
+        "description": "illust:DAI-XT., Gear 5 dynamic pose, ice/crystal bg",
+        "verified": "2026-04-25"
+      },
+      "_p3": {
+        "type": "parallel",
+        "description": "Full Straw Hat crew group shot, purple bg",
+        "verified": "2026-04-25"
+      }
+    },
+    "OP03-001": {
+      "base": {
+        "type": "normal",
+        "description": "Ace fire fist, anime illustration",
+        "price_tier": "¥80",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Anderson, red/white ink style",
+        "price_tier": "¥4,180",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "parallel",
+        "description": "illust:Makitoshi, full body fire whip pose",
+        "verified": "2026-04-25"
+      }
+    },
+    "OP15-060": {
+      "base": {
+        "type": "normal",
+        "description": "Enel anime illustration, lightning/purple bg, illust:nishinoshima",
+        "price_tier": "¥220",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Matsumoto Akira, full body lightning god form",
+        "price_tier": "¥2,180",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "parallel_theme",
+        "description": "illust:Bashikou, with staff, lightning, NOT FOR SALE, SP promo",
+        "verified": "2026-04-25"
+      }
+    },
+    "OP12-119": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Bashikou, Kuma paw forward",
+        "price_tier": "¥1,580",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:TAPIOCA, Kuma with bubble",
+        "price_tier": "¥2,480",
+        "verified": "2026-04-25"
+      },
+      "_p2": {
+        "type": "tournament",
+        "description": "EN, same Bashikou art, 3rd Anniversary stamp, illust:Katsuo Terada",
+        "verified": "2026-04-25"
+      }
+    },
+    "OP12-063": {
+      "base": {
+        "type": "normal",
+        "description": "illust:Youichi Adachi, Reiju action pose with tongue",
+        "price_tier": "¥580",
+        "verified": "2026-04-25"
+      },
+      "_p1": {
+        "type": "parallel",
+        "description": "illust:Daisuke Izuka, standing portrait",
+        "price_tier": "¥2,580",
+        "verified": "2026-04-25"
+      }
     }
   }
 }
