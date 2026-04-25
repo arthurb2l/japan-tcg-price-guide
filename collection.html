@@ -377,7 +377,7 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
 
 <script>
 let allCards = [], collectionCards = [], currentUser = null, userCollection = {};
-let currentGame = localStorage.getItem('collection-tcg') || null, currentSort = 'added', currentList = 'inventory';
+let currentGame = localStorage.getItem('collection-tcg') || null, currentSort = 'added', currentList = 'inventory', currentSetFilter = null;
 let currentPage = 1;
 const PAGE_SIZE = 50;
 
@@ -443,6 +443,7 @@ async function loadUserCollection(uid) {
 function switchList(list) {
   currentList = list;
   currentPage = 1;
+  if (list !== 'inventory') currentSetFilter = null;
   // Update URL without reload
   const url = new URL(window.location);
   url.searchParams.set('list', list);
@@ -767,34 +768,37 @@ function renderCollection() {
   if (currentList === "sets") {
     const game = currentGame || 'onepiece';
     const setStats = {};
-    for (const id of Object.keys(userCollection)) {
-      const card = allCards.find(c => c.id === id);
-      if (!card || card.game !== game) continue;
-      const setId = card.setId || card.set || "unknown";
-      if (!setStats[setId]) setStats[setId] = { owned: 0, total: 0, game: card.game };
-      setStats[setId].owned++;
-    }
+    // Build card lookup for O(1) access
+    const cardMap = {};
     for (const card of allCards) {
       if (card.game !== game) continue;
+      cardMap[card.id] = card;
       const setId = card.setId || card.set || "unknown";
-      if (!setStats[setId]) setStats[setId] = { owned: 0, total: 0, game: card.game };
+      if (!setStats[setId]) setStats[setId] = { owned: 0, total: 0 };
       setStats[setId].total++;
     }
+    for (const id of Object.keys(userCollection)) {
+      const card = cardMap[id];
+      if (!card) continue;
+      const setId = card.setId || card.set || "unknown";
+      if (setStats[setId]) setStats[setId].owned++;
+    }
     const sets = Object.entries(setStats)
-      .filter(([,s]) => s.owned > 0)
-      .sort((a,b) => (b[1].owned/b[1].total) - (a[1].owned/a[1].total));
+      .filter(([,s]) => s.total > 0)
+      .sort((a,b) => (b[1].owned/Math.max(b[1].total,1)) - (a[1].owned/Math.max(a[1].total,1)));
     
     content.innerHTML = tabsHtml + `
       <div class="set-progress">
         ${sets.length ? sets.map(([setId, s]) => {
           const pct = Math.round(s.owned / s.total * 100);
-          const color = pct >= 75 ? '#16a34a' : pct >= 25 ? '#f59e0b' : '#ef4444';
-          return `<div class="set-row">
+          const color = pct >= 75 ? '#16a34a' : pct >= 25 ? '#f59e0b' : pct > 0 ? '#ef4444' : '#ccc';
+          const opacity = s.owned > 0 ? '1' : '0.5';
+          return `<div class="set-row" style="cursor:pointer;opacity:${opacity}" onclick="switchList('inventory');currentSetFilter='${setId}';renderCollection()">>
             <div class="set-name">${setId}</div>
             <div class="set-bar"><div style="width:${pct}%;background:${color}"></div></div>
             <div class="set-pct">${s.owned}/${s.total} (${pct}%)</div>
           </div>`;
-        }).join("") : "<p style=\"text-align:center;color:var(--g3)\">Add cards to see set completion</p>"}
+        }).join("") : "<p style=\"text-align:center;color:var(--g3)\">No cards loaded</p>"}
       </div>`;
     return;
   }
@@ -840,6 +844,9 @@ function renderCollection() {
   // Apply game filter
   let filtered = currentGame ? collectionCards.filter(c => c.game === currentGame) : collectionCards;
   
+  // Apply set filter (from Sets tab click)
+  if (currentSetFilter) filtered = filtered.filter(c => (c.setId || c.set) === currentSetFilter);
+  
   // Sort
   if (currentSort === 'name') filtered.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
   else if (currentSort === 'price-high') filtered.sort((a, b) => (getPrice(b) || 0) - (getPrice(a) || 0));
@@ -874,8 +881,9 @@ function renderCollection() {
   const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
   const getImg = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || '';
   
-  content.innerHTML = tabsHtml + `
-    <div class="stats-row">
+  const setFilterBanner = currentSetFilter ? `<div style="background:#e0f2fe;padding:8px 14px;border-radius:8px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;font-size:.85em"><span>📊 Filtered: <b>${currentSetFilter}</b></span><button onclick="currentSetFilter=null;renderCollection()" style="background:none;border:none;cursor:pointer;font-size:1em">✕</button></div>` : '';
+  
+  content.innerHTML = tabsHtml + setFilterBanner + `
       <div class="stat-card">
         <div class="value">${totalCards}</div>
         <div class="label">Total Cards</div>
