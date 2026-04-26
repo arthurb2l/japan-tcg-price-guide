@@ -163,7 +163,7 @@
     container.style.opacity='1';
     if (user) {
       const isAdmin = ADMIN_UIDS.includes(user.uid || '');
-      const adminLink = isAdmin ? `<a href="${base}admin/reports.html" id="admin-reports-link">⚠️ Reports</a>` : '';
+      const adminLink = isAdmin ? `<a href="${base}admin/reports.html" id="admin-reports-link">⚠️ Reports</a><a href="${base}admin/quality.html">📊 Data Quality</a>` : '';
       container.innerHTML = `
         <div class="user-dropdown">
           <img src="${user.picture || ''}" alt="" class="user-avatar" referrerpolicy="no-referrer"${isAdmin ? ' style="outline:2px solid #d32f2f;outline-offset:1px"' : ''}>
@@ -182,7 +182,7 @@
         }).catch(() => {});
       }
       if (mobileLogin) {
-        const mobileAdmin = isAdmin ? `<a href="${base}admin/reports.html" style="display:block;padding:10px 0;color:#d32f2f;text-decoration:none">⚠️ Reports</a>` : '';
+        const mobileAdmin = isAdmin ? `<a href="${base}admin/reports.html" style="display:block;padding:10px 0;color:#d32f2f;text-decoration:none">⚠️ Reports</a><a href="${base}admin/quality.html" style="display:block;padding:10px 0;color:#d32f2f;text-decoration:none">📊 Data Quality</a>` : '';
         mobileLogin.innerHTML = `
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
             <img src="${user.picture || ''}" style="width:32px;height:32px;border-radius:50%" referrerpolicy="no-referrer">
@@ -210,15 +210,21 @@
   
   // Check auth state + admin badge
   const ADMIN_UIDS = ['kkECBly8lgVnrw9flUBouBMzjEh2'];
-  setTimeout(() => {
+  // Wait for Firebase auth (may be deferred)
+  function _initHeaderAuth() {
     if (typeof currentUser !== 'undefined' && currentUser) {
       updateHeaderUser(currentUser);
     } else if (typeof auth !== 'undefined' && auth.onAuthStateChanged) {
       auth.onAuthStateChanged(user => {
         if (user) updateHeaderUser({ picture: user.photoURL, name: user.displayName, uid: user.uid });
+        else updateHeaderUser(null);
       });
+    } else {
+      // Firebase not loaded yet (deferred) — retry
+      setTimeout(_initHeaderAuth, 200);
     }
-  }, 100);
+  }
+  setTimeout(_initHeaderAuth, 100);
   
   // Close mobile nav on link click
   document.getElementById('mobileNav').addEventListener('click', e => {
