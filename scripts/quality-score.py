@@ -1,110 +1,188 @@
 #!/usr/bin/env python3
-"""Per-card data quality scoring. Outputs scores + flags for every card.
+"""Per-card data quality scoring for OP + Pokemon.
 Run: python3 scripts/quality-score.py
-Output: data/quality-scores.json + summary to stdout
+Output: data/quality-scores.json
 """
-import json, statistics
+import json, statistics, os, glob
 from datetime import date
 from collections import Counter
 
-DATA = '/mnt/c/q/projects/pokemon/data'
-
-with open(f'{DATA}/onepiece-cache.json') as f:
-    cache = json.load(f)
-with open(f'{DATA}/variant-image-map.json') as f:
-    vmap = json.load(f)
-
-mapped_ids = set(vmap['mappings'].keys())
+DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
 today = date.today()
 
-scores = []
-for set_id, cards in cache['sets'].items():
+def score_op_card(c, set_id, mapped_ids):
+    cid = c.get('id','')
+    finish = c.get('finish','')
+    name = c.get('name', {})
+    img = c.get('img', {})
+    pricing = c.get('pricing', {})
+    computed = pricing.get('computed', {})
+    sources = pricing.get('sources', {})
+
+    cs, cf = 0, []
+    if (name.get('jp') if isinstance(name, dict) else None): cs += 20
+    else: cf.append('no_jp_name')
+    if (name.get('en') if isinstance(name, dict) else None): cs += 10
+    else: cf.append('no_en_name')
+    img_jp = (img.get('jp') if isinstance(img, dict) else img) if img else None
+    if img_jp: cs += 25
+    else: cf.append('no_jp_image')
+    img_en = (img.get('en') if isinstance(img, dict) else None) if isinstance(img, dict) else None
+    if img_en: cs += 5
+    else: cf.append('no_en_image')
+    if finish == 'regular': cs += 20
+    elif cid in mapped_ids: cs += 20
+    else: cf.append('variant_unverified')
+    if c.get('rarity'): cs += 10
+    else: cf.append('no_rarity')
+    if c.get('set') or c.get('setId'): cs += 10
+    else: cf.append('no_set')
+
+    ps, pf = 0, []
+    jpy = computed.get('jpy') or pricing.get('jpy')
+    if jpy: ps += 30
+    else: pf.append('no_price')
+    n_src = len(sources) if isinstance(sources, dict) else 0
+    ps += min(n_src * 10, 30)
+    if n_src == 0: pf.append('zero_sources')
+    elif n_src == 1: pf.append('single_source')
+    updated = pricing.get('updated') or ''
+    if updated:
+        try:
+            age = (today - date.fromisoformat(updated[:10])).days
+            if age <= 7: ps += 20
+            elif age <= 30: ps += 15
+            elif age <= 90: ps += 10
+            else: pf.append(f'stale_{age}d')
+        except: pf.append('bad_date')
+    else: pf.append('no_date')
+    method = pricing.get('method', '')
+    if method in ('consensus-corrected', 'multi-source'): ps += 20
+    elif method in ('variant_mapped', 'cardrush'): ps += 15
+    elif method == 'cardrush-fill': ps += 10
+    elif method == 'manual-estimate': ps += 5; pf.append('manual_estimate')
+    else: ps += 5
+
+    return {'id': cid, 'finish': finish, 'set': set_id, 'game': 'onepiece',
+            'card': cs, 'cf': cf, 'price': ps, 'pf': pf, 'combined': round((cs+ps)/2)}
+
+
+def score_pkm_card(c):
+    cid = c.get('id','')
+    pricing = c.get('pricing', {})
+
+    cs, cf = 0, []
+    if c.get('name'): cs += 20
+    else: cf.append('no_name')
+    # Pokemon doesn't have JP names in our data
+    cs += 10  # EN name is the primary
+    if c.get('image'): cs += 25
+    else: cf.append('no_image')
+    cs += 5  # no EN/JP split for Pokemon
+    cs += 20  # no variant image issue for Pokemon
+    if c.get('rarity'): cs += 10
+    else: cf.append('no_rarity')
+    if c.get('setId'): cs += 10
+    else: cf.append('no_set')
+
+    ps, pf = 0, []
+    usd = pricing.get('usd')
+    jpy = pricing.get('jpy')
+    if usd or jpy: ps += 30
+    else: pf.append('no_price')
+    source = pricing.get('source', '')
+    if source: ps += 10
+    else: pf.append('zero_sources')
+    updated = pricing.get('updated') or ''
+    if updated:
+        try:
+            age = (today - date.fromisoformat(updated[:10])).days
+            if age <= 7: ps += 20
+            elif age <= 30: ps += 15
+            elif age <= 90: ps += 10
+            else: pf.append(f'stale_{age}d')
+        except: pf.append('bad_date')
+    else: pf.append('no_date')
+    if source in ('limitlesstcg', 'tcgdex'): ps += 15
+    elif source: ps += 10
+    else: ps += 5
+
+    return {'id': cid, 'set': c.get('setId',''), 'game': 'pokemon',
+            'card': cs, 'cf': cf, 'price': ps, 'pf': pf, 'combined': round((cs+ps)/2)}
+
+
+# Load OP
+with open(os.path.join(DATA, 'onepiece-cache.json')) as f:
+    op_cache = json.load(f)
+try:
+    with open(os.path.join(DATA, 'variant-image-map.json')) as f:
+        vmap = json.load(f)
+    mapped_ids = set(vmap['mappings'].keys())
+except: mapped_ids = set()
+
+op_scores = []
+for set_id, cards in op_cache['sets'].items():
     for c in cards:
-        cid = c.get('id','')
-        finish = c.get('finish','')
-        name = c.get('name', {})
-        img = c.get('img', {})
-        pricing = c.get('pricing', {})
-        computed = pricing.get('computed', {})
-        sources = pricing.get('sources', {})
+        op_scores.append(score_op_card(c, set_id, mapped_ids))
 
-        # CARD ACCURACY (0-100)
-        cs = 0; cf = []
-        if (name.get('jp') if isinstance(name, dict) else None): cs += 20
-        else: cf.append('no_jp_name')
-        if (name.get('en') if isinstance(name, dict) else None): cs += 10
-        else: cf.append('no_en_name')
-        img_jp = (img.get('jp') if isinstance(img, dict) else img) if img else None
-        if img_jp: cs += 25
-        else: cf.append('no_jp_image')
-        img_en = (img.get('en') if isinstance(img, dict) else None) if isinstance(img, dict) else None
-        if img_en: cs += 5
-        else: cf.append('no_en_image')
-        if finish == 'regular': cs += 20
-        elif cid in mapped_ids: cs += 20
-        else: cf.append('variant_unverified')
-        if c.get('rarity'): cs += 10
-        else: cf.append('no_rarity')
-        if c.get('set') or c.get('setId'): cs += 10
-        else: cf.append('no_set')
+# Load Pokemon
+pkm_scores = []
+try:
+    with open(os.path.join(DATA, 'shards', 'manifest.json')) as f:
+        manifest = json.load(f)
+    for shard_info in manifest['shards'].values():
+        with open(os.path.join(DATA, 'shards', shard_info['file'])) as f:
+            shard = json.load(f)
+        for cards in shard['sets'].values():
+            for c in cards:
+                pkm_scores.append(score_pkm_card(c))
+except:
+    try:
+        with open(os.path.join(DATA, 'brain-cache.json')) as f:
+            pkm_cache = json.load(f)
+        for cards in pkm_cache['sets'].values():
+            for c in cards:
+                pkm_scores.append(score_pkm_card(c))
+    except: pass
 
-        # PRICE CONFIDENCE (0-100)
-        ps = 0; pf = []
-        jpy = computed.get('jpy') or pricing.get('jpy')
-        if jpy: ps += 30
-        else: pf.append('no_price')
-        n_src = len(sources) if isinstance(sources, dict) else 0
-        ps += min(n_src * 10, 30)
-        if n_src == 0: pf.append('zero_sources')
-        elif n_src == 1: pf.append('single_source')
-        updated = pricing.get('updated') or ''
-        if updated:
-            try:
-                age = (today - date.fromisoformat(updated[:10])).days
-                if age <= 7: ps += 20
-                elif age <= 30: ps += 15
-                elif age <= 90: ps += 10
-                else: pf.append(f'stale_{age}d')
-            except: pf.append('bad_date')
-        else: pf.append('no_date')
-        method = pricing.get('method', '')
-        if method in ('consensus-corrected', 'multi-source'): ps += 20
-        elif method in ('variant_mapped', 'cardrush'): ps += 15
-        elif method == 'cardrush-fill': ps += 10
-        elif method == 'manual-estimate': ps += 5; pf.append('manual_estimate')
-        else: ps += 5
-
-        scores.append({
-            'id': cid, 'finish': finish, 'set': set_id,
-            'card': cs, 'card_flags': cf,
-            'price': ps, 'price_flags': pf,
-            'combined': round((cs + ps) / 2)
-        })
-
-# Save
-with open(f'{DATA}/quality-scores.json', 'w') as f:
-    json.dump({
-        'generated': today.isoformat(),
+def summarize(scores, label):
+    if not scores: return {}
+    cs = [s['card'] for s in scores]
+    ps = [s['price'] for s in scores]
+    return {
         'total': len(scores),
-        'summary': {
-            'card_mean': round(statistics.mean(s['card'] for s in scores)),
-            'price_mean': round(statistics.mean(s['price'] for s in scores)),
-            'combined_mean': round(statistics.mean(s['combined'] for s in scores)),
-            'card_below_70': sum(1 for s in scores if s['card'] < 70),
-            'price_below_70': sum(1 for s in scores if s['price'] < 70),
-        },
-        'worst_50': sorted(scores, key=lambda s: s['combined'])[:50],
-        'flag_counts': {
-            'card': dict(Counter(f for s in scores for f in s['card_flags']).most_common()),
-            'price': dict(Counter(f for s in scores for f in s['price_flags']).most_common()),
-        }
-    }, f, indent=2)
+        'card_mean': round(statistics.mean(cs)),
+        'card_median': round(statistics.median(cs)),
+        'card_below_70': sum(1 for x in cs if x < 70),
+        'price_mean': round(statistics.mean(ps)),
+        'price_median': round(statistics.median(ps)),
+        'price_below_70': sum(1 for x in ps if x < 70),
+        'combined_mean': round(statistics.mean(s['combined'] for s in scores)),
+        'card_flags': dict(Counter(f for s in scores for f in s['cf']).most_common()),
+        'price_flags': dict(Counter(f for s in scores for f in s['pf']).most_common()),
+    }
 
-# Print summary
-cs = [s['card'] for s in scores]
-ps = [s['price'] for s in scores]
-print(f'=== QUALITY SCORECARD ({today}) ===')
-print(f'Cards: {len(scores)}')
-print(f'Card accuracy:  mean={statistics.mean(cs):.0f} median={statistics.median(cs):.0f} <70={sum(1 for x in cs if x<70)}')
-print(f'Price confidence: mean={statistics.mean(ps):.0f} median={statistics.median(ps):.0f} <70={sum(1 for x in ps if x<70)}')
+output = {
+    'generated': today.isoformat(),
+    'onepiece': {
+        'summary': summarize(op_scores, 'OP'),
+        'worst_50': sorted(op_scores, key=lambda s: s['combined'])[:50],
+        'all_scores': op_scores,
+    },
+    'pokemon': {
+        'summary': summarize(pkm_scores, 'PKM'),
+        'worst_50': sorted(pkm_scores, key=lambda s: s['combined'])[:50],
+        'all_scores': pkm_scores,
+    }
+}
+
+with open(os.path.join(DATA, 'quality-scores.json'), 'w') as f:
+    json.dump(output, f)
+
+# Print
+for game, label in [('onepiece', 'One Piece'), ('pokemon', 'Pokemon')]:
+    s = output[game]['summary']
+    if not s: continue
+    print(f'{label}: {s["total"]} cards | card={s["card_mean"]} price={s["price_mean"]} | card<70={s["card_below_70"]} price<70={s["price_below_70"]}')
+
 print(f'Saved to data/quality-scores.json')
