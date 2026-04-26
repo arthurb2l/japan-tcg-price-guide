@@ -105,7 +105,7 @@ function signIn() {
 }
 
 auth.onAuthStateChanged(user => {
-  if (user && ADMIN_UIDS.includes(user.uid)) {
+  if (user && (ADMIN_UIDS.includes(user.uid) || user.email === 'arthurbrejon@gmail.com')) {
     document.getElementById('auth-gate').style.display = 'none';
     document.getElementById('dashboard').style.display = 'block';
     loadData();
