@@ -91,7 +91,7 @@ tr:hover{background:#f8f9fa}
 </div>
 
 <script>
-const ADMIN_EMAILS = ['arthurbrejon@gmail.com'];
+const ADMIN_UIDS = ['kkECBly8lgVnrw9flUBouBMzjEh2'];
 const firebaseConfig = {
   apiKey: "AIzaSyCLzia4937bSBbjsT0JUY-PAgnzygTYj1s",
   authDomain: "japan-tcg-price-guide.firebaseapp.com",
@@ -105,7 +105,7 @@ function signIn() {
 }
 
 auth.onAuthStateChanged(user => {
-  if (user && ADMIN_EMAILS.includes(user.email)) {
+  if (user && ADMIN_UIDS.includes(user.uid)) {
     document.getElementById('auth-gate').style.display = 'none';
     document.getElementById('dashboard').style.display = 'block';
     loadData();
