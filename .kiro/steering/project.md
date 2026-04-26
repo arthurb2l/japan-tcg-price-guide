@@ -82,3 +82,18 @@ inclusion: always
 ## UI debugging heuristic (learned 2026-04-17)
 - Before debugging visual inconsistency between similar components, grep for CSS rules matching each class name across all files. A component with ZERO matching rules is using browser defaults — this is almost always the root cause, not cascade or specificity issues.
 - Stale tickets (>2 weeks old) need current-state audit before starting. Post a Status+Evidence table to the issue — don't trust the original problem list.
+
+## Data Quality Scoring
+- **Script:** `python3 scripts/quality-score.py` → outputs `data/quality-scores.json`
+- **Run after:** any cache update, price fill, or variant mapping session
+- **Card Accuracy (0-100):** JP name (20), EN name (10), JP image (25), EN image (5), variant verified (20), rarity (10), set (10)
+- **Price Confidence (0-100):** has price (30), sources (10/ea max 30), freshness (20/15/10/0), method (20 consensus → 5 manual)
+- **Targets:** card accuracy mean ≥95, price confidence mean ≥90, zero cards below 50
+- **Dashboard:** #167 — admin-only page at `/admin/quality.html`
+
+## Audit Checklist (run before claiming data is "complete")
+1. `python3 scripts/quality-score.py` — check worst 50 cards
+2. Verify zero cards with combined score <50
+3. Check flag counts — no flag should affect >10% of cards
+4. DON cards: verify prices against Card Rush DON listings
+5. Variant images: check `variant_unverified` count trending down
