@@ -1,0 +1,866 @@
+{
+  "generated": "2026-04-26",
+  "total": 6109,
+  "summary": {
+    "card_mean": 92,
+    "price_mean": 84,
+    "combined_mean": 88,
+    "card_below_70": 468,
+    "price_below_70": 202
+  },
+  "worst_50": [
+    {
+      "id": "DON-NIKA",
+      "finish": "holo",
+      "set": "DON",
+      "card": 45,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image",
+        "variant_unverified"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 50
+    },
+    {
+      "id": "DON-GOLD-TEXT",
+      "finish": "holo",
+      "set": "DON",
+      "card": 45,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image",
+        "variant_unverified"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 50
+    },
+    {
+      "id": "DON-CS2023-LUFFY",
+      "finish": "holo",
+      "set": "DON",
+      "card": 45,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image",
+        "variant_unverified"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 50
+    },
+    {
+      "id": "DON-GAO2024",
+      "finish": "holo",
+      "set": "DON",
+      "card": 45,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image",
+        "variant_unverified"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 50
+    },
+    {
+      "id": "DON-OP05-KAIDO-UPPERCUT",
+      "finish": "holo",
+      "set": "DON",
+      "card": 45,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image",
+        "variant_unverified"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 50
+    },
+    {
+      "id": "DON-EB03-NAMI-GOLD",
+      "finish": "parallel-1",
+      "set": "DON",
+      "card": 50,
+      "card_flags": [
+        "no_jp_image",
+        "no_en_image",
+        "variant_unverified"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 52
+    },
+    {
+      "id": "DON-OP01-LUFFY-PIRATE-KING",
+      "finish": "holo",
+      "set": "DON",
+      "card": 45,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image",
+        "variant_unverified"
+      ],
+      "price": 65,
+      "price_flags": [
+        "single_source"
+      ],
+      "combined": 55
+    },
+    {
+      "id": "DON-OP04-VIVI-FAREWELL",
+      "finish": "holo",
+      "set": "DON",
+      "card": 45,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image",
+        "variant_unverified"
+      ],
+      "price": 65,
+      "price_flags": [
+        "single_source"
+      ],
+      "combined": 55
+    },
+    {
+      "id": "ST03-017-p1",
+      "finish": "parallel-1",
+      "set": "ST-03",
+      "card": 45,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image",
+        "variant_unverified"
+      ],
+      "price": 75,
+      "price_flags": [
+        "single_source"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "ST03-017-p2",
+      "finish": "parallel-2",
+      "set": "ST-03",
+      "card": 45,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image",
+        "variant_unverified"
+      ],
+      "price": 75,
+      "price_flags": [
+        "single_source"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-RED",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-YELLOW",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-BLUE",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-GREEN",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-ORANGE",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-PINK",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-TEAL",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB01-DON-Donquixote-Doflamingo",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB01-DON-Donquixote-Doflamingo-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB01-DON-Oden",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB01-DON-Oden-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB01-DON-Sabo",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB01-DON-Sabo-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Dragon",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Dragon-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Shanks",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Shanks-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Koby",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Koby-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Buggy",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Buggy-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Jinbe",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Jinbe-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Caesar-Clown",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Caesar-Clown-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Sugar",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "PRB02-DON-Sugar-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-GEAR5",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-3DTEXT",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-YAMATO-1ST",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-LUFFY-1ST",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-OP14-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-OP06-SHANKS",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-OP13-SHANKS",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-OP13-SHANKS-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-EB02",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-EB03-HEROINES",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-EB03-HEROINES-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-EB03-HEROINES-NAMI",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    },
+    {
+      "id": "DON-EB03-HEROINES-NAMI-GOLD",
+      "finish": "regular",
+      "set": "DON",
+      "card": 65,
+      "card_flags": [
+        "no_jp_name",
+        "no_en_name",
+        "no_en_image"
+      ],
+      "price": 55,
+      "price_flags": [
+        "zero_sources",
+        "manual_estimate"
+      ],
+      "combined": 60
+    }
+  ],
+  "flag_counts": {
+    "card": {
+      "no_en_image": 1608,
+      "no_jp_image": 780,
+      "no_en_name": 744,
+      "no_jp_name": 467,
+      "variant_unverified": 76,
+      "no_set": 2
+    },
+    "price": {
+      "single_source": 1995,
+      "zero_sources": 78,
+      "manual_estimate": 61
+    }
+  }
+}
