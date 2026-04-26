@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Quality Dashboard — PokePiece Admin</title>
+<meta name="robots" content="noindex">
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f2f5;color:#1a1a2e;padding:20px;max-width:1200px;margin:0 auto}
+.auth-gate{text-align:center;padding:80px 20px}
+.auth-gate button{padding:10px 24px;font-size:1em;border:1px solid #ddd;border-radius:8px;cursor:pointer;background:#fff}
+h1{font-size:1.4em;margin-bottom:4px}
+.subtitle{color:#666;font-size:.85em;margin-bottom:20px}
+.tabs{display:flex;gap:8px;margin-bottom:20px}
+.tab{padding:8px 20px;border:2px solid #ddd;border-radius:8px;cursor:pointer;font-weight:600;font-size:.9em;background:#fff}
+.tab.active{border-color:#4A90D9;background:#e8f0fe;color:#1a56db}
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:24px}
+.stat{background:#fff;padding:16px;border-radius:10px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.stat .value{font-size:1.8em;font-weight:700}
+.stat .label{font-size:.75em;color:#666;margin-top:2px}
+.stat.good .value{color:#16a34a}
+.stat.warn .value{color:#f59e0b}
+.stat.bad .value{color:#ef4444}
+.flags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.flag{background:#fff;padding:8px 14px;border-radius:8px;font-size:.8em;box-shadow:0 1px 3px rgba(0,0,0,.08);cursor:pointer;border:2px solid transparent}
+.flag:hover,.flag.active{border-color:#4A90D9}
+.flag .count{font-weight:700;color:#ef4444;margin-right:4px}
+.controls{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap;align-items:center}
+.controls input,.controls select{padding:6px 10px;border:1px solid #ddd;border-radius:6px;font-size:.85em}
+.controls input{flex:1;min-width:200px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08);font-size:.82em}
+th{background:#f8f9fa;padding:8px 10px;text-align:left;cursor:pointer;user-select:none;white-space:nowrap;border-bottom:2px solid #e5e7eb}
+th:hover{background:#e8f0fe}
+td{padding:6px 10px;border-bottom:1px solid #f0f0f0}
+tr:hover{background:#f8f9fa}
+.score{display:inline-block;padding:2px 8px;border-radius:4px;font-weight:600;font-size:.85em}
+.score.s-high{background:#d1fae5;color:#065f46}
+.score.s-mid{background:#fef3c7;color:#92400e}
+.score.s-low{background:#fee2e2;color:#991b1b}
+.flag-tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:.7em;background:#f3f4f6;color:#666;margin:1px}
+.pagination{display:flex;gap:8px;justify-content:center;margin-top:12px;align-items:center;font-size:.85em}
+.pagination button{padding:4px 12px;border:1px solid #ddd;border-radius:4px;cursor:pointer;background:#fff}
+.pagination button:disabled{opacity:.4;cursor:default}
+.back{display:inline-block;margin-bottom:15px;color:#666;text-decoration:none;font-size:.9em}
+.back:hover{color:#4A90D9}
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="auth-gate" id="auth-gate">
+    <h1>🔒 Admin Access Required</h1>
+    <p style="margin:20px 0;color:#666">Sign in with your admin Google account</p>
+    <button onclick="signIn()">Sign in with Google</button>
+  </div>
+  <div id="dashboard" style="display:none">
+    <a href="/japan-tcg-price-guide/" class="back">← Back to site</a>
+    <h1>📊 Data Quality Dashboard</h1>
+    <div class="subtitle">Per-card accuracy + price confidence scoring</div>
+    <div class="tabs" id="tabs"></div>
+    <div class="summary" id="summary"></div>
+    <h3 style="margin:16px 0 8px;font-size:.95em">🚩 Top Flags</h3>
+    <div class="flags" id="flags"></div>
+    <h3 style="margin:16px 0 8px;font-size:.95em">📋 Card Details</h3>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Filter by card ID, set, or flag..." oninput="renderTable()">
+      <select id="score-filter" onchange="renderTable()">
+        <option value="all">All scores</option>
+        <option value="below50">Combined &lt; 50</option>
+        <option value="below70">Combined &lt; 70</option>
+        <option value="below85">Combined &lt; 85</option>
+      </select>
+      <select id="sort-col" onchange="renderTable()">
+        <option value="combined">Sort: Combined</option>
+        <option value="card">Sort: Card Score</option>
+        <option value="price">Sort: Price Score</option>
+        <option value="id">Sort: Card ID</option>
+      </select>
+    </div>
+    <table>
+      <thead><tr>
+        <th>Card ID</th><th>Set</th><th>Finish</th><th>Card</th><th>Price</th><th>Combined</th><th>Flags</th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <div class="pagination" id="pagination"></div>
+    <div style="margin-top:20px;font-size:.75em;color:#999" id="generated"></div>
+  </div>
+</div>
+
+<script>
+const ADMIN_EMAILS = ['arthurbrejon@gmail.com'];
+const firebaseConfig = {
+  apiKey: "AIzaSyCLzia4937bSBbjsT0JUY-PAgnzygTYj1s",
+  authDomain: "japan-tcg-price-guide.firebaseapp.com",
+  projectId: "japan-tcg-price-guide"
+};
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+
+function signIn() {
+  auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+}
+
+auth.onAuthStateChanged(user => {
+  if (user && ADMIN_EMAILS.includes(user.email)) {
+    document.getElementById('auth-gate').style.display = 'none';
+    document.getElementById('dashboard').style.display = 'block';
+    loadData();
+  } else if (user) {
+    document.getElementById('auth-gate').innerHTML = '<h1>⛔ Not Authorized</h1><p style="margin:20px 0;color:#666">Your account does not have admin access.</p>';
+  }
+});
+
+let data = null, currentGame = 'onepiece', page = 1, activeFlag = null;
+const PAGE_SIZE = 50;
+
+async function loadData() {
+  const res = await fetch('/japan-tcg-price-guide/data/quality-scores.json');
+  data = await res.json();
+  document.getElementById('generated').textContent = `Generated: ${data.generated}`;
+  renderTabs();
+  render();
+}
+
+function renderTabs() {
+  const tabs = document.getElementById('tabs');
+  const games = [['onepiece', '🏴‍☠️ One Piece'], ['pokemon', '⚡ Pokemon']];
+  tabs.innerHTML = games.map(([g, label]) => {
+    const s = data[g]?.summary;
+    const count = s ? s.total : 0;
+    return `<div class="tab ${currentGame===g?'active':''}" onclick="currentGame='${g}';page=1;activeFlag=null;render()">${label} (${count.toLocaleString()})</div>`;
+  }).join('');
+}
+
+function render() {
+  renderTabs();
+  renderSummary();
+  renderFlags();
+  renderTable();
+}
+
+function scoreClass(v) { return v >= 85 ? 's-high' : v >= 70 ? 's-mid' : 's-low'; }
+function statClass(v, threshHigh, threshLow) { return v >= threshHigh ? 'good' : v >= threshLow ? 'warn' : 'bad'; }
+
+function renderSummary() {
+  const s = data[currentGame]?.summary;
+  if (!s) { document.getElementById('summary').innerHTML = '<p>No data</p>'; return; }
+  document.getElementById('summary').innerHTML = `
+    <div class="stat"><div class="value">${s.total.toLocaleString()}</div><div class="label">Total Cards</div></div>
+    <div class="stat ${statClass(s.card_mean,90,70)}"><div class="value">${s.card_mean}</div><div class="label">Card Accuracy (mean)</div></div>
+    <div class="stat ${statClass(s.price_mean,80,60)}"><div class="value">${s.price_mean}</div><div class="label">Price Confidence (mean)</div></div>
+    <div class="stat ${statClass(100-s.card_below_70/s.total*100,95,80)}"><div class="value">${s.card_below_70}</div><div class="label">Card Score &lt; 70</div></div>
+    <div class="stat ${statClass(100-s.price_below_70/s.total*100,95,80)}"><div class="value">${s.price_below_70}</div><div class="label">Price Score &lt; 70</div></div>
+    <div class="stat ${statClass(s.combined_mean,85,70)}"><div class="value">${s.combined_mean}</div><div class="label">Combined (mean)</div></div>
+  `;
+}
+
+function renderFlags() {
+  const s = data[currentGame]?.summary;
+  if (!s) return;
+  const all = {...(s.card_flags||{}), ...(s.price_flags||{})};
+  const sorted = Object.entries(all).sort((a,b) => b[1]-a[1]).slice(0, 12);
+  document.getElementById('flags').innerHTML = sorted.map(([flag, count]) =>
+    `<div class="flag ${activeFlag===flag?'active':''}" onclick="activeFlag=activeFlag==='${flag}'?null:'${flag}';page=1;renderFlags();renderTable()">
+      <span class="count">${count}</span>${flag}
+    </div>`
+  ).join('');
+}
+
+function getFiltered() {
+  const scores = data[currentGame]?.all_scores || [];
+  const search = document.getElementById('search').value.toLowerCase();
+  const scoreFilter = document.getElementById('score-filter').value;
+  const sortCol = document.getElementById('sort-col').value;
+
+  let filtered = scores;
+  if (search) filtered = filtered.filter(s => s.id.toLowerCase().includes(search) || (s.set||'').toLowerCase().includes(search) || [...(s.cf||[]),...(s.pf||[])].some(f => f.includes(search)));
+  if (activeFlag) filtered = filtered.filter(s => [...(s.cf||[]),...(s.pf||[])].includes(activeFlag));
+  if (scoreFilter === 'below50') filtered = filtered.filter(s => s.combined < 50);
+  else if (scoreFilter === 'below70') filtered = filtered.filter(s => s.combined < 70);
+  else if (scoreFilter === 'below85') filtered = filtered.filter(s => s.combined < 85);
+
+  filtered.sort((a,b) => sortCol === 'id' ? a.id.localeCompare(b.id) : a[sortCol] - b[sortCol]);
+  return filtered;
+}
+
+function renderTable() {
+  const filtered = getFiltered();
+  const start = (page-1) * PAGE_SIZE;
+  const pageItems = filtered.slice(start, start + PAGE_SIZE);
+  const tbody = document.getElementById('tbody');
+
+  tbody.innerHTML = pageItems.map(s => `<tr>
+    <td><b>${s.id}</b></td>
+    <td>${s.set||''}</td>
+    <td>${s.finish||'regular'}</td>
+    <td><span class="score ${scoreClass(s.card)}">${s.card}</span></td>
+    <td><span class="score ${scoreClass(s.price)}">${s.price}</span></td>
+    <td><span class="score ${scoreClass(s.combined)}">${s.combined}</span></td>
+    <td>${[...(s.cf||[]),...(s.pf||[])].map(f => `<span class="flag-tag">${f}</span>`).join('')}</td>
+  </tr>`).join('');
+
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+  document.getElementById('pagination').innerHTML = `
+    <button onclick="page=Math.max(1,page-1);renderTable()" ${page<=1?'disabled':''}>← Prev</button>
+    <span>Page ${page} of ${totalPages} (${filtered.length} cards)</span>
+    <button onclick="page=Math.min(${totalPages},page+1);renderTable()" ${page>=totalPages?'disabled':''}>Next →</button>
+  `;
+}
+</script>
+</body>
+</html>
