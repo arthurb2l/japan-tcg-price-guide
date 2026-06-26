@@ -4,9 +4,9 @@ name: Japan TCG Price Guide
 description: Lightweight, fast, content-first static site for Japanese trading-card price data (Pokémon + One Piece). Light gray canvas, system fonts, brand-red accent with per-franchise color coding. No build step, no CSS framework — plain HTML + shared CSS (base.css, components/header.css).
 colors:
   # Brand
-  primary: "#EE1515"            # Pokémon red — links, accents, primary headings
+  primary: "#D81111"            # Pokémon red — links, accents, primary headings (AA: 5.24:1 on white / white on it)
   onepiece: "#FFD700"           # One Piece gold — franchise accent
-  jp: "#9370DB"                 # medium purple — Japanese-text annotations
+  jp: "#7350C0"                 # medium purple — Japanese-text annotations (AA: 5.77:1 on white)
   # Surfaces
   background: "#F5F5F5"         # light gray canvas
   surface: "#FFFFFF"            # cards, stats, header
@@ -16,7 +16,7 @@ colors:
   border-light: "#E0E0E0"       # header / lighter dividers
   focus: "#4A90D9"              # focus-visible outline (blue, distinct from red)
   # Semantic — price + tag system
-  price: "#228B22"              # forest green — prices (always bold)
+  price: "#1E7D1E"              # forest green — prices (always bold; AA: 5.24:1 on white)
   tag-buy-bg: "#D4EDDA"
   tag-buy-text: "#155724"       # green — "buy" tag
   tag-flip-bg: "#FFF3CD"
@@ -84,18 +84,16 @@ Text is `text` (#222) primary, `text-muted` (#666) secondary.
 left-borders One Piece cards — the two franchises are color-coded by their card
 border, not separate layouts. `jp` purple marks Japanese-text annotations.
 
-**Known contrast findings (all marginal, all on white `surface`).** Several
-accent colors sit just under WCAG AA's 4.5:1 for *normal* text, but each is
-used large and/or bold in practice, clearing AA's large-text threshold (3:1),
-so none is a hard blocker. Verified ratios:
-- white on `primary` red `#EE1515` (the `set-h2` band): **4.42:1**
-- `primary` red on white (`stat` values, bold): **4.42:1**
-- `price` green `#228B22` on white (bold): **4.39:1**
-- `jp` purple `#9370DB` on white (used at 1.3em title size): **3.76:1**
+**Contrast (fixed 2026-06-26).** The accent colors were darkened slightly so
+all clear WCAG AA (4.5:1) for normal text on white `surface`, while staying
+visually on-brand. Verified ratios now:
+- `primary` red `#D81111` (white-on-red `set-h2` band, and red-on-white `stat`
+  values): **5.24:1**
+- `price` green `#1E7D1E` on white: **5.24:1**
+- `jp` purple `#7350C0` on white: **5.77:1**
 
-If ever addressed, darken the foreground color slightly (e.g. price → a deeper
-green) rather than changing the white/surface; don't use any of these for small
-body-size text.
+Previous values (#EE1515 / #228B22 / #9370DB) all sat 3.76–4.42:1, marginally
+under AA. Keep new values site-wide; don't reintroduce the brighter hexes.
 
 **Semantic price/tag system** (don't repurpose these as decoration):
 - `price` — forest green, always bold, for any price figure.
