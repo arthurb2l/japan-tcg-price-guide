@@ -22,14 +22,14 @@ h1 { text-align: center; color: #222; font-size: 1.6em; margin: 15px 0 5px; }
 /* Nav matching Pokemon page */
 .nav { display: flex; gap: 8px; justify-content: center; margin-bottom: 15px; flex-wrap: wrap; }
 .nav a { background: #fff; color: #222; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.85em; border: 1px solid #ddd; }
-.nav a:hover { background: #EE1515; color: #fff; border-color: #EE1515; }
+.nav a:hover { background: #D81111; color: #fff; border-color: #D81111; }
 
 /* Filters */
 .filters { display: flex; gap: 8px; justify-content: center; margin-bottom: 15px; flex-wrap: wrap; }
 .filter-btn { padding: 8px 16px; border: 2px solid #222; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: all 0.2s; background: #fff; color: #222; }
 .filter-btn:hover { background: #eee; }
 .filter-btn.active { background: #222; color: #fff; }
-.filter-pokemon.active { background: #EE1515; border-color: #EE1515; color: #fff; }
+.filter-pokemon.active { background: #D81111; border-color: #D81111; color: #fff; }
 .filter-onepiece.active { background: #FFD700; border-color: #FFD700; color: #222; }
 
 /* Calendar Header */
@@ -44,13 +44,13 @@ h1 { text-align: center; color: #222; font-size: 1.6em; margin: 15px 0 5px; }
 .day-header { background: #222; color: #fff; padding: 8px; text-align: center; font-size: 0.75em; font-weight: bold; }
 .day { background: #fff; min-height: 80px; padding: 4px; position: relative; }
 .day.other-month { background: #f0f0f0; }
-.day.today { box-shadow: inset 0 0 0 2px #EE1515; }
+.day.today { box-shadow: inset 0 0 0 2px #D81111; }
 .day-number { font-size: 0.8em; color: #666; margin-bottom: 3px; }
-.day.today .day-number { color: #EE1515; font-weight: bold; }
+.day.today .day-number { color: #D81111; font-weight: bold; }
 
 /* Release items */
 .release-dot { padding: 2px 4px; border-radius: 4px; font-size: 0.65em; margin-bottom: 2px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; border: 1px solid; }
-.release-dot.pokemon { background: #fee2e2; color: #EE1515; border-color: #EE1515; }
+.release-dot.pokemon { background: #fee2e2; color: #D81111; border-color: #D81111; }
 .release-dot.onepiece { background: #fef3c7; color: #92400e; border-color: #FFD700; }
 .release-dot:hover { opacity: 0.8; }
 
@@ -61,12 +61,12 @@ h1 { text-align: center; color: #222; font-size: 1.6em; margin: 15px 0 5px; }
 .detail-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
 .detail-title { font-size: 1.1em; font-weight: bold; color: #222; }
 .detail-close { background: none; border: none; color: #666; font-size: 1.5em; cursor: pointer; line-height: 1; }
-.detail-close:hover { color: #EE1515; }
+.detail-close:hover { color: #D81111; }
 .detail-jp { color: #7c3aed; font-weight: bold; margin-bottom: 8px; }
 .detail-meta { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 8px; font-size: 0.9em; color: #666; }
-.detail-price { color: #EE1515; font-weight: bold; }
+.detail-price { color: #D81111; font-weight: bold; }
 .detail-tag { display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 0.75em; border: 1px solid; }
-.detail-tag.pokemon { background: #fee2e2; color: #EE1515; border-color: #EE1515; }
+.detail-tag.pokemon { background: #fee2e2; color: #D81111; border-color: #D81111; }
 .detail-tag.onepiece { background: #fef3c7; color: #92400e; border-color: #FFD700; }
 .detail-tag.booster { background: #dbeafe; color: #1d4ed8; border-color: #1d4ed8; }
 .detail-tag.deck { background: #f3e8ff; color: #7c3aed; border-color: #7c3aed; }
@@ -81,30 +81,30 @@ h1 { text-align: center; color: #222; font-size: 1.6em; margin: 15px 0 5px; }
 .upcoming h2 { font-size: 1em; margin-bottom: 10px; color: #222; padding: 8px 12px; background: #222; color: #fff; border-radius: 4px; }
 .upcoming-list { display: flex; flex-direction: column; gap: 6px; }
 .upcoming-item { background: #fff; padding: 10px 12px; border-radius: 8px; display: flex; flex-direction: column; cursor: pointer; border: 1px solid #ddd; }
-.upcoming-item:hover { border-color: #EE1515; }
+.upcoming-item:hover { border-color: #D81111; }
 .upcoming-header { display: flex; justify-content: space-between; align-items: center; }
 .upcoming-left { display: flex; align-items: center; gap: 10px; }
 .upcoming-date { font-size: 0.8em; color: #666; min-width: 50px; }
 .upcoming-name { font-size: 0.9em; }
 .upcoming-right { display: flex; align-items: center; gap: 6px; }
 .upcoming-detail { display: none; padding: 10px 0 0; border-top: 1px solid #eee; margin-top: 10px; font-size: 0.85em; color: #444; line-height: 1.6; }
-.upcoming-item.expanded { border-color: #EE1515; }
+.upcoming-item.expanded { border-color: #D81111; }
 .upcoming-item.expanded .upcoming-detail { display: block; }
 .upcoming-detail-jp { color: #7c3aed; font-weight: bold; margin-bottom: 4px; }
 .upcoming-detail-meta { color: #666; }
-.upcoming-detail-meta strong { color: #EE1515; }
+.upcoming-detail-meta strong { color: #D81111; }
 .upcoming-detail-link { margin-top: 6px; }
-.upcoming-detail-link a { color: #EE1515; font-weight: bold; text-decoration: none; }
+.upcoming-detail-link a { color: #D81111; font-weight: bold; text-decoration: none; }
 
 /* Footer */
 .freshness { text-align: center; margin-top: 20px; font-size: 0.8em; color: #666; }
-.freshness a { color: #EE1515; }
+.freshness a { color: #D81111; }
 
 /* Countdown */
 .countdown { background: #fff; border: 2px solid #222; border-radius: 8px; padding: 12px; margin-bottom: 15px; text-align: center; }
 .countdown-label { font-size: 0.8em; color: #666; }
 .countdown-name { font-weight: bold; margin: 4px 0; }
-.countdown-timer { font-size: 1.3em; color: #EE1515; font-weight: bold; }
+.countdown-timer { font-size: 1.3em; color: #D81111; font-weight: bold; }
 .countdown-jp { color: #7c3aed; font-size: 0.85em; }
 
 @media (max-width: 600px) {
@@ -301,7 +301,7 @@ function showDetail(date, name) {
   document.getElementById('detailTags').innerHTML = `<span class="detail-tag-past">Past</span> <span class="detail-tag ${r.tcg}">${r.tcg === 'pokemon' ? 'Pokemon' : 'One Piece'}</span> <span class="detail-tag ${r.type}">${r.type}</span>`;
   document.getElementById('detailDesc').textContent = r.desc || '';
   const linkEl = document.getElementById('detailLink');
-  if (r.link) { linkEl.innerHTML = `<a href="${r.link}" target="_blank" rel="noopener" style="color:#EE1515;font-weight:bold">🔗 Open Link</a>`; linkEl.style.display = 'block'; }
+  if (r.link) { linkEl.innerHTML = `<a href="${r.link}" target="_blank" rel="noopener" style="color:#D81111;font-weight:bold">🔗 Open Link</a>`; linkEl.style.display = 'block'; }
   else { linkEl.style.display = 'none'; }
   const panel = document.getElementById('detailPanel');
   panel.classList.add('active');

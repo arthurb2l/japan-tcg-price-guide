@@ -388,7 +388,7 @@ body.nav-open { overflow: hidden; }
   min-width: 0;
 }
 .search-overlay button[type="submit"] {
-  background: #EE1515;
+  background: #D81111;
   color: #fff;
   border: none;
   padding: 0 18px;
