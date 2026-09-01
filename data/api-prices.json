@@ -1,31 +1,31 @@
 {
-  "last_updated": "2026-08-01",
+  "last_updated": "2026-09-01",
   "source": "PokemonPriceTracker API (auto)",
   "card_limit": 100,
   "cards": [
     {
       "id": "246723",
       "name": "Umbreon VMAX Alt Art",
-      "market_usd": 2416.28,
-      "updated": "2026-08-01"
+      "market_usd": 2310.74,
+      "updated": "2026-09-01"
     },
     {
       "id": "246733",
       "name": "Rayquaza VMAX Alt Art",
-      "market_usd": 1249.92,
-      "updated": "2026-08-01"
+      "market_usd": 1249.13,
+      "updated": "2026-09-01"
     },
     {
       "id": "42479",
       "name": "Charizard Base Set Holo",
-      "market_usd": 466.74,
-      "updated": "2026-08-01"
+      "market_usd": 489.11,
+      "updated": "2026-09-01"
     },
     {
       "id": "264206",
       "name": "Umbreon VMAX Trainer Gallery",
-      "market_usd": 119.6,
-      "updated": "2026-08-01"
+      "market_usd": 111.43,
+      "updated": "2026-09-01"
     }
   ]
 }
