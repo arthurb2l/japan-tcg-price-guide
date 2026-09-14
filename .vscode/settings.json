@@ -1,0 +1,10 @@
+{
+  "// note": "Visual-only. GitHub Pages serves these files from repo root, so they can't be moved. File nesting collapses the root site pages + platform files under index.html so the explorer stays readable.",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "index.html": "*.html, base.css, sw.js, manifest.json, robots.txt, sitemap.xml, llms.txt, favicon.*, ai-tasks.json",
+    "package.json": "package-lock.json, firebase.json, .firebaserc, firestore.rules",
+    "README.md": "AGENTS.md, CLAUDE.md, DESIGN.md, LICENSE, .gitignore"
+  }
+}

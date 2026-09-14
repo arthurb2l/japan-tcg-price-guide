@@ -13,3 +13,10 @@ onepiece/images/don/_pdf_extract/
 
 # Deal hunter daily reports
 data/deal-hunter-*.html
+
+# Sealed-box deal hunter — personal tool, not for the website
+sealed-deals/
+
+# Python cache
+__pycache__/
+*.pyc
