@@ -286,7 +286,7 @@ function updateCache(newCards, seriesList) {
     languages: [...new Set([...(cache.meta.languages || []), lang])],
   };
 
-  fs.writeFileSync(cachePath, JSON.stringify(cache, null, 2));
+  fs.writeFileSync(cachePath, JSON.stringify(cache)); // minified: served to browsers
   console.error(`Cache updated: ${added} added, ${updated} updated, ${preserved} preserved`);
 }
 
@@ -335,9 +335,9 @@ function migrateCard(old, fresh, cardLang) {
   let pricing;
   const op = old.pricing || {};
 
-  if (op.sources) {
-    // Already new schema — just preserve
-    pricing = op;
+  if (op.sources || op.computed) {
+    // Already new schema (manual estimates may omit sources) — preserve
+    pricing = { sources: {}, ...op };
   } else {
     // Old flat schema: { jpy, usd, source, updated, original_en }
     const srcName = op.source && op.source !== 'pending' ? op.source.split('-')[0] : null;
