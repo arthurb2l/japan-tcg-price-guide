@@ -9,7 +9,11 @@ function _resolveOPImg(c, lang) {
   // Extract existing URL
   const raw = typeof c.img === 'object' ? c.img?.[lang] : (lang === 'en' ? c.imgEn : (c.imgJp || c.img));
   if (raw) return raw;
-  // No URL — construct from card ID + finish if parallel/reprint
+  // The other language has a real image → this card isn't printed in `lang`;
+  // a guessed URL would 404 (565 broken images before #139), so return nothing.
+  const other = typeof c.img === 'object' ? c.img?.[lang === 'en' ? 'jp' : 'en'] : (lang === 'en' ? (c.imgJp || c.img) : c.imgEn);
+  if (other) return null;
+  // No URL at all — construct from card ID + finish if parallel/reprint
   const finish = c.finish || '';
   const id = c.id || '';
   if (!id) return null;
@@ -48,7 +52,7 @@ function normalizeOPCard(c) {
     trigger: lang(c.trigger),
     attribute: lang(c.attribute),
     sourceInfo: lang(c.sourceInfo),
-    img: _resolveOPImg(c, 'jp'),
+    img: _resolveOPImg(c, 'jp') || _resolveOPImg(c, 'en'),
     imgJp: _resolveOPImg(c, 'jp'),
     imgEn: _resolveOPImg(c, 'en'),
     pricing: p.sources ? p : (p.computed ? { jpy: computed.jpy, usd: computed.usd, source: p.method, updated: p.updated } : p),
