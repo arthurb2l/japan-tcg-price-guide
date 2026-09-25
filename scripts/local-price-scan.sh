@@ -31,7 +31,7 @@ publish() {
   git add data/prices data/onepiece-cache.json
   if ! git diff --staged --quiet; then
     git commit -qm "📈 JP price scan (local): $(date +%Y-%m-%d)"
-    git pull -q --rebase origin main && git push -q && echo "Published."
+    git pull -q --rebase --autostash origin main && git push -q && echo "Published."
   fi
   rm -f "$LOCK"
 }
