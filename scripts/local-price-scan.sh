@@ -38,4 +38,4 @@ publish() {
 trap publish EXIT
 
 git pull -q --rebase origin main || { echo "git pull failed — resolve before scanning"; exit 1; }
-python3 scripts/price-scan.py --resume --fresh-days 7 --save-every 20
+python3 -u scripts/price-scan.py --resume --fresh-days 7 --save-every 20
