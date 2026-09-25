@@ -1,9 +1,9 @@
 name: Update JP Prices (v2)
 on:
-  schedule:
-    - cron: '0 2 * * 1' # Weekly Monday 2am UTC (11am JST)
-    - cron: '0 2 * * 4' # Weekly Thursday 2am UTC (11am JST)
-  workflow_dispatch: # Manual trigger
+  # No schedule: Surugaya + Yuyutei block GitHub runner IPs (403), so a CI scan
+  # overwrites 3-source prices with Cardrush-only ones. The regular scan runs on
+  # Arthur's PC via scripts/local-price-scan.sh (triggered by /triage-q-projects).
+  workflow_dispatch: # Manual fallback (Cardrush-only)
 
 permissions:
   contents: write
@@ -28,53 +28,7 @@ jobs:
 
       - name: Sync prices back to cache (for website)
         run: |
-          python3 << 'EOF'
-          import json
-          from datetime import date
-
-          with open('data/onepiece-cache.json') as f: cache = json.load(f)
-          with open('data/prices/onepiece-current.json') as f: prices = json.load(f)
-
-          today = date.today().isoformat()
-          updated = 0
-
-          import re as _re
-          VORDER = ['parallel', 'parallel_theme', 'manga_sp']
-          for sid, cards in cache['sets'].items():
-              for card in cards:
-                  cid = card.get('id', '')
-                  finish = card.get('finish', 'regular')
-                  base_id = _re.sub(r'[-_](p\d+|aa|r\d+)$', '', cid)
-                  pdata = prices.get('prices', {}).get(base_id, {})
-                  if not pdata.get('variants'): continue
-                  variants = pdata['variants']
-                  if finish == 'regular' or finish.startswith('reprint'):
-                      vdata = variants.get('normal', {})
-                  elif finish.startswith('parallel') or finish in ('alternate-art', 'holo'):
-                      pnum = 1
-                      m = _re.search(r'parallel-(\d+)', finish)
-                      if m: pnum = int(m.group(1))
-                      pvars = [(variants[v]['floor'], v) for v in VORDER if v in variants and variants[v].get('floor')]
-                      pvars.sort()
-                      idx = min(pnum - 1, len(pvars) - 1) if pvars else -1
-                      vdata = variants.get(pvars[idx][1], {}) if idx >= 0 else variants.get('normal', {})
-                  else:
-                      vdata = variants.get('normal', {})
-                  floor = vdata.get('floor') or vdata.get('reference')
-                  if not floor or not vdata.get('sources'): continue
-                  sources = {src: {'jpy': s.get('sell'), 'updated': today} for src, s in vdata.get('sources', {}).items()}
-                  card['pricing'] = {
-                      'sources': sources,
-                      'computed': {'jpy': floor, 'usd': None, 'eur': None},
-                      'regional': {'JP': {'jpy': floor, 'floor': vdata.get('floor'), 'reference': vdata.get('reference'), 'confidence': vdata.get('confidence'), 'sources': list(sources.keys()), 'updated': today}},
-                      'method': 'variant_mapped', 'updated': today
-                  }
-                  updated += 1
-
-          with open('data/onepiece-cache.json', 'w') as f:
-              json.dump(cache, f, ensure_ascii=False, separators=(',', ':'))
-          print(f'Synced {updated} cards from prices file to cache')
-          EOF
+          python3 scripts/sync-prices-to-cache.py
 
       - name: Commit and push
         run: |

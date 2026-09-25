@@ -14,7 +14,7 @@ Usage:
 import json, re, os, sys, time, argparse, random
 from urllib.request import Request, urlopen
 from urllib.parse import quote_plus
-from datetime import date
+from datetime import date, timedelta
 from math import log, exp
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -385,7 +385,8 @@ def main():
     parser.add_argument('--dry-run', action='store_true')
     parser.add_argument('--min-value', type=int, default=0, help='Only scan cards worth >= this')
     parser.add_argument('--save-every', type=int, default=20, help='Save progress every N cards')
-    parser.add_argument('--resume', action='store_true', help='Skip cards already scanned today')
+    parser.add_argument('--resume', action='store_true', help='Skip cards already scanned recently (see --fresh-days)')
+    parser.add_argument('--fresh-days', type=int, default=1, help='With --resume: skip cards scanned within N days (1 = today only)')
     args = parser.parse_args()
 
     # Load prices file
@@ -417,10 +418,10 @@ def main():
 
         target_sets = [args.set] if args.set else list(cache['sets'].keys())
         cards_to_scan = []
+        seen = set()  # global: reprints appear in several sets, scan each id once
         for sid in target_sets:
             if sid not in cache['sets']:
                 continue
-            seen = set()
             for card in cache['sets'][sid]:
                 cid = card.get('id', '')
                 if cid in seen or not cid:
@@ -453,7 +454,8 @@ def main():
                     any(s in v.get('sources', {}) for s in ['surugaya', 'yuyutei', 'cardrush'])
                     for v in variants.values()
                 )
-                if has_fresh and existing.get('updated') == today:
+                cutoff = (date.today() - timedelta(days=args.fresh_days - 1)).isoformat()
+                if has_fresh and (existing.get('updated') or '') >= cutoff:
                     continue
 
             print(f"[{scanned+1}/{len(cards_to_scan)}] {cid} (current ref: ¥{current_ref})")
