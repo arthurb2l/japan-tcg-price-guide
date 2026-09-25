@@ -67,6 +67,7 @@ function deduplicateOPCards(cards) {
     const existing = map.get(key);
     if (!existing) { map.set(key, c); continue; }
     // Merge: fill nulls from the new entry
+    if (!existing.officialId && c.officialId) existing.officialId = c.officialId; // keeps cardKey() stable
     if (!existing.imgJp && c.imgJp) existing.imgJp = c.imgJp;
     if (!existing.imgEn && c.imgEn) existing.imgEn = c.imgEn;
     if (!existing.img && c.img) existing.img = c.img;
@@ -78,4 +79,44 @@ function deduplicateOPCards(cards) {
     if ((!ep.jpy && !ep.sources) && (cp.jpy || cp.sources)) existing.pricing = cp;
   }
   return [...map.values()];
+}
+
+/**
+ * Inventory key for a card (#194). One Piece versions share `id` (OP17-001 and
+ * its parallel OP17-001_p1), so they are keyed by Bandai's officialId. Regular
+ * cards keep their old key (officialId === id), so existing saves stay valid.
+ */
+function cardKey(c) {
+  if (c.officialId) return c.officialId;
+  return !c.finish || c.finish === 'regular' ? c.id : `${c.id}|${c.finish}`;
+}
+
+/**
+ * Rename legacy inventory keys to their officialId (data/onepiece-id-migrations.json).
+ * Mutates `coll`; returns [[oldKey, newKey], ...] so callers can persist the move.
+ */
+async function migrateInventoryKeys(coll) {
+  let map = {};
+  try {
+    const base = location.pathname.includes('/japan-tcg-price-guide/') ? '/japan-tcg-price-guide' : '';
+    map = (await fetch(`${base}/data/onepiece-id-migrations.json`).then(r => r.json())).map || {};
+  } catch (e) { return []; }
+  const moved = [];
+  for (const [oldKey, newKey] of Object.entries(map)) {
+    if (!coll[oldKey]) continue;
+    const prev = coll[newKey];
+    coll[newKey] = prev ? { ...coll[oldKey], ...prev, qty: (prev.qty || 1) + (coll[oldKey].qty || 1) } : coll[oldKey];
+    delete coll[oldKey];
+    moved.push([oldKey, newKey]);
+  }
+  return moved;
+}
+
+/** Persist migrateInventoryKeys() moves to Firestore (users/{uid}/inventory). */
+async function persistInventoryMoves(db, uid, coll, moved) {
+  if (!moved.length) return;
+  const batch = db.batch();
+  const inv = db.collection('users').doc(uid).collection('inventory');
+  for (const [oldKey, newKey] of moved) { batch.delete(inv.doc(oldKey)); batch.set(inv.doc(newKey), coll[newKey]); }
+  await batch.commit();
 }

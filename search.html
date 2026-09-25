@@ -31,7 +31,7 @@
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
-<script src="components/normalize-card.js"></script>
+<script src="components/normalize-card.js?v=194"></script>
 <script src="/japan-tcg-price-guide/components/price-utils.js"></script>
 <script>
 const firebaseConfig = {
@@ -551,6 +551,8 @@ async function loadUserCollection(uid) {
     // Fallback to localStorage
     userCollection = collectionStore._local();
   }
+  const moved = await migrateInventoryKeys(userCollection);
+  if (moved.length) await persistInventoryMoves(db, uid, userCollection, moved).catch(e => console.error('Key migration failed:', e));
   
   collectionStore._updateCount();
   renderCards();
@@ -622,6 +624,7 @@ auth.onAuthStateChanged(async user => {
     currentUser = null;
     localStorage.removeItem('tcg_auth_cache');
     userCollection = collectionStore._local();
+    if ((await migrateInventoryKeys(userCollection)).length) collectionStore._saveLocal(userCollection);
     if (container) container.innerHTML = `
       <button class="auth-btn" onclick="signInWithGoogle()">
         <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="G">
@@ -757,7 +760,7 @@ async function loadCards() {
     } catch(e) { console.log('No price photos'); }
     
     allCards = [...pokemonCards, ...opCards];
-    allCards.forEach((c, i) => c._uid = i);
+    allCards.forEach((c, i) => { c._uid = i; c.key = cardKey(c); });
     console.log(`Loaded ${allCards.length} cards (${pokemonCards.length} PKM + ${opCards.length} OP)`);
     
     // Populate set filter (respects game filter)
@@ -813,7 +816,7 @@ function updateStats() {
   let cards = filteredCards;
   if (collFilterActive) {
     const coll = collectionStore.getAll();
-    cards = cards.filter(c => coll[c.id]);
+    cards = cards.filter(c => coll[c.key]);
   }
   const total = cards.length;
   const showing = Math.min(total, displayLimit);
@@ -844,7 +847,7 @@ function renderCards() {
   let cards = filteredCards;
   if (collFilterActive) {
     const coll = collectionStore.getAll();
-    cards = cards.filter(c => coll[c.id]);
+    cards = cards.filter(c => coll[c.key]);
   }
   
   // Then apply display limit
@@ -871,8 +874,8 @@ function renderCards() {
   const imgErr = "this.style.opacity='0.3';this.style.background='#ddd'";
   const jpName = c => c.nameJp ? `<span style="color:#7c3aed;font-size:.8em"> ${c.nameJp}</span>` : '';
   const variant = c => c.variant ? `<span style="color:#888;font-size:.85em"> (${c.variant})</span>` : '';
-  const owned = c => collectionStore.inAnyList(c.id) ? ' owned' : '';
-  const collBtn = c => `<div class="coll-dot"></div><div class="coll-add" onclick="showListMenu(event,'${c.id}')">+</div>`;
+  const owned = c => collectionStore.inAnyList(c.key) ? ' owned' : '';
+  const collBtn = c => `<div class="coll-dot"></div><div class="coll-add" onclick="showListMenu(event,'${c.key}')">+</div>`;
   // Flip button shows opposite of current display
   const flipBtn = c => {
     if (!c.imgEn) return '';
@@ -935,7 +938,7 @@ function renderCards() {
     `).join('');
   } else if (currentView === 'full') {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item${owned(c)}${isFoil(c)}" onclick="if(!toggleCardSelect('${c.id}',this))showCardFromTile(this,'${c.id}',${c._uid})">
+      <div class="card-item${owned(c)}${isFoil(c)}" onclick="if(!toggleCardSelect('${c.key}',this))showCardFromTile(this,'${c.id}',${c._uid})">
         ${collBtn(c)}${flipBtn(c)}
         <img src="${getImgHigh(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer" onerror="${imgErr}">
         <div class="info">
@@ -949,7 +952,7 @@ function renderCards() {
     `).join('');
   } else {
     grid.innerHTML = cards.map(c => `
-      <div class="card-item${owned(c)}${isFoil(c)}" onclick="if(!toggleCardSelect('${c.id}',this))showCardFromTile(this,'${c.id}',${c._uid})">
+      <div class="card-item${owned(c)}${isFoil(c)}" onclick="if(!toggleCardSelect('${c.key}',this))showCardFromTile(this,'${c.id}',${c._uid})">
         ${collBtn(c)}${flipBtn(c)}
         <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
         <div class="name">${c.name}${jpName(c)}</div>

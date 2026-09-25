@@ -1,0 +1,18 @@
+{
+ "_comment": "Legacy One Piece inventory keys -> officialId. Applied on collection load (#194).",
+ "map": {
+  "ST03-017-p1": "ST03-017_p1",
+  "ST03-017-p2": "ST03-017_p2",
+  "ST13-001-p1": "ST13-001_p1",
+  "ST13-002-p1": "ST13-002_p1",
+  "ST13-003-p1": "ST13-003_p1",
+  "ST13-005-p1": "ST13-005_p1",
+  "ST13-006-p1": "ST13-006_p1",
+  "ST13-008-p1": "ST13-008_p1",
+  "ST13-009-p1": "ST13-009_p1",
+  "ST13-012-p1": "ST13-012_p1",
+  "ST13-013-p1": "ST13-013_p1",
+  "ST13-015-p1": "ST13-015_p1",
+  "ST13-015-p2": "ST13-015_p2"
+ }
+}

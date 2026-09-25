@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://www.gstatic.com">
 <!-- Firebase -->
-<script src="components/normalize-card.js"></script>
+<script src="components/normalize-card.js?v=194"></script>
 <script src="/japan-tcg-price-guide/components/price-utils.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
@@ -423,6 +423,7 @@ auth.onAuthStateChanged(async user => {
   } else {
     currentUser = null;
     userCollection = getLocalCollection();
+    if ((await migrateInventoryKeys(userCollection)).length) localStorage.setItem('tcg_inventory', JSON.stringify(userCollection));
   }
   authChecked = true;
   renderIfReady();
@@ -435,6 +436,8 @@ async function loadUserCollection(uid) {
     // Always load from inventory collection
     const snapshot = await db.collection('users').doc(uid).collection('inventory').get();
     snapshot.forEach(doc => { userCollection[doc.id] = doc.data(); });
+    const moved = await migrateInventoryKeys(userCollection);
+    if (moved.length) await persistInventoryMoves(db, uid, userCollection, moved).catch(e => console.error('Key migration failed:', e));
     console.log(`Loaded ${Object.keys(userCollection).length} cards from Firestore`);
   } catch(e) {
     console.error('Firestore load error:', e);
@@ -503,7 +506,7 @@ let currentSortDir = 'asc';
 
 function openCardModal(cardId) {
   modalCardId = cardId;
-  const card = allCards.find(c => c.id === cardId);
+  const card = allCards.find(c => c.key === cardId);
   const data = userCollection[cardId] || {};
   
   document.getElementById('modal-card-name').textContent = card?.name || cardId;
@@ -519,7 +522,7 @@ function openCardModal(cardId) {
   // Purchase price & ROI
   const ppInput = document.getElementById('modal-purchase-price');
   ppInput.value = data.purchasePrice || '';
-  const card2 = allCards.find(c => c.id === cardId);
+  const card2 = allCards.find(c => c.key === cardId);
   const marketJpy = getPrice(card2) ? Math.round(getPrice(card2) * 150) : null;
   const roiField = document.getElementById('modal-roi-field');
   const roiSpan = document.getElementById('modal-roi');
@@ -649,7 +652,7 @@ async function modalToggleList(list, checked) {
 
 function modalCopyDetails() {
   if (!modalCardId) return;
-  const card = allCards.find(c => c.id === modalCardId);
+  const card = allCards.find(c => c.key === modalCardId);
   const data = userCollection[modalCardId] || {};
   const name = card?.name || modalCardId;
   const set = card?.set || 'unknown';
@@ -726,6 +729,7 @@ async function loadCards() {
     } catch(e) {}
     
     allCards = [...pokemonCards, ...opCards];
+    allCards.forEach(c => c.key = cardKey(c));
   } catch(e) {
     console.error('Error loading cards:', e);
   }
@@ -774,7 +778,7 @@ function renderCollection() {
     const cardMap = {};
     for (const card of allCards) {
       if (card.game !== game) continue;
-      cardMap[card.id] = card;
+      cardMap[card.key] = card;
       const setId = card.setId || card.set || "unknown";
       if (!setStats[setId]) setStats[setId] = { owned: 0, total: 0 };
       setStats[setId].total++;
@@ -841,7 +845,7 @@ function renderCollection() {
   }
   
   // Get collection cards with full data
-  collectionCards = collectionIds.map(id => allCards.find(c => c.id === id)).filter(Boolean);
+  collectionCards = collectionIds.map(id => allCards.find(c => c.key === id)).filter(Boolean);
   
   // Apply game filter
   let filtered = currentGame ? collectionCards.filter(c => c.game === currentGame) : collectionCards;
@@ -855,8 +859,8 @@ function renderCollection() {
   else if (currentSort === 'price-low') filtered.sort((a, b) => (getPrice(a) || 999999) - (getPrice(b) || 999999));
   else if (currentSort === 'set') filtered.sort((a, b) => (a.setId || '').localeCompare(b.setId || '') || (a.id || '').localeCompare(b.id || ''));
   else if (currentSort === 'roi') filtered.sort((a, b) => {
-    const roiA = userCollection[a.id]?.purchasePrice ? ((getPrice(a)||0)*fxRate - userCollection[a.id].purchasePrice) / userCollection[a.id].purchasePrice : -Infinity;
-    const roiB = userCollection[b.id]?.purchasePrice ? ((getPrice(b)||0)*fxRate - userCollection[b.id].purchasePrice) / userCollection[b.id].purchasePrice : -Infinity;
+    const roiA = userCollection[a.key]?.purchasePrice ? ((getPrice(a)||0)*fxRate - userCollection[a.key].purchasePrice) / userCollection[a.key].purchasePrice : -Infinity;
+    const roiB = userCollection[b.key]?.purchasePrice ? ((getPrice(b)||0)*fxRate - userCollection[b.key].purchasePrice) / userCollection[b.key].purchasePrice : -Infinity;
     return roiB - roiA;
   });
   // 'added' - keep original order (most recent first for Firestore)
@@ -868,13 +872,13 @@ function renderCollection() {
   const cSymbol = userCurrency === 'USD' ? '$' : '¥';
   const formatPrice = p => p !== null ? cSymbol + Math.round(p * fxRate).toLocaleString() : '-';
   const statsCards = currentGame ? collectionCards.filter(c => c.game === currentGame) : collectionCards;
-  const totalCards = statsCards.reduce((sum, c) => sum + getQty(c.id), 0);
-  const totalValue = statsCards.reduce((sum, c) => sum + (getPrice(c) || 0) * getQty(c.id), 0);
+  const totalCards = statsCards.reduce((sum, c) => sum + getQty(c.key), 0);
+  const totalValue = statsCards.reduce((sum, c) => sum + (getPrice(c) || 0) * getQty(c.key), 0);
   const estValueFmt = Math.round(totalValue * fxRate);
   // ROI: only count cards that have a purchase price entered
-  const pricedCards = statsCards.filter(c => (userCollection[c.id]?.purchasePrice || 0) > 0);
-  const costJpy = pricedCards.reduce((sum, c) => sum + userCollection[c.id].purchasePrice * getQty(c.id), 0);
-  const pricedValueJpy = Math.round(pricedCards.reduce((sum, c) => sum + (getPrice(c) || 0) * getQty(c.id), 0) * 150);
+  const pricedCards = statsCards.filter(c => (userCollection[c.key]?.purchasePrice || 0) > 0);
+  const costJpy = pricedCards.reduce((sum, c) => sum + userCollection[c.key].purchasePrice * getQty(c.key), 0);
+  const pricedValueJpy = Math.round(pricedCards.reduce((sum, c) => sum + (getPrice(c) || 0) * getQty(c.key), 0) * 150);
   const roiRaw = costJpy > 0 ? pricedValueJpy - costJpy : null;
   const roiPct = costJpy > 0 ? Math.round((roiRaw / costJpy) * 100) : null;
   const roiFmt = roiRaw !== null ? Math.round(roiRaw / (fxRate === 1 ? 150 : 1)) : null;
@@ -931,23 +935,23 @@ function renderCollection() {
     
     <div class="card-grid ${currentView === 'list' ? 'hidden' : ''}">
       ${filtered.map(c => {
-        const qty = getQty(c.id);
-        const cond = userCollection[c.id]?.condition || 'NM';
-        const lang = userCollection[c.id]?.language || 'JP';
+        const qty = getQty(c.key);
+        const cond = userCollection[c.key]?.condition || 'NM';
+        const lang = userCollection[c.key]?.language || 'JP';
         return `
-        <div class="card-item" onclick="openCardModal('${c.id}')">
-          <button class="remove-btn" onclick="event.stopPropagation();removeFromCollection('${c.id}')" title="Remove">×</button>
+        <div class="card-item" onclick="openCardModal('${c.key}')">
+          <button class="remove-btn" onclick="event.stopPropagation();removeFromCollection('${c.key}')" title="Remove">×</button>
           ${qty > 1 ? `<span class="qty-badge">×${qty}</span>` : ''}
-          <span class="condition-badge ${cond.toLowerCase()}" onclick="event.stopPropagation();cycleCondition(event,'${c.id}')" title="Click to change">${cond}</span>
+          <span class="condition-badge ${cond.toLowerCase()}" onclick="event.stopPropagation();cycleCondition(event,'${c.key}')" title="Click to change">${cond}</span>
           <div class="qty-controls" onclick="event.stopPropagation()">
-            <button class="qty-btn" onclick="updateQuantity('${c.id}',-1)">−</button>
-            <button class="qty-btn" onclick="updateQuantity('${c.id}',1)">+</button>
+            <button class="qty-btn" onclick="updateQuantity('${c.key}',-1)">−</button>
+            <button class="qty-btn" onclick="updateQuantity('${c.key}',1)">+</button>
           </div>
           <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
           <div class="name">${c.name || c.id}</div>
           <div class="meta">${c.setId} · ${c.rarity || '?'} · ${lang}</div>
           <div class="price">${formatPrice(getPrice(c))}${qty > 1 ? ` (×${qty})` : ''}${(() => {
-            const pp = userCollection[c.id]?.purchasePrice;
+            const pp = userCollection[c.key]?.purchasePrice;
             if (!pp || !getPrice(c)) return '';
             const roi = Math.round(getPrice(c) * 150) - pp;
             return ` <span style="font-size:.75em;color:${roi >= 0 ? '#16a34a' : '#dc2626'}">${roi >= 0 ? '+' : ''}¥${roi.toLocaleString()}</span>`;
@@ -972,41 +976,41 @@ function renderCollection() {
         </thead>
         <tbody>
           ${filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE).map(c => {
-            const qty = getQty(c.id);
-            const cond = userCollection[c.id]?.condition || 'NM';
-            const lang = userCollection[c.id]?.language || 'JP';
-            const inWish = userCollection[c.id]?.lists?.wishlist;
-            const inTrade = userCollection[c.id]?.lists?.tradelist;
+            const qty = getQty(c.key);
+            const cond = userCollection[c.key]?.condition || 'NM';
+            const lang = userCollection[c.key]?.language || 'JP';
+            const inWish = userCollection[c.key]?.lists?.wishlist;
+            const inTrade = userCollection[c.key]?.lists?.tradelist;
             return `
             <tr>
-              <td onclick="openCardModal('${c.id}')"><img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer"></td>
-              <td onclick="openCardModal('${c.id}')"><strong>${c.name || c.id}</strong><br><a href="search.html?game=${c.game}&q=${c.id}" class="card-id-link" onclick="event.stopPropagation()">${c.id}</a>${c.rarity ? ' <small style="color:var(--g4)">· '+c.rarity+'</small>' : ''}</td>
-              <td onclick="openCardModal('${c.id}')">${formatPrice(getPrice(c))}</td>
+              <td onclick="openCardModal('${c.key}')"><img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer"></td>
+              <td onclick="openCardModal('${c.key}')"><strong>${c.name || c.id}</strong><br><a href="search.html?game=${c.game}&q=${c.id}" class="card-id-link" onclick="event.stopPropagation()">${c.id}</a>${c.rarity ? ' <small style="color:var(--g4)">· '+c.rarity+'</small>' : ''}</td>
+              <td onclick="openCardModal('${c.key}')">${formatPrice(getPrice(c))}</td>
               <td onclick="event.stopPropagation()">
                 <div class="qty-cell">
-                  <button class="qty-btn" onclick="updateQuantity('${c.id}',-1)">−</button>
+                  <button class="qty-btn" onclick="updateQuantity('${c.key}',-1)">−</button>
                   <span class="qty-val">${qty}</span>
-                  <button class="qty-btn" onclick="updateQuantity('${c.id}',1)">+</button>
+                  <button class="qty-btn" onclick="updateQuantity('${c.key}',1)">+</button>
                 </div>
               </td>
               <td class="desktop-col" onclick="event.stopPropagation()">
-                <select class="cond-select" onchange="inlineUpdateField('${c.id}','condition',this.value)">
+                <select class="cond-select" onchange="inlineUpdateField('${c.key}','condition',this.value)">
                   ${['NM','LP','MP','HP','DMG'].map(v => `<option value="${v}" ${cond === v ? 'selected' : ''}>${v}</option>`).join('')}
                 </select>
               </td>
               <td class="desktop-col" onclick="event.stopPropagation()">
-                <select class="lang-select" onchange="inlineUpdateField('${c.id}','language',this.value)">
+                <select class="lang-select" onchange="inlineUpdateField('${c.key}','language',this.value)">
                   <option value="JP" ${lang === 'JP' ? 'selected' : ''}>JP</option>
                   <option value="EN" ${lang === 'EN' ? 'selected' : ''}>EN</option>
                 </select>
               </td>
               <td class="desktop-col" onclick="event.stopPropagation()">
                 <div class="list-icons">
-                  <span class="list-icon ${inWish ? 'active' : ''}" onclick="inlineToggleList('${c.id}','wishlist')" title="Wishlist">⭐</span>
-                  <span class="list-icon ${inTrade ? 'active' : ''}" onclick="inlineToggleList('${c.id}','tradelist')" title="Tradelist">🔄</span>
+                  <span class="list-icon ${inWish ? 'active' : ''}" onclick="inlineToggleList('${c.key}','wishlist')" title="Wishlist">⭐</span>
+                  <span class="list-icon ${inTrade ? 'active' : ''}" onclick="inlineToggleList('${c.key}','tradelist')" title="Tradelist">🔄</span>
                 </div>
               </td>
-              <td onclick="event.stopPropagation()"><a href="search.html?game=${c.game}&q=${c.id}" class="detail-btn" title="View card details" aria-label="View card details">🔗</a><button class="delete-btn" onclick="removeFromCollection('${c.id}')" title="Remove">🗑️</button></td>
+              <td onclick="event.stopPropagation()"><a href="search.html?game=${c.game}&q=${c.id}" class="detail-btn" title="View card details" aria-label="View card details">🔗</a><button class="delete-btn" onclick="removeFromCollection('${c.key}')" title="Remove">🗑️</button></td>
             </tr>`;
           }).join('')}
         </tbody>
@@ -1058,13 +1062,13 @@ function exportCollection() {
 
   const rows = [['Card ID', 'Name', 'Set', 'Rarity', 'Game', 'Qty', 'Condition', 'Language', 'Price JPY', 'Total', 'Purchase Price', 'ROI']];
   collectionCards.forEach(c => {
-    const qty = userCollection[c.id]?.qty || 1;
-    const cond = userCollection[c.id]?.condition || 'NM';
-    const lang = userCollection[c.id]?.language || 'JP';
+    const qty = userCollection[c.key]?.qty || 1;
+    const cond = userCollection[c.key]?.condition || 'NM';
+    const lang = userCollection[c.key]?.language || 'JP';
     const price = getPrice(c);
-    const pp = userCollection[c.id]?.purchasePrice || '';
+    const pp = userCollection[c.key]?.purchasePrice || '';
     const roi = pp && price ? Math.round(price * 150) - pp : '';
-    rows.push([c.id, c.name || '', c.setId || '', c.rarity || '', c.game, qty, cond, lang, price?.toFixed(2) || '', price ? (price * qty).toFixed(2) : '', pp, roi]);
+    rows.push([c.key, c.name || '', c.setId || '', c.rarity || '', c.game, qty, cond, lang, price?.toFixed(2) || '', price ? (price * qty).toFixed(2) : '', pp, roi]);
   });
   const csv = rows.map(r => r.map(v => `"${v}"`).join(',')).join('\n');
   const blob = new Blob([csv], {type: 'text/csv'});
@@ -1141,7 +1145,7 @@ function renderIfReady() {
   if (cardsLoaded && authChecked) {
     if (!currentGame) {
       var op = 0, pk = 0;
-      for (var id in userCollection) { var c = allCards.find(a => a.id === id); if (c) c.game === 'onepiece' ? op++ : pk++; }
+      for (var id in userCollection) { var c = allCards.find(a => a.key === id); if (c) c.game === 'onepiece' ? op++ : pk++; }
       currentGame = pk > op ? 'pokemon' : 'onepiece';
       updateTcgSelector();
     }
@@ -1204,8 +1208,8 @@ function searchAddCard(q){
       var cur=localStorage.getItem('tcg-currency')||'JPY';
       var rate=cur==='USD'?1:150;var sym=cur==='USD'?'$':'¥';
       var pStr=price?sym+Math.round(price*rate).toLocaleString():'';
-      var owned=userCollection[c.id]?'<span style="background:#16a34a;color:#fff;font-size:.7em;padding:2px 6px;border-radius:4px;margin-left:6px">owned ×'+((userCollection[c.id].qty||1))+'</span>':'';
-      return '<div class="add-sug" onclick="quickAdd(\''+c.id.replace(/'/g,"\\'")+'\')">'
+      var owned=userCollection[c.key]?'<span style="background:#16a34a;color:#fff;font-size:.7em;padding:2px 6px;border-radius:4px;margin-left:6px">owned ×'+((userCollection[c.key].qty||1))+'</span>':'';
+      return '<div class="add-sug" onclick="quickAdd(\''+c.key.replace(/'/g,"\\'")+'\')">'
         +(img?'<img src="'+img+'" alt="" referrerpolicy="no-referrer">':'')
         +'<span class="s-name">'+name+'<br><small>'+c.id+(c.rarity?' · '+c.rarity:'')+'</small></span>'
         +'<span class="s-price">'+pStr+owned+'</span></div>';
