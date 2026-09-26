@@ -305,31 +305,28 @@ body.nav-open { overflow: hidden; }
 }
 
 /* ===== MOBILE ===== */
+/* #174: burger left, a fixed search bar (with the game picker) in the middle,
+   Sign In / avatar right. Same 56px height as desktop so nothing shifts. */
 @media (max-width: 768px) {
-  .site-header-inner {
-    height: 52px;
-    padding: 0 10px;
-    gap: 8px;
-  }
-  
-  .burger-btn { display: block; }
+  .site-header-inner { padding: 0 8px; gap: 6px; }
+
+  .burger-btn { display: block; padding: 6px; }
   .nav-links { display: none; }
-  .header-user { display: none; }
-  
-  .site-logo { padding: 4px; font-size: 1em; flex: 1; text-align: center; }
-  
-  /* Hide full search bar on mobile — replaced by search icon + overlay */
-  .header-search { display: none; }
-  
-  .mobile-search-btn { 
-    display: flex;
-    background: none; border: none; font-size: 1.2em; cursor: pointer; 
-    padding: 8px; color: #555; flex-shrink: 0;
-  }
-  .mobile-avatar {
-    width: 28px; height: 28px; border-radius: 50%; cursor: pointer; flex-shrink: 0;
-  }
-  .mobile-avatar-wrap { display: flex; align-items: center; flex-shrink: 0; }
+
+  .site-logo { padding: 2px; }
+  .site-logo img { margin-right: 0 !important; }
+  .logo-text { display: none; }
+
+  .header-search { display: flex; max-width: none; min-width: 0; height: 38px; }
+  .header-search .game-toggle { padding: 4px 4px 4px 8px; }
+  .header-search input { font-size: 16px; padding: 8px 4px; width: 100%; } /* 16px: stops iOS zoom-on-focus */
+  .header-search button[type="submit"] { padding: 8px 10px; }
+
+  /* Reserve the slot so Sign In / avatar fades in without moving the search bar */
+  .header-user { display: flex; justify-content: flex-end; min-width: 58px; }
+  .login-btn { padding: 8px 10px; }
+
+  .mobile-search-btn, .mobile-avatar-wrap { display: none; }
 }
 @media (min-width: 769px) {
   .mobile-search-btn { display: none; }

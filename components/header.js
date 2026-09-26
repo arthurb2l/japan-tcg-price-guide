@@ -6,7 +6,10 @@
   const isCollection = path.includes('collection');
   const base = '/japan-tcg-price-guide/';
   
-  const savedGame = localStorage.getItem('tcg_game') || 'pokemon';
+  // The page's own game (URL ?game= or /onepiece/ path) wins over the last saved choice
+  const urlGame = new URLSearchParams(location.search).get('game');
+  const savedGame = (urlGame === 'onepiece' || urlGame === 'pokemon') ? urlGame
+    : isOnePiece ? 'onepiece' : isPokemon ? 'pokemon' : (localStorage.getItem('tcg_game') || 'pokemon');
   
   const headerHTML = `
     <header class="site-header">
@@ -44,7 +47,7 @@
               <button type="button" onclick="selectHeaderGame('onepiece')" class="${savedGame === 'onepiece' ? 'active' : ''}"><img src="${base}onepiece/icon.png" width="16" height="16" alt=""> One Piece</button>
             </div>
           </div>
-          <input type="text" id="headerSearchInput" placeholder="Search...">
+          <input type="search" id="headerSearchInput" placeholder="Search cards…" aria-label="Search cards" enterkeyhint="search">
           <button type="submit" aria-label="Search">🔍</button>
         </form>
         
@@ -108,7 +111,7 @@
     const link = document.createElement('link');
     link.id = 'header-css';
     link.rel = 'stylesheet';
-    link.href = '/japan-tcg-price-guide/components/header.css';
+    link.href = '/japan-tcg-price-guide/components/header.css?v=174b';
     document.head.appendChild(link);
   }
   // Favicon
