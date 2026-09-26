@@ -362,10 +362,14 @@ button.set-row.none{opacity:.5}
 
 /* #195 round 2: game toggle next to the title, sortable columns */
 .page-header{align-items:center}
-.game-toggle{display:inline-flex;border:1px solid #DDDDDD;border-radius:8px;overflow:hidden;background:#fff}
-.game-toggle button{border:none;background:none;padding:8px 12px;font:inherit;font-size:.85em;cursor:pointer;min-height:38px;color:#444;white-space:nowrap}
-.game-toggle button+button{border-left:1px solid #DDDDDD}
-.game-toggle button.active{background:#222;color:#fff}
+.game-toggle{display:inline-flex;gap:2px;padding:3px;background:#E2E2E2;border-radius:999px}
+.game-toggle button{border:none;background:none;padding:7px 14px;font:inherit;font-size:.85em;font-weight:500;cursor:pointer;min-height:34px;color:#444;white-space:nowrap;border-radius:999px;transition:background .15s,color .15s,box-shadow .15s}
+.game-toggle button:hover{color:#222}
+.game-toggle button.active{background:#fff;color:#222;font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.game-toggle button:focus-visible{outline:2px solid #4A90D9;outline-offset:1px}
+.list-icons.ro{pointer-events:none}
+.sync-banner.ro{border-left-color:#7350C0}
+.sync-banner.ro .util-btn{min-height:34px}
 .card-list th.sortable{padding:0}
 .th-sort{all:unset;display:flex;align-items:center;gap:4px;padding:8px 10px;cursor:pointer;width:100%;box-sizing:border-box;font-weight:600}
 th.num .th-sort{justify-content:flex-end}
@@ -594,6 +598,7 @@ function switchList(list) {
 }
 
 async function removeFromCollection(cardId) {
+  if (sharedView) return; // shared link is view-only: never write the viewer's own collection
   const c = allCards.find(x => x.key === cardId);
   if (!confirm(`Remove ${c?.name || cardId} (${cardId}) from your collection?`)) return false;
   delete userCollection[cardId];
@@ -606,6 +611,7 @@ async function removeFromCollection(cardId) {
 }
 
 async function updateQuantity(cardId, delta) {
+  if (sharedView) return; // shared link is view-only: never write the viewer's own collection
   const current = userCollection[cardId]?.qty || 1;
   const newQty = Math.max(1, current + delta);
   userCollection[cardId] = {...(userCollection[cardId] || {}), qty: newQty};
@@ -820,6 +826,7 @@ function toggleView(view) {
 
 // Inline editing functions for list view
 async function inlineUpdateField(cardId, field, value) {
+  if (sharedView) return; // shared link is view-only: never write the viewer's own collection
   if (!userCollection[cardId]) return;
   userCollection[cardId][field] = value;
   
@@ -831,6 +838,7 @@ async function inlineUpdateField(cardId, field, value) {
 }
 
 async function inlineToggleList(cardId, list) {
+  if (sharedView) return; // shared link is view-only: never write the viewer's own collection
   if (!userCollection[cardId]) return;
   if (!userCollection[cardId].lists) userCollection[cardId].lists = {};
   userCollection[cardId].lists[list] = !userCollection[cardId].lists[list];
@@ -881,6 +889,7 @@ function renderCollection() {
   const collectionIds = Object.keys(filteredCollection);
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const cardById = new Map(allCards.map(c => [c.key, c]));
+  const RO = !!sharedView;   // shared link: view only
   const inGame = c => !currentGame || c.game === currentGame;
 
   // Tab counts follow the game filter so the number matches what's shown
@@ -1013,7 +1022,7 @@ function renderCollection() {
   const idLine = c => `${esc(c.officialId || c.id)}${versionLabel(c) ? ` · <span class="ver">${versionLabel(c)}</span>` : ''}`;
   const priceHtml = c => jpy(c) ? `${money(jpy(c))}${priceAgeLabel(c)}` : '<span class="no-price" title="No shop listing found yet">no price</span>';
 
-  const syncBanner = currentUser ? '' : `<div class="sync-banner"><span>Saved on this device only.</span><button onclick="signInWithGoogle()">Sign in to back up</button></div>`;
+  const syncBanner = RO ? `<div class="sync-banner ro"><span>👀 View-only copy of someone's collection. Nothing here is saved.</span><a href="collection.html" class="util-btn">Open my collection</a></div>` : currentUser ? '' : `<div class="sync-banner"><span>Saved on this device only.</span><button onclick="signInWithGoogle()">Sign in to back up</button></div>`;
   const setFilterBanner = currentSetFilter ? `<div class="set-filter"><span>📊 Set <b>${esc(currentSetFilter)}</b></span><button onclick="currentSetFilter=null;renderCollection()" aria-label="Clear set filter">✕</button></div>` : '';
 
   const hero = `
@@ -1022,7 +1031,7 @@ function renderCollection() {
       <div class="coll-value-label">estimated value${currentGame ? (currentGame === 'onepiece' ? ' · One Piece' : ' · Pokémon') : ''}</div>
       <div class="coll-sub">
         <span><b>${totalCards}</b> cards</span><span><b>${stats.length}</b> unique</span>
-        ${cost ? `<span>paid <b>${money(cost)}</b></span><span class="${gain >= 0 ? 'up' : 'down'}"><b>${gain >= 0 ? '+' : ''}${money(gain)}</b> (${gainPct >= 0 ? '+' : ''}${gainPct}%)</span>` : ''}
+        ${cost && !RO ? `<span>paid <b>${money(cost)}</b></span><span class="${gain >= 0 ? 'up' : 'down'}"><b>${gain >= 0 ? '+' : ''}${money(gain)}</b> (${gainPct >= 0 ? '+' : ''}${gainPct}%)</span>` : ''}
       </div>
       ${noPrice ? `<div class="coll-note">${noPrice} card${noPrice > 1 ? 's have' : ' has'} no price yet and count ¥0.</div>` : ''}
     </section>`;
@@ -1039,7 +1048,7 @@ function renderCollection() {
         <button class="view-btn ${currentView === 'grid' ? 'active' : ''}" data-view="grid" onclick="toggleView('grid')" aria-pressed="${currentView === 'grid'}">▦ Grid</button>
         <button class="view-btn ${currentView === 'list' ? 'active' : ''}" data-view="list" onclick="toggleView('list')" aria-pressed="${currentView === 'list'}">☰ List</button>
       </div>
-      <div class="util-row">
+      <div class="util-row" ${RO ? 'hidden' : ''}>
         <button class="util-btn add-btn" onclick="toggleAddCard()">＋ Add Card</button>
         <button class="util-btn" onclick="exportCollection()">📥 Export</button>
         <a href="backup.html" class="util-btn">💾 Backup</a>
@@ -1054,15 +1063,15 @@ function renderCollection() {
         const qty = qtyOf(c.key), cond = userCollection[c.key]?.condition || 'NM', lang = userCollection[c.key]?.language || 'JP';
         const pp = paid(c.key), roi = pp && jpy(c) ? jpy(c) - pp : null;
         return `
-        <div class="card-item" onclick="openCardModal('${c.key}')">
-          <button class="remove-btn" onclick="event.stopPropagation();removeFromCollection('${c.key}')" aria-label="Remove ${esc(c.name)}">×</button>
+        <div class="card-item" onclick="openCard('${c.key}')">
+          ${RO ? '' : `<button class="remove-btn" onclick="event.stopPropagation();removeFromCollection('${c.key}')" aria-label="Remove ${esc(c.name)}">×</button>`}
           ${qty > 1 ? `<span class="qty-badge">×${qty}</span>` : ''}
           <span class="condition-badge ${cond.toLowerCase()}" title="${conditionLabels[cond] || cond}">${cond}</span>
           <img src="${getImg(c)}" alt="${esc(c.name)}" loading="lazy" referrerpolicy="no-referrer">
-          <div class="qty-controls" onclick="event.stopPropagation()">
+          ${RO ? '' : `<div class="qty-controls" onclick="event.stopPropagation()">
             <button class="qty-btn" onclick="updateQuantity('${c.key}',-1)" aria-label="One less">−</button>
             <button class="qty-btn" onclick="updateQuantity('${c.key}',1)" aria-label="One more">+</button>
-          </div>
+          </div>`}
           <div class="name">${esc(c.name || c.id)}</div>
           <div class="meta">${idLine(c)}</div>
           <div class="price">${priceHtml(c)}${roi !== null ? ` <span class="${roi >= 0 ? 'up' : 'down'}">${roi >= 0 ? '+' : ''}${money(roi)}</span>` : ''}</div>
@@ -1081,10 +1090,10 @@ function renderCollection() {
         <thead>
           <tr>
             <th class="img-col"><span class="sr-only">Image</span></th>
-            ${th('Card', 'name')}${th('Price', 'price', 'num')}${th('Paid', 'paid', 'num', 'What you paid per card. Click a cell to type it')}${th('Qty', 'qty')}
-            ${th('Cond', 'cond', 'desktop-col')}${th('Lang', 'lang', 'desktop-col')}
+            ${th('Card', 'name')}${th('Price', 'price', 'num')}${RO ? '' : th('Paid', 'paid', 'num', 'What you paid per card. Click a cell to type it')}${th('Qty', 'qty')}
+            ${RO ? '' : th('Cond', 'cond', 'desktop-col') + th('Lang', 'lang', 'desktop-col')}
             <th class="desktop-col">Lists</th>
-            <th><span class="sr-only">Remove</span></th>
+            ${RO ? '' : '<th><span class="sr-only">Remove</span></th>'}
           </tr>
         </thead>
         <tbody>
@@ -1093,18 +1102,18 @@ function renderCollection() {
             const inWish = userCollection[c.key]?.lists?.wishlist, inTrade = userCollection[c.key]?.lists?.tradelist, pp = paid(c.key);
             return `
             <tr>
-              <td onclick="openCardModal('${c.key}')"><img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer"></td>
-              <td onclick="openCardModal('${c.key}')"><strong>${esc(c.name || c.id)}</strong><br><small class="idline">${idLine(c)}${c.rarity ? ' · ' + esc(c.rarity) : ''}</small></td>
-              <td class="num price" onclick="openCardModal('${c.key}')">${priceHtml(c)}</td>
-              <td class="num paid-cell" onclick="event.stopPropagation();editPaid(this,'${c.key}')" title="Click to type what you paid">${pp ? '¥' + pp.toLocaleString() : '<span class="paid-empty">＋ ¥</span>'}</td>
+              <td onclick="openCard('${c.key}')"><img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer"></td>
+              <td onclick="openCard('${c.key}')"><strong>${esc(c.name || c.id)}</strong><br><small class="idline">${idLine(c)}${c.rarity ? ' · ' + esc(c.rarity) : ''}</small></td>
+              <td class="num price" onclick="openCard('${c.key}')">${priceHtml(c)}</td>
+              ${RO ? '' : `<td class="num paid-cell" onclick="event.stopPropagation();editPaid(this,'${c.key}')" title="Click to type what you paid">${pp ? '¥' + pp.toLocaleString() : '<span class="paid-empty">＋ ¥</span>'}</td>`}
               <td onclick="event.stopPropagation()">
-                <div class="qty-cell">
+                ${RO ? `<span class="qty-val">×${qty}</span>` : `<div class="qty-cell">
                   <button class="qty-btn" onclick="updateQuantity('${c.key}',-1)" aria-label="One less">−</button>
                   <span class="qty-val">${qty}</span>
                   <button class="qty-btn" onclick="updateQuantity('${c.key}',1)" aria-label="One more">+</button>
-                </div>
+                </div>`}
               </td>
-              <td class="desktop-col" onclick="event.stopPropagation()">
+              ${RO ? '' : `<td class="desktop-col" onclick="event.stopPropagation()">
                 <select class="cond-select" aria-label="Condition" onchange="inlineUpdateField('${c.key}','condition',this.value)">
                   ${['NM','LP','MP','HP','DMG'].map(v => `<option value="${v}" ${cond === v ? 'selected' : ''}>${v}</option>`).join('')}
                 </select>
@@ -1114,14 +1123,14 @@ function renderCollection() {
                   <option value="JP" ${lang === 'JP' ? 'selected' : ''}>JP</option>
                   <option value="EN" ${lang === 'EN' ? 'selected' : ''}>EN</option>
                 </select>
-              </td>
+              </td>`}
               <td class="desktop-col" onclick="event.stopPropagation()">
-                <div class="list-icons">
+                <div class="list-icons ${RO ? 'ro' : ''}">
                   <button class="list-icon ${inWish ? 'active' : ''}" aria-pressed="${!!inWish}" onclick="inlineToggleList('${c.key}','wishlist')" title="Wishlist" aria-label="Wishlist">⭐</button>
                   <button class="list-icon ${inTrade ? 'active' : ''}" aria-pressed="${!!inTrade}" onclick="inlineToggleList('${c.key}','tradelist')" title="Tradelist" aria-label="Tradelist">🔄</button>
                 </div>
               </td>
-              <td onclick="event.stopPropagation()"><button class="delete-btn" onclick="removeFromCollection('${c.key}')" aria-label="Remove ${esc(c.name)}">🗑️</button></td>
+              ${RO ? '' : `<td onclick="event.stopPropagation()"><button class="delete-btn" onclick="removeFromCollection('${c.key}')" aria-label="Remove ${esc(c.name)}">🗑️</button></td>`}
             </tr>`;
           }).join('')}
         </tbody>
@@ -1137,6 +1146,12 @@ function renderCollection() {
   content.innerHTML = hero + syncBanner + navHtml + setFilterBanner + toolbar +
     (filtered.length ? grid + list : `<div class="empty-state"><p>No ${currentGame === 'pokemon' ? 'Pokémon' : currentGame === 'onepiece' ? 'One Piece' : ''} cards in this list.</p></div>`);
   if (addBar) document.getElementById('add-slot').appendChild(addBar);
+}
+
+function openCard(key) {
+  if (!sharedView) return openCardModal(key);
+  const c = allCards.find(x => x.key === key);
+  location.href = `search.html?game=${c?.game || 'onepiece'}&q=${encodeURIComponent(c?.officialId || c?.id || key)}`;
 }
 
 // List view "Paid" cell (#195): click → type the price you paid per card → Enter/leave to save
@@ -1222,27 +1237,36 @@ function exportCollection() {
   URL.revokeObjectURL(url);
 }
 
-function shareCollection() {
-function shareWishlist() {
-  const wishCards = Object.entries(userCollection).filter(([id, c]) => c.lists?.wishlist).map(([id]) => id);
-  if (!wishCards.length) { alert("Your wishlist is empty!"); return; }
-  const text = "🌟 My TCG Wishlist:\n" + wishCards.join("\n");
-  if (navigator.share) {
-    navigator.share({ title: "My TCG Wishlist", text });
-  } else {
-    navigator.clipboard.writeText(text);
-    alert("Wishlist copied to clipboard!");
-  }
+// Share (#195, Arthur 2026-09-26: read-only page). The link carries the list itself —
+// card keys, quantities, wishlist/tradelist flags; never purchase prices or notes.
+// Format: ?share=z<base64url(deflate-raw(JSON))>  (falls back to plain base64url 'j' prefix).
+const b64u = bytes => btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+const unb64u = str => Uint8Array.from(atob(str.replace(/-/g, '+').replace(/_/g, '/')), ch => ch.charCodeAt(0));
+async function encodeShare(obj) {
+  const bytes = new TextEncoder().encode(JSON.stringify(obj));
+  if (typeof CompressionStream === 'undefined') return 'j' + b64u(bytes);
+  const out = await new Response(new Blob([bytes]).stream().pipeThrough(new CompressionStream('deflate-raw'))).arrayBuffer();
+  return 'z' + b64u(new Uint8Array(out));
 }
-  const data = { cards: Object.entries(userCollection).map(([id, c]) => ({ id, qty: c.qty })) };
-  const encoded = btoa(JSON.stringify(data));
-  const url = location.origin + location.pathname + "?share=" + encoded;
-  if (navigator.share) {
-    navigator.share({ title: "My TCG Collection", url });
-  } else {
-    navigator.clipboard.writeText(url);
-    alert("Share link copied to clipboard!");
-  }
+async function decodeShare(str) {
+  const bytes = unb64u(str.slice(1));
+  const raw = str[0] === 'z'
+    ? await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer()
+    : bytes;
+  return JSON.parse(new TextDecoder().decode(raw));
+}
+async function shareCollection() {
+  const c = Object.entries(userCollection).map(([k, v]) => {
+    const f = (v.lists?.wishlist ? 1 : 0) | (v.lists?.tradelist ? 2 : 0);
+    return f ? [k, v.qty || 1, f] : [k, v.qty || 1];
+  });
+  if (!c.length) { alert('Your collection is empty — add cards first.'); return; }
+  const url = `${location.origin}${location.pathname}?share=${await encodeShare({ v: 1, c })}`;
+  if (url.length > 30000) { alert(`Your collection is too big for a share link (${c.length} cards). Use Export instead.`); return; }
+  try {
+    if (navigator.share) await navigator.share({ title: 'My TCG collection', text: `My collection (${c.length} cards, view only)`, url });
+    else { await navigator.clipboard.writeText(url); alert('View-only link copied. Anyone with it can see your cards and quantities (not what you paid).'); }
+  } catch (e) { /* share sheet dismissed */ }
 }
 
 // RFC 4180-ish: keeps empty fields (",,") so columns never shift, handles "" escapes
@@ -1258,6 +1282,7 @@ function parseCsvLine(line) {
 }
 
 async function importCollection(input) {
+  if (sharedView) return; // shared link is view-only: never write the viewer's own collection
   const file = input.files[0];
   if (!file) return;
   const lines = (await file.text()).replace(/\r/g, '').split('\n').slice(1); // skip header
@@ -1288,6 +1313,14 @@ async function importCollection(input) {
 
 // Initialize
 const params = new URLSearchParams(location.search);
+let sharedView = null;
+const shareReady = params.get('share') ? decodeShare(params.get('share')).then(d => {
+  const coll = {};
+  for (const [k, qty, f] of (d.c || [])) coll[k] = { qty, lists: { wishlist: !!(f & 1), tradelist: !!(f & 2) } };
+  sharedView = { coll, count: Object.keys(coll).length };
+  document.querySelector('.page-title').textContent = '👀 Shared collection';
+  document.title = 'Shared collection - PokePiece';
+}).catch(() => { alert('This share link is broken or incomplete.'); }) : Promise.resolve();
 if (params.get('list') && tabTypes.includes(params.get('list'))) {
   currentList = params.get('list');
 }
@@ -1297,11 +1330,12 @@ let authChecked = false;
 
 function renderIfReady() {
   if (cardsLoaded && authChecked) {
+    if (sharedView) userCollection = sharedView.coll;   // read-only: never written anywhere
     renderCollection();
   }
 }
 
-loadCards().then(() => {
+Promise.all([loadCards(), shareReady]).then(() => {
   cardsLoaded = true;
   renderIfReady();
 });
@@ -1367,6 +1401,7 @@ function searchAddCard(q){
 }
 
 async function quickAdd(cardId){
+  if (sharedView) return; // shared link is view-only: never write the viewer's own collection
   if(userCollection[cardId]){
     // Already in collection — increment qty
     await updateQuantity(cardId,1);
@@ -1386,6 +1421,7 @@ async function quickAdd(cardId){
 // Bulk add (#159): one card per line, optional quantity ("OP01-120_p1 x2", "OP05-119, 3").
 // Resolves exact keys first, then "-p1"-style IDs, then a base ID = its regular version.
 async function bulkAddFromText() {
+  if (sharedView) return; // shared link is view-only: never write the viewer's own collection
   const byKey = new Map(allCards.map(c => [c.key.toUpperCase(), c]));
   const added = [], unknown = [];
   for (const raw of document.getElementById('bulk-add-input').value.split('\n')) {
