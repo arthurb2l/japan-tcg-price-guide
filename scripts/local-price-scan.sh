@@ -28,6 +28,7 @@ echo "=== scan start $(date -Is)"
 
 publish() {
   python3 scripts/yuyutei-version-prices.py || echo "per-version prices failed (keeping last file)"
+  python3 scripts/cardrush-version-prices.py || echo "Card Rush version prices failed (keeping last file)"
   python3 scripts/sync-prices-to-cache.py
   git add data/prices data/onepiece-cache.json
   if ! git diff --staged --quiet; then

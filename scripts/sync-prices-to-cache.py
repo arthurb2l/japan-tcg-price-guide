@@ -88,6 +88,31 @@ if os.path.exists(vpath):
             vexact += 1
     print(f'Applied {vexact} per-version prices')
 
+# Card Rush per-version prices (scripts/cardrush-version-prices.py) fill what yuyu-tei couldn't
+cpath = os.path.join(ROOT, 'data/prices/onepiece-versions-cardrush.json')
+if os.path.exists(cpath):
+    cp = json.load(open(cpath)); cdate, cmap, cr_n = cp.get('date') or today, cp.get('versions', {}), 0
+    for cards in cache['sets'].values():
+        for card in cards:
+            v = cmap.get(card.get('officialId'))
+            cur = card.get('pricing') or {}
+            if not v or cur.get('versionMatch') == 'exact': continue      # yuyu-tei / manual pick already exact
+            img = card.get('img')
+            if isinstance(img, dict) and not img.get('jp'): continue
+            real = [k for k, x in (cur.get('sources') or {}).items() if k != 'rarity' and x and x.get('jpy')]
+            if not (str(card.get('finish', '')).startswith('parallel') or not real): continue
+            prev_jpy = (cur.get('computed') or {}).get('jpy') if real else None
+            last_known = cur.get('lastKnown')
+            if prev_jpy and prev_jpy != v['jpy']: last_known = {'jpy': prev_jpy, 'date': cur.get('updated')}
+            card['pricing'] = {
+                'sources': {'cardrush': {'jpy': v['jpy'], 'in_stock': v['in_stock'], 'updated': cdate}},
+                'computed': {'jpy': v['jpy'], 'usd': None, 'eur': None},
+                'method': 'cardrush-version', 'versionMatch': 'exact', 'updated': cdate,
+                **({'lastKnown': last_known} if last_known else {})
+            }
+            cr_n += 1
+    print(f'Applied {cr_n} Card Rush per-version prices')
+
 with open(os.path.join(ROOT, 'data/onepiece-cache.json'), 'w') as f:
     json.dump(cache, f, ensure_ascii=False, separators=(',', ':'))
 print(f'Synced {updated} cards from prices file to cache')

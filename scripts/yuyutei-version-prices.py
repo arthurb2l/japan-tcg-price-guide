@@ -16,24 +16,17 @@ from urllib.request import Request, urlopen
 from urllib.parse import quote
 warnings.filterwarnings('ignore')
 from PIL import Image
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from version_match import get, fetch_img, feat, cost, warmth
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 CACHE = os.path.join(ROOT, 'data', '.cache', 'yv')
 OUT = os.path.join(ROOT, 'data', 'prices', 'onepiece-versions.json')
-UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 # Future sets are included on purpose: pages that don't exist yet just return nothing
 PAGES = ([f'op{i:02d}' for i in range(1, 26)] + [f'eb{i:02d}' for i in range(1, 9)] + ['prb01', 'prb02', 'prb03'] +
          [f'st{i:02d}' for i in range(1, 46)] + ['promo-100', 'promo-200', 'promo-eb10', 'promo-op10', 'promo-op20', 'promo-prb10', 'promo-st10'])
 T, M = 42, 6   # accept cost <= T; reject if another listing with a different price is within M (visually tuned 2026-09-26)
 
-def get(url, binary=False):
-    for _ in range(3):
-        try:
-            data = urlopen(Request(url, headers=UA), timeout=30).read()
-            return data if binary else data.decode('utf-8', 'ignore')
-        except Exception:
-            time.sleep(2)
-    return None
 
 def parse(page, t):
     out = []
@@ -49,27 +42,7 @@ def parse(page, t):
                     'jpy': int(pr.group(1).replace(',', '')), 'in_stock': (not sold) and stock not in ('×', ''), 'stock': stock})
     return out
 
-def feat(p):
-    im = Image.open(p).convert('RGB').resize((100, 140))
-    g = list(im.convert('L').resize((25, 24)).getdata())
-    return [g[r * 25 + c] > g[r * 25 + c + 1] for r in range(24) for c in range(24)], list(im.resize((5, 7)).getdata())
 
-def warmth(p):
-    px = list(Image.open(p).convert('RGB').resize((50, 70)).getdata())
-    r, g, b = (sum(q[i] for q in px) / len(px) for i in range(3))
-    return (r + g) / 2 - b   # gold foil is yellow (warm), silver neutral/blue
-
-def cost(a, b):
-    hd = sum(x != y for x, y in zip(a[0], b[0]))
-    cd = sum(abs(p[i] - q[i]) for p, q in zip(a[1], b[1]) for i in range(3)) / (35 * 3)
-    return hd / 576 * 100 + cd * 0.6
-
-def fetch_img(url, path):
-    if os.path.exists(path) and os.path.getsize(path) > 500: return True
-    data = get(url, binary=True)
-    if data and len(data) > 500:
-        open(path, 'wb').write(data); return True
-    return False
 
 def main():
     os.makedirs(os.path.join(CACHE, 'y'), exist_ok=True); os.makedirs(os.path.join(CACHE, 'b'), exist_ok=True)
