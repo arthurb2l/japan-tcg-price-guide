@@ -51,6 +51,33 @@ for sid, cards in cache['sets'].items():
         }
         updated += 1
 
+# Per-version prices (scripts/yuyutei-version-prices.py) override the shared 'parallel'
+# bucket above: that bucket gave every parallel of a card the same price (964 versions).
+vpath = os.path.join(ROOT, 'data/prices/onepiece-versions.json')
+vexact = 0
+if os.path.exists(vpath):
+    vp = json.load(open(vpath))
+    vdate, vmap = vp.get('date') or today, vp.get('versions', {})
+    for cards in cache['sets'].values():
+        for card in cards:
+            v = vmap.get(card.get('officialId'))
+            if not v or not str(card.get('finish', '')).startswith('parallel'): continue
+            img = card.get('img')
+            if isinstance(img, dict) and not img.get('jp'): continue  # EN print: JP listing price doesn't apply
+            prev = card.get('pricing') or {}
+            prev_jpy = (prev.get('computed') or {}).get('jpy')
+            last_known = prev.get('lastKnown')
+            if prev_jpy and prev_jpy != v['jpy']:
+                last_known = {'jpy': prev_jpy, 'date': prev.get('updated')}
+            card['pricing'] = {
+                'sources': {'yuyutei': {'jpy': v['jpy'], 'in_stock': v['in_stock'], 'updated': vdate}},
+                'computed': {'jpy': v['jpy'], 'usd': None, 'eur': None},
+                'method': 'yuyutei-version', 'versionMatch': 'exact', 'updated': vdate,
+                **({'lastKnown': last_known} if last_known else {})
+            }
+            vexact += 1
+    print(f'Applied {vexact} per-version prices')
+
 with open(os.path.join(ROOT, 'data/onepiece-cache.json'), 'w') as f:
     json.dump(cache, f, ensure_ascii=False, separators=(',', ':'))
 print(f'Synced {updated} cards from prices file to cache')

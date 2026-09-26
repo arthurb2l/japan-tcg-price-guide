@@ -20,3 +20,6 @@ sealed-deals/
 # Python cache
 __pycache__/
 *.pyc
+
+# yuyu-tei version-price image cache
+data/.cache/
