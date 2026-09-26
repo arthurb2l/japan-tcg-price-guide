@@ -17,7 +17,7 @@
 <link rel="dns-prefetch" href="https://www.gstatic.com">
 <!-- Firebase -->
 <script src="components/normalize-card.js?v=195"></script>
-<script src="/japan-tcg-price-guide/components/price-utils.js?v=age2"></script>
+<script src="/japan-tcg-price-guide/components/price-utils.js?v=ph3"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
@@ -440,6 +440,7 @@ th.sorted .sort-ind{color:#D81111}
     </div>
     <div class="card-modal-body">
       <div class="card-modal-img"><img id="modal-card-img" src="" alt="" onclick="openLightbox(this.src)"></div>
+      <div id="modal-price-history"></div>
       <div class="card-modal-field">
         <label>Quantity</label>
         <div class="qty-row">
@@ -687,6 +688,9 @@ function openCardModal(cardId) {
   document.getElementById('modal-lists').innerHTML = listsHtml;
   
   document.getElementById('card-modal').classList.add('show');
+  const ph = document.getElementById('modal-price-history');
+  ph.innerHTML = '';
+  if (card) priceHistoryHtml(card).then(h => { if (modalCardId === cardId) ph.innerHTML = h ? `<div class="ph-title" style="font-size:.8em;color:#666;margin:12px 0 4px;font-weight:600">Price history</div>${h}` : ''; });
 }
 
 function closeCardModal() {

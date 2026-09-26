@@ -150,3 +150,52 @@ function renderPriceModal(card) {
 
   return h;
 }
+
+/**
+ * Price history chart for one card (#157). Loads data/price-series/<set>.json (built daily by
+ * scripts/build-price-series.js) and adds the card's lastKnown and current price.
+ * Resolves to HTML (inline SVG) or '' when there is nothing to show.
+ */
+const _seriesCache = {};
+async function priceHistoryHtml(card) {
+  if (!card) return '';
+  const key = card.officialId || card.id || '';
+  const shard = ((key.match(/^([A-Za-z]+\d*)/) || [])[1] || '').toLowerCase();
+  const base = location.pathname.includes('/japan-tcg-price-guide/') ? '/japan-tcg-price-guide' : '';
+  let pts = [];
+  try {
+    const idx = _seriesCache._index || (_seriesCache._index = await fetch(`${base}/data/price-series/index.json`).then(r => r.ok ? r.json() : []));
+    const d = !idx.includes(shard) ? null : _seriesCache[shard] || (_seriesCache[shard] = await fetch(`${base}/data/price-series/${shard}.json`).then(r => r.ok ? r.json() : null));
+    if (d && d.s[key]) pts = d.s[key].map(([i, jpy]) => ({ t: d.dates[i], jpy }));
+  } catch (e) { /* no series yet */ }
+  const p = card.pricing || {};
+  const add = (t, jpy) => { if (t && jpy > 0 && !pts.some(x => x.t === t.slice(0, 10))) pts.push({ t: t.slice(0, 10), jpy }); };
+  if (p.lastKnown) add(p.lastKnown.date, p.lastKnown.jpy);
+  add(p.updated || (p.regional && p.regional.JP && p.regional.JP.updated), getFloorJpy(card));
+  pts.sort((a, b) => a.t < b.t ? -1 : 1);
+  if (pts.length < 2) {
+    return card.game === 'onepiece'
+      ? '<div class="ph-empty" style="font-size:.78em;color:#666;background:#f5f5f5;border-radius:6px;padding:8px 10px;margin:10px 0">Price history for One Piece cards is recorded daily from 26 Sep 2026. Check back soon.</div>' : '';
+  }
+  const W = 280, H = 90, P = 6, ts = pts.map(x => Date.parse(x.t)), vs = pts.map(x => x.jpy);
+  const t0 = Math.min(...ts), t1 = Math.max(...ts), lo = Math.min(...vs), hi = Math.max(...vs);
+  const X = t => P + (t1 === t0 ? 0 : (t - t0) / (t1 - t0)) * (W - 2 * P);
+  const Y = v => H - P - (hi === lo ? 0.5 : (v - lo) / (hi - lo)) * (H - 2 * P);
+  // step line: a price holds until the next observation
+  let d = `M${X(ts[0]).toFixed(1)},${Y(vs[0]).toFixed(1)}`;
+  for (let i = 1; i < pts.length; i++) d += ` H${X(ts[i]).toFixed(1)} V${Y(vs[i]).toFixed(1)}`;
+  const first = vs[0], last = vs[vs.length - 1], chg = Math.round((last - first) / first * 100);
+  const col = last >= first ? '#1E7D1E' : '#D81111';
+  const fmt = v => '¥' + v.toLocaleString(), day = t => new Date(t).toLocaleDateString('en', { day: 'numeric', month: 'short', year: '2-digit' });
+  const row = 'display:flex;justify-content:space-between;gap:8px;font-size:.75em;color:#666';
+  return `<div class="ph" style="background:#fff;border:1px solid #DDDDDD;border-radius:6px;padding:8px 10px;margin-bottom:12px">
+    <div class="ph-head" style="${row}"><span>${day(pts[0].t)} → ${day(pts[pts.length - 1].t)}</span>
+      <b style="color:${col}">${chg >= 0 ? '+' : ''}${chg}%</b></div>
+    <svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" preserveAspectRatio="none" style="display:block;margin:4px 0" role="img" aria-label="Price from ${fmt(first)} to ${fmt(last)}">
+      <path d="${d} V${H - P} H${X(ts[0]).toFixed(1)} Z" fill="${col}" opacity=".08"/>
+      <path d="${d}" fill="none" stroke="${col}" stroke-width="2" stroke-linejoin="round"/>
+      ${pts.map((x, i) => `<circle cx="${X(ts[i]).toFixed(1)}" cy="${Y(vs[i]).toFixed(1)}" r="2.5" fill="${col}"><title>${day(x.t)}: ${fmt(x.jpy)}</title></circle>`).join('')}
+    </svg>
+    <div class="ph-foot" style="${row}"><span>low ${fmt(lo)}</span><span>high ${fmt(hi)}</span><span>now ${fmt(last)}</span></div>
+  </div>`;
+}

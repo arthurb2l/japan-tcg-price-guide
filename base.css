@@ -87,3 +87,11 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 
 /* Card title (replaces h2 inside links for a11y) */
 .card-title { display: block; font-size: 1.3em; font-weight: 700; margin: 10px 0 5px; }
+
+/* Card popup price chart (#157) */
+.ph-title{font-size:.8em;color:#666;margin:12px 0 4px;font-weight:600}
+.ph{background:#fff;border:1px solid #DDDDDD;border-radius:6px;padding:8px 10px;margin-bottom:12px}
+.ph-head,.ph-foot{display:flex;justify-content:space-between;font-size:.75em;color:#666}
+.ph-foot{margin-top:2px}
+.ph svg{display:block;margin:4px 0}
+.ph-empty{font-size:.78em;color:#666;background:#f5f5f5;border-radius:6px;padding:8px 10px;margin:10px 0}

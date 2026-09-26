@@ -32,7 +32,7 @@
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 <script src="components/normalize-card.js?v=179"></script>
-<script src="/japan-tcg-price-guide/components/price-utils.js?v=age2"></script>
+<script src="/japan-tcg-price-guide/components/price-utils.js?v=ph3"></script>
 <script>
 const firebaseConfig = {
   apiKey: "AIzaSyCLzia4937bSBbjsT0JUY-PAgnzygTYj1s",
@@ -335,9 +335,8 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
         <dt>Links</dt><dd id="modal-links"></dd>
         <dt id="modal-jp-price-label" style="display:none">Japan Price</dt>
         <dd id="modal-jp-price" style="display:none"></dd>
-        <dt id="modal-history-label" style="display:none">History</dt>
-        <dd id="modal-history" style="display:none"></dd>
       </dl>
+      <div id="modal-price-history"></div>
       <div class="modal-actions" style="display:flex;gap:10px;margin-top:15px;flex-wrap:wrap">
         <button id="favBtn" onclick="toggleFavorite()" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">🤍 Fav</button>
         <button onclick="copyCardInfo()" style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px;background:#fff;cursor:pointer">📋 Copy</button>
@@ -1272,7 +1271,7 @@ function showCard(id, isEn, uid) {
     jpLabel.style.display = jpPrice.style.display = 'none';
   }
   
-  showPriceHistory(card.key || card.id);
+  showPriceHistory(card);
   // Update favorite button state
   const favs = JSON.parse(localStorage.getItem('tcg_favorites') || '[]');
   document.getElementById('favBtn').textContent = favs.includes(card.id) ? '❤️ Fav' : '🤍 Fav';
@@ -1281,38 +1280,13 @@ function showCard(id, isEn, uid) {
 
 
 // Price history
-let priceHistory = null;
-async function loadPriceHistory() {
-  if (priceHistory) return;
-  try {
-    const files = await fetch(BASE + "/data/price-history/index.json").then(r => r.json());
-    priceHistory = {};
-    for (const f of files.slice(-7)) { // Last 7 days
-      const data = await fetch(BASE + "/data/price-history/" + f).then(r => r.json());
-      priceHistory[data.date] = { ...data.onepiece, ...data.pokemon };
-    }
-  } catch(e) { priceHistory = {}; }
-}
-
-function showPriceHistory(cardId) {
-  const histLabel = document.getElementById("modal-history-label");
-  const hist = document.getElementById("modal-history");
-  if (!priceHistory || Object.keys(priceHistory).length < 2) {
-    histLabel.style.display = hist.style.display = "none";
-    return;
-  }
-  const dates = Object.keys(priceHistory).sort();
-  const prices = dates.map(d => priceHistory[d][cardId]?.jpy || priceHistory[d][cardId]?.usd || priceHistory[d][cardId]?.eur).filter(Boolean);
-  if (prices.length < 2) {
-    histLabel.style.display = hist.style.display = "none";
-    return;
-  }
-  const first = prices[0], last = prices[prices.length-1];
-  const change = ((last - first) / first * 100).toFixed(1);
-  const arrow = change > 0 ? "↑" : change < 0 ? "↓" : "";
-  const color = change > 0 ? "#22c55e" : change < 0 ? "#ef4444" : "#666";
-  hist.innerHTML = `<span style="color:${color}">${arrow}${Math.abs(change)}% (${dates.length}d)</span>`;
-  histLabel.style.display = hist.style.display = "";
+// Card popup price chart (#157): per-set series from data/price-series/ (was: 7 full daily
+// snapshots, ~2 MB, fetched on every page load for a % that was usually blank)
+async function showPriceHistory(card) {
+  const el = document.getElementById('modal-price-history');
+  el.innerHTML = '';
+  const html = await priceHistoryHtml(card);
+  if (document.getElementById('modal-price-history') === el) el.innerHTML = html ? `<div class="ph-title" style="font-size:.8em;color:#666;margin:12px 0 4px;font-weight:600">Price history</div>${html}` : '';
 }
 
 function closeModal() { document.getElementById('modal').classList.remove('active'); document.getElementById('report-form').style.display='none'; }
@@ -1454,7 +1428,6 @@ function toggleFavorite() {
   localStorage.setItem("tcg_favorites", JSON.stringify(favs));
 }
 
-loadPriceHistory();
 // Bulk select mode
 let bulkMode = false;
 let selectedCards = new Set();
