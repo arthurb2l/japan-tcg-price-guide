@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://www.gstatic.com">
 <!-- Firebase -->
-<script src="components/normalize-card.js?v=179"></script>
+<script src="components/normalize-card.js?v=195"></script>
 <script src="/japan-tcg-price-guide/components/price-utils.js?v=age2"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
@@ -142,7 +142,7 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
 .card-item img{width:100%;border-radius:var(--r-sm)}
 .card-item .name{font-weight:600;font-size:.8em;margin-top:6px;line-height:1.2}
 .card-item .meta{font-size:.7em;color:var(--g3);margin-top:2px}
-.card-item .price{font-size:.8em;color:#2a7;font-weight:600;margin-top:4px}
+.card-item .price{font-size:.8em;color:#1E7D1E;font-weight:700;margin-top:4px}
 .card-item .remove-btn{position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:#fff;border:none;border-radius:50%;width:24px;height:24px;cursor:pointer;font-size:14px;opacity:0;transition:opacity .15s}
 .card-item:hover .remove-btn{opacity:1}
 .card-item .remove-btn:hover{background:var(--pk)}
@@ -288,6 +288,77 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
 .pagination button:hover:not(:disabled){background:var(--g6);border-color:var(--g4)}
 .pagination button:disabled{opacity:.4;cursor:not-allowed}
 .pagination span{color:var(--g3);font-size:.9em}
+
+/* ===== #195 collection overhaul ===== */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.page-header{margin:14px 0 10px}
+.coll-hero{background:var(--card);border-radius:var(--r-md);padding:16px 18px;margin-bottom:12px;border:1px solid #DDDDDD}
+.coll-value{font-size:2em;font-weight:700;color:#1E7D1E;line-height:1.1}
+.coll-value-label{font-size:.8em;color:#666;margin-top:2px}
+.coll-sub{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:10px;font-size:.88em;color:#444}
+.coll-sub .up,.up{color:#1E7D1E}.coll-sub .down,.down{color:#D81111}
+.coll-note{margin-top:8px;font-size:.78em;color:#666}
+.coll-nav{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.coll-nav .list-tabs,.coll-nav .tcg-selector{margin:0}
+.list-tab .count{background:rgba(0,0,0,.08);border-radius:10px;padding:0 7px;margin-left:6px;opacity:1}
+.list-tab.active .count{background:rgba(255,255,255,.25)}
+.filters{flex-direction:row!important;align-items:center;gap:8px;margin-bottom:14px}
+.filters .util-row{margin:0 0 0 auto}
+.util-btn{min-height:40px}
+.no-price{color:#666;font-weight:normal;font-style:italic}
+.ver{color:#7350C0;font-weight:600}
+.idline{color:#666}
+.card-item .meta{font-size:.72em;color:#666}
+.set-filter{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid #DDDDDD;border-left:4px solid #7350C0;border-radius:6px;padding:6px 12px;margin-bottom:10px;font-size:.85em}
+.set-filter button{background:none;border:none;cursor:pointer;font-size:1em;min-width:40px;min-height:36px}
+.sync-banner{padding:8px 12px;margin:0 0 12px;font-size:.85em}
+.sync-banner button{padding:8px 12px}
+/* Sets */
+.sets-note{font-size:.8em;color:#666;margin-bottom:8px}
+button.set-row{width:100%;border:1px solid #DDDDDD;cursor:pointer;font:inherit;text-align:left;color:inherit}
+button.set-row.none{opacity:.5}
+.set-bar span{display:block;height:100%;border-radius:var(--r-lg)}
+/* List table */
+.card-list td.num,.card-list th.num{text-align:right;white-space:nowrap}
+.card-list td.price{color:#1E7D1E;font-weight:700}
+.paid-cell{cursor:text;min-width:78px}
+.paid-cell:hover{background:#FFF8E1}
+.paid-empty{color:#999;font-weight:normal}
+.paid-input{width:90px;padding:6px;border:2px solid #4A90D9;border-radius:4px;font-size:16px;text-align:right}
+.card-list .delete-btn{min-width:40px;min-height:40px}
+.card-list .list-icon{font-family:inherit}
+/* Modal */
+.modal-sub{font-size:.8em;color:#666;margin-top:2px}
+/* Touch screens: controls are always visible (they were hover-only) and big enough to tap */
+@media (hover: none) {
+  .card-item .remove-btn,.card-item .qty-controls{opacity:1}
+  .card-item .remove-btn{width:32px;height:32px}
+  .card-item .qty-btn{width:36px;height:32px}
+}
+.card-item .qty-controls{position:static;transform:none;justify-content:center;margin-top:6px;opacity:1}
+.card-item .condition-badge{cursor:default}
+/* Loading skeleton */
+.skel p{text-align:center;color:#666;font-size:.85em;margin-top:12px}
+.skel-hero,.skel-row{background:linear-gradient(90deg,#eee 25%,#f7f7f7 50%,#eee 75%);background-size:200% 100%;animation:skel 1.2s infinite;border-radius:8px}
+.skel-hero{height:110px;margin-bottom:12px}.skel-row{height:52px;margin-bottom:8px}
+@keyframes skel{to{background-position:-200% 0}}
+@media (prefers-reduced-motion: reduce){.skel-hero,.skel-row{animation:none}}
+@media (max-width: 768px) {
+  .coll-value{font-size:1.7em}
+  .filters .util-row{margin:0;width:100%}
+  .filters .util-row .util-btn{flex:1;justify-content:center}
+  .card-list th.img-col,.card-list td:first-child{padding-left:4px;padding-right:2px}
+  .paid-cell{min-width:64px}
+}
+@media (max-width: 480px) {
+  /* fit 375-390px: remove lives in the card popup; tighter qty controls */
+  .card-list th:last-child,.card-list td:last-child{display:none}
+  .card-list .qty-cell{gap:2px}
+  .card-list .qty-btn{width:26px;height:30px}
+  .card-list .qty-val{min-width:16px}
+  .card-list th,.card-list td{padding:5px 4px}
+  .card-list td.price,.paid-cell{font-size:.78em}
+}
 </style>
 </head>
 <body>
@@ -301,10 +372,6 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
   <button class="util-btn add-btn" onclick="toggleAddCard()">＋ Add Card</button>
 </div>
 
-<div class="tcg-selector" id="tcg-selector">
-  <button class="tcg-btn" data-tcg="pokemon" onclick="filterByGame('pokemon')">⚡ Pokemon</button>
-  <button class="tcg-btn" data-tcg="onepiece" onclick="filterByGame('onepiece')">🏴‍☠️ One Piece</button>
-</div>
 
 <div class="add-card-bar" id="add-card-bar" style="display:none">
   <input type="text" id="add-card-input" placeholder="Type card name or ID…" oninput="searchAddCard(this.value)" autocomplete="off">
@@ -328,24 +395,28 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
 </div>
 
 <div id="content">
-  <div class="loading">Loading collection...</div>
+  <div class="skel" aria-busy="true" aria-label="Loading your collection">
+    <div class="skel-hero"></div>
+    <div class="skel-row"></div><div class="skel-row"></div><div class="skel-row"></div>
+    <p>Loading the card database… (first visit takes a few seconds)</p>
+  </div>
 </div>
 
 <!-- Card Detail Modal -->
 <div class="card-modal-overlay" id="card-modal" onclick="if(event.target===this)closeCardModal()">
-  <div class="card-modal">
+  <div class="card-modal" role="dialog" aria-modal="true" aria-labelledby="modal-card-name">
     <div class="card-modal-header">
-      <h3 id="modal-card-name">Card Name</h3>
-      <button class="card-modal-close" onclick="closeCardModal()">×</button>
+      <div><h3 id="modal-card-name">Card Name</h3><div id="modal-card-sub" class="modal-sub"></div></div>
+      <button class="card-modal-close" onclick="closeCardModal()" aria-label="Close">×</button>
     </div>
     <div class="card-modal-body">
       <div class="card-modal-img"><img id="modal-card-img" src="" alt="" onclick="openLightbox(this.src)"></div>
       <div class="card-modal-field">
         <label>Quantity</label>
         <div class="qty-row">
-          <button onclick="modalUpdateQty(-1)">−</button>
+          <button onclick="modalUpdateQty(-1)" aria-label="One less">−</button>
           <span id="modal-qty">1</span>
-          <button onclick="modalUpdateQty(1)">+</button>
+          <button onclick="modalUpdateQty(1)" aria-label="One more">+</button>
         </div>
       </div>
       <div class="card-modal-field">
@@ -391,8 +462,8 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
       <div class="card-modal-actions">
         <button class="delete-btn" onclick="modalDeleteCard()">🗑️ Remove</button>
         <button onclick="modalCopyDetails()" style="flex:1;padding:12px;border:1px solid var(--border);border-radius:var(--r-md);background:var(--card);cursor:pointer;font-size:.9em">📋 Copy</button>
-        <button class="save-btn" onclick="saveAndCloseModal()">✓ Save</button>
-        <button onclick="toggleReportForm()" style="flex:1;padding:12px;border:1px solid #f5c6cb;border-radius:var(--r-md);background:var(--card)3f3;cursor:pointer;color:var(--danger);font-size:.9em">⚠️ Report</button>
+        <button class="save-btn" onclick="saveAndCloseModal()" title="Changes save as you make them">✓ Done</button>
+        <button onclick="toggleReportForm()" style="flex:1;padding:12px;border:1px solid #f5c6cb;border-radius:var(--r-md);background:#fff3f3;cursor:pointer;color:var(--danger);font-size:.9em">⚠️ Report</button>
       </div>
       <div id="report-form" style="display:none;margin-top:12px;padding:12px;background:#fef9f9;border:1px solid #f5c6cb;border-radius:var(--r-md)">
         <select id="report-type" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:var(--r-sm);margin-bottom:8px">
@@ -413,7 +484,7 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
 
 <script>
 let allCards = [], collectionCards = [], currentUser = null, userCollection = {};
-let currentGame = localStorage.getItem('collection-tcg') || null, currentSort = 'added', currentList = 'inventory', currentSetFilter = null;
+let currentGame = localStorage.getItem('collection-tcg') || null, /* null = all games */ currentSort = 'added', currentList = 'inventory', currentSetFilter = null;
 let currentPage = 1;
 const PAGE_SIZE = 50;
 
@@ -498,6 +569,8 @@ function switchList(list) {
 }
 
 async function removeFromCollection(cardId) {
+  const c = allCards.find(x => x.key === cardId);
+  if (!confirm(`Remove ${c?.name || cardId} (${cardId}) from your collection?`)) return false;
   delete userCollection[cardId];
   if (currentUser) {
     await db.collection('users').doc(currentUser.uid).collection('inventory').doc(cardId).delete();
@@ -551,6 +624,7 @@ function openCardModal(cardId) {
   const data = userCollection[cardId] || {};
   
   document.getElementById('modal-card-name').textContent = card?.name || cardId;
+  document.getElementById('modal-card-sub').textContent = [card?.officialId || card?.id || cardId, versionLabel(card || {}), card?.setId, card?.rarity].filter(Boolean).join(' · ');
   const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
   const img = proxyImg(card?.imgJp) || (card?.game === 'onepiece' ? proxyImg(card?.img) : card?.image + '/low.webp') || '';
   document.getElementById('modal-card-img').src = img;
@@ -578,7 +652,7 @@ function openCardModal(cardId) {
   
   // Show list checkboxes
   const listsHtml = listTypes.map(list => {
-    const inList = currentList === list || (currentUser ? false : !!getLocalCollection(list)[cardId]);
+    const inList = !!(data.lists && data.lists[list]);
     return `<label><input type="checkbox" ${inList ? 'checked' : ''} onchange="modalToggleList('${list}',this.checked)"> ${listLabels[list]}</label>`;
   }).join('');
   document.getElementById('modal-lists').innerHTML = listsHtml;
@@ -632,11 +706,11 @@ async function submitReport() {
   if (!type) { showReportToast('Please select an issue type', true); return; }
   if (!checkRateLimit()) { showReportToast('Too many reports — try again later', true); return; }
   if (!modalCardId) return;
-  const card = userCollection[modalCardId] || {};
+  const card = allCards.find(c => c.key === modalCardId) || {};
   try {
     await db.collection('card-reports').add({
       cardId: modalCardId, cardName: card.name || modalCardId,
-      game: card.game || 'unknown', set: card.set || '',
+      game: card.game || 'unknown', set: card.setId || card.set || '',
       issueType: type, comment: document.getElementById('report-comment').value || '',
       reportedAt: firebase.firestore.FieldValue.serverTimestamp(),
       deviceId: getDeviceId(), status: 'open'
@@ -709,7 +783,7 @@ function modalCopyDetails() {
 }
 async function modalDeleteCard() {
   if (!modalCardId) return;
-  await removeFromCollection(modalCardId);
+  if (await removeFromCollection(modalCardId) === false) return;
   closeCardModal();
 }
 
@@ -782,69 +856,61 @@ function renderCollection() {
   const content = document.getElementById('content');
   const filteredCollection = getFilteredCollection();
   const collectionIds = Object.keys(filteredCollection);
-  
-  // Get counts for tabs
-  const getListCount = list => {
-    if (list === 'inventory') return Object.keys(userCollection).length;
-    if (list === 'sets') return ''; // No count for sets tab
-    return Object.values(userCollection).filter(c => c.lists && c.lists[list]).length;
-  };
-  
-  const tabsHtml = `
-    <div class="list-tabs">
-      ${tabTypes.map(list => `
-        <button class="list-tab ${list} ${currentList === list ? 'active' : ''}" onclick="switchList('${list}')">
-          ${tabLabels[list]}<span class="count">(${getListCount(list)})</span>
-        </button>
-      `).join('')}
-    </div>
-    <div class="util-row">
-      <a href="backup.html" class="util-btn" style="text-decoration:none">💾 Backup</a>
-      <button class="util-btn" onclick="shareCollection()">🔗 Share</button>
-      <button class="util-btn" onclick="exportCollection()">📥 Export</button>
-    </div>
-`;
-  
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const cardById = new Map(allCards.map(c => [c.key, c]));
+  const inGame = c => !currentGame || c.game === currentGame;
+
+  // Tab counts follow the game filter so the number matches what's shown
+  const owned = Object.keys(userCollection).map(k => cardById.get(k)).filter(Boolean).filter(inGame);
+  const getListCount = list => list === 'inventory' ? owned.length : owned.filter(c => userCollection[c.key]?.lists?.[list]).length;
+
+  // #195 order: value first, then what you look at (tabs, game), then tools
+  const navHtml = `
+    <div class="coll-nav">
+      <div class="list-tabs" role="tablist">
+        ${tabTypes.map(list => `
+          <button class="list-tab ${list} ${currentList === list ? 'active' : ''}" role="tab" aria-selected="${currentList === list}" onclick="switchList('${list}')">
+            ${tabLabels[list]}${list === 'sets' ? '' : `<span class="count">${getListCount(list)}</span>`}
+          </button>`).join('')}
+      </div>
+      <div class="tcg-selector" role="group" aria-label="Game">
+        ${[['', 'All'], ['pokemon', '⚡ Pokémon'], ['onepiece', '🏴‍☠️ One Piece']].map(([g, label]) =>
+          `<button class="tcg-btn ${(currentGame || '') === g ? 'active' : ''}" aria-pressed="${(currentGame || '') === g}" onclick="filterByGame('${g}')">${label}</button>`).join('')}
+      </div>
+    </div>`;
+
   const emptyMessages = {
-    inventory: {icon: '📦', title: 'Your inventory is empty', desc: 'Search for cards to add them to your collection.'},
-    wishlist: {icon: '⭐', title: 'Your wishlist is empty', desc: 'Click ⭐ on cards in your inventory to add them here.'},
-    tradelist: {icon: '🔄', title: 'Your tradelist is empty', desc: 'Click 🔄 on cards in your inventory to add them here.'}
+    inventory: {icon: '📦', title: 'Your inventory is empty', desc: 'Use ＋ Add Card above, or search for cards and tap + on them.'},
+    wishlist: {icon: '⭐', title: 'Your wishlist is empty', desc: 'Open a card in your inventory and tick Wishlist.'},
+    tradelist: {icon: '🔄', title: 'Your tradelist is empty', desc: 'Open a card in your inventory and tick Tradelist.'}
   };
-  
-  // Sets completion view
+
+  // Sets completion: counted by card number (each card once, not every parallel/reprint)
   if (currentList === "sets") {
-    const game = currentGame || 'onepiece';
     const setStats = {};
-    // Build card lookup for O(1) access
-    const cardMap = {};
     for (const card of allCards) {
-      if (card.game !== game) continue;
-      cardMap[card.key] = card;
+      if (!inGame(card)) continue;
       const setId = card.setId || card.set || "unknown";
-      if (!setStats[setId]) setStats[setId] = { owned: 0, total: 0 };
-      setStats[setId].total++;
+      (setStats[setId] = setStats[setId] || { game: card.game, all: new Set(), have: new Set() }).all.add(card.id);
     }
-    for (const id of Object.keys(userCollection)) {
-      const card = cardMap[id];
-      if (!card) continue;
-      const setId = card.setId || card.set || "unknown";
-      if (setStats[setId]) setStats[setId].owned++;
+    for (const c of owned) {
+      const setId = c.setId || c.set || "unknown";
+      if (setStats[setId]) setStats[setId].have.add(c.id);
     }
-    const sets = Object.entries(setStats)
-      .filter(([,s]) => s.total > 0)
-      .sort((a,b) => (b[1].owned/Math.max(b[1].total,1)) - (a[1].owned/Math.max(a[1].total,1)));
-    
-    content.innerHTML = tabsHtml + `
+    const sets = Object.entries(setStats).map(([id, s]) => [id, { owned: s.have.size, total: s.all.size, game: s.game }])
+      .filter(([, s]) => s.total > 0)
+      .sort((a, b) => (b[1].owned / b[1].total) - (a[1].owned / a[1].total) || b[1].owned - a[1].owned);
+    content.innerHTML = navHtml + `
+      <p class="sets-note">Each card number counts once; parallels and reprints of a card you own don't add to the total.</p>
       <div class="set-progress">
         ${sets.length ? sets.map(([setId, s]) => {
           const pct = Math.round(s.owned / s.total * 100);
-          const color = pct >= 75 ? '#16a34a' : pct >= 25 ? '#f59e0b' : pct > 0 ? '#ef4444' : '#ccc';
-          const opacity = s.owned > 0 ? '1' : '0.5';
-          return `<div class="set-row" style="cursor:pointer;opacity:${opacity}" onclick="switchList('inventory');currentSetFilter='${setId}';renderCollection()">>
-            <div class="set-name">${setId}</div>
-            <div class="set-bar"><div style="width:${pct}%;background:${color}"></div></div>
-            <div class="set-pct">${s.owned}/${s.total} (${pct}%)</div>
-          </div>`;
+          const color = pct >= 75 ? '#1E7D1E' : pct >= 25 ? '#f59e0b' : pct > 0 ? '#D81111' : '#ccc';
+          return `<button class="set-row ${s.owned ? '' : 'none'}" onclick="switchList('inventory');currentSetFilter='${esc(setId)}';renderCollection()">
+            <span class="set-name">${esc(setId)}</span>
+            <span class="set-bar"><span style="width:${pct}%;background:${color}"></span></span>
+            <span class="set-pct">${s.owned}/${s.total} · ${pct}%</span>
+          </button>`;
         }).join("") : "<p style=\"text-align:center;color:var(--g3)\">No cards loaded</p>"}
       </div>`;
     return;
@@ -852,9 +918,8 @@ function renderCollection() {
 
   if (!collectionIds.length) {
     const msg = emptyMessages[currentList];
-    // Show login prompt for non-logged users
     if (!currentUser && currentList === "inventory") {
-      content.innerHTML = tabsHtml + `
+      content.innerHTML = navHtml + `
         <div class="login-overlay">
           <div class="login-bg" aria-hidden="true">${featuredCardsHtml()}</div>
           <div class="login-prompt">
@@ -874,186 +939,158 @@ function renderCollection() {
         </div>`;
       return;
     }
-    content.innerHTML = tabsHtml + `
+    content.innerHTML = navHtml + `
       <div class="empty-state">
         <div class="icon">${msg.icon}</div>
         <h2>${msg.title}</h2>
         <p>${msg.desc}</p>
-        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-          <a href="search.html" class="btn">🔍 Search Cards</a>
-        </div>
+        <a href="search.html" class="btn">🔍 Search Cards</a>
       </div>`;
     return;
   }
-  
-  // Get collection cards with full data
-  collectionCards = collectionIds.map(id => allCards.find(c => c.key === id)).filter(Boolean);
-  const syncBanner = currentUser ? '' : `<div class="sync-banner"><span>These cards are saved on this device only. Sign in to back them up and see them everywhere.</span><button onclick="signInWithGoogle()">Sign in with Google</button></div>`;
-  
-  // Apply game filter
-  let filtered = currentGame ? collectionCards.filter(c => c.game === currentGame) : collectionCards;
-  
-  // Apply set filter (from Sets tab click)
+
+  collectionCards = collectionIds.map(id => cardById.get(id)).filter(Boolean);
+  let filtered = collectionCards.filter(inGame);
   if (currentSetFilter) filtered = filtered.filter(c => (c.setId || c.set) === currentSetFilter);
-  
-  // Sort
+
+  const qtyOf = k => userCollection[k]?.qty || 1;
+  const jpy = c => getFloorJpy(c) || 0;
+  const paid = k => userCollection[k]?.purchasePrice || 0;
   if (currentSort === 'name') filtered.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
-  else if (currentSort === 'price-high') filtered.sort((a, b) => (getPrice(b) || 0) - (getPrice(a) || 0));
-  else if (currentSort === 'price-low') filtered.sort((a, b) => (getPrice(a) || 999999) - (getPrice(b) || 999999));
-  else if (currentSort === 'set') filtered.sort((a, b) => (a.setId || '').localeCompare(b.setId || '') || (a.id || '').localeCompare(b.id || ''));
+  else if (currentSort === 'price-high') filtered.sort((a, b) => jpy(b) - jpy(a));
+  else if (currentSort === 'price-low') filtered.sort((a, b) => (jpy(a) || 1e12) - (jpy(b) || 1e12));
+  else if (currentSort === 'set') filtered.sort((a, b) => (a.setId || '').localeCompare(b.setId || '') || (a.officialId || a.id || '').localeCompare(b.officialId || b.id || ''));
   else if (currentSort === 'roi') filtered.sort((a, b) => {
-    const roiA = userCollection[a.key]?.purchasePrice ? ((getFloorJpy(a)||0) - userCollection[a.key].purchasePrice) / userCollection[a.key].purchasePrice : -Infinity;
-    const roiB = userCollection[b.key]?.purchasePrice ? ((getFloorJpy(b)||0) - userCollection[b.key].purchasePrice) / userCollection[b.key].purchasePrice : -Infinity;
-    return roiB - roiA;
+    const r = c => paid(c.key) ? (jpy(c) - paid(c.key)) / paid(c.key) : -Infinity;
+    return r(b) - r(a);
   });
-  // 'added' - keep original order (most recent first for Firestore)
-  
-  // Calculate stats - scoped to current TCG filter
-  const getQty = id => userCollection[id]?.qty || 1;
+
+  // Money: yen is the base; USD only if the user picked it in settings
   const userCurrency = localStorage.getItem('tcg-currency') || 'JPY';
-  const fxRate = userCurrency === 'USD' ? 1 : 150;
-  const cSymbol = userCurrency === 'USD' ? '$' : '¥';
-  const formatPrice = p => p !== null ? cSymbol + Math.round(p * fxRate).toLocaleString() : '-';
-  const statsCards = currentGame ? collectionCards.filter(c => c.game === currentGame) : collectionCards;
-  const totalCards = statsCards.reduce((sum, c) => sum + getQty(c.key), 0);
-  const totalValue = statsCards.reduce((sum, c) => sum + (getPrice(c) || 0) * getQty(c.key), 0);
-  const estValueFmt = Math.round(totalValue * fxRate);
-  // ROI: only count cards that have a purchase price entered
-  const pricedCards = statsCards.filter(c => (userCollection[c.key]?.purchasePrice || 0) > 0);
-  const costJpy = pricedCards.reduce((sum, c) => sum + userCollection[c.key].purchasePrice * getQty(c.key), 0);
-  const pricedValueJpy = Math.round(pricedCards.reduce((sum, c) => sum + (getPrice(c) || 0) * getQty(c.key), 0) * 150);
-  const roiRaw = costJpy > 0 ? pricedValueJpy - costJpy : null;
-  const roiPct = costJpy > 0 ? Math.round((roiRaw / costJpy) * 100) : null;
-  const roiFmt = roiRaw !== null ? Math.round(roiRaw / (fxRate === 1 ? 150 : 1)) : null;
-  const costFmt = Math.round(costJpy / (fxRate === 1 ? 150 : 1));
-  
+  const money = y => userCurrency === 'USD' ? '$' + (y / 150).toLocaleString(undefined, {maximumFractionDigits: 0}) : '¥' + Math.round(y).toLocaleString();
+  const stats = collectionCards.filter(inGame);
+  const totalCards = stats.reduce((n, c) => n + qtyOf(c.key), 0);
+  const totalValue = stats.reduce((n, c) => n + jpy(c) * qtyOf(c.key), 0);
+  const noPrice = stats.filter(c => !jpy(c)).length;
+  const bought = stats.filter(c => paid(c.key) > 0);
+  const cost = bought.reduce((n, c) => n + paid(c.key) * qtyOf(c.key), 0);
+  const boughtValue = bought.reduce((n, c) => n + jpy(c) * qtyOf(c.key), 0);
+  const gain = cost ? boughtValue - cost : null;
+  const gainPct = cost ? Math.round(gain / cost * 100) : null;
+
   const proxyImg = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
   const getImg = c => proxyImg(c.imgJp) || (c.game === 'onepiece' ? proxyImg(c.img) : c.image + '/low.webp') || '';
-  
-  const setFilterBanner = currentSetFilter ? `<div style="background:#e0f2fe;padding:8px 14px;border-radius:8px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;font-size:.85em"><span>📊 Filtered: <b>${currentSetFilter}</b></span><button onclick="currentSetFilter=null;renderCollection()" style="background:none;border:none;cursor:pointer;font-size:1em">✕</button></div>` : '';
-  
-  content.innerHTML = tabsHtml + syncBanner + setFilterBanner + `
-      <div class="stat-card">
-        <div class="value">${totalCards}</div>
-        <div class="label">Total Cards</div>
-      </div>
-      <div class="stat-card">
-        <div class="value">${statsCards.length}</div>
-        <div class="label">Unique</div>
-      </div>
-      <div class="stat-card">
-        <div class="value">${cSymbol}${estValueFmt.toLocaleString()}</div>
-        <div class="label">Est. Value</div>
-      </div>${costJpy > 0 ? `
-      <div class="stat-card">
-        <div class="value">${cSymbol}${costFmt.toLocaleString()}</div>
-        <div class="label">Purchase Value</div>
-      </div>
-      <div class="stat-card">
-        <div class="value" style="color:${roiFmt >= 0 ? '#16a34a' : '#dc2626'}">${cSymbol}${roiFmt >= 0 ? '+' : ''}${roiFmt.toLocaleString()}</div>
-        <div class="label" style="color:${roiFmt >= 0 ? '#16a34a' : '#dc2626'}">${roiPct >= 0 ? '+' : ''}${roiPct}% ROI</div>
-      </div>` : ''}
-    </div>
-    
-    <div class="filters">
-      <div class="filter-left">
+  const idLine = c => `${esc(c.officialId || c.id)}${versionLabel(c) ? ` · <span class="ver">${versionLabel(c)}</span>` : ''}`;
+  const priceHtml = c => jpy(c) ? `${money(jpy(c))}${priceAgeLabel(c)}` : '<span class="no-price" title="No shop listing found yet">no price</span>';
 
-        <div class="filter-group">
-          <span class="filter-label">Sort:</span>
-          <select class="filter" id="sort-filter" onchange="sortBy(this.value)">
-            <option value="added" ${currentSort === 'added' ? 'selected' : ''}>Recently Added</option>
-            <option value="name" ${currentSort === 'name' ? 'selected' : ''}>Name</option>
-            <option value="price-high" ${currentSort === 'price-high' ? 'selected' : ''}>Price: High → Low</option>
-            <option value="price-low" ${currentSort === 'price-low' ? 'selected' : ''}>Price: Low → High</option>
-            <option value="set" ${currentSort === 'set' ? 'selected' : ''}>Set</option>
-            <option value="roi" ${currentSort === 'roi' ? 'selected' : ''}>ROI: High → Low</option>
-          </select>
-        </div>
-        <div class="view-toggle">
-          <button class="view-btn ${currentView === 'grid' ? 'active' : ''}" data-view="grid" onclick="toggleView('grid')">▦ Grid</button>
-          <button class="view-btn ${currentView === 'list' ? 'active' : ''}" data-view="list" onclick="toggleView('list')">☰ List</button>
-        </div>
+  const syncBanner = currentUser ? '' : `<div class="sync-banner"><span>Saved on this device only.</span><button onclick="signInWithGoogle()">Sign in to back up</button></div>`;
+  const setFilterBanner = currentSetFilter ? `<div class="set-filter"><span>📊 Set <b>${esc(currentSetFilter)}</b></span><button onclick="currentSetFilter=null;renderCollection()" aria-label="Clear set filter">✕</button></div>` : '';
+
+  const hero = `
+    <section class="coll-hero" aria-label="Collection value">
+      <div class="coll-value">${money(totalValue)}</div>
+      <div class="coll-value-label">estimated value${currentGame ? (currentGame === 'onepiece' ? ' · One Piece' : ' · Pokémon') : ''}</div>
+      <div class="coll-sub">
+        <span><b>${totalCards}</b> cards</span><span><b>${stats.length}</b> unique</span>
+        ${cost ? `<span>paid <b>${money(cost)}</b></span><span class="${gain >= 0 ? 'up' : 'down'}"><b>${gain >= 0 ? '+' : ''}${money(gain)}</b> (${gainPct >= 0 ? '+' : ''}${gainPct}%)</span>` : ''}
       </div>
-    </div>
-    
+      ${noPrice ? `<div class="coll-note">${noPrice} card${noPrice > 1 ? 's have' : ' has'} no price yet and count ¥0.</div>` : ''}
+    </section>`;
+
+  const toolbar = `
+    <div class="filters">
+      <select class="filter" id="sort-filter" onchange="sortBy(this.value)" aria-label="Sort">
+        <option value="added" ${currentSort === 'added' ? 'selected' : ''}>Recently added</option>
+        <option value="price-high" ${currentSort === 'price-high' ? 'selected' : ''}>Price: high → low</option>
+        <option value="price-low" ${currentSort === 'price-low' ? 'selected' : ''}>Price: low → high</option>
+        <option value="name" ${currentSort === 'name' ? 'selected' : ''}>Name</option>
+        <option value="set" ${currentSort === 'set' ? 'selected' : ''}>Set / ID</option>
+        <option value="roi" ${currentSort === 'roi' ? 'selected' : ''}>Gain: high → low</option>
+      </select>
+      <div class="view-toggle" role="group" aria-label="View">
+        <button class="view-btn ${currentView === 'grid' ? 'active' : ''}" data-view="grid" onclick="toggleView('grid')" aria-pressed="${currentView === 'grid'}">▦ Grid</button>
+        <button class="view-btn ${currentView === 'list' ? 'active' : ''}" data-view="list" onclick="toggleView('list')" aria-pressed="${currentView === 'list'}">☰ List</button>
+      </div>
+      <div class="util-row">
+        <button class="util-btn" onclick="exportCollection()">📥 Export</button>
+        <a href="backup.html" class="util-btn">💾 Backup</a>
+        <button class="util-btn" onclick="shareCollection()">🔗 Share</button>
+      </div>
+    </div>`;
+
+  const grid = `
     <div class="card-grid ${currentView === 'list' ? 'hidden' : ''}">
       ${filtered.map(c => {
-        const qty = getQty(c.key);
-        const cond = userCollection[c.key]?.condition || 'NM';
-        const lang = userCollection[c.key]?.language || 'JP';
+        const qty = qtyOf(c.key), cond = userCollection[c.key]?.condition || 'NM', lang = userCollection[c.key]?.language || 'JP';
+        const pp = paid(c.key), roi = pp && jpy(c) ? jpy(c) - pp : null;
         return `
         <div class="card-item" onclick="openCardModal('${c.key}')">
-          <button class="remove-btn" onclick="event.stopPropagation();removeFromCollection('${c.key}')" title="Remove">×</button>
+          <button class="remove-btn" onclick="event.stopPropagation();removeFromCollection('${c.key}')" aria-label="Remove ${esc(c.name)}">×</button>
           ${qty > 1 ? `<span class="qty-badge">×${qty}</span>` : ''}
-          <span class="condition-badge ${cond.toLowerCase()}" onclick="event.stopPropagation();cycleCondition(event,'${c.key}')" title="Click to change">${cond}</span>
+          <span class="condition-badge ${cond.toLowerCase()}" title="${conditionLabels[cond] || cond}">${cond}</span>
+          <img src="${getImg(c)}" alt="${esc(c.name)}" loading="lazy" referrerpolicy="no-referrer">
           <div class="qty-controls" onclick="event.stopPropagation()">
-            <button class="qty-btn" onclick="updateQuantity('${c.key}',-1)">−</button>
-            <button class="qty-btn" onclick="updateQuantity('${c.key}',1)">+</button>
+            <button class="qty-btn" onclick="updateQuantity('${c.key}',-1)" aria-label="One less">−</button>
+            <button class="qty-btn" onclick="updateQuantity('${c.key}',1)" aria-label="One more">+</button>
           </div>
-          <img src="${getImg(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
-          <div class="name">${c.name || c.id}</div>
-          <div class="meta">${c.setId} · ${c.rarity || '?'} · ${lang}</div>
-          <div class="price">${formatPrice(getPrice(c))}${priceAgeLabel(c)}${qty > 1 ? ` (×${qty})` : ''}${(() => {
-            const pp = userCollection[c.key]?.purchasePrice;
-            if (!pp || !getPrice(c)) return '';
-            const roi = Math.round(getPrice(c) * 150) - pp;
-            return ` <span style="font-size:.75em;color:${roi >= 0 ? '#16a34a' : '#dc2626'}">${roi >= 0 ? '+' : ''}¥${roi.toLocaleString()}</span>`;
-          })()}</div>
+          <div class="name">${esc(c.name || c.id)}</div>
+          <div class="meta">${idLine(c)}</div>
+          <div class="price">${priceHtml(c)}${roi !== null ? ` <span class="${roi >= 0 ? 'up' : 'down'}">${roi >= 0 ? '+' : ''}${money(roi)}</span>` : ''}</div>
         </div>`;
       }).join('')}
-    </div>
-    
+    </div>`;
+
+  const list = `
     <div class="card-list ${currentView === 'list' ? 'active' : ''}">
       <table>
         <thead>
           <tr>
-            <th style="width:40px"></th>
-            <th onclick="sortBy('name')" class="${currentSort === 'name' ? 'sorted' : ''}">Card <span class="sort-icon">${currentSort === 'name' ? '▲' : '▽'}</span></th>
-            <th onclick="sortBy('price-high')" class="${currentSort.includes('price') ? 'sorted' : ''}" style="width:70px">Price <span class="sort-icon">${currentSort === 'price-high' ? '▼' : '▽'}</span></th>
-            <th style="width:80px">Qty</th>
-            <th class="desktop-col" style="width:70px">Cond</th>
-            <th class="desktop-col" style="width:55px">Lang</th>
-            <th class="desktop-col" style="width:50px">Lists</th>
-            <th style="width:30px"></th>
+            <th class="img-col"><span class="sr-only">Image</span></th>
+            <th onclick="sortBy('name')" class="${currentSort === 'name' ? 'sorted' : ''}" aria-sort="${currentSort === 'name' ? 'ascending' : 'none'}">Card</th>
+            <th onclick="sortBy('price-high')" class="num ${currentSort.includes('price') ? 'sorted' : ''}" aria-sort="${currentSort === 'price-high' ? 'descending' : currentSort === 'price-low' ? 'ascending' : 'none'}">Price</th>
+            <th class="num" title="What you paid per card — click a cell to type it">Paid</th>
+            <th>Qty</th>
+            <th class="desktop-col">Cond</th>
+            <th class="desktop-col">Lang</th>
+            <th class="desktop-col">Lists</th>
+            <th><span class="sr-only">Remove</span></th>
           </tr>
         </thead>
         <tbody>
           ${filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE).map(c => {
-            const qty = getQty(c.key);
-            const cond = userCollection[c.key]?.condition || 'NM';
-            const lang = userCollection[c.key]?.language || 'JP';
-            const inWish = userCollection[c.key]?.lists?.wishlist;
-            const inTrade = userCollection[c.key]?.lists?.tradelist;
+            const qty = qtyOf(c.key), cond = userCollection[c.key]?.condition || 'NM', lang = userCollection[c.key]?.language || 'JP';
+            const inWish = userCollection[c.key]?.lists?.wishlist, inTrade = userCollection[c.key]?.lists?.tradelist, pp = paid(c.key);
             return `
             <tr>
               <td onclick="openCardModal('${c.key}')"><img src="${getImg(c)}" alt="" loading="lazy" referrerpolicy="no-referrer"></td>
-              <td onclick="openCardModal('${c.key}')"><strong>${c.name || c.id}</strong><br><a href="search.html?game=${c.game}&q=${c.id}" class="card-id-link" onclick="event.stopPropagation()">${c.id}</a>${c.rarity ? ' <small style="color:var(--g4)">· '+c.rarity+'</small>' : ''}</td>
-              <td onclick="openCardModal('${c.key}')">${formatPrice(getPrice(c))}${priceAgeLabel(c)}</td>
+              <td onclick="openCardModal('${c.key}')"><strong>${esc(c.name || c.id)}</strong><br><small class="idline">${idLine(c)}${c.rarity ? ' · ' + esc(c.rarity) : ''}</small></td>
+              <td class="num price" onclick="openCardModal('${c.key}')">${priceHtml(c)}</td>
+              <td class="num paid-cell" onclick="event.stopPropagation();editPaid(this,'${c.key}')" title="Click to type what you paid">${pp ? '¥' + pp.toLocaleString() : '<span class="paid-empty">＋ ¥</span>'}</td>
               <td onclick="event.stopPropagation()">
                 <div class="qty-cell">
-                  <button class="qty-btn" onclick="updateQuantity('${c.key}',-1)">−</button>
+                  <button class="qty-btn" onclick="updateQuantity('${c.key}',-1)" aria-label="One less">−</button>
                   <span class="qty-val">${qty}</span>
-                  <button class="qty-btn" onclick="updateQuantity('${c.key}',1)">+</button>
+                  <button class="qty-btn" onclick="updateQuantity('${c.key}',1)" aria-label="One more">+</button>
                 </div>
               </td>
               <td class="desktop-col" onclick="event.stopPropagation()">
-                <select class="cond-select" onchange="inlineUpdateField('${c.key}','condition',this.value)">
+                <select class="cond-select" aria-label="Condition" onchange="inlineUpdateField('${c.key}','condition',this.value)">
                   ${['NM','LP','MP','HP','DMG'].map(v => `<option value="${v}" ${cond === v ? 'selected' : ''}>${v}</option>`).join('')}
                 </select>
               </td>
               <td class="desktop-col" onclick="event.stopPropagation()">
-                <select class="lang-select" onchange="inlineUpdateField('${c.key}','language',this.value)">
+                <select class="lang-select" aria-label="Language" onchange="inlineUpdateField('${c.key}','language',this.value)">
                   <option value="JP" ${lang === 'JP' ? 'selected' : ''}>JP</option>
                   <option value="EN" ${lang === 'EN' ? 'selected' : ''}>EN</option>
                 </select>
               </td>
               <td class="desktop-col" onclick="event.stopPropagation()">
                 <div class="list-icons">
-                  <span class="list-icon ${inWish ? 'active' : ''}" onclick="inlineToggleList('${c.key}','wishlist')" title="Wishlist">⭐</span>
-                  <span class="list-icon ${inTrade ? 'active' : ''}" onclick="inlineToggleList('${c.key}','tradelist')" title="Tradelist">🔄</span>
+                  <button class="list-icon ${inWish ? 'active' : ''}" aria-pressed="${!!inWish}" onclick="inlineToggleList('${c.key}','wishlist')" title="Wishlist" aria-label="Wishlist">⭐</button>
+                  <button class="list-icon ${inTrade ? 'active' : ''}" aria-pressed="${!!inTrade}" onclick="inlineToggleList('${c.key}','tradelist')" title="Tradelist" aria-label="Tradelist">🔄</button>
                 </div>
               </td>
-              <td onclick="event.stopPropagation()"><a href="search.html?game=${c.game}&q=${c.id}" class="detail-btn" title="View card details" aria-label="View card details">🔗</a><button class="delete-btn" onclick="removeFromCollection('${c.key}')" title="Remove">🗑️</button></td>
+              <td onclick="event.stopPropagation()"><button class="delete-btn" onclick="removeFromCollection('${c.key}')" aria-label="Remove ${esc(c.name)}">🗑️</button></td>
             </tr>`;
           }).join('')}
         </tbody>
@@ -1063,10 +1100,38 @@ function renderCollection() {
           <button onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>← Prev</button>
           <span>Page ${currentPage} of ${Math.ceil(filtered.length / PAGE_SIZE)}</span>
           <button onclick="goToPage(${currentPage + 1})" ${currentPage >= Math.ceil(filtered.length / PAGE_SIZE) ? 'disabled' : ''}>Next →</button>
-        </div>
-      ` : ''}
-    </div>
-  `;
+        </div>` : ''}
+    </div>`;
+
+  content.innerHTML = hero + syncBanner + navHtml + setFilterBanner + toolbar +
+    (filtered.length ? grid + list : `<div class="empty-state"><p>No ${currentGame === 'pokemon' ? 'Pokémon' : currentGame === 'onepiece' ? 'One Piece' : ''} cards in this list.</p></div>`);
+}
+
+// List view "Paid" cell (#195): click → type the price you paid per card → Enter/leave to save
+function editPaid(td, key) {
+  if (td.querySelector('input')) return;
+  const cur = userCollection[key]?.purchasePrice || '';
+  td.innerHTML = `<input type="number" inputmode="numeric" min="0" step="1" class="paid-input" value="${cur}" aria-label="Price paid in yen">`;
+  const input = td.querySelector('input');
+  input.focus(); input.select();
+  let done = false;
+  const save = async commit => {
+    if (done) return; done = true;
+    const v = Math.max(0, Math.round(Number(input.value) || 0));
+    if (commit && v !== (userCollection[key]?.purchasePrice || 0)) await inlineUpdateField(key, 'purchasePrice', v);
+    renderCollection();
+    if (commit === 'next') {  // Enter moves down to the next row, like a spreadsheet
+      const cells = [...document.querySelectorAll('.paid-cell')];
+      const i = cells.findIndex(c => c.getAttribute('onclick').includes(`'${key}'`));
+      if (cells[i + 1]) cells[i + 1].click();
+    }
+  };
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); save('next'); }
+    else if (e.key === 'Escape') { save(false); }
+    else if (e.key === 'Tab') { e.preventDefault(); save('next'); }
+  });
+  input.addEventListener('blur', () => save(true));
 }
 
 function goToPage(page) {
@@ -1076,8 +1141,8 @@ function goToPage(page) {
 }
 
 function filterByGame(game) {
-  currentGame = game;
-  localStorage.setItem('collection-tcg', game);
+  currentGame = game || null;
+  if (currentGame) localStorage.setItem('collection-tcg', currentGame); else localStorage.removeItem('collection-tcg');
   currentPage = 1;
   updateTcgSelector();
   renderCollection();
@@ -1196,12 +1261,6 @@ let authChecked = false;
 
 function renderIfReady() {
   if (cardsLoaded && authChecked) {
-    if (!currentGame) {
-      var op = 0, pk = 0;
-      for (var id in userCollection) { var c = allCards.find(a => a.key === id); if (c) c.game === 'onepiece' ? op++ : pk++; }
-      currentGame = pk > op ? 'pokemon' : 'onepiece';
-      updateTcgSelector();
-    }
     renderCollection();
   }
 }

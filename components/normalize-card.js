@@ -149,3 +149,15 @@ async function loadAllCards() {
   all.forEach(c => { c.key = cardKey(c); c.setId = c.setId || c.set; });
   return all;
 }
+
+/** Human label for a card's version ('' for the regular card): "Parallel 2", "Super parallel", "Reprint"… */
+function versionLabel(c) {
+  const f = String((c && c.finish) || 'regular');
+  if (f === 'regular') return '';
+  let m;
+  if ((m = f.match(/^parallel-?(\d+)?$/))) return 'Parallel' + (m[1] ? ' ' + m[1] : '');
+  if (f === 'super-parallel') return 'Super parallel';
+  if (f.startsWith('reprint')) return 'Reprint';
+  if (f === 'alternate-art') return 'Alt art';
+  return f.replace(/-/g, ' ');
+}
