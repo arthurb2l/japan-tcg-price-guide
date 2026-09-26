@@ -37,6 +37,23 @@ function getFloorUsd(c) {
   return jpy ? jpy / 150 : 0;
 }
 
+/**
+ * Age tag for the displayed price (Arthur, 2026-09-26: flag after 30 days).
+ * '' when checked within 30 days, else HTML like "· Apr" (or "· Apr '25" for another year).
+ */
+function priceAgeLabel(c) {
+  const p = c && c.pricing;
+  if (!p || !getFloorJpy(c)) return '';
+  const usedLastKnown = !(p.computed && p.computed.jpy) && p.lastKnown && p.lastKnown.jpy;
+  const d = usedLastKnown ? p.lastKnown.date : (p.updated || (p.regional && p.regional.JP && p.regional.JP.updated));
+  if (!d) return '';
+  const t = new Date(d);
+  if (isNaN(t) || (Date.now() - t) / 864e5 <= 30) return '';
+  const mon = t.toLocaleString('en', { month: 'short' });
+  const yr = t.getFullYear() !== new Date().getFullYear() ? " '" + String(t.getFullYear()).slice(2) : '';
+  return ` <span class="price-age" title="Price last checked ${d}">· ${mon}${yr}</span>`;
+}
+
 /** Format price for display. currency: 'JPY'|'USD'|'EUR' */
 function formatPrice(c, currency) {
   const jpy = getFloorJpy(c);

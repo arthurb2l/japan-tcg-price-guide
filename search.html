@@ -32,7 +32,7 @@
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 <script src="components/normalize-card.js?v=177"></script>
-<script src="/japan-tcg-price-guide/components/price-utils.js?v=floor2"></script>
+<script src="/japan-tcg-price-guide/components/price-utils.js?v=age1"></script>
 <script>
 const firebaseConfig = {
   apiKey: "AIzaSyCLzia4937bSBbjsT0JUY-PAgnzygTYj1s",
@@ -686,9 +686,10 @@ async function saveToCloud() {
 function formatPrice(card) {
   const jpy = getFloorJpy(card);
   if (!jpy) return '-';
-  if (currency === 'USD') return '$' + (jpy / 150).toFixed(2);
-  if (currency === 'EUR') return '€' + (jpy / 162).toFixed(2);
-  return '¥' + jpy.toLocaleString();
+  const age = priceAgeLabel(card);
+  if (currency === 'USD') return '$' + (jpy / 150).toFixed(2) + age;
+  if (currency === 'EUR') return '€' + (jpy / 162).toFixed(2) + age;
+  return '¥' + jpy.toLocaleString() + age;
 }
 
 function setCurrency(c) {
