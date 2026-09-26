@@ -58,16 +58,13 @@
 <script src="/japan-tcg-price-guide/components/header.js?v=174"></script>
 <script src="/japan-tcg-price-guide/components/price-utils.js"></script>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
+<script src="/japan-tcg-price-guide/components/normalize-card.js?v=177"></script>
 <script>
 let allCards = [];
 const trade = { give: [], get: [] };
 
 async function init() {
-  const [pk, op] = await Promise.all([
-    fetch('/japan-tcg-price-guide/data/pokemon.json').then(r => r.json()),
-    fetch('/japan-tcg-price-guide/data/onepiece.json').then(r => r.json())
-  ]);
-  allCards = [...pk, ...op];
+  allCards = await loadAllCards();
 }
 
 function getPrice(c) { return getFloorUsd(c) || 0; }
@@ -77,12 +74,12 @@ function searchCard(input, side) {
   if (q.length < 2) { document.getElementById(side + 'Suggestions').innerHTML = ''; return; }
   const matches = allCards.filter(c => c.name?.toLowerCase().includes(q) || c.id.toLowerCase().includes(q)).slice(0, 5);
   document.getElementById(side + 'Suggestions').innerHTML = matches.map(c => 
-    `<div style="padding:8px;cursor:pointer;border-bottom:1px solid #eee" onclick="addCard('${c.id}','${side}')">${c.name} - $${getPrice(c).toFixed(2)}</div>`
+    `<div style="padding:8px;cursor:pointer;border-bottom:1px solid #eee" onclick="addCard('${c.key}','${side}')">${c.name} <small style=\"color:#666\">${c.officialId || c.id}</small> - $${getPrice(c).toFixed(2)}</div>`
   ).join('');
 }
 
 function addCard(id, side) {
-  const card = allCards.find(c => c.id === id);
+  const card = allCards.find(c => c.key === id);
   if (!card) return;
   trade[side].push(card);
   document.getElementById(side + 'Input').value = '';

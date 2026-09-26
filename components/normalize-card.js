@@ -124,3 +124,25 @@ async function persistInventoryMoves(db, uid, coll, moved) {
   for (const [oldKey, newKey] of moved) { batch.delete(inv.doc(oldKey)); batch.set(inv.doc(newKey), coll[newKey]); }
   await batch.commit();
 }
+
+/**
+ * Load every card (Pokemon shards + One Piece cache) with game + key set.
+ * Shared by pages that only need a flat card list (stats, goals, trade, favorites,
+ * new-releases) — they used to fetch data/pokemon.json + data/onepiece.json, which don't exist.
+ */
+async function loadAllCards() {
+  const base = location.pathname.includes('/japan-tcg-price-guide/') ? '/japan-tcg-price-guide' : '';
+  const j = u => fetch(`${base}/data/${u}`).then(r => r.json());
+  let pokemon = [];
+  try {
+    const manifest = await j('shards/manifest.json');
+    const shards = await Promise.all(Object.values(manifest.shards).map(s => j(`shards/${s.file}`)));
+    pokemon = shards.flatMap(s => Object.values(s.sets).flat());
+  } catch (e) {
+    pokemon = Object.values((await j('brain-cache.json')).sets).flat();
+  }
+  const op = deduplicateOPCards(Object.values((await j('onepiece-cache.json')).sets).flat().map(normalizeOPCard));
+  const all = [...pokemon.map(c => ({ ...c, game: 'pokemon' })), ...op.map(c => ({ ...c, game: 'onepiece' }))];
+  all.forEach(c => { c.key = cardKey(c); c.setId = c.setId || c.set; });
+  return all;
+}

@@ -46,15 +46,13 @@
 <footer id="site-footer"></footer>
 <script src="/japan-tcg-price-guide/components/header.js?v=174"></script>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
+<script src="/japan-tcg-price-guide/components/normalize-card.js?v=177"></script>
+<script src="/japan-tcg-price-guide/components/price-utils.js"></script>
 <script>
 let allCards = [];
 
 async function init() {
-  const [pk, op] = await Promise.all([
-    fetch('/japan-tcg-price-guide/data/pokemon.json').then(r => r.json()),
-    fetch('/japan-tcg-price-guide/data/onepiece.json').then(r => r.json())
-  ]);
-  allCards = [...pk, ...op];
+  allCards = await loadAllCards();
   renderGoals();
 }
 
@@ -74,12 +72,12 @@ function renderGoals() {
     if (g.type === 'set') {
       const setCards = allCards.filter(c => c.setId === g.target);
       target = setCards.length;
-      current = setCards.filter(c => collIds.includes(c.id)).length;
+      current = setCards.filter(c => collIds.includes(c.key)).length;
       label = `Complete ${g.target}`;
     } else if (g.type === 'value') {
       target = parseFloat(g.target);
-      const getPrice = c => c.pricing?.usd || c.pricing?.tcgplayer?.normal?.marketPrice || 0;
-      current = allCards.filter(c => collIds.includes(c.id)).reduce((sum, c) => sum + getPrice(c), 0);
+      const getPrice = c => getFloorUsd(c) || 0;
+      current = allCards.filter(c => collIds.includes(c.key)).reduce((sum, c) => sum + getPrice(c), 0);
       label = `Reach $${target} value`;
     } else if (g.type === 'count') {
       target = parseInt(g.target);

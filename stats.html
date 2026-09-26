@@ -38,6 +38,8 @@
 <footer id="site-footer"></footer>
 <script src="/japan-tcg-price-guide/components/header.js?v=174"></script>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
+<script src="/japan-tcg-price-guide/components/normalize-card.js?v=177"></script>
+<script src="/japan-tcg-price-guide/components/price-utils.js"></script>
 <script>
 async function loadStats() {
   const coll = JSON.parse(localStorage.getItem('tcg_inventory') || '{}');
@@ -48,18 +50,14 @@ async function loadStats() {
     return;
   }
   
-  const [pk, op] = await Promise.all([
-    fetch('/japan-tcg-price-guide/data/pokemon.json').then(r => r.json()),
-    fetch('/japan-tcg-price-guide/data/onepiece.json').then(r => r.json())
-  ]);
-  const cardMap = Object.fromEntries([...pk, ...op].map(c => [c.id, c]));
+  const cardMap = Object.fromEntries((await loadAllCards()).map(c => [c.key, c]));
   
   const cards = ids.map(id => cardMap[id]).filter(Boolean);
-  const getPrice = c => c.pricing?.usd || c.pricing?.tcgplayer?.normal?.marketPrice || 0;
+  const getPrice = c => getFloorUsd(c) || 0;
   
   // Stats
   const totalCards = ids.reduce((sum, id) => sum + (coll[id]?.qty || 1), 0);
-  const totalValue = cards.reduce((sum, c) => sum + getPrice(c) * (coll[c.id]?.qty || 1), 0);
+  const totalValue = cards.reduce((sum, c) => sum + getPrice(c) * (coll[c.key]?.qty || 1), 0);
   const pkCount = cards.filter(c => c.game === 'pokemon').length;
   const opCount = cards.filter(c => c.game === 'onepiece').length;
   

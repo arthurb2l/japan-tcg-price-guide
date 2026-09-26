@@ -32,6 +32,7 @@
 <script src="/japan-tcg-price-guide/components/header.js?v=174"></script>
 <script src="/japan-tcg-price-guide/components/price-utils.js"></script>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
+<script src="/japan-tcg-price-guide/components/normalize-card.js?v=177"></script>
 <script>
 async function loadFavorites() {
   try {
@@ -41,18 +42,15 @@ async function loadFavorites() {
     return;
   }
   
-  const [pkRes, opRes] = await Promise.all([
-    fetch('/japan-tcg-price-guide/data/pokemon.json'),
-    fetch('/japan-tcg-price-guide/data/onepiece.json')
-  ]);
-  const allCards = [...await pkRes.json(), ...await opRes.json()];
-  const cardMap = Object.fromEntries(allCards.map(c => [c.id, c]));
+  const allCards = await loadAllCards();
+  const cardMap = {};
+  allCards.forEach(c => { if (!cardMap[c.id]) cardMap[c.id] = c; });
   
   document.getElementById("cardGrid").innerHTML = favs.map(id => {
     const c = cardMap[id];
     if (!c) return '';
     return `<a href="search.html?game=${c.game}&q=${encodeURIComponent(id)}" class="card-tile">
-      <img src="${c.images?.small || c.image}" alt="${c.name}">
+      <img src="${c.images?.small || (c.image ? c.image + '/low.webp' : (c.imgJp || c.img) ? (/^https?:/.test(c.imgJp || c.img) ? 'https://wsrv.nl/?url=' + encodeURIComponent(c.imgJp || c.img) : (c.imgJp || c.img)) : '')}" loading="lazy" referrerpolicy="no-referrer" alt="${c.name}">
       <div class="name">${c.name}</div>
     </a>`;
   }).join('');

@@ -36,24 +36,26 @@
 <footer id="site-footer"></footer>
 <script src="/japan-tcg-price-guide/components/header.js?v=174"></script>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
+<script src="/japan-tcg-price-guide/components/normalize-card.js?v=177"></script>
 <script>
 async function loadSets() {
-  const [pkRes, opRes] = await Promise.all([
-    fetch('/japan-tcg-price-guide/data/pokemon.json'),
-    fetch('/japan-tcg-price-guide/data/onepiece.json')
-  ]);
-  const pk = await pkRes.json();
-  const op = await opRes.json();
+  const all = await loadAllCards();
   
   // Group by set
   const sets = {};
-  [...pk, ...op].forEach(c => {
+  all.forEach(c => {
+    if (!c.setId) return;
     if (!sets[c.setId]) sets[c.setId] = { id: c.setId, game: c.game, cards: [], logo: c.setLogo };
     sets[c.setId].cards.push(c);
   });
   
-  // Sort by set ID (newer sets have higher numbers typically)
-  const sorted = Object.values(sets).sort((a,b) => b.id.localeCompare(a.id)).slice(0, 10);
+  // No release dates in the data: newest = highest-numbered main sets per game
+  // (One Piece OP-NN boosters, Pokemon SVn Japanese sets). Plain string sort put 2014 XY sets first.
+  const num = (id, re) => { const m = id.match(re); return m ? parseFloat(m[1]) + (m[2] ? m[2].charCodeAt(0) / 1000 : 0) : -1; };
+  const latest = (game, re, n) => Object.values(sets).filter(s => s.game === game && num(s.id, re) >= 0)
+    .sort((a, b) => num(b.id, re) - num(a.id, re)).slice(0, n);
+  const sorted = [...latest('onepiece', /^OP-(\d+)()$/, 5), ...latest('pokemon', /^SV(\d+)([a-zA-Z]?)$/, 5)];
+  const img = c => c.image ? c.image + '/low.webp' : (c.imgJp || c.img) ? (/^https?:/.test(c.imgJp || c.img) ? 'https://wsrv.nl/?url=' + encodeURIComponent(c.imgJp || c.img) : (c.imgJp || c.img)) : '';
   
   document.getElementById('setList').innerHTML = sorted.map(s => `
     <div class="set-card">
@@ -65,7 +67,7 @@ async function loadSets() {
         </div>
       </div>
       <div class="set-cards">
-        ${s.cards.slice(0, 8).map(c => `<img src="${c.images?.small || c.image}" alt="${c.name}">`).join('')}
+        ${s.cards.filter(img).slice(0, 8).map(c => `<img src="${img(c)}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">`).join('')}
       </div>
       <a href="search.html?game=${s.game}&set=${encodeURIComponent(s.id)}" class="view-all">View all ${s.cards.length} cards →</a>
     </div>
