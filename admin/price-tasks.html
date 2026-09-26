@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Price Tasks — PokePiece Admin</title>
+<meta name="robots" content="noindex">
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="/japan-tcg-price-guide/components/normalize-card.js?v=179"></script>
+<script src="/japan-tcg-price-guide/components/price-utils.js?v=age2"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f2f5;color:#1a1a2e;padding:20px;max-width:1200px;margin:0 auto}
+.auth-gate{text-align:center;padding:80px 20px}
+.auth-gate button{padding:10px 24px;font-size:1em;border:1px solid #ddd;border-radius:8px;cursor:pointer;background:#fff}
+h1{font-size:1.4em;margin-bottom:4px}
+.subtitle{color:#666;font-size:.85em;margin-bottom:16px}
+.tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.tab{padding:8px 16px;border:2px solid #ddd;border-radius:8px;cursor:pointer;font-weight:600;font-size:.9em;background:#fff}
+.tab.active{border-color:#4A90D9;background:#e8f0fe;color:#1a56db}
+.help{background:#fff;border-left:4px solid #D81111;border-radius:6px;padding:10px 14px;font-size:.85em;margin-bottom:14px;line-height:1.5}
+.controls{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.controls input,.controls select{padding:6px 10px;border:1px solid #ddd;border-radius:6px;font-size:.85em}
+.task{background:#fff;border-radius:10px;padding:10px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start;box-shadow:0 1px 3px rgba(0,0,0,.08);flex-wrap:wrap}
+.task img{width:84px;height:117px;object-fit:cover;border-radius:6px;background:#eee}
+.task .info{min-width:180px;flex:1;font-size:.85em;line-height:1.5}
+.task .info b{font-size:1.05em}
+.task a{color:#1976d2;text-decoration:none;margin-right:10px}
+.cands{display:flex;gap:8px;flex-wrap:wrap}
+.cand{border:2px solid #e5e7eb;border-radius:8px;padding:4px;width:110px;font-size:.72em;text-align:center;cursor:pointer;background:#fff}
+.cand img{width:100%;height:auto;aspect-ratio:5/7}
+.cand.picked{border-color:#16a34a;background:#f0fdf4}
+.cand .p{font-weight:700;color:#1E7D1E;font-size:1.1em}
+.btn{background:#222;color:#fff;border:none;border-radius:6px;padding:8px 14px;cursor:pointer;font-size:.85em}
+.more{text-align:center;margin:14px 0}
+</style>
+</head>
+<body>
+<div class="auth-gate" id="auth-gate"><h1>🔒 Admin</h1><p style="margin:20px 0;color:#666">Sign in with the admin account.</p><button onclick="signIn()">Sign in with Google</button></div>
+<div id="dashboard" style="display:none">
+  <h1>💴 Price tasks</h1>
+  <div class="subtitle" id="subtitle">Loading…</div>
+  <div class="tabs" id="tabs"></div>
+  <div class="help" id="help"></div>
+  <div class="controls">
+    <input id="q" placeholder="Filter by ID, name or set…" oninput="render(true)">
+    <select id="set" onchange="render(true)"><option value="">All sets</option></select>
+    <button class="btn" id="copyBtn" style="display:none" onclick="copyPicks()">📋 Copy picks for Claude</button>
+  </div>
+  <div id="list"></div>
+  <div class="more"><button class="btn" id="moreBtn" onclick="shown+=40;render()">Show more</button></div>
+</div>
+<script>
+// Admin queue for prices the automation couldn't settle (#78, Arthur 2026-09-26):
+//  - "No price": no shop listing found (a rarity guess or nothing). Links open the shops' searches.
+//  - "Version unclear": several near-identical versions (e.g. gold vs silver) whose photo match
+//    was not certain. Pick the right listing; picks are copied as JSON and applied by the sync
+//    (data/prices/version-overrides.json).
+const ADMIN_UIDS = ['kkECBly8lgVnrw9flUBouBMzjEh2'];
+firebase.initializeApp({ apiKey: "AIzaSyCLzia4937bSBbjsT0JUY-PAgnzygTYj1s", authDomain: "japan-tcg-price-guide.firebaseapp.com", projectId: "japan-tcg-price-guide" });
+const auth = firebase.auth();
+function signIn() { auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()); }
+auth.onAuthStateChanged(user => {
+  if (user && (ADMIN_UIDS.includes(user.uid) || user.email === 'arthur.brejon@gmail.com')) {
+    document.getElementById('auth-gate').style.display = 'none';
+    document.getElementById('dashboard').style.display = 'block';
+    load();
+  } else if (user) {
+    document.getElementById('auth-gate').innerHTML = '<h1>⛔ Not Authorized</h1>';
+  }
+});
+
+const B = '/japan-tcg-price-guide';
+const proxy = u => u && /^https?:/.test(u) ? `https://wsrv.nl/?url=${encodeURIComponent(u)}&w=200` : (u || '');
+const yyImg = id => `https://card.yuyu-tei.jp/opc/100_140/${id}.jpg`;
+let cards = [], review = {}, tab = 'missing', shown = 40;
+const picks = JSON.parse(localStorage.getItem('price_picks') || '{}');
+
+async function load() {
+  const [cache, vp] = await Promise.all([fetch(`${B}/data/onepiece-cache.json`).then(r => r.json()),
+    fetch(`${B}/data/prices/onepiece-versions.json`).then(r => r.json()).catch(() => ({}))]);
+  cards = deduplicateOPCards(Object.values(cache.sets).flat().map(normalizeOPCard));
+  review = vp.review || {};
+  const sets = [...new Set(cards.map(c => c.setId))].sort();
+  document.getElementById('set').innerHTML += sets.map(s => `<option>${s}</option>`).join('');
+  document.getElementById('subtitle').textContent = `Version prices from yuyu-tei: ${vp.date || '—'}`;
+  render(true);
+}
+
+function tasks() {
+  if (tab === 'missing') return cards.filter(c => !getFloorJpy(c));
+  return cards.filter(c => review[c.officialId] && String(c.finish).startsWith('parallel') && c.pricing?.versionMatch !== 'exact');
+}
+
+function render(reset) {
+  if (reset) shown = 40;
+  const q = document.getElementById('q').value.toLowerCase(), set = document.getElementById('set').value;
+  const nMissing = cards.filter(c => !getFloorJpy(c)).length;
+  const nUnclear = cards.filter(c => review[c.officialId] && String(c.finish).startsWith('parallel') && c.pricing?.versionMatch !== 'exact').length;
+  document.getElementById('tabs').innerHTML =
+    `<div class="tab ${tab === 'missing' ? 'active' : ''}" onclick="tab='missing';render(true)">No price (${nMissing})</div>` +
+    `<div class="tab ${tab === 'unclear' ? 'active' : ''}" onclick="tab='unclear';render(true)">Version unclear (${nUnclear})</div>`;
+  document.getElementById('help').innerHTML = tab === 'missing'
+    ? 'No shop listing was found for these cards, so they show <b>no price</b> and count ¥0 in collections. Open a shop link, check the price, and tell Claude (or wait: the weekly scan retries them).'
+    : 'Several versions of these cards look almost identical (e.g. gold vs silver foil), so the photo match wasn\'t certain and they share one price. Click the listing that is the <b>same version</b> as the image on the left (same frame, foil and art). If none is (the shop may not list that version), skip it. Then <b>Copy picks for Claude</b> and paste them into the chat.';
+  document.getElementById('copyBtn').style.display = tab === 'unclear' ? '' : 'none';
+  const list = tasks().filter(c => (!set || c.setId === set) &&
+    (!q || (c.officialId || c.id).toLowerCase().includes(q) || String(c.name || '').toLowerCase().includes(q) || String(c.setId).toLowerCase().includes(q)));
+  document.getElementById('list').innerHTML = list.slice(0, shown).map(c => {
+    const id = c.officialId || c.id, qs = encodeURIComponent(c.id);
+    const links = `<a href="https://yuyu-tei.jp/sell/opc/s/search?search_word=${qs}" target="_blank">遊々亭</a><a href="https://www.cardrush-op.jp/product-list?keyword=${qs}" target="_blank">カードラッシュ</a><a href="https://www.suruga-ya.jp/search?search_word=${qs}" target="_blank">駿河屋</a>`;
+    const head = `<img src="${proxy(c.imgJp || c.img)}" loading="lazy" referrerpolicy="no-referrer" alt=""><div class="info"><b>${id}</b> · ${c.setId} · ${c.rarity || ''} · ${c.finish}<br>${c.name || ''}${c.nameJp ? ' / ' + c.nameJp : ''}<br>${tab === 'unclear' ? 'Shared price now: <b>¥' + (getFloorJpy(c) || 0).toLocaleString() + '</b><br>' : ''}${links}</div>`;
+    const cands = tab === 'unclear' ? `<div class="cands">${(review[id] || []).map(y =>
+      `<div class="cand ${picks[id] && picks[id].yyt === y.yyt ? 'picked' : ''}" onclick="pick('${id}','${y.yyt}',${y.jpy})"><img src="${yyImg(y.yyt)}" loading="lazy" alt=""><div class="p">¥${y.jpy.toLocaleString()}</div>${y.alt.replace(/^\S+ \S+ /, '')}${y.in_stock ? '' : ' <span style="color:#999">(sold out)</span>'}</div>`).join('')}</div>` : '';
+    return `<div class="task">${head}${cands}</div>`;
+  }).join('') || '<p style="color:#666">Nothing to do here 🎉</p>';
+  document.getElementById('moreBtn').style.display = list.length > shown ? '' : 'none';
+}
+
+function pick(id, yyt, jpy) {
+  picks[id] = picks[id] && picks[id].yyt === yyt ? undefined : { yyt, jpy };
+  if (!picks[id]) delete picks[id];
+  localStorage.setItem('price_picks', JSON.stringify(picks));
+  render();
+}
+function copyPicks() {
+  navigator.clipboard.writeText(JSON.stringify(picks));
+  alert(`Copied ${Object.keys(picks).length} picks. Paste them to Claude to apply.`);
+}
+</script>
+</body>
+</html>

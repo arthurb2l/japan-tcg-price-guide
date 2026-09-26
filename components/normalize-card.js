@@ -81,6 +81,9 @@ function deduplicateOPCards(cards) {
     const ep = existing.pricing || {};
     const cp = c.pricing || {};
     if ((!ep.jpy && !ep.sources) && (cp.jpy || cp.sources)) existing.pricing = cp;
+    // The same version can sit in several sets (e.g. OP05-119_p6 under OP-09 EN, OP-10, OP-11):
+    // an exact per-version price beats a shared bucket price from another copy
+    else if (cp.versionMatch === 'exact' && ep.versionMatch !== 'exact') existing.pricing = cp;
   }
   return [...map.values()];
 }

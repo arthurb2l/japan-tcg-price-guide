@@ -21,8 +21,9 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 CACHE = os.path.join(ROOT, 'data', '.cache', 'yv')
 OUT = os.path.join(ROOT, 'data', 'prices', 'onepiece-versions.json')
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-PAGES = ([f'op{i:02d}' for i in range(1, 19)] + [f'eb{i:02d}' for i in range(1, 6)] + ['prb01', 'prb02'] +
-         [f'st{i:02d}' for i in range(1, 40)] + ['promo-100', 'promo-200', 'promo-eb10', 'promo-op10', 'promo-op20', 'promo-prb10', 'promo-st10'])
+# Future sets are included on purpose: pages that don't exist yet just return nothing
+PAGES = ([f'op{i:02d}' for i in range(1, 26)] + [f'eb{i:02d}' for i in range(1, 9)] + ['prb01', 'prb02', 'prb03'] +
+         [f'st{i:02d}' for i in range(1, 46)] + ['promo-100', 'promo-200', 'promo-eb10', 'promo-op10', 'promo-op20', 'promo-prb10', 'promo-st10'])
 T, M = 42, 6   # accept cost <= T; reject if another listing with a different price is within M (visually tuned 2026-09-26)
 
 def get(url, binary=False):
@@ -53,6 +54,11 @@ def feat(p):
     g = list(im.convert('L').resize((25, 24)).getdata())
     return [g[r * 25 + c] > g[r * 25 + c + 1] for r in range(24) for c in range(24)], list(im.resize((5, 7)).getdata())
 
+def warmth(p):
+    px = list(Image.open(p).convert('RGB').resize((50, 70)).getdata())
+    r, g, b = (sum(q[i] for q in px) / len(px) for i in range(3))
+    return (r + g) / 2 - b   # gold foil is yellow (warm), silver neutral/blue
+
 def cost(a, b):
     hd = sum(x != y for x, y in zip(a[0], b[0]))
     cd = sum(abs(p[i] - q[i]) for p, q in zip(a[1], b[1]) for i in range(3)) / (35 * 3)
@@ -67,15 +73,27 @@ def fetch_img(url, path):
 
 def main():
     os.makedirs(os.path.join(CACHE, 'y'), exist_ok=True); os.makedirs(os.path.join(CACHE, 'b'), exist_ok=True)
-    listings = {}
+    prev = {}
+    if os.path.exists(OUT):
+        try: prev = json.load(open(OUT))
+        except Exception: pass
+    prev_pages = prev.get('pages', {})
+    listings, failed, pages = {}, [], {}
     for p in PAGES:
-        t = get(f'https://yuyu-tei.jp/sell/opc/s/{p}')
-        if not t: continue
-        for o in parse(p, t): listings[(o['ver'], o['cid'])] = o
-        time.sleep(0.5)
+        rows = []
+        for attempt in range(3):                      # yuyu-tei sometimes returns a short page
+            t = get(f'https://yuyu-tei.jp/sell/opc/s/{p}')
+            rows = parse(p, t) if t else []
+            if rows or (t and 'card-product' not in t): break
+            time.sleep(5 * (attempt + 1))
+        pages[p] = len(rows)
+        if not rows and prev_pages.get(p): failed.append(p)   # had listings last run, none now
+        for o in rows: listings[(o['ver'], o['cid'])] = o
+        time.sleep(1.5)
     listings = [o for o in listings.values() if re.match(r'^[A-Z]{1,4}\d{0,2}-\d{3}$', o['num'])]
-    if len(listings) < 1000:
-        sys.exit(f'Only {len(listings)} listings parsed — yuyu-tei layout changed? Not overwriting {OUT}')
+    prev_n = prev.get('listings', 0)
+    if len(listings) < 1000 or failed or (prev_n and len(listings) < 0.95 * prev_n):
+        sys.exit(f'Incomplete fetch ({len(listings)} listings vs {prev_n} last time; failed pages: {failed}). Keeping {OUT}')
     nums = {o['num'] for o in listings}
     cache = json.load(open(os.path.join(ROOT, 'data', 'onepiece-cache.json')))
     versions = {}
@@ -98,7 +116,10 @@ def main():
     for oid, (num, _) in versions.items():
         try: V[num].append((oid, feat(os.path.join(CACHE, 'b', f'{oid}.jpg'))))
         except Exception: pass
-    res, st = {}, collections.Counter()
+    res, st, review = {}, collections.Counter(), {}
+    def candidates(vf, ys):  # for the admin review queue: closest listings first
+        return [{'yyt': f"{y['ver']}/{y['cid']}", 'jpy': y['jpy'], 'in_stock': y['in_stock'], 'alt': y['alt'], 'c': round(cost(vf, y['f']), 1)}
+                for y in sorted(ys, key=lambda y: cost(vf, y['f']))[:4]]
     for num, vs in V.items():
         ys = Y.get(num, [])
         pairs = sorted((cost(vf, y['f']), oid, i) for oid, vf in vs for i, y in enumerate(ys))
@@ -110,14 +131,30 @@ def main():
         for oid, vf in vs:
             if oid not in used:                       # identical-art reprint inherits its twin's listing
                 twin = min(((cost(vf, feats[o2]), o2) for o2 in used), default=None)
-                if not (twin and twin[0] < 6): st['unmatched'] += 1; continue
+                if not (twin and twin[0] < 6):
+                    st['unmatched'] += 1; review[oid] = candidates(vf, ys); continue
                 used[oid] = used[twin[1]]
             c, i = used[oid]; y = ys[i]
             rivals = [cost(vf, ys[j]['f']) for j in range(len(ys)) if j != i and ys[j]['jpy'] != y['jpy']]
-            if rivals and min(rivals) - c < M: st['ambiguous'] += 1; continue
+            if rivals and min(rivals) - c < M:
+                st['ambiguous'] += 1; review[oid] = candidates(vf, ys); continue
             st['matched'] += 1
             res[oid] = {k: y[k] for k in ('jpy', 'in_stock', 'stock', 'alt')} | {'yyt': f"{y['ver']}/{y['cid']}", 'c': round(c, 1)}
-    json.dump({'date': datetime.date.today().isoformat(), 'versions': res}, open(OUT, 'w'), ensure_ascii=False, separators=(',', ':'))
+    # Gold/silver tie-break: the photos differ only by foil tint. If two unresolved versions
+    # of a card number both sit closest to a 金パラレル and a 銀パラレル listing, the warmer
+    # Bandai image is the gold one (verified on OP05-119_p7 gold / _p6 silver).
+    byNumRev = collections.defaultdict(list)
+    for oid in review: byNumRev[versions[oid][0]].append(oid)
+    for num, oids in byNumRev.items():
+        gold = [y for y in Y.get(num, []) if '金パラレル' in y['alt']]
+        silver = [y for y in Y.get(num, []) if '銀パラレル' in y['alt']]
+        if len(oids) != 2 or len(gold) != 1 or len(silver) != 1: continue
+        w = sorted((warmth(os.path.join(CACHE, 'b', f'{o}.jpg')), o) for o in oids)
+        if w[1][0] - w[0][0] < 15: continue
+        for (_, oid), y in ((w[1], gold[0]), (w[0], silver[0])):
+            res[oid] = {k: y[k] for k in ('jpy', 'in_stock', 'stock', 'alt')} | {'yyt': f"{y['ver']}/{y['cid']}", 'c': None, 'rule': 'gold-silver'}
+            review.pop(oid, None); st['gold-silver'] += 1
+    json.dump({'date': datetime.date.today().isoformat(), 'listings': len(listings), 'pages': pages, 'versions': res, 'review': review}, open(OUT, 'w'), ensure_ascii=False, separators=(',', ':'))
     print(f"{len(listings)} listings, {len(versions)} versions -> {dict(st)} -> {OUT}")
 
 if __name__ == '__main__':

@@ -166,7 +166,7 @@
     container.style.opacity='1';
     if (user) {
       const isAdmin = ADMIN_UIDS.includes(user.uid || '');
-      const adminLink = isAdmin ? `<a href="${base}admin/reports.html" id="admin-reports-link">⚠️ Reports</a><a href="${base}admin/quality.html">📊 Data Quality</a>` : '';
+      const adminLink = isAdmin ? `<a href="${base}admin/reports.html" id="admin-reports-link">⚠️ Reports</a><a href="${base}admin/quality.html">📊 Data Quality</a><a href="${base}admin/price-tasks.html">💴 Price Tasks</a>` : '';
       container.innerHTML = `
         <div class="user-dropdown">
           <img src="${user.picture || ''}" alt="" class="user-avatar" referrerpolicy="no-referrer"${isAdmin ? ' style="outline:2px solid #d32f2f;outline-offset:1px"' : ''}>
@@ -185,7 +185,7 @@
         }).catch(() => {});
       }
       if (mobileLogin) {
-        const mobileAdmin = isAdmin ? `<a href="${base}admin/reports.html" style="display:block;padding:10px 0;color:#d32f2f;text-decoration:none">⚠️ Reports</a><a href="${base}admin/quality.html" style="display:block;padding:10px 0;color:#d32f2f;text-decoration:none">📊 Data Quality</a>` : '';
+        const mobileAdmin = isAdmin ? `<a href="${base}admin/reports.html" style="display:block;padding:10px 0;color:#d32f2f;text-decoration:none">⚠️ Reports</a><a href="${base}admin/quality.html" style="display:block;padding:10px 0;color:#d32f2f;text-decoration:none">📊 Data Quality</a><a href="${base}admin/price-tasks.html" style="display:block;padding:10px 0;color:#d32f2f;text-decoration:none">💴 Price Tasks</a>` : '';
         mobileLogin.innerHTML = `
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
             <img src="${user.picture || ''}" style="width:32px;height:32px;border-radius:50%" referrerpolicy="no-referrer">

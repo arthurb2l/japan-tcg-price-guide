@@ -58,14 +58,24 @@ vexact = 0
 if os.path.exists(vpath):
     vp = json.load(open(vpath))
     vdate, vmap = vp.get('date') or today, vp.get('versions', {})
+    # Manual picks from admin/price-tasks.html ("Version unclear" tab) win over the photo match
+    opath = os.path.join(ROOT, 'data/prices/version-overrides.json')
+    if os.path.exists(opath):
+        for oid, o in json.load(open(opath)).items():
+            vmap[oid] = {'jpy': o['jpy'], 'in_stock': o.get('in_stock', True), 'yyt': o.get('yyt'), 'manual': True}
     for cards in cache['sets'].values():
         for card in cards:
             v = vmap.get(card.get('officialId'))
-            if not v or not str(card.get('finish', '')).startswith('parallel'): continue
+            if not v: continue
+            cur = card.get('pricing') or {}
+            real = [k for k, x in (cur.get('sources') or {}).items() if k != 'rarity' and x and x.get('jpy')]
+            # parallels: always (bucket price is shared); other versions: only if they have no
+            # real listing yet (was a rarity guess or nothing — 1,682 cards on 2026-09-26)
+            if not (str(card.get('finish', '')).startswith('parallel') or not real): continue
             img = card.get('img')
             if isinstance(img, dict) and not img.get('jp'): continue  # EN print: JP listing price doesn't apply
-            prev = card.get('pricing') or {}
-            prev_jpy = (prev.get('computed') or {}).get('jpy')
+            prev = cur
+            prev_jpy = (prev.get('computed') or {}).get('jpy') if real else None  # a rarity guess isn't a 'last known price'
             last_known = prev.get('lastKnown')
             if prev_jpy and prev_jpy != v['jpy']:
                 last_known = {'jpy': prev_jpy, 'date': prev.get('updated')}

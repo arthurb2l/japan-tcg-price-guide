@@ -7,6 +7,9 @@
 function getFloorJpy(c) {
   if (!c || !c.pricing) return 0;
   const p = c.pricing;
+  // A rarity-only 'price' is a guess, not a listing: show no price (Arthur 2026-09-26: don't
+  // count what we don't know). These cards are queued in admin/price-tasks.html.
+  if (isRarityGuess(c)) return (p.lastKnown && p.lastKnown.jpy) || 0;
   // Scanner floor = cheapest IN-STOCK listing. Taking min(sources) instead picked
   // out-of-stock listings (91 cards undervalued, e.g. OP09-106_p1 ¥120 vs ¥6,380).
   if (p.computed && p.computed.jpy) return p.computed.jpy;
@@ -29,6 +32,14 @@ function getFloorJpy(c) {
   // Never blank a card that once had a price: last known value from the sync (#78)
   if (p.lastKnown && p.lastKnown.jpy) return p.lastKnown.jpy;
   return 0;
+}
+
+/** True when the only 'source' is the rarity-based estimate (no shop listing behind it). */
+function isRarityGuess(c) {
+  const s = c && c.pricing && c.pricing.sources;
+  if (!s) return false;
+  const keys = Object.keys(s).filter(k => s[k]);
+  return keys.length > 0 && keys.every(k => k === 'rarity');
 }
 
 /** Get price as USD equivalent (for legacy compat with collection/trade). */
