@@ -32,7 +32,7 @@
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 <script src="components/normalize-card.js?v=177"></script>
-<script src="/japan-tcg-price-guide/components/price-utils.js"></script>
+<script src="/japan-tcg-price-guide/components/price-utils.js?v=floor1"></script>
 <script>
 const firebaseConfig = {
   apiKey: "AIzaSyCLzia4937bSBbjsT0JUY-PAgnzygTYj1s",
@@ -384,6 +384,7 @@ function getPriceSources(c) {
   return s;
 }
 function getFloorJpy(c) {
+  if (c.pricing?.computed?.jpy) return c.pricing.computed.jpy; // in-stock floor (see price-utils.js)
   const s = getPriceSources(c);
   if (!s.length) return 0;
   const jpys = s.map(x => x.jpy).sort((a,b) => a - b);

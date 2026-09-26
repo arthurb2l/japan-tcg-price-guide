@@ -36,7 +36,7 @@ for sid, cards in cache['sets'].items():
         floor = vdata.get('floor') or vdata.get('reference')
         if not floor or not vdata.get('sources'): continue
         scanned = pdata.get('updated') or today  # stamp the scan date, not the sync date
-        sources = {src: {'jpy': s.get('sell'), 'updated': scanned} for src, s in vdata.get('sources', {}).items()}
+        sources = {src: {'jpy': s.get('sell'), 'in_stock': s.get('in_stock'), 'updated': scanned} for src, s in vdata.get('sources', {}).items()}
         card['pricing'] = {
             'sources': sources,
             'computed': {'jpy': floor, 'usd': None, 'eur': None},

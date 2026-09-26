@@ -7,13 +7,14 @@
 function getFloorJpy(c) {
   if (!c || !c.pricing) return 0;
   const p = c.pricing;
+  // Scanner floor = cheapest IN-STOCK listing. Taking min(sources) instead picked
+  // out-of-stock listings (91 cards undervalued, e.g. OP09-106_p1 ¥120 vs ¥6,380).
+  if (p.computed && p.computed.jpy) return p.computed.jpy;
   // v2: pricing.sources.{surugaya,yuyutei,cardrush}.jpy
   if (p.sources) {
     const jpys = Object.values(p.sources).map(s => s && s.jpy).filter(Boolean);
     if (jpys.length) return Math.min(...jpys);
   }
-  // computed.jpy fallback
-  if (p.computed && p.computed.jpy) return p.computed.jpy;
   // normalized flat jpy
   if (p.jpy) return p.jpy;
   // legacy USD-based (convert at 150)
