@@ -13,9 +13,9 @@ LOCK=/tmp/japan-tcg-price-scan.lock
 LOG=/tmp/japan-tcg-price-scan.log
 
 if [ "${1:-}" = "--status" ]; then
-  last=$(python3 -c "import json;print(json.load(open('data/prices/onepiece-current.json'))['_meta'].get('updated','?'))")
+  read last done_ <<<"$(python3 -c "import json;m=json.load(open('data/prices/onepiece-current.json'))['_meta'];print(m.get('updated','?'),m.get('completed','never'))")"
   if [ -e "$LOCK" ] && kill -0 "$(cat "$LOCK")" 2>/dev/null; then state="running (pid $(cat "$LOCK"), log $LOG)"; else state="idle"; fi
-  echo "last_scan=$last state=$state"
+  echo "last_complete=$done_ last_progress=$last state=$state"
   exit 0
 fi
 

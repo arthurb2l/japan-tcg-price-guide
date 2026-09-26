@@ -488,6 +488,12 @@ def main():
                 with open(PRICES_FILE, 'w') as f:
                     json.dump(price_data, f, ensure_ascii=False, separators=(',', ':'))
                 print(f"  💾 Progress saved ({updated} cards)\n")
+        else:
+            # Full pass reached the end (no breakage stop): record it so freshness
+            # checks don't mistake a partial run for a fresh one.
+            if not args.dry_run and not args.set and not args.limit and not args.min_value:
+                price_data['_meta']['completed'] = today
+                updated = updated or 1  # force the save below
 
     # Save
     if not args.dry_run and updated > 0:
