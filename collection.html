@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://www.gstatic.com">
 <!-- Firebase -->
-<script src="components/normalize-card.js?v=139"></script>
+<script src="components/normalize-card.js?v=177"></script>
 <script src="/japan-tcg-price-guide/components/price-utils.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
@@ -227,8 +227,15 @@ select.filter{padding:8px 12px;border:1px solid var(--border);border-radius:var(
 
 /* Login prompt */
 /* Login prompt */
-.login-overlay{position:relative;min-height:400px}
-.login-bg{position:absolute;inset:0;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:var(--r-lg);opacity:0.15}
+.login-overlay{position:relative;min-height:400px;padding:36px 16px}
+.login-bg{position:absolute;inset:0;overflow:hidden;border-radius:var(--r-lg);display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px;padding:8px;filter:blur(5px) saturate(1.1);opacity:.55;pointer-events:none}
+.login-bg img{width:100%;aspect-ratio:5/7;object-fit:cover;border-radius:6px}
+.login-overlay::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(245,245,245,0),rgba(245,245,245,.55));border-radius:var(--r-lg);pointer-events:none}
+.login-prompt{z-index:1;background:rgba(255,255,255,.92)!important;margin:0 auto!important}
+@media(max-width:500px){.login-prompt{padding:32px 20px!important}}
+.login-prompt .alt{display:block;margin-top:14px;font-size:.85em;color:var(--g3)}
+.sync-banner{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:#fff;border:1px solid #ddd;border-left:4px solid #D81111;border-radius:6px;padding:10px 14px;margin:10px 0;font-size:.9em}
+.sync-banner button{background:#222;color:#fff;border:none;border-radius:6px;padding:8px 14px;cursor:pointer;font-size:.9em}
 .login-prompt{position:relative;background:var(--card);border-radius:var(--r-lg);padding:50px 40px;text-align:center;max-width:420px;margin:40px auto;box-shadow:0 10px 40px rgba(0,0,0,0.1)}
 .login-prompt h2{font-size:1.5em;margin-bottom:10px}
 .login-prompt p{color:var(--g3);margin-bottom:25px;line-height:1.5}
@@ -390,6 +397,13 @@ const tabLabels = {inventory: '📦 Inventory', wishlist: '⭐ Wishlist', tradel
 const listLabels = {inventory: '📦 Inventory', wishlist: '⭐ Wishlist', tradelist: '🔄 Tradelist'};
 
 // Auth functions
+// Blurred backdrop for the logged-out prompt (#177): the most valuable One Piece cards with an image
+function featuredCardsHtml() {
+  const pics = allCards.filter(c => c.game === 'onepiece' && /^https?:/.test(c.imgJp || c.img || ''))
+    .sort((a, b) => (getFloorJpy(b) || 0) - (getFloorJpy(a) || 0)).slice(0, 18);
+  return pics.map(c => `<img src="https://wsrv.nl/?url=${encodeURIComponent(c.imgJp || c.img)}&w=180" alt="" loading="lazy" referrerpolicy="no-referrer">`).join('');
+}
+
 function signInWithGoogle() {
   const provider = new firebase.auth.GoogleAuthProvider();
   auth.signInWithPopup(provider).catch(err => console.error('Sign in error:', err));
@@ -815,10 +829,10 @@ function renderCollection() {
     if (!currentUser && currentList === "inventory") {
       content.innerHTML = tabsHtml + `
         <div class="login-overlay">
-          <div class="login-bg"></div>
+          <div class="login-bg" aria-hidden="true">${featuredCardsHtml()}</div>
           <div class="login-prompt">
-            <h2>📦 Start Your Collection</h2>
-            <p>Sign in to track your cards across devices, see your collection value, and never lose your data.</p>
+            <h2>Create an account to start your collection</h2>
+            <p>Log every card you own, including each parallel and special version, see what your collection is worth in yen, and open it on any device. Free.</p>
             <button class="google-btn" onclick="signInWithGoogle()">
               <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="">
               Sign in with Google
@@ -828,6 +842,7 @@ function renderCollection() {
               <div class="feature"><span>💰</span>Track value</div>
               <div class="feature"><span>📱</span>Any device</div>
             </div>
+            <a href="search.html" class="alt">or keep a collection on this device only →</a>
           </div>
         </div>`;
       return;
@@ -846,6 +861,7 @@ function renderCollection() {
   
   // Get collection cards with full data
   collectionCards = collectionIds.map(id => allCards.find(c => c.key === id)).filter(Boolean);
+  const syncBanner = currentUser ? '' : `<div class="sync-banner"><span>These cards are saved on this device only. Sign in to back them up and see them everywhere.</span><button onclick="signInWithGoogle()">Sign in with Google</button></div>`;
   
   // Apply game filter
   let filtered = currentGame ? collectionCards.filter(c => c.game === currentGame) : collectionCards;
@@ -889,7 +905,7 @@ function renderCollection() {
   
   const setFilterBanner = currentSetFilter ? `<div style="background:#e0f2fe;padding:8px 14px;border-radius:8px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;font-size:.85em"><span>📊 Filtered: <b>${currentSetFilter}</b></span><button onclick="currentSetFilter=null;renderCollection()" style="background:none;border:none;cursor:pointer;font-size:1em">✕</button></div>` : '';
   
-  content.innerHTML = tabsHtml + setFilterBanner + `
+  content.innerHTML = tabsHtml + syncBanner + setFilterBanner + `
       <div class="stat-card">
         <div class="value">${totalCards}</div>
         <div class="label">Total Cards</div>
@@ -1058,19 +1074,17 @@ function sortBy(sort) {
 }
 
 function exportCollection() {
-
-
-  const rows = [['Card ID', 'Name', 'Set', 'Rarity', 'Game', 'Qty', 'Condition', 'Language', 'Price JPY', 'Total', 'Purchase Price', 'ROI']];
+  // All money columns in JPY (getFloorJpy); purchase price is stored in JPY too.
+  const rows = [['Card ID', 'Name', 'Set', 'Rarity', 'Game', 'Qty', 'Condition', 'Language', 'Price JPY', 'Total JPY', 'Purchase Price JPY', 'Gain JPY']];
   collectionCards.forEach(c => {
-    const qty = userCollection[c.key]?.qty || 1;
-    const cond = userCollection[c.key]?.condition || 'NM';
-    const lang = userCollection[c.key]?.language || 'JP';
-    const price = getPrice(c);
-    const pp = userCollection[c.key]?.purchasePrice || '';
-    const roi = pp && price ? Math.round(price * 150) - pp : '';
-    rows.push([c.key, c.name || '', c.setId || '', c.rarity || '', c.game, qty, cond, lang, price?.toFixed(2) || '', price ? (price * qty).toFixed(2) : '', pp, roi]);
+    const item = userCollection[c.key] || {};
+    const qty = item.qty || 1;
+    const price = getFloorJpy(c) || '';
+    const pp = item.purchasePrice || '';
+    rows.push([c.key, c.name || '', c.setId || '', c.rarity || '', c.game, qty, item.condition || 'NM', item.language || 'JP',
+      price, price ? price * qty : '', pp, pp && price ? (price - pp) * qty : '']);
   });
-  const csv = rows.map(r => r.map(v => `"${v}"`).join(',')).join('\n');
+  const csv = rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(',')).join('\n');
   const blob = new Blob([csv], {type: 'text/csv'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -1103,31 +1117,43 @@ function shareWishlist() {
   }
 }
 
+// RFC 4180-ish: keeps empty fields (",,") so columns never shift, handles "" escapes
+function parseCsvLine(line) {
+  const out = []; let cur = '', q = false;
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i];
+    if (q) { if (ch === '"' && line[i + 1] === '"') { cur += '"'; i++; } else if (ch === '"') q = false; else cur += ch; }
+    else if (ch === '"') q = true; else if (ch === ',') { out.push(cur); cur = ''; } else cur += ch;
+  }
+  out.push(cur);
+  return out;
+}
+
 async function importCollection(input) {
   const file = input.files[0];
   if (!file) return;
-  const text = await file.text();
-  const lines = text.split("\n").slice(1); // Skip header
-  let imported = 0;
+  const lines = (await file.text()).replace(/\r/g, '').split('\n').slice(1); // skip header
+  const touched = {};
   for (const line of lines) {
     if (!line.trim()) continue;
-    const cols = line.match(/(".*?"|[^",]+)(?=,|$)/g)?.map(c => c.replace(/^"|"$/g, ""));
-    if (!cols || !cols[0]) continue;
-    const id = cols[0];
-    const qty = parseInt(cols[5]) || 1;
-    const condition = cols[6] || "NM";
-    const language = cols[7] || "JP";
-    userCollection[id] = { qty, condition, language, addedAt: Date.now() };
-    imported++;
+    const cols = parseCsvLine(line);
+    const id = (cols[0] || '').trim();
+    if (!id) continue;
+    const prev = userCollection[id] || {};
+    const pp = parseInt(cols[10]);
+    touched[id] = userCollection[id] = { ...prev, qty: parseInt(cols[5]) || 1, condition: cols[6] || prev.condition || 'NM',
+      language: cols[7] || prev.language || 'JP', ...(pp > 0 ? { purchasePrice: pp } : {}), addedAt: prev.addedAt || Date.now() };
+  }
+  for (const [oldKey, newKey] of await migrateInventoryKeys(userCollection)) {
+    if (touched[oldKey]) { delete touched[oldKey]; touched[newKey] = userCollection[newKey]; }
   }
   if (currentUser) {
-    for (const [id, data] of Object.entries(userCollection)) {
-      await db.collection("users").doc(currentUser.uid).collection("inventory").doc(id).set(data);
-    }
+    const inv = db.collection("users").doc(currentUser.uid).collection("inventory");
+    for (const [id, data] of Object.entries(touched)) await inv.doc(id).set(data);
   } else {
     localStorage.setItem("tcg_inventory", JSON.stringify(userCollection));
   }
-  alert(`Imported ${imported} cards!`);
+  alert(`Imported ${Object.keys(touched).length} cards!`);
   input.value = "";
   renderCollection();
 }
