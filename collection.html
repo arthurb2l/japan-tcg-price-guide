@@ -17,7 +17,7 @@
 <link rel="dns-prefetch" href="https://www.gstatic.com">
 <!-- Firebase -->
 <script src="components/normalize-card.js?v=177"></script>
-<script src="/japan-tcg-price-guide/components/price-utils.js?v=floor1"></script>
+<script src="/japan-tcg-price-guide/components/price-utils.js?v=floor2"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
@@ -887,8 +887,8 @@ function renderCollection() {
   else if (currentSort === 'price-low') filtered.sort((a, b) => (getPrice(a) || 999999) - (getPrice(b) || 999999));
   else if (currentSort === 'set') filtered.sort((a, b) => (a.setId || '').localeCompare(b.setId || '') || (a.id || '').localeCompare(b.id || ''));
   else if (currentSort === 'roi') filtered.sort((a, b) => {
-    const roiA = userCollection[a.key]?.purchasePrice ? ((getPrice(a)||0)*fxRate - userCollection[a.key].purchasePrice) / userCollection[a.key].purchasePrice : -Infinity;
-    const roiB = userCollection[b.key]?.purchasePrice ? ((getPrice(b)||0)*fxRate - userCollection[b.key].purchasePrice) / userCollection[b.key].purchasePrice : -Infinity;
+    const roiA = userCollection[a.key]?.purchasePrice ? ((getFloorJpy(a)||0) - userCollection[a.key].purchasePrice) / userCollection[a.key].purchasePrice : -Infinity;
+    const roiB = userCollection[b.key]?.purchasePrice ? ((getFloorJpy(b)||0) - userCollection[b.key].purchasePrice) / userCollection[b.key].purchasePrice : -Infinity;
     return roiB - roiA;
   });
   // 'added' - keep original order (most recent first for Firestore)

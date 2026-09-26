@@ -37,11 +37,17 @@ for sid, cards in cache['sets'].items():
         if not floor or not vdata.get('sources'): continue
         scanned = pdata.get('updated') or today  # stamp the scan date, not the sync date
         sources = {src: {'jpy': s.get('sell'), 'in_stock': s.get('in_stock'), 'updated': scanned} for src, s in vdata.get('sources', {}).items()}
+        prev = card.get('pricing') or {}
+        prev_jpy = (prev.get('computed') or {}).get('jpy')
+        last_known = prev.get('lastKnown')
+        if prev_jpy and prev_jpy != floor:  # keep the outgoing price as a reference
+            last_known = {'jpy': prev_jpy, 'date': prev.get('updated')}
         card['pricing'] = {
             'sources': sources,
             'computed': {'jpy': floor, 'usd': None, 'eur': None},
             'regional': {'JP': {'jpy': floor, 'floor': vdata.get('floor'), 'reference': vdata.get('reference'), 'confidence': vdata.get('confidence'), 'sources': list(sources.keys()), 'updated': scanned}},
-            'method': 'variant_mapped', 'updated': scanned
+            'method': 'variant_mapped', 'updated': scanned,
+            **({'lastKnown': last_known} if last_known else {})
         }
         updated += 1
 

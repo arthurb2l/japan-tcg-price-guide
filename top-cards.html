@@ -43,7 +43,8 @@
 </div>
 <footer id="site-footer"></footer>
 <script src="/japan-tcg-price-guide/components/header.js?v=174"></script>
-<script src="/japan-tcg-price-guide/components/price-utils.js?v=floor1"></script>
+<script src="/japan-tcg-price-guide/components/normalize-card.js?v=177"></script>
+<script src="/japan-tcg-price-guide/components/price-utils.js?v=floor2"></script>
 <script src="/japan-tcg-price-guide/components/footer.js"></script>
 <script>
 let allCards = [];
@@ -54,21 +55,18 @@ async function loadGame(game) {
   currentGame = game;
   document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', (i===0 && game==='pokemon') || (i===1 && game==='onepiece')));
   
-  if (!allCards.length || allCards[0]?.game !== game) {
-    const res = await fetch(`/japan-tcg-price-guide/data/${game}.json`);
-    allCards = await res.json();
-  }
+  if (!allCards.length) allCards = await loadAllCards(); // data/${game}.json never existed
   
   const getPrice = c => getFloorUsd(c) || 0;
-  const sorted = allCards.filter(c => getPrice(c) > 0).sort((a,b) => getPrice(b) - getPrice(a)).slice(0, 20);
+  const sorted = allCards.filter(c => c.game === game && getPrice(c) > 0).sort((a,b) => getPrice(b) - getPrice(a)).slice(0, 20);
   
   document.getElementById('cardList').innerHTML = sorted.map((c, i) => `
-    <a href="search.html?game=${game}&q=${encodeURIComponent(c.id)}" class="card-row" style="text-decoration:none;color:inherit">
+    <a href="search.html?game=${game}&q=${encodeURIComponent(c.officialId || c.id)}" class="card-row" style="text-decoration:none;color:inherit">
       <div class="rank">#${i+1}</div>
-      <img src="${c.images?.small || c.image}" alt="${c.name}">
+      <img src="${c.image ? c.image + '/low.webp' : /^https?:/.test(c.imgJp || c.img || '') ? 'https://wsrv.nl/?url=' + encodeURIComponent(c.imgJp || c.img) : (c.imgJp || c.img || '')}" alt="${c.name}" loading="lazy" referrerpolicy="no-referrer">
       <div class="card-info">
         <div class="card-name">${c.name}</div>
-        <div class="card-set">${c.setId} · ${c.rarity || ''}</div>
+        <div class="card-set">${c.officialId || c.id} · ${c.setId} · ${c.rarity || ''}</div>
       </div>
       <div class="card-price">¥${Math.round(getPrice(c) * 150).toLocaleString()}</div>
     </a>

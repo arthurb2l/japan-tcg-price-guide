@@ -11,9 +11,11 @@ const opData = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/onepiece
 const opPrices = {};
 for (const [setId, cards] of Object.entries(opData.sets)) {
   for (const card of cards) {
-    if (card.pricing?.usd >= 1) { // Only track cards worth $1+
-      opPrices[card.id] = { usd: card.pricing.usd, name: card.name };
-    }
+    // v2 pricing lives in computed.jpy (in-stock floor); pricing.usd has been null since
+    // 2026-04-20, which silently emptied One Piece history. Key by officialId so each
+    // version (OP09-106 vs OP09-106_p1) gets its own series.
+    const jpy = card.pricing?.computed?.jpy;
+    if (jpy >= 100) opPrices[card.officialId || card.id] = { jpy };
   }
 }
 

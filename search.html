@@ -32,7 +32,7 @@
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 <script src="components/normalize-card.js?v=177"></script>
-<script src="/japan-tcg-price-guide/components/price-utils.js?v=floor1"></script>
+<script src="/japan-tcg-price-guide/components/price-utils.js?v=floor2"></script>
 <script>
 const firebaseConfig = {
   apiKey: "AIzaSyCLzia4937bSBbjsT0JUY-PAgnzygTYj1s",
@@ -364,32 +364,7 @@ select.filter{padding:5px 8px;border:1px solid #ddd;border-radius:5px;font-size:
 <script>
 const _s = JSON.parse(localStorage.getItem('tcg_settings') || '{}');
 
-function getPriceSources(c) {
-  if (!c.pricing) return [];
-  const s = [];
-  if (c.pricing.usd) s.push({ jpy: Math.round(c.pricing.usd * 150) });
-  if (c.pricing.tcgplayer?.normal?.marketPrice) s.push({ jpy: Math.round(c.pricing.tcgplayer.normal.marketPrice * 150) });
-  else if (c.pricing.tcgplayer?.holofoil?.marketPrice) s.push({ jpy: Math.round(c.pricing.tcgplayer.holofoil.marketPrice * 150) });
-  if (c.pricing.cardmarket?.trend) s.push({ jpy: Math.round(c.pricing.cardmarket.trend * 162) });
-  if (c.pricing.amazonjp?.jpy) s.push({ jpy: c.pricing.amazonjp.jpy });
-  if (c.pricing.mercari?.jpy) s.push({ jpy: c.pricing.mercari.jpy });
-  // Regional JP sources (new v2 pricing)
-  if (c.pricing.sources) {
-    for (const [src, data] of Object.entries(c.pricing.sources)) {
-      if (data?.jpy) s.push({ jpy: data.jpy, source: src });
-    }
-  }
-  // Fallback: computed.jpy
-  if (!s.length && c.pricing.computed?.jpy) s.push({ jpy: c.pricing.computed.jpy });
-  return s;
-}
-function getFloorJpy(c) {
-  if (c.pricing?.computed?.jpy) return c.pricing.computed.jpy; // in-stock floor (see price-utils.js)
-  const s = getPriceSources(c);
-  if (!s.length) return 0;
-  const jpys = s.map(x => x.jpy).sort((a,b) => a - b);
-  return jpys[0]; // floor = lowest source
-}
+// Prices: getFloorJpy() comes from components/price-utils.js (one shared rule for every page)
 let allCards = [], filteredCards = [], currentView = _s.searchView || 'grid', currency = 'JPY', currentGame = 'pokemon';
 let collFilterActive = false;
 let currentModalCard = null; // Currently displayed card in modal
@@ -1296,7 +1271,7 @@ function showCard(id, isEn, uid) {
     jpLabel.style.display = jpPrice.style.display = 'none';
   }
   
-  showPriceHistory(card.id);
+  showPriceHistory(card.key || card.id);
   // Update favorite button state
   const favs = JSON.parse(localStorage.getItem('tcg_favorites') || '[]');
   document.getElementById('favBtn').textContent = favs.includes(card.id) ? '❤️ Fav' : '🤍 Fav';
@@ -1326,7 +1301,7 @@ function showPriceHistory(cardId) {
     return;
   }
   const dates = Object.keys(priceHistory).sort();
-  const prices = dates.map(d => priceHistory[d][cardId]?.usd || priceHistory[d][cardId]?.eur).filter(Boolean);
+  const prices = dates.map(d => priceHistory[d][cardId]?.jpy || priceHistory[d][cardId]?.usd || priceHistory[d][cardId]?.eur).filter(Boolean);
   if (prices.length < 2) {
     histLabel.style.display = hist.style.display = "none";
     return;

@@ -400,6 +400,7 @@ def main():
     sources_to_use = [args.source] if args.source else None
     scanned = 0
     updated = 0
+    updated_ids = []  # exact cards scanned this run (for the daily history log)
     today = date.today().isoformat()
 
     if args.card:
@@ -472,6 +473,7 @@ def main():
                 if not args.dry_run:
                     price_data['prices'][cid] = result
                     updated += 1
+                    updated_ids.append(cid)
                 fail_count = 0
             else:
                 fail_count += 1
@@ -507,7 +509,8 @@ def main():
         os.makedirs(HISTORY_DIR, exist_ok=True)
         history_file = os.path.join(HISTORY_DIR, f"{today}.jsonl")
         with open(history_file, 'a') as f:
-            for cid in list(price_data['prices'].keys())[-updated:]:
+            # was keys()[-updated:], which assumed re-scanned cards move to the end of the dict
+            for cid in (updated_ids or ([args.card] if args.card else [])):
                 entry = {'card': cid, 'data': price_data['prices'][cid]}
                 f.write(json.dumps(entry, ensure_ascii=False) + '\n')
 

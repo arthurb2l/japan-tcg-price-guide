@@ -20,10 +20,14 @@ function getFloorJpy(c) {
   // legacy USD-based (convert at 150)
   if (p.usd) return Math.round(p.usd * 150);
   if (p.tcgplayer) {
-    const tp = p.tcgplayer.normal || p.tcgplayer.holofoil;
-    if (tp && tp.marketPrice) return Math.round(tp.marketPrice * 150);
+    const tp = p.tcgplayer.normal || p.tcgplayer.holofoil || p.tcgplayer['reverse-holofoil'] ||
+      p.tcgplayer['1st-edition-holofoil'] || p.tcgplayer['1st-edition'] || p.tcgplayer['unlimited-holofoil'] || p.tcgplayer.unlimited;
+    if (tp && (tp.marketPrice || tp.market)) return Math.round((tp.marketPrice || tp.market) * 150);
   }
   if (p.cardmarket && p.cardmarket.trend) return Math.round(p.cardmarket.trend * 162);
+  if (p.eurTrend || p.eur) return Math.round((p.eurTrend || p.eur) * 162);
+  // Never blank a card that once had a price: last known value from the sync (#78)
+  if (p.lastKnown && p.lastKnown.jpy) return p.lastKnown.jpy;
   return 0;
 }
 
@@ -67,9 +71,12 @@ function renderPriceModal(card) {
   // EU
   if (p.cardmarket && p.cardmarket.trend) eu.push({name:'Cardmarket', raw:'€'+p.cardmarket.trend.toFixed(2)});
 
-  const jpPrices = jp.map(s=>s.jpy).sort((a,b)=>a-b);
-  const floor = jpPrices[0] || 0;
-  const reference = jpPrices.length > 1 ? Math.round(jpPrices.reduce((a,b)=>a+b,0)/jpPrices.length) : floor;
+  // Same number as the tiles: getFloorJpy = scanner's in-stock floor (was min of all
+  // listings incl. out-of-stock, so the modal contradicted the tile on 91 cards).
+  const floor = getFloorJpy(card);
+  const jpPrices = jp.map(s=>s.jpy);
+  const reference = (p.regional && p.regional.JP && p.regional.JP.reference) ||
+    (jpPrices.length > 1 ? Math.round(jpPrices.reduce((a,b)=>a+b,0)/jpPrices.length) : floor);
   const buyBack = (p.regional && p.regional.JP) ? p.regional.JP.buy : null;
 
   if (!floor && !na.length && !eu.length) return 'No price data';

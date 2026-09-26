@@ -48,7 +48,7 @@ h1{font-size:1.5em;margin-bottom:5px}
 </head>
 <body>
 <script src="../components/normalize-card.js"></script>
-<script src="/japan-tcg-price-guide/components/price-utils.js?v=floor1"></script>
+<script src="/japan-tcg-price-guide/components/price-utils.js?v=floor2"></script>
 <script src="/japan-tcg-price-guide/components/header.js?v=174"></script>
 
 <h1>🏴‍☠️ Best One Piece Commons</h1>
@@ -74,15 +74,7 @@ h1{font-size:1.5em;margin-bottom:5px}
 
 <script>
 const BASE = '/japan-tcg-price-guide';
-function getFloorUsd(c) {
-  if (c.pricing?.sources) {
-    const jpys = Object.values(c.pricing.sources).map(s => s?.jpy).filter(Boolean);
-    if (jpys.length) return Math.min(...jpys) / 150;
-  }
-  if (c.pricing?.computed?.jpy) return c.pricing.computed.jpy / 150;
-  if (c.pricing?.jpy) return c.pricing.jpy / 150;
-  return c.pricing?.usd || 0;
-}
+// getFloorUsd() comes from components/price-utils.js (in-stock floor; this page's copy took min(sources) incl. out-of-stock)
 
 const proxy = url => url?.includes('onepiece-cardgame.com') ? `https://wsrv.nl/?url=${encodeURIComponent(url)}` : url;
 let cards = [];
@@ -97,7 +89,7 @@ async function loadData() {
     for (const card of allCards) {
       const base = card.id.split('-p')[0];
       if (!priceByBase[base]) priceByBase[base] = new Set();
-      if (getFloorUsd(card) > 0) priceByBase[base].add(card.pricing.usd);
+      if (getFloorUsd(card) > 0) priceByBase[base].add(getFloorUsd(card));
     }
 
     const commons = [];
