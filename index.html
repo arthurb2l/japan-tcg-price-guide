@@ -30,8 +30,14 @@
     <li>In the browser menu (⋮ on Android, Share on iPhone), choose <b>Install app</b> / <b>Add to Home Screen</b>.</li>
     <li>Remove this old app: long-press its icon → Uninstall / Remove.</li>
   </ol>
-  <p>Your collection is kept if you're signed in. Without an account it was saved in this old app, so sign in here first to back it up.</p>
-  <p style="text-align:center"><a class="btn" href="https://cardmochi.com/" target="_blank" rel="noopener">Open cardmochi.com</a></p>
+  <p>Signed in? Your collection is already there. Used it without an account? The button brings the cards saved in this old app with you.</p>
+  <p style="text-align:center"><a class="btn" id="go" href="https://cardmochi.com/" target="_blank" rel="noopener">Open cardmochi.com</a></p>
+  <script>
+    // cards kept in this old app's storage (no account) travel in the link's #fragment: never sent to a server
+    try { var inv = localStorage.getItem('tcg_inventory'), sales = localStorage.getItem('tcg_sales');
+      if (inv && inv.length > 2) document.getElementById('go').href = 'https://cardmochi.com/collection.html#import=' + encodeURIComponent(JSON.stringify({ inv: JSON.parse(inv), sales: sales ? JSON.parse(sales) : {} }));
+    } catch (e) {}
+  </script>
 </div>
 </body>
 </html>
